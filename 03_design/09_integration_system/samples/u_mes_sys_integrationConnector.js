@@ -1,0 +1,25 @@
+// Sample document for u_mes_sys_integrationConnector (illustrative; seed data is generated separately)
+db.getCollection("u_mes_sys_integrationConnector").insertOne({
+  _id: "ICN-ERP-PRD",
+  recordNo: "ERP-PRD",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  name: "ERP production interface",
+  connectorType: "ERP",
+  targetSystem: "SAP S/4HANA",
+  protocol: "HTTPS REST",
+  endpoint: "https://erp-prd.varunabrakes.example/api/mes",
+  environment: "Production",
+  authMethod: "OAuth2 Client Credentials",
+  credentialRef: "vault://mes/pn1/erp-prd",
+  timeoutMs: NumberInt(15000),
+  retryPolicyMaxAttempts: NumberInt(5),
+  retryPolicyBackoffSec: NumberInt(60),
+  lastSuccessAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  lastFailureAt: null,
+  healthStatus: "Healthy",
+  ownerUserId: "USR-10087",
+  ownerUserName: "Anita Kulkarni",
+  status: "Active",
+  schemaVersion: NumberInt(1)
+});

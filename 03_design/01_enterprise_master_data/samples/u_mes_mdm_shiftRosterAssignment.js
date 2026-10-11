@@ -1,0 +1,25 @@
+// Sample document for u_mes_mdm_shiftRosterAssignment (illustrative; seed data is generated separately)
+db.getCollection("u_mes_mdm_shiftRosterAssignment").insertOne({
+  _id: "ROS-20260929-A-ASY-01-A001",
+  recordNo: "20260929-A-ASY-01-A001",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  shiftRosterId: "ROS-20260929-A-ASY-01",
+  shiftRosterName: "20260929-A-ASY-01",
+  sequenceNo: NumberInt(1),
+  userId: "USR-10231",
+  userName: "Sunil Jadhav",
+  workCenterId: "WC-TRQ-01",
+  workCenterName: "Bleed Screw Torque Station",
+  roleInCrew: "Operator",
+  attendance: "Present",
+  replacedUserId: null,
+  replacedUserName: null,
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10231",
+  createdBy: "Sunil Jadhav",
+  updatedAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  updatedById: "USR-10231",
+  updatedBy: "Sunil Jadhav"
+});

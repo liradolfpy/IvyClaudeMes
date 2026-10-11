@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_sys_operatorAppWorkCenter",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_sys_operatorAppWorkCenter",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "operatorAppId",
+        "operatorAppName",
+        "sequenceNo",
+        "workCenterId",
+        "workCenterName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <operatorAppId>-WC<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "operatorAppId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_sys_operatorApp._id: the parent document this one belongs to"
+        },
+        "operatorAppName": {
+          "bsonType": "string",
+          "description": "Display value of operatorAppId, copied from u_mes_sys_operatorApp.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

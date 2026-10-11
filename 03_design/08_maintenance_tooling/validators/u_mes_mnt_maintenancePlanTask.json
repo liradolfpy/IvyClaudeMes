@@ -1,0 +1,79 @@
+{
+  "collMod": "u_mes_mnt_maintenancePlanTask",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mnt_maintenancePlanTask",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "maintenancePlanId",
+        "maintenancePlanName",
+        "taskNo",
+        "description",
+        "standardMinutes",
+        "requiresShutdown",
+        "acceptanceCriteria",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <maintenancePlanId>-T<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "maintenancePlanId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mnt_maintenancePlan._id: the parent document this one belongs to"
+        },
+        "maintenancePlanName": {
+          "bsonType": "string",
+          "description": "Display value of maintenancePlanId, copied from u_mes_mnt_maintenancePlan.name"
+        },
+        "taskNo": {
+          "bsonType": "int",
+          "description": "Task number"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the maintenance plan task"
+        },
+        "standardMinutes": {
+          "bsonType": "int",
+          "description": "Standard (minutes)"
+        },
+        "requiresShutdown": {
+          "bsonType": "bool",
+          "description": "True when shutdown is required"
+        },
+        "acceptanceCriteria": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Acceptance criteria"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

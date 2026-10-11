@@ -1,0 +1,116 @@
+{
+  "collMod": "u_mes_qlt_checkSheetItem",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_checkSheetItem",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "checkSheetId",
+        "checkSheetName",
+        "itemNo",
+        "question",
+        "answerType",
+        "expectedAnswer",
+        "lowerLimit",
+        "upperLimit",
+        "unitText",
+        "isCritical",
+        "reactionOnFail",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <checkSheetId>-I<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "checkSheetId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_checkSheet._id: the parent document this one belongs to"
+        },
+        "checkSheetName": {
+          "bsonType": "string",
+          "description": "Display value of checkSheetId, copied from u_mes_qlt_checkSheet.name"
+        },
+        "itemNo": {
+          "bsonType": "int",
+          "description": "Item number within the parent record"
+        },
+        "question": {
+          "bsonType": "string",
+          "description": "Question of the check sheet item"
+        },
+        "answerType": {
+          "bsonType": "string",
+          "description": "Answer type",
+          "enum": [
+            "Yes No",
+            "Number",
+            "Text"
+          ]
+        },
+        "expectedAnswer": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Expected answer"
+        },
+        "lowerLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Lower limit"
+        },
+        "upperLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Upper limit"
+        },
+        "unitText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Unit text"
+        },
+        "isCritical": {
+          "bsonType": "bool",
+          "description": "True when the record is critical"
+        },
+        "reactionOnFail": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reaction on fail"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

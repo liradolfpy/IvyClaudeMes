@@ -1,0 +1,105 @@
+{
+  "collMod": "u_mes_qlt_spcChartControlLimit",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_spcChartControlLimit",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "spcChartId",
+        "spcChartName",
+        "revisionNo",
+        "effectiveFrom",
+        "ucl",
+        "centerLine",
+        "lcl",
+        "uclRange",
+        "centerLineRange",
+        "lclRange",
+        "basedOnSubgroups",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <spcChartId>-CL<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "spcChartId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_spcChart._id: the parent document this one belongs to"
+        },
+        "spcChartName": {
+          "bsonType": "string",
+          "description": "Display value of spcChartId, copied from u_mes_qlt_spcChart.name"
+        },
+        "revisionNo": {
+          "bsonType": "int",
+          "description": "Revision number"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "ucl": {
+          "bsonType": "decimal",
+          "description": "Upper control limit"
+        },
+        "centerLine": {
+          "bsonType": "decimal",
+          "description": "Center line"
+        },
+        "lcl": {
+          "bsonType": "decimal",
+          "description": "Lower control limit"
+        },
+        "uclRange": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "UCL range"
+        },
+        "centerLineRange": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Center line range"
+        },
+        "lclRange": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "LCL range"
+        },
+        "basedOnSubgroups": {
+          "bsonType": "int",
+          "description": "Based on subgroups"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

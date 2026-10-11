@@ -1,0 +1,130 @@
+{
+  "collMod": "u_mes_mdm_area",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_area",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "areaType",
+        "parentAreaId",
+        "parentAreaName",
+        "costCenterId",
+        "costCenterName",
+        "supervisorUserId",
+        "supervisorUserName",
+        "floorAreaSqm",
+        "isProductionArea",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: AR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the area; used as its display value in other collections"
+        },
+        "areaType": {
+          "bsonType": "string",
+          "description": "Area type",
+          "enum": [
+            "Production",
+            "Storage",
+            "Quality",
+            "Maintenance",
+            "Utility"
+          ]
+        },
+        "parentAreaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_area._id: parent area"
+        },
+        "parentAreaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentAreaId, copied from u_mes_mdm_area.name"
+        },
+        "costCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_costCenter._id"
+        },
+        "costCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of costCenterId, copied from u_mes_mdm_costCenter.name"
+        },
+        "supervisorUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: supervisor user"
+        },
+        "supervisorUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of supervisorUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "floorAreaSqm": {
+          "bsonType": "decimal",
+          "description": "Floor area (square metres)"
+        },
+        "isProductionArea": {
+          "bsonType": "bool",
+          "description": "True when the record is production area"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

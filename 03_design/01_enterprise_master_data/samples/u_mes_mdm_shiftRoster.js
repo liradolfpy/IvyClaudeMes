@@ -1,0 +1,28 @@
+// Sample document for u_mes_mdm_shiftRoster (illustrative; seed data is generated separately)
+db.getCollection("u_mes_mdm_shiftRoster").insertOne({
+  _id: "ROS-20260929-A-ASY-01",
+  recordNo: "20260929-A-ASY-01",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  productionDate: ISODate("2026-09-28T18:30:00.000+0000"),
+  shiftId: "SH-A",
+  shiftName: "Shift A",
+  lineId: "LN-ASY-01",
+  lineName: "Caliper Assembly Line 1",
+  supervisorUserId: "USR-10045",
+  supervisorUserName: "Rajesh Patil",
+  plannedHeadcount: NumberInt(6),
+  actualHeadcount: NumberInt(6),
+  absentCount: NumberInt(0),
+  overtimeMinutes: NumberInt(0),
+  remarks: "No abnormality observed",
+  publishedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  status: "Closed",
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10231",
+  createdBy: "Sunil Jadhav",
+  updatedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  updatedById: "USR-10231",
+  updatedBy: "Sunil Jadhav"
+});

@@ -1,0 +1,279 @@
+{
+  "collMod": "u_mes_mdm_equipment",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_equipment",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "equipmentTypeId",
+        "equipmentTypeName",
+        "equipmentClass",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
+        "parentEquipmentId",
+        "parentEquipmentName",
+        "manufacturerId",
+        "manufacturerName",
+        "model",
+        "serialNo",
+        "yearOfManufacture",
+        "supplierId",
+        "supplierName",
+        "assetNo",
+        "commissionedAt",
+        "ratedCapacity",
+        "ratedCapacityUnitOfMeasureId",
+        "ratedCapacityUnitOfMeasureName",
+        "ratedPowerKw",
+        "controllerMake",
+        "controllerModel",
+        "controllerIpAddress",
+        "controllerProtocol",
+        "criticality",
+        "currentState",
+        "currentStateSince",
+        "lifetimeCycles",
+        "lifetimeRunHours",
+        "nextMaintenanceDueAt",
+        "calibrationRequired",
+        "safetyCategory",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: EQ-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the equipment; used as its display value in other collections"
+        },
+        "equipmentTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_equipmentType._id"
+        },
+        "equipmentTypeName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentTypeId, copied from u_mes_mdm_equipmentType.name"
+        },
+        "equipmentClass": {
+          "bsonType": "string",
+          "description": "Equipment class",
+          "enum": [
+            "Production Equipment",
+            "Test Equipment",
+            "Measuring Equipment",
+            "Utility"
+          ]
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mdm_line.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "parentEquipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_equipment._id: parent equipment"
+        },
+        "parentEquipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentEquipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "manufacturerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_manufacturer._id"
+        },
+        "manufacturerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of manufacturerId, copied from u_mes_mdm_manufacturer.name"
+        },
+        "model": {
+          "bsonType": "string",
+          "description": "Model of the equipment"
+        },
+        "serialNo": {
+          "bsonType": "string",
+          "description": "Serial number"
+        },
+        "yearOfManufacture": {
+          "bsonType": "int",
+          "description": "Year of manufacture"
+        },
+        "supplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_supplier._id"
+        },
+        "supplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of supplierId, copied from u_mes_mdm_supplier.name"
+        },
+        "assetNo": {
+          "bsonType": "string",
+          "description": "Asset number"
+        },
+        "commissionedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was commissioned"
+        },
+        "ratedCapacity": {
+          "bsonType": "decimal",
+          "description": "Rated CAPAcity"
+        },
+        "ratedCapacityUnitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_unitOfMeasure._id: rated CAPAcity unit of measure"
+        },
+        "ratedCapacityUnitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of ratedCapacityUnitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name"
+        },
+        "ratedPowerKw": {
+          "bsonType": "decimal",
+          "description": "Rated power (kW)"
+        },
+        "controllerMake": {
+          "bsonType": "string",
+          "description": "Controller make"
+        },
+        "controllerModel": {
+          "bsonType": "string",
+          "description": "Controller model"
+        },
+        "controllerIpAddress": {
+          "bsonType": "string",
+          "description": "Controller ip address"
+        },
+        "controllerProtocol": {
+          "bsonType": "string",
+          "description": "Controller protocol",
+          "enum": [
+            "OPC UA",
+            "Open Protocol",
+            "Modbus TCP",
+            "Profinet",
+            "MQTT",
+            "Ethernet/IP"
+          ]
+        },
+        "criticality": {
+          "bsonType": "string",
+          "description": "A = failure stops the line or affects safety, B = reduced output, C = no immediate effect",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "currentState": {
+          "bsonType": "string",
+          "description": "Current state",
+          "enum": [
+            "Running",
+            "Idle",
+            "Setup",
+            "Down",
+            "Starved",
+            "Blocked",
+            "Planned Stop"
+          ]
+        },
+        "currentStateSince": {
+          "bsonType": "date",
+          "description": "Current state since (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "lifetimeCycles": {
+          "bsonType": "long",
+          "description": "Lifetime cycles"
+        },
+        "lifetimeRunHours": {
+          "bsonType": "decimal",
+          "description": "Lifetime run hours"
+        },
+        "nextMaintenanceDueAt": {
+          "bsonType": "date",
+          "description": "Next maintenance due date and time"
+        },
+        "calibrationRequired": {
+          "bsonType": "bool",
+          "description": "True when: calibration required"
+        },
+        "safetyCategory": {
+          "bsonType": "string",
+          "description": "Performance level of the safety function (ISO 13849-1)",
+          "enum": [
+            "PL a",
+            "PL b",
+            "PL c",
+            "PL d",
+            "PL e"
+          ]
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Under Maintenance",
+            "Decommissioned"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

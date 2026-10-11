@@ -28,12 +28,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ENT-<recordNo>
 | 16 | registeredAddressCity | String |  |
 | 17 | registeredAddressState | String |  |
 | 18 | registeredAddressPostalCode | String |  |
-| 19 | registeredAddressCountry | String |  |
-| 20 | baseCurrency | String |  |
-| 21 | fiscalYearStartMonth | Int32 |  |
-| 22 | website | String |  |
-| 23 | status | String |  |
-| 24 | schemaVersion | Int32 |  |
+| 19 | registeredAddressCountryId | String | u_mes_mdm_country._id |
+| 20 | registeredAddressCountryName | String |  |
+| 21 | baseCurrencyId | String | u_mes_mdm_currency._id |
+| 22 | baseCurrencyName | String |  |
+| 23 | fiscalYearStartMonth | Int32 |  |
+| 24 | website | String |  |
+| 25 | status | String |  |
+| 26 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_enterpriseContact
 
@@ -49,7 +51,7 @@ Kind: child | Data class: master | Parent: u_mes_mdm_enterprise | _id pattern: <
 | 6 | enterpriseName | String |  |
 | 7 | sequenceNo | Int32 |  |
 | 8 | name | String |  |
-| 9 | designation | String |  |
+| 9 | jobTitle | String |  |
 | 10 | email | String |  |
 | 11 | phone | String |  |
 | 12 | schemaVersion | Int32 |  |
@@ -74,19 +76,22 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SITE-<recordNo>
 | 12 | addressDistrict | String |  |
 | 13 | addressState | String |  |
 | 14 | addressPostalCode | String |  |
-| 15 | addressCountry | String |  |
-| 16 | geoLatitude | Double |  |
-| 17 | geoLongitude | Double |  |
-| 18 | gstin | String |  |
-| 19 | factoryLicenceNo | String |  |
-| 20 | erpPlantCode | String |  |
-| 21 | defaultWorkCalendarId | String | u_mes_mdm_workCalendar._id |
-| 22 | defaultWorkCalendarName | String |  |
-| 23 | currency | String |  |
-| 24 | language | String |  |
-| 25 | headcount | Int32 |  |
-| 26 | status | String |  |
-| 27 | schemaVersion | Int32 |  |
+| 15 | addressCountryId | String | u_mes_mdm_country._id |
+| 16 | addressCountryName | String |  |
+| 17 | geoLatitude | Double |  |
+| 18 | geoLongitude | Double |  |
+| 19 | gstin | String |  |
+| 20 | factoryLicenceNo | String |  |
+| 21 | erpPlantCode | String |  |
+| 22 | defaultWorkCalendarId | String | u_mes_mdm_workCalendar._id |
+| 23 | defaultWorkCalendarName | String |  |
+| 24 | currencyId | String | u_mes_mdm_currency._id |
+| 25 | currencyName | String |  |
+| 26 | languageId | String | u_mes_mdm_language._id |
+| 27 | languageName | String |  |
+| 28 | headcount | Int32 |  |
+| 29 | status | String |  |
+| 30 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_siteCertificate
 
@@ -121,14 +126,15 @@ Kind: entity | Data class: master | Parent: - | _id pattern: AR-<recordNo>
 | 6 | areaType | String |  |
 | 7 | parentAreaId | String | u_mes_mdm_area._id |
 | 8 | parentAreaName | String |  |
-| 9 | costCenter | String |  |
-| 10 | supervisorUserId | String | u_mes_mdm_user._id |
-| 11 | supervisorUserName | String |  |
-| 12 | floorAreaSqm | Decimal128 |  |
-| 13 | isProductionArea | Boolean |  |
-| 14 | sequenceNo | Int32 |  |
-| 15 | status | String |  |
-| 16 | schemaVersion | Int32 |  |
+| 9 | costCenterId | String | u_mes_mdm_costCenter._id |
+| 10 | costCenterName | String |  |
+| 11 | supervisorUserId | String | u_mes_mdm_user._id |
+| 12 | supervisorUserName | String |  |
+| 13 | floorAreaSqm | Decimal128 |  |
+| 14 | isProductionArea | Boolean |  |
+| 15 | sequenceNo | Int32 |  |
+| 16 | status | String |  |
+| 17 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_line
 
@@ -144,18 +150,20 @@ Kind: entity | Data class: master | Parent: - | _id pattern: LN-<recordNo>
 | 6 | areaId | String | u_mes_mdm_area._id |
 | 7 | areaName | String |  |
 | 8 | lineType | String |  |
-| 9 | itemFamily | String |  |
-| 10 | workCalendarId | String | u_mes_mdm_workCalendar._id |
-| 11 | workCalendarName | String |  |
-| 12 | taktTimeSec | Decimal128 |  |
-| 13 | manningStandard | Int32 |  |
-| 14 | bottleneckWorkCenterId | String | u_mes_mdm_workCenter._id |
-| 15 | bottleneckWorkCenterName | String |  |
-| 16 | oeeTarget | Decimal128 |  |
-| 17 | costCenter | String |  |
-| 18 | sequenceNo | Int32 |  |
-| 19 | status | String |  |
-| 20 | schemaVersion | Int32 |  |
+| 9 | itemFamilyId | String | u_mes_prd_itemFamily._id |
+| 10 | itemFamilyName | String |  |
+| 11 | workCalendarId | String | u_mes_mdm_workCalendar._id |
+| 12 | workCalendarName | String |  |
+| 13 | taktTimeSec | Decimal128 |  |
+| 14 | manningStandard | Int32 |  |
+| 15 | bottleneckWorkCenterId | String | u_mes_mdm_workCenter._id |
+| 16 | bottleneckWorkCenterName | String |  |
+| 17 | oeeTarget | Decimal128 |  |
+| 18 | costCenterId | String | u_mes_mdm_costCenter._id |
+| 19 | costCenterName | String |  |
+| 20 | sequenceNo | Int32 |  |
+| 21 | status | String |  |
+| 22 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_lineDefaultShift
 
@@ -210,18 +218,19 @@ Kind: entity | Data class: master | Parent: - | _id pattern: WC-<recordNo>
 | 9 | lineName | String |  |
 | 10 | workCenterType | String |  |
 | 11 | erpWorkCenterCode | String |  |
-| 12 | costCenter | String |  |
-| 13 | capacityPerShift | Int32 |  |
-| 14 | standardManning | Int32 |  |
-| 15 | trackingGrain | String |  |
-| 16 | inputLocationId | String | u_mes_mat_storageLocation._id |
-| 17 | inputLocationName | String |  |
-| 18 | outputLocationId | String | u_mes_mat_storageLocation._id |
-| 19 | outputLocationName | String |  |
-| 20 | andonEnabled | Boolean |  |
-| 21 | sequenceNo | Int32 |  |
-| 22 | status | String |  |
-| 23 | schemaVersion | Int32 |  |
+| 12 | costCenterId | String | u_mes_mdm_costCenter._id |
+| 13 | costCenterName | String |  |
+| 14 | capacityPerShift | Int32 |  |
+| 15 | standardManning | Int32 |  |
+| 16 | trackingGrain | String |  |
+| 17 | inputLocationId | String | u_mes_mat_storageLocation._id |
+| 18 | inputLocationName | String |  |
+| 19 | outputLocationId | String | u_mes_mat_storageLocation._id |
+| 20 | outputLocationName | String |  |
+| 21 | andonEnabled | Boolean |  |
+| 22 | sequenceNo | Int32 |  |
+| 23 | status | String |  |
+| 24 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_workCenterEquipment
 
@@ -285,40 +294,42 @@ Kind: entity | Data class: master | Parent: - | _id pattern: EQ-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | name | String |  |
-| 6 | equipmentType | String |  |
-| 7 | equipmentClass | String |  |
-| 8 | lineId | String | u_mes_mdm_line._id |
-| 9 | lineName | String |  |
-| 10 | workCenterId | String | u_mes_mdm_workCenter._id |
-| 11 | workCenterName | String |  |
-| 12 | parentEquipmentId | String | u_mes_mdm_equipment._id |
-| 13 | parentEquipmentName | String |  |
-| 14 | manufacturer | String |  |
-| 15 | model | String |  |
-| 16 | serialNo | String |  |
-| 17 | yearOfManufacture | Int32 |  |
-| 18 | supplierId | String | u_mes_mdm_supplier._id |
-| 19 | supplierName | String |  |
-| 20 | assetNo | String |  |
-| 21 | commissionedAt | Date |  |
-| 22 | ratedCapacity | Decimal128 |  |
-| 23 | ratedCapacityUnitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 24 | ratedCapacityUnitOfMeasureName | String |  |
-| 25 | ratedPowerKw | Decimal128 |  |
-| 26 | controllerMake | String |  |
-| 27 | controllerModel | String |  |
-| 28 | controllerIpAddress | String |  |
-| 29 | controllerProtocol | String |  |
-| 30 | criticality | String |  |
-| 31 | currentState | String |  |
-| 32 | currentStateSince | Date |  |
-| 33 | lifetimeCycles | Int64 |  |
-| 34 | lifetimeRunHours | Decimal128 |  |
-| 35 | nextMaintenanceDueAt | Date |  |
-| 36 | calibrationRequired | Boolean |  |
-| 37 | safetyCategory | String |  |
-| 38 | status | String |  |
-| 39 | schemaVersion | Int32 |  |
+| 6 | equipmentTypeId | String | u_mes_mdm_equipmentType._id |
+| 7 | equipmentTypeName | String |  |
+| 8 | equipmentClass | String |  |
+| 9 | lineId | String | u_mes_mdm_line._id |
+| 10 | lineName | String |  |
+| 11 | workCenterId | String | u_mes_mdm_workCenter._id |
+| 12 | workCenterName | String |  |
+| 13 | parentEquipmentId | String | u_mes_mdm_equipment._id |
+| 14 | parentEquipmentName | String |  |
+| 15 | manufacturerId | String | u_mes_mdm_manufacturer._id |
+| 16 | manufacturerName | String |  |
+| 17 | model | String |  |
+| 18 | serialNo | String |  |
+| 19 | yearOfManufacture | Int32 |  |
+| 20 | supplierId | String | u_mes_mdm_supplier._id |
+| 21 | supplierName | String |  |
+| 22 | assetNo | String |  |
+| 23 | commissionedAt | Date |  |
+| 24 | ratedCapacity | Decimal128 |  |
+| 25 | ratedCapacityUnitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 26 | ratedCapacityUnitOfMeasureName | String |  |
+| 27 | ratedPowerKw | Decimal128 |  |
+| 28 | controllerMake | String |  |
+| 29 | controllerModel | String |  |
+| 30 | controllerIpAddress | String |  |
+| 31 | controllerProtocol | String |  |
+| 32 | criticality | String |  |
+| 33 | currentState | String |  |
+| 34 | currentStateSince | Date |  |
+| 35 | lifetimeCycles | Int64 |  |
+| 36 | lifetimeRunHours | Decimal128 |  |
+| 37 | nextMaintenanceDueAt | Date |  |
+| 38 | calibrationRequired | Boolean |  |
+| 39 | safetyCategory | String |  |
+| 40 | status | String |  |
+| 41 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_equipmentIotDevice
 
@@ -579,7 +590,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ROLE-<recordNo>
 
 ## u_mes_mdm_rolePermission
 
-Kind: valueList | Data class: master | Parent: u_mes_mdm_role | _id pattern: <roleId>-P<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mdm_role | _id pattern: <roleId>-P<nnn>
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -590,12 +601,13 @@ Kind: valueList | Data class: master | Parent: u_mes_mdm_role | _id pattern: <ro
 | 5 | roleId | String | u_mes_mdm_role._id |
 | 6 | roleName | String |  |
 | 7 | sequenceNo | Int32 |  |
-| 8 | permission | String |  |
-| 9 | schemaVersion | Int32 |  |
+| 8 | permissionId | String | u_mes_mdm_permission._id |
+| 9 | permissionName | String |  |
+| 10 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_roleSignatureMeaning
 
-Kind: valueList | Data class: master | Parent: u_mes_mdm_role | _id pattern: <roleId>-SM<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mdm_role | _id pattern: <roleId>-SM<nnn>
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -606,8 +618,9 @@ Kind: valueList | Data class: master | Parent: u_mes_mdm_role | _id pattern: <ro
 | 5 | roleId | String | u_mes_mdm_role._id |
 | 6 | roleName | String |  |
 | 7 | sequenceNo | Int32 |  |
-| 8 | signatureMeaning | String |  |
-| 9 | schemaVersion | Int32 |  |
+| 8 | signatureMeaningId | String | u_mes_mdm_signatureMeaning._id |
+| 9 | signatureMeaningName | String |  |
+| 10 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_user
 
@@ -622,28 +635,32 @@ Kind: entity | Data class: master | Parent: - | _id pattern: USR-<recordNo>
 | 5 | userName | String |  |
 | 6 | fullName | String |  |
 | 7 | userType | String |  |
-| 8 | department | String |  |
-| 9 | designation | String |  |
-| 10 | badgeNo | String |  |
-| 11 | email | String |  |
-| 12 | mobile | String |  |
-| 13 | defaultShiftId | String | u_mes_mdm_shift._id |
-| 14 | defaultShiftName | String |  |
-| 15 | homeWorkCenterId | String | u_mes_mdm_workCenter._id |
-| 16 | homeWorkCenterName | String |  |
-| 17 | reportsToUserId | String | u_mes_mdm_user._id |
-| 18 | reportsToUserName | String |  |
-| 19 | dateOfJoining | Date |  |
-| 20 | employmentType | String |  |
-| 21 | contractorSupplierId | String | u_mes_mdm_supplier._id |
-| 22 | contractorSupplierName | String |  |
-| 23 | language | String |  |
-| 24 | lastLoginAt | Date |  |
-| 25 | failedLoginCount | Int32 |  |
-| 26 | passwordChangedAt | Date |  |
-| 27 | isLocked | Boolean |  |
-| 28 | status | String |  |
-| 29 | schemaVersion | Int32 |  |
+| 8 | departmentId | String | u_mes_mdm_department._id |
+| 9 | departmentName | String |  |
+| 10 | designationId | String | u_mes_mdm_designation._id |
+| 11 | designationName | String |  |
+| 12 | badgeNo | String |  |
+| 13 | email | String |  |
+| 14 | mobile | String |  |
+| 15 | defaultShiftId | String | u_mes_mdm_shift._id |
+| 16 | defaultShiftName | String |  |
+| 17 | homeWorkCenterId | String | u_mes_mdm_workCenter._id |
+| 18 | homeWorkCenterName | String |  |
+| 19 | reportsToUserId | String | u_mes_mdm_user._id |
+| 20 | reportsToUserName | String |  |
+| 21 | dateOfJoining | Date |  |
+| 22 | employmentTypeId | String | u_mes_mdm_employmentType._id |
+| 23 | employmentTypeName | String |  |
+| 24 | contractorSupplierId | String | u_mes_mdm_supplier._id |
+| 25 | contractorSupplierName | String |  |
+| 26 | languageId | String | u_mes_mdm_language._id |
+| 27 | languageName | String |  |
+| 28 | lastLoginAt | Date |  |
+| 29 | failedLoginCount | Int32 |  |
+| 30 | passwordChangedAt | Date |  |
+| 31 | isLocked | Boolean |  |
+| 32 | status | String |  |
+| 33 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_userRole
 
@@ -673,16 +690,17 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SKL-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | name | String |  |
-| 6 | skillCategory | String |  |
-| 7 | description | String |  |
-| 8 | minimumLevelRequired | Int32 |  |
-| 9 | validityMonths | Int32 |  |
-| 10 | trainingControlledDocumentId | String | u_mes_sys_controlledDocument._id |
-| 11 | trainingControlledDocumentName | String |  |
-| 12 | assessmentMethod | String |  |
-| 13 | isSafetyCritical | Boolean |  |
-| 14 | status | String |  |
-| 15 | schemaVersion | Int32 |  |
+| 6 | skillCategoryId | String | u_mes_mdm_skillCategory._id |
+| 7 | skillCategoryName | String |  |
+| 8 | description | String |  |
+| 9 | minimumLevelRequired | Int32 |  |
+| 10 | validityMonths | Int32 |  |
+| 11 | trainingControlledDocumentId | String | u_mes_sys_controlledDocument._id |
+| 12 | trainingControlledDocumentName | String |  |
+| 13 | assessmentMethod | String |  |
+| 14 | isSafetyCritical | Boolean |  |
+| 15 | status | String |  |
+| 16 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_skillOperation
 
@@ -774,18 +792,20 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CUS-<recordNo>
 | 10 | billingAddressCity | String |  |
 | 11 | billingAddressState | String |  |
 | 12 | billingAddressPostalCode | String |  |
-| 13 | billingAddressCountry | String |  |
-| 14 | supplierCodeAtCustomer | String |  |
-| 15 | labelTemplateId | String | u_mes_mat_labelTemplate._id |
-| 16 | labelTemplateName | String |  |
-| 17 | asnRequired | Boolean |  |
-| 18 | ppapLevelDefault | Int32 |  |
-| 19 | ppmTarget | Int32 |  |
-| 20 | paymentTermsDays | Int32 |  |
-| 21 | currency | String |  |
-| 22 | portalUrl | String |  |
-| 23 | status | String |  |
-| 24 | schemaVersion | Int32 |  |
+| 13 | billingAddressCountryId | String | u_mes_mdm_country._id |
+| 14 | billingAddressCountryName | String |  |
+| 15 | supplierCodeAtCustomer | String |  |
+| 16 | labelTemplateId | String | u_mes_mat_labelTemplate._id |
+| 17 | labelTemplateName | String |  |
+| 18 | asnRequired | Boolean |  |
+| 19 | ppapLevelDefault | Int32 |  |
+| 20 | ppmTarget | Int32 |  |
+| 21 | paymentTermsDays | Int32 |  |
+| 22 | currencyId | String | u_mes_mdm_currency._id |
+| 23 | currencyName | String |  |
+| 24 | portalUrl | String |  |
+| 25 | status | String |  |
+| 26 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_customerShipTo
 
@@ -841,23 +861,26 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SUP-<recordNo>
 | 4 | siteName | String |  |
 | 5 | name | String |  |
 | 6 | supplierType | String |  |
-| 7 | commodity | String |  |
-| 8 | gstin | String |  |
-| 9 | addressLine1 | String |  |
-| 10 | addressCity | String |  |
-| 11 | addressState | String |  |
-| 12 | addressPostalCode | String |  |
-| 13 | addressCountry | String |  |
-| 14 | approvedAt | Date |  |
-| 15 | ppmLast12Months | Int32 |  |
-| 16 | deliveryRatingPct | Decimal128 |  |
-| 17 | qualityRatingPct | Decimal128 |  |
-| 18 | leadTimeDays | Int32 |  |
-| 19 | paymentTermsDays | Int32 |  |
-| 20 | currency | String |  |
-| 21 | isDirectedSource | Boolean |  |
-| 22 | status | String |  |
-| 23 | schemaVersion | Int32 |  |
+| 7 | commodityId | String | u_mes_mdm_commodity._id |
+| 8 | commodityName | String |  |
+| 9 | gstin | String |  |
+| 10 | addressLine1 | String |  |
+| 11 | addressCity | String |  |
+| 12 | addressState | String |  |
+| 13 | addressPostalCode | String |  |
+| 14 | addressCountryId | String | u_mes_mdm_country._id |
+| 15 | addressCountryName | String |  |
+| 16 | approvedAt | Date |  |
+| 17 | ppmLast12Months | Int32 |  |
+| 18 | deliveryRatingPct | Decimal128 |  |
+| 19 | qualityRatingPct | Decimal128 |  |
+| 20 | leadTimeDays | Int32 |  |
+| 21 | paymentTermsDays | Int32 |  |
+| 22 | currencyId | String | u_mes_mdm_currency._id |
+| 23 | currencyName | String |  |
+| 24 | isDirectedSource | Boolean |  |
+| 25 | status | String |  |
+| 26 | schemaVersion | Int32 |  |
 
 ## u_mes_mdm_supplierContact
 
@@ -936,3 +959,250 @@ Kind: entity | Data class: master | Parent: - | _id pattern: UOM-<recordNo>
 | 15 | isBaseUnit | Boolean |  |
 | 16 | status | String |  |
 | 17 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_department
+
+Kind: entity | Data class: master | Parent: - | _id pattern: DEPT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | parentDepartmentId | String | u_mes_mdm_department._id |
+| 8 | parentDepartmentName | String |  |
+| 9 | headUserId | String | u_mes_mdm_user._id |
+| 10 | headUserName | String |  |
+| 11 | costCenterId | String | u_mes_mdm_costCenter._id |
+| 12 | costCenterName | String |  |
+| 13 | sequenceNo | Int32 |  |
+| 14 | status | String |  |
+| 15 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_designation
+
+Kind: entity | Data class: master | Parent: - | _id pattern: DSG-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | departmentId | String | u_mes_mdm_department._id |
+| 8 | departmentName | String |  |
+| 9 | gradeLevel | Int32 |  |
+| 10 | isSupervisory | Boolean |  |
+| 11 | sequenceNo | Int32 |  |
+| 12 | status | String |  |
+| 13 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_employmentType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: EMT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | isContract | Boolean |  |
+| 8 | sequenceNo | Int32 |  |
+| 9 | status | String |  |
+| 10 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_costCenter
+
+Kind: entity | Data class: master | Parent: - | _id pattern: CC-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | erpCostCenterCode | String |  |
+| 8 | validFrom | Date |  |
+| 9 | validTo | Date |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_manufacturer
+
+Kind: entity | Data class: master | Parent: - | _id pattern: MFR-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | countryId | String | u_mes_mdm_country._id |
+| 8 | countryName | String |  |
+| 9 | website | String |  |
+| 10 | supportPhone | String |  |
+| 11 | status | String |  |
+| 12 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_equipmentType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: EQT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_skillCategory
+
+Kind: entity | Data class: master | Parent: - | _id pattern: SKC-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_permission
+
+Kind: entity | Data class: master | Parent: - | _id pattern: PRM-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | resourceName | String |  |
+| 8 | actionName | String |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_signatureMeaning
+
+Kind: entity | Data class: master | Parent: - | _id pattern: SGM-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_currency
+
+Kind: entity | Data class: master | Parent: - | _id pattern: CUR-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | symbol | String |  |
+| 7 | decimalPlaces | Int32 |  |
+| 8 | isoNumericCode | String |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_country
+
+Kind: entity | Data class: master | Parent: - | _id pattern: CTY-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | isoAlpha3Code | String |  |
+| 7 | dialCode | String |  |
+| 8 | sequenceNo | Int32 |  |
+| 9 | status | String |  |
+| 10 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_language
+
+Kind: entity | Data class: master | Parent: - | _id pattern: LNG-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | nativeName | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_transporter
+
+Kind: entity | Data class: master | Parent: - | _id pattern: TRP-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | gstin | String |  |
+| 7 | phone | String |  |
+| 8 | email | String |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_mdm_commodity
+
+Kind: entity | Data class: master | Parent: - | _id pattern: CMD-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |

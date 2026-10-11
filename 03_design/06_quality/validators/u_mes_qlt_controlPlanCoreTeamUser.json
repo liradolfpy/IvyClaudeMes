@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_qlt_controlPlanCoreTeamUser",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_controlPlanCoreTeamUser",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "controlPlanId",
+        "controlPlanName",
+        "sequenceNo",
+        "coreTeamUserId",
+        "coreTeamUserName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <controlPlanId>-CTU<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "controlPlanId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_controlPlan._id: the parent document this one belongs to"
+        },
+        "controlPlanName": {
+          "bsonType": "string",
+          "description": "Display value of controlPlanId, copied from u_mes_qlt_controlPlan.recordNo"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "coreTeamUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: core team user"
+        },
+        "coreTeamUserName": {
+          "bsonType": "string",
+          "description": "Display value of coreTeamUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

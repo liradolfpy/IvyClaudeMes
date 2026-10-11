@@ -1,0 +1,141 @@
+{
+  "collMod": "u_mes_qlt_inspectionPlanLine",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_inspectionPlanLine",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "inspectionPlanId",
+        "inspectionPlanName",
+        "lineNo",
+        "characteristicId",
+        "characteristicName",
+        "gaugeId",
+        "gaugeName",
+        "sampleSize",
+        "frequencyType",
+        "frequencyValue",
+        "recordType",
+        "autoNcOnFail",
+        "defectCodeId",
+        "defectCodeName",
+        "overrideAllowed",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <inspectionPlanId>-L<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "inspectionPlanId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_inspectionPlan._id: the parent document this one belongs to"
+        },
+        "inspectionPlanName": {
+          "bsonType": "string",
+          "description": "Display value of inspectionPlanId, copied from u_mes_qlt_inspectionPlan.name"
+        },
+        "lineNo": {
+          "bsonType": "int",
+          "description": "Line number within the parent record"
+        },
+        "characteristicId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": "string",
+          "description": "Display value of characteristicId, copied from u_mes_qlt_characteristic.name"
+        },
+        "gaugeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_gauge._id"
+        },
+        "gaugeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of gaugeId, copied from u_mes_qlt_gauge.name"
+        },
+        "sampleSize": {
+          "bsonType": "int",
+          "description": "Sample size"
+        },
+        "frequencyType": {
+          "bsonType": "string",
+          "description": "Frequency type",
+          "enum": [
+            "Every Unit",
+            "Every N Units",
+            "Every N Minutes",
+            "Per Lot",
+            "Per Shift",
+            "First Off"
+          ]
+        },
+        "frequencyValue": {
+          "bsonType": "decimal",
+          "description": "Frequency value"
+        },
+        "recordType": {
+          "bsonType": "string",
+          "description": "Record type",
+          "enum": [
+            "Measured Value",
+            "Pass Fail",
+            "Count"
+          ]
+        },
+        "autoNcOnFail": {
+          "bsonType": "bool",
+          "description": "True when: auto nc on fail"
+        },
+        "defectCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_defectCode._id"
+        },
+        "defectCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of defectCodeId, copied from u_mes_qlt_defectCode.name"
+        },
+        "overrideAllowed": {
+          "bsonType": "bool",
+          "description": "True when: override allowed"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

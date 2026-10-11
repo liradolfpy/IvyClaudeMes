@@ -1,6 +1,6 @@
 # Status values per collection
 
-Model version 2.0 | 11 October 2026 | 257 collections (106 entity, 76 child, 63 relationship, 12 value-list), 5553 keys
+Model version 2.2 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
 
 Each collection with a lifecycle defines its own `status` values. The first value is the initial state. The values are stored as master data in `u_mes_sys_statusDefinition` (one document per collection and value) and the allowed moves in `u_mes_sys_statusTransition`. Collections not listed have no `status` key.
 
@@ -22,6 +22,20 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Master data | u_mes_mdm_customer | Active, Inactive |
 | Master data | u_mes_mdm_supplier | Approved, Conditional, Blocked, Inactive |
 | Master data | u_mes_mdm_unitOfMeasure | Active, Inactive |
+| Master data | u_mes_mdm_department | Active, Inactive |
+| Master data | u_mes_mdm_designation | Active, Inactive |
+| Master data | u_mes_mdm_employmentType | Active, Inactive |
+| Master data | u_mes_mdm_costCenter | Active, Inactive |
+| Master data | u_mes_mdm_manufacturer | Active, Inactive |
+| Master data | u_mes_mdm_equipmentType | Active, Inactive |
+| Master data | u_mes_mdm_skillCategory | Active, Inactive |
+| Master data | u_mes_mdm_permission | Active, Inactive |
+| Master data | u_mes_mdm_signatureMeaning | Active, Inactive |
+| Master data | u_mes_mdm_currency | Active, Inactive |
+| Master data | u_mes_mdm_country | Active, Inactive |
+| Master data | u_mes_mdm_language | Active, Inactive |
+| Master data | u_mes_mdm_transporter | Active, Inactive |
+| Master data | u_mes_mdm_commodity | Active, Inactive |
 | Product definition | u_mes_prd_item | Active, Phase Out, Obsolete |
 | Product definition | u_mes_prd_productVariant | In Preparation, Released, Obsolete |
 | Product definition | u_mes_prd_billOfMaterial | In Preparation, Released, Obsolete |
@@ -31,6 +45,13 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Product definition | u_mes_prd_workInstruction | In Preparation, Released, Obsolete |
 | Product definition | u_mes_prd_recipe | In Preparation, Released, Obsolete |
 | Product definition | u_mes_prd_engineeringChange | Raised, Under Evaluation, Approved, Implemented, Closed, Rejected |
+| Product definition | u_mes_prd_itemGroup | Active, Inactive |
+| Product definition | u_mes_prd_itemFamily | Active, Inactive |
+| Product definition | u_mes_prd_ppeItem | Active, Inactive |
+| Product definition | u_mes_prd_market | Active, Inactive |
+| Product definition | u_mes_prd_padCompound | Active, Inactive |
+| Product definition | u_mes_prd_surfaceFinish | Active, Inactive |
+| Product definition | u_mes_prd_vehicleModel | Active, Inactive |
 | Planning and execution | u_mes_exe_customerSchedule | Received, Confirmed, Partially Shipped, Completed, Replaced |
 | Planning and execution | u_mes_exe_productionOrder | Created, Released, In Progress, On Hold, Completed, Closed, Cancelled |
 | Planning and execution | u_mes_exe_productionSchedule | Planned, Published, In Progress, Completed |
@@ -44,6 +65,8 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Planning and execution | u_mes_exe_labourBooking | Open, Closed, Approved |
 | Planning and execution | u_mes_exe_changeover | Planned, In Progress, Awaiting First Off Approval, Completed |
 | Planning and execution | u_mes_exe_shiftHandover | Open, Handed Over, Acknowledged |
+| Planning and execution | u_mes_exe_indirectActivity | Active, Inactive |
+| Planning and execution | u_mes_exe_containerType | Active, Inactive |
 | Materials | u_mes_mat_storageLocation | Active, Inactive |
 | Materials | u_mes_mat_inventoryBalance | Active, Closed |
 | Materials | u_mes_mat_materialMovement | Posted, Reversed |
@@ -55,6 +78,9 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Materials | u_mes_mat_labelTemplate | In Preparation, Released, Obsolete |
 | Materials | u_mes_mat_label | Printed, Verified, Reprinted, Voided |
 | Materials | u_mes_mat_shipment | Planned, Loading, Dispatched, Delivered, Cancelled |
+| Materials | u_mes_mat_movementType | Active, Inactive |
+| Materials | u_mes_mat_stockStatus | Active, Inactive |
+| Materials | u_mes_mat_packType | Active, Inactive |
 | Traceability | u_mes_trc_serialNumber | Reserved, Issued, Marked, Shipped, Voided, Scrapped |
 | Traceability | u_mes_trc_genealogyLink | Active, Removed |
 | Traceability | u_mes_trc_componentLotLink | Active, Removed |
@@ -83,6 +109,10 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Quality | u_mes_qlt_msaStudy | Planned, Completed, Accepted, Not Accepted |
 | Quality | u_mes_qlt_audit | Planned, In Progress, Completed, Closed |
 | Quality | u_mes_qlt_customerComplaint | Received, Containment Sent, Under Analysis, Closed, Rejected |
+| Quality | u_mes_qlt_defectGroup | Active, Inactive |
+| Quality | u_mes_qlt_gaugeType | Active, Inactive |
+| Quality | u_mes_qlt_dispositionType | Active, Inactive |
+| Quality | u_mes_qlt_complaintType | Active, Inactive |
 | Equipment and performance | u_mes_eqp_reasonCode | Active, Inactive |
 | Equipment and performance | u_mes_eqp_equipmentState | Open, Closed |
 | Equipment and performance | u_mes_eqp_downtimeEvent | Open, Classified, Closed |
@@ -92,11 +122,14 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Equipment and performance | u_mes_eqp_alarm | Raised, Acknowledged, Cleared |
 | Equipment and performance | u_mes_eqp_torqueResult | Recorded, Voided |
 | Equipment and performance | u_mes_eqp_leakTestResult | Recorded, Voided |
+| Equipment and performance | u_mes_eqp_lossCategory | Active, Inactive |
+| Equipment and performance | u_mes_eqp_reasonCategory | Active, Inactive |
 | Maintenance and tooling | u_mes_mnt_maintenancePlan | Active, Suspended, Inactive |
 | Maintenance and tooling | u_mes_mnt_maintenanceWorkOrder | Reported, Planned, In Progress, Completed, Closed, Cancelled |
 | Maintenance and tooling | u_mes_mnt_sparePart | Active, Obsolete |
 | Maintenance and tooling | u_mes_mnt_tool | Available, Mounted, In Maintenance, Life Expired, Scrapped |
 | Maintenance and tooling | u_mes_mnt_toolLifeRecord | Recorded, Voided |
+| Maintenance and tooling | u_mes_mnt_toolType | Active, Inactive |
 | Integration and system | u_mes_sys_erpMessage | Queued, Sent, Acknowledged, Failed, Dead Letter |
 | Integration and system | u_mes_sys_integrationConnector | Active, Disabled |
 | Integration and system | u_mes_sys_iotDevice | Active, Inactive, Retired |
@@ -105,9 +138,18 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Integration and system | u_mes_sys_controlledDocument | In Preparation, Released, Obsolete |
 | Integration and system | u_mes_sys_numberRange | Active, Inactive |
 | Integration and system | u_mes_sys_systemConfiguration | Active, Inactive |
+| Integration and system | u_mes_sys_documentType | Active, Inactive |
+| Integration and system | u_mes_sys_deviceType | Active, Inactive |
+| Integration and system | u_mes_sys_notificationType | Active, Inactive |
 | Integration and system | u_mes_sys_statusDefinition | Active, Inactive |
+| Integration and system | u_mes_sys_enumerationValue | Active, Inactive |
 | Integration and system | u_mes_sys_statusTransition | Active, Inactive |
 | Energy, safety and andon | u_mes_ehs_andonEvent | Raised, Acknowledged, Resolved, Cancelled |
 | Energy, safety and andon | u_mes_ehs_safetyIncident | Reported, Under Investigation, Actions Open, Closed |
+| Energy, safety and andon | u_mes_ehs_andonType | Active, Inactive |
+| Energy, safety and andon | u_mes_ehs_incidentType | Active, Inactive |
+| Energy, safety and andon | u_mes_ehs_energyType | Active, Inactive |
+| Energy, safety and andon | u_mes_ehs_bodyPart | Active, Inactive |
+| Energy, safety and andon | u_mes_ehs_injuryType | Active, Inactive |
 
 Entity collections without a status key (append-only records): u_mes_eqp_processReading, u_mes_sys_businessEvent, u_mes_sys_auditTrail, u_mes_sys_electronicSignature, u_mes_ehs_energyReading.

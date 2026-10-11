@@ -53,26 +53,27 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: INV-<recordNo>
 | 10 | storageLocationName | String |  |
 | 11 | containerId | String | u_mes_exe_container._id |
 | 12 | containerName | String |  |
-| 13 | stockStatus | String |  |
-| 14 | quantity | Decimal128 |  |
-| 15 | reservedQuantity | Decimal128 |  |
-| 16 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 17 | unitOfMeasureName | String |  |
-| 18 | valueInr | Decimal128 |  |
-| 19 | firstReceivedAt | Date |  |
-| 20 | lastMovementAt | Date |  |
-| 21 | lastCountedAt | Date |  |
-| 22 | lastCountedById | String | u_mes_mdm_user._id |
-| 23 | lastCountedBy | String |  |
-| 24 | expiryAt | Date |  |
-| 25 | status | String |  |
-| 26 | schemaVersion | Int32 |  |
-| 27 | createdAt | Date |  |
-| 28 | createdById | String | u_mes_mdm_user._id |
-| 29 | createdBy | String |  |
-| 30 | updatedAt | Date |  |
-| 31 | updatedById | String | u_mes_mdm_user._id |
-| 32 | updatedBy | String |  |
+| 13 | stockStatusId | String | u_mes_mat_stockStatus._id |
+| 14 | stockStatusName | String |  |
+| 15 | quantity | Decimal128 |  |
+| 16 | reservedQuantity | Decimal128 |  |
+| 17 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 18 | unitOfMeasureName | String |  |
+| 19 | valueInr | Decimal128 |  |
+| 20 | firstReceivedAt | Date |  |
+| 21 | lastMovementAt | Date |  |
+| 22 | lastCountedAt | Date |  |
+| 23 | lastCountedById | String | u_mes_mdm_user._id |
+| 24 | lastCountedBy | String |  |
+| 25 | expiryAt | Date |  |
+| 26 | status | String |  |
+| 27 | schemaVersion | Int32 |  |
+| 28 | createdAt | Date |  |
+| 29 | createdById | String | u_mes_mdm_user._id |
+| 30 | createdBy | String |  |
+| 31 | updatedAt | Date |  |
+| 32 | updatedById | String | u_mes_mdm_user._id |
+| 33 | updatedBy | String |  |
 
 ## u_mes_mat_materialMovement
 
@@ -84,47 +85,50 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: MM-<recordNo>
 | 2 | recordNo | String |  |
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
-| 5 | movementType | String |  |
-| 6 | itemId | String | u_mes_prd_item._id |
-| 7 | itemName | String |  |
-| 8 | lotId | String | u_mes_exe_lot._id |
-| 9 | lotName | String |  |
-| 10 | containerId | String | u_mes_exe_container._id |
-| 11 | containerName | String |  |
-| 12 | quantity | Decimal128 |  |
-| 13 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 14 | unitOfMeasureName | String |  |
-| 15 | fromLocationId | String | u_mes_mat_storageLocation._id |
-| 16 | fromLocationName | String |  |
-| 17 | toLocationId | String | u_mes_mat_storageLocation._id |
-| 18 | toLocationName | String |  |
-| 19 | fromStockStatus | String |  |
-| 20 | toStockStatus | String |  |
-| 21 | productionOrderId | String | u_mes_exe_productionOrder._id |
-| 22 | productionOrderName | String |  |
-| 23 | goodsReceiptId | String | u_mes_mat_goodsReceipt._id |
-| 24 | goodsReceiptName | String |  |
-| 25 | shipmentId | String | u_mes_mat_shipment._id |
-| 26 | shipmentName | String |  |
-| 27 | kitId | String | u_mes_mat_kit._id |
-| 28 | kitName | String |  |
-| 29 | movedAt | Date |  |
-| 30 | movedById | String | u_mes_mdm_user._id |
-| 31 | movedBy | String |  |
-| 32 | scanSource | String |  |
-| 33 | reasonText | String |  |
-| 34 | erpDocumentNo | String |  |
-| 35 | erpMovementType | String |  |
-| 36 | reversalOfMaterialMovementId | String | u_mes_mat_materialMovement._id |
-| 37 | reversalOfMaterialMovementName | String |  |
-| 38 | status | String |  |
-| 39 | schemaVersion | Int32 |  |
-| 40 | createdAt | Date |  |
-| 41 | createdById | String | u_mes_mdm_user._id |
-| 42 | createdBy | String |  |
-| 43 | updatedAt | Date |  |
-| 44 | updatedById | String | u_mes_mdm_user._id |
-| 45 | updatedBy | String |  |
+| 5 | movementTypeId | String | u_mes_mat_movementType._id |
+| 6 | movementTypeName | String |  |
+| 7 | itemId | String | u_mes_prd_item._id |
+| 8 | itemName | String |  |
+| 9 | lotId | String | u_mes_exe_lot._id |
+| 10 | lotName | String |  |
+| 11 | containerId | String | u_mes_exe_container._id |
+| 12 | containerName | String |  |
+| 13 | quantity | Decimal128 |  |
+| 14 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 15 | unitOfMeasureName | String |  |
+| 16 | fromLocationId | String | u_mes_mat_storageLocation._id |
+| 17 | fromLocationName | String |  |
+| 18 | toLocationId | String | u_mes_mat_storageLocation._id |
+| 19 | toLocationName | String |  |
+| 20 | fromStockStatusId | String | u_mes_mat_stockStatus._id |
+| 21 | fromStockStatusName | String |  |
+| 22 | toStockStatusId | String | u_mes_mat_stockStatus._id |
+| 23 | toStockStatusName | String |  |
+| 24 | productionOrderId | String | u_mes_exe_productionOrder._id |
+| 25 | productionOrderName | String |  |
+| 26 | goodsReceiptId | String | u_mes_mat_goodsReceipt._id |
+| 27 | goodsReceiptName | String |  |
+| 28 | shipmentId | String | u_mes_mat_shipment._id |
+| 29 | shipmentName | String |  |
+| 30 | kitId | String | u_mes_mat_kit._id |
+| 31 | kitName | String |  |
+| 32 | movedAt | Date |  |
+| 33 | movedById | String | u_mes_mdm_user._id |
+| 34 | movedBy | String |  |
+| 35 | scanSource | String |  |
+| 36 | reasonText | String |  |
+| 37 | erpDocumentNo | String |  |
+| 38 | erpMovementType | String |  |
+| 39 | reversalOfMaterialMovementId | String | u_mes_mat_materialMovement._id |
+| 40 | reversalOfMaterialMovementName | String |  |
+| 41 | status | String |  |
+| 42 | schemaVersion | Int32 |  |
+| 43 | createdAt | Date |  |
+| 44 | createdById | String | u_mes_mdm_user._id |
+| 45 | createdBy | String |  |
+| 46 | updatedAt | Date |  |
+| 47 | updatedById | String | u_mes_mdm_user._id |
+| 48 | updatedBy | String |  |
 
 ## u_mes_mat_goodsReceipt
 
@@ -393,24 +397,25 @@ Kind: entity | Data class: master | Parent: - | _id pattern: PKS-<recordNo>
 | 7 | customerId | String | u_mes_mdm_customer._id |
 | 8 | customerName | String |  |
 | 9 | version | Int32 |  |
-| 10 | containerType | String |  |
-| 11 | quantityPerContainer | Int32 |  |
-| 12 | dunnage | String |  |
-| 13 | vciRequired | Boolean |  |
-| 14 | layersPerContainer | Int32 |  |
-| 15 | unitsPerLayer | Int32 |  |
-| 16 | containersPerPallet | Int32 |  |
-| 17 | maxGrossWeightKg | Decimal128 |  |
-| 18 | unitLabelTemplateId | String | u_mes_mat_labelTemplate._id |
-| 19 | unitLabelTemplateName | String |  |
-| 20 | containerLabelTemplateId | String | u_mes_mat_labelTemplate._id |
-| 21 | containerLabelTemplateName | String |  |
-| 22 | instructionControlledDocumentId | String | u_mes_sys_controlledDocument._id |
-| 23 | instructionControlledDocumentName | String |  |
-| 24 | approvedByCustomer | Boolean |  |
-| 25 | effectiveFrom | Date |  |
-| 26 | status | String |  |
-| 27 | schemaVersion | Int32 |  |
+| 10 | containerTypeId | String | u_mes_exe_containerType._id |
+| 11 | containerTypeName | String |  |
+| 12 | quantityPerContainer | Int32 |  |
+| 13 | dunnage | String |  |
+| 14 | vciRequired | Boolean |  |
+| 15 | layersPerContainer | Int32 |  |
+| 16 | unitsPerLayer | Int32 |  |
+| 17 | containersPerPallet | Int32 |  |
+| 18 | maxGrossWeightKg | Decimal128 |  |
+| 19 | unitLabelTemplateId | String | u_mes_mat_labelTemplate._id |
+| 20 | unitLabelTemplateName | String |  |
+| 21 | containerLabelTemplateId | String | u_mes_mat_labelTemplate._id |
+| 22 | containerLabelTemplateName | String |  |
+| 23 | instructionControlledDocumentId | String | u_mes_sys_controlledDocument._id |
+| 24 | instructionControlledDocumentName | String |  |
+| 25 | approvedByCustomer | Boolean |  |
+| 26 | effectiveFrom | Date |  |
+| 27 | status | String |  |
+| 28 | schemaVersion | Int32 |  |
 
 ## u_mes_mat_packagingSpecificationLevel
 
@@ -425,12 +430,13 @@ Kind: child | Data class: master | Parent: u_mes_mat_packagingSpecification | _i
 | 5 | packagingSpecificationId | String | u_mes_mat_packagingSpecification._id |
 | 6 | packagingSpecificationName | String |  |
 | 7 | levelNo | Int32 |  |
-| 8 | packType | String |  |
-| 9 | quantity | Int32 |  |
-| 10 | lengthMm | Decimal128 |  |
-| 11 | widthMm | Decimal128 |  |
-| 12 | heightMm | Decimal128 |  |
-| 13 | schemaVersion | Int32 |  |
+| 8 | packTypeId | String | u_mes_mat_packType._id |
+| 9 | packTypeName | String |  |
+| 10 | quantity | Int32 |  |
+| 11 | lengthMm | Decimal128 |  |
+| 12 | widthMm | Decimal128 |  |
+| 13 | heightMm | Decimal128 |  |
+| 14 | schemaVersion | Int32 |  |
 
 ## u_mes_mat_labelTemplate
 
@@ -547,30 +553,31 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SHP-<recordNo>
 | 12 | asnNo | String |  |
 | 13 | asnSentAt | Date |  |
 | 14 | eWayBillNo | String |  |
-| 15 | transporter | String |  |
-| 16 | vehicleNo | String |  |
-| 17 | driverName | String |  |
-| 18 | lrNo | String |  |
-| 19 | totalQuantity | Int32 |  |
-| 20 | totalContainers | Int32 |  |
-| 21 | grossWeightKg | Decimal128 |  |
-| 22 | invoiceValueInr | Decimal128 |  |
-| 23 | dockLocationId | String | u_mes_mat_storageLocation._id |
-| 24 | dockLocationName | String |  |
-| 25 | loadedById | String | u_mes_mdm_user._id |
-| 26 | loadedBy | String |  |
-| 27 | plannedDispatchAt | Date |  |
-| 28 | dispatchedAt | Date |  |
-| 29 | deliveredAt | Date |  |
-| 30 | podReceivedAt | Date |  |
-| 31 | status | String |  |
-| 32 | schemaVersion | Int32 |  |
-| 33 | createdAt | Date |  |
-| 34 | createdById | String | u_mes_mdm_user._id |
-| 35 | createdBy | String |  |
-| 36 | updatedAt | Date |  |
-| 37 | updatedById | String | u_mes_mdm_user._id |
-| 38 | updatedBy | String |  |
+| 15 | transporterId | String | u_mes_mdm_transporter._id |
+| 16 | transporterName | String |  |
+| 17 | vehicleNo | String |  |
+| 18 | driverName | String |  |
+| 19 | lrNo | String |  |
+| 20 | totalQuantity | Int32 |  |
+| 21 | totalContainers | Int32 |  |
+| 22 | grossWeightKg | Decimal128 |  |
+| 23 | invoiceValueInr | Decimal128 |  |
+| 24 | dockLocationId | String | u_mes_mat_storageLocation._id |
+| 25 | dockLocationName | String |  |
+| 26 | loadedById | String | u_mes_mdm_user._id |
+| 27 | loadedBy | String |  |
+| 28 | plannedDispatchAt | Date |  |
+| 29 | dispatchedAt | Date |  |
+| 30 | deliveredAt | Date |  |
+| 31 | podReceivedAt | Date |  |
+| 32 | status | String |  |
+| 33 | schemaVersion | Int32 |  |
+| 34 | createdAt | Date |  |
+| 35 | createdById | String | u_mes_mdm_user._id |
+| 36 | createdBy | String |  |
+| 37 | updatedAt | Date |  |
+| 38 | updatedById | String | u_mes_mdm_user._id |
+| 39 | updatedBy | String |  |
 
 ## u_mes_mat_shipmentLine
 
@@ -642,3 +649,56 @@ Kind: relationship | Data class: transaction | Parent: u_mes_mat_shipmentLine | 
 | 14 | updatedAt | Date |  |
 | 15 | updatedById | String | u_mes_mdm_user._id |
 | 16 | updatedBy | String |  |
+
+## u_mes_mat_movementType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: MVT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | erpMovementType | String |  |
+| 8 | stockEffect | String |  |
+| 9 | requiresReason | Boolean |  |
+| 10 | sequenceNo | Int32 |  |
+| 11 | status | String |  |
+| 12 | schemaVersion | Int32 |  |
+
+## u_mes_mat_stockStatus
+
+Kind: entity | Data class: master | Parent: - | _id pattern: STS-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | isUsable | Boolean |  |
+| 8 | erpStockType | String |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_mat_packType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: PKT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |

@@ -1,0 +1,124 @@
+{
+  "collMod": "u_mes_prd_billOfProcessStep",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prd_billOfProcessStep",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "billOfProcessId",
+        "billOfProcessName",
+        "stepNo",
+        "operationId",
+        "operationName",
+        "recipeId",
+        "recipeName",
+        "workInstructionId",
+        "workInstructionName",
+        "inspectionPlanId",
+        "inspectionPlanName",
+        "cycleTimeSec",
+        "manning",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <billOfProcessId>-S<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "billOfProcessId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_billOfProcess._id: the parent document this one belongs to"
+        },
+        "billOfProcessName": {
+          "bsonType": "string",
+          "description": "Display value of billOfProcessId, copied from u_mes_prd_billOfProcess.recordNo"
+        },
+        "stepNo": {
+          "bsonType": "int",
+          "description": "Step number within the parent record"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prd_operation.name"
+        },
+        "recipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_recipe._id"
+        },
+        "recipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of recipeId, copied from u_mes_prd_recipe.name"
+        },
+        "workInstructionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_workInstruction._id"
+        },
+        "workInstructionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workInstructionId, copied from u_mes_prd_workInstruction.title"
+        },
+        "inspectionPlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_inspectionPlan._id"
+        },
+        "inspectionPlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of inspectionPlanId, copied from u_mes_qlt_inspectionPlan.name"
+        },
+        "cycleTimeSec": {
+          "bsonType": "decimal",
+          "description": "Cycle time (seconds)"
+        },
+        "manning": {
+          "bsonType": "int",
+          "description": "Manning of the bill of process step"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

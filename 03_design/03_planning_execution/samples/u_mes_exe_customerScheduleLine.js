@@ -1,0 +1,26 @@
+// Sample document for u_mes_exe_customerScheduleLine (illustrative; seed data is generated separately)
+db.getCollection("u_mes_exe_customerScheduleLine").insertOne({
+  _id: "CSR-SML-DS-2026-40-L001",
+  recordNo: "SML-DS-2026-40-L001",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  customerScheduleId: "CSR-SML-DS-2026-40",
+  customerScheduleName: "SML-DS-2026-40",
+  lineNo: NumberInt(10),
+  itemId: "ITM-5110-10-0100",
+  itemName: "Front Brake Caliper Assembly, LH",
+  customerPartNo: "SM-3501-0421-LH",
+  dueDate: ISODate("2026-09-28T18:30:00.000+0000"),
+  quantity: NumberInt(1),
+  cumulativeRequired: NumberInt(18240),
+  cumulativeShipped: NumberInt(17760),
+  firmness: "Firm",
+  shippedQuantity: NumberInt(480),
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10231",
+  createdBy: "Sunil Jadhav",
+  updatedAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  updatedById: "USR-10231",
+  updatedBy: "Sunil Jadhav"
+});

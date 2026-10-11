@@ -1,0 +1,90 @@
+{
+  "collMod": "u_mes_mdm_shift",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_shift",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "startTimeLocal",
+        "endTimeLocal",
+        "crossesMidnight",
+        "durationMinutes",
+        "plannedProductionMinutes",
+        "shiftAllowancePerDay",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SH-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the shift; used as its display value in other collections"
+        },
+        "startTimeLocal": {
+          "bsonType": "string",
+          "description": "Local start time, 24-hour HH:mm"
+        },
+        "endTimeLocal": {
+          "bsonType": "string",
+          "description": "Local end time, 24-hour HH:mm"
+        },
+        "crossesMidnight": {
+          "bsonType": "bool",
+          "description": "True when: crosses midnight"
+        },
+        "durationMinutes": {
+          "bsonType": "int",
+          "description": "Duration (minutes)"
+        },
+        "plannedProductionMinutes": {
+          "bsonType": "int",
+          "description": "Shift duration less paid and unpaid breaks"
+        },
+        "shiftAllowancePerDay": {
+          "bsonType": "decimal",
+          "description": "Shift allowance per day"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

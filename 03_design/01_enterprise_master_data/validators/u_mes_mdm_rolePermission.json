@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_mdm_rolePermission",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_rolePermission",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "roleId",
+        "roleName",
+        "sequenceNo",
+        "permissionId",
+        "permissionName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <roleId>-P<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "roleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_role._id: the parent document this one belongs to"
+        },
+        "roleName": {
+          "bsonType": "string",
+          "description": "Display value of roleId, copied from u_mes_mdm_role.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "permissionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_permission._id"
+        },
+        "permissionName": {
+          "bsonType": "string",
+          "description": "Display value of permissionId, copied from u_mes_mdm_permission.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,197 @@
+{
+  "collMod": "u_mes_qlt_inspectionPlan",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_inspectionPlan",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "controlPlanId",
+        "controlPlanName",
+        "itemId",
+        "itemName",
+        "operationId",
+        "operationName",
+        "workCenterId",
+        "workCenterName",
+        "planType",
+        "version",
+        "collectionTrigger",
+        "samplingPlanId",
+        "samplingPlanName",
+        "blockOnFail",
+        "effectiveFrom",
+        "effectiveTo",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: IP-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the inspection plan; used as its display value in other collections"
+        },
+        "controlPlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_controlPlan._id"
+        },
+        "controlPlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of controlPlanId, copied from u_mes_qlt_controlPlan.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prd_operation.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "planType": {
+          "bsonType": "string",
+          "description": "Plan type",
+          "enum": [
+            "Incoming",
+            "In Process",
+            "First Off",
+            "Final",
+            "Dock Audit",
+            "Layout"
+          ]
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the inspection plan"
+        },
+        "collectionTrigger": {
+          "bsonType": "string",
+          "description": "Collection trigger",
+          "enum": [
+            "Operation Start",
+            "Operation Complete",
+            "Time Interval",
+            "Unit Count",
+            "Goods Receipt",
+            "Changeover"
+          ]
+        },
+        "samplingPlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_samplingPlan._id"
+        },
+        "samplingPlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of samplingPlanId, copied from u_mes_qlt_samplingPlan.name"
+        },
+        "blockOnFail": {
+          "bsonType": "bool",
+          "description": "True when: block on fail"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Effective to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mdm_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

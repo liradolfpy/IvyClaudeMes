@@ -1,0 +1,318 @@
+{
+  "collMod": "u_mes_exe_wipUnit",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_exe_wipUnit",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionOrderId",
+        "productionOrderName",
+        "itemId",
+        "itemName",
+        "itemRevision",
+        "productVariantId",
+        "productVariantName",
+        "serialNumberId",
+        "serialNumberName",
+        "bodyLotId",
+        "bodyLotName",
+        "routingId",
+        "routingName",
+        "currentStepNo",
+        "currentOperationId",
+        "currentOperationName",
+        "currentWorkCenterId",
+        "currentWorkCenterName",
+        "qualityStatus",
+        "onHold",
+        "qualityHoldId",
+        "qualityHoldName",
+        "reworkCount",
+        "createdAtOperationId",
+        "createdAtOperationName",
+        "startedAt",
+        "completedAt",
+        "lastOperationExecutionId",
+        "lastOperationExecutionName",
+        "containerId",
+        "containerName",
+        "bodyCavityNo",
+        "castDateCode",
+        "scrappedAt",
+        "shippedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: WU-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_exe_productionOrder.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "itemRevision": {
+          "bsonType": "string",
+          "description": "Item revision"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prd_productVariant.name"
+        },
+        "serialNumberId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_trc_serialNumber._id"
+        },
+        "serialNumberName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of serialNumberId, copied from u_mes_trc_serialNumber.recordNo"
+        },
+        "bodyLotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_lot._id: body lot"
+        },
+        "bodyLotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of bodyLotId, copied from u_mes_exe_lot.recordNo"
+        },
+        "routingId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_routing._id"
+        },
+        "routingName": {
+          "bsonType": "string",
+          "description": "Display value of routingId, copied from u_mes_prd_routing.description"
+        },
+        "currentStepNo": {
+          "bsonType": "int",
+          "description": "Current step number"
+        },
+        "currentOperationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id: current operation"
+        },
+        "currentOperationName": {
+          "bsonType": "string",
+          "description": "Display value of currentOperationId, copied from u_mes_prd_operation.name"
+        },
+        "currentWorkCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id: current work center"
+        },
+        "currentWorkCenterName": {
+          "bsonType": "string",
+          "description": "Display value of currentWorkCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "qualityStatus": {
+          "bsonType": "string",
+          "description": "Quality status",
+          "enum": [
+            "Released",
+            "Under Inspection",
+            "On Hold",
+            "Rejected"
+          ]
+        },
+        "onHold": {
+          "bsonType": "bool",
+          "description": "True when: on hold"
+        },
+        "qualityHoldId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_qualityHold._id"
+        },
+        "qualityHoldName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of qualityHoldId, copied from u_mes_qlt_qualityHold.recordNo"
+        },
+        "reworkCount": {
+          "bsonType": "int",
+          "description": "Rework count"
+        },
+        "createdAtOperationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_operation._id: created at operation"
+        },
+        "createdAtOperationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of createdAtOperationId, copied from u_mes_prd_operation.name"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was started"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "lastOperationExecutionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_operationExecution._id: last operation execution"
+        },
+        "lastOperationExecutionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lastOperationExecutionId, copied from u_mes_exe_operationExecution.recordNo"
+        },
+        "containerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_container._id"
+        },
+        "containerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of containerId, copied from u_mes_exe_container.recordNo"
+        },
+        "bodyCavityNo": {
+          "bsonType": "int",
+          "description": "Body cavity number"
+        },
+        "castDateCode": {
+          "bsonType": "string",
+          "description": "Date, shift and cavity code cast into the body"
+        },
+        "scrappedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was scrapped"
+        },
+        "shippedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was shipped"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Created",
+            "In Process",
+            "On Hold",
+            "In Rework",
+            "Completed",
+            "Packed",
+            "Shipped",
+            "Scrapped"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

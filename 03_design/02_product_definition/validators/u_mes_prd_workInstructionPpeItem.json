@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_prd_workInstructionPpeItem",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prd_workInstructionPpeItem",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "workInstructionId",
+        "workInstructionName",
+        "sequenceNo",
+        "ppeItemId",
+        "ppeItemName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <workInstructionId>-PI<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "workInstructionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_workInstruction._id: the parent document this one belongs to"
+        },
+        "workInstructionName": {
+          "bsonType": "string",
+          "description": "Display value of workInstructionId, copied from u_mes_prd_workInstruction.title"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "ppeItemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_ppeItem._id"
+        },
+        "ppeItemName": {
+          "bsonType": "string",
+          "description": "Display value of ppeItemId, copied from u_mes_prd_ppeItem.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

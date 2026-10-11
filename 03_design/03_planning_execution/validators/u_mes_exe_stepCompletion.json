@@ -1,0 +1,275 @@
+{
+  "collMod": "u_mes_exe_stepCompletion",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_exe_stepCompletion",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "operationExecutionId",
+        "operationExecutionName",
+        "workInstructionId",
+        "workInstructionName",
+        "workInstructionVersion",
+        "stepNo",
+        "wipUnitId",
+        "wipUnitName",
+        "workCenterId",
+        "workCenterName",
+        "userId",
+        "userName",
+        "startedAt",
+        "completedAt",
+        "durationSec",
+        "inputType",
+        "enteredText",
+        "enteredNumber",
+        "enteredFlag",
+        "scannedCode",
+        "withinLimits",
+        "deviceSource",
+        "overridden",
+        "overrideById",
+        "overrideBy",
+        "overrideReason",
+        "photoControlledDocumentId",
+        "photoControlledDocumentName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: STC-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "operationExecutionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_operationExecution._id"
+        },
+        "operationExecutionName": {
+          "bsonType": "string",
+          "description": "Display value of operationExecutionId, copied from u_mes_exe_operationExecution.recordNo"
+        },
+        "workInstructionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_workInstruction._id"
+        },
+        "workInstructionName": {
+          "bsonType": "string",
+          "description": "Display value of workInstructionId, copied from u_mes_prd_workInstruction.title"
+        },
+        "workInstructionVersion": {
+          "bsonType": "int",
+          "description": "Work instruction version"
+        },
+        "stepNo": {
+          "bsonType": "int",
+          "description": "Step number within the parent record"
+        },
+        "wipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of wipUnitId, copied from u_mes_exe_wipUnit.recordNo"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id"
+        },
+        "userName": {
+          "bsonType": "string",
+          "description": "Display value of userId, copied from u_mes_mdm_user.fullName"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was started"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "durationSec": {
+          "bsonType": "int",
+          "description": "Duration (seconds)"
+        },
+        "inputType": {
+          "bsonType": "string",
+          "description": "Input type",
+          "enum": [
+            "None",
+            "Confirmation",
+            "Number",
+            "Text",
+            "Scan",
+            "Photo",
+            "Device Value"
+          ]
+        },
+        "enteredText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Entered text"
+        },
+        "enteredNumber": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Entered number"
+        },
+        "enteredFlag": {
+          "bsonType": "bool",
+          "description": "True when: entered flag"
+        },
+        "scannedCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Scanned code"
+        },
+        "withinLimits": {
+          "bsonType": "bool",
+          "description": "True when: within limits"
+        },
+        "deviceSource": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Device source",
+          "enum": [
+            "Manual Entry",
+            "Scanner",
+            "Nutrunner Controller",
+            "Leak Tester",
+            "Gauge Interface",
+            "PLC",
+            null
+          ]
+        },
+        "overridden": {
+          "bsonType": "bool",
+          "description": "True when: overridden"
+        },
+        "overrideById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'override'"
+        },
+        "overrideBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in overrideById, copied from u_mes_mdm_user.fullName"
+        },
+        "overrideReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Override reason"
+        },
+        "photoControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_sys_controlledDocument._id: photo controlled document"
+        },
+        "photoControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of photoControlledDocumentId, copied from u_mes_sys_controlledDocument.title"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Completed",
+            "Skipped",
+            "Overridden"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

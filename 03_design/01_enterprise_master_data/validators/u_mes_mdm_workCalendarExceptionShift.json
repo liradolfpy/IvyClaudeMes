@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_mdm_workCalendarExceptionShift",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_workCalendarExceptionShift",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "workCalendarExceptionId",
+        "workCalendarExceptionName",
+        "sequenceNo",
+        "shiftId",
+        "shiftName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <workCalendarExceptionId>-S<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "workCalendarExceptionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCalendarException._id: the parent document this one belongs to"
+        },
+        "workCalendarExceptionName": {
+          "bsonType": "string",
+          "description": "Display value of workCalendarExceptionId, copied from u_mes_mdm_workCalendarException.description"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mdm_shift.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

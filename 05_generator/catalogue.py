@@ -118,3 +118,6 @@ C=[
 ("andon_events",D_ESA,"AND","andonNo","Help calls from stations (quality, material, maintenance, safety) with response and escalation times","NoMuda, Tulip, Proficy",["sites","work_centres","lines","users","reason_codes","downtime_events","shifts"],"~40,000","standard","Embeds escalation steps (bounded)"),
 ("safety_incidents",D_ESA,"SAF","incidentNo","Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions","CM, Infor",["sites","areas","work_centres","users","equipment","capas"],"~400","standard","Embeds actions and witnesses (bounded)"),
 ]
+
+from master_refs import NEWC
+C.extend(NEWC)

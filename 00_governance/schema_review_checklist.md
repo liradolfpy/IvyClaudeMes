@@ -17,6 +17,7 @@ Run before accepting a document or generating sample or seed data. Record the re
 | A9 | Audit keys are present on transaction collections and absent on master collections |
 | A10 | Every reference ID points to an `_id` that exists in the target collection |
 | A11 | Dates fall inside the production timeline and are in a possible order |
+| A12 | No classification is held as free text: each one is either a master reference (ID plus display key) or a fixed enumeration with its values in `enumeration_values.md` |
 
 ## B. Naming checklist for every new key
 
@@ -28,6 +29,7 @@ Run before accepting a document or generating sample or seed data. Record the re
 | B4 | Does the BSON type match the value being stored? |
 | B5 | Is the key consistent with the same concept in other documents and collections? |
 | B6 | Is the key necessary and limited to one clear purpose? |
+| B7 | If the key classifies the document, has DATA-003 been applied: master collection (rule A) or fixed enumeration (rule B)? |
 
 ## C. Naming checklist for every new collection
 
@@ -37,3 +39,4 @@ Run before accepting a document or generating sample or seed data. Record the re
 | C2 | Is the business concept not already held by another collection? |
 | C3 | Is the data class (master or transaction) decided and recorded in the inventory? |
 | C4 | If it has a lifecycle, are its status values defined in `status_values.md`? |
+| C5 | Does every master list the collection uses exist as its own collection in the inventory? |

@@ -1,0 +1,26 @@
+// Sample document for u_mes_eqp_reasonCode (illustrative; seed data is generated separately)
+db.getCollection("u_mes_eqp_reasonCode").insertOne({
+  _id: "RSN-MECH-NR-02",
+  recordNo: "MECH-NR-02",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  name: "Nutrunner socket worn",
+  reasonType: "Downtime",
+  level: NumberInt(3),
+  parentReasonCodeId: "RSN-MECH-NR",
+  parentReasonCodeName: "Nutrunner",
+  pathText: "Unplanned > Mechanical > Clamping > Clamp cylinder failure",
+  reasonCategoryId: "RCT-MECH",
+  reasonCategoryName: "Mechanical",
+  lossCategoryId: "LSC-BREAKDOWN",
+  lossCategoryName: "Breakdown",
+  oeeImpact: "Availability",
+  isPlanned: false,
+  responsibleDepartmentId: "DEPT-MAINT",
+  responsibleDepartmentName: "Maintenance",
+  requiresComment: true,
+  requiresMaintenanceWorkOrder: true,
+  sequenceNo: NumberInt(1),
+  status: "Active",
+  schemaVersion: NumberInt(1)
+});

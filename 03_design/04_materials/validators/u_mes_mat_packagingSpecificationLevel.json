@@ -1,0 +1,86 @@
+{
+  "collMod": "u_mes_mat_packagingSpecificationLevel",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mat_packagingSpecificationLevel",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "packagingSpecificationId",
+        "packagingSpecificationName",
+        "levelNo",
+        "packTypeId",
+        "packTypeName",
+        "quantity",
+        "lengthMm",
+        "widthMm",
+        "heightMm",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <packagingSpecificationId>-L<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "packagingSpecificationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mat_packagingSpecification._id: the parent document this one belongs to"
+        },
+        "packagingSpecificationName": {
+          "bsonType": "string",
+          "description": "Display value of packagingSpecificationId, copied from u_mes_mat_packagingSpecification.recordNo"
+        },
+        "levelNo": {
+          "bsonType": "int",
+          "description": "Level number"
+        },
+        "packTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mat_packType._id"
+        },
+        "packTypeName": {
+          "bsonType": "string",
+          "description": "Display value of packTypeId, copied from u_mes_mat_packType.name"
+        },
+        "quantity": {
+          "bsonType": "int",
+          "description": "Quantity of the packaging specification level"
+        },
+        "lengthMm": {
+          "bsonType": "decimal",
+          "description": "Length (mm)"
+        },
+        "widthMm": {
+          "bsonType": "decimal",
+          "description": "Width (mm)"
+        },
+        "heightMm": {
+          "bsonType": "decimal",
+          "description": "Height (mm)"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

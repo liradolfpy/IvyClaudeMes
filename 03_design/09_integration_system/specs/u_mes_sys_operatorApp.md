@@ -1,0 +1,75 @@
+# u_mes_sys_operatorApp
+
+| Property | Value |
+|---|---|
+| Module | Integration and system (sys) |
+| Purpose | Composable operator screen definitions (versioned) bound to work centres and operations |
+| Kind | Entity |
+| Data class | Master |
+| Parent collection | none |
+| _id pattern | APP-<recordNo> |
+| Display value used by references | name |
+| Keys | 17 (9 required, 8 may be null) |
+| Estimated volume per year | 50-300 |
+| Storage | standard |
+
+## Structure
+
+Flat entity collection: one document per operator app, all keys top-level and scalar.
+
+Repeating data of this entity is held in separate collections, one document per occurrence, each pointing back with operatorAppId:
+
+| Collection | Kind | Holds |
+|---|---|---|
+| u_mes_sys_operatorAppWorkCenter | Relationship | work center |
+| u_mes_sys_operatorAppOperation | Relationship | operation |
+| u_mes_sys_operatorAppStep | Child | step |
+| u_mes_sys_operatorAppStepTrigger | Child | (below u_mes_sys_operatorAppStep) trigger |
+| u_mes_sys_operatorAppDeviceBinding | Child | device binding |
+| u_mes_sys_operatorAppLanguage | Relationship | language |
+
+## Field dictionary
+
+Every key is present in every document. "Required" means the value may not be null.
+
+| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: APP-<recordNo> | `"APP-APP-TRQ-01"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"APP-TRQ-01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mdm_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mdm_site._id |
+| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mdm_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | Yes | Name of the operator app; used as its display value in other collections | `"Torque station operator app"` |  |
+| 6 | appType | String | Yes | App type | `"Operator Station"` | Operator Station; Inspection; Material Handling; Maintenance; Andon Board |
+| 7 | version | Int32 | Yes | Version of the operator app | `NumberInt(3)` |  |
+| 8 | publishedById | String | No (null allowed) | Reference to u_mes_mdm_user._id: user recorded for 'published' | `"USR-10045"` | Reference: u_mes_mdm_user._id |
+| 9 | publishedBy | String | No (null allowed) | Display name of the user in publishedById, copied from u_mes_mdm_user.fullName | `"Rajesh Patil"` |  |
+| 10 | publishedAt | Date | No (null allowed) | Date and time when the record was published | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 11 | approvedById | String | No (null allowed) | Reference to u_mes_mdm_user._id: user recorded for 'approved' | `"USR-10019"` | Reference: u_mes_mdm_user._id |
+| 12 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mdm_user.fullName | `"Meera Deshpande"` |  |
+| 13 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 14 | previousVersionOperatorAppId | String | No (null allowed) | Reference to u_mes_sys_operatorApp._id: previous version operator app | `"APP-APP-TRQ-01-V2"` | Reference: u_mes_sys_operatorApp._id |
+| 15 | previousVersionOperatorAppName | String | No (null allowed) | Display value of previousVersionOperatorAppId, copied from u_mes_sys_operatorApp.name | `"Torque station operator app"` |  |
+| 16 | status | String | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 17 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+
+## Status values
+
+In Preparation, Released, Obsolete. Initial state: In Preparation. The values are maintained in u_mes_sys_statusDefinition.
+
+## Indexes
+
+| # | Keys | Unique | Purpose |
+|---|---|---|---|
+| 1 | `{ siteId: 1, recordNo: 1 }` | Yes | Business identifier is unique within the site |
+| 2 | `{ siteId: 1, status: 1 }` | No | Work lists filtered by lifecycle state |
+| 3 | `{ previousVersionOperatorAppId: 1 }` | No | Look-up of documents by previous version operator app |
+
+## Referenced by
+
+u_mes_sys_operatorApp, u_mes_sys_operatorAppWorkCenter, u_mes_sys_operatorAppOperation, u_mes_sys_operatorAppStep, u_mes_sys_operatorAppDeviceBinding, u_mes_sys_operatorAppLanguage.
+
+## Files
+
+- Validator: 03_design/09_integration_system/validators/u_mes_sys_operatorApp.json
+- Indexes: 03_design/09_integration_system/indexes/u_mes_sys_operatorApp.js
+- Sample document: 03_design/09_integration_system/samples/u_mes_sys_operatorApp.js

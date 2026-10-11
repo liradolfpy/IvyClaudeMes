@@ -1,0 +1,80 @@
+{
+  "collMod": "u_mes_prd_billOfProcessStepInterlock",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prd_billOfProcessStepInterlock",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "billOfProcessStepId",
+        "billOfProcessStepName",
+        "sequenceNo",
+        "interlockType",
+        "description",
+        "enforced",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <billOfProcessStepId>-I<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "billOfProcessStepId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_billOfProcessStep._id: the parent document this one belongs to"
+        },
+        "billOfProcessStepName": {
+          "bsonType": "string",
+          "description": "Display value of billOfProcessStepId, copied from u_mes_prd_billOfProcessStep.recordNo"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "interlockType": {
+          "bsonType": "string",
+          "description": "Interlock type",
+          "enum": [
+            "Skill",
+            "Recipe",
+            "Tool Life",
+            "Gauge Calibration",
+            "Previous Step",
+            "Component Scan",
+            "Maintenance Due"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the bill of process step interlock"
+        },
+        "enforced": {
+          "bsonType": "bool",
+          "description": "True when: enforced"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

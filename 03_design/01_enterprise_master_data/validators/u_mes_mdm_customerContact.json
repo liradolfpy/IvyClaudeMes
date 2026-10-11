@@ -1,0 +1,90 @@
+{
+  "collMod": "u_mes_mdm_customerContact",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_customerContact",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "customerId",
+        "customerName",
+        "sequenceNo",
+        "name",
+        "businessFunction",
+        "email",
+        "phone",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <customerId>-C<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_customer._id: the parent document this one belongs to"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mdm_customer.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the customer contact; used as its display value in other collections"
+        },
+        "businessFunction": {
+          "bsonType": "string",
+          "description": "Business function",
+          "enum": [
+            "Quality",
+            "Purchasing",
+            "Logistics",
+            "Engineering",
+            "Production",
+            "Finance"
+          ]
+        },
+        "email": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Email of the customer contact"
+        },
+        "phone": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Phone of the customer contact"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

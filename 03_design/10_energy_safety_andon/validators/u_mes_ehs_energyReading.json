@@ -1,0 +1,218 @@
+{
+  "collMod": "u_mes_ehs_energyReading",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_ehs_energyReading",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "meterIotDeviceId",
+        "meterIotDeviceName",
+        "equipmentId",
+        "equipmentName",
+        "lineId",
+        "lineName",
+        "shiftId",
+        "shiftName",
+        "energyTypeId",
+        "energyTypeName",
+        "intervalStartAt",
+        "intervalEndAt",
+        "consumption",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "meterReadingStart",
+        "meterReadingEnd",
+        "demandKw",
+        "powerFactor",
+        "costInr",
+        "unitsProduced",
+        "specificConsumption",
+        "signalQuality",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ENR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "meterIotDeviceId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_sys_iotDevice._id: meter IoT device"
+        },
+        "meterIotDeviceName": {
+          "bsonType": "string",
+          "description": "Display value of meterIotDeviceId, copied from u_mes_sys_iotDevice.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mdm_line.name"
+        },
+        "shiftId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_shift._id"
+        },
+        "shiftName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shiftId, copied from u_mes_mdm_shift.name"
+        },
+        "energyTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_ehs_energyType._id"
+        },
+        "energyTypeName": {
+          "bsonType": "string",
+          "description": "Display value of energyTypeId, copied from u_mes_ehs_energyType.name"
+        },
+        "intervalStartAt": {
+          "bsonType": "date",
+          "description": "Interval start date and time"
+        },
+        "intervalEndAt": {
+          "bsonType": "date",
+          "description": "Interval end date and time"
+        },
+        "consumption": {
+          "bsonType": "decimal",
+          "description": "Quantity consumed in the interval, in the unit given by unitOfMeasureId"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name"
+        },
+        "meterReadingStart": {
+          "bsonType": "decimal",
+          "description": "Meter reading start"
+        },
+        "meterReadingEnd": {
+          "bsonType": "decimal",
+          "description": "Meter reading end"
+        },
+        "demandKw": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Demand (kW)"
+        },
+        "powerFactor": {
+          "bsonType": [
+            "double",
+            "null"
+          ],
+          "description": "Power factor"
+        },
+        "costInr": {
+          "bsonType": "decimal",
+          "description": "Cost (Indian rupees)"
+        },
+        "unitsProduced": {
+          "bsonType": "int",
+          "description": "Units produced"
+        },
+        "specificConsumption": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Consumption per unit produced"
+        },
+        "signalQuality": {
+          "bsonType": "string",
+          "description": "Signal quality",
+          "enum": [
+            "Good",
+            "Uncertain",
+            "Bad"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

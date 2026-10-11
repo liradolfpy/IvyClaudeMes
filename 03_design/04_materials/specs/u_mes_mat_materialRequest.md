@@ -1,0 +1,91 @@
+# u_mes_mat_materialRequest
+
+| Property | Value |
+|---|---|
+| Module | Materials (mat) |
+| Purpose | Line-side replenishment calls (e-kanban) from a work centre to stores |
+| Kind | Entity |
+| Data class | Transaction |
+| Parent collection | none |
+| _id pattern | MRQ-<recordNo> |
+| Display value used by references | recordNo |
+| Keys | 39 (29 required, 10 may be null) |
+| Estimated volume per year | ~80,000 |
+| Storage | standard |
+
+## Structure
+
+Flat entity collection: one document per material request, all keys top-level and scalar.
+
+## Field dictionary
+
+Every key is present in every document. "Required" means the value may not be null.
+
+| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: MRQ-<recordNo> | `"MRQ-20260929-0012"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260929-0012"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mdm_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mdm_site._id |
+| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mdm_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | workCenterId | String | Yes | Reference to u_mes_mdm_workCenter._id | `"WC-TRQ-01"` | Reference: u_mes_mdm_workCenter._id |
+| 6 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mdm_workCenter.name | `"Bleed Screw Torque Station"` |  |
+| 7 | itemId | String | Yes | Reference to u_mes_prd_item._id | `"ITM-5110-10-0100"` | Reference: u_mes_prd_item._id |
+| 8 | itemName | String | Yes | Display value of itemId, copied from u_mes_prd_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 9 | requestedQuantity | Decimal128 | Yes | Requested quantity | `NumberDecimal("500")` |  |
+| 10 | deliveredQuantity | Decimal128 | Yes | Delivered quantity | `NumberDecimal("500")` |  |
+| 11 | unitOfMeasureId | String | Yes | Reference to u_mes_mdm_unitOfMeasure._id | `"UOM-EA"` | Reference: u_mes_mdm_unitOfMeasure._id |
+| 12 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name | `"Each"` |  |
+| 13 | requestType | String | Yes | Request type | `"Kanban"` | Kanban; Andon Call; Manual |
+| 14 | triggerSource | String | Yes | Trigger source | `"Minimum Level Sensor"` | Minimum Level Sensor; Operator; Schedule |
+| 15 | requestedById | String | Yes | Reference to u_mes_mdm_user._id: user recorded for 'requested' | `"USR-10150"` | Reference: u_mes_mdm_user._id |
+| 16 | requestedBy | String | Yes | Display name of the user in requestedById, copied from u_mes_mdm_user.fullName | `"Vikram Pawar"` |  |
+| 17 | requestedAt | Date | Yes | Date and time when the record was requested | `ISODate("2026-09-29T00:30:34.000+0000")` |  |
+| 18 | fromLocationId | String | No (null allowed) | Reference to u_mes_mat_storageLocation._id: from location | `"LOC-WH-A-R02-B14"` | Reference: u_mes_mat_storageLocation._id |
+| 19 | fromLocationName | String | No (null allowed) | Display value of fromLocationId, copied from u_mes_mat_storageLocation.name | `"Warehouse A, rack 02, bin 14"` |  |
+| 20 | toLocationId | String | Yes | Reference to u_mes_mat_storageLocation._id: to location | `"LOC-LS-ASY-01"` | Reference: u_mes_mat_storageLocation._id |
+| 21 | toLocationName | String | Yes | Display value of toLocationId, copied from u_mes_mat_storageLocation.name | `"Line-side supermarket, Assembly 1"` |  |
+| 22 | priority | String | Yes | Priority of the material request | `"Normal"` | Low; Normal; High; Urgent |
+| 23 | acknowledgedById | String | No (null allowed) | Reference to u_mes_mdm_user._id: user recorded for 'acknowledged' | `"USR-10045"` | Reference: u_mes_mdm_user._id |
+| 24 | acknowledgedBy | String | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mdm_user.fullName | `"Rajesh Patil"` |  |
+| 25 | acknowledgedAt | Date | No (null allowed) | Date and time when the record was acknowledged | `ISODate("2026-09-29T00:30:54.000+0000")` |  |
+| 26 | deliveredAt | Date | No (null allowed) | Date and time when the record was delivered | `ISODate("2026-09-29T00:31:14.000+0000")` |  |
+| 27 | responseMinutes | Int32 | Yes | Response (minutes) | `NumberInt(6)` |  |
+| 28 | andonEventId | String | No (null allowed) | Reference to u_mes_ehs_andonEvent._id | `"AND-20260929-0005"` | Reference: u_mes_ehs_andonEvent._id |
+| 29 | andonEventName | String | No (null allowed) | Display value of andonEventId, copied from u_mes_ehs_andonEvent.description | `"Leak test rejects repeating at station LKT-01"` |  |
+| 30 | lotId | String | No (null allowed) | Reference to u_mes_exe_lot._id | `"LOT-L260928-GDC-014"` | Reference: u_mes_exe_lot._id |
+| 31 | lotName | String | No (null allowed) | Display value of lotId, copied from u_mes_exe_lot.recordNo | `"L260928-GDC-014"` |  |
+| 32 | status | String | Yes | Primary lifecycle state of the document | `"Delivered"` | Raised; Acknowledged; Delivered; Cancelled |
+| 33 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 34 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
+| 35 | createdById | String | Yes | Reference to u_mes_mdm_user._id: user or process that created the document | `"USR-10150"` | Reference: u_mes_mdm_user._id |
+| 36 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mdm_user.fullName | `"Vikram Pawar"` |  |
+| 37 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:31:14.000+0000")` |  |
+| 38 | updatedById | String | Yes | Reference to u_mes_mdm_user._id: user or process that last updated the document | `"USR-10150"` | Reference: u_mes_mdm_user._id |
+| 39 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mdm_user.fullName | `"Vikram Pawar"` |  |
+
+## Status values
+
+Raised, Acknowledged, Delivered, Cancelled. Initial state: Raised. The values are maintained in u_mes_sys_statusDefinition.
+
+## Indexes
+
+| # | Keys | Unique | Purpose |
+|---|---|---|---|
+| 1 | `{ siteId: 1, recordNo: 1 }` | Yes | Business identifier is unique within the site |
+| 2 | `{ siteId: 1, status: 1 }` | No | Work lists filtered by lifecycle state |
+| 3 | `{ workCenterId: 1 }` | No | Look-up of documents by work center |
+| 4 | `{ itemId: 1 }` | No | Look-up of documents by item |
+| 5 | `{ unitOfMeasureId: 1 }` | No | Look-up of documents by unit of measure |
+| 6 | `{ fromLocationId: 1 }` | No | Look-up of documents by from location |
+| 7 | `{ toLocationId: 1 }` | No | Look-up of documents by to location |
+| 8 | `{ siteId: 1, requestedAt: -1 }` | No | Time-ordered lists and reports by requested at |
+
+## Referenced by
+
+No other collection refers to this one.
+
+## Files
+
+- Validator: 03_design/04_materials/validators/u_mes_mat_materialRequest.json
+- Indexes: 03_design/04_materials/indexes/u_mes_mat_materialRequest.js
+- Sample document: 03_design/04_materials/samples/u_mes_mat_materialRequest.js

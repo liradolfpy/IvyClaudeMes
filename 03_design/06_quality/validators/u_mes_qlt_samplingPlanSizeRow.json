@@ -1,0 +1,81 @@
+{
+  "collMod": "u_mes_qlt_samplingPlanSizeRow",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_samplingPlanSizeRow",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "samplingPlanId",
+        "samplingPlanName",
+        "sequenceNo",
+        "lotSizeFrom",
+        "lotSizeTo",
+        "sampleSize",
+        "acceptNumber",
+        "rejectNumber",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <samplingPlanId>-SR<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "samplingPlanId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_samplingPlan._id: the parent document this one belongs to"
+        },
+        "samplingPlanName": {
+          "bsonType": "string",
+          "description": "Display value of samplingPlanId, copied from u_mes_qlt_samplingPlan.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "lotSizeFrom": {
+          "bsonType": "int",
+          "description": "Lot size from"
+        },
+        "lotSizeTo": {
+          "bsonType": "int",
+          "description": "Lot size to"
+        },
+        "sampleSize": {
+          "bsonType": "int",
+          "description": "Sample size"
+        },
+        "acceptNumber": {
+          "bsonType": "int",
+          "description": "Accept number"
+        },
+        "rejectNumber": {
+          "bsonType": "int",
+          "description": "Reject number"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

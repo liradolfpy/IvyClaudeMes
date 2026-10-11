@@ -12,7 +12,7 @@ def w(p,t):
 tags={}
 for c in cols:
     if c["parent"] is None:
-        src=cat.get(c["sourceConcept"]); pre=src[2] if src else ("STD" if c["entity"]=="statusDefinition" else "STT")
+        src=cat.get(c["sourceConcept"]); pre=src[2] if src else {"statusDefinition":"STD","statusTransition":"STT","enumerationValue":"ENV"}[c["entity"]]
         c["idPattern"]=pre+"-<recordNo>"; c["recordNoMeaning"]=(src[3] if src else "definition code")
 for c in cols:
     if c["parent"]:
@@ -24,7 +24,7 @@ for c in cols:
         c["idPattern"]="<%sId>-%s<nnn>"%(pe,tag); c["recordNoMeaning"]="parent recordNo + -%s<nnn>"%tag
 NK=len(cols); NF=sum(len(c["fields"]) for c in cols)
 kinds=collections.Counter(c["kind"] for c in cols)
-HEAD="Model version 2.0 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
+HEAD="Model version 2.2 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
 KIND={"entity":"Entity","child":"Child (was an embedded array of objects)","relationship":"Relationship (was an array of IDs)","valueList":"Value list (was an array of values)"}
 # inventory
 s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\n| Module code | Module | Collections |\n|---|---|---|\n"
@@ -35,7 +35,7 @@ for m in order:
     for c in cols:
         if c["module"]!=m: continue
         n+=1
-        if c["kind"]=="entity": pur=cat[c["sourceConcept"]][4] if c["sourceConcept"] in cat else "Status values and allowed transitions per collection (status mapping)"
+        if c["kind"]=="entity": pur=cat[c["sourceConcept"]][4] if c["sourceConcept"] in cat else ("Allowed values of fixed enumeration keys, one document per collection, key and value" if c["entity"]=="enumerationValue" else "Status values and allowed transitions per collection (status mapping)")
         else:
             suf=c["entity"][len(bycol[c["parent"]]["entity"]):]
             words=re.sub(r"([A-Z])",r" \1",suf).strip().lower()
@@ -74,7 +74,7 @@ no=[c["collection"] for c in cols if c["kind"]=="entity" and not c["statusValues
 s+="\nEntity collections without a status key (append-only records): "+", ".join(no)+".\n"
 w("04_reference_data/code_lists/status_values.md",s)
 # register
-s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.0 | Date: 11 October 2026 | Database: mes | "+HEAD
+s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.2 | Date: 11 October 2026 | Database: mes | "+HEAD
 s+='''This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
 ## 1. Conventions in force
@@ -85,6 +85,7 @@ s+='''This file is the single reference for collection names, identifiers and ma
 - Reference: `<entity>Id` followed by `<entity>Name` (display value copied from the target). User references that record an action: `<action>ById` + `<action>By`.
 - Polymorphic reference: `relatedCollectionName` + `relatedEntityId` + `relatedEntityName`.
 - `siteId` + `siteName` in every collection except `u_mes_mdm_site`.
+- Classification values (DATA-003): a list the plant maintains is a master collection referenced by `<entity>Id` + `<entity>Name`; a list fixed by the application stays coded text with its values in `u_mes_sys_enumerationValue`.
 - `status`: primary lifecycle state, only where the collection has one; values in 04_reference_data/code_lists/status_values.md.
 - Audit keys `createdAt, createdById, createdBy, updatedAt, updatedById, updatedBy`: transaction collections only.
 - `schemaVersion` (Int32) in every collection.
@@ -168,6 +169,8 @@ s+='''
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became %d collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.2 | 11 Oct 2026 | Master data review: 41 master collections added (department, designation, employmentType and others), 67 text keys converted to master references, fixed enumerations mapped in u_mes_sys_enumerationValue; see 08_validation/reports/master_data_review.md |
+| 2.1 | 11 Oct 2026 | Collection specifications written for all modules: field dictionary, validator, indexes and sample per collection under 03_design; check report in 08_validation/reports/specification_check.md |
 '''%NK
 w("00_governance/data_model_register.md",s)
 json.dump(M,open(os.path.join(ROOT,"05_generator/model/flat_model.json") if os.makedirs(os.path.join(ROOT,"05_generator/model"),exist_ok=True) is None else "x","w"),indent=1)

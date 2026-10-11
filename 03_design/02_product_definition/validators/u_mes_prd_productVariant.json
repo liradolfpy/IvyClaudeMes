@@ -1,0 +1,207 @@
+{
+  "collMod": "u_mes_prd_productVariant",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prd_productVariant",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "baseItemId",
+        "baseItemName",
+        "variantItemId",
+        "variantItemName",
+        "customerId",
+        "customerName",
+        "optionsHand",
+        "optionsPistonDiameterMm",
+        "optionsPadCompoundId",
+        "optionsPadCompoundName",
+        "optionsMarketId",
+        "optionsMarketName",
+        "optionsSurfaceFinishId",
+        "optionsSurfaceFinishName",
+        "optionsColour",
+        "vehicleModelId",
+        "vehicleModelName",
+        "modelYear",
+        "labelSuffix",
+        "effectiveFrom",
+        "effectiveTo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: VAR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the product variant; used as its display value in other collections"
+        },
+        "baseItemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id: base item"
+        },
+        "baseItemName": {
+          "bsonType": "string",
+          "description": "Display value of baseItemId, copied from u_mes_prd_item.description"
+        },
+        "variantItemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_item._id: variant item"
+        },
+        "variantItemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of variantItemId, copied from u_mes_prd_item.description"
+        },
+        "customerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_customer._id"
+        },
+        "customerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerId, copied from u_mes_mdm_customer.name"
+        },
+        "optionsHand": {
+          "bsonType": "string",
+          "description": "Options hand",
+          "enum": [
+            "LH",
+            "RH"
+          ]
+        },
+        "optionsPistonDiameterMm": {
+          "bsonType": "decimal",
+          "description": "Options piston diameter (mm)"
+        },
+        "optionsPadCompoundId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_padCompound._id: options pad compound"
+        },
+        "optionsPadCompoundName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of optionsPadCompoundId, copied from u_mes_prd_padCompound.name"
+        },
+        "optionsMarketId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_market._id: options market"
+        },
+        "optionsMarketName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of optionsMarketId, copied from u_mes_prd_market.name"
+        },
+        "optionsSurfaceFinishId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_surfaceFinish._id: options surface finish"
+        },
+        "optionsSurfaceFinishName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of optionsSurfaceFinishId, copied from u_mes_prd_surfaceFinish.name"
+        },
+        "optionsColour": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Options colour"
+        },
+        "vehicleModelId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_vehicleModel._id"
+        },
+        "vehicleModelName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of vehicleModelId, copied from u_mes_prd_vehicleModel.name"
+        },
+        "modelYear": {
+          "bsonType": "int",
+          "description": "Model year"
+        },
+        "labelSuffix": {
+          "bsonType": "string",
+          "description": "Label suffix"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Effective to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,308 @@
+{
+  "collMod": "u_mes_exe_productionOrder",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_exe_productionOrder",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "erpOrderNo",
+        "itemId",
+        "itemName",
+        "itemRevision",
+        "productVariantId",
+        "productVariantName",
+        "billOfMaterialId",
+        "billOfMaterialName",
+        "routingId",
+        "routingName",
+        "lineId",
+        "lineName",
+        "customerScheduleId",
+        "customerScheduleName",
+        "orderType",
+        "priority",
+        "plannedQuantity",
+        "releasedQuantity",
+        "startedQuantity",
+        "goodQuantity",
+        "scrapQuantity",
+        "reworkQuantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "plannedStartAt",
+        "plannedEndAt",
+        "actualStartAt",
+        "actualEndAt",
+        "dueDate",
+        "erpMessageId",
+        "erpMessageName",
+        "closedAt",
+        "closedById",
+        "closedBy",
+        "remarks",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: PO-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "erpOrderNo": {
+          "bsonType": "string",
+          "description": "ERP order number"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "itemRevision": {
+          "bsonType": "string",
+          "description": "Item revision"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prd_productVariant.name"
+        },
+        "billOfMaterialId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_billOfMaterial._id"
+        },
+        "billOfMaterialName": {
+          "bsonType": "string",
+          "description": "Display value of billOfMaterialId, copied from u_mes_prd_billOfMaterial.recordNo"
+        },
+        "routingId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_routing._id"
+        },
+        "routingName": {
+          "bsonType": "string",
+          "description": "Display value of routingId, copied from u_mes_prd_routing.description"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mdm_line.name"
+        },
+        "customerScheduleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_customerSchedule._id"
+        },
+        "customerScheduleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerScheduleId, copied from u_mes_exe_customerSchedule.recordNo"
+        },
+        "orderType": {
+          "bsonType": "string",
+          "description": "Order type",
+          "enum": [
+            "Production",
+            "Rework",
+            "Trial",
+            "PPAP Run"
+          ]
+        },
+        "priority": {
+          "bsonType": "string",
+          "description": "Priority of the production order",
+          "enum": [
+            "Low",
+            "Normal",
+            "High",
+            "Urgent"
+          ]
+        },
+        "plannedQuantity": {
+          "bsonType": "int",
+          "description": "Planned quantity"
+        },
+        "releasedQuantity": {
+          "bsonType": "int",
+          "description": "Released quantity"
+        },
+        "startedQuantity": {
+          "bsonType": "int",
+          "description": "Started quantity"
+        },
+        "goodQuantity": {
+          "bsonType": "int",
+          "description": "Good quantity"
+        },
+        "scrapQuantity": {
+          "bsonType": "int",
+          "description": "Scrap quantity"
+        },
+        "reworkQuantity": {
+          "bsonType": "int",
+          "description": "Rework quantity"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name"
+        },
+        "plannedStartAt": {
+          "bsonType": "date",
+          "description": "Planned start date and time"
+        },
+        "plannedEndAt": {
+          "bsonType": "date",
+          "description": "Planned end date and time"
+        },
+        "actualStartAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Actual start date and time"
+        },
+        "actualEndAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Actual end date and time"
+        },
+        "dueDate": {
+          "bsonType": "date",
+          "description": "Due date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "erpMessageId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_sys_erpMessage._id"
+        },
+        "erpMessageName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of erpMessageId, copied from u_mes_sys_erpMessage.recordNo"
+        },
+        "closedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was closed"
+        },
+        "closedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'closed'"
+        },
+        "closedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in closedById, copied from u_mes_mdm_user.fullName"
+        },
+        "remarks": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Remarks of the production order"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Created",
+            "Released",
+            "In Progress",
+            "On Hold",
+            "Completed",
+            "Closed",
+            "Cancelled"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

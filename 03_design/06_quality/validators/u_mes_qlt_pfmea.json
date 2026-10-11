@@ -1,0 +1,135 @@
+{
+  "collMod": "u_mes_qlt_pfmea",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_pfmea",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "itemId",
+        "itemName",
+        "itemRevision",
+        "version",
+        "methodology",
+        "controlPlanId",
+        "controlPlanName",
+        "originalDate",
+        "revisionDate",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: FMEA-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the PFMEA; used as its display value in other collections"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "itemRevision": {
+          "bsonType": "string",
+          "description": "Item revision"
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the PFMEA"
+        },
+        "methodology": {
+          "bsonType": "string",
+          "description": "Methodology of the PFMEA",
+          "enum": [
+            "AIAG-VDA",
+            "AIAG 4th Edition"
+          ]
+        },
+        "controlPlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_controlPlan._id"
+        },
+        "controlPlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of controlPlanId, copied from u_mes_qlt_controlPlan.recordNo"
+        },
+        "originalDate": {
+          "bsonType": "date",
+          "description": "Original date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "revisionDate": {
+          "bsonType": "date",
+          "description": "Revision date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mdm_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

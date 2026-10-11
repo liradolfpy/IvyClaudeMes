@@ -1,0 +1,192 @@
+{
+  "collMod": "u_mes_eqp_processTag",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_eqp_processTag",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "description",
+        "equipmentId",
+        "equipmentName",
+        "iotDeviceId",
+        "iotDeviceName",
+        "sourceAddress",
+        "dataType",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "tagClass",
+        "scanRateMs",
+        "deadband",
+        "lowLimit",
+        "highLimit",
+        "lowLowLimit",
+        "highHighLimit",
+        "engineeringMin",
+        "engineeringMax",
+        "isCritical",
+        "historise",
+        "retentionDays",
+        "aggregation",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: TAG-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the process tag"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "iotDeviceId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_sys_iotDevice._id"
+        },
+        "iotDeviceName": {
+          "bsonType": "string",
+          "description": "Display value of iotDeviceId, copied from u_mes_sys_iotDevice.name"
+        },
+        "sourceAddress": {
+          "bsonType": "string",
+          "description": "Source address"
+        },
+        "dataType": {
+          "bsonType": "string",
+          "description": "Data type",
+          "enum": [
+            "Variable",
+            "Attribute"
+          ]
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name"
+        },
+        "tagClass": {
+          "bsonType": "string",
+          "description": "Tag class",
+          "enum": [
+            "Process Value",
+            "Setpoint",
+            "Counter",
+            "State",
+            "Alarm Bit",
+            "Energy"
+          ]
+        },
+        "scanRateMs": {
+          "bsonType": "int",
+          "description": "Scan rate (milliseconds)"
+        },
+        "deadband": {
+          "bsonType": "decimal",
+          "description": "Deadband of the process tag"
+        },
+        "lowLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Low limit"
+        },
+        "highLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "High limit"
+        },
+        "lowLowLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Low low limit"
+        },
+        "highHighLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "High high limit"
+        },
+        "engineeringMin": {
+          "bsonType": "decimal",
+          "description": "Engineering (minutes)"
+        },
+        "engineeringMax": {
+          "bsonType": "decimal",
+          "description": "Engineering max"
+        },
+        "isCritical": {
+          "bsonType": "bool",
+          "description": "True when the record is critical"
+        },
+        "historise": {
+          "bsonType": "bool",
+          "description": "True when: historise"
+        },
+        "retentionDays": {
+          "bsonType": "int",
+          "description": "Retention (days)"
+        },
+        "aggregation": {
+          "bsonType": "string",
+          "description": "Aggregation of the process tag",
+          "enum": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Last",
+            "Sum"
+          ]
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

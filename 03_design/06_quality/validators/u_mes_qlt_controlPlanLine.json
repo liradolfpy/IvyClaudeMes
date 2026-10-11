@@ -1,0 +1,153 @@
+{
+  "collMod": "u_mes_qlt_controlPlanLine",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_controlPlanLine",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "controlPlanId",
+        "controlPlanName",
+        "lineNo",
+        "operationId",
+        "operationName",
+        "processName",
+        "equipmentText",
+        "characteristicId",
+        "characteristicName",
+        "classification",
+        "specification",
+        "gaugeId",
+        "gaugeName",
+        "measurementTechnique",
+        "sampleSize",
+        "sampleFrequency",
+        "controlMethod",
+        "reactionPlan",
+        "responsible",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <controlPlanId>-L<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "controlPlanId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_controlPlan._id: the parent document this one belongs to"
+        },
+        "controlPlanName": {
+          "bsonType": "string",
+          "description": "Display value of controlPlanId, copied from u_mes_qlt_controlPlan.recordNo"
+        },
+        "lineNo": {
+          "bsonType": "int",
+          "description": "Line number within the parent record"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prd_operation.name"
+        },
+        "processName": {
+          "bsonType": "string",
+          "description": "Process name"
+        },
+        "equipmentText": {
+          "bsonType": "string",
+          "description": "Equipment text"
+        },
+        "characteristicId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of characteristicId, copied from u_mes_qlt_characteristic.name"
+        },
+        "classification": {
+          "bsonType": "string",
+          "description": "Special characteristic class from the drawing or PFMEA",
+          "enum": [
+            "Critical",
+            "Significant",
+            "Standard"
+          ]
+        },
+        "specification": {
+          "bsonType": "string",
+          "description": "Specification of the control plan line"
+        },
+        "gaugeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_gauge._id"
+        },
+        "gaugeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of gaugeId, copied from u_mes_qlt_gauge.name"
+        },
+        "measurementTechnique": {
+          "bsonType": "string",
+          "description": "Measurement technique"
+        },
+        "sampleSize": {
+          "bsonType": "int",
+          "description": "Sample size"
+        },
+        "sampleFrequency": {
+          "bsonType": "string",
+          "description": "Sample frequency"
+        },
+        "controlMethod": {
+          "bsonType": "string",
+          "description": "Control method"
+        },
+        "reactionPlan": {
+          "bsonType": "string",
+          "description": "Reaction plan"
+        },
+        "responsible": {
+          "bsonType": "string",
+          "description": "Responsible of the control plan line"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

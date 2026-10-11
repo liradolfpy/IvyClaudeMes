@@ -1,0 +1,59 @@
+# u_mes_qlt_gaugeCalibrationReading
+
+| Property | Value |
+|---|---|
+| Module | Quality (qlt) |
+| Purpose | One document per reading of a gauge calibration |
+| Kind | Child |
+| Data class | Transaction |
+| Parent collection | u_mes_qlt_gaugeCalibration |
+| _id pattern | <gaugeCalibrationId>-R<nnn> |
+| Display value used by references | recordNo |
+| Keys | 19 (19 required, 0 may be null) |
+
+## Structure
+
+Child collection. The parent gauge calibration can have several lines of this kind, and DATA-001 does not allow an array inside the parent, so each line is its own document. gaugeCalibrationId and gaugeCalibrationName point to the parent.
+Data class (transaction) and site are inherited from the parent. Documents are created, changed and removed together with the parent's lifecycle.
+
+## Field dictionary
+
+Every key is present in every document. "Required" means the value may not be null.
+
+| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <gaugeCalibrationId>-R<nnn> | `"GCAL-G-BG-054-2026-02-R001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"G-BG-054-2026-02-R001"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mdm_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mdm_site._id |
+| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mdm_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | gaugeCalibrationId | String | Yes | Reference to u_mes_qlt_gaugeCalibration._id: the parent document this one belongs to | `"GCAL-G-BG-054-2026-02"` | Reference: u_mes_qlt_gaugeCalibration._id |
+| 6 | gaugeCalibrationName | String | Yes | Display value of gaugeCalibrationId, copied from u_mes_qlt_gaugeCalibration.recordNo | `"G-BG-054-2026-02"` |  |
+| 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 8 | nominal | Decimal128 | Yes | Nominal of the gauge calibration reading | `NumberDecimal("14.0")` |  |
+| 9 | asFound | Decimal128 | Yes | As found | `NumberDecimal("54.001")` |  |
+| 10 | asLeft | Decimal128 | Yes | As left | `NumberDecimal("54.000")` |  |
+| 11 | tolerance | Decimal128 | Yes | Tolerance of the gauge calibration reading | `NumberDecimal("0.002")` |  |
+| 12 | withinTolerance | Boolean | Yes | True when: within tolerance | `true` |  |
+| 13 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 14 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
+| 15 | createdById | String | Yes | Reference to u_mes_mdm_user._id: user or process that created the document | `"USR-10087"` | Reference: u_mes_mdm_user._id |
+| 16 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mdm_user.fullName | `"Anita Kulkarni"` |  |
+| 17 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
+| 18 | updatedById | String | Yes | Reference to u_mes_mdm_user._id: user or process that last updated the document | `"USR-10087"` | Reference: u_mes_mdm_user._id |
+| 19 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mdm_user.fullName | `"Anita Kulkarni"` |  |
+
+## Indexes
+
+| # | Keys | Unique | Purpose |
+|---|---|---|---|
+| 1 | `{ gaugeCalibrationId: 1, sequenceNo: 1 }` | Yes | Lines of one parent in order; one line per number |
+
+## Referenced by
+
+No other collection refers to this one.
+
+## Files
+
+- Validator: 03_design/06_quality/validators/u_mes_qlt_gaugeCalibrationReading.json
+- Indexes: 03_design/06_quality/indexes/u_mes_qlt_gaugeCalibrationReading.js
+- Sample document: 03_design/06_quality/samples/u_mes_qlt_gaugeCalibrationReading.js

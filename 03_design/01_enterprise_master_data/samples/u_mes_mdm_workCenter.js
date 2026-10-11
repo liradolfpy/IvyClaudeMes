@@ -1,0 +1,27 @@
+// Sample document for u_mes_mdm_workCenter (illustrative; seed data is generated separately)
+db.getCollection("u_mes_mdm_workCenter").insertOne({
+  _id: "WC-TRQ-01",
+  recordNo: "TRQ-01",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  name: "Bleed Screw Torque Station",
+  areaId: "AR-ASY",
+  areaName: "Assembly and Test",
+  lineId: "LN-ASY-01",
+  lineName: "Caliper Assembly Line 1",
+  workCenterType: "Machine Station",
+  erpWorkCenterCode: "PN01-TRQ01",
+  costCenterId: "CC-5120",
+  costCenterName: "Assembly Line 1",
+  capacityPerShift: NumberInt(800),
+  standardManning: NumberInt(1),
+  trackingGrain: "Unit",
+  inputLocationId: "LOC-LS-ASY-01",
+  inputLocationName: "Line-side supermarket, Assembly 1",
+  outputLocationId: "LOC-LS-ASY-01",
+  outputLocationName: "Line-side supermarket, Assembly 1",
+  andonEnabled: true,
+  sequenceNo: NumberInt(1),
+  status: "Active",
+  schemaVersion: NumberInt(1)
+});

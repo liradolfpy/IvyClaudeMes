@@ -1,0 +1,94 @@
+{
+  "collMod": "u_mes_ehs_andonType",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_ehs_andonType",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "description",
+        "colourCode",
+        "responsibleDepartmentId",
+        "responsibleDepartmentName",
+        "targetResponseSec",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ANT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the andon type; used as its display value in other collections"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the andon type"
+        },
+        "colourCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Colour code"
+        },
+        "responsibleDepartmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_department._id: responsible department"
+        },
+        "responsibleDepartmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of responsibleDepartmentId, copied from u_mes_mdm_department.name"
+        },
+        "targetResponseSec": {
+          "bsonType": "int",
+          "description": "Target response (seconds)"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

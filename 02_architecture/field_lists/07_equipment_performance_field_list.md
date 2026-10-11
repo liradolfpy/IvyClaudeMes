@@ -20,16 +20,19 @@ Kind: entity | Data class: master | Parent: - | _id pattern: RSN-<recordNo>
 | 8 | parentReasonCodeId | String | u_mes_eqp_reasonCode._id |
 | 9 | parentReasonCodeName | String |  |
 | 10 | pathText | String |  |
-| 11 | category | String |  |
-| 12 | lossCategory | String |  |
-| 13 | oeeImpact | String |  |
-| 14 | isPlanned | Boolean |  |
-| 15 | responsibleDepartment | String |  |
-| 16 | requiresComment | Boolean |  |
-| 17 | requiresMaintenanceWorkOrder | Boolean |  |
-| 18 | sequenceNo | Int32 |  |
-| 19 | status | String |  |
-| 20 | schemaVersion | Int32 |  |
+| 11 | reasonCategoryId | String | u_mes_eqp_reasonCategory._id |
+| 12 | reasonCategoryName | String |  |
+| 13 | lossCategoryId | String | u_mes_eqp_lossCategory._id |
+| 14 | lossCategoryName | String |  |
+| 15 | oeeImpact | String |  |
+| 16 | isPlanned | Boolean |  |
+| 17 | responsibleDepartmentId | String | u_mes_mdm_department._id |
+| 18 | responsibleDepartmentName | String |  |
+| 19 | requiresComment | Boolean |  |
+| 20 | requiresMaintenanceWorkOrder | Boolean |  |
+| 21 | sequenceNo | Int32 |  |
+| 22 | status | String |  |
+| 23 | schemaVersion | Int32 |  |
 
 ## u_mes_eqp_equipmentState
 
@@ -250,18 +253,19 @@ Kind: child | Data class: transaction | Parent: u_mes_eqp_oeeRecord | _id patter
 | 5 | oeeRecordId | String | u_mes_eqp_oeeRecord._id |
 | 6 | oeeRecordName | String |  |
 | 7 | sequenceNo | Int32 |  |
-| 8 | lossCategory | String |  |
-| 9 | reasonCodeId | String | u_mes_eqp_reasonCode._id |
-| 10 | reasonCodeName | String |  |
-| 11 | lossMinutes | Int32 |  |
-| 12 | lossUnits | Int32 |  |
-| 13 | schemaVersion | Int32 |  |
-| 14 | createdAt | Date |  |
-| 15 | createdById | String | u_mes_mdm_user._id |
-| 16 | createdBy | String |  |
-| 17 | updatedAt | Date |  |
-| 18 | updatedById | String | u_mes_mdm_user._id |
-| 19 | updatedBy | String |  |
+| 8 | lossCategoryId | String | u_mes_eqp_lossCategory._id |
+| 9 | lossCategoryName | String |  |
+| 10 | reasonCodeId | String | u_mes_eqp_reasonCode._id |
+| 11 | reasonCodeName | String |  |
+| 12 | lossMinutes | Int32 |  |
+| 13 | lossUnits | Int32 |  |
+| 14 | schemaVersion | Int32 |  |
+| 15 | createdAt | Date |  |
+| 16 | createdById | String | u_mes_mdm_user._id |
+| 17 | createdBy | String |  |
+| 18 | updatedAt | Date |  |
+| 19 | updatedById | String | u_mes_mdm_user._id |
+| 20 | updatedBy | String |  |
 
 ## u_mes_eqp_processTag
 
@@ -497,3 +501,37 @@ Kind: child | Data class: transaction | Parent: u_mes_eqp_leakTestResult | _id p
 | 22 | updatedAt | Date |  |
 | 23 | updatedById | String | u_mes_mdm_user._id |
 | 24 | updatedBy | String |  |
+
+## u_mes_eqp_lossCategory
+
+Kind: entity | Data class: master | Parent: - | _id pattern: LSC-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | oeeImpact | String |  |
+| 8 | sixBigLossNo | Int32 |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_eqp_reasonCategory
+
+Kind: entity | Data class: master | Parent: - | _id pattern: RCT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |

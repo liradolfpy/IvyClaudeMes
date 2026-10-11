@@ -22,27 +22,28 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ENR-<recordNo>
 | 10 | lineName | String |  |
 | 11 | shiftId | String | u_mes_mdm_shift._id |
 | 12 | shiftName | String |  |
-| 13 | energyType | String |  |
-| 14 | intervalStartAt | Date |  |
-| 15 | intervalEndAt | Date |  |
-| 16 | consumption | Decimal128 |  |
-| 17 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 18 | unitOfMeasureName | String |  |
-| 19 | meterReadingStart | Decimal128 |  |
-| 20 | meterReadingEnd | Decimal128 |  |
-| 21 | demandKw | Decimal128 |  |
-| 22 | powerFactor | Double |  |
-| 23 | costInr | Decimal128 |  |
-| 24 | unitsProduced | Int32 |  |
-| 25 | specificConsumption | Decimal128 |  |
-| 26 | signalQuality | String |  |
-| 27 | schemaVersion | Int32 |  |
-| 28 | createdAt | Date |  |
-| 29 | createdById | String | u_mes_mdm_user._id |
-| 30 | createdBy | String |  |
-| 31 | updatedAt | Date |  |
-| 32 | updatedById | String | u_mes_mdm_user._id |
-| 33 | updatedBy | String |  |
+| 13 | energyTypeId | String | u_mes_ehs_energyType._id |
+| 14 | energyTypeName | String |  |
+| 15 | intervalStartAt | Date |  |
+| 16 | intervalEndAt | Date |  |
+| 17 | consumption | Decimal128 |  |
+| 18 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 19 | unitOfMeasureName | String |  |
+| 20 | meterReadingStart | Decimal128 |  |
+| 21 | meterReadingEnd | Decimal128 |  |
+| 22 | demandKw | Decimal128 |  |
+| 23 | powerFactor | Double |  |
+| 24 | costInr | Decimal128 |  |
+| 25 | unitsProduced | Int32 |  |
+| 26 | specificConsumption | Decimal128 |  |
+| 27 | signalQuality | String |  |
+| 28 | schemaVersion | Int32 |  |
+| 29 | createdAt | Date |  |
+| 30 | createdById | String | u_mes_mdm_user._id |
+| 31 | createdBy | String |  |
+| 32 | updatedAt | Date |  |
+| 33 | updatedById | String | u_mes_mdm_user._id |
+| 34 | updatedBy | String |  |
 
 ## u_mes_ehs_andonEvent
 
@@ -60,33 +61,34 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: AND-<recordNo>
 | 8 | lineName | String |  |
 | 9 | shiftId | String | u_mes_mdm_shift._id |
 | 10 | shiftName | String |  |
-| 11 | andonType | String |  |
-| 12 | reasonCodeId | String | u_mes_eqp_reasonCode._id |
-| 13 | reasonCodeName | String |  |
-| 14 | raisedById | String | u_mes_mdm_user._id |
-| 15 | raisedBy | String |  |
-| 16 | raisedAt | Date |  |
-| 17 | acknowledgedById | String | u_mes_mdm_user._id |
-| 18 | acknowledgedBy | String |  |
-| 19 | acknowledgedAt | Date |  |
-| 20 | resolvedById | String | u_mes_mdm_user._id |
-| 21 | resolvedBy | String |  |
-| 22 | resolvedAt | Date |  |
-| 23 | responseSec | Int32 |  |
-| 24 | resolutionSec | Int32 |  |
-| 25 | lineStopped | Boolean |  |
-| 26 | downtimeEventId | String | u_mes_eqp_downtimeEvent._id |
-| 27 | downtimeEventName | String |  |
-| 28 | description | String |  |
-| 29 | resolutionText | String |  |
-| 30 | status | String |  |
-| 31 | schemaVersion | Int32 |  |
-| 32 | createdAt | Date |  |
-| 33 | createdById | String | u_mes_mdm_user._id |
-| 34 | createdBy | String |  |
-| 35 | updatedAt | Date |  |
-| 36 | updatedById | String | u_mes_mdm_user._id |
-| 37 | updatedBy | String |  |
+| 11 | andonTypeId | String | u_mes_ehs_andonType._id |
+| 12 | andonTypeName | String |  |
+| 13 | reasonCodeId | String | u_mes_eqp_reasonCode._id |
+| 14 | reasonCodeName | String |  |
+| 15 | raisedById | String | u_mes_mdm_user._id |
+| 16 | raisedBy | String |  |
+| 17 | raisedAt | Date |  |
+| 18 | acknowledgedById | String | u_mes_mdm_user._id |
+| 19 | acknowledgedBy | String |  |
+| 20 | acknowledgedAt | Date |  |
+| 21 | resolvedById | String | u_mes_mdm_user._id |
+| 22 | resolvedBy | String |  |
+| 23 | resolvedAt | Date |  |
+| 24 | responseSec | Int32 |  |
+| 25 | resolutionSec | Int32 |  |
+| 26 | lineStopped | Boolean |  |
+| 27 | downtimeEventId | String | u_mes_eqp_downtimeEvent._id |
+| 28 | downtimeEventName | String |  |
+| 29 | description | String |  |
+| 30 | resolutionText | String |  |
+| 31 | status | String |  |
+| 32 | schemaVersion | Int32 |  |
+| 33 | createdAt | Date |  |
+| 34 | createdById | String | u_mes_mdm_user._id |
+| 35 | createdBy | String |  |
+| 36 | updatedAt | Date |  |
+| 37 | updatedById | String | u_mes_mdm_user._id |
+| 38 | updatedBy | String |  |
 
 ## u_mes_ehs_andonEventEscalation
 
@@ -125,42 +127,45 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SAF-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | title | String |  |
-| 6 | incidentType | String |  |
-| 7 | severity | Int32 |  |
-| 8 | areaId | String | u_mes_mdm_area._id |
-| 9 | areaName | String |  |
-| 10 | workCenterId | String | u_mes_mdm_workCenter._id |
-| 11 | workCenterName | String |  |
-| 12 | equipmentId | String | u_mes_mdm_equipment._id |
-| 13 | equipmentName | String |  |
-| 14 | occurredAt | Date |  |
-| 15 | reportedById | String | u_mes_mdm_user._id |
-| 16 | reportedBy | String |  |
-| 17 | reportedAt | Date |  |
-| 18 | description | String |  |
-| 19 | injuredUserId | String | u_mes_mdm_user._id |
-| 20 | injuredUserName | String |  |
-| 21 | bodyPart | String |  |
-| 22 | injuryType | String |  |
-| 23 | firstAidGiven | Boolean |  |
-| 24 | lostTimeDays | Int32 |  |
-| 25 | immediateAction | String |  |
-| 26 | rootCause | String |  |
-| 27 | capaId | String | u_mes_qlt_capa._id |
-| 28 | capaName | String |  |
-| 29 | investigatedById | String | u_mes_mdm_user._id |
-| 30 | investigatedBy | String |  |
-| 31 | investigationCompletedAt | Date |  |
-| 32 | reportableToAuthority | Boolean |  |
-| 33 | closedAt | Date |  |
-| 34 | status | String |  |
-| 35 | schemaVersion | Int32 |  |
-| 36 | createdAt | Date |  |
-| 37 | createdById | String | u_mes_mdm_user._id |
-| 38 | createdBy | String |  |
-| 39 | updatedAt | Date |  |
-| 40 | updatedById | String | u_mes_mdm_user._id |
-| 41 | updatedBy | String |  |
+| 6 | incidentTypeId | String | u_mes_ehs_incidentType._id |
+| 7 | incidentTypeName | String |  |
+| 8 | severity | Int32 |  |
+| 9 | areaId | String | u_mes_mdm_area._id |
+| 10 | areaName | String |  |
+| 11 | workCenterId | String | u_mes_mdm_workCenter._id |
+| 12 | workCenterName | String |  |
+| 13 | equipmentId | String | u_mes_mdm_equipment._id |
+| 14 | equipmentName | String |  |
+| 15 | occurredAt | Date |  |
+| 16 | reportedById | String | u_mes_mdm_user._id |
+| 17 | reportedBy | String |  |
+| 18 | reportedAt | Date |  |
+| 19 | description | String |  |
+| 20 | injuredUserId | String | u_mes_mdm_user._id |
+| 21 | injuredUserName | String |  |
+| 22 | bodyPartId | String | u_mes_ehs_bodyPart._id |
+| 23 | bodyPartName | String |  |
+| 24 | injuryTypeId | String | u_mes_ehs_injuryType._id |
+| 25 | injuryTypeName | String |  |
+| 26 | firstAidGiven | Boolean |  |
+| 27 | lostTimeDays | Int32 |  |
+| 28 | immediateAction | String |  |
+| 29 | rootCause | String |  |
+| 30 | capaId | String | u_mes_qlt_capa._id |
+| 31 | capaName | String |  |
+| 32 | investigatedById | String | u_mes_mdm_user._id |
+| 33 | investigatedBy | String |  |
+| 34 | investigationCompletedAt | Date |  |
+| 35 | reportableToAuthority | Boolean |  |
+| 36 | closedAt | Date |  |
+| 37 | status | String |  |
+| 38 | schemaVersion | Int32 |  |
+| 39 | createdAt | Date |  |
+| 40 | createdById | String | u_mes_mdm_user._id |
+| 41 | createdBy | String |  |
+| 42 | updatedAt | Date |  |
+| 43 | updatedById | String | u_mes_mdm_user._id |
+| 44 | updatedBy | String |  |
 
 ## u_mes_ehs_safetyIncidentWitnessUser
 
@@ -210,3 +215,91 @@ Kind: child | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id p
 | 17 | updatedAt | Date |  |
 | 18 | updatedById | String | u_mes_mdm_user._id |
 | 19 | updatedBy | String |  |
+
+## u_mes_ehs_andonType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: ANT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | colourCode | String |  |
+| 8 | responsibleDepartmentId | String | u_mes_mdm_department._id |
+| 9 | responsibleDepartmentName | String |  |
+| 10 | targetResponseSec | Int32 |  |
+| 11 | sequenceNo | Int32 |  |
+| 12 | status | String |  |
+| 13 | schemaVersion | Int32 |  |
+
+## u_mes_ehs_incidentType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: ICT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | isInjury | Boolean |  |
+| 8 | reportableToAuthority | Boolean |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_ehs_energyType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: ENT-T-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 8 | unitOfMeasureName | String |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_ehs_bodyPart
+
+Kind: entity | Data class: master | Parent: - | _id pattern: BDP-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_ehs_injuryType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: INJ-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |

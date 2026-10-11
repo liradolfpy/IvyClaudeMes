@@ -11,6 +11,7 @@
 | A007 | 11 Oct 2026 | No functional baseline document exists in the project, so the module codes in D001 stand in for it | Collection names change if a baseline with other codes is supplied |
 | A008 | 11 Oct 2026 | DATA-001 and DATA-002 mean exactly what the requirements text of 11 Oct states (flat scalar documents; a concrete BSON type for every numeric key); no separate rule document exists | Standard sections 2 and 8 are revised |
 | A009 | 11 Oct 2026 | BSON types in the field lists were assigned by naming rules and are confirmed collection by collection when each specification is written | Individual key types change |
-| A010 | 11 Oct 2026 | The "exactly 10 documents" rule applies to each of the 257 collections, including child, relationship and value-list collections | Seed volume changes |
+| A010 | 11 Oct 2026 | The "exactly 10 documents" rule applies to each of the 299 collections, including child, relationship and value-list collections | Seed volume changes |
 | A011 | 11 Oct 2026 | MongoDB time-series collections remain a storage recommendation for processReading and energyReading; validators cannot be attached to time-series collections | Storage notes change |
 | A012 | 11 Oct 2026 | The Phase 1 research document keeps the collection names in use when it was written; `collection_inventory.md` is the authority for names | None |
+| A013 | 11 Oct 2026 | The split between master collection (rule A) and fixed enumeration (rule B) was made by Claude key by key; a key can be moved from B to A by adding it to 05_generator/master_refs.py | Individual keys change from coded text to a reference |

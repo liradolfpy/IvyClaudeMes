@@ -1,0 +1,82 @@
+{
+  "collMod": "u_mes_mdm_workCalendarException",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_workCalendarException",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "workCalendarId",
+        "workCalendarName",
+        "sequenceNo",
+        "exceptionDate",
+        "exceptionType",
+        "description",
+        "isWorking",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <workCalendarId>-E<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "workCalendarId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCalendar._id: the parent document this one belongs to"
+        },
+        "workCalendarName": {
+          "bsonType": "string",
+          "description": "Display value of workCalendarId, copied from u_mes_mdm_workCalendar.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "exceptionDate": {
+          "bsonType": "date",
+          "description": "Exception date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "exceptionType": {
+          "bsonType": "string",
+          "description": "Exception type",
+          "enum": [
+            "Public Holiday",
+            "Plant Shutdown",
+            "Extra Working Day",
+            "Reduced Shift"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the work calendar exception"
+        },
+        "isWorking": {
+          "bsonType": "bool",
+          "description": "True when the record is working"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,25 @@
+// Sample document for u_mes_mdm_line (illustrative; seed data is generated separately)
+db.getCollection("u_mes_mdm_line").insertOne({
+  _id: "LN-ASY-01",
+  recordNo: "ASY-01",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  name: "Caliper Assembly Line 1",
+  areaId: "AR-ASY",
+  areaName: "Assembly and Test",
+  lineType: "Assembly",
+  itemFamilyId: "IFM-FRONT-CALIPER",
+  itemFamilyName: "Front Caliper",
+  workCalendarId: "CAL-PN1-2026",
+  workCalendarName: "Chakan Plant Calendar 2026",
+  taktTimeSec: NumberDecimal("36.0"),
+  manningStandard: NumberInt(6),
+  bottleneckWorkCenterId: "WC-TRQ-01",
+  bottleneckWorkCenterName: "Bleed Screw Torque Station",
+  oeeTarget: NumberDecimal("85.0"),
+  costCenterId: "CC-5120",
+  costCenterName: "Assembly Line 1",
+  sequenceNo: NumberInt(1),
+  status: "Active",
+  schemaVersion: NumberInt(1)
+});

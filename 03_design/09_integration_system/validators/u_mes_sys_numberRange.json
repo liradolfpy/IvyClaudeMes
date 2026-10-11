@@ -1,0 +1,174 @@
+{
+  "collMod": "u_mes_sys_numberRange",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_sys_numberRange",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "rangeType",
+        "itemId",
+        "itemName",
+        "prefix",
+        "formatMask",
+        "currentValue",
+        "minValue",
+        "maxValue",
+        "incrementById",
+        "incrementBy",
+        "resetPolicy",
+        "lastResetAt",
+        "checkDigitMethod",
+        "warnAtPct",
+        "lastIssuedValue",
+        "lastIssuedAt",
+        "exampleValue",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: NR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the number range; used as its display value in other collections"
+        },
+        "rangeType": {
+          "bsonType": "string",
+          "description": "Range type",
+          "enum": [
+            "Serial Number",
+            "Lot Number",
+            "Order Number",
+            "Label Number",
+            "Document Number"
+          ]
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "prefix": {
+          "bsonType": "string",
+          "description": "Prefix of the number range"
+        },
+        "formatMask": {
+          "bsonType": "string",
+          "description": "Format mask"
+        },
+        "currentValue": {
+          "bsonType": "long",
+          "description": "Current value"
+        },
+        "minValue": {
+          "bsonType": "long",
+          "description": "Minimum value"
+        },
+        "maxValue": {
+          "bsonType": "long",
+          "description": "Maximum value"
+        },
+        "incrementById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'increment'"
+        },
+        "incrementBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in incrementById, copied from u_mes_mdm_user.fullName"
+        },
+        "resetPolicy": {
+          "bsonType": "string",
+          "description": "Reset policy",
+          "enum": [
+            "Never",
+            "Daily",
+            "Monthly",
+            "Yearly"
+          ]
+        },
+        "lastResetAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last reset date and time"
+        },
+        "checkDigitMethod": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Check digit method",
+          "enum": [
+            "None",
+            "Modulo 10",
+            "Modulo 43",
+            null
+          ]
+        },
+        "warnAtPct": {
+          "bsonType": "decimal",
+          "description": "Warn at (percent)"
+        },
+        "lastIssuedValue": {
+          "bsonType": "long",
+          "description": "Last issued value"
+        },
+        "lastIssuedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last issued date and time"
+        },
+        "exampleValue": {
+          "bsonType": "string",
+          "description": "Example value"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

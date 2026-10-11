@@ -16,34 +16,35 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ITM-<recordNo>
 | 4 | siteName | String |  |
 | 5 | description | String |  |
 | 6 | itemType | String |  |
-| 7 | itemGroup | String |  |
-| 8 | baseUnitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 9 | baseUnitOfMeasureName | String |  |
-| 10 | drawingNo | String |  |
-| 11 | drawingRevision | String |  |
-| 12 | revisionDate | Date |  |
-| 13 | materialSpecification | String |  |
-| 14 | materialGrade | String |  |
-| 15 | netWeightKg | Decimal128 |  |
-| 16 | grossWeightKg | Decimal128 |  |
-| 17 | procurementType | String |  |
-| 18 | defaultSupplierId | String | u_mes_mdm_supplier._id |
-| 19 | defaultSupplierName | String |  |
-| 20 | isSerialised | Boolean |  |
-| 21 | isLotControlled | Boolean |  |
-| 22 | serialNumberRangeId | String | u_mes_sys_numberRange._id |
-| 23 | serialNumberRangeName | String |  |
-| 24 | lotNumberRangeId | String | u_mes_sys_numberRange._id |
-| 25 | lotNumberRangeName | String |  |
-| 26 | shelfLifeDays | Int32 |  |
-| 27 | safetyCharacteristic | Boolean |  |
-| 28 | hsnCode | String |  |
-| 29 | standardCostInr | Decimal128 |  |
-| 30 | erpMaterialNo | String |  |
-| 31 | defaultStorageLocationId | String | u_mes_mat_storageLocation._id |
-| 32 | defaultStorageLocationName | String |  |
-| 33 | status | String |  |
-| 34 | schemaVersion | Int32 |  |
+| 7 | itemGroupId | String | u_mes_prd_itemGroup._id |
+| 8 | itemGroupName | String |  |
+| 9 | baseUnitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 10 | baseUnitOfMeasureName | String |  |
+| 11 | drawingNo | String |  |
+| 12 | drawingRevision | String |  |
+| 13 | revisionDate | Date |  |
+| 14 | materialSpecification | String |  |
+| 15 | materialGrade | String |  |
+| 16 | netWeightKg | Decimal128 |  |
+| 17 | grossWeightKg | Decimal128 |  |
+| 18 | procurementType | String |  |
+| 19 | defaultSupplierId | String | u_mes_mdm_supplier._id |
+| 20 | defaultSupplierName | String |  |
+| 21 | isSerialised | Boolean |  |
+| 22 | isLotControlled | Boolean |  |
+| 23 | serialNumberRangeId | String | u_mes_sys_numberRange._id |
+| 24 | serialNumberRangeName | String |  |
+| 25 | lotNumberRangeId | String | u_mes_sys_numberRange._id |
+| 26 | lotNumberRangeName | String |  |
+| 27 | shelfLifeDays | Int32 |  |
+| 28 | safetyCharacteristic | Boolean |  |
+| 29 | hsnCode | String |  |
+| 30 | standardCostInr | Decimal128 |  |
+| 31 | erpMaterialNo | String |  |
+| 32 | defaultStorageLocationId | String | u_mes_mat_storageLocation._id |
+| 33 | defaultStorageLocationName | String |  |
+| 34 | status | String |  |
+| 35 | schemaVersion | Int32 |  |
 
 ## u_mes_prd_itemRevision
 
@@ -103,17 +104,21 @@ Kind: entity | Data class: master | Parent: - | _id pattern: VAR-<recordNo>
 | 11 | customerName | String |  |
 | 12 | optionsHand | String |  |
 | 13 | optionsPistonDiameterMm | Decimal128 |  |
-| 14 | optionsPadCompound | String |  |
-| 15 | optionsMarket | String |  |
-| 16 | optionsSurfaceFinish | String |  |
-| 17 | optionsColour | String |  |
-| 18 | modelCode | String |  |
-| 19 | modelYear | Int32 |  |
-| 20 | labelSuffix | String |  |
-| 21 | effectiveFrom | Date |  |
-| 22 | effectiveTo | Date |  |
-| 23 | status | String |  |
-| 24 | schemaVersion | Int32 |  |
+| 14 | optionsPadCompoundId | String | u_mes_prd_padCompound._id |
+| 15 | optionsPadCompoundName | String |  |
+| 16 | optionsMarketId | String | u_mes_prd_market._id |
+| 17 | optionsMarketName | String |  |
+| 18 | optionsSurfaceFinishId | String | u_mes_prd_surfaceFinish._id |
+| 19 | optionsSurfaceFinishName | String |  |
+| 20 | optionsColour | String |  |
+| 21 | vehicleModelId | String | u_mes_prd_vehicleModel._id |
+| 22 | vehicleModelName | String |  |
+| 23 | modelYear | Int32 |  |
+| 24 | labelSuffix | String |  |
+| 25 | effectiveFrom | Date |  |
+| 26 | effectiveTo | Date |  |
+| 27 | status | String |  |
+| 28 | schemaVersion | Int32 |  |
 
 ## u_mes_prd_billOfMaterial
 
@@ -515,20 +520,21 @@ Kind: entity | Data class: master | Parent: - | _id pattern: WI-<recordNo>
 | 8 | operationId | String | u_mes_prd_operation._id |
 | 9 | operationName | String |  |
 | 10 | version | Int32 |  |
-| 11 | language | String |  |
-| 12 | effectiveFrom | Date |  |
-| 13 | effectiveTo | Date |  |
-| 14 | engineeringChangeId | String | u_mes_prd_engineeringChange._id |
-| 15 | engineeringChangeName | String |  |
-| 16 | safetyNotes | String |  |
-| 17 | authorUserId | String | u_mes_mdm_user._id |
-| 18 | authorUserName | String |  |
-| 19 | approvedById | String | u_mes_mdm_user._id |
-| 20 | approvedBy | String |  |
-| 21 | approvedAt | Date |  |
-| 22 | readAcknowledgementRequired | Boolean |  |
-| 23 | status | String |  |
-| 24 | schemaVersion | Int32 |  |
+| 11 | languageId | String | u_mes_mdm_language._id |
+| 12 | languageName | String |  |
+| 13 | effectiveFrom | Date |  |
+| 14 | effectiveTo | Date |  |
+| 15 | engineeringChangeId | String | u_mes_prd_engineeringChange._id |
+| 16 | engineeringChangeName | String |  |
+| 17 | safetyNotes | String |  |
+| 18 | authorUserId | String | u_mes_mdm_user._id |
+| 19 | authorUserName | String |  |
+| 20 | approvedById | String | u_mes_mdm_user._id |
+| 21 | approvedBy | String |  |
+| 22 | approvedAt | Date |  |
+| 23 | readAcknowledgementRequired | Boolean |  |
+| 24 | status | String |  |
+| 25 | schemaVersion | Int32 |  |
 
 ## u_mes_prd_workInstructionStep
 
@@ -625,7 +631,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prd_workInstructionStep 
 
 ## u_mes_prd_workInstructionPpeItem
 
-Kind: valueList | Data class: master | Parent: u_mes_prd_workInstruction | _id pattern: <workInstructionId>-PI<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prd_workInstruction | _id pattern: <workInstructionId>-PI<nnn>
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -636,8 +642,9 @@ Kind: valueList | Data class: master | Parent: u_mes_prd_workInstruction | _id p
 | 5 | workInstructionId | String | u_mes_prd_workInstruction._id |
 | 6 | workInstructionName | String |  |
 | 7 | sequenceNo | Int32 |  |
-| 8 | ppeItem | String |  |
-| 9 | schemaVersion | Int32 |  |
+| 8 | ppeItemId | String | u_mes_prd_ppeItem._id |
+| 9 | ppeItemName | String |  |
+| 10 | schemaVersion | Int32 |  |
 
 ## u_mes_prd_workInstructionKeyPoint
 
@@ -754,18 +761,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ECN-<recordNo>
 | 16 | effectivityType | String |  |
 | 17 | effectiveFrom | Date |  |
 | 18 | cutInSerialNo | String |  |
-| 19 | stockDisposition | String |  |
-| 20 | ppapRequired | Boolean |  |
-| 21 | implementedAt | Date |  |
-| 22 | closedAt | Date |  |
-| 23 | status | String |  |
-| 24 | schemaVersion | Int32 |  |
-| 25 | createdAt | Date |  |
-| 26 | createdById | String | u_mes_mdm_user._id |
-| 27 | createdBy | String |  |
-| 28 | updatedAt | Date |  |
-| 29 | updatedById | String | u_mes_mdm_user._id |
-| 30 | updatedBy | String |  |
+| 19 | stockDispositionTypeId | String | u_mes_qlt_dispositionType._id |
+| 20 | stockDispositionTypeName | String |  |
+| 21 | ppapRequired | Boolean |  |
+| 22 | implementedAt | Date |  |
+| 23 | closedAt | Date |  |
+| 24 | status | String |  |
+| 25 | schemaVersion | Int32 |  |
+| 26 | createdAt | Date |  |
+| 27 | createdById | String | u_mes_mdm_user._id |
+| 28 | createdBy | String |  |
+| 29 | updatedAt | Date |  |
+| 30 | updatedById | String | u_mes_mdm_user._id |
+| 31 | updatedBy | String |  |
 
 ## u_mes_prd_engineeringChangeAffectedItem
 
@@ -866,3 +874,119 @@ Kind: relationship | Data class: transaction | Parent: u_mes_prd_engineeringChan
 | 14 | updatedAt | Date |  |
 | 15 | updatedById | String | u_mes_mdm_user._id |
 | 16 | updatedBy | String |  |
+
+## u_mes_prd_itemGroup
+
+Kind: entity | Data class: master | Parent: - | _id pattern: IGR-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_prd_itemFamily
+
+Kind: entity | Data class: master | Parent: - | _id pattern: IFM-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_prd_ppeItem
+
+Kind: entity | Data class: master | Parent: - | _id pattern: PPE-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_prd_market
+
+Kind: entity | Data class: master | Parent: - | _id pattern: MKT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_prd_padCompound
+
+Kind: entity | Data class: master | Parent: - | _id pattern: PDC-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_prd_surfaceFinish
+
+Kind: entity | Data class: master | Parent: - | _id pattern: SFN-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_prd_vehicleModel
+
+Kind: entity | Data class: master | Parent: - | _id pattern: VHM-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | customerId | String | u_mes_mdm_customer._id |
+| 8 | customerName | String |  |
+| 9 | modelYear | Int32 |  |
+| 10 | platformCode | String |  |
+| 11 | sequenceNo | Int32 |  |
+| 12 | status | String |  |
+| 13 | schemaVersion | Int32 |  |

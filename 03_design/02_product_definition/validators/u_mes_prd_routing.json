@@ -1,0 +1,165 @@
+{
+  "collMod": "u_mes_prd_routing",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prd_routing",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "itemId",
+        "itemName",
+        "itemRevision",
+        "routingVersion",
+        "routingType",
+        "description",
+        "effectiveFrom",
+        "effectiveTo",
+        "engineeringChangeId",
+        "engineeringChangeName",
+        "entryStepNo",
+        "parentRoutingId",
+        "parentRoutingName",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "erpRoutingNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: RTG-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "itemRevision": {
+          "bsonType": "string",
+          "description": "Item revision"
+        },
+        "routingVersion": {
+          "bsonType": "int",
+          "description": "Routing version"
+        },
+        "routingType": {
+          "bsonType": "string",
+          "description": "Routing type",
+          "enum": [
+            "Standard",
+            "Rework",
+            "Alternate"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the routing"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Effective to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "engineeringChangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_engineeringChange._id"
+        },
+        "engineeringChangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of engineeringChangeId, copied from u_mes_prd_engineeringChange.title"
+        },
+        "entryStepNo": {
+          "bsonType": "int",
+          "description": "Step at which material enters the routing"
+        },
+        "parentRoutingId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_routing._id: parent routing"
+        },
+        "parentRoutingName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentRoutingId, copied from u_mes_prd_routing.description"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mdm_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "erpRoutingNo": {
+          "bsonType": "string",
+          "description": "ERP routing number"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

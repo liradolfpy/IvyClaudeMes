@@ -1,0 +1,287 @@
+{
+  "collMod": "u_mes_ehs_safetyIncident",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_ehs_safetyIncident",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "incidentTypeId",
+        "incidentTypeName",
+        "severity",
+        "areaId",
+        "areaName",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "occurredAt",
+        "reportedById",
+        "reportedBy",
+        "reportedAt",
+        "description",
+        "injuredUserId",
+        "injuredUserName",
+        "bodyPartId",
+        "bodyPartName",
+        "injuryTypeId",
+        "injuryTypeName",
+        "firstAidGiven",
+        "lostTimeDays",
+        "immediateAction",
+        "rootCause",
+        "capaId",
+        "capaName",
+        "investigatedById",
+        "investigatedBy",
+        "investigationCompletedAt",
+        "reportableToAuthority",
+        "closedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SAF-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the safety incident; used as its display value in other collections"
+        },
+        "incidentTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_ehs_incidentType._id"
+        },
+        "incidentTypeName": {
+          "bsonType": "string",
+          "description": "Display value of incidentTypeId, copied from u_mes_ehs_incidentType.name"
+        },
+        "severity": {
+          "bsonType": "int",
+          "description": "Severity rating 1 to 10"
+        },
+        "areaId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_area._id"
+        },
+        "areaName": {
+          "bsonType": "string",
+          "description": "Display value of areaId, copied from u_mes_mdm_area.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "occurredAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was occurred"
+        },
+        "reportedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'reported'"
+        },
+        "reportedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in reportedById, copied from u_mes_mdm_user.fullName"
+        },
+        "reportedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was reported"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the safety incident"
+        },
+        "injuredUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: injured user"
+        },
+        "injuredUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of injuredUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "bodyPartId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_ehs_bodyPart._id"
+        },
+        "bodyPartName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of bodyPartId, copied from u_mes_ehs_bodyPart.name"
+        },
+        "injuryTypeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_ehs_injuryType._id"
+        },
+        "injuryTypeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of injuryTypeId, copied from u_mes_ehs_injuryType.name"
+        },
+        "firstAidGiven": {
+          "bsonType": "bool",
+          "description": "True when: first aid given"
+        },
+        "lostTimeDays": {
+          "bsonType": "int",
+          "description": "Lost time (days)"
+        },
+        "immediateAction": {
+          "bsonType": "string",
+          "description": "Immediate action"
+        },
+        "rootCause": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Root cause"
+        },
+        "capaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_capa._id"
+        },
+        "capaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of capaId, copied from u_mes_qlt_capa.title"
+        },
+        "investigatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'investigated'"
+        },
+        "investigatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in investigatedById, copied from u_mes_mdm_user.fullName"
+        },
+        "investigationCompletedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Investigation completed date and time"
+        },
+        "reportableToAuthority": {
+          "bsonType": "bool",
+          "description": "True when: reportable to authority"
+        },
+        "closedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was closed"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Reported",
+            "Under Investigation",
+            "Actions Open",
+            "Closed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

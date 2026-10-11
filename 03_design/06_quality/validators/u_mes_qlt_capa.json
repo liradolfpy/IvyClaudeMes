@@ -1,0 +1,323 @@
+{
+  "collMod": "u_mes_qlt_capa",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_capa",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "capaType",
+        "source",
+        "customerComplaintId",
+        "customerComplaintName",
+        "auditId",
+        "auditName",
+        "itemId",
+        "itemName",
+        "customerId",
+        "customerName",
+        "openedAt",
+        "openedById",
+        "openedBy",
+        "d2ProblemDescription",
+        "d4RootCauseOccurrence",
+        "d4RootCauseEscape",
+        "d4RootCauseMethod",
+        "d7PreventionPfmeaId",
+        "d7PreventionPfmeaName",
+        "d7PreventionControlPlanId",
+        "d7PreventionControlPlanName",
+        "d7PreventionLessonsLearned",
+        "d7PreventionHorizontalDeployment",
+        "d8ClosureClosedById",
+        "d8ClosureClosedBy",
+        "d8ClosureClosedAt",
+        "d8ClosureCustomerAccepted",
+        "dueAt",
+        "currentDiscipline",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CAPA-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the CAPA; used as its display value in other collections"
+        },
+        "capaType": {
+          "bsonType": "string",
+          "description": "CAPA type",
+          "enum": [
+            "Corrective",
+            "Preventive"
+          ]
+        },
+        "source": {
+          "bsonType": "string",
+          "description": "Where the record originated",
+          "enum": [
+            "MES Terminal",
+            "PLC",
+            "Scanner",
+            "ERP",
+            "Device",
+            "Manual Entry"
+          ]
+        },
+        "customerComplaintId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_customerComplaint._id"
+        },
+        "customerComplaintName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerComplaintId, copied from u_mes_qlt_customerComplaint.description"
+        },
+        "auditId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_audit._id"
+        },
+        "auditName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of auditId, copied from u_mes_qlt_audit.title"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "customerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_customer._id"
+        },
+        "customerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerId, copied from u_mes_mdm_customer.name"
+        },
+        "openedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was opened"
+        },
+        "openedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'opened'"
+        },
+        "openedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in openedById, copied from u_mes_mdm_user.fullName"
+        },
+        "d2ProblemDescription": {
+          "bsonType": "string",
+          "description": "D2 problem description"
+        },
+        "d4RootCauseOccurrence": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "D4 root cause occurrence"
+        },
+        "d4RootCauseEscape": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "D4 root cause escape"
+        },
+        "d4RootCauseMethod": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "D4 root cause method",
+          "enum": [
+            "5 Why",
+            "Fishbone",
+            "Fault Tree",
+            "Is Is Not",
+            null
+          ]
+        },
+        "d7PreventionPfmeaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_pfmea._id: D7 prevention PFMEA"
+        },
+        "d7PreventionPfmeaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of d7PreventionPfmeaId, copied from u_mes_qlt_pfmea.title"
+        },
+        "d7PreventionControlPlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_controlPlan._id: D7 prevention control plan"
+        },
+        "d7PreventionControlPlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of d7PreventionControlPlanId, copied from u_mes_qlt_controlPlan.recordNo"
+        },
+        "d7PreventionLessonsLearned": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "D7 prevention lessons learned"
+        },
+        "d7PreventionHorizontalDeployment": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "D7 prevention horizontal deployment"
+        },
+        "d8ClosureClosedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'D8 closure closed'"
+        },
+        "d8ClosureClosedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in d8ClosureClosedById, copied from u_mes_mdm_user.fullName"
+        },
+        "d8ClosureClosedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "D8 closure closed date and time"
+        },
+        "d8ClosureCustomerAccepted": {
+          "bsonType": "bool",
+          "description": "True when: D8 closure customer accepted"
+        },
+        "dueAt": {
+          "bsonType": "date",
+          "description": "Due date and time"
+        },
+        "currentDiscipline": {
+          "bsonType": "string",
+          "description": "Current discipline",
+          "enum": [
+            "D1",
+            "D2",
+            "D3",
+            "D4",
+            "D5",
+            "D6",
+            "D7",
+            "D8"
+          ]
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "Containment Done",
+            "Root Cause Identified",
+            "Actions Implemented",
+            "Verified",
+            "Closed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,87 @@
+{
+  "collMod": "u_mes_mdm_role",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_role",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "scope",
+        "description",
+        "canSign",
+        "approvalLimitInr",
+        "isSystemRole",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ROLE-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the role; used as its display value in other collections"
+        },
+        "scope": {
+          "bsonType": "string",
+          "description": "Whether the record applies to the whole enterprise or to one site",
+          "enum": [
+            "Enterprise",
+            "Site"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the role"
+        },
+        "canSign": {
+          "bsonType": "bool",
+          "description": "True when the holder can sign"
+        },
+        "approvalLimitInr": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Approval limit (Indian rupees)"
+        },
+        "isSystemRole": {
+          "bsonType": "bool",
+          "description": "True when the record is system role"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

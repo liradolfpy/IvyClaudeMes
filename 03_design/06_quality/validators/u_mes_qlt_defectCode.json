@@ -1,0 +1,137 @@
+{
+  "collMod": "u_mes_qlt_defectCode",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_defectCode",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "defectGroupId",
+        "defectGroupName",
+        "description",
+        "severity",
+        "defaultDispositionTypeId",
+        "defaultDispositionTypeName",
+        "dispositionRoutingId",
+        "dispositionRoutingName",
+        "isSafetyRelated",
+        "requiresPhoto",
+        "requiresHold",
+        "scrapCostCategory",
+        "customerDefectCode",
+        "pfmeaFailureMode",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: DEF-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the defect code; used as its display value in other collections"
+        },
+        "defectGroupId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_defectGroup._id"
+        },
+        "defectGroupName": {
+          "bsonType": "string",
+          "description": "Display value of defectGroupId, copied from u_mes_qlt_defectGroup.name"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the defect code"
+        },
+        "severity": {
+          "bsonType": "int",
+          "description": "Severity rating 1 to 10"
+        },
+        "defaultDispositionTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_dispositionType._id: default disposition type"
+        },
+        "defaultDispositionTypeName": {
+          "bsonType": "string",
+          "description": "Display value of defaultDispositionTypeId, copied from u_mes_qlt_dispositionType.name"
+        },
+        "dispositionRoutingId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_routing._id: disposition routing"
+        },
+        "dispositionRoutingName": {
+          "bsonType": "string",
+          "description": "Display value of dispositionRoutingId, copied from u_mes_prd_routing.description"
+        },
+        "isSafetyRelated": {
+          "bsonType": "bool",
+          "description": "True when the record is safety related"
+        },
+        "requiresPhoto": {
+          "bsonType": "bool",
+          "description": "True when photo is required"
+        },
+        "requiresHold": {
+          "bsonType": "bool",
+          "description": "True when hold is required"
+        },
+        "scrapCostCategory": {
+          "bsonType": "string",
+          "description": "Scrap cost category",
+          "enum": [
+            "Casting Scrap",
+            "Machining Scrap",
+            "Assembly Scrap",
+            "Supplier Chargeable"
+          ]
+        },
+        "customerDefectCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Customer defect code"
+        },
+        "pfmeaFailureMode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "PFMEA failure mode"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

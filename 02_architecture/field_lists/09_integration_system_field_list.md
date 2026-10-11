@@ -111,30 +111,32 @@ Kind: entity | Data class: master | Parent: - | _id pattern: IOT-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | name | String |  |
-| 6 | deviceType | String |  |
-| 7 | manufacturer | String |  |
-| 8 | model | String |  |
-| 9 | serialNo | String |  |
-| 10 | firmwareVersion | String |  |
-| 11 | equipmentId | String | u_mes_mdm_equipment._id |
-| 12 | equipmentName | String |  |
-| 13 | workCenterId | String | u_mes_mdm_workCenter._id |
-| 14 | workCenterName | String |  |
-| 15 | integrationConnectorId | String | u_mes_sys_integrationConnector._id |
-| 16 | integrationConnectorName | String |  |
-| 17 | ipAddress | String |  |
-| 18 | macAddress | String |  |
-| 19 | port | Int32 |  |
-| 20 | protocol | String |  |
-| 21 | vlan | Int32 |  |
-| 22 | opcNodeAddress | String |  |
-| 23 | pollIntervalMs | Int32 |  |
-| 24 | lastSeenAt | Date |  |
-| 25 | connectionStatus | String |  |
-| 26 | certificateExpiresAt | Date |  |
-| 27 | installedAt | Date |  |
-| 28 | status | String |  |
-| 29 | schemaVersion | Int32 |  |
+| 6 | deviceTypeId | String | u_mes_sys_deviceType._id |
+| 7 | deviceTypeName | String |  |
+| 8 | manufacturerId | String | u_mes_mdm_manufacturer._id |
+| 9 | manufacturerName | String |  |
+| 10 | model | String |  |
+| 11 | serialNo | String |  |
+| 12 | firmwareVersion | String |  |
+| 13 | equipmentId | String | u_mes_mdm_equipment._id |
+| 14 | equipmentName | String |  |
+| 15 | workCenterId | String | u_mes_mdm_workCenter._id |
+| 16 | workCenterName | String |  |
+| 17 | integrationConnectorId | String | u_mes_sys_integrationConnector._id |
+| 18 | integrationConnectorName | String |  |
+| 19 | ipAddress | String |  |
+| 20 | macAddress | String |  |
+| 21 | port | Int32 |  |
+| 22 | protocol | String |  |
+| 23 | vlan | Int32 |  |
+| 24 | opcNodeAddress | String |  |
+| 25 | pollIntervalMs | Int32 |  |
+| 26 | lastSeenAt | Date |  |
+| 27 | connectionStatus | String |  |
+| 28 | certificateExpiresAt | Date |  |
+| 29 | installedAt | Date |  |
+| 30 | status | String |  |
+| 31 | schemaVersion | Int32 |  |
 
 ## u_mes_sys_operatorApp
 
@@ -254,7 +256,7 @@ Kind: child | Data class: master | Parent: u_mes_sys_operatorApp | _id pattern: 
 
 ## u_mes_sys_operatorAppLanguage
 
-Kind: valueList | Data class: master | Parent: u_mes_sys_operatorApp | _id pattern: <operatorAppId>-L<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_sys_operatorApp | _id pattern: <operatorAppId>-L<nnn>
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -265,8 +267,9 @@ Kind: valueList | Data class: master | Parent: u_mes_sys_operatorApp | _id patte
 | 5 | operatorAppId | String | u_mes_sys_operatorApp._id |
 | 6 | operatorAppName | String |  |
 | 7 | sequenceNo | Int32 |  |
-| 8 | language | String |  |
-| 9 | schemaVersion | Int32 |  |
+| 8 | languageId | String | u_mes_mdm_language._id |
+| 9 | languageName | String |  |
+| 10 | schemaVersion | Int32 |  |
 
 ## u_mes_sys_businessEvent
 
@@ -382,23 +385,24 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SIG-<recordNo>
 | 9 | userName | String |  |
 | 10 | roleId | String | u_mes_mdm_role._id |
 | 11 | roleName | String |  |
-| 12 | meaning | String |  |
-| 13 | signedAt | Date |  |
-| 14 | authenticationMethod | String |  |
-| 15 | contentHash | String |  |
-| 16 | comment | String |  |
-| 17 | clientIp | String |  |
-| 18 | workstation | String |  |
-| 19 | isSecondSignature | Boolean |  |
-| 20 | witnessUserId | String | u_mes_mdm_user._id |
-| 21 | witnessUserName | String |  |
-| 22 | schemaVersion | Int32 |  |
-| 23 | createdAt | Date |  |
-| 24 | createdById | String | u_mes_mdm_user._id |
-| 25 | createdBy | String |  |
-| 26 | updatedAt | Date |  |
-| 27 | updatedById | String | u_mes_mdm_user._id |
-| 28 | updatedBy | String |  |
+| 12 | signatureMeaningId | String | u_mes_mdm_signatureMeaning._id |
+| 13 | signatureMeaningName | String |  |
+| 14 | signedAt | Date |  |
+| 15 | authenticationMethod | String |  |
+| 16 | contentHash | String |  |
+| 17 | comment | String |  |
+| 18 | clientIp | String |  |
+| 19 | workstation | String |  |
+| 20 | isSecondSignature | Boolean |  |
+| 21 | witnessUserId | String | u_mes_mdm_user._id |
+| 22 | witnessUserName | String |  |
+| 23 | schemaVersion | Int32 |  |
+| 24 | createdAt | Date |  |
+| 25 | createdById | String | u_mes_mdm_user._id |
+| 26 | createdBy | String |  |
+| 27 | updatedAt | Date |  |
+| 28 | updatedById | String | u_mes_mdm_user._id |
+| 29 | updatedBy | String |  |
 
 ## u_mes_sys_notification
 
@@ -410,33 +414,34 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: NTF-<recordNo>
 | 2 | recordNo | String |  |
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
-| 5 | notificationType | String |  |
-| 6 | severity | Int32 |  |
-| 7 | title | String |  |
-| 8 | bodyText | String |  |
-| 9 | relatedCollectionName | String |  |
-| 10 | relatedEntityId | String | any collection, named in relatedCollectionName |
-| 11 | relatedEntityName | String |  |
-| 12 | andonEventId | String | u_mes_ehs_andonEvent._id |
-| 13 | andonEventName | String |  |
-| 14 | alarmId | String | u_mes_eqp_alarm._id |
-| 15 | alarmName | String |  |
-| 16 | nonconformanceId | String | u_mes_qlt_nonconformance._id |
-| 17 | nonconformanceName | String |  |
-| 18 | escalationLevel | Int32 |  |
-| 19 | raisedAt | Date |  |
-| 20 | acknowledgedById | String | u_mes_mdm_user._id |
-| 21 | acknowledgedBy | String |  |
-| 22 | acknowledgedAt | Date |  |
-| 23 | expiresAt | Date |  |
-| 24 | status | String |  |
-| 25 | schemaVersion | Int32 |  |
-| 26 | createdAt | Date |  |
-| 27 | createdById | String | u_mes_mdm_user._id |
-| 28 | createdBy | String |  |
-| 29 | updatedAt | Date |  |
-| 30 | updatedById | String | u_mes_mdm_user._id |
-| 31 | updatedBy | String |  |
+| 5 | notificationTypeId | String | u_mes_sys_notificationType._id |
+| 6 | notificationTypeName | String |  |
+| 7 | severity | Int32 |  |
+| 8 | title | String |  |
+| 9 | bodyText | String |  |
+| 10 | relatedCollectionName | String |  |
+| 11 | relatedEntityId | String | any collection, named in relatedCollectionName |
+| 12 | relatedEntityName | String |  |
+| 13 | andonEventId | String | u_mes_ehs_andonEvent._id |
+| 14 | andonEventName | String |  |
+| 15 | alarmId | String | u_mes_eqp_alarm._id |
+| 16 | alarmName | String |  |
+| 17 | nonconformanceId | String | u_mes_qlt_nonconformance._id |
+| 18 | nonconformanceName | String |  |
+| 19 | escalationLevel | Int32 |  |
+| 20 | raisedAt | Date |  |
+| 21 | acknowledgedById | String | u_mes_mdm_user._id |
+| 22 | acknowledgedBy | String |  |
+| 23 | acknowledgedAt | Date |  |
+| 24 | expiresAt | Date |  |
+| 25 | status | String |  |
+| 26 | schemaVersion | Int32 |  |
+| 27 | createdAt | Date |  |
+| 28 | createdById | String | u_mes_mdm_user._id |
+| 29 | createdBy | String |  |
+| 30 | updatedAt | Date |  |
+| 31 | updatedById | String | u_mes_mdm_user._id |
+| 32 | updatedBy | String |  |
 
 ## u_mes_sys_notificationRecipient
 
@@ -478,37 +483,39 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: DOC-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | title | String |  |
-| 6 | documentType | String |  |
-| 7 | revision | String |  |
-| 8 | itemId | String | u_mes_prd_item._id |
-| 9 | itemName | String |  |
-| 10 | relatedCollectionName | String |  |
-| 11 | relatedEntityId | String | any collection, named in relatedCollectionName |
-| 12 | relatedEntityName | String |  |
-| 13 | fileName | String |  |
-| 14 | mimeType | String |  |
-| 15 | sizeBytes | Int64 |  |
-| 16 | storageProvider | String |  |
-| 17 | storageKey | String |  |
-| 18 | checksumSha256 | String |  |
-| 19 | language | String |  |
-| 20 | authorUserId | String | u_mes_mdm_user._id |
-| 21 | authorUserName | String |  |
-| 22 | approvedById | String | u_mes_mdm_user._id |
-| 23 | approvedBy | String |  |
-| 24 | approvedAt | Date |  |
-| 25 | effectiveFrom | Date |  |
-| 26 | expiresAt | Date |  |
-| 27 | retentionYears | Int32 |  |
-| 28 | isControlled | Boolean |  |
-| 29 | status | String |  |
-| 30 | schemaVersion | Int32 |  |
-| 31 | createdAt | Date |  |
-| 32 | createdById | String | u_mes_mdm_user._id |
-| 33 | createdBy | String |  |
-| 34 | updatedAt | Date |  |
-| 35 | updatedById | String | u_mes_mdm_user._id |
-| 36 | updatedBy | String |  |
+| 6 | documentTypeId | String | u_mes_sys_documentType._id |
+| 7 | documentTypeName | String |  |
+| 8 | revision | String |  |
+| 9 | itemId | String | u_mes_prd_item._id |
+| 10 | itemName | String |  |
+| 11 | relatedCollectionName | String |  |
+| 12 | relatedEntityId | String | any collection, named in relatedCollectionName |
+| 13 | relatedEntityName | String |  |
+| 14 | fileName | String |  |
+| 15 | mimeType | String |  |
+| 16 | sizeBytes | Int64 |  |
+| 17 | storageProvider | String |  |
+| 18 | storageKey | String |  |
+| 19 | checksumSha256 | String |  |
+| 20 | languageId | String | u_mes_mdm_language._id |
+| 21 | languageName | String |  |
+| 22 | authorUserId | String | u_mes_mdm_user._id |
+| 23 | authorUserName | String |  |
+| 24 | approvedById | String | u_mes_mdm_user._id |
+| 25 | approvedBy | String |  |
+| 26 | approvedAt | Date |  |
+| 27 | effectiveFrom | Date |  |
+| 28 | expiresAt | Date |  |
+| 29 | retentionYears | Int32 |  |
+| 30 | isControlled | Boolean |  |
+| 31 | status | String |  |
+| 32 | schemaVersion | Int32 |  |
+| 33 | createdAt | Date |  |
+| 34 | createdById | String | u_mes_mdm_user._id |
+| 35 | createdBy | String |  |
+| 36 | updatedAt | Date |  |
+| 37 | updatedById | String | u_mes_mdm_user._id |
+| 38 | updatedBy | String |  |
 
 ## u_mes_sys_controlledDocumentTag
 
@@ -588,6 +595,56 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CFG-<recordNo>
 | 17 | status | String |  |
 | 18 | schemaVersion | Int32 |  |
 
+## u_mes_sys_documentType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: DCT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | retentionYears | Int32 |  |
+| 8 | isControlled | Boolean |  |
+| 9 | sequenceNo | Int32 |  |
+| 10 | status | String |  |
+| 11 | schemaVersion | Int32 |  |
+
+## u_mes_sys_deviceType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: DVT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_sys_notificationType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: NTT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
 ## u_mes_sys_statusDefinition
 
 Kind: entity | Data class: master | Parent: - | _id pattern: STD-<recordNo>
@@ -609,6 +666,26 @@ Kind: entity | Data class: master | Parent: - | _id pattern: STD-<recordNo>
 | 13 | colourCode | String |  |
 | 14 | status | String |  |
 | 15 | schemaVersion | Int32 |  |
+
+## u_mes_sys_enumerationValue
+
+Kind: entity | Data class: master | Parent: - | _id pattern: ENV-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | collectionName | String |  |
+| 6 | fieldName | String |  |
+| 7 | valueCode | String |  |
+| 8 | valueName | String |  |
+| 9 | description | String |  |
+| 10 | sequenceNo | Int32 |  |
+| 11 | isDefault | Boolean |  |
+| 12 | status | String |  |
+| 13 | schemaVersion | Int32 |  |
 
 ## u_mes_sys_statusTransition
 

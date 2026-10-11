@@ -1,0 +1,243 @@
+{
+  "collMod": "u_mes_sys_businessEvent",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_sys_businessEvent",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "eventType",
+        "eventCategory",
+        "occurredAt",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "productionOrderId",
+        "productionOrderName",
+        "userId",
+        "userName",
+        "iotDeviceId",
+        "iotDeviceName",
+        "severity",
+        "messageText",
+        "eventPayloadText",
+        "correlationNo",
+        "source",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: EVT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "eventType": {
+          "bsonType": "string",
+          "description": "Event type",
+          "enum": [
+            "Order Released",
+            "Operation Started",
+            "Operation Completed",
+            "Recipe Downloaded",
+            "Hold Placed",
+            "Hold Released",
+            "Label Printed",
+            "Unit Scrapped",
+            "Shipment Dispatched",
+            "User Logged In"
+          ]
+        },
+        "eventCategory": {
+          "bsonType": "string",
+          "description": "Event category",
+          "enum": [
+            "Execution",
+            "Quality",
+            "Material",
+            "Maintenance",
+            "Integration",
+            "Security"
+          ]
+        },
+        "occurredAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was occurred"
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of the related document"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "productionOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productionOrderId, copied from u_mes_exe_productionOrder.recordNo"
+        },
+        "userId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id"
+        },
+        "userName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of userId, copied from u_mes_mdm_user.fullName"
+        },
+        "iotDeviceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_sys_iotDevice._id"
+        },
+        "iotDeviceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of iotDeviceId, copied from u_mes_sys_iotDevice.name"
+        },
+        "severity": {
+          "bsonType": "int",
+          "description": "Severity rating 1 to 10"
+        },
+        "messageText": {
+          "bsonType": "string",
+          "description": "Message text"
+        },
+        "eventPayloadText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Event details as JSON text"
+        },
+        "correlationNo": {
+          "bsonType": "string",
+          "description": "Identifier shared by records that belong to the same business transaction"
+        },
+        "source": {
+          "bsonType": "string",
+          "description": "Where the record originated",
+          "enum": [
+            "MES Terminal",
+            "PLC",
+            "Scanner",
+            "ERP",
+            "Device",
+            "Manual Entry"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

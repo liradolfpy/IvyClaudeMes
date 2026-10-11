@@ -1,0 +1,301 @@
+{
+  "collMod": "u_mes_qlt_scrapRecord",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qlt_scrapRecord",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "nonconformanceId",
+        "nonconformanceName",
+        "defectCodeId",
+        "defectCodeName",
+        "wipUnitId",
+        "wipUnitName",
+        "lotId",
+        "lotName",
+        "itemId",
+        "itemName",
+        "quantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "weightKg",
+        "originOperationId",
+        "originOperationName",
+        "detectedAtOperationId",
+        "detectedAtOperationName",
+        "workCenterId",
+        "workCenterName",
+        "shiftId",
+        "shiftName",
+        "scrapType",
+        "scrapCostInr",
+        "declaredById",
+        "declaredBy",
+        "declaredAt",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "scrapLocationId",
+        "scrapLocationName",
+        "disposalMethod",
+        "erpPosted",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SCR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qlt_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qlt_nonconformance.title"
+        },
+        "defectCodeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qlt_defectCode._id"
+        },
+        "defectCodeName": {
+          "bsonType": "string",
+          "description": "Display value of defectCodeId, copied from u_mes_qlt_defectCode.name"
+        },
+        "wipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of wipUnitId, copied from u_mes_exe_wipUnit.recordNo"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_exe_lot.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "quantity": {
+          "bsonType": "int",
+          "description": "Quantity of the scrap record"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name"
+        },
+        "weightKg": {
+          "bsonType": "decimal",
+          "description": "Weight (kg)"
+        },
+        "originOperationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id: origin operation"
+        },
+        "originOperationName": {
+          "bsonType": "string",
+          "description": "Display value of originOperationId, copied from u_mes_prd_operation.name"
+        },
+        "detectedAtOperationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_operation._id: detected at operation"
+        },
+        "detectedAtOperationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of detectedAtOperationId, copied from u_mes_prd_operation.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mdm_shift.name"
+        },
+        "scrapType": {
+          "bsonType": "string",
+          "description": "Scrap type",
+          "enum": [
+            "Process Scrap",
+            "Setup Scrap",
+            "Material Defect",
+            "Destructive Test"
+          ]
+        },
+        "scrapCostInr": {
+          "bsonType": "decimal",
+          "description": "Scrap cost (Indian rupees)"
+        },
+        "declaredById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'declared'"
+        },
+        "declaredBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in declaredById, copied from u_mes_mdm_user.fullName"
+        },
+        "declaredAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was declared"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mdm_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "scrapLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mat_storageLocation._id: scrap location"
+        },
+        "scrapLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of scrapLocationId, copied from u_mes_mat_storageLocation.name"
+        },
+        "disposalMethod": {
+          "bsonType": "string",
+          "description": "Disposal method",
+          "enum": [
+            "Remelt",
+            "Sell As Scrap",
+            "Return To Supplier"
+          ]
+        },
+        "erpPosted": {
+          "bsonType": "bool",
+          "description": "True when: ERP posted"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Declared",
+            "Approved",
+            "Disposed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

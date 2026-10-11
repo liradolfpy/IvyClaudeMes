@@ -1,0 +1,112 @@
+{
+  "collMod": "u_mes_mdm_skill",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_skill",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "skillCategoryId",
+        "skillCategoryName",
+        "description",
+        "minimumLevelRequired",
+        "validityMonths",
+        "trainingControlledDocumentId",
+        "trainingControlledDocumentName",
+        "assessmentMethod",
+        "isSafetyCritical",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SKL-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the skill; used as its display value in other collections"
+        },
+        "skillCategoryId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_skillCategory._id"
+        },
+        "skillCategoryName": {
+          "bsonType": "string",
+          "description": "Display value of skillCategoryId, copied from u_mes_mdm_skillCategory.name"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the skill"
+        },
+        "minimumLevelRequired": {
+          "bsonType": "int",
+          "description": "Lowest skill level allowed to work unsupervised"
+        },
+        "validityMonths": {
+          "bsonType": "int",
+          "description": "Validity (months)"
+        },
+        "trainingControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_sys_controlledDocument._id: training controlled document"
+        },
+        "trainingControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of trainingControlledDocumentId, copied from u_mes_sys_controlledDocument.title"
+        },
+        "assessmentMethod": {
+          "bsonType": "string",
+          "description": "Assessment method",
+          "enum": [
+            "Practical Test",
+            "Written Test",
+            "Observation",
+            "On the Job"
+          ]
+        },
+        "isSafetyCritical": {
+          "bsonType": "bool",
+          "description": "True when the record is safety critical"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

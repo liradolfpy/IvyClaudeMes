@@ -96,3 +96,25 @@ Master collections do not carry these keys; their change history is in `u_mes_sy
 ## 10. Optional keys
 
 An optional key is handled the same way in every document of a collection: either always present with `null` when unavailable, or defined as optional in the collection specification. Project choice: always present, `null` when unavailable, so that every document of a collection has the same keys.
+
+## 11. DATA-003 Classification values and master data
+
+Source: owner's review of 11 October 2026 (the user document held department, designation and employmentType as plain text with no ID and no master collection).
+
+A text key that classifies a document is never left as free text. It is handled by one of two rules.
+
+| Rule | Applies when | Modelled as | Example |
+|---|---|---|---|
+| A. Master collection | The plant defines and maintains the list, the list can grow, or a value has attributes of its own | Its own master collection `u_mes_<moduleCode>_<singularName>` with `_id`, `recordNo` (the code), `name`, `description`, `sequenceNo`, `status`; referenced by `<entity>Id` + `<entity>Name` | `departmentId` + `departmentName` pointing to `u_mes_mdm_department` |
+| B. Fixed enumeration | The values are fixed by the application logic and the plant cannot add one without a software change | The key stays coded text; its allowed values are in the validator, listed in `04_reference_data/code_lists/enumeration_values.md`, and stored as data in `u_mes_sys_enumerationValue` (one document per collection, key and value) | `result` with OK, Not OK |
+
+How to decide: if a plant administrator could reasonably need to add, rename or retire a value, it is rule A. If the software branches on the value, it is rule B.
+
+Further rules:
+
+- The same list is one master collection, however many keys use it. A role may prefix the reference (`responsibleDepartmentId`, `fromStockStatusId`, `defaultDispositionTypeId`).
+- Where one document needs several values from a master list, the link is a relationship collection (`u_mes_mdm_rolePermission` links a role to `u_mes_mdm_permission`).
+- A master collection of this kind is data class master: no audit keys, change history in `u_mes_sys_auditTrail`.
+- Text that describes one person or thing outside the plant's lists stays text under a name that cannot be mistaken for a reference (`jobTitle` of a customer contact, not `designation`).
+- Free text is allowed only for names, descriptions, notes, numbers issued by other parties, and technical addresses.
+- `status` follows section 6 and is mapped in `u_mes_sys_statusDefinition`.

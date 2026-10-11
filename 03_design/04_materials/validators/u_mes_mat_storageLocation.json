@@ -1,0 +1,173 @@
+{
+  "collMod": "u_mes_mat_storageLocation",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mat_storageLocation",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "locationType",
+        "areaId",
+        "areaName",
+        "workCenterId",
+        "workCenterName",
+        "parentLocationId",
+        "parentLocationName",
+        "zone",
+        "rack",
+        "level",
+        "bin",
+        "capacityQuantity",
+        "isQuarantine",
+        "isLineSide",
+        "mixedLotsAllowed",
+        "erpStorageLocation",
+        "barcode",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: LOC-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the storage location; used as its display value in other collections"
+        },
+        "locationType": {
+          "bsonType": "string",
+          "description": "Location type",
+          "enum": [
+            "Warehouse Rack",
+            "Line Side",
+            "Quarantine",
+            "Dispatch Bay",
+            "Receiving Bay",
+            "Tool Crib",
+            "Scrap Yard"
+          ]
+        },
+        "areaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_area._id"
+        },
+        "areaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of areaId, copied from u_mes_mdm_area.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "parentLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mat_storageLocation._id: parent location"
+        },
+        "parentLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentLocationId, copied from u_mes_mat_storageLocation.name"
+        },
+        "zone": {
+          "bsonType": "string",
+          "description": "Zone of the storage location"
+        },
+        "rack": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Rack of the storage location"
+        },
+        "level": {
+          "bsonType": "int",
+          "description": "Level number on the scale of the parent record"
+        },
+        "bin": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Bin of the storage location"
+        },
+        "capacityQuantity": {
+          "bsonType": "int",
+          "description": "CAPAcity quantity"
+        },
+        "isQuarantine": {
+          "bsonType": "bool",
+          "description": "True when the record is quarantine"
+        },
+        "isLineSide": {
+          "bsonType": "bool",
+          "description": "True when the record is line side"
+        },
+        "mixedLotsAllowed": {
+          "bsonType": "bool",
+          "description": "True when: mixed lots allowed"
+        },
+        "erpStorageLocation": {
+          "bsonType": "string",
+          "description": "ERP storage location"
+        },
+        "barcode": {
+          "bsonType": "string",
+          "description": "Barcode of the storage location"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

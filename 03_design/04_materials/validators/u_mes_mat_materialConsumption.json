@@ -1,0 +1,279 @@
+{
+  "collMod": "u_mes_mat_materialConsumption",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mat_materialConsumption",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "operationExecutionId",
+        "operationExecutionName",
+        "productionOrderId",
+        "productionOrderName",
+        "wipUnitId",
+        "wipUnitName",
+        "parentLotId",
+        "parentLotName",
+        "componentItemId",
+        "componentItemName",
+        "componentLotId",
+        "componentLotName",
+        "componentSerialNo",
+        "quantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "workCenterId",
+        "workCenterName",
+        "fromLocationId",
+        "fromLocationName",
+        "consumptionType",
+        "scanVerified",
+        "consumedAt",
+        "consumedById",
+        "consumedBy",
+        "billOfMaterialId",
+        "billOfMaterialName",
+        "bomLineNo",
+        "erpPosted",
+        "erpMessageId",
+        "erpMessageName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CON-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "operationExecutionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_operationExecution._id"
+        },
+        "operationExecutionName": {
+          "bsonType": "string",
+          "description": "Display value of operationExecutionId, copied from u_mes_exe_operationExecution.recordNo"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_exe_productionOrder.recordNo"
+        },
+        "wipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of wipUnitId, copied from u_mes_exe_wipUnit.recordNo"
+        },
+        "parentLotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_lot._id: parent lot"
+        },
+        "parentLotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentLotId, copied from u_mes_exe_lot.recordNo"
+        },
+        "componentItemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id: component item"
+        },
+        "componentItemName": {
+          "bsonType": "string",
+          "description": "Display value of componentItemId, copied from u_mes_prd_item.description"
+        },
+        "componentLotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_lot._id: component lot"
+        },
+        "componentLotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of componentLotId, copied from u_mes_exe_lot.recordNo"
+        },
+        "componentSerialNo": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Component serial number"
+        },
+        "quantity": {
+          "bsonType": "decimal",
+          "description": "Quantity of the material consumption"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mdm_unitOfMeasure.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "fromLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mat_storageLocation._id: from location"
+        },
+        "fromLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of fromLocationId, copied from u_mes_mat_storageLocation.name"
+        },
+        "consumptionType": {
+          "bsonType": "string",
+          "description": "Consumption type",
+          "enum": [
+            "Scanned",
+            "Backflush",
+            "Manual"
+          ]
+        },
+        "scanVerified": {
+          "bsonType": "bool",
+          "description": "True when: scan verified"
+        },
+        "consumedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was consumed"
+        },
+        "consumedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'consumed'"
+        },
+        "consumedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in consumedById, copied from u_mes_mdm_user.fullName"
+        },
+        "billOfMaterialId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_billOfMaterial._id"
+        },
+        "billOfMaterialName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of billOfMaterialId, copied from u_mes_prd_billOfMaterial.recordNo"
+        },
+        "bomLineNo": {
+          "bsonType": "int",
+          "description": "BOM line number"
+        },
+        "erpPosted": {
+          "bsonType": "bool",
+          "description": "True when: ERP posted"
+        },
+        "erpMessageId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_sys_erpMessage._id"
+        },
+        "erpMessageName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of erpMessageId, copied from u_mes_sys_erpMessage.recordNo"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Posted",
+            "Reversed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

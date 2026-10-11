@@ -1,6 +1,6 @@
 # Collection inventory
 
-Model version 2.0 | 11 October 2026 | 257 collections (106 entity, 76 child, 63 relationship, 12 value-list), 5553 keys
+Model version 2.2 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
 
 Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.
 
@@ -8,16 +8,16 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 
 | Module code | Module | Collections |
 |---|---|---|
-| mdm | Master data | 42 |
-| prd | Product definition | 38 |
-| exe | Planning and execution | 31 |
-| mat | Materials | 19 |
+| mdm | Master data | 56 |
+| prd | Product definition | 45 |
+| exe | Planning and execution | 33 |
+| mat | Materials | 22 |
 | trc | Traceability | 7 |
-| qlt | Quality | 65 |
-| eqp | Equipment and performance | 13 |
-| mnt | Maintenance and tooling | 13 |
-| sys | Integration and system | 23 |
-| ehs | Energy, safety and andon | 6 |
+| qlt | Quality | 69 |
+| eqp | Equipment and performance | 15 |
+| mnt | Maintenance and tooling | 14 |
+| sys | Integration and system | 27 |
+| ehs | Energy, safety and andon | 11 |
 
 ## mdm - Master data
 
@@ -49,8 +49,8 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 24 | u_mes_mdm_shiftRoster | entity | transaction | - | Crew assignment per production day, shift and line (who is planned where) | recordNo |
 | 25 | u_mes_mdm_shiftRosterAssignment | child | transaction | u_mes_mdm_shiftRoster | One document per assignment of a shiftRoster | recordNo |
 | 26 | u_mes_mdm_role | entity | master | - | Named sets of permissions (operator, setter, quality engineer ...) | name |
-| 27 | u_mes_mdm_rolePermission | valueList | master | u_mes_mdm_role | One document per permission value of a role | recordNo |
-| 28 | u_mes_mdm_roleSignatureMeaning | valueList | master | u_mes_mdm_role | One document per signature meaning value of a role | recordNo |
+| 27 | u_mes_mdm_rolePermission | relationship | master | u_mes_mdm_role | Links one role to one permission (one document per link) | recordNo |
+| 28 | u_mes_mdm_roleSignatureMeaning | relationship | master | u_mes_mdm_role | Links one role to one signature meaning (one document per link) | recordNo |
 | 29 | u_mes_mdm_user | entity | master | - | People and system accounts; badge id, role, home work centre | fullName |
 | 30 | u_mes_mdm_userRole | relationship | master | u_mes_mdm_user | Links one user to one role (one document per link) | recordNo |
 | 31 | u_mes_mdm_skill | entity | master | - | Skill definitions required by operations (e.g. leak-test operation, CMM programming) | name |
@@ -65,6 +65,20 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 40 | u_mes_mdm_supplierCertificate | child | master | u_mes_mdm_supplier | One document per certificate of a supplier | recordNo |
 | 41 | u_mes_mdm_supplierSuppliedItem | relationship | master | u_mes_mdm_supplier | Links one supplier to one supplied item (one document per link) | recordNo |
 | 42 | u_mes_mdm_unitOfMeasure | entity | master | - | Units and conversion factors (EA, kg, N.m, bar, mm, um, kWh) | name |
+| 43 | u_mes_mdm_department | entity | master | - | Departments of the site (production, quality, maintenance ...) | name |
+| 44 | u_mes_mdm_designation | entity | master | - | Job designations of employees | name |
+| 45 | u_mes_mdm_employmentType | entity | master | - | Types of employment (permanent, contract, trainee, apprentice) | name |
+| 46 | u_mes_mdm_costCenter | entity | master | - | Cost centers charged with activities, mapped to ERP | name |
+| 47 | u_mes_mdm_manufacturer | entity | master | - | Manufacturers of equipment, gauges, devices and spare parts | name |
+| 48 | u_mes_mdm_equipmentType | entity | master | - | Types of equipment (casting machine, furnace, nutrunner, leak tester ...) | name |
+| 49 | u_mes_mdm_skillCategory | entity | master | - | Categories of skills (process, quality, maintenance, safety) | name |
+| 50 | u_mes_mdm_permission | entity | master | - | Permissions that can be granted to roles | name |
+| 51 | u_mes_mdm_signatureMeaning | entity | master | - | Meanings an electronic signature can carry (approved, reviewed, released ...) | name |
+| 52 | u_mes_mdm_currency | entity | master | - | Currencies used for costs and invoices | name |
+| 53 | u_mes_mdm_country | entity | master | - | Countries used in addresses | name |
+| 54 | u_mes_mdm_language | entity | master | - | Languages of users, instructions and documents | name |
+| 55 | u_mes_mdm_transporter | entity | master | - | Transport companies used for dispatch | name |
+| 56 | u_mes_mdm_commodity | entity | master | - | Purchasing commodities used to classify suppliers | name |
 
 ## prd - Product definition
 
@@ -98,7 +112,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 26 | u_mes_prd_workInstructionStepProductVariant | relationship | master | u_mes_prd_workInstructionStep | Links one workInstructionStep to one product variant (one document per link) | recordNo |
 | 27 | u_mes_prd_workInstructionStepTool | relationship | master | u_mes_prd_workInstructionStep | Links one workInstructionStep to one tool (one document per link) | recordNo |
 | 28 | u_mes_prd_workInstructionStepCharacteristic | relationship | master | u_mes_prd_workInstructionStep | Links one workInstructionStep to one characteristic (one document per link) | recordNo |
-| 29 | u_mes_prd_workInstructionPpeItem | valueList | master | u_mes_prd_workInstruction | One document per ppe item value of a workInstruction | recordNo |
+| 29 | u_mes_prd_workInstructionPpeItem | relationship | master | u_mes_prd_workInstruction | Links one workInstruction to one ppe item (one document per link) | recordNo |
 | 30 | u_mes_prd_workInstructionKeyPoint | valueList | master | u_mes_prd_workInstruction | One document per key point value of a workInstruction | recordNo |
 | 31 | u_mes_prd_recipe | entity | master | - | Machine parameter sets with set-points and limits (die temperature, furnace profile, CNC program, torque program, leak-test program) | name |
 | 32 | u_mes_prd_recipeParameter | child | master | u_mes_prd_recipe | One document per parameter of a recipe | name |
@@ -108,6 +122,13 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 36 | u_mes_prd_engineeringChangeAffectedObject | child | transaction | u_mes_prd_engineeringChange | One document per affected object of a engineeringChange | recordNo |
 | 37 | u_mes_prd_engineeringChangeApproval | child | transaction | u_mes_prd_engineeringChange | One document per approval of a engineeringChange | recordNo |
 | 38 | u_mes_prd_engineeringChangeControlledDocument | relationship | transaction | u_mes_prd_engineeringChange | Links one engineeringChange to one controlled document (one document per link) | recordNo |
+| 39 | u_mes_prd_itemGroup | entity | master | - | Item groups (brake caliper, piston, seal, fastener ...) | name |
+| 40 | u_mes_prd_itemFamily | entity | master | - | Product families a line is built for (front caliper, rear caliper) | name |
+| 41 | u_mes_prd_ppeItem | entity | master | - | Personal protective equipment that a work instruction can require | name |
+| 42 | u_mes_prd_market | entity | master | - | Sales markets of a product variant (domestic, export) | name |
+| 43 | u_mes_prd_padCompound | entity | master | - | Brake pad friction compounds offered as a variant option | name |
+| 44 | u_mes_prd_surfaceFinish | entity | master | - | Surface finishes offered as a variant option | name |
+| 45 | u_mes_prd_vehicleModel | entity | master | - | Customer vehicle models the parts are fitted to | name |
 
 ## exe - Planning and execution
 
@@ -144,6 +165,8 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 29 | u_mes_exe_shiftHandoverDowntimeEvent | relationship | transaction | u_mes_exe_shiftHandover | Links one shiftHandover to one downtime event (one document per link) | recordNo |
 | 30 | u_mes_exe_shiftHandoverNonconformance | relationship | transaction | u_mes_exe_shiftHandover | Links one shiftHandover to one nonconformance (one document per link) | recordNo |
 | 31 | u_mes_exe_shiftHandoverOpenItem | child | transaction | u_mes_exe_shiftHandover | One document per open item of a shiftHandover | description |
+| 32 | u_mes_exe_indirectActivity | entity | master | - | Indirect labour activities (cleaning, training, waiting for material ...) | name |
+| 33 | u_mes_exe_containerType | entity | master | - | Types of container with dimensions and tare weight | name |
 
 ## mat - Materials
 
@@ -168,6 +191,9 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 17 | u_mes_mat_shipmentLine | child | transaction | u_mes_mat_shipment | One document per line of a shipment | recordNo |
 | 18 | u_mes_mat_shipmentLineContainer | relationship | transaction | u_mes_mat_shipmentLine | Links one shipmentLine to one container (one document per link) | recordNo |
 | 19 | u_mes_mat_shipmentLineLot | relationship | transaction | u_mes_mat_shipmentLine | Links one shipmentLine to one lot (one document per link) | recordNo |
+| 20 | u_mes_mat_movementType | entity | master | - | Stock movement types with their ERP movement code and stock effect | name |
+| 21 | u_mes_mat_stockStatus | entity | master | - | Stock statuses (unrestricted, quality inspection, blocked, reserved) | name |
+| 22 | u_mes_mat_packType | entity | master | - | Pack levels used in packaging specifications (bag, tray, bin, pallet) | name |
 
 ## trc - Traceability
 
@@ -250,6 +276,10 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 63 | u_mes_qlt_customerComplaintShipment | relationship | transaction | u_mes_qlt_customerComplaint | Links one customerComplaint to one shipment (one document per link) | recordNo |
 | 64 | u_mes_qlt_customerComplaintSuspectLot | relationship | transaction | u_mes_qlt_customerComplaint | Links one customerComplaint to one suspect lot (one document per link) | recordNo |
 | 65 | u_mes_qlt_customerComplaintCommunication | child | transaction | u_mes_qlt_customerComplaint | One document per communication of a customerComplaint | recordNo |
+| 66 | u_mes_qlt_defectGroup | entity | master | - | Groups of defect codes (casting, machining, leak, torque ...) | name |
+| 67 | u_mes_qlt_gaugeType | entity | master | - | Types of gauge and measuring instrument | name |
+| 68 | u_mes_qlt_dispositionType | entity | master | - | Dispositions for nonconforming material (use as is, rework, scrap, return, sort) | name |
+| 69 | u_mes_qlt_complaintType | entity | master | - | Types of customer complaint (line rejection, zero kilometre, warranty, logistics) | name |
 
 ## eqp - Equipment and performance
 
@@ -268,6 +298,8 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 11 | u_mes_eqp_torqueResult | entity | transaction | - | Tightening results per unit: program, final torque, angle, status, curve reference | recordNo |
 | 12 | u_mes_eqp_leakTestResult | entity | transaction | - | Leak test per unit: stage pressures, decay, leak rate, limits, verdict, retest counter | recordNo |
 | 13 | u_mes_eqp_leakTestResultStage | child | transaction | u_mes_eqp_leakTestResult | One document per stage of a leakTestResult | recordNo |
+| 14 | u_mes_eqp_lossCategory | entity | master | - | OEE loss categories with the OEE factor they reduce | name |
+| 15 | u_mes_eqp_reasonCategory | entity | master | - | Categories of reason codes (mechanical, electrical, process, material ...) | name |
 
 ## mnt - Maintenance and tooling
 
@@ -286,6 +318,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 11 | u_mes_mnt_tool | entity | master | - | Dies, fixtures, cutting tools, nutrunner spindles, test seals: life limit, life used, status, location | name |
 | 12 | u_mes_mnt_toolItem | relationship | master | u_mes_mnt_tool | Links one tool to one item (one document per link) | recordNo |
 | 13 | u_mes_mnt_toolLifeRecord | entity | transaction | - | Tool mount / dismount / usage / regrind events with shots or cycles consumed | recordNo |
+| 14 | u_mes_mnt_toolType | entity | master | - | Types of tool (die, fixture, cutting tool, socket, test seal) | name |
 
 ## sys - Integration and system
 
@@ -301,7 +334,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 8 | u_mes_sys_operatorAppStep | child | master | u_mes_sys_operatorApp | One document per step of a operatorApp | name |
 | 9 | u_mes_sys_operatorAppStepTrigger | child | master | u_mes_sys_operatorAppStep | One document per trigger of a operatorAppStep | recordNo |
 | 10 | u_mes_sys_operatorAppDeviceBinding | child | master | u_mes_sys_operatorApp | One document per device binding of a operatorApp | recordNo |
-| 11 | u_mes_sys_operatorAppLanguage | valueList | master | u_mes_sys_operatorApp | One document per language value of a operatorApp | recordNo |
+| 11 | u_mes_sys_operatorAppLanguage | relationship | master | u_mes_sys_operatorApp | Links one operatorApp to one language (one document per link) | recordNo |
 | 12 | u_mes_sys_businessEvent | entity | transaction | - | Business event stream (order released, unit started, recipe downloaded, hold placed) | recordNo |
 | 13 | u_mes_sys_auditTrail | entity | transaction | - | Field-level change history of master and quality data (who, when, old, new, reason) | recordNo |
 | 14 | u_mes_sys_auditTrailChange | child | transaction | u_mes_sys_auditTrail | One document per change of a auditTrail | recordNo |
@@ -312,8 +345,12 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 19 | u_mes_sys_controlledDocumentTag | valueList | transaction | u_mes_sys_controlledDocument | One document per tag value of a controlledDocument | recordNo |
 | 20 | u_mes_sys_numberRange | entity | master | - | Counters and format masks for serials, lots, orders, labels, NCRs | name |
 | 21 | u_mes_sys_systemConfiguration | entity | master | - | Site and module settings (OEE basis, SPC rules, retention, label printer mapping) | description |
-| 22 | u_mes_sys_statusDefinition | entity | master | - | Status values and allowed transitions per collection (status mapping) | statusName |
-| 23 | u_mes_sys_statusTransition | entity | master | - | Status values and allowed transitions per collection (status mapping) | transitionName |
+| 22 | u_mes_sys_documentType | entity | master | - | Types of controlled document with retention | name |
+| 23 | u_mes_sys_deviceType | entity | master | - | Types of connected device (PLC, nutrunner controller, leak tester, printer ...) | name |
+| 24 | u_mes_sys_notificationType | entity | master | - | Types of notification sent by the system | name |
+| 25 | u_mes_sys_statusDefinition | entity | master | - | Status values and allowed transitions per collection (status mapping) | statusName |
+| 26 | u_mes_sys_enumerationValue | entity | master | - | Allowed values of fixed enumeration keys, one document per collection, key and value | valueName |
+| 27 | u_mes_sys_statusTransition | entity | master | - | Status values and allowed transitions per collection (status mapping) | transitionName |
 
 ## ehs - Energy, safety and andon
 
@@ -325,3 +362,8 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 4 | u_mes_ehs_safetyIncident | entity | transaction | - | Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions | title |
 | 5 | u_mes_ehs_safetyIncidentWitnessUser | relationship | transaction | u_mes_ehs_safetyIncident | Links one safetyIncident to one witness user (one document per link) | recordNo |
 | 6 | u_mes_ehs_safetyIncidentAction | child | transaction | u_mes_ehs_safetyIncident | One document per action of a safetyIncident | description |
+| 7 | u_mes_ehs_andonType | entity | master | - | Types of andon call with responsible department and target response time | name |
+| 8 | u_mes_ehs_incidentType | entity | master | - | Types of safety incident | name |
+| 9 | u_mes_ehs_energyType | entity | master | - | Types of energy and utility that are metered | name |
+| 10 | u_mes_ehs_bodyPart | entity | master | - | Body parts for injury records | name |
+| 11 | u_mes_ehs_injuryType | entity | master | - | Types of injury | name |

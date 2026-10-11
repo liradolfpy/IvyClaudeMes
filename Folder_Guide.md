@@ -26,7 +26,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | 02_architecture/diagrams | Mermaid ER diagrams, overall and per module | Yes | Hand |
 | 02_architecture/data_flows | Order-to-dispatch and other flows | Yes | Hand |
 | 02_architecture/storage | Time-series, archiving and volume notes | Yes | Hand |
-| 03_design/<module folder>/specs | Collection specification: field dictionary with requiredness, description, example, allowed values | Yes | Generated from the model, completed by hand |
+| 03_design/<module folder>/specs | Collection specification: field dictionary with requiredness, description, example, allowed values | Yes | Generated; corrections are made in the dictionaries in 05_generator |
 | 03_design/<module folder>/validators | JSON Schema validator per collection | Yes | Generated |
 | 03_design/<module folder>/indexes | Index definitions per collection | Yes | Generated |
 | 03_design/<module folder>/samples | One sample document per collection in MongoDB shell style | Yes | Generated |
@@ -64,7 +64,14 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | collection_inventory.md, collection_keys.md | 02_architecture |
 | <module folder>_field_list.md (10 files) | 02_architecture/field_lists |
 | status_values.md | 04_reference_data/code_lists |
-| catalogue.py, keys.py, flatten_model.py, gen_docs.py | 05_generator |
+| catalogue.py, keys.py, flatten_model.py, gen_docs.py, gen_specs.py | 05_generator |
+| keydict_text.py, keydict_num.py, entity_samples.py (dictionaries behind the specifications) | 05_generator |
+| master_refs.py (master collections and key conversions under DATA-003) | 05_generator |
+| enumeration_values.md | 04_reference_data/code_lists |
+| master_data_review.md | 08_validation/reports |
+| module_summary.md (one per module) | 03_design/<module folder> |
+| <collection name>.md / .json / .js / .js (257 each) | 03_design/<module folder>/specs, validators, indexes, samples |
+| specification_check.md | 08_validation/reports |
 | flat_model.json | 05_generator/model |
 | model_consistency_check.md | 08_validation/reports |
 | build_phase1.py, build_keys.py (nested-model builders) | 99_Archive/2026-10-11_nested_model |

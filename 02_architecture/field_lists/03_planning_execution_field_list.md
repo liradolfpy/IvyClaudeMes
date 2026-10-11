@@ -632,40 +632,41 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CNT-<recordNo>
 | 2 | recordNo | String |  |
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
-| 5 | containerType | String |  |
-| 6 | packagingSpecificationId | String | u_mes_mat_packagingSpecification._id |
-| 7 | packagingSpecificationName | String |  |
-| 8 | isReturnable | Boolean |  |
-| 9 | ownerCustomerId | String | u_mes_mdm_customer._id |
-| 10 | ownerCustomerName | String |  |
-| 11 | itemId | String | u_mes_prd_item._id |
-| 12 | itemName | String |  |
-| 13 | quantity | Int32 |  |
-| 14 | capacity | Int32 |  |
-| 15 | storageLocationId | String | u_mes_mat_storageLocation._id |
-| 16 | storageLocationName | String |  |
-| 17 | parentContainerId | String | u_mes_exe_container._id |
-| 18 | parentContainerName | String |  |
-| 19 | tareWeightKg | Decimal128 |  |
-| 20 | grossWeightKg | Decimal128 |  |
-| 21 | onHold | Boolean |  |
-| 22 | packedAt | Date |  |
-| 23 | packedById | String | u_mes_mdm_user._id |
-| 24 | packedBy | String |  |
-| 25 | labelId | String | u_mes_mat_label._id |
-| 26 | labelName | String |  |
-| 27 | shipmentId | String | u_mes_mat_shipment._id |
-| 28 | shipmentName | String |  |
-| 29 | lastCleanedAt | Date |  |
-| 30 | cycleCount | Int32 |  |
-| 31 | status | String |  |
-| 32 | schemaVersion | Int32 |  |
-| 33 | createdAt | Date |  |
-| 34 | createdById | String | u_mes_mdm_user._id |
-| 35 | createdBy | String |  |
-| 36 | updatedAt | Date |  |
-| 37 | updatedById | String | u_mes_mdm_user._id |
-| 38 | updatedBy | String |  |
+| 5 | containerTypeId | String | u_mes_exe_containerType._id |
+| 6 | containerTypeName | String |  |
+| 7 | packagingSpecificationId | String | u_mes_mat_packagingSpecification._id |
+| 8 | packagingSpecificationName | String |  |
+| 9 | isReturnable | Boolean |  |
+| 10 | ownerCustomerId | String | u_mes_mdm_customer._id |
+| 11 | ownerCustomerName | String |  |
+| 12 | itemId | String | u_mes_prd_item._id |
+| 13 | itemName | String |  |
+| 14 | quantity | Int32 |  |
+| 15 | capacity | Int32 |  |
+| 16 | storageLocationId | String | u_mes_mat_storageLocation._id |
+| 17 | storageLocationName | String |  |
+| 18 | parentContainerId | String | u_mes_exe_container._id |
+| 19 | parentContainerName | String |  |
+| 20 | tareWeightKg | Decimal128 |  |
+| 21 | grossWeightKg | Decimal128 |  |
+| 22 | onHold | Boolean |  |
+| 23 | packedAt | Date |  |
+| 24 | packedById | String | u_mes_mdm_user._id |
+| 25 | packedBy | String |  |
+| 26 | labelId | String | u_mes_mat_label._id |
+| 27 | labelName | String |  |
+| 28 | shipmentId | String | u_mes_mat_shipment._id |
+| 29 | shipmentName | String |  |
+| 30 | lastCleanedAt | Date |  |
+| 31 | cycleCount | Int32 |  |
+| 32 | status | String |  |
+| 33 | schemaVersion | Int32 |  |
+| 34 | createdAt | Date |  |
+| 35 | createdById | String | u_mes_mdm_user._id |
+| 36 | createdBy | String |  |
+| 37 | updatedAt | Date |  |
+| 38 | updatedById | String | u_mes_mdm_user._id |
+| 39 | updatedBy | String |  |
 
 ## u_mes_exe_containerLot
 
@@ -712,25 +713,26 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: LAB-<recordNo>
 | 14 | operationName | String |  |
 | 15 | workCenterId | String | u_mes_mdm_workCenter._id |
 | 16 | workCenterName | String |  |
-| 17 | indirectActivity | String |  |
-| 18 | clockOnAt | Date |  |
-| 19 | clockOffAt | Date |  |
-| 20 | durationMinutes | Int32 |  |
-| 21 | overtimeMinutes | Int32 |  |
-| 22 | quantityGood | Int32 |  |
-| 23 | approvedById | String | u_mes_mdm_user._id |
-| 24 | approvedBy | String |  |
-| 25 | approvedAt | Date |  |
-| 26 | erpConfirmationNo | String |  |
-| 27 | source | String |  |
-| 28 | status | String |  |
-| 29 | schemaVersion | Int32 |  |
-| 30 | createdAt | Date |  |
-| 31 | createdById | String | u_mes_mdm_user._id |
-| 32 | createdBy | String |  |
-| 33 | updatedAt | Date |  |
-| 34 | updatedById | String | u_mes_mdm_user._id |
-| 35 | updatedBy | String |  |
+| 17 | indirectActivityId | String | u_mes_exe_indirectActivity._id |
+| 18 | indirectActivityName | String |  |
+| 19 | clockOnAt | Date |  |
+| 20 | clockOffAt | Date |  |
+| 21 | durationMinutes | Int32 |  |
+| 22 | overtimeMinutes | Int32 |  |
+| 23 | quantityGood | Int32 |  |
+| 24 | approvedById | String | u_mes_mdm_user._id |
+| 25 | approvedBy | String |  |
+| 26 | approvedAt | Date |  |
+| 27 | erpConfirmationNo | String |  |
+| 28 | source | String |  |
+| 29 | status | String |  |
+| 30 | schemaVersion | Int32 |  |
+| 31 | createdAt | Date |  |
+| 32 | createdById | String | u_mes_mdm_user._id |
+| 33 | createdBy | String |  |
+| 34 | updatedAt | Date |  |
+| 35 | updatedById | String | u_mes_mdm_user._id |
+| 36 | updatedBy | String |  |
 
 ## u_mes_exe_changeover
 
@@ -1007,3 +1009,43 @@ Kind: child | Data class: transaction | Parent: u_mes_exe_shiftHandover | _id pa
 | 17 | updatedAt | Date |  |
 | 18 | updatedById | String | u_mes_mdm_user._id |
 | 19 | updatedBy | String |  |
+
+## u_mes_exe_indirectActivity
+
+Kind: entity | Data class: master | Parent: - | _id pattern: IND-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | isPaid | Boolean |  |
+| 8 | costCenterId | String | u_mes_mdm_costCenter._id |
+| 9 | costCenterName | String |  |
+| 10 | sequenceNo | Int32 |  |
+| 11 | status | String |  |
+| 12 | schemaVersion | Int32 |  |
+
+## u_mes_exe_containerType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: CTT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | lengthMm | Decimal128 |  |
+| 8 | widthMm | Decimal128 |  |
+| 9 | heightMm | Decimal128 |  |
+| 10 | tareWeightKg | Decimal128 |  |
+| 11 | isReturnable | Boolean |  |
+| 12 | sequenceNo | Int32 |  |
+| 13 | status | String |  |
+| 14 | schemaVersion | Int32 |  |

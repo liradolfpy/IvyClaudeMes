@@ -1,0 +1,96 @@
+{
+  "collMod": "u_mes_mnt_maintenanceWorkOrderAssignedToUser",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mnt_maintenanceWorkOrderAssignedToUser",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "maintenanceWorkOrderId",
+        "maintenanceWorkOrderName",
+        "sequenceNo",
+        "assignedToUserId",
+        "assignedToUserName",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <maintenanceWorkOrderId>-ATU<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "maintenanceWorkOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mnt_maintenanceWorkOrder._id: the parent document this one belongs to"
+        },
+        "maintenanceWorkOrderName": {
+          "bsonType": "string",
+          "description": "Display value of maintenanceWorkOrderId, copied from u_mes_mnt_maintenanceWorkOrder.title"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "assignedToUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: assigned to user"
+        },
+        "assignedToUserName": {
+          "bsonType": "string",
+          "description": "Display value of assignedToUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

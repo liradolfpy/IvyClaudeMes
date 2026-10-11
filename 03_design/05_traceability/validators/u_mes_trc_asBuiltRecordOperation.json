@@ -1,0 +1,155 @@
+{
+  "collMod": "u_mes_trc_asBuiltRecordOperation",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_trc_asBuiltRecordOperation",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "asBuiltRecordId",
+        "asBuiltRecordName",
+        "stepNo",
+        "operationId",
+        "operationName",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "operatorUserId",
+        "operatorUserName",
+        "completedAt",
+        "result",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <asBuiltRecordId>-O<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "asBuiltRecordId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_trc_asBuiltRecord._id: the parent document this one belongs to"
+        },
+        "asBuiltRecordName": {
+          "bsonType": "string",
+          "description": "Display value of asBuiltRecordId, copied from u_mes_trc_asBuiltRecord.recordNo"
+        },
+        "stepNo": {
+          "bsonType": "int",
+          "description": "Step number within the parent record"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prd_operation.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "operatorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: operator user"
+        },
+        "operatorUserName": {
+          "bsonType": "string",
+          "description": "Display value of operatorUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "result": {
+          "bsonType": "string",
+          "description": "Result of the as built record operation",
+          "enum": [
+            "OK",
+            "Not OK"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

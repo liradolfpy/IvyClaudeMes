@@ -1,0 +1,85 @@
+{
+  "collMod": "u_mes_sys_enumerationValue",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_sys_enumerationValue",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "collectionName",
+        "fieldName",
+        "valueCode",
+        "valueName",
+        "description",
+        "sequenceNo",
+        "isDefault",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ENV-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "collectionName": {
+          "bsonType": "string",
+          "description": "Collection name"
+        },
+        "fieldName": {
+          "bsonType": "string",
+          "description": "Field name"
+        },
+        "valueCode": {
+          "bsonType": "string",
+          "description": "Stable code of the enumeration value"
+        },
+        "valueName": {
+          "bsonType": "string",
+          "description": "Display text of the enumeration value"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the enumeration value"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "isDefault": {
+          "bsonType": "bool",
+          "description": "True when the record is default"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,78 @@
+{
+  "collMod": "u_mes_mdm_workCalendar",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_workCalendar",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "year",
+        "workingDaysCount",
+        "validFrom",
+        "validTo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CAL-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the work calendar; used as its display value in other collections"
+        },
+        "year": {
+          "bsonType": "int",
+          "description": "Year of the work calendar"
+        },
+        "workingDaysCount": {
+          "bsonType": "int",
+          "description": "Working days count"
+        },
+        "validFrom": {
+          "bsonType": "date",
+          "description": "Valid from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "validTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Valid to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,107 @@
+{
+  "collMod": "u_mes_mdm_department",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mdm_department",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "description",
+        "parentDepartmentId",
+        "parentDepartmentName",
+        "headUserId",
+        "headUserName",
+        "costCenterId",
+        "costCenterName",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: DEPT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the department; used as its display value in other collections"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the department"
+        },
+        "parentDepartmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_department._id: parent department"
+        },
+        "parentDepartmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentDepartmentId, copied from u_mes_mdm_department.name"
+        },
+        "headUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: head user"
+        },
+        "headUserName": {
+          "bsonType": "string",
+          "description": "Display value of headUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "costCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_costCenter._id"
+        },
+        "costCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of costCenterId, copied from u_mes_mdm_costCenter.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

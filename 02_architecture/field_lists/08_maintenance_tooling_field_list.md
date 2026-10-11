@@ -30,9 +30,10 @@ Kind: entity | Data class: master | Parent: - | _id pattern: MP-<recordNo>
 | 18 | nextDueAt | Date |  |
 | 19 | toleranceDays | Int32 |  |
 | 20 | blockEquipmentWhenOverdue | Boolean |  |
-| 21 | ownerDepartment | String |  |
-| 22 | status | String |  |
-| 23 | schemaVersion | Int32 |  |
+| 21 | ownerDepartmentId | String | u_mes_mdm_department._id |
+| 22 | ownerDepartmentName | String |  |
+| 23 | status | String |  |
+| 24 | schemaVersion | Int32 |  |
 
 ## u_mes_mnt_maintenancePlanTask
 
@@ -222,25 +223,26 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SPR-<recordNo>
 | 4 | siteName | String |  |
 | 5 | description | String |  |
 | 6 | category | String |  |
-| 7 | manufacturer | String |  |
-| 8 | manufacturerPartNo | String |  |
-| 9 | supplierId | String | u_mes_mdm_supplier._id |
-| 10 | supplierName | String |  |
-| 11 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 12 | unitOfMeasureName | String |  |
-| 13 | storageLocationId | String | u_mes_mat_storageLocation._id |
-| 14 | storageLocationName | String |  |
-| 15 | stockQuantity | Decimal128 |  |
-| 16 | minimumQuantity | Decimal128 |  |
-| 17 | reorderQuantity | Decimal128 |  |
-| 18 | leadTimeDays | Int32 |  |
-| 19 | unitCostInr | Decimal128 |  |
-| 20 | criticality | String |  |
-| 21 | lastIssuedAt | Date |  |
-| 22 | lastReceivedAt | Date |  |
-| 23 | isInsuranceSpare | Boolean |  |
-| 24 | status | String |  |
-| 25 | schemaVersion | Int32 |  |
+| 7 | manufacturerId | String | u_mes_mdm_manufacturer._id |
+| 8 | manufacturerName | String |  |
+| 9 | manufacturerPartNo | String |  |
+| 10 | supplierId | String | u_mes_mdm_supplier._id |
+| 11 | supplierName | String |  |
+| 12 | unitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 13 | unitOfMeasureName | String |  |
+| 14 | storageLocationId | String | u_mes_mat_storageLocation._id |
+| 15 | storageLocationName | String |  |
+| 16 | stockQuantity | Decimal128 |  |
+| 17 | minimumQuantity | Decimal128 |  |
+| 18 | reorderQuantity | Decimal128 |  |
+| 19 | leadTimeDays | Int32 |  |
+| 20 | unitCostInr | Decimal128 |  |
+| 21 | criticality | String |  |
+| 22 | lastIssuedAt | Date |  |
+| 23 | lastReceivedAt | Date |  |
+| 24 | isInsuranceSpare | Boolean |  |
+| 25 | status | String |  |
+| 26 | schemaVersion | Int32 |  |
 
 ## u_mes_mnt_sparePartUsedOnEquipment
 
@@ -270,33 +272,34 @@ Kind: entity | Data class: master | Parent: - | _id pattern: TL-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | name | String |  |
-| 6 | toolType | String |  |
-| 7 | toolClass | String |  |
-| 8 | equipmentId | String | u_mes_mdm_equipment._id |
-| 9 | equipmentName | String |  |
-| 10 | mountedPosition | String |  |
-| 11 | supplierId | String | u_mes_mdm_supplier._id |
-| 12 | supplierName | String |  |
-| 13 | drawingNo | String |  |
-| 14 | serialNo | String |  |
-| 15 | cavities | Int32 |  |
-| 16 | lifeUom | String |  |
-| 17 | lifeLimit | Int64 |  |
-| 18 | lifeUsed | Int64 |  |
-| 19 | lifeRemaining | Int64 |  |
-| 20 | warningThresholdPct | Decimal128 |  |
-| 21 | regrindCount | Int32 |  |
-| 22 | maxRegrinds | Int32 |  |
-| 23 | storageLocationId | String | u_mes_mat_storageLocation._id |
-| 24 | storageLocationName | String |  |
-| 25 | lastMaintainedAt | Date |  |
-| 26 | nextMaintenanceDueAt | Date |  |
-| 27 | purchasedAt | Date |  |
-| 28 | costInr | Decimal128 |  |
-| 29 | ownedByCustomerId | String | u_mes_mdm_customer._id |
-| 30 | ownedByCustomerName | String |  |
-| 31 | status | String |  |
-| 32 | schemaVersion | Int32 |  |
+| 6 | toolTypeId | String | u_mes_mnt_toolType._id |
+| 7 | toolTypeName | String |  |
+| 8 | toolClass | String |  |
+| 9 | equipmentId | String | u_mes_mdm_equipment._id |
+| 10 | equipmentName | String |  |
+| 11 | mountedPosition | String |  |
+| 12 | supplierId | String | u_mes_mdm_supplier._id |
+| 13 | supplierName | String |  |
+| 14 | drawingNo | String |  |
+| 15 | serialNo | String |  |
+| 16 | cavities | Int32 |  |
+| 17 | lifeUom | String |  |
+| 18 | lifeLimit | Int64 |  |
+| 19 | lifeUsed | Int64 |  |
+| 20 | lifeRemaining | Int64 |  |
+| 21 | warningThresholdPct | Decimal128 |  |
+| 22 | regrindCount | Int32 |  |
+| 23 | maxRegrinds | Int32 |  |
+| 24 | storageLocationId | String | u_mes_mat_storageLocation._id |
+| 25 | storageLocationName | String |  |
+| 26 | lastMaintainedAt | Date |  |
+| 27 | nextMaintenanceDueAt | Date |  |
+| 28 | purchasedAt | Date |  |
+| 29 | costInr | Decimal128 |  |
+| 30 | ownedByCustomerId | String | u_mes_mdm_customer._id |
+| 31 | ownedByCustomerName | String |  |
+| 32 | status | String |  |
+| 33 | schemaVersion | Int32 |  |
 
 ## u_mes_mnt_toolItem
 
@@ -354,3 +357,20 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: TLR-<recordNo>
 | 31 | updatedAt | Date |  |
 | 32 | updatedById | String | u_mes_mdm_user._id |
 | 33 | updatedBy | String |  |
+
+## u_mes_mnt_toolType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: TLT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | lifeUom | String |  |
+| 8 | sequenceNo | Int32 |  |
+| 9 | status | String |  |
+| 10 | schemaVersion | Int32 |  |

@@ -1,0 +1,329 @@
+{
+  "collMod": "u_mes_exe_operationExecution",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_exe_operationExecution",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionOrderId",
+        "productionOrderName",
+        "wipUnitId",
+        "wipUnitName",
+        "lotId",
+        "lotName",
+        "itemId",
+        "itemName",
+        "routingId",
+        "routingName",
+        "stepNo",
+        "operationId",
+        "operationName",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "recipeId",
+        "recipeName",
+        "shiftId",
+        "shiftName",
+        "operatorUserId",
+        "operatorUserName",
+        "executionType",
+        "attemptNo",
+        "startedAt",
+        "completedAt",
+        "cycleTimeSec",
+        "standardCycleTimeSec",
+        "quantityIn",
+        "quantityGood",
+        "quantityReject",
+        "quantityRework",
+        "result",
+        "checksSkillVerified",
+        "checksRecipeVerified",
+        "checksToolLifeOk",
+        "checksGaugeCalibrationOk",
+        "checksPreviousStepComplete",
+        "nextStepNo",
+        "remarks",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: OPX-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_exe_productionOrder.recordNo"
+        },
+        "wipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of wipUnitId, copied from u_mes_exe_wipUnit.recordNo"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_exe_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_exe_lot.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "routingId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_routing._id"
+        },
+        "routingName": {
+          "bsonType": "string",
+          "description": "Display value of routingId, copied from u_mes_prd_routing.description"
+        },
+        "stepNo": {
+          "bsonType": "int",
+          "description": "Step number within the parent record"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prd_operation.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mdm_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mdm_equipment.name"
+        },
+        "recipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_recipe._id"
+        },
+        "recipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of recipeId, copied from u_mes_prd_recipe.name"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mdm_shift.name"
+        },
+        "operatorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: operator user"
+        },
+        "operatorUserName": {
+          "bsonType": "string",
+          "description": "Display value of operatorUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "executionType": {
+          "bsonType": "string",
+          "description": "Execution type",
+          "enum": [
+            "Production",
+            "Rework",
+            "Retest",
+            "Setup"
+          ]
+        },
+        "attemptNo": {
+          "bsonType": "int",
+          "description": "1 for the first attempt, higher for retests or repeats"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was started"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "cycleTimeSec": {
+          "bsonType": "decimal",
+          "description": "Cycle time (seconds)"
+        },
+        "standardCycleTimeSec": {
+          "bsonType": "decimal",
+          "description": "Standard cycle time (seconds)"
+        },
+        "quantityIn": {
+          "bsonType": "int",
+          "description": "Quantity in"
+        },
+        "quantityGood": {
+          "bsonType": "int",
+          "description": "Quantity good"
+        },
+        "quantityReject": {
+          "bsonType": "int",
+          "description": "Quantity reject"
+        },
+        "quantityRework": {
+          "bsonType": "int",
+          "description": "Quantity rework"
+        },
+        "result": {
+          "bsonType": "string",
+          "description": "Result of the operation execution",
+          "enum": [
+            "OK",
+            "Not OK"
+          ]
+        },
+        "checksSkillVerified": {
+          "bsonType": "bool",
+          "description": "True when: checks skill verified"
+        },
+        "checksRecipeVerified": {
+          "bsonType": "bool",
+          "description": "True when: checks recipe verified"
+        },
+        "checksToolLifeOk": {
+          "bsonType": "bool",
+          "description": "True when: checks tool life ok"
+        },
+        "checksGaugeCalibrationOk": {
+          "bsonType": "bool",
+          "description": "True when: checks gauge calibration ok"
+        },
+        "checksPreviousStepComplete": {
+          "bsonType": "bool",
+          "description": "True when: checks previous step complete"
+        },
+        "nextStepNo": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Next step number"
+        },
+        "remarks": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Remarks of the operation execution"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Started",
+            "Completed",
+            "Aborted"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,27 @@
+// Sample document for u_mes_sys_numberRange (illustrative; seed data is generated separately)
+db.getCollection("u_mes_sys_numberRange").insertOne({
+  _id: "NR-SERIAL-FBC-LH",
+  recordNo: "SERIAL-FBC-LH",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  name: "Serial numbers, front caliper LH",
+  rangeType: "Serial Number",
+  itemId: "ITM-5110-10-0100",
+  itemName: "Front Brake Caliper Assembly, LH",
+  prefix: "VB",
+  formatMask: "VB{YY}{DDD}{SHIFT}{NNNNN}",
+  currentValue: NumberLong("184"),
+  minValue: NumberLong("1"),
+  maxValue: NumberLong("99999"),
+  incrementById: "USR-10231",
+  incrementBy: "Sunil Jadhav",
+  resetPolicy: "Daily",
+  lastResetAt: ISODate("2026-03-31T18:30:00.000+0000"),
+  checkDigitMethod: "None",
+  warnAtPct: NumberDecimal("90.0"),
+  lastIssuedValue: NumberLong("184"),
+  lastIssuedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  exampleValue: "VB26272A00184",
+  status: "Active",
+  schemaVersion: NumberInt(1)
+});

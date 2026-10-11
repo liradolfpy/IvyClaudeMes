@@ -1,0 +1,167 @@
+{
+  "collMod": "u_mes_prd_workInstruction",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prd_workInstruction",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "itemId",
+        "itemName",
+        "operationId",
+        "operationName",
+        "version",
+        "languageId",
+        "languageName",
+        "effectiveFrom",
+        "effectiveTo",
+        "engineeringChangeId",
+        "engineeringChangeName",
+        "safetyNotes",
+        "authorUserId",
+        "authorUserName",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "readAcknowledgementRequired",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: WI-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the work instruction; used as its display value in other collections"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prd_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prd_operation.name"
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the work instruction"
+        },
+        "languageId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_language._id"
+        },
+        "languageName": {
+          "bsonType": "string",
+          "description": "Display value of languageId, copied from u_mes_mdm_language.name"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Effective to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "engineeringChangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_engineeringChange._id"
+        },
+        "engineeringChangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of engineeringChangeId, copied from u_mes_prd_engineeringChange.title"
+        },
+        "safetyNotes": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Safety notes"
+        },
+        "authorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: author user"
+        },
+        "authorUserName": {
+          "bsonType": "string",
+          "description": "Display value of authorUserId, copied from u_mes_mdm_user.fullName"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mdm_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mdm_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "readAcknowledgementRequired": {
+          "bsonType": "bool",
+          "description": "True when: read acknowledgement required"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

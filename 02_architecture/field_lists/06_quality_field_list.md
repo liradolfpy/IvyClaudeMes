@@ -33,14 +33,15 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CHR-<recordNo>
 | 21 | measurementMethod | String |  |
 | 22 | gaugeId | String | u_mes_qlt_gauge._id |
 | 23 | gaugeName | String |  |
-| 24 | gaugeType | String |  |
-| 25 | attributeAcceptance | String |  |
-| 26 | isSpc | Boolean |  |
-| 27 | targetCpk | Decimal128 |  |
-| 28 | reactionPlan | String |  |
-| 29 | source | String |  |
-| 30 | status | String |  |
-| 31 | schemaVersion | Int32 |  |
+| 24 | gaugeTypeId | String | u_mes_qlt_gaugeType._id |
+| 25 | gaugeTypeName | String |  |
+| 26 | attributeAcceptance | String |  |
+| 27 | isSpc | Boolean |  |
+| 28 | targetCpk | Decimal128 |  |
+| 29 | reactionPlan | String |  |
+| 30 | source | String |  |
+| 31 | status | String |  |
+| 32 | schemaVersion | Int32 |  |
 
 ## u_mes_qlt_controlPlan
 
@@ -279,7 +280,7 @@ Kind: child | Data class: master | Parent: u_mes_qlt_checkSheet | _id pattern: <
 | 12 | upperLimit | Decimal128 |  |
 | 13 | unitText | String |  |
 | 14 | isCritical | Boolean |  |
-| 15 | reactionOnFail | Boolean |  |
+| 15 | reactionOnFail | String |  |
 | 16 | schemaVersion | Int32 |  |
 
 ## u_mes_qlt_checkSheetResult
@@ -608,20 +609,22 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DEF-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | name | String |  |
-| 6 | defectGroup | String |  |
-| 7 | description | String |  |
-| 8 | severity | Int32 |  |
-| 9 | defaultDisposition | String |  |
-| 10 | dispositionRoutingId | String | u_mes_prd_routing._id |
-| 11 | dispositionRoutingName | String |  |
-| 12 | isSafetyRelated | Boolean |  |
-| 13 | requiresPhoto | Boolean |  |
-| 14 | requiresHold | Boolean |  |
-| 15 | scrapCostCategory | String |  |
-| 16 | customerDefectCode | String |  |
-| 17 | pfmeaFailureMode | String |  |
-| 18 | status | String |  |
-| 19 | schemaVersion | Int32 |  |
+| 6 | defectGroupId | String | u_mes_qlt_defectGroup._id |
+| 7 | defectGroupName | String |  |
+| 8 | description | String |  |
+| 9 | severity | Int32 |  |
+| 10 | defaultDispositionTypeId | String | u_mes_qlt_dispositionType._id |
+| 11 | defaultDispositionTypeName | String |  |
+| 12 | dispositionRoutingId | String | u_mes_prd_routing._id |
+| 13 | dispositionRoutingName | String |  |
+| 14 | isSafetyRelated | Boolean |  |
+| 15 | requiresPhoto | Boolean |  |
+| 16 | requiresHold | Boolean |  |
+| 17 | scrapCostCategory | String |  |
+| 18 | customerDefectCode | String |  |
+| 19 | pfmeaFailureMode | String |  |
+| 20 | status | String |  |
+| 21 | schemaVersion | Int32 |  |
 
 ## u_mes_qlt_defectCodeApplicableOperation
 
@@ -709,17 +712,18 @@ Kind: child | Data class: transaction | Parent: u_mes_qlt_nonconformance | _id p
 | 9 | relatedEntityId | String | any collection, named in relatedCollectionName |
 | 10 | relatedEntityName | String |  |
 | 11 | quantity | Int32 |  |
-| 12 | disposition | String |  |
-| 13 | dispositionById | String | u_mes_mdm_user._id |
-| 14 | dispositionBy | String |  |
-| 15 | dispositionAt | Date |  |
-| 16 | schemaVersion | Int32 |  |
-| 17 | createdAt | Date |  |
-| 18 | createdById | String | u_mes_mdm_user._id |
-| 19 | createdBy | String |  |
-| 20 | updatedAt | Date |  |
-| 21 | updatedById | String | u_mes_mdm_user._id |
-| 22 | updatedBy | String |  |
+| 12 | dispositionTypeId | String | u_mes_qlt_dispositionType._id |
+| 13 | dispositionTypeName | String |  |
+| 14 | dispositionById | String | u_mes_mdm_user._id |
+| 15 | dispositionBy | String |  |
+| 16 | dispositionAt | Date |  |
+| 17 | schemaVersion | Int32 |  |
+| 18 | createdAt | Date |  |
+| 19 | createdById | String | u_mes_mdm_user._id |
+| 20 | createdBy | String |  |
+| 21 | updatedAt | Date |  |
+| 22 | updatedById | String | u_mes_mdm_user._id |
+| 23 | updatedBy | String |  |
 
 ## u_mes_qlt_nonconformanceContainmentAction
 
@@ -1527,36 +1531,38 @@ Kind: entity | Data class: master | Parent: - | _id pattern: GAU-<recordNo>
 | 3 | siteId | String | u_mes_mdm_site._id |
 | 4 | siteName | String |  |
 | 5 | name | String |  |
-| 6 | gaugeType | String |  |
-| 7 | manufacturer | String |  |
-| 8 | model | String |  |
-| 9 | serialNo | String |  |
-| 10 | rangeMin | Decimal128 |  |
-| 11 | rangeMax | Decimal128 |  |
-| 12 | rangeUnitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
-| 13 | rangeUnitOfMeasureName | String |  |
-| 14 | resolution | Decimal128 |  |
-| 15 | accuracy | Decimal128 |  |
-| 16 | storageLocationId | String | u_mes_mat_storageLocation._id |
-| 17 | storageLocationName | String |  |
-| 18 | workCenterId | String | u_mes_mdm_workCenter._id |
-| 19 | workCenterName | String |  |
-| 20 | ownerUserId | String | u_mes_mdm_user._id |
-| 21 | ownerUserName | String |  |
-| 22 | calibrationIntervalDays | Int32 |  |
-| 23 | calibrationSource | String |  |
-| 24 | calibrationSupplierId | String | u_mes_mdm_supplier._id |
-| 25 | calibrationSupplierName | String |  |
-| 26 | lastCalibratedAt | Date |  |
-| 27 | nextCalibrationDueAt | Date |  |
-| 28 | lastGaugeCalibrationId | String | u_mes_qlt_gaugeCalibration._id |
-| 29 | lastGaugeCalibrationName | String |  |
-| 30 | usageCount | Int32 |  |
-| 31 | purchasedAt | Date |  |
-| 32 | isMasterGauge | Boolean |  |
-| 33 | blockedForUse | Boolean |  |
-| 34 | status | String |  |
-| 35 | schemaVersion | Int32 |  |
+| 6 | gaugeTypeId | String | u_mes_qlt_gaugeType._id |
+| 7 | gaugeTypeName | String |  |
+| 8 | manufacturerId | String | u_mes_mdm_manufacturer._id |
+| 9 | manufacturerName | String |  |
+| 10 | model | String |  |
+| 11 | serialNo | String |  |
+| 12 | rangeMin | Decimal128 |  |
+| 13 | rangeMax | Decimal128 |  |
+| 14 | rangeUnitOfMeasureId | String | u_mes_mdm_unitOfMeasure._id |
+| 15 | rangeUnitOfMeasureName | String |  |
+| 16 | resolution | Decimal128 |  |
+| 17 | accuracy | Decimal128 |  |
+| 18 | storageLocationId | String | u_mes_mat_storageLocation._id |
+| 19 | storageLocationName | String |  |
+| 20 | workCenterId | String | u_mes_mdm_workCenter._id |
+| 21 | workCenterName | String |  |
+| 22 | ownerUserId | String | u_mes_mdm_user._id |
+| 23 | ownerUserName | String |  |
+| 24 | calibrationIntervalDays | Int32 |  |
+| 25 | calibrationSource | String |  |
+| 26 | calibrationSupplierId | String | u_mes_mdm_supplier._id |
+| 27 | calibrationSupplierName | String |  |
+| 28 | lastCalibratedAt | Date |  |
+| 29 | nextCalibrationDueAt | Date |  |
+| 30 | lastGaugeCalibrationId | String | u_mes_qlt_gaugeCalibration._id |
+| 31 | lastGaugeCalibrationName | String |  |
+| 32 | usageCount | Int32 |  |
+| 33 | purchasedAt | Date |  |
+| 34 | isMasterGauge | Boolean |  |
+| 35 | blockedForUse | Boolean |  |
+| 36 | status | String |  |
+| 37 | schemaVersion | Int32 |  |
 
 ## u_mes_qlt_gaugeCalibration
 
@@ -1834,40 +1840,42 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CMP-<recordNo>
 | 5 | customerId | String | u_mes_mdm_customer._id |
 | 6 | customerName | String |  |
 | 7 | customerRefNo | String |  |
-| 8 | complaintType | String |  |
-| 9 | itemId | String | u_mes_prd_item._id |
-| 10 | itemName | String |  |
-| 11 | description | String |  |
-| 12 | defectDescription | String |  |
-| 13 | reportedAt | Date |  |
-| 14 | receivedById | String | u_mes_mdm_user._id |
-| 15 | receivedBy | String |  |
-| 16 | occurredAt | Date |  |
-| 17 | customerLocation | String |  |
-| 18 | quantityComplained | Int32 |  |
-| 19 | quantityConfirmed | Int32 |  |
-| 20 | vehicleModel | String |  |
-| 21 | mileageKm | Decimal128 |  |
-| 22 | severity | Int32 |  |
-| 23 | isSafetyRelated | Boolean |  |
-| 24 | containmentDueAt | Date |  |
-| 25 | containmentSentAt | Date |  |
-| 26 | nonconformanceId | String | u_mes_qlt_nonconformance._id |
-| 27 | nonconformanceName | String |  |
-| 28 | capaId | String | u_mes_qlt_capa._id |
-| 29 | capaName | String |  |
-| 30 | debitNoteInr | Decimal128 |  |
-| 31 | ppmImpact | Int32 |  |
-| 32 | sortingCostInr | Decimal128 |  |
-| 33 | customerClosedAt | Date |  |
-| 34 | status | String |  |
-| 35 | schemaVersion | Int32 |  |
-| 36 | createdAt | Date |  |
-| 37 | createdById | String | u_mes_mdm_user._id |
-| 38 | createdBy | String |  |
-| 39 | updatedAt | Date |  |
-| 40 | updatedById | String | u_mes_mdm_user._id |
-| 41 | updatedBy | String |  |
+| 8 | complaintTypeId | String | u_mes_qlt_complaintType._id |
+| 9 | complaintTypeName | String |  |
+| 10 | itemId | String | u_mes_prd_item._id |
+| 11 | itemName | String |  |
+| 12 | description | String |  |
+| 13 | defectDescription | String |  |
+| 14 | reportedAt | Date |  |
+| 15 | receivedById | String | u_mes_mdm_user._id |
+| 16 | receivedBy | String |  |
+| 17 | occurredAt | Date |  |
+| 18 | customerLocation | String |  |
+| 19 | quantityComplained | Int32 |  |
+| 20 | quantityConfirmed | Int32 |  |
+| 21 | vehicleModelId | String | u_mes_prd_vehicleModel._id |
+| 22 | vehicleModelName | String |  |
+| 23 | mileageKm | Decimal128 |  |
+| 24 | severity | Int32 |  |
+| 25 | isSafetyRelated | Boolean |  |
+| 26 | containmentDueAt | Date |  |
+| 27 | containmentSentAt | Date |  |
+| 28 | nonconformanceId | String | u_mes_qlt_nonconformance._id |
+| 29 | nonconformanceName | String |  |
+| 30 | capaId | String | u_mes_qlt_capa._id |
+| 31 | capaName | String |  |
+| 32 | debitNoteInr | Decimal128 |  |
+| 33 | ppmImpact | Int32 |  |
+| 34 | sortingCostInr | Decimal128 |  |
+| 35 | customerClosedAt | Date |  |
+| 36 | status | String |  |
+| 37 | schemaVersion | Int32 |  |
+| 38 | createdAt | Date |  |
+| 39 | createdById | String | u_mes_mdm_user._id |
+| 40 | createdBy | String |  |
+| 41 | updatedAt | Date |  |
+| 42 | updatedById | String | u_mes_mdm_user._id |
+| 43 | updatedBy | String |  |
 
 ## u_mes_qlt_customerComplaintSerialNumber
 
@@ -1963,3 +1971,70 @@ Kind: child | Data class: transaction | Parent: u_mes_qlt_customerComplaint | _i
 | 17 | updatedAt | Date |  |
 | 18 | updatedById | String | u_mes_mdm_user._id |
 | 19 | updatedBy | String |  |
+
+## u_mes_qlt_defectGroup
+
+Kind: entity | Data class: master | Parent: - | _id pattern: DGR-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_qlt_gaugeType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: GTY-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |
+
+## u_mes_qlt_dispositionType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: DSP-T-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | requiresRework | Boolean |  |
+| 8 | requiresScrap | Boolean |  |
+| 9 | requiresCustomerApproval | Boolean |  |
+| 10 | sequenceNo | Int32 |  |
+| 11 | status | String |  |
+| 12 | schemaVersion | Int32 |  |
+
+## u_mes_qlt_complaintType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: CPT-<recordNo>
+
+| # | Key | BSON type | References |
+|---|---|---|---|
+| 1 | _id | String |  |
+| 2 | recordNo | String |  |
+| 3 | siteId | String | u_mes_mdm_site._id |
+| 4 | siteName | String |  |
+| 5 | name | String |  |
+| 6 | description | String |  |
+| 7 | sequenceNo | Int32 |  |
+| 8 | status | String |  |
+| 9 | schemaVersion | Int32 |  |

@@ -1,0 +1,137 @@
+{
+  "collMod": "u_mes_exe_productionScheduleSlot",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_exe_productionScheduleSlot",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionScheduleId",
+        "productionScheduleName",
+        "sequenceNo",
+        "productionOrderId",
+        "productionOrderName",
+        "itemId",
+        "itemName",
+        "plannedQuantity",
+        "plannedStartAt",
+        "plannedEndAt",
+        "changeoverMinutes",
+        "actualQuantity",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <productionScheduleId>-S<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mdm_site.name"
+        },
+        "productionScheduleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_productionSchedule._id: the parent document this one belongs to"
+        },
+        "productionScheduleName": {
+          "bsonType": "string",
+          "description": "Display value of productionScheduleId, copied from u_mes_exe_productionSchedule.recordNo"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_exe_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_exe_productionOrder.recordNo"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prd_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prd_item.description"
+        },
+        "plannedQuantity": {
+          "bsonType": "int",
+          "description": "Planned quantity"
+        },
+        "plannedStartAt": {
+          "bsonType": "date",
+          "description": "Planned start date and time"
+        },
+        "plannedEndAt": {
+          "bsonType": "date",
+          "description": "Planned end date and time"
+        },
+        "changeoverMinutes": {
+          "bsonType": "int",
+          "description": "Changeover (minutes)"
+        },
+        "actualQuantity": {
+          "bsonType": "int",
+          "description": "Actual quantity"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mdm_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mdm_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mdm_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -3,11 +3,13 @@ Output: model/flat_model.json. Rules are documented in 00_governance/data_modeli
 import re, json, collections, os
 from catalogue import C
 from keys import K
+from master_refs import NEWK,NEWENT,CONV,NEWC
+K=dict(K); K.update(NEWK)
 
 APP="u_mes"
 MOD={"1":"mdm","2":"prd","3":"exe","4":"mat","5":"trc","6":"qlt","7":"eqp","8":"mnt","9":"sys","10":"ehs"}
 MODNAME={"mdm":"Master data","prd":"Product definition","exe":"Planning and execution","mat":"Materials","trc":"Traceability","qlt":"Quality","eqp":"Equipment and performance","mnt":"Maintenance and tooling","sys":"Integration and system","ehs":"Energy, safety and andon"}
-ENT={"enterprises":"enterprise","work_centres":"workCenter","equipment":"equipment","calendars":"workCalendar","units_of_measure":"unitOfMeasure","certifications":"skillCertification","variants":"productVariant","boms":"billOfMaterial","bills_of_process":"billOfProcess","process_data":"processReading","event_logs":"businessEvent","documents":"controlledDocument","pfmeas":"pfmea","capas":"capa","alarms":"alarm","audits":"audit","labels":"label","kits":"kit","lots":"lot","audit_trails":"auditTrail","inventory_balances":"inventoryBalance","as_built_records":"asBuiltRecord","spc_charts":"spcChart","spc_samples":"spcSample","msa_studies":"msaStudy","erp_messages":"erpMessage","iot_devices":"iotDevice","oee_records":"oeeRecord","wip_units":"wipUnit"}
+ENT={**NEWENT,"enterprises":"enterprise","work_centres":"workCenter","equipment":"equipment","calendars":"workCalendar","units_of_measure":"unitOfMeasure","certifications":"skillCertification","variants":"productVariant","boms":"billOfMaterial","bills_of_process":"billOfProcess","process_data":"processReading","event_logs":"businessEvent","documents":"controlledDocument","pfmeas":"pfmea","capas":"capa","alarms":"alarm","audits":"audit","labels":"label","kits":"kit","lots":"lot","audit_trails":"auditTrail","inventory_balances":"inventoryBalance","as_built_records":"asBuiltRecord","spc_charts":"spcChart","spc_samples":"spcSample","msa_studies":"msaStudy","erp_messages":"erpMessage","iot_devices":"iotDevice","oee_records":"oeeRecord","wip_units":"wipUnit"}
 def camel(n):
     p=n.split("_"); return p[0]+"".join(x.title() for x in p[1:])
 def sing(w):
@@ -16,7 +18,7 @@ def sing(w):
     if w.endswith("s") and not w.endswith("ss") and not w.endswith("us"): return w[:-1]
     return w
 def ent(n): return ENT.get(n) or sing(camel(n))
-MASTER=set("""enterprises sites areas lines work_centres equipment shifts calendars roles users skills customers suppliers units_of_measure
+MASTER=set(" ".join(c[0] for c in NEWC).split())|set("""enterprises sites areas lines work_centres equipment shifts calendars roles users skills customers suppliers units_of_measure
 items variants boms operations routings bills_of_process work_instructions recipes storage_locations packaging_specifications label_templates
 characteristics control_plans inspection_plans sampling_plans check_sheets spc_charts defect_codes pfmeas gauges reason_codes process_tags
 maintenance_plans spare_parts tools integration_connectors iot_devices operator_apps number_ranges system_configurations""".split())
@@ -51,7 +53,7 @@ LOCAL={"process_data":[("value, valueText","tagValue, tagValueText")],"event_log
 "system_configurations":[("valueString","configValueText"),("valueNumber","configValueNumber"),("valueBoolean","configValueFlag"),("valueObject","configValueJson")],
 "step_completions":[("valueText","enteredText"),("valueNumber","enteredNumber"),("valueBoolean","enteredFlag")],"msa_studies":[("trials[].value","trials[].measuredValue")],
 "capas":[("d1Team[]","teamMembers[]"),("d3Containment[]","containmentActions[]"),("d5CorrectiveActions[]","correctiveActions[]"),("d6Implementation[]","implementationActions[]")],
-"sampling_plans":[("table[]","sizeRows[]")],"maintenance_work_orders":[("sparesUsed[]","usedSpareParts[]")],"work_instructions":[("ppeRequired[]","ppeItems[]"),("steps[].text","steps[].instructionText")],
+"sampling_plans":[("table[]","sizeRows[]")],"maintenance_work_orders":[("sparesUsed[]","usedSpareParts[]")],"work_instructions":[("steps[].text","steps[].instructionText")],
 "reason_codes":[(" path[],","")],"downtime_events":[("reasonPath[]","reasonPathText"),("comments[].at","comments[].commentedAt"),("comments[].text","comments[].commentText")],
 "customer_complaints":[("communications[].at","communications[].communicatedAt")],"spc_samples":[(" mean, range,"," subgroupMean, subgroupRange,")],"calendars":[("exceptions[].date","exceptions[].exceptionDate")],
 "label_templates":[("fields[].x, fields[].y","fields[].positionXMm, fields[].positionYMm")],"wip_units":[(" unitStatus,","")],"containers":[(" containerStatus,","")],"tools":[(" toolStatus,","")],
@@ -79,7 +81,7 @@ def target(stem):
         if s.endswith(t) and (best is None or len(t)>len(best[0])): best=(t,v)
     return best[1] if best else None
 INTNO=set("stepNo lineNo sequenceNo attemptNo subgroupNo sampleNo tighteningNo taskNo actionNo itemNo findingNo elementNo levelNo stageNo trialNo regrindNo revisionNo releaseNo planLineNo bomLineNo currentStepNo entryStepNo nextStepNo returnStepNo reworkReturnStepNo reworkAttemptNo completedStep partNo".split())
-INT=set("actualOutput plannedOutput outputActual outputPlanned outputRework outputScrap cumulativeGood cumulativeShipped cumulativeTarget cumulativeRequired retryPolicyMaxAttempts sequenceHint yearOfManufacture labourMinutes lossMinutes lossUnits version bomVersion bopVersion routingVersion scheduleVersion workInstructionVersion checkSheetVersion calculationVersion documentVersionBefore documentVersionAfter maxQueueTimeMin setupTimeMin standardSetupTimeMin escalationLevel level layer rank year minimumLevelRequired cavities copies attempts maxAttempts capacity headcount plannedHeadcount actualHeadcount manning manningStandard standardManning partsCount trialsCount subgroupSize decimalPlaces fiscalYearStartMonth severity occurrence detection rpn revisedSeverity revisedOccurrence revisedDetection maxRegrinds layersPerContainer unitsPerLayer containersPerPallet totalContainers basedOnSubgroups incrementBy port vlan acceptNumber rejectNumber sampleSize lotSizeFrom lotSizeTo unitsLost unitsProduced units modelYear submissionLevel ppapLevelDefault ppmTarget ppmLast12Months ppmImpact capacityPerShift targetPerHour frequencyEveryNUnits skipLotConsecutiveAcceptedToSkip utcOffsetMinutes transitDays cavityNo bodyCavityNo questionsCount".split())
+INT=set("gradeLevel sixBigLossNo targetResponseSec actualOutput plannedOutput outputActual outputPlanned outputRework outputScrap cumulativeGood cumulativeShipped cumulativeTarget cumulativeRequired retryPolicyMaxAttempts sequenceHint yearOfManufacture labourMinutes lossMinutes lossUnits version bomVersion bopVersion routingVersion scheduleVersion workInstructionVersion checkSheetVersion calculationVersion documentVersionBefore documentVersionAfter maxQueueTimeMin setupTimeMin standardSetupTimeMin escalationLevel level layer rank year minimumLevelRequired cavities copies attempts maxAttempts capacity headcount plannedHeadcount actualHeadcount manning manningStandard standardManning partsCount trialsCount subgroupSize decimalPlaces fiscalYearStartMonth severity occurrence detection rpn revisedSeverity revisedOccurrence revisedDetection maxRegrinds layersPerContainer unitsPerLayer containersPerPallet totalContainers basedOnSubgroups incrementBy port vlan acceptNumber rejectNumber sampleSize lotSizeFrom lotSizeTo unitsLost unitsProduced units modelYear submissionLevel ppapLevelDefault ppmTarget ppmLast12Months ppmImpact capacityPerShift targetPerHour frequencyEveryNUnits skipLotConsecutiveAcceptedToSkip utcOffsetMinutes transitDays cavityNo bodyCavityNo questionsCount".split())
 LONG=set("lifetimeCycles currentValue minValue maxValue lastIssuedValue sizeBytes lifeLimit lifeUsed lifeRemaining lifeUsedBefore lifeUsedAfter cyclesThisEvent".split())
 DBL=set("geoLatitude geoLongitude tagValue powerFactor".split())
 DEC=set("resultsGrrPctStudyVariation resultsGrrPctTolerance temperatureC nominal lowerSpecLimit upperSpecLimit lowerLimit upperLimit measuredValue deviation subgroupMean subgroupRange stdDev ucl lcl centerLine uclRange centerLineRange lclRange setPoint capabilityCp capabilityCpk capabilityPp capabilityPpk targetCpk aql factorToBase offsetToBase resolution accuracy uncertainty consumption triggerValue limitValue deadband lowLimit highLimit lowLowLimit highHighLimit engineeringMin engineeringMax rangeMin rangeMax asFound asLeft tolerance resultsEquipmentVariation resultsAppraiserVariation resultsGrr resultsPartVariation resultsTotalVariation resultsNdc resultsBiasValue resultsKappa requestedValue specifiedValue expectedValue ratedCapacity oeeTarget assessmentScore trainingHours meterReadingStart meterReadingEnd specificConsumption skipLotSkipFraction enteredNumber answerNumber configValueNumber lifetimeRunHours intervalValue reading leakTestLeakRate frequencyValue shiftAllowancePerDay".split())
@@ -87,7 +89,7 @@ BOOL=set("blockedForUse reportableToAuthority withinTolerance safetyCharacterist
 DATEK=set("currentStateSince queueSince dateOfJoining timestamp validFrom validTo effectiveFrom effectiveTo horizonFrom horizonTo interimApprovalValidTo".split())
 MATQ={"inventory_balances","material_movements","material_consumptions","boms","kits","goods_receipts","lots","spare_parts","genealogy_links","component_lot_links","material_requests","bills_of_process","maintenance_plans","maintenance_work_orders"}
 def btype(k,src):
-    if k=="_id" or k.endswith("Id"): return "String"
+    if k=="_id" or k.endswith("Id") or k=="reactionOnFail": return "String"
     if k.endswith("At") or k.endswith("Date") or k in DATEK: return "Date"
     if k in DBL: return "Double"
     if k in LONG: return "Int64"
@@ -177,8 +179,13 @@ def build_rel(src,child,stem,parents,mod,master,parentc):
     std(child,parents,mod,master,parentc,[(stem+"Id","String",t),(stem+"Name","String",None)],"relationship",src)
 def build_val(src,child,key,parents,mod,master,parentc):
     std(child,parents,mod,master,parentc,[(key,btype(key,src),None)],"valueList",src)
+CONVLOG=[]
 for c in C:
-    s=K[c[0]]
+    toks=[k.strip() for k in K[c[0]].split(",") if k.strip()]
+    for col,old,new,ent_ in CONV:
+        if col==c[0]:
+            assert old in toks,(col,old); toks[toks.index(old)]=new; CONVLOG.append((col,old,new,ent_))
+    s=", ".join(toks)
     for a,b in LOCAL.get(c[0],[]):
         assert a in s,(c[0],a); s=s.replace(a,b)
     for a,b in GLOBAL: s=s.replace(a,b)
@@ -192,8 +199,9 @@ for col in COLS.values():
 def sysc(entity,fields,src):
     cname="%s_sys_%s"%(APP,entity)
     f=[("_id","String",None),("recordNo","String",None),("siteId","String","site"),("siteName","String",None)]+fields+[("status","String",None),("schemaVersion","Int32",None)]
-    COLS[cname]=dict(collection=cname,module="sys",moduleName=MODNAME["sys"],entity=entity,sourceConcept=src,kind="entity",dataClass="master",parent=None,displayField="statusName" if entity=="statusDefinition" else "transitionName",statusValues=A,fields=[dict(key=a,type=b,ref=c) for a,b,c in f])
+    COLS[cname]=dict(collection=cname,module="sys",moduleName=MODNAME["sys"],entity=entity,sourceConcept=src,kind="entity",dataClass="master",parent=None,displayField={"statusDefinition":"statusName","enumerationValue":"valueName"}.get(entity,"transitionName"),statusValues=A,fields=[dict(key=a,type=b,ref=c) for a,b,c in f])
 sysc("statusDefinition",[("collectionName","String",None),("fieldName","String",None),("statusCode","String",None),("statusName","String",None),("description","String",None),("sequenceNo","Int32",None),("isInitial","Boolean",None),("isFinal","Boolean",None),("colourCode","String",None)],"(new) status mapping")
+sysc("enumerationValue",[("collectionName","String",None),("fieldName","String",None),("valueCode","String",None),("valueName","String",None),("description","String",None),("sequenceNo","Int32",None),("isDefault","Boolean",None)],"(new) fixed enumeration mapping")
 sysc("statusTransition",[("collectionName","String",None),("fromStatusDefinitionId","String","statusDefinition"),("fromStatusDefinitionName","String",None),("toStatusDefinitionId","String","statusDefinition"),("toStatusDefinitionName","String",None),("transitionName","String",None),("requiresSignature","Boolean",None),("requiresReason","Boolean",None),("sequenceNo","Int32",None)],"(new) status mapping")
 # ---- checks
 ents={c["entity"] for c in COLS.values()}
@@ -209,7 +217,7 @@ for c in COLS.values():
         if k.endswith("Ids") or "[" in k or "." in k: PROBLEMS.append((c["collection"],"NESTED",k))
     if not re.fullmatch(r"u_mes_[a-z]{3}_[a-z][A-Za-z0-9]*",c["collection"]): PROBLEMS.append((c["collection"],"COLLNAME"))
 os.makedirs("model",exist_ok=True)
-json.dump(dict(application=APP,modules=MODNAME,collections=list(COLS.values())),open("model/flat_model.json","w"),indent=1)
+json.dump(dict(application=APP,modules=MODNAME,conversions=[dict(concept=a,oldKey=b,newKey=d,master=e) for a,b,d,e in CONVLOG],collections=list(COLS.values())),open("model/flat_model.json","w"),indent=1)
 kinds=collections.Counter(c["kind"] for c in COLS.values())
 print("collections",len(COLS),dict(kinds),"fields",sum(len(c["fields"]) for c in COLS.values()))
 print("problems",len(PROBLEMS)); [print(p) for p in PROBLEMS[:60]]

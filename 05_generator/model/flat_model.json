@@ -12,6 +12,416 @@
   "sys": "Integration and system",
   "ehs": "Energy, safety and andon"
  },
+ "conversions": [
+  {
+   "concept": "enterprises",
+   "oldKey": "contacts[].designation",
+   "newKey": "contacts[].jobTitle",
+   "master": null
+  },
+  {
+   "concept": "enterprises",
+   "oldKey": "baseCurrency",
+   "newKey": "baseCurrencyId",
+   "master": "currency"
+  },
+  {
+   "concept": "enterprises",
+   "oldKey": "registeredAddress.country",
+   "newKey": "registeredAddress.countryId",
+   "master": "country"
+  },
+  {
+   "concept": "sites",
+   "oldKey": "address.country",
+   "newKey": "address.countryId",
+   "master": "country"
+  },
+  {
+   "concept": "sites",
+   "oldKey": "currency",
+   "newKey": "currencyId",
+   "master": "currency"
+  },
+  {
+   "concept": "sites",
+   "oldKey": "language",
+   "newKey": "languageId",
+   "master": "language"
+  },
+  {
+   "concept": "areas",
+   "oldKey": "costCentre",
+   "newKey": "costCenterId",
+   "master": "costCenter"
+  },
+  {
+   "concept": "lines",
+   "oldKey": "costCentre",
+   "newKey": "costCenterId",
+   "master": "costCenter"
+  },
+  {
+   "concept": "lines",
+   "oldKey": "itemFamily",
+   "newKey": "itemFamilyId",
+   "master": "itemFamily"
+  },
+  {
+   "concept": "work_centres",
+   "oldKey": "costCentre",
+   "newKey": "costCenterId",
+   "master": "costCenter"
+  },
+  {
+   "concept": "equipment",
+   "oldKey": "equipmentType",
+   "newKey": "equipmentTypeId",
+   "master": "equipmentType"
+  },
+  {
+   "concept": "equipment",
+   "oldKey": "manufacturer",
+   "newKey": "manufacturerId",
+   "master": "manufacturer"
+  },
+  {
+   "concept": "roles",
+   "oldKey": "permissions[]",
+   "newKey": "permissionIds[]",
+   "master": "permission"
+  },
+  {
+   "concept": "roles",
+   "oldKey": "signatureMeanings[]",
+   "newKey": "signatureMeaningIds[]",
+   "master": "signatureMeaning"
+  },
+  {
+   "concept": "users",
+   "oldKey": "department",
+   "newKey": "departmentId",
+   "master": "department"
+  },
+  {
+   "concept": "users",
+   "oldKey": "designation",
+   "newKey": "designationId",
+   "master": "designation"
+  },
+  {
+   "concept": "users",
+   "oldKey": "employmentType",
+   "newKey": "employmentTypeId",
+   "master": "employmentType"
+  },
+  {
+   "concept": "users",
+   "oldKey": "language",
+   "newKey": "languageId",
+   "master": "language"
+  },
+  {
+   "concept": "skills",
+   "oldKey": "skillCategory",
+   "newKey": "skillCategoryId",
+   "master": "skillCategory"
+  },
+  {
+   "concept": "customers",
+   "oldKey": "billingAddress.country",
+   "newKey": "billingAddress.countryId",
+   "master": "country"
+  },
+  {
+   "concept": "customers",
+   "oldKey": "currency",
+   "newKey": "currencyId",
+   "master": "currency"
+  },
+  {
+   "concept": "suppliers",
+   "oldKey": "address.country",
+   "newKey": "address.countryId",
+   "master": "country"
+  },
+  {
+   "concept": "suppliers",
+   "oldKey": "currency",
+   "newKey": "currencyId",
+   "master": "currency"
+  },
+  {
+   "concept": "suppliers",
+   "oldKey": "commodity",
+   "newKey": "commodityId",
+   "master": "commodity"
+  },
+  {
+   "concept": "items",
+   "oldKey": "itemGroup",
+   "newKey": "itemGroupId",
+   "master": "itemGroup"
+  },
+  {
+   "concept": "variants",
+   "oldKey": "options.padCompound",
+   "newKey": "options.padCompoundId",
+   "master": "padCompound"
+  },
+  {
+   "concept": "variants",
+   "oldKey": "options.market",
+   "newKey": "options.marketId",
+   "master": "market"
+  },
+  {
+   "concept": "variants",
+   "oldKey": "options.surfaceFinish",
+   "newKey": "options.surfaceFinishId",
+   "master": "surfaceFinish"
+  },
+  {
+   "concept": "variants",
+   "oldKey": "modelCode",
+   "newKey": "vehicleModelId",
+   "master": "vehicleModel"
+  },
+  {
+   "concept": "work_instructions",
+   "oldKey": "language",
+   "newKey": "languageId",
+   "master": "language"
+  },
+  {
+   "concept": "work_instructions",
+   "oldKey": "ppeRequired[]",
+   "newKey": "ppeItemIds[]",
+   "master": "ppeItem"
+  },
+  {
+   "concept": "engineering_changes",
+   "oldKey": "stockDisposition",
+   "newKey": "stockDispositionTypeId",
+   "master": "dispositionType"
+  },
+  {
+   "concept": "containers",
+   "oldKey": "containerType",
+   "newKey": "containerTypeId",
+   "master": "containerType"
+  },
+  {
+   "concept": "labour_bookings",
+   "oldKey": "indirectActivity",
+   "newKey": "indirectActivityId",
+   "master": "indirectActivity"
+  },
+  {
+   "concept": "inventory_balances",
+   "oldKey": "stockStatus",
+   "newKey": "stockStatusId",
+   "master": "stockStatus"
+  },
+  {
+   "concept": "material_movements",
+   "oldKey": "movementType",
+   "newKey": "movementTypeId",
+   "master": "movementType"
+  },
+  {
+   "concept": "material_movements",
+   "oldKey": "fromStockStatus",
+   "newKey": "fromStockStatusId",
+   "master": "stockStatus"
+  },
+  {
+   "concept": "material_movements",
+   "oldKey": "toStockStatus",
+   "newKey": "toStockStatusId",
+   "master": "stockStatus"
+  },
+  {
+   "concept": "packaging_specifications",
+   "oldKey": "containerType",
+   "newKey": "containerTypeId",
+   "master": "containerType"
+  },
+  {
+   "concept": "packaging_specifications",
+   "oldKey": "levels[].packType",
+   "newKey": "levels[].packTypeId",
+   "master": "packType"
+  },
+  {
+   "concept": "shipments",
+   "oldKey": "transporter",
+   "newKey": "transporterId",
+   "master": "transporter"
+  },
+  {
+   "concept": "characteristics",
+   "oldKey": "gaugeType",
+   "newKey": "gaugeTypeId",
+   "master": "gaugeType"
+  },
+  {
+   "concept": "defect_codes",
+   "oldKey": "defectGroup",
+   "newKey": "defectGroupId",
+   "master": "defectGroup"
+  },
+  {
+   "concept": "defect_codes",
+   "oldKey": "defaultDisposition",
+   "newKey": "defaultDispositionTypeId",
+   "master": "dispositionType"
+  },
+  {
+   "concept": "nonconformances",
+   "oldKey": "affectedObjects[].disposition",
+   "newKey": "affectedObjects[].dispositionTypeId",
+   "master": "dispositionType"
+  },
+  {
+   "concept": "gauges",
+   "oldKey": "gaugeType",
+   "newKey": "gaugeTypeId",
+   "master": "gaugeType"
+  },
+  {
+   "concept": "gauges",
+   "oldKey": "manufacturer",
+   "newKey": "manufacturerId",
+   "master": "manufacturer"
+  },
+  {
+   "concept": "customer_complaints",
+   "oldKey": "complaintType",
+   "newKey": "complaintTypeId",
+   "master": "complaintType"
+  },
+  {
+   "concept": "customer_complaints",
+   "oldKey": "vehicleModel",
+   "newKey": "vehicleModelId",
+   "master": "vehicleModel"
+  },
+  {
+   "concept": "reason_codes",
+   "oldKey": "category",
+   "newKey": "reasonCategoryId",
+   "master": "reasonCategory"
+  },
+  {
+   "concept": "reason_codes",
+   "oldKey": "lossCategory",
+   "newKey": "lossCategoryId",
+   "master": "lossCategory"
+  },
+  {
+   "concept": "reason_codes",
+   "oldKey": "responsibleDepartment",
+   "newKey": "responsibleDepartmentId",
+   "master": "department"
+  },
+  {
+   "concept": "oee_records",
+   "oldKey": "losses[].lossCategory",
+   "newKey": "losses[].lossCategoryId",
+   "master": "lossCategory"
+  },
+  {
+   "concept": "maintenance_plans",
+   "oldKey": "ownerDepartment",
+   "newKey": "ownerDepartmentId",
+   "master": "department"
+  },
+  {
+   "concept": "spare_parts",
+   "oldKey": "manufacturer",
+   "newKey": "manufacturerId",
+   "master": "manufacturer"
+  },
+  {
+   "concept": "tools",
+   "oldKey": "toolType",
+   "newKey": "toolTypeId",
+   "master": "toolType"
+  },
+  {
+   "concept": "iot_devices",
+   "oldKey": "deviceType",
+   "newKey": "deviceTypeId",
+   "master": "deviceType"
+  },
+  {
+   "concept": "iot_devices",
+   "oldKey": "manufacturer",
+   "newKey": "manufacturerId",
+   "master": "manufacturer"
+  },
+  {
+   "concept": "operator_apps",
+   "oldKey": "languages[]",
+   "newKey": "languageIds[]",
+   "master": "language"
+  },
+  {
+   "concept": "electronic_signatures",
+   "oldKey": "meaning",
+   "newKey": "signatureMeaningId",
+   "master": "signatureMeaning"
+  },
+  {
+   "concept": "notifications",
+   "oldKey": "notificationType",
+   "newKey": "notificationTypeId",
+   "master": "notificationType"
+  },
+  {
+   "concept": "documents",
+   "oldKey": "documentType",
+   "newKey": "documentTypeId",
+   "master": "documentType"
+  },
+  {
+   "concept": "documents",
+   "oldKey": "language",
+   "newKey": "languageId",
+   "master": "language"
+  },
+  {
+   "concept": "energy_readings",
+   "oldKey": "energyType",
+   "newKey": "energyTypeId",
+   "master": "energyType"
+  },
+  {
+   "concept": "andon_events",
+   "oldKey": "andonType",
+   "newKey": "andonTypeId",
+   "master": "andonType"
+  },
+  {
+   "concept": "safety_incidents",
+   "oldKey": "incidentType",
+   "newKey": "incidentTypeId",
+   "master": "incidentType"
+  },
+  {
+   "concept": "safety_incidents",
+   "oldKey": "bodyPart",
+   "newKey": "bodyPartId",
+   "master": "bodyPart"
+  },
+  {
+   "concept": "safety_incidents",
+   "oldKey": "injuryType",
+   "newKey": "injuryTypeId",
+   "master": "injuryType"
+  }
+ ],
  "collections": [
   {
    "collection": "u_mes_mdm_enterprise",
@@ -119,12 +529,22 @@
      "ref": null
     },
     {
-     "key": "registeredAddressCountry",
+     "key": "registeredAddressCountryId",
+     "type": "String",
+     "ref": "country"
+    },
+    {
+     "key": "registeredAddressCountryName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "baseCurrency",
+     "key": "baseCurrencyId",
+     "type": "String",
+     "ref": "currency"
+    },
+    {
+     "key": "baseCurrencyName",
      "type": "String",
      "ref": null
     },
@@ -206,7 +626,7 @@
      "ref": null
     },
     {
-     "key": "designation",
+     "key": "jobTitle",
      "type": "String",
      "ref": null
     },
@@ -316,7 +736,12 @@
      "ref": null
     },
     {
-     "key": "addressCountry",
+     "key": "addressCountryId",
+     "type": "String",
+     "ref": "country"
+    },
+    {
+     "key": "addressCountryName",
      "type": "String",
      "ref": null
     },
@@ -356,12 +781,22 @@
      "ref": null
     },
     {
-     "key": "currency",
+     "key": "currencyId",
+     "type": "String",
+     "ref": "currency"
+    },
+    {
+     "key": "currencyName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "language",
+     "key": "languageId",
+     "type": "String",
+     "ref": "language"
+    },
+    {
+     "key": "languageName",
      "type": "String",
      "ref": null
     },
@@ -518,7 +953,12 @@
      "ref": null
     },
     {
-     "key": "costCenter",
+     "key": "costCenterId",
+     "type": "String",
+     "ref": "costCenter"
+    },
+    {
+     "key": "costCenterName",
      "type": "String",
      "ref": null
     },
@@ -618,7 +1058,12 @@
      "ref": null
     },
     {
-     "key": "itemFamily",
+     "key": "itemFamilyId",
+     "type": "String",
+     "ref": "itemFamily"
+    },
+    {
+     "key": "itemFamilyName",
      "type": "String",
      "ref": null
     },
@@ -658,7 +1103,12 @@
      "ref": null
     },
     {
-     "key": "costCenter",
+     "key": "costCenterId",
+     "type": "String",
+     "ref": "costCenter"
+    },
+    {
+     "key": "costCenterName",
      "type": "String",
      "ref": null
     },
@@ -897,7 +1347,12 @@
      "ref": null
     },
     {
-     "key": "costCenter",
+     "key": "costCenterId",
+     "type": "String",
+     "ref": "costCenter"
+    },
+    {
+     "key": "costCenterName",
      "type": "String",
      "ref": null
     },
@@ -1204,7 +1659,12 @@
      "ref": null
     },
     {
-     "key": "equipmentType",
+     "key": "equipmentTypeId",
+     "type": "String",
+     "ref": "equipmentType"
+    },
+    {
+     "key": "equipmentTypeName",
      "type": "String",
      "ref": null
     },
@@ -1244,7 +1704,12 @@
      "ref": null
     },
     {
-     "key": "manufacturer",
+     "key": "manufacturerId",
+     "type": "String",
+     "ref": "manufacturer"
+    },
+    {
+     "key": "manufacturerName",
      "type": "String",
      "ref": null
     },
@@ -2448,7 +2913,7 @@
    "moduleName": "Master data",
    "entity": "rolePermission",
    "sourceConcept": "roles",
-   "kind": "valueList",
+   "kind": "relationship",
    "dataClass": "master",
    "parent": "u_mes_mdm_role",
    "displayField": "recordNo",
@@ -2490,7 +2955,12 @@
      "ref": null
     },
     {
-     "key": "permission",
+     "key": "permissionId",
+     "type": "String",
+     "ref": "permission"
+    },
+    {
+     "key": "permissionName",
      "type": "String",
      "ref": null
     },
@@ -2502,7 +2972,7 @@
    ],
    "idPattern": "<roleId>-P<nnn>",
    "recordNoMeaning": "parent recordNo + -P<nnn>",
-   "purpose": "One document per permission value of a role"
+   "purpose": "Links one role to one permission (one document per link)"
   },
   {
    "collection": "u_mes_mdm_roleSignatureMeaning",
@@ -2510,7 +2980,7 @@
    "moduleName": "Master data",
    "entity": "roleSignatureMeaning",
    "sourceConcept": "roles",
-   "kind": "valueList",
+   "kind": "relationship",
    "dataClass": "master",
    "parent": "u_mes_mdm_role",
    "displayField": "recordNo",
@@ -2552,7 +3022,12 @@
      "ref": null
     },
     {
-     "key": "signatureMeaning",
+     "key": "signatureMeaningId",
+     "type": "String",
+     "ref": "signatureMeaning"
+    },
+    {
+     "key": "signatureMeaningName",
      "type": "String",
      "ref": null
     },
@@ -2564,7 +3039,7 @@
    ],
    "idPattern": "<roleId>-SM<nnn>",
    "recordNoMeaning": "parent recordNo + -SM<nnn>",
-   "purpose": "One document per signature meaning value of a role"
+   "purpose": "Links one role to one signature meaning (one document per link)"
   },
   {
    "collection": "u_mes_mdm_user",
@@ -2618,12 +3093,22 @@
      "ref": null
     },
     {
-     "key": "department",
+     "key": "departmentId",
+     "type": "String",
+     "ref": "department"
+    },
+    {
+     "key": "departmentName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "designation",
+     "key": "designationId",
+     "type": "String",
+     "ref": "designation"
+    },
+    {
+     "key": "designationName",
      "type": "String",
      "ref": null
     },
@@ -2678,7 +3163,12 @@
      "ref": null
     },
     {
-     "key": "employmentType",
+     "key": "employmentTypeId",
+     "type": "String",
+     "ref": "employmentType"
+    },
+    {
+     "key": "employmentTypeName",
      "type": "String",
      "ref": null
     },
@@ -2693,7 +3183,12 @@
      "ref": null
     },
     {
-     "key": "language",
+     "key": "languageId",
+     "type": "String",
+     "ref": "language"
+    },
+    {
+     "key": "languageName",
      "type": "String",
      "ref": null
     },
@@ -2840,7 +3335,12 @@
      "ref": null
     },
     {
-     "key": "skillCategory",
+     "key": "skillCategoryId",
+     "type": "String",
+     "ref": "skillCategory"
+    },
+    {
+     "key": "skillCategoryName",
      "type": "String",
      "ref": null
     },
@@ -3281,7 +3781,12 @@
      "ref": null
     },
     {
-     "key": "billingAddressCountry",
+     "key": "billingAddressCountryId",
+     "type": "String",
+     "ref": "country"
+    },
+    {
+     "key": "billingAddressCountryName",
      "type": "String",
      "ref": null
     },
@@ -3321,7 +3826,12 @@
      "ref": null
     },
     {
-     "key": "currency",
+     "key": "currencyId",
+     "type": "String",
+     "ref": "currency"
+    },
+    {
+     "key": "currencyName",
      "type": "String",
      "ref": null
     },
@@ -3567,7 +4077,12 @@
      "ref": null
     },
     {
-     "key": "commodity",
+     "key": "commodityId",
+     "type": "String",
+     "ref": "commodity"
+    },
+    {
+     "key": "commodityName",
      "type": "String",
      "ref": null
     },
@@ -3597,7 +4112,12 @@
      "ref": null
     },
     {
-     "key": "addressCountry",
+     "key": "addressCountryId",
+     "type": "String",
+     "ref": "country"
+    },
+    {
+     "key": "addressCountryName",
      "type": "String",
      "ref": null
     },
@@ -3632,7 +4152,12 @@
      "ref": null
     },
     {
-     "key": "currency",
+     "key": "currencyId",
+     "type": "String",
+     "ref": "currency"
+    },
+    {
+     "key": "currencyName",
      "type": "String",
      "ref": null
     },
@@ -4024,7 +4549,12 @@
      "ref": null
     },
     {
-     "key": "itemGroup",
+     "key": "itemGroupId",
+     "type": "String",
+     "ref": "itemGroup"
+    },
+    {
+     "key": "itemGroupName",
      "type": "String",
      "ref": null
     },
@@ -4409,17 +4939,32 @@
      "ref": null
     },
     {
-     "key": "optionsPadCompound",
+     "key": "optionsPadCompoundId",
+     "type": "String",
+     "ref": "padCompound"
+    },
+    {
+     "key": "optionsPadCompoundName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "optionsMarket",
+     "key": "optionsMarketId",
+     "type": "String",
+     "ref": "market"
+    },
+    {
+     "key": "optionsMarketName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "optionsSurfaceFinish",
+     "key": "optionsSurfaceFinishId",
+     "type": "String",
+     "ref": "surfaceFinish"
+    },
+    {
+     "key": "optionsSurfaceFinishName",
      "type": "String",
      "ref": null
     },
@@ -4429,7 +4974,12 @@
      "ref": null
     },
     {
-     "key": "modelCode",
+     "key": "vehicleModelId",
+     "type": "String",
+     "ref": "vehicleModel"
+    },
+    {
+     "key": "vehicleModelName",
      "type": "String",
      "ref": null
     },
@@ -6146,7 +6696,12 @@
      "ref": null
     },
     {
-     "key": "language",
+     "key": "languageId",
+     "type": "String",
+     "ref": "language"
+    },
+    {
+     "key": "languageName",
      "type": "String",
      "ref": null
     },
@@ -6601,7 +7156,7 @@
    "moduleName": "Product definition",
    "entity": "workInstructionPpeItem",
    "sourceConcept": "work_instructions",
-   "kind": "valueList",
+   "kind": "relationship",
    "dataClass": "master",
    "parent": "u_mes_prd_workInstruction",
    "displayField": "recordNo",
@@ -6643,7 +7198,12 @@
      "ref": null
     },
     {
-     "key": "ppeItem",
+     "key": "ppeItemId",
+     "type": "String",
+     "ref": "ppeItem"
+    },
+    {
+     "key": "ppeItemName",
      "type": "String",
      "ref": null
     },
@@ -6655,7 +7215,7 @@
    ],
    "idPattern": "<workInstructionId>-PI<nnn>",
    "recordNoMeaning": "parent recordNo + -PI<nnn>",
-   "purpose": "One document per ppe item value of a workInstruction"
+   "purpose": "Links one workInstruction to one ppe item (one document per link)"
   },
   {
    "collection": "u_mes_prd_workInstructionKeyPoint",
@@ -7154,7 +7714,12 @@
      "ref": null
     },
     {
-     "key": "stockDisposition",
+     "key": "stockDispositionTypeId",
+     "type": "String",
+     "ref": "dispositionType"
+    },
+    {
+     "key": "stockDispositionTypeName",
      "type": "String",
      "ref": null
     },
@@ -10506,7 +11071,12 @@
      "ref": null
     },
     {
-     "key": "containerType",
+     "key": "containerTypeId",
+     "type": "String",
+     "ref": "containerType"
+    },
+    {
+     "key": "containerTypeName",
      "type": "String",
      "ref": null
     },
@@ -10874,7 +11444,12 @@
      "ref": null
     },
     {
-     "key": "indirectActivity",
+     "key": "indirectActivityId",
+     "type": "String",
+     "ref": "indirectActivity"
+    },
+    {
+     "key": "indirectActivityName",
      "type": "String",
      "ref": null
     },
@@ -12398,7 +12973,12 @@
      "ref": null
     },
     {
-     "key": "stockStatus",
+     "key": "stockStatusId",
+     "type": "String",
+     "ref": "stockStatus"
+    },
+    {
+     "key": "stockStatusName",
      "type": "String",
      "ref": null
     },
@@ -12538,7 +13118,12 @@
      "ref": null
     },
     {
-     "key": "movementType",
+     "key": "movementTypeId",
+     "type": "String",
+     "ref": "movementType"
+    },
+    {
+     "key": "movementTypeName",
      "type": "String",
      "ref": null
     },
@@ -12608,12 +13193,22 @@
      "ref": null
     },
     {
-     "key": "fromStockStatus",
+     "key": "fromStockStatusId",
+     "type": "String",
+     "ref": "stockStatus"
+    },
+    {
+     "key": "fromStockStatusName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "toStockStatus",
+     "key": "toStockStatusId",
+     "type": "String",
+     "ref": "stockStatus"
+    },
+    {
+     "key": "toStockStatusName",
      "type": "String",
      "ref": null
     },
@@ -13963,7 +14558,12 @@
      "ref": null
     },
     {
-     "key": "containerType",
+     "key": "containerTypeId",
+     "type": "String",
+     "ref": "containerType"
+    },
+    {
+     "key": "containerTypeName",
      "type": "String",
      "ref": null
     },
@@ -14105,7 +14705,12 @@
      "ref": null
     },
     {
-     "key": "packType",
+     "key": "packTypeId",
+     "type": "String",
+     "ref": "packType"
+    },
+    {
+     "key": "packTypeName",
      "type": "String",
      "ref": null
     },
@@ -14658,7 +15263,12 @@
      "ref": null
     },
     {
-     "key": "transporter",
+     "key": "transporterId",
+     "type": "String",
+     "ref": "transporter"
+    },
+    {
+     "key": "transporterName",
      "type": "String",
      "ref": null
     },
@@ -16469,7 +17079,12 @@
      "ref": null
     },
     {
-     "key": "gaugeType",
+     "key": "gaugeTypeId",
+     "type": "String",
+     "ref": "gaugeType"
+    },
+    {
+     "key": "gaugeTypeName",
      "type": "String",
      "ref": null
     },
@@ -17553,7 +18168,7 @@
     },
     {
      "key": "reactionOnFail",
-     "type": "Boolean",
+     "type": "String",
      "ref": null
     },
     {
@@ -19017,7 +19632,12 @@
      "ref": null
     },
     {
-     "key": "defectGroup",
+     "key": "defectGroupId",
+     "type": "String",
+     "ref": "defectGroup"
+    },
+    {
+     "key": "defectGroupName",
      "type": "String",
      "ref": null
     },
@@ -19032,7 +19652,12 @@
      "ref": null
     },
     {
-     "key": "defaultDisposition",
+     "key": "defaultDispositionTypeId",
+     "type": "String",
+     "ref": "dispositionType"
+    },
+    {
+     "key": "defaultDispositionTypeName",
      "type": "String",
      "ref": null
     },
@@ -19474,7 +20099,12 @@
      "ref": null
     },
     {
-     "key": "disposition",
+     "key": "dispositionTypeId",
+     "type": "String",
+     "ref": "dispositionType"
+    },
+    {
+     "key": "dispositionTypeName",
      "type": "String",
      "ref": null
     },
@@ -23109,12 +23739,22 @@
      "ref": null
     },
     {
-     "key": "gaugeType",
+     "key": "gaugeTypeId",
+     "type": "String",
+     "ref": "gaugeType"
+    },
+    {
+     "key": "gaugeTypeName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "manufacturer",
+     "key": "manufacturerId",
+     "type": "String",
+     "ref": "manufacturer"
+    },
+    {
+     "key": "manufacturerName",
      "type": "String",
      "ref": null
     },
@@ -24502,7 +25142,12 @@
      "ref": null
     },
     {
-     "key": "complaintType",
+     "key": "complaintTypeId",
+     "type": "String",
+     "ref": "complaintType"
+    },
+    {
+     "key": "complaintTypeName",
      "type": "String",
      "ref": null
     },
@@ -24562,7 +25207,12 @@
      "ref": null
     },
     {
-     "key": "vehicleModel",
+     "key": "vehicleModelId",
+     "type": "String",
+     "ref": "vehicleModel"
+    },
+    {
+     "key": "vehicleModelName",
      "type": "String",
      "ref": null
     },
@@ -25145,12 +25795,22 @@
      "ref": null
     },
     {
-     "key": "category",
+     "key": "reasonCategoryId",
+     "type": "String",
+     "ref": "reasonCategory"
+    },
+    {
+     "key": "reasonCategoryName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "lossCategory",
+     "key": "lossCategoryId",
+     "type": "String",
+     "ref": "lossCategory"
+    },
+    {
+     "key": "lossCategoryName",
      "type": "String",
      "ref": null
     },
@@ -25165,7 +25825,12 @@
      "ref": null
     },
     {
-     "key": "responsibleDepartment",
+     "key": "responsibleDepartmentId",
+     "type": "String",
+     "ref": "department"
+    },
+    {
+     "key": "responsibleDepartmentName",
      "type": "String",
      "ref": null
     },
@@ -26200,7 +26865,12 @@
      "ref": null
     },
     {
-     "key": "lossCategory",
+     "key": "lossCategoryId",
+     "type": "String",
+     "ref": "lossCategory"
+    },
+    {
+     "key": "lossCategoryName",
      "type": "String",
      "ref": null
     },
@@ -27461,7 +28131,12 @@
      "ref": null
     },
     {
-     "key": "ownerDepartment",
+     "key": "ownerDepartmentId",
+     "type": "String",
+     "ref": "department"
+    },
+    {
+     "key": "ownerDepartmentName",
      "type": "String",
      "ref": null
     },
@@ -28287,7 +28962,12 @@
      "ref": null
     },
     {
-     "key": "manufacturer",
+     "key": "manufacturerId",
+     "type": "String",
+     "ref": "manufacturer"
+    },
+    {
+     "key": "manufacturerName",
      "type": "String",
      "ref": null
     },
@@ -28497,7 +29177,12 @@
      "ref": null
     },
     {
-     "key": "toolType",
+     "key": "toolTypeId",
+     "type": "String",
+     "ref": "toolType"
+    },
+    {
+     "key": "toolTypeName",
      "type": "String",
      "ref": null
     },
@@ -29365,12 +30050,22 @@
      "ref": null
     },
     {
-     "key": "deviceType",
+     "key": "deviceTypeId",
+     "type": "String",
+     "ref": "deviceType"
+    },
+    {
+     "key": "deviceTypeName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "manufacturer",
+     "key": "manufacturerId",
+     "type": "String",
+     "ref": "manufacturer"
+    },
+    {
+     "key": "manufacturerName",
      "type": "String",
      "ref": null
     },
@@ -29971,7 +30666,7 @@
    "moduleName": "Integration and system",
    "entity": "operatorAppLanguage",
    "sourceConcept": "operator_apps",
-   "kind": "valueList",
+   "kind": "relationship",
    "dataClass": "master",
    "parent": "u_mes_sys_operatorApp",
    "displayField": "recordNo",
@@ -30013,7 +30708,12 @@
      "ref": null
     },
     {
-     "key": "language",
+     "key": "languageId",
+     "type": "String",
+     "ref": "language"
+    },
+    {
+     "key": "languageName",
      "type": "String",
      "ref": null
     },
@@ -30025,7 +30725,7 @@
    ],
    "idPattern": "<operatorAppId>-L<nnn>",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
-   "purpose": "One document per language value of a operatorApp"
+   "purpose": "Links one operatorApp to one language (one document per link)"
   },
   {
    "collection": "u_mes_sys_businessEvent",
@@ -30526,7 +31226,12 @@
      "ref": null
     },
     {
-     "key": "meaning",
+     "key": "signatureMeaningId",
+     "type": "String",
+     "ref": "signatureMeaning"
+    },
+    {
+     "key": "signatureMeaningName",
      "type": "String",
      "ref": null
     },
@@ -30653,7 +31358,12 @@
      "ref": null
     },
     {
-     "key": "notificationType",
+     "key": "notificationTypeId",
+     "type": "String",
+     "ref": "notificationType"
+    },
+    {
+     "key": "notificationTypeName",
      "type": "String",
      "ref": null
     },
@@ -30961,7 +31671,12 @@
      "ref": null
     },
     {
-     "key": "documentType",
+     "key": "documentTypeId",
+     "type": "String",
+     "ref": "documentType"
+    },
+    {
+     "key": "documentTypeName",
      "type": "String",
      "ref": null
     },
@@ -31026,7 +31741,12 @@
      "ref": null
     },
     {
-     "key": "language",
+     "key": "languageId",
+     "type": "String",
+     "ref": "language"
+    },
+    {
+     "key": "languageName",
      "type": "String",
      "ref": null
     },
@@ -31535,7 +32255,12 @@
      "ref": null
     },
     {
-     "key": "energyType",
+     "key": "energyTypeId",
+     "type": "String",
+     "ref": "energyType"
+    },
+    {
+     "key": "energyTypeName",
      "type": "String",
      "ref": null
     },
@@ -31712,7 +32437,12 @@
      "ref": null
     },
     {
-     "key": "andonType",
+     "key": "andonTypeId",
+     "type": "String",
+     "ref": "andonType"
+    },
+    {
+     "key": "andonTypeName",
      "type": "String",
      "ref": null
     },
@@ -32006,7 +32736,12 @@
      "ref": null
     },
     {
-     "key": "incidentType",
+     "key": "incidentTypeId",
+     "type": "String",
+     "ref": "incidentType"
+    },
+    {
+     "key": "incidentTypeName",
      "type": "String",
      "ref": null
     },
@@ -32081,12 +32816,22 @@
      "ref": null
     },
     {
-     "key": "bodyPart",
+     "key": "bodyPartId",
+     "type": "String",
+     "ref": "bodyPart"
+    },
+    {
+     "key": "bodyPartName",
      "type": "String",
      "ref": null
     },
     {
-     "key": "injuryType",
+     "key": "injuryTypeId",
+     "type": "String",
+     "ref": "injuryType"
+    },
+    {
+     "key": "injuryTypeName",
      "type": "String",
      "ref": null
     },
@@ -32400,6 +33145,2951 @@
    "purpose": "One document per action of a safetyIncident"
   },
   {
+   "collection": "u_mes_mdm_department",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "department",
+   "sourceConcept": "departments",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "parentDepartmentId",
+     "type": "String",
+     "ref": "department"
+    },
+    {
+     "key": "parentDepartmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "headUserId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "headUserName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "costCenterId",
+     "type": "String",
+     "ref": "costCenter"
+    },
+    {
+     "key": "costCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "DEPT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Departments of the site (production, quality, maintenance ...)"
+  },
+  {
+   "collection": "u_mes_mdm_designation",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "designation",
+   "sourceConcept": "designations",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "departmentId",
+     "type": "String",
+     "ref": "department"
+    },
+    {
+     "key": "departmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "gradeLevel",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "isSupervisory",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "DSG-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Job designations of employees"
+  },
+  {
+   "collection": "u_mes_mdm_employmentType",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "employmentType",
+   "sourceConcept": "employment_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isContract",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "EMT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of employment (permanent, contract, trainee, apprentice)"
+  },
+  {
+   "collection": "u_mes_mdm_costCenter",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "costCenter",
+   "sourceConcept": "cost_centers",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "erpCostCenterCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "validFrom",
+     "type": "Date",
+     "ref": null
+    },
+    {
+     "key": "validTo",
+     "type": "Date",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "CC-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Cost centers charged with activities, mapped to ERP"
+  },
+  {
+   "collection": "u_mes_mdm_manufacturer",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "manufacturer",
+   "sourceConcept": "manufacturers",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "countryId",
+     "type": "String",
+     "ref": "country"
+    },
+    {
+     "key": "countryName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "website",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "supportPhone",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "MFR-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Manufacturers of equipment, gauges, devices and spare parts"
+  },
+  {
+   "collection": "u_mes_mdm_equipmentType",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "equipmentType",
+   "sourceConcept": "equipment_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "EQT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of equipment (casting machine, furnace, nutrunner, leak tester ...)"
+  },
+  {
+   "collection": "u_mes_mdm_skillCategory",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "skillCategory",
+   "sourceConcept": "skill_categories",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "SKC-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Categories of skills (process, quality, maintenance, safety)"
+  },
+  {
+   "collection": "u_mes_mdm_permission",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "permission",
+   "sourceConcept": "permissions",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resourceName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "actionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "PRM-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Permissions that can be granted to roles"
+  },
+  {
+   "collection": "u_mes_mdm_signatureMeaning",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "signatureMeaning",
+   "sourceConcept": "signature_meanings",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "SGM-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Meanings an electronic signature can carry (approved, reviewed, released ...)"
+  },
+  {
+   "collection": "u_mes_mdm_currency",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "currency",
+   "sourceConcept": "currencies",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "symbol",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "decimalPlaces",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "isoNumericCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "CUR-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Currencies used for costs and invoices"
+  },
+  {
+   "collection": "u_mes_mdm_country",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "country",
+   "sourceConcept": "countries",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isoAlpha3Code",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "dialCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "CTY-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Countries used in addresses"
+  },
+  {
+   "collection": "u_mes_mdm_language",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "language",
+   "sourceConcept": "languages",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "nativeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "LNG-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Languages of users, instructions and documents"
+  },
+  {
+   "collection": "u_mes_mdm_transporter",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "transporter",
+   "sourceConcept": "transporters",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "gstin",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "phone",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "email",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "TRP-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Transport companies used for dispatch"
+  },
+  {
+   "collection": "u_mes_mdm_commodity",
+   "module": "mdm",
+   "moduleName": "Master data",
+   "entity": "commodity",
+   "sourceConcept": "commodities",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "CMD-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Purchasing commodities used to classify suppliers"
+  },
+  {
+   "collection": "u_mes_prd_itemGroup",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "itemGroup",
+   "sourceConcept": "item_groups",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "IGR-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Item groups (brake caliper, piston, seal, fastener ...)"
+  },
+  {
+   "collection": "u_mes_prd_itemFamily",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "itemFamily",
+   "sourceConcept": "item_families",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "IFM-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Product families a line is built for (front caliper, rear caliper)"
+  },
+  {
+   "collection": "u_mes_prd_ppeItem",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "ppeItem",
+   "sourceConcept": "ppe_items",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "PPE-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Personal protective equipment that a work instruction can require"
+  },
+  {
+   "collection": "u_mes_prd_market",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "market",
+   "sourceConcept": "markets",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "MKT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Sales markets of a product variant (domestic, export)"
+  },
+  {
+   "collection": "u_mes_prd_padCompound",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "padCompound",
+   "sourceConcept": "pad_compounds",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "PDC-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Brake pad friction compounds offered as a variant option"
+  },
+  {
+   "collection": "u_mes_prd_surfaceFinish",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "surfaceFinish",
+   "sourceConcept": "surface_finishes",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "SFN-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Surface finishes offered as a variant option"
+  },
+  {
+   "collection": "u_mes_prd_vehicleModel",
+   "module": "prd",
+   "moduleName": "Product definition",
+   "entity": "vehicleModel",
+   "sourceConcept": "vehicle_models",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "customerId",
+     "type": "String",
+     "ref": "customer"
+    },
+    {
+     "key": "customerName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelYear",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "platformCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "VHM-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Customer vehicle models the parts are fitted to"
+  },
+  {
+   "collection": "u_mes_exe_indirectActivity",
+   "module": "exe",
+   "moduleName": "Planning and execution",
+   "entity": "indirectActivity",
+   "sourceConcept": "indirect_activities",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isPaid",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "costCenterId",
+     "type": "String",
+     "ref": "costCenter"
+    },
+    {
+     "key": "costCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "IND-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Indirect labour activities (cleaning, training, waiting for material ...)"
+  },
+  {
+   "collection": "u_mes_exe_containerType",
+   "module": "exe",
+   "moduleName": "Planning and execution",
+   "entity": "containerType",
+   "sourceConcept": "container_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lengthMm",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "widthMm",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "heightMm",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "tareWeightKg",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "isReturnable",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "CTT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of container with dimensions and tare weight"
+  },
+  {
+   "collection": "u_mes_mat_movementType",
+   "module": "mat",
+   "moduleName": "Materials",
+   "entity": "movementType",
+   "sourceConcept": "movement_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "erpMovementType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "stockEffect",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requiresReason",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "MVT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Stock movement types with their ERP movement code and stock effect"
+  },
+  {
+   "collection": "u_mes_mat_stockStatus",
+   "module": "mat",
+   "moduleName": "Materials",
+   "entity": "stockStatus",
+   "sourceConcept": "stock_statuses",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isUsable",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "erpStockType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "STS-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Stock statuses (unrestricted, quality inspection, blocked, reserved)"
+  },
+  {
+   "collection": "u_mes_mat_packType",
+   "module": "mat",
+   "moduleName": "Materials",
+   "entity": "packType",
+   "sourceConcept": "pack_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "PKT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Pack levels used in packaging specifications (bag, tray, bin, pallet)"
+  },
+  {
+   "collection": "u_mes_qlt_defectGroup",
+   "module": "qlt",
+   "moduleName": "Quality",
+   "entity": "defectGroup",
+   "sourceConcept": "defect_groups",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "DGR-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Groups of defect codes (casting, machining, leak, torque ...)"
+  },
+  {
+   "collection": "u_mes_qlt_gaugeType",
+   "module": "qlt",
+   "moduleName": "Quality",
+   "entity": "gaugeType",
+   "sourceConcept": "gauge_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "GTY-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of gauge and measuring instrument"
+  },
+  {
+   "collection": "u_mes_qlt_dispositionType",
+   "module": "qlt",
+   "moduleName": "Quality",
+   "entity": "dispositionType",
+   "sourceConcept": "disposition_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requiresRework",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "requiresScrap",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "requiresCustomerApproval",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "DSP-T-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Dispositions for nonconforming material (use as is, rework, scrap, return, sort)"
+  },
+  {
+   "collection": "u_mes_qlt_complaintType",
+   "module": "qlt",
+   "moduleName": "Quality",
+   "entity": "complaintType",
+   "sourceConcept": "complaint_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "CPT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of customer complaint (line rejection, zero kilometre, warranty, logistics)"
+  },
+  {
+   "collection": "u_mes_eqp_lossCategory",
+   "module": "eqp",
+   "moduleName": "Equipment and performance",
+   "entity": "lossCategory",
+   "sourceConcept": "loss_categories",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "oeeImpact",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sixBigLossNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "LSC-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "OEE loss categories with the OEE factor they reduce"
+  },
+  {
+   "collection": "u_mes_eqp_reasonCategory",
+   "module": "eqp",
+   "moduleName": "Equipment and performance",
+   "entity": "reasonCategory",
+   "sourceConcept": "reason_categories",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "RCT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Categories of reason codes (mechanical, electrical, process, material ...)"
+  },
+  {
+   "collection": "u_mes_mnt_toolType",
+   "module": "mnt",
+   "moduleName": "Maintenance and tooling",
+   "entity": "toolType",
+   "sourceConcept": "tool_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lifeUom",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "TLT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of tool (die, fixture, cutting tool, socket, test seal)"
+  },
+  {
+   "collection": "u_mes_sys_documentType",
+   "module": "sys",
+   "moduleName": "Integration and system",
+   "entity": "documentType",
+   "sourceConcept": "document_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "retentionYears",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "isControlled",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "DCT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of controlled document with retention"
+  },
+  {
+   "collection": "u_mes_sys_deviceType",
+   "module": "sys",
+   "moduleName": "Integration and system",
+   "entity": "deviceType",
+   "sourceConcept": "device_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "DVT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of connected device (PLC, nutrunner controller, leak tester, printer ...)"
+  },
+  {
+   "collection": "u_mes_sys_notificationType",
+   "module": "sys",
+   "moduleName": "Integration and system",
+   "entity": "notificationType",
+   "sourceConcept": "notification_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "NTT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of notification sent by the system"
+  },
+  {
+   "collection": "u_mes_ehs_andonType",
+   "module": "ehs",
+   "moduleName": "Energy, safety and andon",
+   "entity": "andonType",
+   "sourceConcept": "andon_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "colourCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "responsibleDepartmentId",
+     "type": "String",
+     "ref": "department"
+    },
+    {
+     "key": "responsibleDepartmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "targetResponseSec",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "ANT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of andon call with responsible department and target response time"
+  },
+  {
+   "collection": "u_mes_ehs_incidentType",
+   "module": "ehs",
+   "moduleName": "Energy, safety and andon",
+   "entity": "incidentType",
+   "sourceConcept": "incident_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isInjury",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "reportableToAuthority",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "ICT-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of safety incident"
+  },
+  {
+   "collection": "u_mes_ehs_energyType",
+   "module": "ehs",
+   "moduleName": "Energy, safety and andon",
+   "entity": "energyType",
+   "sourceConcept": "energy_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "ENT-T-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of energy and utility that are metered"
+  },
+  {
+   "collection": "u_mes_ehs_bodyPart",
+   "module": "ehs",
+   "moduleName": "Energy, safety and andon",
+   "entity": "bodyPart",
+   "sourceConcept": "body_parts",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "BDP-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Body parts for injury records"
+  },
+  {
+   "collection": "u_mes_ehs_injuryType",
+   "module": "ehs",
+   "moduleName": "Energy, safety and andon",
+   "entity": "injuryType",
+   "sourceConcept": "injury_types",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "INJ-<recordNo>",
+   "recordNoMeaning": "code",
+   "purpose": "Types of injury"
+  },
+  {
    "collection": "u_mes_sys_statusDefinition",
    "module": "sys",
    "moduleName": "Integration and system",
@@ -32493,6 +36183,91 @@
    "idPattern": "STD-<recordNo>",
    "recordNoMeaning": "definition code",
    "purpose": "Status values and allowed transitions per collection (status mapping)"
+  },
+  {
+   "collection": "u_mes_sys_enumerationValue",
+   "module": "sys",
+   "moduleName": "Integration and system",
+   "entity": "enumerationValue",
+   "sourceConcept": "(new) fixed enumeration mapping",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "valueName",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "collectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "fieldName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "valueCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "valueName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "isDefault",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "ENV-<recordNo>",
+   "recordNoMeaning": "definition code",
+   "purpose": "Allowed values of fixed enumeration keys, one document per collection, key and value"
   },
   {
    "collection": "u_mes_sys_statusTransition",
