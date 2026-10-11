@@ -1,0 +1,165 @@
+{
+  "collMod": "u_mes_syst_auditTrail",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_auditTrail",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "changeAction",
+        "changedAt",
+        "changedById",
+        "changedBy",
+        "reasonText",
+        "electronicSignatureId",
+        "electronicSignatureName",
+        "clientIp",
+        "application",
+        "documentVersionBefore",
+        "documentVersionAfter",
+        "previousHash",
+        "entryHash",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ADT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": "string",
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": "string",
+          "description": "Display value of the related document"
+        },
+        "changeAction": {
+          "bsonType": "string",
+          "description": "Change action",
+          "enum": [
+            "Create",
+            "Update",
+            "Obsolete"
+          ]
+        },
+        "changedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was changed"
+        },
+        "changedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'changed'"
+        },
+        "changedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in changedById, copied from u_mes_mast_user.fullName"
+        },
+        "reasonText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reason text"
+        },
+        "electronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id"
+        },
+        "electronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
+        },
+        "clientIp": {
+          "bsonType": "string",
+          "description": "Client ip"
+        },
+        "application": {
+          "bsonType": "string",
+          "description": "Application of the audit trail"
+        },
+        "documentVersionBefore": {
+          "bsonType": "int",
+          "description": "Document version before"
+        },
+        "documentVersionAfter": {
+          "bsonType": "int",
+          "description": "Document version after"
+        },
+        "previousHash": {
+          "bsonType": "string",
+          "description": "Hash of the previous audit entry, forming a tamper-evident chain"
+        },
+        "entryHash": {
+          "bsonType": "string",
+          "description": "Entry hash"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

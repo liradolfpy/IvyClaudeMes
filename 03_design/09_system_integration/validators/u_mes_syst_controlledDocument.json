@@ -1,0 +1,240 @@
+{
+  "collMod": "u_mes_syst_controlledDocument",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_controlledDocument",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "documentTypeId",
+        "documentTypeName",
+        "revision",
+        "itemId",
+        "itemName",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "fileName",
+        "mimeType",
+        "sizeBytes",
+        "storageProvider",
+        "storageKey",
+        "checksumSha256",
+        "languageId",
+        "languageName",
+        "authorUserId",
+        "authorUserName",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "effectiveFrom",
+        "expiresAt",
+        "retentionYears",
+        "isControlled",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: DOC-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the controlled document; used as its display value in other collections"
+        },
+        "documentTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_documentType._id"
+        },
+        "documentTypeName": {
+          "bsonType": "string",
+          "description": "Display value of documentTypeId, copied from u_mes_syst_documentType.name"
+        },
+        "revision": {
+          "bsonType": "string",
+          "description": "Revision of the controlled document"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of the related document"
+        },
+        "fileName": {
+          "bsonType": "string",
+          "description": "File name"
+        },
+        "mimeType": {
+          "bsonType": "string",
+          "description": "Mime type"
+        },
+        "sizeBytes": {
+          "bsonType": "long",
+          "description": "Size bytes"
+        },
+        "storageProvider": {
+          "bsonType": "string",
+          "description": "Storage provider",
+          "enum": [
+            "S3",
+            "GridFS",
+            "File Share"
+          ]
+        },
+        "storageKey": {
+          "bsonType": "string",
+          "description": "Storage key"
+        },
+        "checksumSha256": {
+          "bsonType": "string",
+          "description": "Checksum sha256"
+        },
+        "languageId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_language._id"
+        },
+        "languageName": {
+          "bsonType": "string",
+          "description": "Display value of languageId, copied from u_mes_mast_language.name"
+        },
+        "authorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: author user"
+        },
+        "authorUserName": {
+          "bsonType": "string",
+          "description": "Display value of authorUserId, copied from u_mes_mast_user.fullName"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "expiresAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Expires date and time"
+        },
+        "retentionYears": {
+          "bsonType": "int",
+          "description": "Retention (years)"
+        },
+        "isControlled": {
+          "bsonType": "bool",
+          "description": "True when the record is controlled"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

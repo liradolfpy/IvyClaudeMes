@@ -1,0 +1,216 @@
+{
+  "collMod": "u_mes_qual_pfmeaLine",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_pfmeaLine",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "pfmeaId",
+        "pfmeaName",
+        "lineNo",
+        "operationId",
+        "operationName",
+        "processFunction",
+        "failureMode",
+        "failureEffect",
+        "severity",
+        "characteristicId",
+        "characteristicName",
+        "classification",
+        "failureCause",
+        "preventionControl",
+        "occurrence",
+        "detectionControl",
+        "detection",
+        "rpn",
+        "actionPriority",
+        "recommendedAction",
+        "ownerUserId",
+        "ownerUserName",
+        "targetDate",
+        "actionTaken",
+        "revisedSeverity",
+        "revisedOccurrence",
+        "revisedDetection",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <pfmeaId>-L<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "pfmeaId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_pfmea._id: the parent document this one belongs to"
+        },
+        "pfmeaName": {
+          "bsonType": "string",
+          "description": "Display value of pfmeaId, copied from u_mes_qual_pfmea.title"
+        },
+        "lineNo": {
+          "bsonType": "int",
+          "description": "Line number within the parent record"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prod_operation.name"
+        },
+        "processFunction": {
+          "bsonType": "string",
+          "description": "Process function"
+        },
+        "failureMode": {
+          "bsonType": "string",
+          "description": "Failure mode"
+        },
+        "failureEffect": {
+          "bsonType": "string",
+          "description": "Failure effect"
+        },
+        "severity": {
+          "bsonType": "int",
+          "description": "Severity rating 1 to 10"
+        },
+        "characteristicId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of characteristicId, copied from u_mes_qual_characteristic.name"
+        },
+        "classification": {
+          "bsonType": "string",
+          "description": "Special characteristic class from the drawing or PFMEA",
+          "enum": [
+            "Critical",
+            "Significant",
+            "Standard"
+          ]
+        },
+        "failureCause": {
+          "bsonType": "string",
+          "description": "Failure cause"
+        },
+        "preventionControl": {
+          "bsonType": "string",
+          "description": "Prevention control"
+        },
+        "occurrence": {
+          "bsonType": "int",
+          "description": "Occurrence rating 1 to 10"
+        },
+        "detectionControl": {
+          "bsonType": "string",
+          "description": "Detection control"
+        },
+        "detection": {
+          "bsonType": "int",
+          "description": "Detection rating 1 to 10"
+        },
+        "rpn": {
+          "bsonType": "int",
+          "description": "Severity x occurrence x detection"
+        },
+        "actionPriority": {
+          "bsonType": "string",
+          "description": "Action priority",
+          "enum": [
+            "High",
+            "Medium",
+            "Low"
+          ]
+        },
+        "recommendedAction": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Recommended action"
+        },
+        "ownerUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: owner user"
+        },
+        "ownerUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of ownerUserId, copied from u_mes_mast_user.fullName"
+        },
+        "targetDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Target date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "actionTaken": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Action taken"
+        },
+        "revisedSeverity": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Revised severity"
+        },
+        "revisedOccurrence": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Revised occurrence"
+        },
+        "revisedDetection": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Revised detection"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

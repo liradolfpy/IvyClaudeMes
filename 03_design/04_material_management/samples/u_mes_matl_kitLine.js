@@ -1,0 +1,26 @@
+// Sample document for u_mes_matl_kitLine (illustrative; seed data is generated separately)
+db.getCollection("u_mes_matl_kitLine").insertOne({
+  _id: "KIT-20260929-0007-L001",
+  recordNo: "20260929-0007-L001",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  kitId: "KIT-20260929-0007",
+  kitName: "20260929-0007",
+  lineNo: NumberInt(10),
+  itemId: "ITM-5110-10-0100",
+  itemName: "Front Brake Caliper Assembly, LH",
+  lotId: "LOT-L260928-GDC-014",
+  lotName: "L260928-GDC-014",
+  requiredQuantity: NumberDecimal("480"),
+  pickedQuantity: NumberDecimal("480"),
+  fromLocationId: "LOC-WH-A-R02-B14",
+  fromLocationName: "Warehouse A, rack 02, bin 14",
+  shortQuantity: NumberDecimal("0"),
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10150",
+  createdBy: "Vikram Pawar",
+  updatedAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  updatedById: "USR-10150",
+  updatedBy: "Vikram Pawar"
+});

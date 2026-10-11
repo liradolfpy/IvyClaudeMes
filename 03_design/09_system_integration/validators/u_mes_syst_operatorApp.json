@@ -1,0 +1,137 @@
+{
+  "collMod": "u_mes_syst_operatorApp",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_operatorApp",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "appType",
+        "version",
+        "publishedById",
+        "publishedBy",
+        "publishedAt",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "previousVersionOperatorAppId",
+        "previousVersionOperatorAppName",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: APP-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the operator app; used as its display value in other collections"
+        },
+        "appType": {
+          "bsonType": "string",
+          "description": "App type",
+          "enum": [
+            "Operator Station",
+            "Inspection",
+            "Material Handling",
+            "Maintenance",
+            "Andon Board"
+          ]
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the operator app"
+        },
+        "publishedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'published'"
+        },
+        "publishedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in publishedById, copied from u_mes_mast_user.fullName"
+        },
+        "publishedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was published"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "previousVersionOperatorAppId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_operatorApp._id: previous version operator app"
+        },
+        "previousVersionOperatorAppName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of previousVersionOperatorAppId, copied from u_mes_syst_operatorApp.name"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

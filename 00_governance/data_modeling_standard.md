@@ -6,7 +6,7 @@ Source: owner's requirements of 11 October 2026, with the project's own choices 
 
 - Format: `[Application]_[Module]_[Collection]` = `u_mes_<moduleCode>_<singularCollectionName>`.
 - Application code (project prefix): `u_mes`.
-- Module code: three lowercase letters. Project choice: mdm, prd, exe, mat, trc, qlt, eqp, mnt, sys, ehs (see `Folder_Guide.md` section 4).
+- Module code: four or five lowercase letters, fixed by the owner on 11 October 2026: mast (Master Data Management), prod (Product Definition), plan (Planning and Execution), matl (Material Management), trac (Traceability), qual (Quality Management), perf (Performance Management), maint (Tooling & Maintenance), syst (System and Integration), ehs (Environment Health and Safety). See `Folder_Guide.md` section 4.
 - Collection part: lower camelCase, singular noun (`workOrder`, `workCenter`, `operation`), no spaces, hyphens or special characters.
 - The name states the domain context and purpose. Vague names such as `data1` or `logs` are not used.
 - Each business concept is one collection, even when several functional sections use it.
@@ -19,9 +19,9 @@ Source: owner's requirements of 11 October 2026, with the project's own choices 
 
 | Kind | Used when | Name | Carries |
 |---|---|---|---|
-| Child | The parent has repeating lines with several attributes (order lines, routing steps) | parent entity + singular line noun, e.g. `u_mes_prd_routingStep` | parent reference pair, a line number, the line's keys |
-| Relationship | One document must refer to several documents of another collection (many-to-many) | parent entity + role or target entity, e.g. `u_mes_mdm_workCenterEquipment` | parent reference pair, `sequenceNo`, one singular reference pair |
-| Value list | The parent has several plain values of the same meaning | parent entity + singular value noun, e.g. `u_mes_mdm_rolePermission` | parent reference pair, `sequenceNo`, one value key |
+| Child | The parent has repeating lines with several attributes (order lines, routing steps) | parent entity + singular line noun, e.g. `u_mes_prod_routingStep` | parent reference pair, a line number, the line's keys |
+| Relationship | One document must refer to several documents of another collection (many-to-many) | parent entity + role or target entity, e.g. `u_mes_mast_workCenterEquipment` | parent reference pair, `sequenceNo`, one singular reference pair |
+| Value list | The parent has several plain values of the same meaning | parent entity + singular value noun, e.g. `u_mes_mast_rolePermission` | parent reference pair, `sequenceNo`, one value key |
 
 - Multiplicity is never expressed by pluralising a scalar key. A key ending in `Ids` or `Names` is not allowed.
 - Each key holds one value and has one purpose. No two keys with slightly different names hold the same information.
@@ -49,13 +49,13 @@ Source: owner's requirements of 11 October 2026, with the project's own choices 
 - A reference to a user that records who did something uses `<action>ById` + `<action>By` (`approvedById` + `approvedBy`), the same pattern as the audit keys.
 - A reference that may point to different collections uses three keys: `relatedCollectionName`, `relatedEntityId`, `relatedEntityName`.
 - Display values that refer to the same entity are identical wherever they appear.
-- `siteId` + `siteName` are in every collection except `u_mes_mdm_site`.
+- `siteId` + `siteName` are in every collection except `u_mes_mast_site`.
 
 ## 6. Status
 
 - `status` is the document's primary lifecycle state, used only when the collection has one.
 - Each collection defines its own values. Values are readable words in Title Case with spaces (`In Progress`), one spelling per state; forms such as `InProgress`, `in_progress`, `In-Progress` are not mixed.
-- Status values are mapped in a separate collection: `u_mes_sys_statusDefinition` (one document per collection and value) and `u_mes_sys_statusTransition` (allowed moves). The values are listed in `04_reference_data/code_lists/status_values.md`.
+- Status values are mapped in a separate collection: `u_mes_syst_statusDefinition` (one document per collection and value) and `u_mes_syst_statusTransition` (allowed moves). The values are listed in `04_reference_data/code_lists/status_values.md`.
 - A second state that is not the lifecycle keeps its own descriptive key (`qualityStatus`, `stockStatus`, `connectionStatus`).
 
 ## 7. Dates and times
@@ -91,7 +91,7 @@ Numeric quantities are never stored as strings.
 | updatedById | ID of the user or process that last updated it |
 | updatedBy | Display name of the updater |
 
-Master collections do not carry these keys; their change history is in `u_mes_sys_auditTrail`. The data class of each collection (master or transaction) is in `collection_inventory.md`. A child, relationship or value-list collection has the data class of its parent.
+Master collections do not carry these keys; their change history is in `u_mes_syst_auditTrail`. The data class of each collection (master or transaction) is in `collection_inventory.md`. A child, relationship or value-list collection has the data class of its parent.
 
 ## 10. Optional keys
 
@@ -105,16 +105,16 @@ A text key that classifies a document is never left as free text. It is handled 
 
 | Rule | Applies when | Modelled as | Example |
 |---|---|---|---|
-| A. Master collection | The plant defines and maintains the list, the list can grow, or a value has attributes of its own | Its own master collection `u_mes_<moduleCode>_<singularName>` with `_id`, `recordNo` (the code), `name`, `description`, `sequenceNo`, `status`; referenced by `<entity>Id` + `<entity>Name` | `departmentId` + `departmentName` pointing to `u_mes_mdm_department` |
-| B. Fixed enumeration | The values are fixed by the application logic and the plant cannot add one without a software change | The key stays coded text; its allowed values are in the validator, listed in `04_reference_data/code_lists/enumeration_values.md`, and stored as data in `u_mes_sys_enumerationValue` (one document per collection, key and value) | `result` with OK, Not OK |
+| A. Master collection | The plant defines and maintains the list, the list can grow, or a value has attributes of its own | Its own master collection `u_mes_<moduleCode>_<singularName>` with `_id`, `recordNo` (the code), `name`, `description`, `sequenceNo`, `status`; referenced by `<entity>Id` + `<entity>Name` | `departmentId` + `departmentName` pointing to `u_mes_mast_department` |
+| B. Fixed enumeration | The values are fixed by the application logic and the plant cannot add one without a software change | The key stays coded text; its allowed values are in the validator, listed in `04_reference_data/code_lists/enumeration_values.md`, and stored as data in `u_mes_syst_enumerationValue` (one document per collection, key and value) | `result` with OK, Not OK |
 
 How to decide: if a plant administrator could reasonably need to add, rename or retire a value, it is rule A. If the software branches on the value, it is rule B.
 
 Further rules:
 
 - The same list is one master collection, however many keys use it. A role may prefix the reference (`responsibleDepartmentId`, `fromStockStatusId`, `defaultDispositionTypeId`).
-- Where one document needs several values from a master list, the link is a relationship collection (`u_mes_mdm_rolePermission` links a role to `u_mes_mdm_permission`).
-- A master collection of this kind is data class master: no audit keys, change history in `u_mes_sys_auditTrail`.
+- Where one document needs several values from a master list, the link is a relationship collection (`u_mes_mast_rolePermission` links a role to `u_mes_mast_permission`).
+- A master collection of this kind is data class master: no audit keys, change history in `u_mes_syst_auditTrail`.
 - Text that describes one person or thing outside the plant's lists stays text under a name that cannot be mistaken for a reference (`jobTitle` of a customer contact, not `designation`).
 - Free text is allowed only for names, descriptions, notes, numbers issued by other parties, and technical addresses.
-- `status` follows section 6 and is mapped in `u_mes_sys_statusDefinition`.
+- `status` follows section 6 and is mapped in `u_mes_syst_statusDefinition`.

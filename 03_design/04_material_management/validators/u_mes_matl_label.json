@@ -1,0 +1,287 @@
+{
+  "collMod": "u_mes_matl_label",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_matl_label",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "labelTemplateId",
+        "labelTemplateName",
+        "labelType",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "wipUnitId",
+        "wipUnitName",
+        "containerId",
+        "containerName",
+        "lotId",
+        "lotName",
+        "shipmentId",
+        "shipmentName",
+        "payload",
+        "humanReadable",
+        "printerIotDeviceId",
+        "printerIotDeviceName",
+        "printedAt",
+        "printedById",
+        "printedBy",
+        "copies",
+        "reprintCount",
+        "reprintReason",
+        "verified",
+        "verificationGrade",
+        "voidedAt",
+        "voidedById",
+        "voidedBy",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: LBL-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "labelTemplateId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_labelTemplate._id"
+        },
+        "labelTemplateName": {
+          "bsonType": "string",
+          "description": "Display value of labelTemplateId, copied from u_mes_matl_labelTemplate.name"
+        },
+        "labelType": {
+          "bsonType": "string",
+          "description": "Label type",
+          "enum": [
+            "Unit Mark",
+            "Container Label",
+            "Shipping Label",
+            "Hold Tag",
+            "Location Label"
+          ]
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": "string",
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": "string",
+          "description": "Display value of the related document"
+        },
+        "wipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo"
+        },
+        "containerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_container._id"
+        },
+        "containerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of containerId, copied from u_mes_plan_container.recordNo"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "shipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_shipment._id"
+        },
+        "shipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shipmentId, copied from u_mes_matl_shipment.recordNo"
+        },
+        "payload": {
+          "bsonType": "string",
+          "description": "Payload of the label"
+        },
+        "humanReadable": {
+          "bsonType": "string",
+          "description": "Human readable"
+        },
+        "printerIotDeviceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_iotDevice._id: printer IoT device"
+        },
+        "printerIotDeviceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of printerIotDeviceId, copied from u_mes_syst_iotDevice.name"
+        },
+        "printedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was printed"
+        },
+        "printedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'printed'"
+        },
+        "printedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in printedById, copied from u_mes_mast_user.fullName"
+        },
+        "copies": {
+          "bsonType": "int",
+          "description": "Copies of the label"
+        },
+        "reprintCount": {
+          "bsonType": "int",
+          "description": "Reprint count"
+        },
+        "reprintReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reprint reason"
+        },
+        "verified": {
+          "bsonType": "bool",
+          "description": "True when: verified"
+        },
+        "verificationGrade": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "ISO/IEC 15415 or 29158 overall symbol grade",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "F",
+            null
+          ]
+        },
+        "voidedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was voided"
+        },
+        "voidedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'voided'"
+        },
+        "voidedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in voidedById, copied from u_mes_mast_user.fullName"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Printed",
+            "Verified",
+            "Reprinted",
+            "Voided"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

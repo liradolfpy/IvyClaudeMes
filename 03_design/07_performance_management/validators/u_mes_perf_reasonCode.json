@@ -1,0 +1,160 @@
+{
+  "collMod": "u_mes_perf_reasonCode",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_perf_reasonCode",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "reasonType",
+        "level",
+        "parentReasonCodeId",
+        "parentReasonCodeName",
+        "pathText",
+        "reasonCategoryId",
+        "reasonCategoryName",
+        "lossCategoryId",
+        "lossCategoryName",
+        "oeeImpact",
+        "isPlanned",
+        "responsibleDepartmentId",
+        "responsibleDepartmentName",
+        "requiresComment",
+        "requiresMaintenanceWorkOrder",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: RSN-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the reason code; used as its display value in other collections"
+        },
+        "reasonType": {
+          "bsonType": "string",
+          "description": "Reason type",
+          "enum": [
+            "Downtime",
+            "Scrap",
+            "Hold",
+            "Andon",
+            "Changeover Loss"
+          ]
+        },
+        "level": {
+          "bsonType": "int",
+          "description": "Level number on the scale of the parent record"
+        },
+        "parentReasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: parent reason code"
+        },
+        "parentReasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentReasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "pathText": {
+          "bsonType": "string",
+          "description": "Full path of the reason from level 1 to this level"
+        },
+        "reasonCategoryId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_perf_reasonCategory._id"
+        },
+        "reasonCategoryName": {
+          "bsonType": "string",
+          "description": "Display value of reasonCategoryId, copied from u_mes_perf_reasonCategory.name"
+        },
+        "lossCategoryId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_perf_lossCategory._id"
+        },
+        "lossCategoryName": {
+          "bsonType": "string",
+          "description": "Display value of lossCategoryId, copied from u_mes_perf_lossCategory.name"
+        },
+        "oeeImpact": {
+          "bsonType": "string",
+          "description": "OEE impact",
+          "enum": [
+            "Availability",
+            "Performance",
+            "Quality",
+            "None"
+          ]
+        },
+        "isPlanned": {
+          "bsonType": "bool",
+          "description": "True when the record is planned"
+        },
+        "responsibleDepartmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_department._id: responsible department"
+        },
+        "responsibleDepartmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of responsibleDepartmentId, copied from u_mes_mast_department.name"
+        },
+        "requiresComment": {
+          "bsonType": "bool",
+          "description": "True when comment is required"
+        },
+        "requiresMaintenanceWorkOrder": {
+          "bsonType": "bool",
+          "description": "True when maintenance work order is required"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

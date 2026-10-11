@@ -1,0 +1,124 @@
+{
+  "collMod": "u_mes_plan_changeoverStep",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_plan_changeoverStep",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "changeoverId",
+        "changeoverName",
+        "stepNo",
+        "description",
+        "internalExternal",
+        "completedAt",
+        "completedById",
+        "completedBy",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <changeoverId>-S<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "changeoverId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_changeover._id: the parent document this one belongs to"
+        },
+        "changeoverName": {
+          "bsonType": "string",
+          "description": "Display value of changeoverId, copied from u_mes_plan_changeover.recordNo"
+        },
+        "stepNo": {
+          "bsonType": "int",
+          "description": "Step number within the parent record"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the changeover step"
+        },
+        "internalExternal": {
+          "bsonType": "string",
+          "description": "Internal steps need the equipment stopped; external steps are done while it runs",
+          "enum": [
+            "Internal",
+            "External"
+          ]
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "completedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'completed'"
+        },
+        "completedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in completedById, copied from u_mes_mast_user.fullName"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

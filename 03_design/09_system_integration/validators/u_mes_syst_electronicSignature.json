@@ -1,0 +1,175 @@
+{
+  "collMod": "u_mes_syst_electronicSignature",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_electronicSignature",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "userId",
+        "userName",
+        "roleId",
+        "roleName",
+        "signatureMeaningId",
+        "signatureMeaningName",
+        "signedAt",
+        "authenticationMethod",
+        "contentHash",
+        "comment",
+        "clientIp",
+        "workstation",
+        "isSecondSignature",
+        "witnessUserId",
+        "witnessUserName",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SIG-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": "string",
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": "string",
+          "description": "Display value of the related document"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id"
+        },
+        "userName": {
+          "bsonType": "string",
+          "description": "Display value of userId, copied from u_mes_mast_user.fullName"
+        },
+        "roleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id"
+        },
+        "roleName": {
+          "bsonType": "string",
+          "description": "Display value of roleId, copied from u_mes_mast_role.name"
+        },
+        "signatureMeaningId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_signatureMeaning._id"
+        },
+        "signatureMeaningName": {
+          "bsonType": "string",
+          "description": "Display value of signatureMeaningId, copied from u_mes_mast_signatureMeaning.name"
+        },
+        "signedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was signed"
+        },
+        "authenticationMethod": {
+          "bsonType": "string",
+          "description": "Authentication method",
+          "enum": [
+            "Password",
+            "Password And Badge",
+            "Single Sign On"
+          ]
+        },
+        "contentHash": {
+          "bsonType": "string",
+          "description": "Content hash"
+        },
+        "comment": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Comment of the electronic signature"
+        },
+        "clientIp": {
+          "bsonType": "string",
+          "description": "Client ip"
+        },
+        "workstation": {
+          "bsonType": "string",
+          "description": "Workstation of the electronic signature"
+        },
+        "isSecondSignature": {
+          "bsonType": "bool",
+          "description": "True when the record is second signature"
+        },
+        "witnessUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: witness user"
+        },
+        "witnessUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of witnessUserId, copied from u_mes_mast_user.fullName"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

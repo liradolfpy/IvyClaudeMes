@@ -1,0 +1,212 @@
+{
+  "collMod": "u_mes_matl_inventoryBalance",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_matl_inventoryBalance",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "itemId",
+        "itemName",
+        "lotId",
+        "lotName",
+        "storageLocationId",
+        "storageLocationName",
+        "containerId",
+        "containerName",
+        "stockStatusId",
+        "stockStatusName",
+        "quantity",
+        "reservedQuantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "valueInr",
+        "firstReceivedAt",
+        "lastMovementAt",
+        "lastCountedAt",
+        "lastCountedById",
+        "lastCountedBy",
+        "expiryAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: INV-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "storageLocationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_storageLocation._id"
+        },
+        "storageLocationName": {
+          "bsonType": "string",
+          "description": "Display value of storageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "containerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_container._id"
+        },
+        "containerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of containerId, copied from u_mes_plan_container.recordNo"
+        },
+        "stockStatusId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_stockStatus._id"
+        },
+        "stockStatusName": {
+          "bsonType": "string",
+          "description": "Display value of stockStatusId, copied from u_mes_matl_stockStatus.name"
+        },
+        "quantity": {
+          "bsonType": "decimal",
+          "description": "Quantity of the inventory balance"
+        },
+        "reservedQuantity": {
+          "bsonType": "decimal",
+          "description": "Reserved quantity"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "valueInr": {
+          "bsonType": "decimal",
+          "description": "Value (Indian rupees)"
+        },
+        "firstReceivedAt": {
+          "bsonType": "date",
+          "description": "First received date and time"
+        },
+        "lastMovementAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last movement date and time"
+        },
+        "lastCountedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last counted date and time"
+        },
+        "lastCountedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'last counted'"
+        },
+        "lastCountedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in lastCountedById, copied from u_mes_mast_user.fullName"
+        },
+        "expiryAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Expiry date and time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Closed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

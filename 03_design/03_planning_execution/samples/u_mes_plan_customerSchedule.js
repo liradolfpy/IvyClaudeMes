@@ -1,0 +1,26 @@
+// Sample document for u_mes_plan_customerSchedule (illustrative; seed data is generated separately)
+db.getCollection("u_mes_plan_customerSchedule").insertOne({
+  _id: "CSR-SML-DS-2026-40",
+  recordNo: "SML-DS-2026-40",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  customerId: "CUS-SML",
+  customerName: "Sahyadri Motors Ltd.",
+  shipToCode: "SML-TLG-D4",
+  scheduleType: "Delivery Schedule",
+  customerOrderNo: "4500218734",
+  receivedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  horizonFrom: ISODate("2026-09-28T18:30:00.000+0000"),
+  horizonTo: ISODate("2026-10-12T18:30:00.000+0000"),
+  supersedesCustomerScheduleId: "CSR-SML-DS-2026-39",
+  supersedesCustomerScheduleName: "SML-DS-2026-39",
+  erpSalesOrderNo: "0020041877",
+  status: "Completed",
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10231",
+  createdBy: "Sunil Jadhav",
+  updatedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  updatedById: "USR-10231",
+  updatedBy: "Sunil Jadhav"
+});

@@ -1,0 +1,136 @@
+{
+  "collMod": "u_mes_prod_billOfMaterialComponent",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prod_billOfMaterialComponent",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "billOfMaterialId",
+        "billOfMaterialName",
+        "lineNo",
+        "componentItemId",
+        "componentItemName",
+        "quantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "scrapPct",
+        "operationId",
+        "operationName",
+        "isTraceable",
+        "traceLevel",
+        "backflush",
+        "referenceDesignator",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <billOfMaterialId>-C<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "billOfMaterialId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_billOfMaterial._id: the parent document this one belongs to"
+        },
+        "billOfMaterialName": {
+          "bsonType": "string",
+          "description": "Display value of billOfMaterialId, copied from u_mes_prod_billOfMaterial.recordNo"
+        },
+        "lineNo": {
+          "bsonType": "int",
+          "description": "Line number within the parent record"
+        },
+        "componentItemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id: component item"
+        },
+        "componentItemName": {
+          "bsonType": "string",
+          "description": "Display value of componentItemId, copied from u_mes_prod_item.description"
+        },
+        "quantity": {
+          "bsonType": "decimal",
+          "description": "Quantity of the bill of material component"
+        },
+        "unitOfMeasureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "scrapPct": {
+          "bsonType": "decimal",
+          "description": "Scrap (percent)"
+        },
+        "operationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_operation._id"
+        },
+        "operationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operationId, copied from u_mes_prod_operation.name"
+        },
+        "isTraceable": {
+          "bsonType": "bool",
+          "description": "True when the record is traceable"
+        },
+        "traceLevel": {
+          "bsonType": "string",
+          "description": "Level at which the consumed component must be recorded",
+          "enum": [
+            "None",
+            "Lot",
+            "Serial"
+          ]
+        },
+        "backflush": {
+          "bsonType": "bool",
+          "description": "True when: backflush"
+        },
+        "referenceDesignator": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Position reference on the drawing"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

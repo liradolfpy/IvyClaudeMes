@@ -1,0 +1,27 @@
+// Sample document for u_mes_perf_leakTestResultStage (illustrative; seed data is generated separately)
+db.getCollection("u_mes_perf_leakTestResultStage").insertOne({
+  _id: "LKT-20260929-000184-S001",
+  recordNo: "20260929-000184-S001",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  leakTestResultId: "LKT-20260929-000184",
+  leakTestResultName: "20260929-000184",
+  stageNo: NumberInt(2),
+  stageName: "High Pressure",
+  testPressureBar: NumberDecimal("140.0"),
+  fillTimeSec: NumberDecimal("3.0"),
+  stabiliseTimeSec: NumberDecimal("4.0"),
+  testTimeSec: NumberDecimal("5.0"),
+  pressureDropPa: NumberDecimal("18.0"),
+  leakRateSccm: NumberDecimal("0.21"),
+  limitPressureDropPa: NumberDecimal("50.0"),
+  limitLeakRateSccm: NumberDecimal("0.50"),
+  stageResult: "Pass",
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-SYSTEM",
+  createdBy: "MES System",
+  updatedAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  updatedById: "USR-SYSTEM",
+  updatedBy: "MES System"
+});

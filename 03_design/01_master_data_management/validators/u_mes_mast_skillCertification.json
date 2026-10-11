@@ -1,0 +1,204 @@
+{
+  "collMod": "u_mes_mast_skillCertification",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_skillCertification",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "userId",
+        "userName",
+        "skillId",
+        "skillName",
+        "level",
+        "awardedAt",
+        "validFrom",
+        "validTo",
+        "assessorUserId",
+        "assessorUserName",
+        "assessmentScore",
+        "assessmentMethod",
+        "trainingHours",
+        "evidenceControlledDocumentId",
+        "evidenceControlledDocumentName",
+        "restrictions",
+        "revokedAt",
+        "revokedReason",
+        "nextReviewAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CERT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id"
+        },
+        "userName": {
+          "bsonType": "string",
+          "description": "Display value of userId, copied from u_mes_mast_user.fullName"
+        },
+        "skillId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_skill._id"
+        },
+        "skillName": {
+          "bsonType": "string",
+          "description": "Display value of skillId, copied from u_mes_mast_skill.name"
+        },
+        "level": {
+          "bsonType": "int",
+          "description": "Level number on the scale of the parent record"
+        },
+        "awardedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was awarded"
+        },
+        "validFrom": {
+          "bsonType": "date",
+          "description": "Valid from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "validTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Valid to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "assessorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: assessor user"
+        },
+        "assessorUserName": {
+          "bsonType": "string",
+          "description": "Display value of assessorUserId, copied from u_mes_mast_user.fullName"
+        },
+        "assessmentScore": {
+          "bsonType": "decimal",
+          "description": "Assessment score"
+        },
+        "assessmentMethod": {
+          "bsonType": "string",
+          "description": "Assessment method",
+          "enum": [
+            "Practical Test",
+            "Written Test",
+            "Observation",
+            "On the Job"
+          ]
+        },
+        "trainingHours": {
+          "bsonType": "decimal",
+          "description": "Training hours"
+        },
+        "evidenceControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: evidence controlled document"
+        },
+        "evidenceControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of evidenceControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "restrictions": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Restrictions of the skill certification"
+        },
+        "revokedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was revoked"
+        },
+        "revokedReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Revoked reason"
+        },
+        "nextReviewAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Next review date and time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Valid",
+            "Expiring Soon",
+            "Expired",
+            "Revoked"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

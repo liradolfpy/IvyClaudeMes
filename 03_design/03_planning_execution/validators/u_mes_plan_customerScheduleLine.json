@@ -1,0 +1,135 @@
+{
+  "collMod": "u_mes_plan_customerScheduleLine",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_plan_customerScheduleLine",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "customerScheduleId",
+        "customerScheduleName",
+        "lineNo",
+        "itemId",
+        "itemName",
+        "customerPartNo",
+        "dueDate",
+        "quantity",
+        "cumulativeRequired",
+        "cumulativeShipped",
+        "firmness",
+        "shippedQuantity",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <customerScheduleId>-L<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "customerScheduleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_customerSchedule._id: the parent document this one belongs to"
+        },
+        "customerScheduleName": {
+          "bsonType": "string",
+          "description": "Display value of customerScheduleId, copied from u_mes_plan_customerSchedule.recordNo"
+        },
+        "lineNo": {
+          "bsonType": "int",
+          "description": "Line number within the parent record"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "customerPartNo": {
+          "bsonType": "string",
+          "description": "Customer part number"
+        },
+        "dueDate": {
+          "bsonType": "date",
+          "description": "Due date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "quantity": {
+          "bsonType": "int",
+          "description": "Quantity of the customer schedule line"
+        },
+        "cumulativeRequired": {
+          "bsonType": "int",
+          "description": "Cumulative quantity required by the customer since the start of the schedule year"
+        },
+        "cumulativeShipped": {
+          "bsonType": "int",
+          "description": "Cumulative shipped"
+        },
+        "firmness": {
+          "bsonType": "string",
+          "description": "Firmness of the customer schedule line",
+          "enum": [
+            "Firm",
+            "Forecast"
+          ]
+        },
+        "shippedQuantity": {
+          "bsonType": "int",
+          "description": "Shipped quantity"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

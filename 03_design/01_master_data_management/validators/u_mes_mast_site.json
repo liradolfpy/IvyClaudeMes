@@ -1,0 +1,185 @@
+{
+  "collMod": "u_mes_mast_site",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_site",
+      "required": [
+        "_id",
+        "recordNo",
+        "name",
+        "enterpriseId",
+        "enterpriseName",
+        "siteType",
+        "timezone",
+        "utcOffsetMinutes",
+        "addressLine1",
+        "addressLine2",
+        "addressCity",
+        "addressDistrict",
+        "addressState",
+        "addressPostalCode",
+        "addressCountryId",
+        "addressCountryName",
+        "geoLatitude",
+        "geoLongitude",
+        "gstin",
+        "factoryLicenceNo",
+        "erpPlantCode",
+        "defaultWorkCalendarId",
+        "defaultWorkCalendarName",
+        "currencyId",
+        "currencyName",
+        "languageId",
+        "languageName",
+        "headcount",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SITE-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the site; used as its display value in other collections"
+        },
+        "enterpriseId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_enterprise._id"
+        },
+        "enterpriseName": {
+          "bsonType": "string",
+          "description": "Display value of enterpriseId, copied from u_mes_mast_enterprise.name"
+        },
+        "siteType": {
+          "bsonType": "string",
+          "description": "Site type",
+          "enum": [
+            "Manufacturing Plant",
+            "Warehouse",
+            "Technical Center",
+            "Head Office"
+          ]
+        },
+        "timezone": {
+          "bsonType": "string",
+          "description": "IANA time zone name"
+        },
+        "utcOffsetMinutes": {
+          "bsonType": "int",
+          "description": "Offset of local time from UTC in minutes (IST = 330)"
+        },
+        "addressLine1": {
+          "bsonType": "string",
+          "description": "Address line1"
+        },
+        "addressLine2": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Address line2"
+        },
+        "addressCity": {
+          "bsonType": "string",
+          "description": "Address city"
+        },
+        "addressDistrict": {
+          "bsonType": "string",
+          "description": "Address district"
+        },
+        "addressState": {
+          "bsonType": "string",
+          "description": "Address state"
+        },
+        "addressPostalCode": {
+          "bsonType": "string",
+          "description": "Address postal code"
+        },
+        "addressCountryId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_country._id: address country"
+        },
+        "addressCountryName": {
+          "bsonType": "string",
+          "description": "Display value of addressCountryId, copied from u_mes_mast_country.name"
+        },
+        "geoLatitude": {
+          "bsonType": "double",
+          "description": "Geo latitude"
+        },
+        "geoLongitude": {
+          "bsonType": "double",
+          "description": "Geo longitude"
+        },
+        "gstin": {
+          "bsonType": "string",
+          "description": "Goods and services tax identification number"
+        },
+        "factoryLicenceNo": {
+          "bsonType": "string",
+          "description": "Factory licence number"
+        },
+        "erpPlantCode": {
+          "bsonType": "string",
+          "description": "ERP plant code"
+        },
+        "defaultWorkCalendarId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCalendar._id: default work calendar"
+        },
+        "defaultWorkCalendarName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of defaultWorkCalendarId, copied from u_mes_mast_workCalendar.name"
+        },
+        "currencyId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_currency._id"
+        },
+        "currencyName": {
+          "bsonType": "string",
+          "description": "Display value of currencyId, copied from u_mes_mast_currency.name"
+        },
+        "languageId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_language._id"
+        },
+        "languageName": {
+          "bsonType": "string",
+          "description": "Display value of languageId, copied from u_mes_mast_language.name"
+        },
+        "headcount": {
+          "bsonType": "int",
+          "description": "Headcount of the site"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

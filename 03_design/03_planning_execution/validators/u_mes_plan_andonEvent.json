@@ -1,0 +1,245 @@
+{
+  "collMod": "u_mes_plan_andonEvent",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_plan_andonEvent",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "workCenterId",
+        "workCenterName",
+        "lineId",
+        "lineName",
+        "shiftId",
+        "shiftName",
+        "andonTypeId",
+        "andonTypeName",
+        "reasonCodeId",
+        "reasonCodeName",
+        "raisedById",
+        "raisedBy",
+        "raisedAt",
+        "acknowledgedById",
+        "acknowledgedBy",
+        "acknowledgedAt",
+        "resolvedById",
+        "resolvedBy",
+        "resolvedAt",
+        "responseSec",
+        "resolutionSec",
+        "lineStopped",
+        "downtimeEventId",
+        "downtimeEventName",
+        "description",
+        "resolutionText",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: AND-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "andonTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_andonType._id"
+        },
+        "andonTypeName": {
+          "bsonType": "string",
+          "description": "Display value of andonTypeId, copied from u_mes_plan_andonType.name"
+        },
+        "reasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id"
+        },
+        "reasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "raisedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'raised'"
+        },
+        "raisedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in raisedById, copied from u_mes_mast_user.fullName"
+        },
+        "raisedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was raised"
+        },
+        "acknowledgedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'acknowledged'"
+        },
+        "acknowledgedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName"
+        },
+        "acknowledgedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was acknowledged"
+        },
+        "resolvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'resolved'"
+        },
+        "resolvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in resolvedById, copied from u_mes_mast_user.fullName"
+        },
+        "resolvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was resolved"
+        },
+        "responseSec": {
+          "bsonType": "int",
+          "description": "Response (seconds)"
+        },
+        "resolutionSec": {
+          "bsonType": "int",
+          "description": "Resolution (seconds)"
+        },
+        "lineStopped": {
+          "bsonType": "bool",
+          "description": "True when: line stopped"
+        },
+        "downtimeEventId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_downtimeEvent._id"
+        },
+        "downtimeEventName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the andon event"
+        },
+        "resolutionText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Resolution text"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Raised",
+            "Acknowledged",
+            "Resolved",
+            "Cancelled"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

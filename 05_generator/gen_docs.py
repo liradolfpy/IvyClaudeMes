@@ -2,8 +2,8 @@ import json,collections,os,re,sys
 from catalogue import C
 ROOT=sys.argv[1]
 M=json.load(open("model/flat_model.json")); cols=M["collections"]; MODN=M["modules"]
-order=["mdm","prd","exe","mat","trc","qlt","eqp","mnt","sys","ehs"]
-DOMF={"mdm":"01_enterprise_master_data","prd":"02_product_definition","exe":"03_planning_execution","mat":"04_materials","trc":"05_traceability","qlt":"06_quality","eqp":"07_equipment_performance","mnt":"08_maintenance_tooling","sys":"09_integration_system","ehs":"10_energy_safety_andon"}
+order=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs"]
+DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety'}
 cat={c[0]:c for c in C}
 bycol={c["collection"]:c for c in cols}
 def w(p,t):
@@ -24,7 +24,7 @@ for c in cols:
         c["idPattern"]="<%sId>-%s<nnn>"%(pe,tag); c["recordNoMeaning"]="parent recordNo + -%s<nnn>"%tag
 NK=len(cols); NF=sum(len(c["fields"]) for c in cols)
 kinds=collections.Counter(c["kind"] for c in cols)
-HEAD="Model version 2.2 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
+HEAD="Model version 2.3 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
 KIND={"entity":"Entity","child":"Child (was an embedded array of objects)","relationship":"Relationship (was an array of IDs)","valueList":"Value list (was an array of values)"}
 # inventory
 s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\n| Module code | Module | Collections |\n|---|---|---|\n"
@@ -64,7 +64,7 @@ for m in order:
             s+="| %d | %s | %s | %s |\n"%(i,f["key"],f["type"],ref)
     w("02_architecture/field_lists/%s_field_list.md"%DOMF[m],s)
 # status values
-s="# Status values per collection\n\n"+HEAD+"Each collection with a lifecycle defines its own `status` values. The first value is the initial state. The values are stored as master data in `u_mes_sys_statusDefinition` (one document per collection and value) and the allowed moves in `u_mes_sys_statusTransition`. Collections not listed have no `status` key.\n\n| Module | Collection | Status values (in order) |\n|---|---|---|\n"
+s="# Status values per collection\n\n"+HEAD+"Each collection with a lifecycle defines its own `status` values. The first value is the initial state. The values are stored as master data in `u_mes_syst_statusDefinition` (one document per collection and value) and the allowed moves in `u_mes_syst_statusTransition`. Collections not listed have no `status` key.\n\n| Module | Collection | Status values (in order) |\n|---|---|---|\n"
 ns=0
 for m in order:
     for c in cols:
@@ -74,7 +74,7 @@ no=[c["collection"] for c in cols if c["kind"]=="entity" and not c["statusValues
 s+="\nEntity collections without a status key (append-only records): "+", ".join(no)+".\n"
 w("04_reference_data/code_lists/status_values.md",s)
 # register
-s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.2 | Date: 11 October 2026 | Database: mes | "+HEAD
+s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.3 | Date: 11 October 2026 | Database: mes | "+HEAD
 s+='''This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
 ## 1. Conventions in force
@@ -84,8 +84,8 @@ s+='''This file is the single reference for collection names, identifiers and ma
 - `_id`: String, pattern in section 4. `recordNo`: String, the business identifier, present in every collection.
 - Reference: `<entity>Id` followed by `<entity>Name` (display value copied from the target). User references that record an action: `<action>ById` + `<action>By`.
 - Polymorphic reference: `relatedCollectionName` + `relatedEntityId` + `relatedEntityName`.
-- `siteId` + `siteName` in every collection except `u_mes_mdm_site`.
-- Classification values (DATA-003): a list the plant maintains is a master collection referenced by `<entity>Id` + `<entity>Name`; a list fixed by the application stays coded text with its values in `u_mes_sys_enumerationValue`.
+- `siteId` + `siteName` in every collection except `u_mes_mast_site`.
+- Classification values (DATA-003): a list the plant maintains is a master collection referenced by `<entity>Id` + `<entity>Name`; a list fixed by the application stays coded text with its values in `u_mes_syst_enumerationValue`.
 - `status`: primary lifecycle state, only where the collection has one; values in 04_reference_data/code_lists/status_values.md.
 - Audit keys `createdAt, createdById, createdBy, updatedAt, updatedById, updatedBy`: transaction collections only.
 - `schemaVersion` (Int32) in every collection.
@@ -101,11 +101,11 @@ s+='''This file is the single reference for collection names, identifiers and ma
 | Production period | Mon 28 Sep 2026 06:00 IST to Sat 10 Oct 2026 22:00 IST |
 | Non-working days | Fri 2 Oct 2026 (Gandhi Jayanti), Sun 4 Oct 2026 (weekly off) |
 | Shifts | SH-A 06:00-14:00, SH-B 14:00-22:00, SH-C 22:00-06:00 IST (UTC starts 00:30, 08:30, 16:30) |
-| Documents per collection | 10, except u_mes_prd_operation (11) and u_mes_prd_item (12) |
+| Documents per collection | 10, except u_mes_prod_operation (11) and u_mes_prod_item (12) |
 
 ## 3. Master ID registry
 
-### 3.1 Items (u_mes_prd_item)
+### 3.1 Items (u_mes_prod_item)
 
 | _id | recordNo | name | Type | Drawing revision |
 |---|---|---|---|---|
@@ -124,7 +124,7 @@ s+='''This file is the single reference for collection names, identifiers and ma
 
 ### 3.2 Operations and work centers
 
-| Step | u_mes_prd_operation._id | name | u_mes_mdm_workCenter._id | u_mes_mdm_line._id | u_mes_mdm_area._id | Tracking grain |
+| Step | u_mes_prod_operation._id | name | u_mes_mast_workCenter._id | u_mes_mast_line._id | u_mes_mast_area._id | Tracking grain |
 |---|---|---|---|---|---|---|
 | OP010 | OPN-OP010 | Gravity die casting | WC-GDC-01 | LN-GDC-01 | AR-FDY | Lot |
 | OP020 | OPN-OP020 | Heat treatment T6 | WC-HT-01 | LN-HT-01 | AR-HT | Lot |
@@ -138,15 +138,15 @@ s+='''This file is the single reference for collection names, identifiers and ma
 | OP100 | OPN-OP100 | Final inspection | WC-FIP-01 | LN-FIP-01 | AR-FIP | Unit |
 | OP110 | OPN-OP110 | Packing | WC-FIP-01 | LN-PKG-01 | AR-FIP | Container |
 
-Dispatch is recorded in u_mes_mat_shipment from area AR-WH; it is not a routing operation.
+Dispatch is recorded in u_mes_matl_shipment from area AR-WH; it is not a routing operation.
 
 ### 3.3 Areas and lines
 
-Areas (u_mes_mdm_area): AR-FDY Foundry, AR-HT Heat treatment, AR-MC Machining, AR-SF Surface treatment (washing and anodising), AR-ASY Assembly and test, AR-FIP Final inspection and packing, AR-WH Stores and dispatch, AR-QL Quality laboratory, AR-TR Tool room, AR-UT Utilities.
+Areas (u_mes_mast_area): AR-FDY Foundry, AR-HT Heat treatment, AR-MC Machining, AR-SF Surface treatment (washing and anodising), AR-ASY Assembly and test, AR-FIP Final inspection and packing, AR-WH Stores and dispatch, AR-QL Quality laboratory, AR-TR Tool room, AR-UT Utilities.
 
-Lines (u_mes_mdm_line): LN-GDC-01, LN-GDC-02, LN-HT-01, LN-MC-01, LN-MC-02, LN-WSH-01, LN-ANO-01, LN-ASY-01, LN-FIP-01, LN-PKG-01.
+Lines (u_mes_mast_line): LN-GDC-01, LN-GDC-02, LN-HT-01, LN-MC-01, LN-MC-02, LN-WSH-01, LN-ANO-01, LN-ASY-01, LN-FIP-01, LN-PKG-01.
 
-System account for automated writes: USR-SYSTEM, display name "MES System" (exists in u_mes_mdm_user).
+System account for automated writes: USR-SYSTEM, display name "MES System" (exists in u_mes_mast_user).
 
 ### 3.4 IDs still to be assigned
 
@@ -169,7 +169,8 @@ s+='''
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became %d collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
-| 2.2 | 11 Oct 2026 | Master data review: 41 master collections added (department, designation, employmentType and others), 67 text keys converted to master references, fixed enumerations mapped in u_mes_sys_enumerationValue; see 08_validation/reports/master_data_review.md |
+| 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (Environment Health and Safety). Module folders renamed |
+| 2.2 | 11 Oct 2026 | Master data review: 41 master collections added (department, designation, employmentType and others), 67 text keys converted to master references, fixed enumerations mapped in u_mes_syst_enumerationValue; see 08_validation/reports/master_data_review.md |
 | 2.1 | 11 Oct 2026 | Collection specifications written for all modules: field dictionary, validator, indexes and sample per collection under 03_design; check report in 08_validation/reports/specification_check.md |
 '''%NK
 w("00_governance/data_model_register.md",s)

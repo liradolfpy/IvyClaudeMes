@@ -1,0 +1,161 @@
+{
+  "collMod": "u_mes_mast_customer",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_customer",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "customerType",
+        "parentCustomerCode",
+        "gstin",
+        "billingAddressLine1",
+        "billingAddressCity",
+        "billingAddressState",
+        "billingAddressPostalCode",
+        "billingAddressCountryId",
+        "billingAddressCountryName",
+        "supplierCodeAtCustomer",
+        "labelTemplateId",
+        "labelTemplateName",
+        "asnRequired",
+        "ppapLevelDefault",
+        "ppmTarget",
+        "paymentTermsDays",
+        "currencyId",
+        "currencyName",
+        "portalUrl",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CUS-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the customer; used as its display value in other collections"
+        },
+        "customerType": {
+          "bsonType": "string",
+          "description": "Customer type",
+          "enum": [
+            "OEM",
+            "Tier 1",
+            "Aftermarket"
+          ]
+        },
+        "parentCustomerCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Code of the customer's parent group"
+        },
+        "gstin": {
+          "bsonType": "string",
+          "description": "Goods and services tax identification number"
+        },
+        "billingAddressLine1": {
+          "bsonType": "string",
+          "description": "Billing address line1"
+        },
+        "billingAddressCity": {
+          "bsonType": "string",
+          "description": "Billing address city"
+        },
+        "billingAddressState": {
+          "bsonType": "string",
+          "description": "Billing address state"
+        },
+        "billingAddressPostalCode": {
+          "bsonType": "string",
+          "description": "Billing address postal code"
+        },
+        "billingAddressCountryId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_country._id: billing address country"
+        },
+        "billingAddressCountryName": {
+          "bsonType": "string",
+          "description": "Display value of billingAddressCountryId, copied from u_mes_mast_country.name"
+        },
+        "supplierCodeAtCustomer": {
+          "bsonType": "string",
+          "description": "Vendor code the customer uses for this plant"
+        },
+        "labelTemplateId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_labelTemplate._id"
+        },
+        "labelTemplateName": {
+          "bsonType": "string",
+          "description": "Display value of labelTemplateId, copied from u_mes_matl_labelTemplate.name"
+        },
+        "asnRequired": {
+          "bsonType": "bool",
+          "description": "True when: ASN required"
+        },
+        "ppapLevelDefault": {
+          "bsonType": "int",
+          "description": "PPAP level default"
+        },
+        "ppmTarget": {
+          "bsonType": "int",
+          "description": "Customer target in defective parts per million"
+        },
+        "paymentTermsDays": {
+          "bsonType": "int",
+          "description": "Payment terms (days)"
+        },
+        "currencyId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_currency._id"
+        },
+        "currencyName": {
+          "bsonType": "string",
+          "description": "Display value of currencyId, copied from u_mes_mast_currency.name"
+        },
+        "portalUrl": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Portal url"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

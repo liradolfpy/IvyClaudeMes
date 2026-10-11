@@ -1,0 +1,238 @@
+{
+  "collMod": "u_mes_qual_qualityHold",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_qualityHold",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "holdType",
+        "reasonText",
+        "reasonCodeId",
+        "reasonCodeName",
+        "nonconformanceId",
+        "nonconformanceName",
+        "itemId",
+        "itemName",
+        "totalQuantity",
+        "quarantineLocationId",
+        "quarantineLocationName",
+        "placedById",
+        "placedBy",
+        "placedAt",
+        "expectedReleaseAt",
+        "releasedById",
+        "releasedBy",
+        "releasedAt",
+        "releaseDecision",
+        "releaseComment",
+        "customerNotified",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: HLD-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "holdType": {
+          "bsonType": "string",
+          "description": "Hold type",
+          "enum": [
+            "Quality",
+            "Customer",
+            "Engineering",
+            "Supplier"
+          ]
+        },
+        "reasonText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reason text"
+        },
+        "reasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id"
+        },
+        "reasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "totalQuantity": {
+          "bsonType": "int",
+          "description": "Total quantity"
+        },
+        "quarantineLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_storageLocation._id: quarantine location"
+        },
+        "quarantineLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of quarantineLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "placedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'placed'"
+        },
+        "placedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in placedById, copied from u_mes_mast_user.fullName"
+        },
+        "placedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was placed"
+        },
+        "expectedReleaseAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Expected release date and time"
+        },
+        "releasedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'released'"
+        },
+        "releasedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in releasedById, copied from u_mes_mast_user.fullName"
+        },
+        "releasedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was released"
+        },
+        "releaseDecision": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Release decision",
+          "enum": [
+            "Released",
+            "Rework",
+            "Scrap",
+            "Return To Supplier",
+            null
+          ]
+        },
+        "releaseComment": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Release comment"
+        },
+        "customerNotified": {
+          "bsonType": "bool",
+          "description": "True when: customer notified"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Partially Released",
+            "Released"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_mast_userRole",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_userRole",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "userId",
+        "userName",
+        "sequenceNo",
+        "roleId",
+        "roleName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <userId>-R<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: the parent document this one belongs to"
+        },
+        "userName": {
+          "bsonType": "string",
+          "description": "Display value of userId, copied from u_mes_mast_user.fullName"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "roleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id"
+        },
+        "roleName": {
+          "bsonType": "string",
+          "description": "Display value of roleId, copied from u_mes_mast_role.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

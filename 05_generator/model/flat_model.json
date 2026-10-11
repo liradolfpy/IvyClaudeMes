@@ -1,16 +1,16 @@
 {
  "application": "u_mes",
  "modules": {
-  "mdm": "Master data",
-  "prd": "Product definition",
-  "exe": "Planning and execution",
-  "mat": "Materials",
-  "trc": "Traceability",
-  "qlt": "Quality",
-  "eqp": "Equipment and performance",
-  "mnt": "Maintenance and tooling",
-  "sys": "Integration and system",
-  "ehs": "Energy, safety and andon"
+  "mast": "Master Data Management",
+  "prod": "Product Definition",
+  "plan": "Planning and Execution",
+  "matl": "Material Management",
+  "trac": "Traceability",
+  "qual": "Quality Management",
+  "perf": "Performance Management",
+  "maint": "Tooling & Maintenance",
+  "syst": "System and Integration",
+  "ehs": "Environment Health and Safety"
  },
  "conversions": [
   {
@@ -424,9 +424,9 @@
  ],
  "collections": [
   {
-   "collection": "u_mes_mdm_enterprise",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_enterprise",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "enterprise",
    "sourceConcept": "enterprises",
    "kind": "entity",
@@ -574,14 +574,14 @@
    "purpose": "Legal entities of the group (ISA-95 Enterprise level); tax and registration data"
   },
   {
-   "collection": "u_mes_mdm_enterpriseContact",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_enterpriseContact",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "enterpriseContact",
    "sourceConcept": "enterprises",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_enterprise",
+   "parent": "u_mes_mast_enterprise",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -651,9 +651,9 @@
    "purpose": "One document per contact of a enterprise"
   },
   {
-   "collection": "u_mes_mdm_site",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_site",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "site",
    "sourceConcept": "sites",
    "kind": "entity",
@@ -821,14 +821,14 @@
    "purpose": "Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate"
   },
   {
-   "collection": "u_mes_mdm_siteCertificate",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_siteCertificate",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "siteCertificate",
    "sourceConcept": "sites",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_site",
+   "parent": "u_mes_mast_site",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -898,9 +898,9 @@
    "purpose": "One document per certificate of a site"
   },
   {
-   "collection": "u_mes_mdm_area",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_area",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "area",
    "sourceConcept": "areas",
    "kind": "entity",
@@ -1003,9 +1003,9 @@
    "purpose": "Production and support areas inside a site (ISA-95 Area)"
   },
   {
-   "collection": "u_mes_mdm_line",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_line",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "line",
    "sourceConcept": "lines",
    "kind": "entity",
@@ -1133,14 +1133,14 @@
    "purpose": "Production lines / cells (ISA-95 Production Line / Work Cell)"
   },
   {
-   "collection": "u_mes_mdm_lineDefaultShift",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_lineDefaultShift",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "lineDefaultShift",
    "sourceConcept": "lines",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_line",
+   "parent": "u_mes_mast_line",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -1200,14 +1200,14 @@
    "purpose": "Links one line to one default shift (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_lineIdealRate",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_lineIdealRate",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "lineIdealRate",
    "sourceConcept": "lines",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_line",
+   "parent": "u_mes_mast_line",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -1277,9 +1277,9 @@
    "purpose": "One document per ideal rate of a line"
   },
   {
-   "collection": "u_mes_mdm_workCenter",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCenter",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCenter",
    "sourceConcept": "work_centres",
    "kind": "entity",
@@ -1417,14 +1417,14 @@
    "purpose": "Stations where operations are executed and booked; ERP work centre mapping"
   },
   {
-   "collection": "u_mes_mdm_workCenterEquipment",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCenterEquipment",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCenterEquipment",
    "sourceConcept": "work_centres",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCenter",
+   "parent": "u_mes_mast_workCenter",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -1484,14 +1484,14 @@
    "purpose": "Links one workCenter to one equipment (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_workCenterOperation",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCenterOperation",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCenterOperation",
    "sourceConcept": "work_centres",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCenter",
+   "parent": "u_mes_mast_workCenter",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -1551,14 +1551,14 @@
    "purpose": "Links one workCenter to one operation (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_workCenterRequiresSkill",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCenterRequiresSkill",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCenterRequiresSkill",
    "sourceConcept": "work_centres",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCenter",
+   "parent": "u_mes_mast_workCenter",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -1618,9 +1618,9 @@
    "purpose": "Links one workCenter to one requires skill (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_equipment",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_equipment",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "equipment",
    "sourceConcept": "equipment",
    "kind": "entity",
@@ -1844,14 +1844,14 @@
    "purpose": "Machines, furnaces, testers (ISA-95 Unit / Equipment); hierarchy, make, model, capability"
   },
   {
-   "collection": "u_mes_mdm_equipmentIotDevice",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_equipmentIotDevice",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "equipmentIotDevice",
    "sourceConcept": "equipment",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_equipment",
+   "parent": "u_mes_mast_equipment",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -1911,9 +1911,9 @@
    "purpose": "Links one equipment to one iot device (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_shift",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_shift",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "shift",
    "sourceConcept": "shifts",
    "kind": "entity",
@@ -2001,14 +2001,14 @@
    "purpose": "Shift patterns with start/end and breaks"
   },
   {
-   "collection": "u_mes_mdm_shiftBreak",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_shiftBreak",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "shiftBreak",
    "sourceConcept": "shifts",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_shift",
+   "parent": "u_mes_mast_shift",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -2078,14 +2078,14 @@
    "purpose": "One document per break of a shift"
   },
   {
-   "collection": "u_mes_mdm_shiftWorkingDay",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_shiftWorkingDay",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "shiftWorkingDay",
    "sourceConcept": "shifts",
    "kind": "valueList",
    "dataClass": "master",
-   "parent": "u_mes_mdm_shift",
+   "parent": "u_mes_mast_shift",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2140,9 +2140,9 @@
    "purpose": "One document per working day value of a shift"
   },
   {
-   "collection": "u_mes_mdm_workCalendar",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCalendar",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCalendar",
    "sourceConcept": "calendars",
    "kind": "entity",
@@ -2215,14 +2215,14 @@
    "purpose": "Working calendars with holidays and exception days per site / line"
   },
   {
-   "collection": "u_mes_mdm_workCalendarLine",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCalendarLine",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCalendarLine",
    "sourceConcept": "calendars",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCalendar",
+   "parent": "u_mes_mast_workCalendar",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2282,14 +2282,14 @@
    "purpose": "Links one workCalendar to one line (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_workCalendarShift",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCalendarShift",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCalendarShift",
    "sourceConcept": "calendars",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCalendar",
+   "parent": "u_mes_mast_workCalendar",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2349,14 +2349,14 @@
    "purpose": "Links one workCalendar to one shift (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_workCalendarWeeklyOffDay",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCalendarWeeklyOffDay",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCalendarWeeklyOffDay",
    "sourceConcept": "calendars",
    "kind": "valueList",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCalendar",
+   "parent": "u_mes_mast_workCalendar",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2411,14 +2411,14 @@
    "purpose": "One document per weekly off day value of a workCalendar"
   },
   {
-   "collection": "u_mes_mdm_workCalendarException",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCalendarException",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCalendarException",
    "sourceConcept": "calendars",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCalendar",
+   "parent": "u_mes_mast_workCalendar",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -2488,14 +2488,14 @@
    "purpose": "One document per exception of a workCalendar"
   },
   {
-   "collection": "u_mes_mdm_workCalendarExceptionShift",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_workCalendarExceptionShift",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "workCalendarExceptionShift",
    "sourceConcept": "calendars",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_workCalendarException",
+   "parent": "u_mes_mast_workCalendarException",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2555,9 +2555,9 @@
    "purpose": "Links one workCalendarException to one shift (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_shiftRoster",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_shiftRoster",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "shiftRoster",
    "sourceConcept": "shift_rosters",
    "kind": "entity",
@@ -2701,14 +2701,14 @@
    "purpose": "Crew assignment per production day, shift and line (who is planned where)"
   },
   {
-   "collection": "u_mes_mdm_shiftRosterAssignment",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_shiftRosterAssignment",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "shiftRosterAssignment",
    "sourceConcept": "shift_rosters",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_mdm_shiftRoster",
+   "parent": "u_mes_mast_shiftRoster",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2828,9 +2828,9 @@
    "purpose": "One document per assignment of a shiftRoster"
   },
   {
-   "collection": "u_mes_mdm_role",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_role",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "role",
    "sourceConcept": "roles",
    "kind": "entity",
@@ -2908,14 +2908,14 @@
    "purpose": "Named sets of permissions (operator, setter, quality engineer ...)"
   },
   {
-   "collection": "u_mes_mdm_rolePermission",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_rolePermission",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "rolePermission",
    "sourceConcept": "roles",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_role",
+   "parent": "u_mes_mast_role",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -2975,14 +2975,14 @@
    "purpose": "Links one role to one permission (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_roleSignatureMeaning",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_roleSignatureMeaning",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "roleSignatureMeaning",
    "sourceConcept": "roles",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_role",
+   "parent": "u_mes_mast_role",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -3042,9 +3042,9 @@
    "purpose": "Links one role to one signature meaning (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_user",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_user",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "user",
    "sourceConcept": "users",
    "kind": "entity",
@@ -3228,14 +3228,14 @@
    "purpose": "People and system accounts; badge id, role, home work centre"
   },
   {
-   "collection": "u_mes_mdm_userRole",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_userRole",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "userRole",
    "sourceConcept": "users",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_user",
+   "parent": "u_mes_mast_user",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -3295,9 +3295,9 @@
    "purpose": "Links one user to one role (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_skill",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_skill",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "skill",
    "sourceConcept": "skills",
    "kind": "entity",
@@ -3395,14 +3395,14 @@
    "purpose": "Skill definitions required by operations (e.g. leak-test operation, CMM programming)"
   },
   {
-   "collection": "u_mes_mdm_skillOperation",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_skillOperation",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "skillOperation",
    "sourceConcept": "skills",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_skill",
+   "parent": "u_mes_mast_skill",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -3462,14 +3462,14 @@
    "purpose": "Links one skill to one operation (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_skillLevelScale",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_skillLevelScale",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "skillLevelScale",
    "sourceConcept": "skills",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_skill",
+   "parent": "u_mes_mast_skill",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -3529,9 +3529,9 @@
    "purpose": "One document per level scale of a skill"
   },
   {
-   "collection": "u_mes_mdm_skillCertification",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_skillCertification",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "skillCertification",
    "sourceConcept": "certifications",
    "kind": "entity",
@@ -3706,9 +3706,9 @@
    "purpose": "Skills-matrix entries: user x skill, level, valid-from/to, assessor; used for operator lock-out"
   },
   {
-   "collection": "u_mes_mdm_customer",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_customer",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "customer",
    "sourceConcept": "customers",
    "kind": "entity",
@@ -3856,14 +3856,14 @@
    "purpose": "OEMs and aftermarket customers; ship-to addresses, label and ASN requirements"
   },
   {
-   "collection": "u_mes_mdm_customerShipTo",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_customerShipTo",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "customerShipTo",
    "sourceConcept": "customers",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_customer",
+   "parent": "u_mes_mast_customer",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -3953,14 +3953,14 @@
    "purpose": "One document per ship to of a customer"
   },
   {
-   "collection": "u_mes_mdm_customerContact",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_customerContact",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "customerContact",
    "sourceConcept": "customers",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_customer",
+   "parent": "u_mes_mast_customer",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -4030,9 +4030,9 @@
    "purpose": "One document per contact of a customer"
   },
   {
-   "collection": "u_mes_mdm_supplier",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_supplier",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "supplier",
    "sourceConcept": "suppliers",
    "kind": "entity",
@@ -4182,14 +4182,14 @@
    "purpose": "Material, tooling and service suppliers; approval status, certificates, PPM rating"
   },
   {
-   "collection": "u_mes_mdm_supplierContact",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_supplierContact",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "supplierContact",
    "sourceConcept": "suppliers",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_supplier",
+   "parent": "u_mes_mast_supplier",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -4259,14 +4259,14 @@
    "purpose": "One document per contact of a supplier"
   },
   {
-   "collection": "u_mes_mdm_supplierCertificate",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_supplierCertificate",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "supplierCertificate",
    "sourceConcept": "suppliers",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mdm_supplier",
+   "parent": "u_mes_mast_supplier",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -4331,14 +4331,14 @@
    "purpose": "One document per certificate of a supplier"
   },
   {
-   "collection": "u_mes_mdm_supplierSuppliedItem",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_supplierSuppliedItem",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "supplierSuppliedItem",
    "sourceConcept": "suppliers",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mdm_supplier",
+   "parent": "u_mes_mast_supplier",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -4398,9 +4398,9 @@
    "purpose": "Links one supplier to one supplied item (one document per link)"
   },
   {
-   "collection": "u_mes_mdm_unitOfMeasure",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_unitOfMeasure",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "unitOfMeasure",
    "sourceConcept": "units_of_measure",
    "kind": "entity",
@@ -4503,9 +4503,9 @@
    "purpose": "Units and conversion factors (EA, kg, N.m, bar, mm, um, kWh)"
   },
   {
-   "collection": "u_mes_prd_item",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_item",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "item",
    "sourceConcept": "items",
    "kind": "entity",
@@ -4699,14 +4699,14 @@
    "purpose": "Parts: finished caliper, semi-finished body, purchased components, raw material, consumables; drawing revision"
   },
   {
-   "collection": "u_mes_prd_itemRevision",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_itemRevision",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "itemRevision",
    "sourceConcept": "items",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_item",
+   "parent": "u_mes_prod_item",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -4781,14 +4781,14 @@
    "purpose": "One document per revision of a item"
   },
   {
-   "collection": "u_mes_prd_itemCustomerPart",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_itemCustomerPart",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "itemCustomerPart",
    "sourceConcept": "items",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_item",
+   "parent": "u_mes_prod_item",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -4858,9 +4858,9 @@
    "purpose": "One document per customer part of a item"
   },
   {
-   "collection": "u_mes_prd_productVariant",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_productVariant",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "productVariant",
    "sourceConcept": "variants",
    "kind": "entity",
@@ -5019,9 +5019,9 @@
    "purpose": "Product variants (LH/RH, piston diameter, pad compound, market) that drive BOM, instruction and label selection"
   },
   {
-   "collection": "u_mes_prd_billOfMaterial",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfMaterial",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfMaterial",
    "sourceConcept": "boms",
    "kind": "entity",
@@ -5150,14 +5150,14 @@
    "purpose": "Multi-level bills of material per item revision with effectivity"
   },
   {
-   "collection": "u_mes_prd_billOfMaterialComponent",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfMaterialComponent",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfMaterialComponent",
    "sourceConcept": "boms",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfMaterial",
+   "parent": "u_mes_prod_billOfMaterial",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5267,14 +5267,14 @@
    "purpose": "One document per component of a billOfMaterial"
   },
   {
-   "collection": "u_mes_prd_billOfMaterialComponentProductVariant",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfMaterialComponentProductVariant",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfMaterialComponentProductVariant",
    "sourceConcept": "boms",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfMaterialComponent",
+   "parent": "u_mes_prod_billOfMaterialComponent",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5334,14 +5334,14 @@
    "purpose": "Links one billOfMaterialComponent to one product variant (one document per link)"
   },
   {
-   "collection": "u_mes_prd_billOfMaterialComponentAlternateItem",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfMaterialComponentAlternateItem",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfMaterialComponentAlternateItem",
    "sourceConcept": "boms",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfMaterialComponent",
+   "parent": "u_mes_prod_billOfMaterialComponent",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5401,9 +5401,9 @@
    "purpose": "Links one billOfMaterialComponent to one alternate item (one document per link)"
   },
   {
-   "collection": "u_mes_prd_operation",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_operation",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "operation",
    "sourceConcept": "operations",
    "kind": "entity",
@@ -5526,14 +5526,14 @@
    "purpose": "Standard operation library (casting, T6, machining ... packing) reused by routings"
   },
   {
-   "collection": "u_mes_prd_operationRequiredSkill",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_operationRequiredSkill",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "operationRequiredSkill",
    "sourceConcept": "operations",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_operation",
+   "parent": "u_mes_prod_operation",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5593,9 +5593,9 @@
    "purpose": "Links one operation to one required skill (one document per link)"
   },
   {
-   "collection": "u_mes_prd_routing",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_routing",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "routing",
    "sourceConcept": "routings",
    "kind": "entity",
@@ -5729,14 +5729,14 @@
    "purpose": "Sequence of operations per item, including rework / disposition routings and alternate paths"
   },
   {
-   "collection": "u_mes_prd_routingStep",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_routingStep",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "routingStep",
    "sourceConcept": "routings",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_routing",
+   "parent": "u_mes_prod_routing",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5841,14 +5841,14 @@
    "purpose": "One document per step of a routing"
   },
   {
-   "collection": "u_mes_prd_routingStepAlternateWorkCenter",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_routingStepAlternateWorkCenter",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "routingStepAlternateWorkCenter",
    "sourceConcept": "routings",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_routingStep",
+   "parent": "u_mes_prod_routingStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5908,14 +5908,14 @@
    "purpose": "Links one routingStep to one alternate work center (one document per link)"
   },
   {
-   "collection": "u_mes_prd_routingStepNextStep",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_routingStepNextStep",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "routingStepNextStep",
    "sourceConcept": "routings",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_routingStep",
+   "parent": "u_mes_prod_routingStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -5970,9 +5970,9 @@
    "purpose": "One document per next step of a routingStep"
   },
   {
-   "collection": "u_mes_prd_billOfProcess",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcess",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcess",
    "sourceConcept": "bills_of_process",
    "kind": "entity",
@@ -6086,14 +6086,14 @@
    "purpose": "Per routing step: required equipment, tools, recipe, work instruction, data collection, consumed components, cycle time"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStep",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStep",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStep",
    "sourceConcept": "bills_of_process",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcess",
+   "parent": "u_mes_prod_billOfProcess",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -6193,14 +6193,14 @@
    "purpose": "One document per step of a billOfProcess"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStepEquipment",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStepEquipment",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStepEquipment",
    "sourceConcept": "bills_of_process",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcessStep",
+   "parent": "u_mes_prod_billOfProcessStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -6260,14 +6260,14 @@
    "purpose": "Links one billOfProcessStep to one equipment (one document per link)"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStepTool",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStepTool",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStepTool",
    "sourceConcept": "bills_of_process",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcessStep",
+   "parent": "u_mes_prod_billOfProcessStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -6327,14 +6327,14 @@
    "purpose": "Links one billOfProcessStep to one tool (one document per link)"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStepRequiredSkill",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStepRequiredSkill",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStepRequiredSkill",
    "sourceConcept": "bills_of_process",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcessStep",
+   "parent": "u_mes_prod_billOfProcessStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -6394,14 +6394,14 @@
    "purpose": "Links one billOfProcessStep to one required skill (one document per link)"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStepConsumedComponent",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStepConsumedComponent",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStepConsumedComponent",
    "sourceConcept": "bills_of_process",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcessStep",
+   "parent": "u_mes_prod_billOfProcessStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -6471,14 +6471,14 @@
    "purpose": "One document per consumed component of a billOfProcessStep"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStepInterlock",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStepInterlock",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStepInterlock",
    "sourceConcept": "bills_of_process",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcessStep",
+   "parent": "u_mes_prod_billOfProcessStep",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -6543,14 +6543,14 @@
    "purpose": "One document per interlock of a billOfProcessStep"
   },
   {
-   "collection": "u_mes_prd_billOfProcessStepProcessParameter",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_billOfProcessStepProcessParameter",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "billOfProcessStepProcessParameter",
    "sourceConcept": "bills_of_process",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_billOfProcessStep",
+   "parent": "u_mes_prod_billOfProcessStep",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -6630,9 +6630,9 @@
    "purpose": "One document per process parameter of a billOfProcessStep"
   },
   {
-   "collection": "u_mes_prd_workInstruction",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstruction",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstruction",
    "sourceConcept": "work_instructions",
    "kind": "entity",
@@ -6776,14 +6776,14 @@
    "purpose": "Versioned visual work instructions with steps, media, cautions, variant applicability, required checks"
   },
   {
-   "collection": "u_mes_prd_workInstructionStep",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionStep",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionStep",
    "sourceConcept": "work_instructions",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstruction",
+   "parent": "u_mes_prod_workInstruction",
    "displayField": "title",
    "statusValues": null,
    "fields": [
@@ -6883,14 +6883,14 @@
    "purpose": "One document per step of a workInstruction"
   },
   {
-   "collection": "u_mes_prd_workInstructionStepMediaControlledDocument",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionStepMediaControlledDocument",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionStepMediaControlledDocument",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstructionStep",
+   "parent": "u_mes_prod_workInstructionStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -6950,14 +6950,14 @@
    "purpose": "Links one workInstructionStep to one media controlled document (one document per link)"
   },
   {
-   "collection": "u_mes_prd_workInstructionStepProductVariant",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionStepProductVariant",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionStepProductVariant",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstructionStep",
+   "parent": "u_mes_prod_workInstructionStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7017,14 +7017,14 @@
    "purpose": "Links one workInstructionStep to one product variant (one document per link)"
   },
   {
-   "collection": "u_mes_prd_workInstructionStepTool",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionStepTool",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionStepTool",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstructionStep",
+   "parent": "u_mes_prod_workInstructionStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7084,14 +7084,14 @@
    "purpose": "Links one workInstructionStep to one tool (one document per link)"
   },
   {
-   "collection": "u_mes_prd_workInstructionStepCharacteristic",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionStepCharacteristic",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionStepCharacteristic",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstructionStep",
+   "parent": "u_mes_prod_workInstructionStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7151,14 +7151,14 @@
    "purpose": "Links one workInstructionStep to one characteristic (one document per link)"
   },
   {
-   "collection": "u_mes_prd_workInstructionPpeItem",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionPpeItem",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionPpeItem",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstruction",
+   "parent": "u_mes_prod_workInstruction",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7218,14 +7218,14 @@
    "purpose": "Links one workInstruction to one ppe item (one document per link)"
   },
   {
-   "collection": "u_mes_prd_workInstructionKeyPoint",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_workInstructionKeyPoint",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "workInstructionKeyPoint",
    "sourceConcept": "work_instructions",
    "kind": "valueList",
    "dataClass": "master",
-   "parent": "u_mes_prd_workInstruction",
+   "parent": "u_mes_prod_workInstruction",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7280,9 +7280,9 @@
    "purpose": "One document per key point value of a workInstruction"
   },
   {
-   "collection": "u_mes_prd_recipe",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_recipe",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "recipe",
    "sourceConcept": "recipes",
    "kind": "entity",
@@ -7426,14 +7426,14 @@
    "purpose": "Machine parameter sets with set-points and limits (die temperature, furnace profile, CNC program, torque program, leak-test program)"
   },
   {
-   "collection": "u_mes_prd_recipeParameter",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_recipeParameter",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "recipeParameter",
    "sourceConcept": "recipes",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_recipe",
+   "parent": "u_mes_prod_recipe",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -7533,14 +7533,14 @@
    "purpose": "One document per parameter of a recipe"
   },
   {
-   "collection": "u_mes_prd_recipeStage",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_recipeStage",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "recipeStage",
    "sourceConcept": "recipes",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_prd_recipe",
+   "parent": "u_mes_prod_recipe",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -7605,9 +7605,9 @@
    "purpose": "One document per stage of a recipe"
   },
   {
-   "collection": "u_mes_prd_engineeringChange",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_engineeringChange",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "engineeringChange",
    "sourceConcept": "engineering_changes",
    "kind": "entity",
@@ -7784,14 +7784,14 @@
    "purpose": "Engineering change notices with affected objects, approvals and effectivity (cut-in serial / date)"
   },
   {
-   "collection": "u_mes_prd_engineeringChangeAffectedItem",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_engineeringChangeAffectedItem",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "engineeringChangeAffectedItem",
    "sourceConcept": "engineering_changes",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_prd_engineeringChange",
+   "parent": "u_mes_prod_engineeringChange",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7891,14 +7891,14 @@
    "purpose": "One document per affected item of a engineeringChange"
   },
   {
-   "collection": "u_mes_prd_engineeringChangeAffectedObject",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_engineeringChangeAffectedObject",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "engineeringChangeAffectedObject",
    "sourceConcept": "engineering_changes",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_prd_engineeringChange",
+   "parent": "u_mes_prod_engineeringChange",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -7998,14 +7998,14 @@
    "purpose": "One document per affected object of a engineeringChange"
   },
   {
-   "collection": "u_mes_prd_engineeringChangeApproval",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_engineeringChangeApproval",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "engineeringChangeApproval",
    "sourceConcept": "engineering_changes",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_prd_engineeringChange",
+   "parent": "u_mes_prod_engineeringChange",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -8115,14 +8115,14 @@
    "purpose": "One document per approval of a engineeringChange"
   },
   {
-   "collection": "u_mes_prd_engineeringChangeControlledDocument",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_engineeringChangeControlledDocument",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "engineeringChangeControlledDocument",
    "sourceConcept": "engineering_changes",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_prd_engineeringChange",
+   "parent": "u_mes_prod_engineeringChange",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -8212,9 +8212,9 @@
    "purpose": "Links one engineeringChange to one controlled document (one document per link)"
   },
   {
-   "collection": "u_mes_exe_customerSchedule",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_customerSchedule",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "customerSchedule",
    "sourceConcept": "customer_schedules",
    "kind": "entity",
@@ -8350,14 +8350,14 @@
    "purpose": "OEM delivery schedules / releases (demand that drives production orders and shipments)"
   },
   {
-   "collection": "u_mes_exe_customerScheduleLine",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_customerScheduleLine",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "customerScheduleLine",
    "sourceConcept": "customer_schedules",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_customerSchedule",
+   "parent": "u_mes_plan_customerSchedule",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -8482,9 +8482,9 @@
    "purpose": "One document per line of a customerSchedule"
   },
   {
-   "collection": "u_mes_exe_productionOrder",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_productionOrder",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "productionOrder",
    "sourceConcept": "production_orders",
    "kind": "entity",
@@ -8742,14 +8742,14 @@
    "purpose": "Shop orders from ERP: item, quantity, routing/BOM version, partial releases, status"
   },
   {
-   "collection": "u_mes_exe_productionOrderRelease",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_productionOrderRelease",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "productionOrderRelease",
    "sourceConcept": "production_orders",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_productionOrder",
+   "parent": "u_mes_plan_productionOrder",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -8849,14 +8849,14 @@
    "purpose": "One document per release of a productionOrder"
   },
   {
-   "collection": "u_mes_exe_productionOrderLot",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_productionOrderLot",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "productionOrderLot",
    "sourceConcept": "production_orders",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_productionOrder",
+   "parent": "u_mes_plan_productionOrder",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -8946,9 +8946,9 @@
    "purpose": "Links one productionOrder to one lot (one document per link)"
   },
   {
-   "collection": "u_mes_exe_productionSchedule",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_productionSchedule",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "productionSchedule",
    "sourceConcept": "production_schedules",
    "kind": "entity",
@@ -9103,14 +9103,14 @@
    "purpose": "Finite schedule per line and shift with sequenced orders, planned start/end"
   },
   {
-   "collection": "u_mes_exe_productionScheduleSlot",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_productionScheduleSlot",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "productionScheduleSlot",
    "sourceConcept": "production_schedules",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_productionSchedule",
+   "parent": "u_mes_plan_productionSchedule",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -9235,9 +9235,9 @@
    "purpose": "One document per slot of a productionSchedule"
   },
   {
-   "collection": "u_mes_exe_dispatchList",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_dispatchList",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "dispatchList",
    "sourceConcept": "dispatch_lists",
    "kind": "entity",
@@ -9366,14 +9366,14 @@
    "purpose": "Prioritised work queue per work centre shown to the operator"
   },
   {
-   "collection": "u_mes_exe_dispatchListEntry",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_dispatchListEntry",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "dispatchListEntry",
    "sourceConcept": "dispatch_lists",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_dispatchList",
+   "parent": "u_mes_plan_dispatchList",
    "displayField": "recordNo",
    "statusValues": [
     "Queued",
@@ -9528,9 +9528,9 @@
    "purpose": "One document per entry of a dispatchList"
   },
   {
-   "collection": "u_mes_exe_operationExecution",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_operationExecution",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "operationExecution",
    "sourceConcept": "operation_executions",
    "kind": "entity",
@@ -9814,14 +9814,14 @@
    "purpose": "Start / complete record of an operation on a unit or lot: who, where, when, result, cycle time (track-in / track-out)"
   },
   {
-   "collection": "u_mes_exe_operationExecutionDefectCode",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_operationExecutionDefectCode",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "operationExecutionDefectCode",
    "sourceConcept": "operation_executions",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_operationExecution",
+   "parent": "u_mes_plan_operationExecution",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -9911,14 +9911,14 @@
    "purpose": "Links one operationExecution to one defect code (one document per link)"
   },
   {
-   "collection": "u_mes_exe_operationExecutionTool",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_operationExecutionTool",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "operationExecutionTool",
    "sourceConcept": "operation_executions",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_operationExecution",
+   "parent": "u_mes_plan_operationExecution",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -10008,9 +10008,9 @@
    "purpose": "Links one operationExecution to one tool (one document per link)"
   },
   {
-   "collection": "u_mes_exe_stepCompletion",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_stepCompletion",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "stepCompletion",
    "sourceConcept": "step_completions",
    "kind": "entity",
@@ -10229,9 +10229,9 @@
    "purpose": "Completion record for each work-instruction step: values entered, confirmations, duration, device data"
   },
   {
-   "collection": "u_mes_exe_wipUnit",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_wipUnit",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "wipUnit",
    "sourceConcept": "wip_units",
    "kind": "entity",
@@ -10490,14 +10490,14 @@
    "purpose": "Serialised unit in production (shop-floor control number): current operation, status, quality state"
   },
   {
-   "collection": "u_mes_exe_wipUnitCompletedStep",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_wipUnitCompletedStep",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "wipUnitCompletedStep",
    "sourceConcept": "wip_units",
    "kind": "valueList",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_wipUnit",
+   "parent": "u_mes_plan_wipUnit",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -10582,9 +10582,9 @@
    "purpose": "One document per completed step value of a wipUnit"
   },
   {
-   "collection": "u_mes_exe_lot",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_lot",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "lot",
    "sourceConcept": "lots",
    "kind": "entity",
@@ -10842,14 +10842,14 @@
    "purpose": "Lots and batches: supplier lots, melt/heat lots, casting lots, heat-treatment charges, anodising loads"
   },
   {
-   "collection": "u_mes_exe_lotParentLot",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_lotParentLot",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "lotParentLot",
    "sourceConcept": "lots",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_lot",
+   "parent": "u_mes_plan_lot",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -10939,14 +10939,14 @@
    "purpose": "Links one lot to one parent lot (one document per link)"
   },
   {
-   "collection": "u_mes_exe_lotAttributesCavityNo",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_lotAttributesCavityNo",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "lotAttributesCavityNo",
    "sourceConcept": "lots",
    "kind": "valueList",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_lot",
+   "parent": "u_mes_plan_lot",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -11031,9 +11031,9 @@
    "purpose": "One document per attributes cavity no value of a lot"
   },
   {
-   "collection": "u_mes_exe_container",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_container",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "container",
    "sourceConcept": "containers",
    "kind": "entity",
@@ -11251,14 +11251,14 @@
    "purpose": "Bins, trolleys, returnable crates and pallets with contents and nesting"
   },
   {
-   "collection": "u_mes_exe_containerLot",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_containerLot",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "containerLot",
    "sourceConcept": "containers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_container",
+   "parent": "u_mes_plan_container",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -11348,9 +11348,9 @@
    "purpose": "Links one container to one lot (one document per link)"
   },
   {
-   "collection": "u_mes_exe_labourBooking",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_labourBooking",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "labourBooking",
    "sourceConcept": "labour_bookings",
    "kind": "entity",
@@ -11549,9 +11549,9 @@
    "purpose": "Clock-on / clock-off of people against orders, operations and indirect activities"
   },
   {
-   "collection": "u_mes_exe_changeover",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_changeover",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "changeover",
    "sourceConcept": "changeovers",
    "kind": "entity",
@@ -11771,14 +11771,14 @@
    "purpose": "Changeover from one item / variant to another: planned vs actual duration, checklist, first-off approval"
   },
   {
-   "collection": "u_mes_exe_changeoverStep",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_changeoverStep",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "changeoverStep",
    "sourceConcept": "changeovers",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_changeover",
+   "parent": "u_mes_plan_changeover",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -11883,14 +11883,14 @@
    "purpose": "One document per step of a changeover"
   },
   {
-   "collection": "u_mes_exe_changeoverRemovedTool",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_changeoverRemovedTool",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "changeoverRemovedTool",
    "sourceConcept": "changeovers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_changeover",
+   "parent": "u_mes_plan_changeover",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -11980,14 +11980,14 @@
    "purpose": "Links one changeover to one removed tool (one document per link)"
   },
   {
-   "collection": "u_mes_exe_changeoverInstalledTool",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_changeoverInstalledTool",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "changeoverInstalledTool",
    "sourceConcept": "changeovers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_changeover",
+   "parent": "u_mes_plan_changeover",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -12077,14 +12077,14 @@
    "purpose": "Links one changeover to one installed tool (one document per link)"
   },
   {
-   "collection": "u_mes_exe_changeoverPerformedByUser",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_changeoverPerformedByUser",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "changeoverPerformedByUser",
    "sourceConcept": "changeovers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_changeover",
+   "parent": "u_mes_plan_changeover",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -12174,9 +12174,9 @@
    "purpose": "Links one changeover to one performed by user (one document per link)"
   },
   {
-   "collection": "u_mes_exe_shiftHandover",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_shiftHandover",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "shiftHandover",
    "sourceConcept": "shift_handovers",
    "kind": "entity",
@@ -12355,14 +12355,14 @@
    "purpose": "Shift logbook: output, open issues, safety and quality notes, acknowledgements"
   },
   {
-   "collection": "u_mes_exe_shiftHandoverProductionOrder",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_shiftHandoverProductionOrder",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "shiftHandoverProductionOrder",
    "sourceConcept": "shift_handovers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_shiftHandover",
+   "parent": "u_mes_plan_shiftHandover",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -12452,14 +12452,14 @@
    "purpose": "Links one shiftHandover to one production order (one document per link)"
   },
   {
-   "collection": "u_mes_exe_shiftHandoverDowntimeEvent",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_shiftHandoverDowntimeEvent",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "shiftHandoverDowntimeEvent",
    "sourceConcept": "shift_handovers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_shiftHandover",
+   "parent": "u_mes_plan_shiftHandover",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -12549,14 +12549,14 @@
    "purpose": "Links one shiftHandover to one downtime event (one document per link)"
   },
   {
-   "collection": "u_mes_exe_shiftHandoverNonconformance",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_shiftHandoverNonconformance",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "shiftHandoverNonconformance",
    "sourceConcept": "shift_handovers",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_shiftHandover",
+   "parent": "u_mes_plan_shiftHandover",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -12646,14 +12646,14 @@
    "purpose": "Links one shiftHandover to one nonconformance (one document per link)"
   },
   {
-   "collection": "u_mes_exe_shiftHandoverOpenItem",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_shiftHandoverOpenItem",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "shiftHandoverOpenItem",
    "sourceConcept": "shift_handovers",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_exe_shiftHandover",
+   "parent": "u_mes_plan_shiftHandover",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -12758,9 +12758,9 @@
    "purpose": "One document per open item of a shiftHandover"
   },
   {
-   "collection": "u_mes_mat_storageLocation",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_storageLocation",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "storageLocation",
    "sourceConcept": "storage_locations",
    "kind": "entity",
@@ -12898,9 +12898,9 @@
    "purpose": "Warehouses, racks, line-side supermarkets, quarantine cage, dispatch bay"
   },
   {
-   "collection": "u_mes_mat_inventoryBalance",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_inventoryBalance",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "inventoryBalance",
    "sourceConcept": "inventory_balances",
    "kind": "entity",
@@ -13083,9 +13083,9 @@
    "purpose": "Stock on hand per item, lot, location and stock status"
   },
   {
-   "collection": "u_mes_mat_materialMovement",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_materialMovement",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "materialMovement",
    "sourceConcept": "material_movements",
    "kind": "entity",
@@ -13343,9 +13343,9 @@
    "purpose": "Every stock transaction: receipt, putaway, issue to line, return, scrap, transfer, shipment"
   },
   {
-   "collection": "u_mes_mat_goodsReceipt",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_goodsReceipt",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "goodsReceipt",
    "sourceConcept": "goods_receipts",
    "kind": "entity",
@@ -13491,14 +13491,14 @@
    "purpose": "Receipts from suppliers with lines, supplier lot, certificate, incoming inspection status"
   },
   {
-   "collection": "u_mes_mat_goodsReceiptLine",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_goodsReceiptLine",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "goodsReceiptLine",
    "sourceConcept": "goods_receipts",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_mat_goodsReceipt",
+   "parent": "u_mes_matl_goodsReceipt",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -13653,14 +13653,14 @@
    "purpose": "One document per line of a goodsReceipt"
   },
   {
-   "collection": "u_mes_mat_goodsReceiptLineInspectionResult",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_goodsReceiptLineInspectionResult",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "goodsReceiptLineInspectionResult",
    "sourceConcept": "goods_receipts",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_mat_goodsReceiptLine",
+   "parent": "u_mes_matl_goodsReceiptLine",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -13750,9 +13750,9 @@
    "purpose": "Links one goodsReceiptLine to one inspection result (one document per link)"
   },
   {
-   "collection": "u_mes_mat_kit",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_kit",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "kit",
    "sourceConcept": "kits",
    "kind": "entity",
@@ -13913,14 +13913,14 @@
    "purpose": "Kits of components picked for an order / line-side delivery"
   },
   {
-   "collection": "u_mes_mat_kitLine",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_kitLine",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "kitLine",
    "sourceConcept": "kits",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_mat_kit",
+   "parent": "u_mes_matl_kit",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -14045,9 +14045,9 @@
    "purpose": "One document per line of a kit"
   },
   {
-   "collection": "u_mes_mat_materialRequest",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_materialRequest",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "materialRequest",
    "sourceConcept": "material_requests",
    "kind": "entity",
@@ -14262,9 +14262,9 @@
    "purpose": "Line-side replenishment calls (e-kanban) from a work centre to stores"
   },
   {
-   "collection": "u_mes_mat_materialConsumption",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_materialConsumption",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "materialConsumption",
    "sourceConcept": "material_consumptions",
    "kind": "entity",
@@ -14497,9 +14497,9 @@
    "purpose": "Component / lot consumed at an operation on a unit or lot (backflush or scanned)"
   },
   {
-   "collection": "u_mes_mat_packagingSpecification",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_packagingSpecification",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "packagingSpecification",
    "sourceConcept": "packaging_specifications",
    "kind": "entity",
@@ -14658,14 +14658,14 @@
    "purpose": "Pack instruction: container type, quantity per bin, layers, dunnage, label template"
   },
   {
-   "collection": "u_mes_mat_packagingSpecificationLevel",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_packagingSpecificationLevel",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "packagingSpecificationLevel",
    "sourceConcept": "packaging_specifications",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mat_packagingSpecification",
+   "parent": "u_mes_matl_packagingSpecification",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -14745,9 +14745,9 @@
    "purpose": "One document per level of a packagingSpecification"
   },
   {
-   "collection": "u_mes_mat_labelTemplate",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_labelTemplate",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "labelTemplate",
    "sourceConcept": "label_templates",
    "kind": "entity",
@@ -14861,14 +14861,14 @@
    "purpose": "Label layouts (unit 2D code, bin label, customer shipping label, hold tag)"
   },
   {
-   "collection": "u_mes_mat_labelTemplateField",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_labelTemplateField",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "labelTemplateField",
    "sourceConcept": "label_templates",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mat_labelTemplate",
+   "parent": "u_mes_matl_labelTemplate",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -14948,9 +14948,9 @@
    "purpose": "One document per field of a labelTemplate"
   },
   {
-   "collection": "u_mes_mat_label",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_label",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "label",
    "sourceConcept": "labels",
    "kind": "entity",
@@ -15175,9 +15175,9 @@
    "purpose": "Printed label instances with payload, printer, reprint count"
   },
   {
-   "collection": "u_mes_mat_shipment",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_shipment",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "shipment",
    "sourceConcept": "shipments",
    "kind": "entity",
@@ -15393,14 +15393,14 @@
    "purpose": "Dispatch to customer: invoice / ASN, vehicle, containers shipped, proof of delivery"
   },
   {
-   "collection": "u_mes_mat_shipmentLine",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_shipmentLine",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "shipmentLine",
    "sourceConcept": "shipments",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_mat_shipment",
+   "parent": "u_mes_matl_shipment",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -15500,14 +15500,14 @@
    "purpose": "One document per line of a shipment"
   },
   {
-   "collection": "u_mes_mat_shipmentLineContainer",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_shipmentLineContainer",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "shipmentLineContainer",
    "sourceConcept": "shipments",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_mat_shipmentLine",
+   "parent": "u_mes_matl_shipmentLine",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -15597,14 +15597,14 @@
    "purpose": "Links one shipmentLine to one container (one document per link)"
   },
   {
-   "collection": "u_mes_mat_shipmentLineLot",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_shipmentLineLot",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "shipmentLineLot",
    "sourceConcept": "shipments",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_mat_shipmentLine",
+   "parent": "u_mes_matl_shipmentLine",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -15694,8 +15694,8 @@
    "purpose": "Links one shipmentLine to one lot (one document per link)"
   },
   {
-   "collection": "u_mes_trc_serialNumber",
-   "module": "trc",
+   "collection": "u_mes_trac_serialNumber",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "serialNumber",
    "sourceConcept": "serial_numbers",
@@ -15918,8 +15918,8 @@
    "purpose": "Registry of every serial / 2D code issued: status, mark grade, unit and shipment linkage"
   },
   {
-   "collection": "u_mes_trc_genealogyLink",
-   "module": "trc",
+   "collection": "u_mes_trac_genealogyLink",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "genealogyLink",
    "sourceConcept": "genealogy_links",
@@ -16133,8 +16133,8 @@
    "purpose": "As-built parent-child edges: unit to component serial or component lot, with operation and time"
   },
   {
-   "collection": "u_mes_trc_componentLotLink",
-   "module": "trc",
+   "collection": "u_mes_trac_componentLotLink",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "componentLotLink",
    "sourceConcept": "component_lot_links",
@@ -16313,8 +16313,8 @@
    "purpose": "Lot-to-lot lineage: ingot heat to melt to casting lot to heat-treatment charge to anodising load; split and merge"
   },
   {
-   "collection": "u_mes_trc_asBuiltRecord",
-   "module": "trc",
+   "collection": "u_mes_trac_asBuiltRecord",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "asBuiltRecord",
    "sourceConcept": "as_built_records",
@@ -16588,14 +16588,14 @@
    "purpose": "Device-history summary per shipped unit: components, key results, operators, sign-off (digital birth certificate)"
   },
   {
-   "collection": "u_mes_trc_asBuiltRecordComponent",
-   "module": "trc",
+   "collection": "u_mes_trac_asBuiltRecordComponent",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "asBuiltRecordComponent",
    "sourceConcept": "as_built_records",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_trc_asBuiltRecord",
+   "parent": "u_mes_trac_asBuiltRecord",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -16715,14 +16715,14 @@
    "purpose": "One document per component of a asBuiltRecord"
   },
   {
-   "collection": "u_mes_trc_asBuiltRecordOperation",
-   "module": "trc",
+   "collection": "u_mes_trac_asBuiltRecordOperation",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "asBuiltRecordOperation",
    "sourceConcept": "as_built_records",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_trc_asBuiltRecord",
+   "parent": "u_mes_trac_asBuiltRecord",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -16852,14 +16852,14 @@
    "purpose": "One document per operation of a asBuiltRecord"
   },
   {
-   "collection": "u_mes_trc_asBuiltRecordInspectionResult",
-   "module": "trc",
+   "collection": "u_mes_trac_asBuiltRecordInspectionResult",
+   "module": "trac",
    "moduleName": "Traceability",
    "entity": "asBuiltRecordInspectionResult",
    "sourceConcept": "as_built_records",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_trc_asBuiltRecord",
+   "parent": "u_mes_trac_asBuiltRecord",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -16949,9 +16949,9 @@
    "purpose": "Links one asBuiltRecord to one inspection result (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_characteristic",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_characteristic",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "characteristic",
    "sourceConcept": "characteristics",
    "kind": "entity",
@@ -17129,9 +17129,9 @@
    "purpose": "Product and process characteristics with nominal, tolerance, class (critical / significant), method"
   },
   {
-   "collection": "u_mes_qlt_controlPlan",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_controlPlan",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "controlPlan",
    "sourceConcept": "control_plans",
    "kind": "entity",
@@ -17280,14 +17280,14 @@
    "purpose": "AIAG control plan per item and phase (prototype, pre-launch, production)"
   },
   {
-   "collection": "u_mes_qlt_controlPlanCoreTeamUser",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_controlPlanCoreTeamUser",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "controlPlanCoreTeamUser",
    "sourceConcept": "control_plans",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_qlt_controlPlan",
+   "parent": "u_mes_qual_controlPlan",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -17347,14 +17347,14 @@
    "purpose": "Links one controlPlan to one core team user (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_controlPlanLine",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_controlPlanLine",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "controlPlanLine",
    "sourceConcept": "control_plans",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_qlt_controlPlan",
+   "parent": "u_mes_qual_controlPlan",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -17484,9 +17484,9 @@
    "purpose": "One document per line of a controlPlan"
   },
   {
-   "collection": "u_mes_qlt_inspectionPlan",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_inspectionPlan",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "inspectionPlan",
    "sourceConcept": "inspection_plans",
    "kind": "entity",
@@ -17635,14 +17635,14 @@
    "purpose": "Executable data-collection group per operation: which characteristics, sample size, frequency, reaction"
   },
   {
-   "collection": "u_mes_qlt_inspectionPlanLine",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_inspectionPlanLine",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "inspectionPlanLine",
    "sourceConcept": "inspection_plans",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_qlt_inspectionPlan",
+   "parent": "u_mes_qual_inspectionPlan",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -17752,9 +17752,9 @@
    "purpose": "One document per line of a inspectionPlan"
   },
   {
-   "collection": "u_mes_qlt_samplingPlan",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_samplingPlan",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "samplingPlan",
    "sourceConcept": "sampling_plans",
    "kind": "entity",
@@ -17862,14 +17862,14 @@
    "purpose": "Sampling rules: AQL tables, skip-lot, time or counter based frequency"
   },
   {
-   "collection": "u_mes_qlt_samplingPlanSizeRow",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_samplingPlanSizeRow",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "samplingPlanSizeRow",
    "sourceConcept": "sampling_plans",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_qlt_samplingPlan",
+   "parent": "u_mes_qual_samplingPlan",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -17944,9 +17944,9 @@
    "purpose": "One document per size row of a samplingPlan"
   },
   {
-   "collection": "u_mes_qlt_checkSheet",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_checkSheet",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "checkSheet",
    "sourceConcept": "check_sheets",
    "kind": "entity",
@@ -18085,14 +18085,14 @@
    "purpose": "Check sheet definitions: start-of-shift checks, poka-yoke verification, first-off, autonomous maintenance"
   },
   {
-   "collection": "u_mes_qlt_checkSheetItem",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_checkSheetItem",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "checkSheetItem",
    "sourceConcept": "check_sheets",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_qlt_checkSheet",
+   "parent": "u_mes_qual_checkSheet",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -18182,9 +18182,9 @@
    "purpose": "One document per item of a checkSheet"
   },
   {
-   "collection": "u_mes_qlt_checkSheetResult",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_checkSheetResult",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "checkSheetResult",
    "sourceConcept": "check_sheet_results",
    "kind": "entity",
@@ -18383,14 +18383,14 @@
    "purpose": "Completed check sheets with answers, failures and reactions"
   },
   {
-   "collection": "u_mes_qlt_checkSheetResultAnswer",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_checkSheetResultAnswer",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "checkSheetResultAnswer",
    "sourceConcept": "check_sheet_results",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_checkSheetResult",
+   "parent": "u_mes_qual_checkSheetResult",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -18490,9 +18490,9 @@
    "purpose": "One document per answer of a checkSheetResult"
   },
   {
-   "collection": "u_mes_qlt_inspectionResult",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_inspectionResult",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "inspectionResult",
    "sourceConcept": "inspection_results",
    "kind": "entity",
@@ -18780,9 +18780,9 @@
    "purpose": "Measured and attribute results per unit / lot / receipt against a characteristic"
   },
   {
-   "collection": "u_mes_qlt_spcChart",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcChart",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcChart",
    "sourceConcept": "spc_charts",
    "kind": "entity",
@@ -18946,14 +18946,14 @@
    "purpose": "Chart definition per characteristic and work centre: chart type, subgroup size, control limits, rules"
   },
   {
-   "collection": "u_mes_qlt_spcChartControlLimit",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcChartControlLimit",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcChartControlLimit",
    "sourceConcept": "spc_charts",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_qlt_spcChart",
+   "parent": "u_mes_qual_spcChart",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -19043,14 +19043,14 @@
    "purpose": "One document per control limit of a spcChart"
   },
   {
-   "collection": "u_mes_qlt_spcChartRule",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcChartRule",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcChartRule",
    "sourceConcept": "spc_charts",
    "kind": "valueList",
    "dataClass": "master",
-   "parent": "u_mes_qlt_spcChart",
+   "parent": "u_mes_qual_spcChart",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -19105,9 +19105,9 @@
    "purpose": "One document per rule value of a spcChart"
   },
   {
-   "collection": "u_mes_qlt_spcSample",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcSample",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcSample",
    "sourceConcept": "spc_samples",
    "kind": "entity",
@@ -19306,14 +19306,14 @@
    "purpose": "Subgroups with readings, mean, range, rule violations and reaction"
   },
   {
-   "collection": "u_mes_qlt_spcSampleReading",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcSampleReading",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcSampleReading",
    "sourceConcept": "spc_samples",
    "kind": "valueList",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_spcSample",
+   "parent": "u_mes_qual_spcSample",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -19398,14 +19398,14 @@
    "purpose": "One document per reading value of a spcSample"
   },
   {
-   "collection": "u_mes_qlt_spcSampleInspectionResult",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcSampleInspectionResult",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcSampleInspectionResult",
    "sourceConcept": "spc_samples",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_spcSample",
+   "parent": "u_mes_qual_spcSample",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -19495,14 +19495,14 @@
    "purpose": "Links one spcSample to one inspection result (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_spcSampleViolation",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_spcSampleViolation",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "spcSampleViolation",
    "sourceConcept": "spc_samples",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_spcSample",
+   "parent": "u_mes_qual_spcSample",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -19592,9 +19592,9 @@
    "purpose": "One document per violation of a spcSample"
   },
   {
-   "collection": "u_mes_qlt_defectCode",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_defectCode",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "defectCode",
    "sourceConcept": "defect_codes",
    "kind": "entity",
@@ -19717,14 +19717,14 @@
    "purpose": "Defect / NC code catalogue with group, default disposition routing and severity"
   },
   {
-   "collection": "u_mes_qlt_defectCodeApplicableOperation",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_defectCodeApplicableOperation",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "defectCodeApplicableOperation",
    "sourceConcept": "defect_codes",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_qlt_defectCode",
+   "parent": "u_mes_qual_defectCode",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -19784,9 +19784,9 @@
    "purpose": "Links one defectCode to one applicable operation (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_nonconformance",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformance",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformance",
    "sourceConcept": "nonconformances",
    "kind": "entity",
@@ -20032,14 +20032,14 @@
    "purpose": "Nonconformance reports: what, where, quantity, containment, disposition (use-as-is, rework, scrap, return)"
   },
   {
-   "collection": "u_mes_qlt_nonconformanceAffectedObject",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformanceAffectedObject",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformanceAffectedObject",
    "sourceConcept": "nonconformances",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -20164,14 +20164,14 @@
    "purpose": "One document per affected object of a nonconformance"
   },
   {
-   "collection": "u_mes_qlt_nonconformanceContainmentAction",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformanceContainmentAction",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformanceContainmentAction",
    "sourceConcept": "nonconformances",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -20271,14 +20271,14 @@
    "purpose": "One document per containment action of a nonconformance"
   },
   {
-   "collection": "u_mes_qlt_nonconformanceInspectionResult",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformanceInspectionResult",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformanceInspectionResult",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -20368,14 +20368,14 @@
    "purpose": "Links one nonconformance to one inspection result (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_nonconformanceReworkOrder",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformanceReworkOrder",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformanceReworkOrder",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -20465,14 +20465,14 @@
    "purpose": "Links one nonconformance to one rework order (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_nonconformanceScrapRecord",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformanceScrapRecord",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformanceScrapRecord",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -20562,14 +20562,14 @@
    "purpose": "Links one nonconformance to one scrap record (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_nonconformancePhotoControlledDocument",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformancePhotoControlledDocument",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformancePhotoControlledDocument",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -20659,14 +20659,14 @@
    "purpose": "Links one nonconformance to one photo controlled document (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_nonconformanceMrbUser",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_nonconformanceMrbUser",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "nonconformanceMrbUser",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_nonconformance",
+   "parent": "u_mes_qual_nonconformance",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -20756,9 +20756,9 @@
    "purpose": "Links one nonconformance to one mrb user (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_reworkOrder",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_reworkOrder",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "reworkOrder",
    "sourceConcept": "rework_orders",
    "kind": "entity",
@@ -20974,14 +20974,14 @@
    "purpose": "Rework instruction and execution on the rework routing with re-inspection result"
   },
   {
-   "collection": "u_mes_qlt_reworkOrderWipUnit",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_reworkOrderWipUnit",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "reworkOrderWipUnit",
    "sourceConcept": "rework_orders",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_reworkOrder",
+   "parent": "u_mes_qual_reworkOrder",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -21071,14 +21071,14 @@
    "purpose": "Links one reworkOrder to one wip unit (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_reworkOrderStep",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_reworkOrderStep",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "reworkOrderStep",
    "sourceConcept": "rework_orders",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_reworkOrder",
+   "parent": "u_mes_qual_reworkOrder",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -21188,9 +21188,9 @@
    "purpose": "One document per step of a reworkOrder"
   },
   {
-   "collection": "u_mes_qlt_scrapRecord",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_scrapRecord",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "scrapRecord",
    "sourceConcept": "scrap_records",
    "kind": "entity",
@@ -21439,9 +21439,9 @@
    "purpose": "Scrap declaration with quantity, weight, cost, defect code and operation of origin"
   },
   {
-   "collection": "u_mes_qlt_qualityHold",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_qualityHold",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "qualityHold",
    "sourceConcept": "quality_holds",
    "kind": "entity",
@@ -21625,14 +21625,14 @@
    "purpose": "Hold / quarantine on units, lots, containers or locations with reason and release decision"
   },
   {
-   "collection": "u_mes_qlt_qualityHoldHeldObject",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_qualityHoldHeldObject",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "qualityHoldHeldObject",
    "sourceConcept": "quality_holds",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_qualityHold",
+   "parent": "u_mes_qual_qualityHold",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -21742,9 +21742,9 @@
    "purpose": "One document per held object of a qualityHold"
   },
   {
-   "collection": "u_mes_qlt_deviationPermit",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_deviationPermit",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "deviationPermit",
    "sourceConcept": "deviation_permits",
    "kind": "entity",
@@ -21955,14 +21955,14 @@
    "purpose": "Temporary deviations / concessions approved by the customer with quantity or date limit"
   },
   {
-   "collection": "u_mes_qlt_deviationPermitApproval",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_deviationPermitApproval",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "deviationPermitApproval",
    "sourceConcept": "deviation_permits",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_deviationPermit",
+   "parent": "u_mes_qual_deviationPermit",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -22067,9 +22067,9 @@
    "purpose": "One document per approval of a deviationPermit"
   },
   {
-   "collection": "u_mes_qlt_capa",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capa",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capa",
    "sourceConcept": "capas",
    "kind": "entity",
@@ -22301,14 +22301,14 @@
    "purpose": "Corrective and preventive actions in 8D structure (D1-D8) with team, root cause, actions, verification"
   },
   {
-   "collection": "u_mes_qlt_capaNonconformance",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capaNonconformance",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capaNonconformance",
    "sourceConcept": "capas",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_capa",
+   "parent": "u_mes_qual_capa",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -22398,14 +22398,14 @@
    "purpose": "Links one capa to one nonconformance (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_capaTeamMember",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capaTeamMember",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capaTeamMember",
    "sourceConcept": "capas",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_capa",
+   "parent": "u_mes_qual_capa",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -22500,14 +22500,14 @@
    "purpose": "One document per team member of a capa"
   },
   {
-   "collection": "u_mes_qlt_capaContainmentAction",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capaContainmentAction",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capaContainmentAction",
    "sourceConcept": "capas",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_capa",
+   "parent": "u_mes_qual_capa",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -22607,14 +22607,14 @@
    "purpose": "One document per containment action of a capa"
   },
   {
-   "collection": "u_mes_qlt_capaCorrectiveAction",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capaCorrectiveAction",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capaCorrectiveAction",
    "sourceConcept": "capas",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_capa",
+   "parent": "u_mes_qual_capa",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -22714,14 +22714,14 @@
    "purpose": "One document per corrective action of a capa"
   },
   {
-   "collection": "u_mes_qlt_capaImplementationAction",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capaImplementationAction",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capaImplementationAction",
    "sourceConcept": "capas",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_capa",
+   "parent": "u_mes_qual_capa",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -22826,14 +22826,14 @@
    "purpose": "One document per implementation action of a capa"
   },
   {
-   "collection": "u_mes_qlt_capaControlledDocument",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_capaControlledDocument",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "capaControlledDocument",
    "sourceConcept": "capas",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_capa",
+   "parent": "u_mes_qual_capa",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -22923,9 +22923,9 @@
    "purpose": "Links one capa to one controlled document (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_pfmea",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_pfmea",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "pfmea",
    "sourceConcept": "pfmeas",
    "kind": "entity",
@@ -23039,14 +23039,14 @@
    "purpose": "Process FMEA per item / process: failure modes, effects, causes, S-O-D, action priority"
   },
   {
-   "collection": "u_mes_qlt_pfmeaCoreTeamUser",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_pfmeaCoreTeamUser",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "pfmeaCoreTeamUser",
    "sourceConcept": "pfmeas",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_qlt_pfmea",
+   "parent": "u_mes_qual_pfmea",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -23106,14 +23106,14 @@
    "purpose": "Links one pfmea to one core team user (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_pfmeaLine",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_pfmeaLine",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "pfmeaLine",
    "sourceConcept": "pfmeas",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_qlt_pfmea",
+   "parent": "u_mes_qual_pfmea",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -23283,9 +23283,9 @@
    "purpose": "One document per line of a pfmea"
   },
   {
-   "collection": "u_mes_qlt_ppapSubmission",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_ppapSubmission",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "ppapSubmission",
    "sourceConcept": "ppap_submissions",
    "kind": "entity",
@@ -23481,14 +23481,14 @@
    "purpose": "PPAP package: level, 18 elements with status, PSW, customer decision"
   },
   {
-   "collection": "u_mes_qlt_ppapSubmissionElement",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_ppapSubmissionElement",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "ppapSubmissionElement",
    "sourceConcept": "ppap_submissions",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_ppapSubmission",
+   "parent": "u_mes_qual_ppapSubmission",
    "displayField": "name",
    "statusValues": [
     "Not Started",
@@ -23598,14 +23598,14 @@
    "purpose": "One document per element of a ppapSubmission"
   },
   {
-   "collection": "u_mes_qlt_ppapSubmissionMsaStudy",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_ppapSubmissionMsaStudy",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "ppapSubmissionMsaStudy",
    "sourceConcept": "ppap_submissions",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_ppapSubmission",
+   "parent": "u_mes_qual_ppapSubmission",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -23695,9 +23695,9 @@
    "purpose": "Links one ppapSubmission to one msa study (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_gauge",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_gauge",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "gauge",
    "sourceConcept": "gauges",
    "kind": "entity",
@@ -23904,9 +23904,9 @@
    "purpose": "Gauges and measuring instruments: type, range, resolution, calibration interval and due date, status"
   },
   {
-   "collection": "u_mes_qlt_gaugeCalibration",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_gaugeCalibration",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "gaugeCalibration",
    "sourceConcept": "gauge_calibrations",
    "kind": "entity",
@@ -24100,14 +24100,14 @@
    "purpose": "Calibration events: as-found / as-left readings, standard used, result, certificate"
   },
   {
-   "collection": "u_mes_qlt_gaugeCalibrationReading",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_gaugeCalibrationReading",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "gaugeCalibrationReading",
    "sourceConcept": "gauge_calibrations",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_gaugeCalibration",
+   "parent": "u_mes_qual_gaugeCalibration",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -24212,9 +24212,9 @@
    "purpose": "One document per reading of a gaugeCalibration"
   },
   {
-   "collection": "u_mes_qlt_msaStudy",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_msaStudy",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "msaStudy",
    "sourceConcept": "msa_studies",
    "kind": "entity",
@@ -24439,14 +24439,14 @@
    "purpose": "Measurement system analysis: gauge R&R, bias, linearity, attribute agreement"
   },
   {
-   "collection": "u_mes_qlt_msaStudyAppraiserUser",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_msaStudyAppraiserUser",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "msaStudyAppraiserUser",
    "sourceConcept": "msa_studies",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_msaStudy",
+   "parent": "u_mes_qual_msaStudy",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -24536,14 +24536,14 @@
    "purpose": "Links one msaStudy to one appraiser user (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_msaStudyTrial",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_msaStudyTrial",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "msaStudyTrial",
    "sourceConcept": "msa_studies",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_msaStudy",
+   "parent": "u_mes_qual_msaStudy",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -24643,9 +24643,9 @@
    "purpose": "One document per trial of a msaStudy"
   },
   {
-   "collection": "u_mes_qlt_audit",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_audit",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "audit",
    "sourceConcept": "audits",
    "kind": "entity",
@@ -24860,14 +24860,14 @@
    "purpose": "Layered process, process (VDA 6.3), product and system audits with findings"
   },
   {
-   "collection": "u_mes_qlt_auditAuditorUser",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_auditAuditorUser",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "auditAuditorUser",
    "sourceConcept": "audits",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_audit",
+   "parent": "u_mes_qual_audit",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -24957,14 +24957,14 @@
    "purpose": "Links one audit to one auditor user (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_auditFinding",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_auditFinding",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "auditFinding",
    "sourceConcept": "audits",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_audit",
+   "parent": "u_mes_qual_audit",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -25089,9 +25089,9 @@
    "purpose": "One document per finding of a audit"
   },
   {
-   "collection": "u_mes_qlt_customerComplaint",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_customerComplaint",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "customerComplaint",
    "sourceConcept": "customer_complaints",
    "kind": "entity",
@@ -25327,14 +25327,14 @@
    "purpose": "Customer complaints / line rejections / warranty returns with affected serials and PPM impact"
   },
   {
-   "collection": "u_mes_qlt_customerComplaintSerialNumber",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_customerComplaintSerialNumber",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "customerComplaintSerialNumber",
    "sourceConcept": "customer_complaints",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_customerComplaint",
+   "parent": "u_mes_qual_customerComplaint",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -25424,14 +25424,14 @@
    "purpose": "Links one customerComplaint to one serial number (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_customerComplaintShipment",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_customerComplaintShipment",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "customerComplaintShipment",
    "sourceConcept": "customer_complaints",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_customerComplaint",
+   "parent": "u_mes_qual_customerComplaint",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -25521,14 +25521,14 @@
    "purpose": "Links one customerComplaint to one shipment (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_customerComplaintSuspectLot",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_customerComplaintSuspectLot",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "customerComplaintSuspectLot",
    "sourceConcept": "customer_complaints",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_customerComplaint",
+   "parent": "u_mes_qual_customerComplaint",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -25618,14 +25618,14 @@
    "purpose": "Links one customerComplaint to one suspect lot (one document per link)"
   },
   {
-   "collection": "u_mes_qlt_customerComplaintCommunication",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_customerComplaintCommunication",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "customerComplaintCommunication",
    "sourceConcept": "customer_complaints",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_qlt_customerComplaint",
+   "parent": "u_mes_qual_customerComplaint",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -25730,9 +25730,9 @@
    "purpose": "One document per communication of a customerComplaint"
   },
   {
-   "collection": "u_mes_eqp_reasonCode",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_reasonCode",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "reasonCode",
    "sourceConcept": "reason_codes",
    "kind": "entity",
@@ -25865,9 +25865,9 @@
    "purpose": "Reason tree (up to 4 levels) for downtime, scrap, hold and andon with planned / unplanned category"
   },
   {
-   "collection": "u_mes_eqp_equipmentState",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_equipmentState",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "equipmentState",
    "sourceConcept": "equipment_states",
    "kind": "entity",
@@ -26035,9 +26035,9 @@
    "purpose": "State intervals per equipment: running, idle, setup, down, starved, blocked"
   },
   {
-   "collection": "u_mes_eqp_downtimeEvent",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_downtimeEvent",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "downtimeEvent",
    "sourceConcept": "downtime_events",
    "kind": "entity",
@@ -26291,14 +26291,14 @@
    "purpose": "Classified stops with fault, reason path, action taken, duration, responsible group"
   },
   {
-   "collection": "u_mes_eqp_downtimeEventComment",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_downtimeEventComment",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "downtimeEventComment",
    "sourceConcept": "downtime_events",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_eqp_downtimeEvent",
+   "parent": "u_mes_perf_downtimeEvent",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -26398,9 +26398,9 @@
    "purpose": "One document per comment of a downtimeEvent"
   },
   {
-   "collection": "u_mes_eqp_productionCount",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_productionCount",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "productionCount",
    "sourceConcept": "production_counts",
    "kind": "entity",
@@ -26588,9 +26588,9 @@
    "purpose": "Hourly good / reject / rework counts per work centre against target (hour-by-hour board)"
   },
   {
-   "collection": "u_mes_eqp_oeeRecord",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_oeeRecord",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "oeeRecord",
    "sourceConcept": "oee_records",
    "kind": "entity",
@@ -26818,14 +26818,14 @@
    "purpose": "OEE per equipment / line and shift: availability, performance, quality with the time and count basis"
   },
   {
-   "collection": "u_mes_eqp_oeeRecordLoss",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_oeeRecordLoss",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "oeeRecordLoss",
    "sourceConcept": "oee_records",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_eqp_oeeRecord",
+   "parent": "u_mes_perf_oeeRecord",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -26935,9 +26935,9 @@
    "purpose": "One document per loss of a oeeRecord"
   },
   {
-   "collection": "u_mes_eqp_processTag",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_processTag",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "processTag",
    "sourceConcept": "process_tags",
    "kind": "entity",
@@ -27095,9 +27095,9 @@
    "purpose": "Tag definitions: source address, unit, deadband, limits, equipment"
   },
   {
-   "collection": "u_mes_eqp_processReading",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_processReading",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "processReading",
    "sourceConcept": "process_data",
    "kind": "entity",
@@ -27232,9 +27232,9 @@
    "purpose": "Tag values over time (die temperature, furnace zone temperature, spindle load, bath pH, current)"
   },
   {
-   "collection": "u_mes_eqp_alarm",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_alarm",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "alarm",
    "sourceConcept": "alarms",
    "kind": "entity",
@@ -27433,9 +27433,9 @@
    "purpose": "Alarm occurrences with severity, raised / acknowledged / cleared times"
   },
   {
-   "collection": "u_mes_eqp_torqueResult",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_torqueResult",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "torqueResult",
    "sourceConcept": "torque_results",
    "kind": "entity",
@@ -27683,9 +27683,9 @@
    "purpose": "Tightening results per unit: program, final torque, angle, status, curve reference"
   },
   {
-   "collection": "u_mes_eqp_leakTestResult",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_leakTestResult",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "leakTestResult",
    "sourceConcept": "leak_test_results",
    "kind": "entity",
@@ -27878,14 +27878,14 @@
    "purpose": "Leak test per unit: stage pressures, decay, leak rate, limits, verdict, retest counter"
   },
   {
-   "collection": "u_mes_eqp_leakTestResultStage",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_leakTestResultStage",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "leakTestResultStage",
    "sourceConcept": "leak_test_results",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_eqp_leakTestResult",
+   "parent": "u_mes_perf_leakTestResult",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -28015,9 +28015,9 @@
    "purpose": "One document per stage of a leakTestResult"
   },
   {
-   "collection": "u_mes_mnt_maintenancePlan",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenancePlan",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenancePlan",
    "sourceConcept": "maintenance_plans",
    "kind": "entity",
@@ -28156,14 +28156,14 @@
    "purpose": "Preventive / condition-based plans per equipment or tool with tasks, interval and next due"
   },
   {
-   "collection": "u_mes_mnt_maintenancePlanTask",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenancePlanTask",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenancePlanTask",
    "sourceConcept": "maintenance_plans",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mnt_maintenancePlan",
+   "parent": "u_mes_maint_maintenancePlan",
    "displayField": "description",
    "statusValues": null,
    "fields": [
@@ -28233,14 +28233,14 @@
    "purpose": "One document per task of a maintenancePlan"
   },
   {
-   "collection": "u_mes_mnt_maintenancePlanRequiredSkill",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenancePlanRequiredSkill",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenancePlanRequiredSkill",
    "sourceConcept": "maintenance_plans",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mnt_maintenancePlan",
+   "parent": "u_mes_maint_maintenancePlan",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -28300,14 +28300,14 @@
    "purpose": "Links one maintenancePlan to one required skill (one document per link)"
   },
   {
-   "collection": "u_mes_mnt_maintenancePlanRequiredSparePart",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenancePlanRequiredSparePart",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenancePlanRequiredSparePart",
    "sourceConcept": "maintenance_plans",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_mnt_maintenancePlan",
+   "parent": "u_mes_maint_maintenancePlan",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -28372,9 +28372,9 @@
    "purpose": "One document per required spare part of a maintenancePlan"
   },
   {
-   "collection": "u_mes_mnt_maintenanceWorkOrder",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenanceWorkOrder",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenanceWorkOrder",
    "sourceConcept": "maintenance_work_orders",
    "kind": "entity",
@@ -28611,14 +28611,14 @@
    "purpose": "Breakdown, preventive and improvement work orders with labour, parts used, root cause"
   },
   {
-   "collection": "u_mes_mnt_maintenanceWorkOrderAssignedToUser",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenanceWorkOrderAssignedToUser",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenanceWorkOrderAssignedToUser",
    "sourceConcept": "maintenance_work_orders",
    "kind": "relationship",
    "dataClass": "transaction",
-   "parent": "u_mes_mnt_maintenanceWorkOrder",
+   "parent": "u_mes_maint_maintenanceWorkOrder",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -28708,14 +28708,14 @@
    "purpose": "Links one maintenanceWorkOrder to one assigned to user (one document per link)"
   },
   {
-   "collection": "u_mes_mnt_maintenanceWorkOrderLabour",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenanceWorkOrderLabour",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenanceWorkOrderLabour",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_mnt_maintenanceWorkOrder",
+   "parent": "u_mes_maint_maintenanceWorkOrder",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -28810,14 +28810,14 @@
    "purpose": "One document per labour of a maintenanceWorkOrder"
   },
   {
-   "collection": "u_mes_mnt_maintenanceWorkOrderUsedSparePart",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_maintenanceWorkOrderUsedSparePart",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "maintenanceWorkOrderUsedSparePart",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_mnt_maintenanceWorkOrder",
+   "parent": "u_mes_maint_maintenanceWorkOrder",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -28917,9 +28917,9 @@
    "purpose": "One document per used spare part of a maintenanceWorkOrder"
   },
   {
-   "collection": "u_mes_mnt_sparePart",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_sparePart",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "sparePart",
    "sourceConcept": "spare_parts",
    "kind": "entity",
@@ -29067,14 +29067,14 @@
    "purpose": "Maintenance spares with stock, minimum, location, where-used"
   },
   {
-   "collection": "u_mes_mnt_sparePartUsedOnEquipment",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_sparePartUsedOnEquipment",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "sparePartUsedOnEquipment",
    "sourceConcept": "spare_parts",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mnt_sparePart",
+   "parent": "u_mes_maint_sparePart",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -29134,9 +29134,9 @@
    "purpose": "Links one sparePart to one used on equipment (one document per link)"
   },
   {
-   "collection": "u_mes_mnt_tool",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_tool",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "tool",
    "sourceConcept": "tools",
    "kind": "entity",
@@ -29322,14 +29322,14 @@
    "purpose": "Dies, fixtures, cutting tools, nutrunner spindles, test seals: life limit, life used, status, location"
   },
   {
-   "collection": "u_mes_mnt_toolItem",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_toolItem",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "toolItem",
    "sourceConcept": "tools",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_mnt_tool",
+   "parent": "u_mes_maint_tool",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -29389,9 +29389,9 @@
    "purpose": "Links one tool to one item (one document per link)"
   },
   {
-   "collection": "u_mes_mnt_toolLifeRecord",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_toolLifeRecord",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "toolLifeRecord",
    "sourceConcept": "tool_life_records",
    "kind": "entity",
@@ -29574,9 +29574,9 @@
    "purpose": "Tool mount / dismount / usage / regrind events with shots or cycles consumed"
   },
   {
-   "collection": "u_mes_sys_erpMessage",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_erpMessage",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "erpMessage",
    "sourceConcept": "erp_messages",
    "kind": "entity",
@@ -29797,9 +29797,9 @@
    "purpose": "Inbound and outbound interface messages (order download, confirmation, goods movement) with payload, status, retries"
   },
   {
-   "collection": "u_mes_sys_integrationConnector",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_integrationConnector",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "integrationConnector",
    "sourceConcept": "integration_connectors",
    "kind": "entity",
@@ -29927,14 +29927,14 @@
    "purpose": "Connector definitions to ERP, PLM, OPC UA servers, tool controllers, label printers"
   },
   {
-   "collection": "u_mes_sys_integrationConnectorFunction",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_integrationConnectorFunction",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "integrationConnectorFunction",
    "sourceConcept": "integration_connectors",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_sys_integrationConnector",
+   "parent": "u_mes_syst_integrationConnector",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -30009,9 +30009,9 @@
    "purpose": "One document per function of a integrationConnector"
   },
   {
-   "collection": "u_mes_sys_iotDevice",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_iotDevice",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "iotDevice",
    "sourceConcept": "iot_devices",
    "kind": "entity",
@@ -30185,9 +30185,9 @@
    "purpose": "Registry of PLCs, gateways, nutrunner controllers, leak testers, scanners, printers, energy meters"
   },
   {
-   "collection": "u_mes_sys_operatorApp",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorApp",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorApp",
    "sourceConcept": "operator_apps",
    "kind": "entity",
@@ -30291,14 +30291,14 @@
    "purpose": "Composable operator screen definitions (versioned) bound to work centres and operations"
   },
   {
-   "collection": "u_mes_sys_operatorAppWorkCenter",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorAppWorkCenter",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorAppWorkCenter",
    "sourceConcept": "operator_apps",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_sys_operatorApp",
+   "parent": "u_mes_syst_operatorApp",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -30358,14 +30358,14 @@
    "purpose": "Links one operatorApp to one work center (one document per link)"
   },
   {
-   "collection": "u_mes_sys_operatorAppOperation",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorAppOperation",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorAppOperation",
    "sourceConcept": "operator_apps",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_sys_operatorApp",
+   "parent": "u_mes_syst_operatorApp",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -30425,14 +30425,14 @@
    "purpose": "Links one operatorApp to one operation (one document per link)"
   },
   {
-   "collection": "u_mes_sys_operatorAppStep",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorAppStep",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorAppStep",
    "sourceConcept": "operator_apps",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_sys_operatorApp",
+   "parent": "u_mes_syst_operatorApp",
    "displayField": "name",
    "statusValues": null,
    "fields": [
@@ -30517,14 +30517,14 @@
    "purpose": "One document per step of a operatorApp"
   },
   {
-   "collection": "u_mes_sys_operatorAppStepTrigger",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorAppStepTrigger",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorAppStepTrigger",
    "sourceConcept": "operator_apps",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_sys_operatorAppStep",
+   "parent": "u_mes_syst_operatorAppStep",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -30589,14 +30589,14 @@
    "purpose": "One document per trigger of a operatorAppStep"
   },
   {
-   "collection": "u_mes_sys_operatorAppDeviceBinding",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorAppDeviceBinding",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorAppDeviceBinding",
    "sourceConcept": "operator_apps",
    "kind": "child",
    "dataClass": "master",
-   "parent": "u_mes_sys_operatorApp",
+   "parent": "u_mes_syst_operatorApp",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -30661,14 +30661,14 @@
    "purpose": "One document per device binding of a operatorApp"
   },
   {
-   "collection": "u_mes_sys_operatorAppLanguage",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_operatorAppLanguage",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "operatorAppLanguage",
    "sourceConcept": "operator_apps",
    "kind": "relationship",
    "dataClass": "master",
-   "parent": "u_mes_sys_operatorApp",
+   "parent": "u_mes_syst_operatorApp",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -30728,9 +30728,9 @@
    "purpose": "Links one operatorApp to one language (one document per link)"
   },
   {
-   "collection": "u_mes_sys_businessEvent",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_businessEvent",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "businessEvent",
    "sourceConcept": "event_logs",
    "kind": "entity",
@@ -30905,9 +30905,9 @@
    "purpose": "Business event stream (order released, unit started, recipe downloaded, hold placed)"
   },
   {
-   "collection": "u_mes_sys_auditTrail",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_auditTrail",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "auditTrail",
    "sourceConcept": "audit_trails",
    "kind": "entity",
@@ -31057,14 +31057,14 @@
    "purpose": "Field-level change history of master and quality data (who, when, old, new, reason)"
   },
   {
-   "collection": "u_mes_sys_auditTrailChange",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_auditTrailChange",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "auditTrailChange",
    "sourceConcept": "audit_trails",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_sys_auditTrail",
+   "parent": "u_mes_syst_auditTrail",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -31159,9 +31159,9 @@
    "purpose": "One document per change of a auditTrail"
   },
   {
-   "collection": "u_mes_sys_electronicSignature",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_electronicSignature",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "electronicSignature",
    "sourceConcept": "electronic_signatures",
    "kind": "entity",
@@ -31321,9 +31321,9 @@
    "purpose": "Signature records for approvals and releases with meaning and signed-content hash"
   },
   {
-   "collection": "u_mes_sys_notification",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_notification",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "notification",
    "sourceConcept": "notifications",
    "kind": "entity",
@@ -31503,14 +31503,14 @@
    "purpose": "Alerts and escalations sent to users / groups with delivery and acknowledgement status"
   },
   {
-   "collection": "u_mes_sys_notificationRecipient",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_notificationRecipient",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "notificationRecipient",
    "sourceConcept": "notifications",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_sys_notification",
+   "parent": "u_mes_syst_notification",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -31630,9 +31630,9 @@
    "purpose": "One document per recipient of a notification"
   },
   {
-   "collection": "u_mes_sys_controlledDocument",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_controlledDocument",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "controlledDocument",
    "sourceConcept": "documents",
    "kind": "entity",
@@ -31841,14 +31841,14 @@
    "purpose": "Controlled documents and attachments metadata (drawings, certificates, photos, reports); file in object store"
   },
   {
-   "collection": "u_mes_sys_controlledDocumentTag",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_controlledDocumentTag",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "controlledDocumentTag",
    "sourceConcept": "documents",
    "kind": "valueList",
    "dataClass": "transaction",
-   "parent": "u_mes_sys_controlledDocument",
+   "parent": "u_mes_syst_controlledDocument",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -31933,9 +31933,9 @@
    "purpose": "One document per tag value of a controlledDocument"
   },
   {
-   "collection": "u_mes_sys_numberRange",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_numberRange",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "numberRange",
    "sourceConcept": "number_ranges",
    "kind": "entity",
@@ -32073,9 +32073,9 @@
    "purpose": "Counters and format masks for serials, lots, orders, labels, NCRs"
   },
   {
-   "collection": "u_mes_sys_systemConfiguration",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_systemConfiguration",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "systemConfiguration",
    "sourceConcept": "system_configurations",
    "kind": "entity",
@@ -32183,9 +32183,9 @@
    "purpose": "Site and module settings (OEE basis, SPC rules, retention, label printer mapping)"
   },
   {
-   "collection": "u_mes_ehs_energyReading",
-   "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "collection": "u_mes_perf_energyReading",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "energyReading",
    "sourceConcept": "energy_readings",
    "kind": "entity",
@@ -32370,9 +32370,9 @@
    "purpose": "Interval energy, compressed air and gas consumption per meter and equipment"
   },
   {
-   "collection": "u_mes_ehs_andonEvent",
-   "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "collection": "u_mes_plan_andonEvent",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "andonEvent",
    "sourceConcept": "andon_events",
    "kind": "entity",
@@ -32582,14 +32582,14 @@
    "purpose": "Help calls from stations (quality, material, maintenance, safety) with response and escalation times"
   },
   {
-   "collection": "u_mes_ehs_andonEventEscalation",
-   "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "collection": "u_mes_plan_andonEventEscalation",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "andonEventEscalation",
    "sourceConcept": "andon_events",
    "kind": "child",
    "dataClass": "transaction",
-   "parent": "u_mes_ehs_andonEvent",
+   "parent": "u_mes_plan_andonEvent",
    "displayField": "recordNo",
    "statusValues": null,
    "fields": [
@@ -32696,7 +32696,7 @@
   {
    "collection": "u_mes_ehs_safetyIncident",
    "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "moduleName": "Environment Health and Safety",
    "entity": "safetyIncident",
    "sourceConcept": "safety_incidents",
    "kind": "entity",
@@ -32938,7 +32938,7 @@
   {
    "collection": "u_mes_ehs_safetyIncidentWitnessUser",
    "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "moduleName": "Environment Health and Safety",
    "entity": "safetyIncidentWitnessUser",
    "sourceConcept": "safety_incidents",
    "kind": "relationship",
@@ -33035,7 +33035,7 @@
   {
    "collection": "u_mes_ehs_safetyIncidentAction",
    "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "moduleName": "Environment Health and Safety",
    "entity": "safetyIncidentAction",
    "sourceConcept": "safety_incidents",
    "kind": "child",
@@ -33145,9 +33145,9 @@
    "purpose": "One document per action of a safetyIncident"
   },
   {
-   "collection": "u_mes_mdm_department",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_department",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "department",
    "sourceConcept": "departments",
    "kind": "entity",
@@ -33240,9 +33240,9 @@
    "purpose": "Departments of the site (production, quality, maintenance ...)"
   },
   {
-   "collection": "u_mes_mdm_designation",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_designation",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "designation",
    "sourceConcept": "designations",
    "kind": "entity",
@@ -33325,9 +33325,9 @@
    "purpose": "Job designations of employees"
   },
   {
-   "collection": "u_mes_mdm_employmentType",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_employmentType",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "employmentType",
    "sourceConcept": "employment_types",
    "kind": "entity",
@@ -33395,9 +33395,9 @@
    "purpose": "Types of employment (permanent, contract, trainee, apprentice)"
   },
   {
-   "collection": "u_mes_mdm_costCenter",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_costCenter",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "costCenter",
    "sourceConcept": "cost_centers",
    "kind": "entity",
@@ -33470,9 +33470,9 @@
    "purpose": "Cost centers charged with activities, mapped to ERP"
   },
   {
-   "collection": "u_mes_mdm_manufacturer",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_manufacturer",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "manufacturer",
    "sourceConcept": "manufacturers",
    "kind": "entity",
@@ -33550,9 +33550,9 @@
    "purpose": "Manufacturers of equipment, gauges, devices and spare parts"
   },
   {
-   "collection": "u_mes_mdm_equipmentType",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_equipmentType",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "equipmentType",
    "sourceConcept": "equipment_types",
    "kind": "entity",
@@ -33615,9 +33615,9 @@
    "purpose": "Types of equipment (casting machine, furnace, nutrunner, leak tester ...)"
   },
   {
-   "collection": "u_mes_mdm_skillCategory",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_skillCategory",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "skillCategory",
    "sourceConcept": "skill_categories",
    "kind": "entity",
@@ -33680,9 +33680,9 @@
    "purpose": "Categories of skills (process, quality, maintenance, safety)"
   },
   {
-   "collection": "u_mes_mdm_permission",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_permission",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "permission",
    "sourceConcept": "permissions",
    "kind": "entity",
@@ -33755,9 +33755,9 @@
    "purpose": "Permissions that can be granted to roles"
   },
   {
-   "collection": "u_mes_mdm_signatureMeaning",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_signatureMeaning",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "signatureMeaning",
    "sourceConcept": "signature_meanings",
    "kind": "entity",
@@ -33820,9 +33820,9 @@
    "purpose": "Meanings an electronic signature can carry (approved, reviewed, released ...)"
   },
   {
-   "collection": "u_mes_mdm_currency",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_currency",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "currency",
    "sourceConcept": "currencies",
    "kind": "entity",
@@ -33895,9 +33895,9 @@
    "purpose": "Currencies used for costs and invoices"
   },
   {
-   "collection": "u_mes_mdm_country",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_country",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "country",
    "sourceConcept": "countries",
    "kind": "entity",
@@ -33965,9 +33965,9 @@
    "purpose": "Countries used in addresses"
   },
   {
-   "collection": "u_mes_mdm_language",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_language",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "language",
    "sourceConcept": "languages",
    "kind": "entity",
@@ -34030,9 +34030,9 @@
    "purpose": "Languages of users, instructions and documents"
   },
   {
-   "collection": "u_mes_mdm_transporter",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_transporter",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "transporter",
    "sourceConcept": "transporters",
    "kind": "entity",
@@ -34105,9 +34105,9 @@
    "purpose": "Transport companies used for dispatch"
   },
   {
-   "collection": "u_mes_mdm_commodity",
-   "module": "mdm",
-   "moduleName": "Master data",
+   "collection": "u_mes_mast_commodity",
+   "module": "mast",
+   "moduleName": "Master Data Management",
    "entity": "commodity",
    "sourceConcept": "commodities",
    "kind": "entity",
@@ -34170,9 +34170,9 @@
    "purpose": "Purchasing commodities used to classify suppliers"
   },
   {
-   "collection": "u_mes_prd_itemGroup",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_itemGroup",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "itemGroup",
    "sourceConcept": "item_groups",
    "kind": "entity",
@@ -34235,9 +34235,9 @@
    "purpose": "Item groups (brake caliper, piston, seal, fastener ...)"
   },
   {
-   "collection": "u_mes_prd_itemFamily",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_itemFamily",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "itemFamily",
    "sourceConcept": "item_families",
    "kind": "entity",
@@ -34300,9 +34300,9 @@
    "purpose": "Product families a line is built for (front caliper, rear caliper)"
   },
   {
-   "collection": "u_mes_prd_ppeItem",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_ppeItem",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "ppeItem",
    "sourceConcept": "ppe_items",
    "kind": "entity",
@@ -34365,9 +34365,9 @@
    "purpose": "Personal protective equipment that a work instruction can require"
   },
   {
-   "collection": "u_mes_prd_market",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_market",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "market",
    "sourceConcept": "markets",
    "kind": "entity",
@@ -34430,9 +34430,9 @@
    "purpose": "Sales markets of a product variant (domestic, export)"
   },
   {
-   "collection": "u_mes_prd_padCompound",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_padCompound",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "padCompound",
    "sourceConcept": "pad_compounds",
    "kind": "entity",
@@ -34495,9 +34495,9 @@
    "purpose": "Brake pad friction compounds offered as a variant option"
   },
   {
-   "collection": "u_mes_prd_surfaceFinish",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_surfaceFinish",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "surfaceFinish",
    "sourceConcept": "surface_finishes",
    "kind": "entity",
@@ -34560,9 +34560,9 @@
    "purpose": "Surface finishes offered as a variant option"
   },
   {
-   "collection": "u_mes_prd_vehicleModel",
-   "module": "prd",
-   "moduleName": "Product definition",
+   "collection": "u_mes_prod_vehicleModel",
+   "module": "prod",
+   "moduleName": "Product Definition",
    "entity": "vehicleModel",
    "sourceConcept": "vehicle_models",
    "kind": "entity",
@@ -34645,9 +34645,9 @@
    "purpose": "Customer vehicle models the parts are fitted to"
   },
   {
-   "collection": "u_mes_exe_indirectActivity",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_indirectActivity",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "indirectActivity",
    "sourceConcept": "indirect_activities",
    "kind": "entity",
@@ -34725,9 +34725,9 @@
    "purpose": "Indirect labour activities (cleaning, training, waiting for material ...)"
   },
   {
-   "collection": "u_mes_exe_containerType",
-   "module": "exe",
-   "moduleName": "Planning and execution",
+   "collection": "u_mes_plan_containerType",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "containerType",
    "sourceConcept": "container_types",
    "kind": "entity",
@@ -34815,9 +34815,9 @@
    "purpose": "Types of container with dimensions and tare weight"
   },
   {
-   "collection": "u_mes_mat_movementType",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_movementType",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "movementType",
    "sourceConcept": "movement_types",
    "kind": "entity",
@@ -34895,9 +34895,9 @@
    "purpose": "Stock movement types with their ERP movement code and stock effect"
   },
   {
-   "collection": "u_mes_mat_stockStatus",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_stockStatus",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "stockStatus",
    "sourceConcept": "stock_statuses",
    "kind": "entity",
@@ -34970,9 +34970,9 @@
    "purpose": "Stock statuses (unrestricted, quality inspection, blocked, reserved)"
   },
   {
-   "collection": "u_mes_mat_packType",
-   "module": "mat",
-   "moduleName": "Materials",
+   "collection": "u_mes_matl_packType",
+   "module": "matl",
+   "moduleName": "Material Management",
    "entity": "packType",
    "sourceConcept": "pack_types",
    "kind": "entity",
@@ -35035,9 +35035,9 @@
    "purpose": "Pack levels used in packaging specifications (bag, tray, bin, pallet)"
   },
   {
-   "collection": "u_mes_qlt_defectGroup",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_defectGroup",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "defectGroup",
    "sourceConcept": "defect_groups",
    "kind": "entity",
@@ -35100,9 +35100,9 @@
    "purpose": "Groups of defect codes (casting, machining, leak, torque ...)"
   },
   {
-   "collection": "u_mes_qlt_gaugeType",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_gaugeType",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "gaugeType",
    "sourceConcept": "gauge_types",
    "kind": "entity",
@@ -35165,9 +35165,9 @@
    "purpose": "Types of gauge and measuring instrument"
   },
   {
-   "collection": "u_mes_qlt_dispositionType",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_dispositionType",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "dispositionType",
    "sourceConcept": "disposition_types",
    "kind": "entity",
@@ -35245,9 +35245,9 @@
    "purpose": "Dispositions for nonconforming material (use as is, rework, scrap, return, sort)"
   },
   {
-   "collection": "u_mes_qlt_complaintType",
-   "module": "qlt",
-   "moduleName": "Quality",
+   "collection": "u_mes_qual_complaintType",
+   "module": "qual",
+   "moduleName": "Quality Management",
    "entity": "complaintType",
    "sourceConcept": "complaint_types",
    "kind": "entity",
@@ -35310,9 +35310,9 @@
    "purpose": "Types of customer complaint (line rejection, zero kilometre, warranty, logistics)"
   },
   {
-   "collection": "u_mes_eqp_lossCategory",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_lossCategory",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "lossCategory",
    "sourceConcept": "loss_categories",
    "kind": "entity",
@@ -35385,9 +35385,9 @@
    "purpose": "OEE loss categories with the OEE factor they reduce"
   },
   {
-   "collection": "u_mes_eqp_reasonCategory",
-   "module": "eqp",
-   "moduleName": "Equipment and performance",
+   "collection": "u_mes_perf_reasonCategory",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "reasonCategory",
    "sourceConcept": "reason_categories",
    "kind": "entity",
@@ -35450,9 +35450,9 @@
    "purpose": "Categories of reason codes (mechanical, electrical, process, material ...)"
   },
   {
-   "collection": "u_mes_mnt_toolType",
-   "module": "mnt",
-   "moduleName": "Maintenance and tooling",
+   "collection": "u_mes_maint_toolType",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
    "entity": "toolType",
    "sourceConcept": "tool_types",
    "kind": "entity",
@@ -35520,9 +35520,9 @@
    "purpose": "Types of tool (die, fixture, cutting tool, socket, test seal)"
   },
   {
-   "collection": "u_mes_sys_documentType",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_documentType",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "documentType",
    "sourceConcept": "document_types",
    "kind": "entity",
@@ -35595,9 +35595,9 @@
    "purpose": "Types of controlled document with retention"
   },
   {
-   "collection": "u_mes_sys_deviceType",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_deviceType",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "deviceType",
    "sourceConcept": "device_types",
    "kind": "entity",
@@ -35660,9 +35660,9 @@
    "purpose": "Types of connected device (PLC, nutrunner controller, leak tester, printer ...)"
   },
   {
-   "collection": "u_mes_sys_notificationType",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_notificationType",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "notificationType",
    "sourceConcept": "notification_types",
    "kind": "entity",
@@ -35725,9 +35725,9 @@
    "purpose": "Types of notification sent by the system"
   },
   {
-   "collection": "u_mes_ehs_andonType",
-   "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "collection": "u_mes_plan_andonType",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
    "entity": "andonType",
    "sourceConcept": "andon_types",
    "kind": "entity",
@@ -35812,7 +35812,7 @@
   {
    "collection": "u_mes_ehs_incidentType",
    "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "moduleName": "Environment Health and Safety",
    "entity": "incidentType",
    "sourceConcept": "incident_types",
    "kind": "entity",
@@ -35885,9 +35885,9 @@
    "purpose": "Types of safety incident"
   },
   {
-   "collection": "u_mes_ehs_energyType",
-   "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "collection": "u_mes_perf_energyType",
+   "module": "perf",
+   "moduleName": "Performance Management",
    "entity": "energyType",
    "sourceConcept": "energy_types",
    "kind": "entity",
@@ -35962,7 +35962,7 @@
   {
    "collection": "u_mes_ehs_bodyPart",
    "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "moduleName": "Environment Health and Safety",
    "entity": "bodyPart",
    "sourceConcept": "body_parts",
    "kind": "entity",
@@ -36027,7 +36027,7 @@
   {
    "collection": "u_mes_ehs_injuryType",
    "module": "ehs",
-   "moduleName": "Energy, safety and andon",
+   "moduleName": "Environment Health and Safety",
    "entity": "injuryType",
    "sourceConcept": "injury_types",
    "kind": "entity",
@@ -36090,9 +36090,9 @@
    "purpose": "Types of injury"
   },
   {
-   "collection": "u_mes_sys_statusDefinition",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_statusDefinition",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "statusDefinition",
    "sourceConcept": "(new) status mapping",
    "kind": "entity",
@@ -36185,9 +36185,9 @@
    "purpose": "Status values and allowed transitions per collection (status mapping)"
   },
   {
-   "collection": "u_mes_sys_enumerationValue",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_enumerationValue",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "enumerationValue",
    "sourceConcept": "(new) fixed enumeration mapping",
    "kind": "entity",
@@ -36270,9 +36270,9 @@
    "purpose": "Allowed values of fixed enumeration keys, one document per collection, key and value"
   },
   {
-   "collection": "u_mes_sys_statusTransition",
-   "module": "sys",
-   "moduleName": "Integration and system",
+   "collection": "u_mes_syst_statusTransition",
+   "module": "syst",
+   "moduleName": "System and Integration",
    "entity": "statusTransition",
    "sourceConcept": "(new) status mapping",
    "kind": "entity",

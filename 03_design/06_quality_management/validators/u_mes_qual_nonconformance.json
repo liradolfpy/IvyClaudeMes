@@ -1,0 +1,303 @@
+{
+  "collMod": "u_mes_qual_nonconformance",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_nonconformance",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "description",
+        "ncType",
+        "source",
+        "detectedAt",
+        "detectedById",
+        "detectedBy",
+        "detectedAtOperationId",
+        "detectedAtOperationName",
+        "detectedAtWorkCenterId",
+        "detectedAtWorkCenterName",
+        "originOperationId",
+        "originOperationName",
+        "itemId",
+        "itemName",
+        "defectCodeId",
+        "defectCodeName",
+        "supplierId",
+        "supplierName",
+        "customerId",
+        "customerName",
+        "quantityAffected",
+        "quantityRejected",
+        "qualityHoldId",
+        "qualityHoldName",
+        "capaId",
+        "capaName",
+        "rootCauseSummary",
+        "severity",
+        "costInr",
+        "closedAt",
+        "closedById",
+        "closedBy",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: NCR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the nonconformance; used as its display value in other collections"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the nonconformance"
+        },
+        "ncType": {
+          "bsonType": "string",
+          "description": "Nc type",
+          "enum": [
+            "Internal",
+            "Supplier",
+            "Customer"
+          ]
+        },
+        "source": {
+          "bsonType": "string",
+          "description": "Where the record originated",
+          "enum": [
+            "MES Terminal",
+            "PLC",
+            "Scanner",
+            "ERP",
+            "Device",
+            "Manual Entry"
+          ]
+        },
+        "detectedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was detected"
+        },
+        "detectedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'detected'"
+        },
+        "detectedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in detectedById, copied from u_mes_mast_user.fullName"
+        },
+        "detectedAtOperationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_operation._id: detected at operation"
+        },
+        "detectedAtOperationName": {
+          "bsonType": "string",
+          "description": "Display value of detectedAtOperationId, copied from u_mes_prod_operation.name"
+        },
+        "detectedAtWorkCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id: detected at work center"
+        },
+        "detectedAtWorkCenterName": {
+          "bsonType": "string",
+          "description": "Display value of detectedAtWorkCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "originOperationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_operation._id: origin operation"
+        },
+        "originOperationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of originOperationId, copied from u_mes_prod_operation.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "defectCodeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_defectCode._id"
+        },
+        "defectCodeName": {
+          "bsonType": "string",
+          "description": "Display value of defectCodeId, copied from u_mes_qual_defectCode.name"
+        },
+        "supplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_supplier._id"
+        },
+        "supplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of supplierId, copied from u_mes_mast_supplier.name"
+        },
+        "customerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "quantityAffected": {
+          "bsonType": "int",
+          "description": "Quantity affected"
+        },
+        "quantityRejected": {
+          "bsonType": "int",
+          "description": "Quantity rejected"
+        },
+        "qualityHoldId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_qualityHold._id"
+        },
+        "qualityHoldName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo"
+        },
+        "capaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_capa._id"
+        },
+        "capaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of capaId, copied from u_mes_qual_capa.title"
+        },
+        "rootCauseSummary": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Root cause summary"
+        },
+        "severity": {
+          "bsonType": "int",
+          "description": "Severity rating 1 to 10"
+        },
+        "costInr": {
+          "bsonType": "decimal",
+          "description": "Cost (Indian rupees)"
+        },
+        "closedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was closed"
+        },
+        "closedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'closed'"
+        },
+        "closedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in closedById, copied from u_mes_mast_user.fullName"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "Contained",
+            "Dispositioned",
+            "Closed",
+            "Cancelled"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

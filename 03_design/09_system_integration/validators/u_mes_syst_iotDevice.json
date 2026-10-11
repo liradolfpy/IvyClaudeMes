@@ -1,0 +1,214 @@
+{
+  "collMod": "u_mes_syst_iotDevice",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_iotDevice",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "deviceTypeId",
+        "deviceTypeName",
+        "manufacturerId",
+        "manufacturerName",
+        "model",
+        "serialNo",
+        "firmwareVersion",
+        "equipmentId",
+        "equipmentName",
+        "workCenterId",
+        "workCenterName",
+        "integrationConnectorId",
+        "integrationConnectorName",
+        "ipAddress",
+        "macAddress",
+        "port",
+        "protocol",
+        "vlan",
+        "opcNodeAddress",
+        "pollIntervalMs",
+        "lastSeenAt",
+        "connectionStatus",
+        "certificateExpiresAt",
+        "installedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: IOT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the IoT device; used as its display value in other collections"
+        },
+        "deviceTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_deviceType._id"
+        },
+        "deviceTypeName": {
+          "bsonType": "string",
+          "description": "Display value of deviceTypeId, copied from u_mes_syst_deviceType.name"
+        },
+        "manufacturerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_manufacturer._id"
+        },
+        "manufacturerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of manufacturerId, copied from u_mes_mast_manufacturer.name"
+        },
+        "model": {
+          "bsonType": "string",
+          "description": "Model of the IoT device"
+        },
+        "serialNo": {
+          "bsonType": "string",
+          "description": "Serial number"
+        },
+        "firmwareVersion": {
+          "bsonType": "string",
+          "description": "Firmware version"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "integrationConnectorId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_integrationConnector._id"
+        },
+        "integrationConnectorName": {
+          "bsonType": "string",
+          "description": "Display value of integrationConnectorId, copied from u_mes_syst_integrationConnector.name"
+        },
+        "ipAddress": {
+          "bsonType": "string",
+          "description": "Ip address"
+        },
+        "macAddress": {
+          "bsonType": "string",
+          "description": "Mac address"
+        },
+        "port": {
+          "bsonType": "int",
+          "description": "Port of the IoT device"
+        },
+        "protocol": {
+          "bsonType": "string",
+          "description": "Protocol of the IoT device",
+          "enum": [
+            "HTTPS REST",
+            "OPC UA",
+            "Open Protocol",
+            "Modbus TCP",
+            "MQTT",
+            "ZPL Over TCP",
+            "SMTP"
+          ]
+        },
+        "vlan": {
+          "bsonType": "int",
+          "description": "Vlan of the IoT device"
+        },
+        "opcNodeAddress": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "OPC node address"
+        },
+        "pollIntervalMs": {
+          "bsonType": "int",
+          "description": "Poll interval (milliseconds)"
+        },
+        "lastSeenAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last seen date and time"
+        },
+        "connectionStatus": {
+          "bsonType": "string",
+          "description": "Connection status",
+          "enum": [
+            "Online",
+            "Offline",
+            "Degraded"
+          ]
+        },
+        "certificateExpiresAt": {
+          "bsonType": "date",
+          "description": "Certificate expires date and time"
+        },
+        "installedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was installed"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive",
+            "Retired"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

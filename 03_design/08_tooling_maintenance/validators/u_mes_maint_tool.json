@@ -1,0 +1,223 @@
+{
+  "collMod": "u_mes_maint_tool",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_tool",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "toolTypeId",
+        "toolTypeName",
+        "toolClass",
+        "equipmentId",
+        "equipmentName",
+        "mountedPosition",
+        "supplierId",
+        "supplierName",
+        "drawingNo",
+        "serialNo",
+        "cavities",
+        "lifeUom",
+        "lifeLimit",
+        "lifeUsed",
+        "lifeRemaining",
+        "warningThresholdPct",
+        "regrindCount",
+        "maxRegrinds",
+        "storageLocationId",
+        "storageLocationName",
+        "lastMaintainedAt",
+        "nextMaintenanceDueAt",
+        "purchasedAt",
+        "costInr",
+        "ownedByCustomerId",
+        "ownedByCustomerName",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: TL-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the tool; used as its display value in other collections"
+        },
+        "toolTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_maint_toolType._id"
+        },
+        "toolTypeName": {
+          "bsonType": "string",
+          "description": "Display value of toolTypeId, copied from u_mes_maint_toolType.name"
+        },
+        "toolClass": {
+          "bsonType": "string",
+          "description": "Tool class",
+          "enum": [
+            "Production Tooling",
+            "Customer Owned Tooling",
+            "Consumable Tooling"
+          ]
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "mountedPosition": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Mounted position"
+        },
+        "supplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_supplier._id"
+        },
+        "supplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of supplierId, copied from u_mes_mast_supplier.name"
+        },
+        "drawingNo": {
+          "bsonType": "string",
+          "description": "Drawing number"
+        },
+        "serialNo": {
+          "bsonType": "string",
+          "description": "Serial number"
+        },
+        "cavities": {
+          "bsonType": "int",
+          "description": "Cavities of the tool"
+        },
+        "lifeUom": {
+          "bsonType": "string",
+          "description": "Life uom",
+          "enum": [
+            "Shots",
+            "Cycles",
+            "Pieces",
+            "Run Hours"
+          ]
+        },
+        "lifeLimit": {
+          "bsonType": "long",
+          "description": "Life limit"
+        },
+        "lifeUsed": {
+          "bsonType": "long",
+          "description": "Life used"
+        },
+        "lifeRemaining": {
+          "bsonType": "long",
+          "description": "Life remaining"
+        },
+        "warningThresholdPct": {
+          "bsonType": "decimal",
+          "description": "Warning threshold (percent)"
+        },
+        "regrindCount": {
+          "bsonType": "int",
+          "description": "Regrind count"
+        },
+        "maxRegrinds": {
+          "bsonType": "int",
+          "description": "Maximum regrinds"
+        },
+        "storageLocationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_storageLocation._id"
+        },
+        "storageLocationName": {
+          "bsonType": "string",
+          "description": "Display value of storageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "lastMaintainedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last maintained date and time"
+        },
+        "nextMaintenanceDueAt": {
+          "bsonType": "date",
+          "description": "Next maintenance due date and time"
+        },
+        "purchasedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was purchased"
+        },
+        "costInr": {
+          "bsonType": "decimal",
+          "description": "Cost (Indian rupees)"
+        },
+        "ownedByCustomerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_customer._id: owned by customer"
+        },
+        "ownedByCustomerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of ownedByCustomerId, copied from u_mes_mast_customer.name"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Available",
+            "Mounted",
+            "In Maintenance",
+            "Life Expired",
+            "Scrapped"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

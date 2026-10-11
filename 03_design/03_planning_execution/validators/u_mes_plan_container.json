@@ -1,0 +1,256 @@
+{
+  "collMod": "u_mes_plan_container",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_plan_container",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "containerTypeId",
+        "containerTypeName",
+        "packagingSpecificationId",
+        "packagingSpecificationName",
+        "isReturnable",
+        "ownerCustomerId",
+        "ownerCustomerName",
+        "itemId",
+        "itemName",
+        "quantity",
+        "capacity",
+        "storageLocationId",
+        "storageLocationName",
+        "parentContainerId",
+        "parentContainerName",
+        "tareWeightKg",
+        "grossWeightKg",
+        "onHold",
+        "packedAt",
+        "packedById",
+        "packedBy",
+        "labelId",
+        "labelName",
+        "shipmentId",
+        "shipmentName",
+        "lastCleanedAt",
+        "cycleCount",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CNT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "containerTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_containerType._id"
+        },
+        "containerTypeName": {
+          "bsonType": "string",
+          "description": "Display value of containerTypeId, copied from u_mes_plan_containerType.name"
+        },
+        "packagingSpecificationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_packagingSpecification._id"
+        },
+        "packagingSpecificationName": {
+          "bsonType": "string",
+          "description": "Display value of packagingSpecificationId, copied from u_mes_matl_packagingSpecification.recordNo"
+        },
+        "isReturnable": {
+          "bsonType": "bool",
+          "description": "True when the record is returnable"
+        },
+        "ownerCustomerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id: owner customer"
+        },
+        "ownerCustomerName": {
+          "bsonType": "string",
+          "description": "Display value of ownerCustomerId, copied from u_mes_mast_customer.name"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "quantity": {
+          "bsonType": "int",
+          "description": "Quantity of the container"
+        },
+        "capacity": {
+          "bsonType": "int",
+          "description": "CAPAcity of the container"
+        },
+        "storageLocationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_storageLocation._id"
+        },
+        "storageLocationName": {
+          "bsonType": "string",
+          "description": "Display value of storageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "parentContainerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_container._id: parent container"
+        },
+        "parentContainerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentContainerId, copied from u_mes_plan_container.recordNo"
+        },
+        "tareWeightKg": {
+          "bsonType": "decimal",
+          "description": "Tare weight (kg)"
+        },
+        "grossWeightKg": {
+          "bsonType": "decimal",
+          "description": "Gross weight (kg)"
+        },
+        "onHold": {
+          "bsonType": "bool",
+          "description": "True when: on hold"
+        },
+        "packedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was packed"
+        },
+        "packedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'packed'"
+        },
+        "packedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in packedById, copied from u_mes_mast_user.fullName"
+        },
+        "labelId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_label._id"
+        },
+        "labelName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of labelId, copied from u_mes_matl_label.recordNo"
+        },
+        "shipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_shipment._id"
+        },
+        "shipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shipmentId, copied from u_mes_matl_shipment.recordNo"
+        },
+        "lastCleanedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last cleaned date and time"
+        },
+        "cycleCount": {
+          "bsonType": "int",
+          "description": "Number of trips the returnable container has made"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Empty",
+            "Filling",
+            "Full",
+            "Sealed",
+            "Shipped",
+            "Returned",
+            "Under Repair"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

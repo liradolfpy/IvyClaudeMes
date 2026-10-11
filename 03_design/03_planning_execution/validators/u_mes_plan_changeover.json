@@ -1,0 +1,267 @@
+{
+  "collMod": "u_mes_plan_changeover",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_plan_changeover",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "fromProductionOrderId",
+        "fromProductionOrderName",
+        "toProductionOrderId",
+        "toProductionOrderName",
+        "fromItemId",
+        "fromItemName",
+        "toItemId",
+        "toItemName",
+        "changeoverType",
+        "plannedStartAt",
+        "startedAt",
+        "completedAt",
+        "plannedMinutes",
+        "actualMinutes",
+        "recipeId",
+        "recipeName",
+        "firstOffCheckSheetResultId",
+        "firstOffCheckSheetResultName",
+        "firstOffApprovedById",
+        "firstOffApprovedBy",
+        "firstOffApprovedAt",
+        "lossReason",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CHG-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "fromProductionOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_productionOrder._id: from production order"
+        },
+        "fromProductionOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of fromProductionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "toProductionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_productionOrder._id: to production order"
+        },
+        "toProductionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of toProductionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "fromItemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id: from item"
+        },
+        "fromItemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of fromItemId, copied from u_mes_prod_item.description"
+        },
+        "toItemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id: to item"
+        },
+        "toItemName": {
+          "bsonType": "string",
+          "description": "Display value of toItemId, copied from u_mes_prod_item.description"
+        },
+        "changeoverType": {
+          "bsonType": "string",
+          "description": "Changeover type",
+          "enum": [
+            "Variant Change",
+            "Item Change",
+            "Tool Change",
+            "Die Change"
+          ]
+        },
+        "plannedStartAt": {
+          "bsonType": "date",
+          "description": "Planned start date and time"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was started"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "plannedMinutes": {
+          "bsonType": "int",
+          "description": "Planned (minutes)"
+        },
+        "actualMinutes": {
+          "bsonType": "int",
+          "description": "Actual (minutes)"
+        },
+        "recipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_recipe._id"
+        },
+        "recipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of recipeId, copied from u_mes_prod_recipe.name"
+        },
+        "firstOffCheckSheetResultId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_checkSheetResult._id: first off check sheet result"
+        },
+        "firstOffCheckSheetResultName": {
+          "bsonType": "string",
+          "description": "Display value of firstOffCheckSheetResultId, copied from u_mes_qual_checkSheetResult.recordNo"
+        },
+        "firstOffApprovedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'first off approved'"
+        },
+        "firstOffApprovedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in firstOffApprovedById, copied from u_mes_mast_user.fullName"
+        },
+        "firstOffApprovedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "First off approved date and time"
+        },
+        "lossReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Loss reason"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Planned",
+            "In Progress",
+            "Awaiting First Off Approval",
+            "Completed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

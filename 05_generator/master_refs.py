@@ -1,7 +1,7 @@
 """Master-data review (DATA-003). Classification values that the plant defines and maintains are master collections,
 referenced by <entity>Id + <entity>Name. This file holds the new master concepts, their keys and the key conversions.
 Applied by flatten_model.py before any other rename."""
-D1="1 Enterprise and master data"; D2="2 Product definition"; D3="3 Planning and execution"; D4="4 Materials"; D6="6 Quality"; D7="7 Equipment and performance"; D8="8 Maintenance and tooling"; D9="9 Integration and system"; D10="10 Energy, safety and andon"
+D1="1 Master Data Management"; D2="2 Product Definition"; D3="3 Planning and Execution"; D4="4 Material Management"; D6="6 Quality Management"; D7="7 Performance Management"; D8="8 Tooling & Maintenance"; D9="9 System and Integration"; D10="10 Environment Health and Safety"
 def m(name,dom,pre,purpose,keys="name, description, sequenceNo",vol="10-50"):
     return (name,dom,pre,"code",purpose,"Owner review of 11 Oct 2026",["sites"],vol,"standard","Flat master list"),keys
 _N=[
@@ -41,9 +41,9 @@ m("tool_types",D8,"TLT","Types of tool (die, fixture, cutting tool, socket, test
 m("document_types",D9,"DCT","Types of controlled document with retention","name, description, retentionYears, isControlled, sequenceNo"),
 m("device_types",D9,"DVT","Types of connected device (PLC, nutrunner controller, leak tester, printer ...)"),
 m("notification_types",D9,"NTT","Types of notification sent by the system"),
-m("andon_types",D10,"ANT","Types of andon call with responsible department and target response time","name, description, colourCode, responsibleDepartmentId, targetResponseSec, sequenceNo"),
+m("andon_types",D3,"ANT","Types of andon call with responsible department and target response time","name, description, colourCode, responsibleDepartmentId, targetResponseSec, sequenceNo"),
 m("incident_types",D10,"ICT","Types of safety incident","name, description, isInjury, reportableToAuthority, sequenceNo"),
-m("energy_types",D10,"ENT-T","Types of energy and utility that are metered","name, description, unitOfMeasureId, sequenceNo"),
+m("energy_types",D7,"ENT-T","Types of energy and utility that are metered","name, description, unitOfMeasureId, sequenceNo"),
 m("body_parts",D10,"BDP","Body parts for injury records"),
 m("injury_types",D10,"INJ","Types of injury"),
 ]

@@ -1,0 +1,151 @@
+{
+  "collMod": "u_mes_qual_samplingPlan",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_samplingPlan",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "samplingType",
+        "standard",
+        "inspectionLevel",
+        "aql",
+        "frequencyType",
+        "frequencyEveryNUnits",
+        "frequencyEveryMinutes",
+        "skipLotEnabled",
+        "skipLotConsecutiveAcceptedToSkip",
+        "skipLotSkipFraction",
+        "switchingRules",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SMP-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the sampling plan; used as its display value in other collections"
+        },
+        "samplingType": {
+          "bsonType": "string",
+          "description": "Sampling type",
+          "enum": [
+            "Attribute AQL",
+            "Fixed Sample",
+            "Hundred Percent",
+            "Skip Lot"
+          ]
+        },
+        "standard": {
+          "bsonType": "string",
+          "description": "Standard or specification the record refers to"
+        },
+        "inspectionLevel": {
+          "bsonType": "string",
+          "description": "Inspection level",
+          "enum": [
+            "S-1",
+            "S-2",
+            "S-3",
+            "S-4",
+            "I",
+            "II",
+            "III"
+          ]
+        },
+        "aql": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Acceptance quality limit in percent"
+        },
+        "frequencyType": {
+          "bsonType": "string",
+          "description": "Frequency type",
+          "enum": [
+            "Every Unit",
+            "Every N Units",
+            "Every N Minutes",
+            "Per Lot",
+            "Per Shift",
+            "First Off"
+          ]
+        },
+        "frequencyEveryNUnits": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Frequency every nunits"
+        },
+        "frequencyEveryMinutes": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Frequency every (minutes)"
+        },
+        "skipLotEnabled": {
+          "bsonType": "bool",
+          "description": "True when: skip lot enabled"
+        },
+        "skipLotConsecutiveAcceptedToSkip": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Skip lot consecutive accepted to skip"
+        },
+        "skipLotSkipFraction": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Skip lot skip fraction"
+        },
+        "switchingRules": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Switching rules"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

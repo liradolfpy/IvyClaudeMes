@@ -1,0 +1,76 @@
+{
+  "collMod": "u_mes_prod_itemCustomerPart",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prod_itemCustomerPart",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "itemId",
+        "itemName",
+        "sequenceNo",
+        "customerId",
+        "customerName",
+        "customerPartNo",
+        "customerRevision",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <itemId>-CP<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id: the parent document this one belongs to"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "customerPartNo": {
+          "bsonType": "string",
+          "description": "Customer part number"
+        },
+        "customerRevision": {
+          "bsonType": "string",
+          "description": "Customer revision"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

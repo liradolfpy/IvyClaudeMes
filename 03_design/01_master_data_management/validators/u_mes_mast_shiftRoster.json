@@ -1,0 +1,152 @@
+{
+  "collMod": "u_mes_mast_shiftRoster",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_shiftRoster",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionDate",
+        "shiftId",
+        "shiftName",
+        "lineId",
+        "lineName",
+        "supervisorUserId",
+        "supervisorUserName",
+        "plannedHeadcount",
+        "actualHeadcount",
+        "absentCount",
+        "overtimeMinutes",
+        "remarks",
+        "publishedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ROS-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "productionDate": {
+          "bsonType": "date",
+          "description": "Production date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "supervisorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: supervisor user"
+        },
+        "supervisorUserName": {
+          "bsonType": "string",
+          "description": "Display value of supervisorUserId, copied from u_mes_mast_user.fullName"
+        },
+        "plannedHeadcount": {
+          "bsonType": "int",
+          "description": "Planned headcount"
+        },
+        "actualHeadcount": {
+          "bsonType": "int",
+          "description": "Actual headcount"
+        },
+        "absentCount": {
+          "bsonType": "int",
+          "description": "Absent count"
+        },
+        "overtimeMinutes": {
+          "bsonType": "int",
+          "description": "Overtime (minutes)"
+        },
+        "remarks": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Remarks of the shift roster"
+        },
+        "publishedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was published"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Planned",
+            "Published",
+            "Closed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

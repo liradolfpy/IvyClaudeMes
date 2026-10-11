@@ -1,0 +1,229 @@
+{
+  "collMod": "u_mes_qual_gaugeCalibration",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_gaugeCalibration",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "gaugeId",
+        "gaugeName",
+        "calibrationType",
+        "calibratedAt",
+        "calibratedById",
+        "calibratedBy",
+        "calibrationSupplierId",
+        "calibrationSupplierName",
+        "masterStandardRef",
+        "traceability",
+        "temperatureC",
+        "humidityPct",
+        "asFoundResult",
+        "asLeftResult",
+        "overallResult",
+        "uncertainty",
+        "adjustmentMade",
+        "certificateNo",
+        "certificateControlledDocumentId",
+        "certificateControlledDocumentName",
+        "nextDueAt",
+        "impactAssessmentRequired",
+        "remarks",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: GCAL-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "gaugeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_gauge._id"
+        },
+        "gaugeName": {
+          "bsonType": "string",
+          "description": "Display value of gaugeId, copied from u_mes_qual_gauge.name"
+        },
+        "calibrationType": {
+          "bsonType": "string",
+          "description": "Calibration type",
+          "enum": [
+            "Initial",
+            "Periodic",
+            "After Repair",
+            "After Shock Or Damage"
+          ]
+        },
+        "calibratedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was calibrated"
+        },
+        "calibratedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'calibrated'"
+        },
+        "calibratedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in calibratedById, copied from u_mes_mast_user.fullName"
+        },
+        "calibrationSupplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_supplier._id: calibration supplier"
+        },
+        "calibrationSupplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of calibrationSupplierId, copied from u_mes_mast_supplier.name"
+        },
+        "masterStandardRef": {
+          "bsonType": "string",
+          "description": "Master standard ref"
+        },
+        "traceability": {
+          "bsonType": "string",
+          "description": "Traceability of the gauge calibration"
+        },
+        "temperatureC": {
+          "bsonType": "decimal",
+          "description": "Temperature c"
+        },
+        "humidityPct": {
+          "bsonType": "decimal",
+          "description": "Humidity (percent)"
+        },
+        "asFoundResult": {
+          "bsonType": "string",
+          "description": "As found result",
+          "enum": [
+            "Within Tolerance",
+            "Out Of Tolerance"
+          ]
+        },
+        "asLeftResult": {
+          "bsonType": "string",
+          "description": "As left result",
+          "enum": [
+            "Within Tolerance",
+            "Out Of Tolerance"
+          ]
+        },
+        "overallResult": {
+          "bsonType": "string",
+          "description": "Overall result",
+          "enum": [
+            "Pass",
+            "Fail"
+          ]
+        },
+        "uncertainty": {
+          "bsonType": "decimal",
+          "description": "Uncertainty of the gauge calibration"
+        },
+        "adjustmentMade": {
+          "bsonType": "bool",
+          "description": "True when: adjustment made"
+        },
+        "certificateNo": {
+          "bsonType": "string",
+          "description": "Certificate number"
+        },
+        "certificateControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: certificate controlled document"
+        },
+        "certificateControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "nextDueAt": {
+          "bsonType": "date",
+          "description": "Next due date and time"
+        },
+        "impactAssessmentRequired": {
+          "bsonType": "bool",
+          "description": "True when: impact assessment required"
+        },
+        "remarks": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Remarks of the gauge calibration"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Planned",
+            "Completed",
+            "Failed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

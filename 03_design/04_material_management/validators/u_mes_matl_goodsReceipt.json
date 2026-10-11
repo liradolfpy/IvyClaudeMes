@@ -1,0 +1,163 @@
+{
+  "collMod": "u_mes_matl_goodsReceipt",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_matl_goodsReceipt",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "supplierId",
+        "supplierName",
+        "purchaseOrderNo",
+        "supplierInvoiceNo",
+        "supplierInvoiceDate",
+        "deliveryChallanNo",
+        "vehicleNo",
+        "receivedAt",
+        "receivedById",
+        "receivedBy",
+        "gateEntryNo",
+        "inspectionCompletedAt",
+        "erpGrnNo",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: GRN-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "supplierId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_supplier._id"
+        },
+        "supplierName": {
+          "bsonType": "string",
+          "description": "Display value of supplierId, copied from u_mes_mast_supplier.name"
+        },
+        "purchaseOrderNo": {
+          "bsonType": "string",
+          "description": "Purchase order number"
+        },
+        "supplierInvoiceNo": {
+          "bsonType": "string",
+          "description": "Supplier invoice number"
+        },
+        "supplierInvoiceDate": {
+          "bsonType": "date",
+          "description": "Supplier invoice date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "deliveryChallanNo": {
+          "bsonType": "string",
+          "description": "Delivery challan number"
+        },
+        "vehicleNo": {
+          "bsonType": "string",
+          "description": "Vehicle number"
+        },
+        "receivedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was received"
+        },
+        "receivedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'received'"
+        },
+        "receivedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in receivedById, copied from u_mes_mast_user.fullName"
+        },
+        "gateEntryNo": {
+          "bsonType": "string",
+          "description": "Gate entry number"
+        },
+        "inspectionCompletedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Inspection completed date and time"
+        },
+        "erpGrnNo": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "ERP grn number"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Received",
+            "Under Inspection",
+            "Accepted",
+            "Partially Accepted",
+            "Rejected"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

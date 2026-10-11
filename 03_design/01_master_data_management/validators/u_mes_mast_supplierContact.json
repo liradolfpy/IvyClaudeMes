@@ -1,0 +1,90 @@
+{
+  "collMod": "u_mes_mast_supplierContact",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_supplierContact",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "supplierId",
+        "supplierName",
+        "sequenceNo",
+        "name",
+        "businessFunction",
+        "email",
+        "phone",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <supplierId>-C<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "supplierId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_supplier._id: the parent document this one belongs to"
+        },
+        "supplierName": {
+          "bsonType": "string",
+          "description": "Display value of supplierId, copied from u_mes_mast_supplier.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the supplier contact; used as its display value in other collections"
+        },
+        "businessFunction": {
+          "bsonType": "string",
+          "description": "Business function",
+          "enum": [
+            "Quality",
+            "Purchasing",
+            "Logistics",
+            "Engineering",
+            "Production",
+            "Finance"
+          ]
+        },
+        "email": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Email of the supplier contact"
+        },
+        "phone": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Phone of the supplier contact"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

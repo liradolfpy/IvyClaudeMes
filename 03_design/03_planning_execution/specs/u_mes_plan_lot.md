@@ -1,0 +1,106 @@
+# u_mes_plan_lot
+
+| Property | Value |
+|---|---|
+| Module | Planning and Execution (plan) |
+| Purpose | Lots and batches: supplier lots, melt/heat lots, casting lots, heat-treatment charges, anodising loads |
+| Kind | Entity |
+| Data class | Transaction |
+| Parent collection | none |
+| _id pattern | LOT-<recordNo> |
+| Display value used by references | recordNo |
+| Keys | 47 (24 required, 23 may be null) |
+| Estimated volume per year | ~40,000 |
+| Storage | standard |
+
+## Structure
+
+Flat entity collection: one document per lot, all keys top-level and scalar.
+
+Repeating data of this entity is held in separate collections, one document per occurrence, each pointing back with lotId:
+
+| Collection | Kind | Holds |
+|---|---|---|
+| u_mes_plan_lotParentLot | Relationship | parent lot |
+| u_mes_plan_lotAttributesCavityNo | Value list | attributes cavity number |
+
+## Field dictionary
+
+Every key is present in every document. "Required" means the value may not be null.
+
+| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: LOT-<recordNo> | `"LOT-L260928-GDC-014"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"L260928-GDC-014"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"ITM-5110-20-0105"` | Reference: u_mes_prod_item._id |
+| 6 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 7 | lotType | String | Yes | Lot type | `"Casting Lot"` | Supplier Lot; Melt Lot; Casting Lot; Heat Treatment Charge; Machining Lot; Anodising Load; Finished Goods Lot |
+| 8 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
+| 9 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
+| 10 | supplierLotNo | String | No (null allowed) | Supplier lot number | `"KPP-260914-07"` |  |
+| 11 | heatNo | String | No (null allowed) | Heat number of the alloy melt | `"H26-3418"` |  |
+| 12 | goodsReceiptId | String | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `null` | Reference: u_mes_matl_goodsReceipt._id |
+| 13 | goodsReceiptName | String | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `null` |  |
+| 14 | productionOrderId | String | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"PO-1000412"` | Reference: u_mes_plan_productionOrder._id |
+| 15 | productionOrderName | String | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"1000412"` |  |
+| 16 | manufacturedAt | Date | Yes | Date and time when the record was manufactured | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 17 | receivedAt | Date | No (null allowed) | Date and time when the record was received | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
+| 18 | expiryAt | Date | No (null allowed) | Expiry date and time | `ISODate("2027-03-31T18:29:59.000+0000")` |  |
+| 19 | initialQuantity | Decimal128 | Yes | Initial quantity | `NumberDecimal("240")` |  |
+| 20 | currentQuantity | Decimal128 | Yes | Current quantity | `NumberDecimal("240")` |  |
+| 21 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"UOM-EA"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 22 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 23 | qualityStatus | String | Yes | Quality status | `"Released"` | Released; Under Inspection; On Hold; Rejected |
+| 24 | onHold | Boolean | Yes | True when: on hold | `false` |  |
+| 25 | qualityHoldId | String | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `null` | Reference: u_mes_qual_qualityHold._id |
+| 26 | qualityHoldName | String | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `null` |  |
+| 27 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"LOC-LS-ASY-01"` | Reference: u_mes_matl_storageLocation._id |
+| 28 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, Assembly 1"` |  |
+| 29 | attributesDieNo | String | No (null allowed) | Attributes die number | `"DIE-5110-LH-02"` |  |
+| 30 | attributesFurnaceChargeNo | String | No (null allowed) | Attributes furnace charge number | `"HT-260928-03"` |  |
+| 31 | attributesHardnessHbw | Decimal128 | No (null allowed) | Attributes hardness (Brinell HBW) | `NumberDecimal("92.0")` |  |
+| 32 | attributesAnodisingLoadNo | String | No (null allowed) | Attributes anodising load number | `"AN-260929-02"` |  |
+| 33 | attributesCoatingThicknessUm | Decimal128 | No (null allowed) | Attributes coating thickness (micrometres) | `NumberDecimal("12.5")` |  |
+| 34 | attributesCureDate | Date | No (null allowed) | Attributes cure date (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-09-28T18:30:00.000+0000")` |  |
+| 35 | certificateControlledDocumentId | String | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: certificate controlled document | `"DOC-CRT-KPP-260914-07"` | Reference: u_mes_syst_controlledDocument._id |
+| 36 | certificateControlledDocumentName | String | No (null allowed) | Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Material certificate, piston lot KPP-260914-07"` |  |
+| 37 | currentOperationId | String | No (null allowed) | Reference to u_mes_prod_operation._id: current operation | `"OPN-OP070"` | Reference: u_mes_prod_operation._id |
+| 38 | currentOperationName | String | No (null allowed) | Display value of currentOperationId, copied from u_mes_prod_operation.name | `"Bleed screw torque"` |  |
+| 39 | closedAt | Date | No (null allowed) | Date and time when the record was closed | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
+| 40 | status | String | Yes | Primary lifecycle state of the document | `"Closed"` | Created; Available; In Process; On Hold; Consumed; Closed; Rejected |
+| 41 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 42 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
+| 43 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 44 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 45 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
+| 46 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 47 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+
+## Status values
+
+Created, Available, In Process, On Hold, Consumed, Closed, Rejected. Initial state: Created. The values are maintained in u_mes_syst_statusDefinition.
+
+## Indexes
+
+| # | Keys | Unique | Purpose |
+|---|---|---|---|
+| 1 | `{ siteId: 1, recordNo: 1 }` | Yes | Business identifier is unique within the site |
+| 2 | `{ siteId: 1, status: 1 }` | No | Work lists filtered by lifecycle state |
+| 3 | `{ itemId: 1 }` | No | Look-up of documents by item |
+| 4 | `{ supplierId: 1 }` | No | Look-up of documents by supplier |
+| 5 | `{ goodsReceiptId: 1 }` | No | Look-up of documents by goods receipt |
+| 6 | `{ productionOrderId: 1 }` | No | Look-up of documents by production order |
+| 7 | `{ unitOfMeasureId: 1 }` | No | Look-up of documents by unit of measure |
+| 8 | `{ siteId: 1, manufacturedAt: -1 }` | No | Time-ordered lists and reports by manufactured at |
+
+## Referenced by
+
+u_mes_plan_productionOrderLot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lotParentLot, u_mes_plan_lotAttributesCavityNo, u_mes_plan_containerLot, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_label, u_mes_matl_shipmentLineLot, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_trac_asBuiltRecord, u_mes_trac_asBuiltRecordComponent, u_mes_qual_inspectionResult, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_customerComplaintSuspectLot, u_mes_perf_processReading.
+
+## Files
+
+- Validator: 03_design/03_planning_execution/validators/u_mes_plan_lot.json
+- Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_lot.js
+- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_lot.js

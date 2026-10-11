@@ -1,0 +1,28 @@
+// Sample document for u_mes_prod_workInstruction (illustrative; seed data is generated separately)
+db.getCollection("u_mes_prod_workInstruction").insertOne({
+  _id: "WI-WI-OP070-001",
+  recordNo: "WI-OP070-001",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  title: "Bleed screw tightening - Front caliper LH",
+  itemId: "ITM-5110-10-0100",
+  itemName: "Front Brake Caliper Assembly, LH",
+  operationId: "OPN-OP070",
+  operationName: "Bleed screw torque",
+  version: NumberInt(3),
+  languageId: "LNG-en",
+  languageName: "English",
+  effectiveFrom: ISODate("2026-03-31T18:30:00.000+0000"),
+  effectiveTo: ISODate("2027-03-31T18:29:59.000+0000"),
+  engineeringChangeId: "ECN-2026-0031",
+  engineeringChangeName: "Bleed screw torque window revised",
+  safetyNotes: "Keep hands clear of the nutrunner socket during rundown",
+  authorUserId: "USR-10087",
+  authorUserName: "Anita Kulkarni",
+  approvedById: "USR-10019",
+  approvedBy: "Meera Deshpande",
+  approvedAt: ISODate("2026-03-31T18:30:00.000+0000"),
+  readAcknowledgementRequired: true,
+  status: "Released",
+  schemaVersion: NumberInt(1)
+});

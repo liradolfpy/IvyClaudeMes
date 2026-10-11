@@ -1,0 +1,144 @@
+{
+  "collMod": "u_mes_syst_systemConfiguration",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_systemConfiguration",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "module",
+        "description",
+        "valueType",
+        "configValueText",
+        "configValueNumber",
+        "configValueFlag",
+        "configValueJson",
+        "scope",
+        "isEditable",
+        "isSecret",
+        "validFrom",
+        "lastChangedReason",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CFG-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "module": {
+          "bsonType": "string",
+          "description": "Module of the system configuration",
+          "enum": [
+            "Master Data",
+            "Product Definition",
+            "Execution",
+            "Materials",
+            "Traceability",
+            "Quality",
+            "Performance",
+            "Maintenance",
+            "Integration",
+            "Safety"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the system configuration"
+        },
+        "valueType": {
+          "bsonType": "string",
+          "description": "Value type",
+          "enum": [
+            "Text",
+            "Number",
+            "Flag",
+            "JSON"
+          ]
+        },
+        "configValueText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Config value text"
+        },
+        "configValueNumber": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Config value number"
+        },
+        "configValueFlag": {
+          "bsonType": "bool",
+          "description": "True when: config value flag"
+        },
+        "configValueJson": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Config value json"
+        },
+        "scope": {
+          "bsonType": "string",
+          "description": "Whether the record applies to the whole enterprise or to one site",
+          "enum": [
+            "Enterprise",
+            "Site"
+          ]
+        },
+        "isEditable": {
+          "bsonType": "bool",
+          "description": "True when the record is editable"
+        },
+        "isSecret": {
+          "bsonType": "bool",
+          "description": "True when the record is secret"
+        },
+        "validFrom": {
+          "bsonType": "date",
+          "description": "Valid from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "lastChangedReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Last changed reason"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

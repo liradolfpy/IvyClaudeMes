@@ -1,0 +1,144 @@
+{
+  "collMod": "u_mes_perf_leakTestResultStage",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_perf_leakTestResultStage",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "leakTestResultId",
+        "leakTestResultName",
+        "stageNo",
+        "stageName",
+        "testPressureBar",
+        "fillTimeSec",
+        "stabiliseTimeSec",
+        "testTimeSec",
+        "pressureDropPa",
+        "leakRateSccm",
+        "limitPressureDropPa",
+        "limitLeakRateSccm",
+        "stageResult",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <leakTestResultId>-S<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "leakTestResultId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_perf_leakTestResult._id: the parent document this one belongs to"
+        },
+        "leakTestResultName": {
+          "bsonType": "string",
+          "description": "Display value of leakTestResultId, copied from u_mes_perf_leakTestResult.recordNo"
+        },
+        "stageNo": {
+          "bsonType": "int",
+          "description": "Stage number"
+        },
+        "stageName": {
+          "bsonType": "string",
+          "description": "Stage name",
+          "enum": [
+            "Low Pressure",
+            "High Pressure"
+          ]
+        },
+        "testPressureBar": {
+          "bsonType": "decimal",
+          "description": "Test pressure (bar)"
+        },
+        "fillTimeSec": {
+          "bsonType": "decimal",
+          "description": "Fill time (seconds)"
+        },
+        "stabiliseTimeSec": {
+          "bsonType": "decimal",
+          "description": "Stabilise time (seconds)"
+        },
+        "testTimeSec": {
+          "bsonType": "decimal",
+          "description": "Test time (seconds)"
+        },
+        "pressureDropPa": {
+          "bsonType": "decimal",
+          "description": "Pressure drop (pascal)"
+        },
+        "leakRateSccm": {
+          "bsonType": "decimal",
+          "description": "Leak rate (standard cubic centimetres per minute)"
+        },
+        "limitPressureDropPa": {
+          "bsonType": "decimal",
+          "description": "Limit pressure drop (pascal)"
+        },
+        "limitLeakRateSccm": {
+          "bsonType": "decimal",
+          "description": "Limit leak rate (standard cubic centimetres per minute)"
+        },
+        "stageResult": {
+          "bsonType": "string",
+          "description": "Stage result",
+          "enum": [
+            "Pass",
+            "Fail"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

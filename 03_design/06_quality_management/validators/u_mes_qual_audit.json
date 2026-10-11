@@ -1,0 +1,267 @@
+{
+  "collMod": "u_mes_qual_audit",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_audit",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "auditType",
+        "standard",
+        "scopeText",
+        "areaId",
+        "areaName",
+        "lineId",
+        "lineName",
+        "customerId",
+        "customerName",
+        "layer",
+        "leadAuditorUserId",
+        "leadAuditorUserName",
+        "auditeeUserId",
+        "auditeeUserName",
+        "plannedDate",
+        "startedAt",
+        "completedAt",
+        "checkSheetId",
+        "checkSheetName",
+        "questionsCount",
+        "conformingCount",
+        "scorePct",
+        "overallRating",
+        "reportControlledDocumentId",
+        "reportControlledDocumentName",
+        "nextAuditDueAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: AUD-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the audit; used as its display value in other collections"
+        },
+        "auditType": {
+          "bsonType": "string",
+          "description": "Audit type",
+          "enum": [
+            "Layered Process Audit",
+            "Process Audit",
+            "Product Audit",
+            "System Audit",
+            "Customer Audit",
+            "Supplier Audit"
+          ]
+        },
+        "standard": {
+          "bsonType": "string",
+          "description": "Standard or specification the record refers to"
+        },
+        "scopeText": {
+          "bsonType": "string",
+          "description": "Scope text"
+        },
+        "areaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "customerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "layer": {
+          "bsonType": "int",
+          "description": "Audit layer (1 = line leader, 2 = supervisor, 3 = manager)"
+        },
+        "leadAuditorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: lead auditor user"
+        },
+        "leadAuditorUserName": {
+          "bsonType": "string",
+          "description": "Display value of leadAuditorUserId, copied from u_mes_mast_user.fullName"
+        },
+        "auditeeUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: auditee user"
+        },
+        "auditeeUserName": {
+          "bsonType": "string",
+          "description": "Display value of auditeeUserId, copied from u_mes_mast_user.fullName"
+        },
+        "plannedDate": {
+          "bsonType": "date",
+          "description": "Planned date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was started"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "checkSheetId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_checkSheet._id"
+        },
+        "checkSheetName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of checkSheetId, copied from u_mes_qual_checkSheet.name"
+        },
+        "questionsCount": {
+          "bsonType": "int",
+          "description": "Questions count"
+        },
+        "conformingCount": {
+          "bsonType": "int",
+          "description": "Conforming count"
+        },
+        "scorePct": {
+          "bsonType": "decimal",
+          "description": "Score (percent)"
+        },
+        "overallRating": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Overall rating",
+          "enum": [
+            "A",
+            "B",
+            "C",
+            null
+          ]
+        },
+        "reportControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: report controlled document"
+        },
+        "reportControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reportControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "nextAuditDueAt": {
+          "bsonType": "date",
+          "description": "Next audit due date and time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Planned",
+            "In Progress",
+            "Completed",
+            "Closed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

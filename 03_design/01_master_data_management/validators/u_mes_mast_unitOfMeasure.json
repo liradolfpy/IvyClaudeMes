@@ -1,0 +1,131 @@
+{
+  "collMod": "u_mes_mast_unitOfMeasure",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_unitOfMeasure",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "scope",
+        "symbol",
+        "dimension",
+        "baseUnitOfMeasureId",
+        "baseUnitOfMeasureName",
+        "factorToBase",
+        "offsetToBase",
+        "decimalPlaces",
+        "isoCode",
+        "isBaseUnit",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: UOM-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the unit of measure; used as its display value in other collections"
+        },
+        "scope": {
+          "bsonType": "string",
+          "description": "Whether the record applies to the whole enterprise or to one site",
+          "enum": [
+            "Enterprise",
+            "Site"
+          ]
+        },
+        "symbol": {
+          "bsonType": "string",
+          "description": "Symbol of the unit of measure"
+        },
+        "dimension": {
+          "bsonType": "string",
+          "description": "Dimension of the unit of measure",
+          "enum": [
+            "Count",
+            "Mass",
+            "Length",
+            "Torque",
+            "Pressure",
+            "Temperature",
+            "Time",
+            "Energy",
+            "Volume",
+            "Hardness",
+            "Leak Rate"
+          ]
+        },
+        "baseUnitOfMeasureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_unitOfMeasure._id: base unit of measure"
+        },
+        "baseUnitOfMeasureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "factorToBase": {
+          "bsonType": "decimal",
+          "description": "Multiplier to convert to the base unit of the dimension"
+        },
+        "offsetToBase": {
+          "bsonType": "decimal",
+          "description": "Offset to base"
+        },
+        "decimalPlaces": {
+          "bsonType": "int",
+          "description": "Decimal places"
+        },
+        "isoCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UN/ECE Recommendation 20 unit code"
+        },
+        "isBaseUnit": {
+          "bsonType": "bool",
+          "description": "True when the record is base unit"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

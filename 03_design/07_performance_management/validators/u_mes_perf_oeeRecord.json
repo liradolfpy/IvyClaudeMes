@@ -1,0 +1,242 @@
+{
+  "collMod": "u_mes_perf_oeeRecord",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_perf_oeeRecord",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "equipmentId",
+        "equipmentName",
+        "lineId",
+        "lineName",
+        "shiftId",
+        "shiftName",
+        "productionDate",
+        "itemId",
+        "itemName",
+        "productionOrderId",
+        "productionOrderName",
+        "periodStartAt",
+        "periodEndAt",
+        "calendarMinutes",
+        "plannedProductionMinutes",
+        "plannedDowntimeMinutes",
+        "unplannedDowntimeMinutes",
+        "runMinutes",
+        "idealCycleTimeSec",
+        "totalCount",
+        "goodCount",
+        "rejectCount",
+        "reworkCount",
+        "availabilityPct",
+        "performancePct",
+        "qualityPct",
+        "oeePct",
+        "teepPct",
+        "calculatedAt",
+        "calculationVersion",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: OEE-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "productionDate": {
+          "bsonType": "date",
+          "description": "Production date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "productionOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "periodStartAt": {
+          "bsonType": "date",
+          "description": "Period start date and time"
+        },
+        "periodEndAt": {
+          "bsonType": "date",
+          "description": "Period end date and time"
+        },
+        "calendarMinutes": {
+          "bsonType": "int",
+          "description": "Calendar (minutes)"
+        },
+        "plannedProductionMinutes": {
+          "bsonType": "int",
+          "description": "Shift duration less paid and unpaid breaks"
+        },
+        "plannedDowntimeMinutes": {
+          "bsonType": "int",
+          "description": "Planned downtime (minutes)"
+        },
+        "unplannedDowntimeMinutes": {
+          "bsonType": "int",
+          "description": "Unplanned downtime (minutes)"
+        },
+        "runMinutes": {
+          "bsonType": "int",
+          "description": "Run (minutes)"
+        },
+        "idealCycleTimeSec": {
+          "bsonType": "decimal",
+          "description": "Ideal cycle time (seconds)"
+        },
+        "totalCount": {
+          "bsonType": "int",
+          "description": "Total count"
+        },
+        "goodCount": {
+          "bsonType": "int",
+          "description": "Good count"
+        },
+        "rejectCount": {
+          "bsonType": "int",
+          "description": "Reject count"
+        },
+        "reworkCount": {
+          "bsonType": "int",
+          "description": "Rework count"
+        },
+        "availabilityPct": {
+          "bsonType": "decimal",
+          "description": "Availability (percent)"
+        },
+        "performancePct": {
+          "bsonType": "decimal",
+          "description": "Performance (percent)"
+        },
+        "qualityPct": {
+          "bsonType": "decimal",
+          "description": "Quality (percent)"
+        },
+        "oeePct": {
+          "bsonType": "decimal",
+          "description": "OEE (percent)"
+        },
+        "teepPct": {
+          "bsonType": "decimal",
+          "description": "TEEP (percent)"
+        },
+        "calculatedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was calculated"
+        },
+        "calculationVersion": {
+          "bsonType": "int",
+          "description": "Calculation version"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Calculated",
+            "Recalculated"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

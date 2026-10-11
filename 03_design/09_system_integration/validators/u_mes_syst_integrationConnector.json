@@ -1,0 +1,176 @@
+{
+  "collMod": "u_mes_syst_integrationConnector",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_integrationConnector",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "connectorType",
+        "targetSystem",
+        "protocol",
+        "endpoint",
+        "environment",
+        "authMethod",
+        "credentialRef",
+        "timeoutMs",
+        "retryPolicyMaxAttempts",
+        "retryPolicyBackoffSec",
+        "lastSuccessAt",
+        "lastFailureAt",
+        "healthStatus",
+        "ownerUserId",
+        "ownerUserName",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ICN-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the integration connector; used as its display value in other collections"
+        },
+        "connectorType": {
+          "bsonType": "string",
+          "description": "Connector type",
+          "enum": [
+            "ERP",
+            "PLM",
+            "OPC UA Server",
+            "Tool Controller",
+            "Label Printer",
+            "Leak Tester",
+            "Email Gateway"
+          ]
+        },
+        "targetSystem": {
+          "bsonType": "string",
+          "description": "Target system"
+        },
+        "protocol": {
+          "bsonType": "string",
+          "description": "Protocol of the integration connector",
+          "enum": [
+            "HTTPS REST",
+            "OPC UA",
+            "Open Protocol",
+            "Modbus TCP",
+            "MQTT",
+            "ZPL Over TCP",
+            "SMTP"
+          ]
+        },
+        "endpoint": {
+          "bsonType": "string",
+          "description": "Endpoint of the integration connector"
+        },
+        "environment": {
+          "bsonType": "string",
+          "description": "Environment of the integration connector",
+          "enum": [
+            "Production",
+            "Quality",
+            "Development"
+          ]
+        },
+        "authMethod": {
+          "bsonType": "string",
+          "description": "Auth method",
+          "enum": [
+            "OAuth2 Client Credentials",
+            "Certificate",
+            "Basic",
+            "None"
+          ]
+        },
+        "credentialRef": {
+          "bsonType": "string",
+          "description": "Pointer to the secret in the vault; the secret itself is never stored"
+        },
+        "timeoutMs": {
+          "bsonType": "int",
+          "description": "Timeout (milliseconds)"
+        },
+        "retryPolicyMaxAttempts": {
+          "bsonType": "int",
+          "description": "Retry policy maximum attempts"
+        },
+        "retryPolicyBackoffSec": {
+          "bsonType": "int",
+          "description": "Retry policy backoff (seconds)"
+        },
+        "lastSuccessAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last success date and time"
+        },
+        "lastFailureAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last failure date and time"
+        },
+        "healthStatus": {
+          "bsonType": "string",
+          "description": "Health status",
+          "enum": [
+            "Healthy",
+            "Degraded",
+            "Down"
+          ]
+        },
+        "ownerUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: owner user"
+        },
+        "ownerUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of ownerUserId, copied from u_mes_mast_user.fullName"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Disabled"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

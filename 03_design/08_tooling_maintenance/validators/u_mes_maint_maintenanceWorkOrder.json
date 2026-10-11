@@ -1,0 +1,294 @@
+{
+  "collMod": "u_mes_maint_maintenanceWorkOrder",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_maintenanceWorkOrder",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "workOrderType",
+        "equipmentId",
+        "equipmentName",
+        "toolId",
+        "toolName",
+        "maintenancePlanId",
+        "maintenancePlanName",
+        "downtimeEventId",
+        "downtimeEventName",
+        "priority",
+        "reportedById",
+        "reportedBy",
+        "reportedAt",
+        "problemDescription",
+        "reasonCodeId",
+        "reasonCodeName",
+        "failureMode",
+        "rootCause",
+        "actionTaken",
+        "plannedStartAt",
+        "startedAt",
+        "completedAt",
+        "downtimeMinutes",
+        "responseMinutes",
+        "repairMinutes",
+        "totalCostInr",
+        "equipmentReleasedById",
+        "equipmentReleasedBy",
+        "equipmentReleasedAt",
+        "followUpRequired",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: MWO-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the maintenance work order; used as its display value in other collections"
+        },
+        "workOrderType": {
+          "bsonType": "string",
+          "description": "Work order type",
+          "enum": [
+            "Breakdown",
+            "Preventive",
+            "Predictive",
+            "Improvement",
+            "Calibration"
+          ]
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "toolId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_tool._id"
+        },
+        "toolName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of toolId, copied from u_mes_maint_tool.name"
+        },
+        "maintenancePlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_maintenancePlan._id"
+        },
+        "maintenancePlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of maintenancePlanId, copied from u_mes_maint_maintenancePlan.name"
+        },
+        "downtimeEventId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_downtimeEvent._id"
+        },
+        "downtimeEventName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo"
+        },
+        "priority": {
+          "bsonType": "string",
+          "description": "Priority of the maintenance work order",
+          "enum": [
+            "Low",
+            "Normal",
+            "High",
+            "Urgent"
+          ]
+        },
+        "reportedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'reported'"
+        },
+        "reportedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in reportedById, copied from u_mes_mast_user.fullName"
+        },
+        "reportedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was reported"
+        },
+        "problemDescription": {
+          "bsonType": "string",
+          "description": "Problem description"
+        },
+        "reasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id"
+        },
+        "reasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "failureMode": {
+          "bsonType": "string",
+          "description": "Failure mode"
+        },
+        "rootCause": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Root cause"
+        },
+        "actionTaken": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Action taken"
+        },
+        "plannedStartAt": {
+          "bsonType": "date",
+          "description": "Planned start date and time"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was started"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was completed"
+        },
+        "downtimeMinutes": {
+          "bsonType": "int",
+          "description": "Downtime (minutes)"
+        },
+        "responseMinutes": {
+          "bsonType": "int",
+          "description": "Response (minutes)"
+        },
+        "repairMinutes": {
+          "bsonType": "int",
+          "description": "Repair (minutes)"
+        },
+        "totalCostInr": {
+          "bsonType": "decimal",
+          "description": "Total cost (Indian rupees)"
+        },
+        "equipmentReleasedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'equipment released'"
+        },
+        "equipmentReleasedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in equipmentReleasedById, copied from u_mes_mast_user.fullName"
+        },
+        "equipmentReleasedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Equipment released date and time"
+        },
+        "followUpRequired": {
+          "bsonType": "bool",
+          "description": "True when: follow up required"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Reported",
+            "Planned",
+            "In Progress",
+            "Completed",
+            "Closed",
+            "Cancelled"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

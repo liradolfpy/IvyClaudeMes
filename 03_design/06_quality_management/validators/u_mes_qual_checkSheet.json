@@ -1,0 +1,183 @@
+{
+  "collMod": "u_mes_qual_checkSheet",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_checkSheet",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "checkSheetType",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "operationId",
+        "operationName",
+        "itemId",
+        "itemName",
+        "version",
+        "frequency",
+        "masterSampleRequired",
+        "estimatedMinutes",
+        "effectiveFrom",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: CKS-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the check sheet; used as its display value in other collections"
+        },
+        "checkSheetType": {
+          "bsonType": "string",
+          "description": "Check sheet type",
+          "enum": [
+            "Start Of Shift",
+            "Poka Yoke Verification",
+            "First Off Approval",
+            "Autonomous Maintenance",
+            "Layered Process Audit",
+            "Changeover"
+          ]
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "operationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_operation._id"
+        },
+        "operationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operationId, copied from u_mes_prod_operation.name"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the check sheet"
+        },
+        "frequency": {
+          "bsonType": "string",
+          "description": "Frequency of the check sheet",
+          "enum": [
+            "Per Shift",
+            "Daily",
+            "Weekly",
+            "Per Changeover",
+            "Per Lot"
+          ]
+        },
+        "masterSampleRequired": {
+          "bsonType": "bool",
+          "description": "True when: master sample required"
+        },
+        "estimatedMinutes": {
+          "bsonType": "int",
+          "description": "Estimated (minutes)"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was approved"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

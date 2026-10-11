@@ -1,0 +1,26 @@
+// Sample document for u_mes_prod_routing (illustrative; seed data is generated separately)
+db.getCollection("u_mes_prod_routing").insertOne({
+  _id: "RTG-5110-10-0100-R01",
+  recordNo: "5110-10-0100-R01",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  itemId: "ITM-5110-10-0100",
+  itemName: "Front Brake Caliper Assembly, LH",
+  itemRevision: "D",
+  routingVersion: NumberInt(1),
+  routingType: "Standard",
+  description: "Front caliper LH assembly routing",
+  effectiveFrom: ISODate("2026-03-31T18:30:00.000+0000"),
+  effectiveTo: ISODate("2027-03-31T18:29:59.000+0000"),
+  engineeringChangeId: "ECN-2026-0031",
+  engineeringChangeName: "Bleed screw torque window revised",
+  entryStepNo: NumberInt(60),
+  parentRoutingId: "RTG-5110-10-0100-RW1",
+  parentRoutingName: "Front caliper LH rework routing",
+  approvedById: "USR-10019",
+  approvedBy: "Meera Deshpande",
+  approvedAt: ISODate("2026-03-31T18:30:00.000+0000"),
+  erpRoutingNo: "50001101-01",
+  status: "Released",
+  schemaVersion: NumberInt(1)
+});

@@ -1,0 +1,90 @@
+# u_mes_syst_notification
+
+| Property | Value |
+|---|---|
+| Module | System and Integration (syst) |
+| Purpose | Alerts and escalations sent to users / groups with delivery and acknowledgement status |
+| Kind | Entity |
+| Data class | Transaction |
+| Parent collection | none |
+| _id pattern | NTF-<recordNo> |
+| Display value used by references | title |
+| Keys | 32 (20 required, 12 may be null) |
+| Estimated volume per year | ~400,000 |
+| Storage | standard, TTL |
+
+## Structure
+
+Flat entity collection: one document per notification, all keys top-level and scalar.
+
+Repeating data of this entity is held in separate collections, one document per occurrence, each pointing back with notificationId:
+
+| Collection | Kind | Holds |
+|---|---|---|
+| u_mes_syst_notificationRecipient | Child | recipient |
+
+## Field dictionary
+
+Every key is present in every document. "Required" means the value may not be null.
+
+| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: NTF-<recordNo> | `"NTF-20260929-000096"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260929-000096"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | notificationTypeId | String | Yes | Reference to u_mes_syst_notificationType._id | `"NTT-ANDON-ESC"` | Reference: u_mes_syst_notificationType._id |
+| 6 | notificationTypeName | String | Yes | Display value of notificationTypeId, copied from u_mes_syst_notificationType.name | `"Andon Escalation"` |  |
+| 7 | severity | Int32 | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
+| 8 | title | String | Yes | Title of the notification; used as its display value in other collections | `"Quality andon not acknowledged"` |  |
+| 9 | bodyText | String | Yes | Body text | `"Quality andon at WC-TRQ-01 not acknowledged within 5 minutes"` |  |
+| 10 | relatedCollectionName | String | Yes | Name of the collection the related document is in | `"u_mes_plan_wipUnit"` |  |
+| 11 | relatedEntityId | String | No (null allowed) | _id of the related document in the collection named by relatedCollectionName | `"WU-U260929A0184"` | Reference: Any collection (see relatedCollectionName) |
+| 12 | relatedEntityName | String | No (null allowed) | Display value of the related document | `"U260929A0184"` |  |
+| 13 | andonEventId | String | No (null allowed) | Reference to u_mes_plan_andonEvent._id | `"AND-20260929-0005"` | Reference: u_mes_plan_andonEvent._id |
+| 14 | andonEventName | String | No (null allowed) | Display value of andonEventId, copied from u_mes_plan_andonEvent.description | `"Leak test rejects repeating at station LKT-01"` |  |
+| 15 | alarmId | String | No (null allowed) | Reference to u_mes_perf_alarm._id | `"ALM-20260929-000031"` | Reference: u_mes_perf_alarm._id |
+| 16 | alarmName | String | No (null allowed) | Display value of alarmId, copied from u_mes_perf_alarm.recordNo | `"20260929-000031"` |  |
+| 17 | nonconformanceId | String | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `"NCR-2026-000118"` | Reference: u_mes_qual_nonconformance._id |
+| 18 | nonconformanceName | String | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `"Leak test failures on caliper LH"` |  |
+| 19 | escalationLevel | Int32 | Yes | Escalation level | `NumberInt(1)` |  |
+| 20 | raisedAt | Date | Yes | Date and time when the record was raised | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
+| 21 | acknowledgedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'acknowledged' | `"USR-10045"` | Reference: u_mes_mast_user._id |
+| 22 | acknowledgedBy | String | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
+| 23 | acknowledgedAt | Date | No (null allowed) | Date and time when the record was acknowledged | `ISODate("2026-09-29T00:30:34.000+0000")` |  |
+| 24 | expiresAt | Date | No (null allowed) | Expires date and time | `ISODate("2027-03-31T18:29:59.000+0000")` |  |
+| 25 | status | String | Yes | Primary lifecycle state of the document | `"Acknowledged"` | Raised; Sent; Acknowledged; Expired |
+| 26 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 27 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
+| 28 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-SYSTEM"` | Reference: u_mes_mast_user._id |
+| 29 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 30 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:30:34.000+0000")` |  |
+| 31 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-SYSTEM"` | Reference: u_mes_mast_user._id |
+| 32 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+
+## Status values
+
+Raised, Sent, Acknowledged, Expired. Initial state: Raised. The values are maintained in u_mes_syst_statusDefinition.
+
+## Indexes
+
+| # | Keys | Unique | Purpose |
+|---|---|---|---|
+| 1 | `{ siteId: 1, recordNo: 1 }` | Yes | Business identifier is unique within the site |
+| 2 | `{ siteId: 1, status: 1 }` | No | Work lists filtered by lifecycle state |
+| 3 | `{ notificationTypeId: 1 }` | No | Look-up of documents by notification type |
+| 4 | `{ andonEventId: 1 }` | No | Look-up of documents by andon event |
+| 5 | `{ alarmId: 1 }` | No | Look-up of documents by alarm |
+| 6 | `{ nonconformanceId: 1 }` | No | Look-up of documents by nonconformance |
+| 7 | `{ relatedCollectionName: 1, relatedEntityId: 1 }` | No | Look-up by the related document |
+| 8 | `{ siteId: 1, raisedAt: -1 }` | No | Time-ordered lists and reports by raised at |
+
+## Referenced by
+
+u_mes_syst_notificationRecipient.
+
+## Files
+
+- Validator: 03_design/09_system_integration/validators/u_mes_syst_notification.json
+- Indexes: 03_design/09_system_integration/indexes/u_mes_syst_notification.js
+- Sample document: 03_design/09_system_integration/samples/u_mes_syst_notification.js

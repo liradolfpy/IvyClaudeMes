@@ -1,0 +1,96 @@
+{
+  "collMod": "u_mes_mast_customerShipTo",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_customerShipTo",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "customerId",
+        "customerName",
+        "sequenceNo",
+        "shipToCode",
+        "name",
+        "line1",
+        "city",
+        "state",
+        "postalCode",
+        "dockCode",
+        "transitDays",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <customerId>-ST<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id: the parent document this one belongs to"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "shipToCode": {
+          "bsonType": "string",
+          "description": "Ship to code"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the customer ship to; used as its display value in other collections"
+        },
+        "line1": {
+          "bsonType": "string",
+          "description": "Line1 of the customer ship to"
+        },
+        "city": {
+          "bsonType": "string",
+          "description": "City of the customer ship to"
+        },
+        "state": {
+          "bsonType": "string",
+          "description": "State of the customer ship to"
+        },
+        "postalCode": {
+          "bsonType": "string",
+          "description": "Postal code"
+        },
+        "dockCode": {
+          "bsonType": "string",
+          "description": "Dock code"
+        },
+        "transitDays": {
+          "bsonType": "int",
+          "description": "Transit (days)"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

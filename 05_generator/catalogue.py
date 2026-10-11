@@ -1,8 +1,8 @@
 # Single source of truth for the collection catalogue (Phase 1). Reused by the Phase 3 generator.
 # (name, domain, idPrefix, businessKey, purpose, sources, refs, volumePerYear, storage, embedNote)
-D_ENT="1 Enterprise and master data"; D_PRD="2 Product definition"; D_EXE="3 Planning and execution"
-D_MAT="4 Materials"; D_TRC="5 Traceability"; D_QLT="6 Quality"; D_EQP="7 Equipment and performance"
-D_MNT="8 Maintenance and tooling"; D_SYS="9 Integration and system"; D_ESA="10 Energy, safety and andon"
+D_ENT="1 Master Data Management"; D_PRD="2 Product Definition"; D_EXE="3 Planning and Execution"
+D_MAT="4 Material Management"; D_TRC="5 Traceability"; D_QLT="6 Quality Management"; D_EQP="7 Performance Management"
+D_MNT="8 Tooling & Maintenance"; D_SYS="9 System and Integration"; D_ESA="10 Environment Health and Safety"
 C=[
 ("enterprises",D_ENT,"ENT","enterpriseCode","Legal entities of the group (ISA-95 Enterprise level); tax and registration data","Opcenter, Proficy",[],"<20 total","standard","Embeds addresses and registrations (bounded, read together)"),
 ("sites",D_ENT,"SITE","siteCode","Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate","Proficy, CM, Infor",["enterprises"],"<20 total","standard","Embeds address, certificates; referenced by every document"),
@@ -114,8 +114,8 @@ C=[
 ("number_ranges",D_SYS,"NR","rangeCode","Counters and format masks for serials, lots, orders, labels, NCRs","SAP DM, Plex",["sites","items"],"30-100","standard","One document per range, atomically incremented"),
 ("system_configurations",D_SYS,"CFG","configKey","Site and module settings (OEE basis, SPC rules, retention, label printer mapping)","Tulip, CM, Proficy",["sites"],"100-500","standard","Embeds typed value"),
 
-("energy_readings",D_ESA,"ENR","energyReadingNo","Interval energy, compressed air and gas consumption per meter and equipment","Infor",["sites","iot_devices","equipment","lines","shifts","units_of_measure"],"~3.5 million","time-series (recommended)","Bucketed by meter"),
-("andon_events",D_ESA,"AND","andonNo","Help calls from stations (quality, material, maintenance, safety) with response and escalation times","NoMuda, Tulip, Proficy",["sites","work_centres","lines","users","reason_codes","downtime_events","shifts"],"~40,000","standard","Embeds escalation steps (bounded)"),
+("energy_readings",D_EQP,"ENR","energyReadingNo","Interval energy, compressed air and gas consumption per meter and equipment","Infor",["sites","iot_devices","equipment","lines","shifts","units_of_measure"],"~3.5 million","time-series (recommended)","Bucketed by meter"),
+("andon_events",D_EXE,"AND","andonNo","Help calls from stations (quality, material, maintenance, safety) with response and escalation times","NoMuda, Tulip, Proficy",["sites","work_centres","lines","users","reason_codes","downtime_events","shifts"],"~40,000","standard","Embeds escalation steps (bounded)"),
 ("safety_incidents",D_ESA,"SAF","incidentNo","Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions","CM, Infor",["sites","areas","work_centres","users","equipment","capas"],"~400","standard","Embeds actions and witnesses (bounded)"),
 ]
 

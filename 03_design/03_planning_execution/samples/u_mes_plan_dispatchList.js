@@ -1,0 +1,25 @@
+// Sample document for u_mes_plan_dispatchList (illustrative; seed data is generated separately)
+db.getCollection("u_mes_plan_dispatchList").insertOne({
+  _id: "DSP-20260929-TRQ-01-A",
+  recordNo: "20260929-TRQ-01-A",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  workCenterId: "WC-TRQ-01",
+  workCenterName: "Bleed Screw Torque Station",
+  shiftId: "SH-A",
+  shiftName: "Shift A",
+  productionDate: ISODate("2026-09-28T18:30:00.000+0000"),
+  generatedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  rule: "Earliest Due Date",
+  acknowledgedById: "USR-10045",
+  acknowledgedBy: "Rajesh Patil",
+  acknowledgedAt: ISODate("2026-09-29T02:10:00.000+0000"),
+  status: "Closed",
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10231",
+  createdBy: "Sunil Jadhav",
+  updatedAt: ISODate("2026-09-29T02:10:00.000+0000"),
+  updatedById: "USR-10231",
+  updatedBy: "Sunil Jadhav"
+});

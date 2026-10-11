@@ -1,0 +1,145 @@
+{
+  "collMod": "u_mes_prod_operation",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prod_operation",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "operationType",
+        "description",
+        "defaultWorkCenterId",
+        "defaultWorkCenterName",
+        "trackingGrain",
+        "standardCycleTimeSec",
+        "standardSetupTimeMin",
+        "standardManning",
+        "isInspection",
+        "isSpecialProcess",
+        "specialProcessStandard",
+        "requiresFirstOffApproval",
+        "erpControlKey",
+        "sequenceHint",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: OPN-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the operation; used as its display value in other collections"
+        },
+        "operationType": {
+          "bsonType": "string",
+          "description": "Operation type",
+          "enum": [
+            "Casting",
+            "Heat Treatment",
+            "Machining",
+            "Cleaning",
+            "Surface Treatment",
+            "Assembly",
+            "Test",
+            "Marking",
+            "Inspection",
+            "Packing"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the operation"
+        },
+        "defaultWorkCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id: default work center"
+        },
+        "defaultWorkCenterName": {
+          "bsonType": "string",
+          "description": "Display value of defaultWorkCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "trackingGrain": {
+          "bsonType": "string",
+          "description": "Level at which material is tracked at this point",
+          "enum": [
+            "Lot",
+            "Unit",
+            "Container"
+          ]
+        },
+        "standardCycleTimeSec": {
+          "bsonType": "decimal",
+          "description": "Standard cycle time (seconds)"
+        },
+        "standardSetupTimeMin": {
+          "bsonType": "int",
+          "description": "Standard setup time (minutes)"
+        },
+        "standardManning": {
+          "bsonType": "int",
+          "description": "Standard manning"
+        },
+        "isInspection": {
+          "bsonType": "bool",
+          "description": "True when the record is inspection"
+        },
+        "isSpecialProcess": {
+          "bsonType": "bool",
+          "description": "True when the record is special process"
+        },
+        "specialProcessStandard": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "AIAG special process assessment that applies"
+        },
+        "requiresFirstOffApproval": {
+          "bsonType": "bool",
+          "description": "True when first off approval is required"
+        },
+        "erpControlKey": {
+          "bsonType": "string",
+          "description": "ERP control key"
+        },
+        "sequenceHint": {
+          "bsonType": "int",
+          "description": "Default position of the operation in a routing"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

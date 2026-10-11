@@ -7,8 +7,8 @@ from master_refs import NEWK,NEWENT,CONV,NEWC
 K=dict(K); K.update(NEWK)
 
 APP="u_mes"
-MOD={"1":"mdm","2":"prd","3":"exe","4":"mat","5":"trc","6":"qlt","7":"eqp","8":"mnt","9":"sys","10":"ehs"}
-MODNAME={"mdm":"Master data","prd":"Product definition","exe":"Planning and execution","mat":"Materials","trc":"Traceability","qlt":"Quality","eqp":"Equipment and performance","mnt":"Maintenance and tooling","sys":"Integration and system","ehs":"Energy, safety and andon"}
+MOD={"1":"mast","2":"prod","3":"plan","4":"matl","5":"trac","6":"qual","7":"perf","8":"maint","9":"syst","10":"ehs"}
+MODNAME={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling & Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety'}
 ENT={**NEWENT,"enterprises":"enterprise","work_centres":"workCenter","equipment":"equipment","calendars":"workCalendar","units_of_measure":"unitOfMeasure","certifications":"skillCertification","variants":"productVariant","boms":"billOfMaterial","bills_of_process":"billOfProcess","process_data":"processReading","event_logs":"businessEvent","documents":"controlledDocument","pfmeas":"pfmea","capas":"capa","alarms":"alarm","audits":"audit","labels":"label","kits":"kit","lots":"lot","audit_trails":"auditTrail","inventory_balances":"inventoryBalance","as_built_records":"asBuiltRecord","spc_charts":"spcChart","spc_samples":"spcSample","msa_studies":"msaStudy","erp_messages":"erpMessage","iot_devices":"iotDevice","oee_records":"oeeRecord","wip_units":"wipUnit"}
 def camel(n):
     p=n.split("_"); return p[0]+"".join(x.title() for x in p[1:])
@@ -197,9 +197,9 @@ for col in COLS.values():
         col["statusValues"]=CHILDSTATUS["elementStatus"] if "ppap" in col["entity"] else CHILDSTATUS["entryStatus"]
 # status mapping collections (flat)
 def sysc(entity,fields,src):
-    cname="%s_sys_%s"%(APP,entity)
+    cname="%s_syst_%s"%(APP,entity)
     f=[("_id","String",None),("recordNo","String",None),("siteId","String","site"),("siteName","String",None)]+fields+[("status","String",None),("schemaVersion","Int32",None)]
-    COLS[cname]=dict(collection=cname,module="sys",moduleName=MODNAME["sys"],entity=entity,sourceConcept=src,kind="entity",dataClass="master",parent=None,displayField={"statusDefinition":"statusName","enumerationValue":"valueName"}.get(entity,"transitionName"),statusValues=A,fields=[dict(key=a,type=b,ref=c) for a,b,c in f])
+    COLS[cname]=dict(collection=cname,module="syst",moduleName=MODNAME["syst"],entity=entity,sourceConcept=src,kind="entity",dataClass="master",parent=None,displayField={"statusDefinition":"statusName","enumerationValue":"valueName"}.get(entity,"transitionName"),statusValues=A,fields=[dict(key=a,type=b,ref=c) for a,b,c in f])
 sysc("statusDefinition",[("collectionName","String",None),("fieldName","String",None),("statusCode","String",None),("statusName","String",None),("description","String",None),("sequenceNo","Int32",None),("isInitial","Boolean",None),("isFinal","Boolean",None),("colourCode","String",None)],"(new) status mapping")
 sysc("enumerationValue",[("collectionName","String",None),("fieldName","String",None),("valueCode","String",None),("valueName","String",None),("description","String",None),("sequenceNo","Int32",None),("isDefault","Boolean",None)],"(new) fixed enumeration mapping")
 sysc("statusTransition",[("collectionName","String",None),("fromStatusDefinitionId","String","statusDefinition"),("fromStatusDefinitionName","String",None),("toStatusDefinitionId","String","statusDefinition"),("toStatusDefinitionName","String",None),("transitionName","String",None),("requiresSignature","Boolean",None),("requiresReason","Boolean",None),("sequenceNo","Int32",None)],"(new) status mapping")
@@ -215,7 +215,7 @@ for c in COLS.values():
             pair=k[:-2]+"Name" if not k.endswith("ById") else k[:-2]
             if pair not in [x["key"] for x in c["fields"]]: PROBLEMS.append((c["collection"],"NOPAIR",k))
         if k.endswith("Ids") or "[" in k or "." in k: PROBLEMS.append((c["collection"],"NESTED",k))
-    if not re.fullmatch(r"u_mes_[a-z]{3}_[a-z][A-Za-z0-9]*",c["collection"]): PROBLEMS.append((c["collection"],"COLLNAME"))
+    if not re.fullmatch(r"u_mes_[a-z]{3,5}_[a-z][A-Za-z0-9]*",c["collection"]): PROBLEMS.append((c["collection"],"COLLNAME"))
 os.makedirs("model",exist_ok=True)
 json.dump(dict(application=APP,modules=MODNAME,conversions=[dict(concept=a,oldKey=b,newKey=d,master=e) for a,b,d,e in CONVLOG],collections=list(COLS.values())),open("model/flat_model.json","w"),indent=1)
 kinds=collections.Counter(c["kind"] for c in COLS.values())

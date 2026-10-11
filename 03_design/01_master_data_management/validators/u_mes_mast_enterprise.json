@@ -1,0 +1,166 @@
+{
+  "collMod": "u_mes_mast_enterprise",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_enterprise",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "legalName",
+        "scope",
+        "parentEnterpriseId",
+        "parentEnterpriseName",
+        "cin",
+        "gstin",
+        "pan",
+        "industryCode",
+        "registeredAddressLine1",
+        "registeredAddressLine2",
+        "registeredAddressCity",
+        "registeredAddressState",
+        "registeredAddressPostalCode",
+        "registeredAddressCountryId",
+        "registeredAddressCountryName",
+        "baseCurrencyId",
+        "baseCurrencyName",
+        "fiscalYearStartMonth",
+        "website",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ENT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the enterprise; used as its display value in other collections"
+        },
+        "legalName": {
+          "bsonType": "string",
+          "description": "Legal name"
+        },
+        "scope": {
+          "bsonType": "string",
+          "description": "Whether the record applies to the whole enterprise or to one site",
+          "enum": [
+            "Enterprise",
+            "Site"
+          ]
+        },
+        "parentEnterpriseId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_enterprise._id: parent enterprise"
+        },
+        "parentEnterpriseName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentEnterpriseId, copied from u_mes_mast_enterprise.name"
+        },
+        "cin": {
+          "bsonType": "string",
+          "description": "Corporate identification number"
+        },
+        "gstin": {
+          "bsonType": "string",
+          "description": "Goods and services tax identification number"
+        },
+        "pan": {
+          "bsonType": "string",
+          "description": "Permanent account number"
+        },
+        "industryCode": {
+          "bsonType": "string",
+          "description": "National industrial classification code"
+        },
+        "registeredAddressLine1": {
+          "bsonType": "string",
+          "description": "Registered address line1"
+        },
+        "registeredAddressLine2": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Registered address line2"
+        },
+        "registeredAddressCity": {
+          "bsonType": "string",
+          "description": "Registered address city"
+        },
+        "registeredAddressState": {
+          "bsonType": "string",
+          "description": "Registered address state"
+        },
+        "registeredAddressPostalCode": {
+          "bsonType": "string",
+          "description": "Registered address postal code"
+        },
+        "registeredAddressCountryId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_country._id: registered address country"
+        },
+        "registeredAddressCountryName": {
+          "bsonType": "string",
+          "description": "Display value of registeredAddressCountryId, copied from u_mes_mast_country.name"
+        },
+        "baseCurrencyId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_currency._id: base currency"
+        },
+        "baseCurrencyName": {
+          "bsonType": "string",
+          "description": "Display value of baseCurrencyId, copied from u_mes_mast_currency.name"
+        },
+        "fiscalYearStartMonth": {
+          "bsonType": "int",
+          "description": "Month number in which the fiscal year starts (4 = April)"
+        },
+        "website": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Website of the enterprise"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

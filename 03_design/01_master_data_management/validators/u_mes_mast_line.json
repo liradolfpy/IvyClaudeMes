@@ -1,0 +1,157 @@
+{
+  "collMod": "u_mes_mast_line",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_line",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "areaId",
+        "areaName",
+        "lineType",
+        "itemFamilyId",
+        "itemFamilyName",
+        "workCalendarId",
+        "workCalendarName",
+        "taktTimeSec",
+        "manningStandard",
+        "bottleneckWorkCenterId",
+        "bottleneckWorkCenterName",
+        "oeeTarget",
+        "costCenterId",
+        "costCenterName",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: LN-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the line; used as its display value in other collections"
+        },
+        "areaId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": "string",
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "lineType": {
+          "bsonType": "string",
+          "description": "Line type",
+          "enum": [
+            "Casting",
+            "Heat Treatment",
+            "Machining",
+            "Surface Treatment",
+            "Assembly",
+            "Inspection",
+            "Packing"
+          ]
+        },
+        "itemFamilyId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_itemFamily._id"
+        },
+        "itemFamilyName": {
+          "bsonType": "string",
+          "description": "Display value of itemFamilyId, copied from u_mes_prod_itemFamily.name"
+        },
+        "workCalendarId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCalendar._id"
+        },
+        "workCalendarName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCalendarId, copied from u_mes_mast_workCalendar.name"
+        },
+        "taktTimeSec": {
+          "bsonType": "decimal",
+          "description": "Takt time (seconds)"
+        },
+        "manningStandard": {
+          "bsonType": "int",
+          "description": "Standard number of operators for the line"
+        },
+        "bottleneckWorkCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id: bottleneck work center"
+        },
+        "bottleneckWorkCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of bottleneckWorkCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "oeeTarget": {
+          "bsonType": "decimal",
+          "description": "Target OEE in percent"
+        },
+        "costCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_costCenter._id"
+        },
+        "costCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of costCenterId, copied from u_mes_mast_costCenter.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

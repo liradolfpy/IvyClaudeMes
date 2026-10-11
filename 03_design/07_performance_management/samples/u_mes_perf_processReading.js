@@ -1,0 +1,27 @@
+// Sample document for u_mes_perf_processReading (illustrative; seed data is generated separately)
+db.getCollection("u_mes_perf_processReading").insertOne({
+  _id: "PD-20260929-00417733",
+  recordNo: "20260929-00417733",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  processTagId: "TAG-PN1.GDC01.DIE_TEMP_UPPER",
+  processTagName: "Die temperature, upper half, casting machine 1",
+  equipmentId: "EQ-GDC-01",
+  equipmentName: "Gravity Die Casting Machine 1",
+  timestamp: ISODate("2026-09-29T00:30:00.000+0000"),
+  tagValue: Double(402.6),
+  tagValueText: null,
+  signalQuality: "Good",
+  productionOrderId: "PO-1000412",
+  productionOrderName: "1000412",
+  lotId: "LOT-L260928-GDC-014",
+  lotName: "L260928-GDC-014",
+  inLimits: true,
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-SYSTEM",
+  createdBy: "MES System",
+  updatedAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  updatedById: "USR-SYSTEM",
+  updatedBy: "MES System"
+});

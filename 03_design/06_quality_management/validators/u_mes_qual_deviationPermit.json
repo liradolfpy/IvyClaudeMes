@@ -1,0 +1,255 @@
+{
+  "collMod": "u_mes_qual_deviationPermit",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_deviationPermit",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "itemId",
+        "itemName",
+        "characteristicId",
+        "characteristicName",
+        "deviationType",
+        "description",
+        "requestedValue",
+        "specifiedValue",
+        "customerId",
+        "customerName",
+        "customerApprovalRef",
+        "nonconformanceId",
+        "nonconformanceName",
+        "engineeringChangeId",
+        "engineeringChangeName",
+        "limitType",
+        "quantityLimit",
+        "quantityUsed",
+        "validFrom",
+        "validTo",
+        "markingRequirement",
+        "requestedById",
+        "requestedBy",
+        "requestedAt",
+        "closedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: DEV-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the deviation permit; used as its display value in other collections"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "characteristicId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of characteristicId, copied from u_mes_qual_characteristic.name"
+        },
+        "deviationType": {
+          "bsonType": "string",
+          "description": "Deviation type",
+          "enum": [
+            "Product",
+            "Process",
+            "Material"
+          ]
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the deviation permit"
+        },
+        "requestedValue": {
+          "bsonType": "decimal",
+          "description": "Requested value"
+        },
+        "specifiedValue": {
+          "bsonType": "decimal",
+          "description": "Specified value"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "customerApprovalRef": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Customer approval ref"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "engineeringChangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_engineeringChange._id"
+        },
+        "engineeringChangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title"
+        },
+        "limitType": {
+          "bsonType": "string",
+          "description": "Limit type",
+          "enum": [
+            "Quantity",
+            "Date"
+          ]
+        },
+        "quantityLimit": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Quantity limit"
+        },
+        "quantityUsed": {
+          "bsonType": "int",
+          "description": "Quantity used"
+        },
+        "validFrom": {
+          "bsonType": "date",
+          "description": "Valid from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "validTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Valid to (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "markingRequirement": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Marking requirement"
+        },
+        "requestedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'requested'"
+        },
+        "requestedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in requestedById, copied from u_mes_mast_user.fullName"
+        },
+        "requestedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was requested"
+        },
+        "closedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date and time when the record was closed"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Requested",
+            "Approved",
+            "Expired",
+            "Closed",
+            "Rejected"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

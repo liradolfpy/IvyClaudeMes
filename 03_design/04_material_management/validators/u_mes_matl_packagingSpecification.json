@@ -1,0 +1,176 @@
+{
+  "collMod": "u_mes_matl_packagingSpecification",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_matl_packagingSpecification",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "itemId",
+        "itemName",
+        "customerId",
+        "customerName",
+        "version",
+        "containerTypeId",
+        "containerTypeName",
+        "quantityPerContainer",
+        "dunnage",
+        "vciRequired",
+        "layersPerContainer",
+        "unitsPerLayer",
+        "containersPerPallet",
+        "maxGrossWeightKg",
+        "unitLabelTemplateId",
+        "unitLabelTemplateName",
+        "containerLabelTemplateId",
+        "containerLabelTemplateName",
+        "instructionControlledDocumentId",
+        "instructionControlledDocumentName",
+        "approvedByCustomer",
+        "effectiveFrom",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: PKS-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the packaging specification"
+        },
+        "containerTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_containerType._id"
+        },
+        "containerTypeName": {
+          "bsonType": "string",
+          "description": "Display value of containerTypeId, copied from u_mes_plan_containerType.name"
+        },
+        "quantityPerContainer": {
+          "bsonType": "int",
+          "description": "Quantity per container"
+        },
+        "dunnage": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Dunnage of the packaging specification"
+        },
+        "vciRequired": {
+          "bsonType": "bool",
+          "description": "True when: vci required"
+        },
+        "layersPerContainer": {
+          "bsonType": "int",
+          "description": "Layers per container"
+        },
+        "unitsPerLayer": {
+          "bsonType": "int",
+          "description": "Units per layer"
+        },
+        "containersPerPallet": {
+          "bsonType": "int",
+          "description": "Containers per pallet"
+        },
+        "maxGrossWeightKg": {
+          "bsonType": "decimal",
+          "description": "Maximum gross weight (kg)"
+        },
+        "unitLabelTemplateId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_labelTemplate._id: unit label template"
+        },
+        "unitLabelTemplateName": {
+          "bsonType": "string",
+          "description": "Display value of unitLabelTemplateId, copied from u_mes_matl_labelTemplate.name"
+        },
+        "containerLabelTemplateId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_labelTemplate._id: container label template"
+        },
+        "containerLabelTemplateName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of containerLabelTemplateId, copied from u_mes_matl_labelTemplate.name"
+        },
+        "instructionControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: instruction controlled document"
+        },
+        "instructionControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of instructionControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "approvedByCustomer": {
+          "bsonType": "bool",
+          "description": "True when: approved by customer"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

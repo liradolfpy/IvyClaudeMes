@@ -9,8 +9,8 @@ from entity_samples import ES_TEXT,ALT_TEXT,USERS,CHILD_TEXT,ENUM_OVERRIDE,REF_O
 ROOT=sys.argv[1]
 M=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"model","flat_model.json")))
 cols=M["collections"]; MODN=M["modules"]
-order=["mdm","prd","exe","mat","trc","qlt","eqp","mnt","sys","ehs"]
-DOMF={"mdm":"01_enterprise_master_data","prd":"02_product_definition","exe":"03_planning_execution","mat":"04_materials","trc":"05_traceability","qlt":"06_quality","eqp":"07_equipment_performance","mnt":"08_maintenance_tooling","sys":"09_integration_system","ehs":"10_energy_safety_andon"}
+order=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs"]
+DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety'}
 cat={c[0]:c for c in C}
 bycol={c["collection"]:c for c in cols}; byent={c["entity"]:c for c in cols}
 def parse(t,n):
@@ -79,9 +79,9 @@ def userrole(key,c):
                   ("measur|inspect|sampl|calibrat|detect|placed|reinspect|assessor|auditor|appraiser|quality|declared|performedby|conducted|investig|coreteam|owneruser|author","quality"),
                   ("assigned|equipmentreleased|maintain|resolved","maintenance"),("moved|picked|received|loaded|packed|printed|counted|consumed|requestedby","stores")):
         if re.search(pat,k): return r
-    if c["module"]=="mnt": return "maintenance"
-    if c["module"]=="mat": return "stores"
-    if c["module"]=="qlt": return "quality"
+    if c["module"]=="maint": return "maintenance"
+    if c["module"]=="matl": return "stores"
+    if c["module"]=="qual": return "quality"
     return "operator"
 def nullable(c,f):
     k=f["key"]
@@ -117,19 +117,19 @@ def words(k):
     return w
 def describe(c,f,nul):
     k=f["key"]; t=f["type"]
-    fixed={"_id":"Unique identifier of the document. Pattern: %s"%c["idPattern"],"recordNo":"Business identifier of the document, readable by people and unique within the site","siteId":"Reference to u_mes_mdm_site._id: the site the document belongs to","siteName":"Display value of the site, copied from u_mes_mdm_site.name",
-     "status":"Primary lifecycle state of the document","schemaVersion":"Version of this collection's document structure, starting at 1","createdAt":"Date and time the document was created","createdById":"Reference to u_mes_mdm_user._id: user or process that created the document","createdBy":"Display name of the creator, copied from u_mes_mdm_user.fullName",
-     "updatedAt":"Date and time of the most recent update","updatedById":"Reference to u_mes_mdm_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mdm_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
+    fixed={"_id":"Unique identifier of the document. Pattern: %s"%c["idPattern"],"recordNo":"Business identifier of the document, readable by people and unique within the site","siteId":"Reference to u_mes_mast_site._id: the site the document belongs to","siteName":"Display value of the site, copied from u_mes_mast_site.name",
+     "status":"Primary lifecycle state of the document","schemaVersion":"Version of this collection's document structure, starting at 1","createdAt":"Date and time the document was created","createdById":"Reference to u_mes_mast_user._id: user or process that created the document","createdBy":"Display name of the creator, copied from u_mes_mast_user.fullName",
+     "updatedAt":"Date and time of the most recent update","updatedById":"Reference to u_mes_mast_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mast_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
      "relatedCollectionName":"Name of the collection the related document is in","relatedEntityId":"_id of the related document in the collection named by relatedCollectionName","relatedEntityName":"Display value of the related document"}
     if k in fixed: return fixed[k]
     ks=[x["key"] for x in c["fields"]]
     if f["ref"]:
         tc=byent[f["ref"]]; stem=k[:-2]
-        if k.endswith("ById"): return "Reference to u_mes_mdm_user._id: user recorded for '%s'"%words(k[:-4])
+        if k.endswith("ById"): return "Reference to u_mes_mast_user._id: user recorded for '%s'"%words(k[:-4])
         role=words(stem); ent=words(f["ref"])
         if c["parent"] and bycol[c["parent"]]["entity"]==f["ref"] and k==f["ref"]+"Id": return "Reference to %s._id: the parent document this one belongs to"%tc["collection"]
         return "Reference to %s._id"%tc["collection"]+("" if role==ent else ": %s"%role)
-    if k+"Id" in ks: return "Display name of the user in %sId, copied from u_mes_mdm_user.fullName"%k
+    if k+"Id" in ks: return "Display name of the user in %sId, copied from u_mes_mast_user.fullName"%k
     if k.endswith("Name") and k[:-4]+"Id" in ks:
         r=[x for x in c["fields"] if x["key"]==k[:-4]+"Id"][0]["ref"]
         if r: return "Display value of %sId, copied from %s.%s"%(k[:-4],byent[r]["collection"],byent[r]["displayField"])
@@ -175,7 +175,7 @@ def sample(c):
         elif k=="status": v=next((p for p in PREF if p in c["statusValues"]),c["statusValues"][0])
         elif k=="createdAt": v=D(BASE)
         elif k=="updatedAt": v=None  # filled later
-        elif k=="relatedCollectionName": v="u_mes_exe_wipUnit"
+        elif k=="relatedCollectionName": v="u_mes_plan_wipUnit"
         elif k=="relatedEntityName": v=display(byent["wipUnit"])
         elif f["ref"]:
             tgt=f["ref"]
@@ -378,7 +378,7 @@ for m in order:
                 "valueList":"Value-list collection. A %s can have several values of this kind, and DATA-001 does not allow an array, so each value is its own document. %sId and %sName point to the parent.\n"}[c["kind"]]%(words(pe),pe,pe)
             s+="Data class (%s) and site are inherited from the parent. Documents are created, changed and removed together with the parent's lifecycle.\n"%c["dataClass"]
         s+="\n## Field dictionary\n\nEvery key is present in every document. \"Required\" means the value may not be null.\n\n| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |\n|---|---|---|---|---|---|---|\n"+"\n".join(rows)+"\n"
-        if c["statusValues"]: s+="\n## Status values\n\n%s. Initial state: %s. The values are maintained in u_mes_sys_statusDefinition.\n"%(", ".join(c["statusValues"]),c["statusValues"][0])
+        if c["statusValues"]: s+="\n## Status values\n\n%s. Initial state: %s. The values are maintained in u_mes_syst_statusDefinition.\n"%(", ".join(c["statusValues"]),c["statusValues"][0])
         s+="\n## Indexes\n\n| # | Keys | Unique | Purpose |\n|---|---|---|---|\n"
         js='// Indexes for %s\n'%name
         for i,(k,u,why) in enumerate(idx,1):
@@ -402,7 +402,7 @@ r+=("Result: all %d sample documents pass.\n"%tot["collections"]) if not report 
 r+="\n## Not covered by this check\n\n- Reference values in sample documents are illustrative. That every reference points to an existing _id is checked on the seed data, where all collections are generated together.\n- Requiredness, allowed values and descriptions were produced from rules and dictionaries in 05_generator (keydict_text.py, keydict_num.py, gen_specs.py); they have not been reviewed collection by collection by a person.\n- Validators have not been loaded into a MongoDB server in this run.\n"
 w("08_validation/reports/specification_check.md",r)
 
-# ---- fixed enumerations (kept as coded text, values held in u_mes_sys_enumerationValue)
+# ---- fixed enumerations (kept as coded text, values held in u_mes_syst_enumerationValue)
 en_rows=[]; 
 for m in order:
     for c in cols:
@@ -411,12 +411,12 @@ for m in order:
             if f["key"]=="status": continue
             en=enum(c,f)
             if en: en_rows.append((MODN[m],c["collection"],f["key"],en))
-s="# Fixed enumeration values\n\nKeys whose values are fixed by the application logic stay coded text (data_modeling_standard.md section 11, rule B). Their allowed values are listed here, enforced by the validators, and stored as data in `u_mes_sys_enumerationValue` (one document per collection, key and value). Status values are in status_values.md.\n\nKeys: %d | Values: %d\n\n| Module | Collection | Key | Allowed values |\n|---|---|---|---|\n"%(len(en_rows),sum(len(r[3]) for r in en_rows))
+s="# Fixed enumeration values\n\nKeys whose values are fixed by the application logic stay coded text (data_modeling_standard.md section 11, rule B). Their allowed values are listed here, enforced by the validators, and stored as data in `u_mes_syst_enumerationValue` (one document per collection, key and value). Status values are in status_values.md.\n\nKeys: %d | Values: %d\n\n| Module | Collection | Key | Allowed values |\n|---|---|---|---|\n"%(len(en_rows),sum(len(r[3]) for r in en_rows))
 for r in en_rows: s+="| %s | %s | %s | %s |\n"%(r[0],r[1],r[2],"; ".join(r[3]))
 w("04_reference_data/code_lists/enumeration_values.md",s)
 conv=M.get("conversions",[])
 newm=[c for c in cols if c["entity"] in NEWMASTER]
-s="# Master data review\n\nRun: 11 October 2026 | Trigger: owner review of the user document (department, designation, employmentType held as text without a master collection).\n\nScope: every text key of every collection was reviewed against data_modeling_standard.md section 11.\n\n| Result | Count |\n|---|---|\n| New master collections | %d |\n| Keys converted from text to a master reference | %d |\n| Keys kept as fixed enumerations (values in u_mes_sys_enumerationValue) | %d |\n\n## New master collections\n\n| # | Collection | Purpose | Keys |\n|---|---|---|---|\n"%(len(newm),sum(1 for x in conv if x["master"]),len(en_rows))
+s="# Master data review\n\nRun: 11 October 2026 | Trigger: owner review of the user document (department, designation, employmentType held as text without a master collection).\n\nScope: every text key of every collection was reviewed against data_modeling_standard.md section 11.\n\n| Result | Count |\n|---|---|\n| New master collections | %d |\n| Keys converted from text to a master reference | %d |\n| Keys kept as fixed enumerations (values in u_mes_syst_enumerationValue) | %d |\n\n## New master collections\n\n| # | Collection | Purpose | Keys |\n|---|---|---|---|\n"%(len(newm),sum(1 for x in conv if x["master"]),len(en_rows))
 for i,c in enumerate(newm,1): s+="| %d | %s | %s | %s |\n"%(i,c["collection"],cat[c["sourceConcept"]][4],", ".join(f["key"] for f in c["fields"]))
 s+="\n## Keys converted\n\nArray notation refers to the concept model; in the flat model an array of references is a relationship collection.\n\n| # | Concept collection | Key before | Key after | Master collection |\n|---|---|---|---|---|\n"
 for i,x in enumerate(conv,1): s+="| %d | %s | %s | %s | %s |\n"%(i,byent[[c for c in cols if c["sourceConcept"]==x["concept"] and c["kind"]=="entity"][0]["entity"]]["collection"],x["oldKey"],x["newKey"],byent[x["master"]]["collection"] if x["master"] else "none (renamed only, to avoid confusion with designationId)")

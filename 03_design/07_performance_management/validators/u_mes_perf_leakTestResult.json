@@ -1,0 +1,216 @@
+{
+  "collMod": "u_mes_perf_leakTestResult",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_perf_leakTestResult",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "wipUnitId",
+        "wipUnitName",
+        "operationExecutionId",
+        "operationExecutionName",
+        "equipmentId",
+        "equipmentName",
+        "recipeId",
+        "recipeName",
+        "testerIotDeviceId",
+        "testerIotDeviceName",
+        "operatorUserId",
+        "operatorUserName",
+        "programNo",
+        "testMedium",
+        "attemptNo",
+        "ambientTemperatureC",
+        "partTemperatureC",
+        "fixtureToolId",
+        "fixtureToolName",
+        "masterLeakVerifiedAt",
+        "verdict",
+        "failureReason",
+        "testedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: LKT-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "wipUnitId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": "string",
+          "description": "Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo"
+        },
+        "operationExecutionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_operationExecution._id"
+        },
+        "operationExecutionName": {
+          "bsonType": "string",
+          "description": "Display value of operationExecutionId, copied from u_mes_plan_operationExecution.recordNo"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "recipeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_recipe._id"
+        },
+        "recipeName": {
+          "bsonType": "string",
+          "description": "Display value of recipeId, copied from u_mes_prod_recipe.name"
+        },
+        "testerIotDeviceId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_iotDevice._id: tester IoT device"
+        },
+        "testerIotDeviceName": {
+          "bsonType": "string",
+          "description": "Display value of testerIotDeviceId, copied from u_mes_syst_iotDevice.name"
+        },
+        "operatorUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: operator user"
+        },
+        "operatorUserName": {
+          "bsonType": "string",
+          "description": "Display value of operatorUserId, copied from u_mes_mast_user.fullName"
+        },
+        "programNo": {
+          "bsonType": "string",
+          "description": "Program number"
+        },
+        "testMedium": {
+          "bsonType": "string",
+          "description": "Test medium",
+          "enum": [
+            "Dry Air",
+            "Nitrogen",
+            "Helium"
+          ]
+        },
+        "attemptNo": {
+          "bsonType": "int",
+          "description": "1 for the first attempt, higher for retests or repeats"
+        },
+        "ambientTemperatureC": {
+          "bsonType": "decimal",
+          "description": "Ambient temperature (degrees Celsius)"
+        },
+        "partTemperatureC": {
+          "bsonType": "decimal",
+          "description": "Part temperature (degrees Celsius)"
+        },
+        "fixtureToolId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_tool._id: fixture tool"
+        },
+        "fixtureToolName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of fixtureToolId, copied from u_mes_maint_tool.name"
+        },
+        "masterLeakVerifiedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Master leak verified date and time"
+        },
+        "verdict": {
+          "bsonType": "string",
+          "description": "Verdict of the leak test result",
+          "enum": [
+            "Pass",
+            "Fail"
+          ]
+        },
+        "failureReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Failure reason"
+        },
+        "testedAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was tested"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Recorded",
+            "Voided"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

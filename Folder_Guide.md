@@ -78,21 +78,23 @@ This guide is the authority for where a file belongs. Paths in all other documen
 
 ## 4. Module folders and module codes
 
-| Module folder | Module code | Module |
+| Module folder | Module code | Module name |
 |---|---|---|
-| 01_enterprise_master_data | mdm | Master data |
-| 02_product_definition | prd | Product definition |
-| 03_planning_execution | exe | Planning and execution |
-| 04_materials | mat | Materials |
-| 05_traceability | trc | Traceability |
-| 06_quality | qlt | Quality |
-| 07_equipment_performance | eqp | Equipment and performance |
-| 08_maintenance_tooling | mnt | Maintenance and tooling |
-| 09_integration_system | sys | Integration and system |
-| 10_energy_safety_andon | ehs | Energy, safety and andon |
+| 01_master_data_management | mast | Master Data Management |
+| 02_product_definition | prod | Product Definition |
+| 03_planning_execution | plan | Planning and Execution |
+| 04_material_management | matl | Material Management |
+| 05_traceability | trac | Traceability |
+| 06_quality_management | qual | Quality Management |
+| 07_performance_management | perf | Performance Management |
+| 08_tooling_maintenance | maint | Tooling & Maintenance |
+| 09_system_integration | syst | System and Integration |
+| 10_environment_health_safety | ehs | Environment Health and Safety |
+
+Andon collections belong to Planning and Execution; energy collections belong to Performance Management.
 
 ## 5. File naming
 
 - Governance and architecture documents: lower snake_case with .md, except Folder_Guide.md and README.md.
-- Per-collection files use the full collection name: `u_mes_exe_productionOrder.md`, `.json`, `.js`, `.bson`.
+- Per-collection files use the full collection name: `u_mes_plan_productionOrder.md`, `.json`, `.js`, `.bson`.
 - Archive sub-folders: `YYYY-MM-DD_short_reason`.

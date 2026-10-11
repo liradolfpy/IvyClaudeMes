@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_mast_skillOperation",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_skillOperation",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "skillId",
+        "skillName",
+        "sequenceNo",
+        "operationId",
+        "operationName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: <skillId>-O<nnn>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "skillId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_skill._id: the parent document this one belongs to"
+        },
+        "skillName": {
+          "bsonType": "string",
+          "description": "Display value of skillId, copied from u_mes_mast_skill.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prod_operation.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

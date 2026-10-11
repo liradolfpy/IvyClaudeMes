@@ -1,0 +1,242 @@
+{
+  "collMod": "u_mes_prod_item",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prod_item",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "description",
+        "itemType",
+        "itemGroupId",
+        "itemGroupName",
+        "baseUnitOfMeasureId",
+        "baseUnitOfMeasureName",
+        "drawingNo",
+        "drawingRevision",
+        "revisionDate",
+        "materialSpecification",
+        "materialGrade",
+        "netWeightKg",
+        "grossWeightKg",
+        "procurementType",
+        "defaultSupplierId",
+        "defaultSupplierName",
+        "isSerialised",
+        "isLotControlled",
+        "serialNumberRangeId",
+        "serialNumberRangeName",
+        "lotNumberRangeId",
+        "lotNumberRangeName",
+        "shelfLifeDays",
+        "safetyCharacteristic",
+        "hsnCode",
+        "standardCostInr",
+        "erpMaterialNo",
+        "defaultStorageLocationId",
+        "defaultStorageLocationName",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ITM-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the item"
+        },
+        "itemType": {
+          "bsonType": "string",
+          "description": "Item type",
+          "enum": [
+            "Finished Good",
+            "Semi Finished",
+            "Purchased Component",
+            "Raw Material",
+            "Consumable",
+            "Packaging"
+          ]
+        },
+        "itemGroupId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_itemGroup._id"
+        },
+        "itemGroupName": {
+          "bsonType": "string",
+          "description": "Display value of itemGroupId, copied from u_mes_prod_itemGroup.name"
+        },
+        "baseUnitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id: base unit of measure"
+        },
+        "baseUnitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "drawingNo": {
+          "bsonType": "string",
+          "description": "Drawing number"
+        },
+        "drawingRevision": {
+          "bsonType": "string",
+          "description": "Drawing revision"
+        },
+        "revisionDate": {
+          "bsonType": "date",
+          "description": "Revision date (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "materialSpecification": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Material specification"
+        },
+        "materialGrade": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Material grade"
+        },
+        "netWeightKg": {
+          "bsonType": "decimal",
+          "description": "Net weight (kg)"
+        },
+        "grossWeightKg": {
+          "bsonType": "decimal",
+          "description": "Gross weight (kg)"
+        },
+        "procurementType": {
+          "bsonType": "string",
+          "description": "Procurement type",
+          "enum": [
+            "In House",
+            "Purchased",
+            "Subcontracted"
+          ]
+        },
+        "defaultSupplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_supplier._id: default supplier"
+        },
+        "defaultSupplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of defaultSupplierId, copied from u_mes_mast_supplier.name"
+        },
+        "isSerialised": {
+          "bsonType": "bool",
+          "description": "True when the record is serialised"
+        },
+        "isLotControlled": {
+          "bsonType": "bool",
+          "description": "True when the record is lot controlled"
+        },
+        "serialNumberRangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_numberRange._id: serial number range"
+        },
+        "serialNumberRangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of serialNumberRangeId, copied from u_mes_syst_numberRange.name"
+        },
+        "lotNumberRangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_numberRange._id: lot number range"
+        },
+        "lotNumberRangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotNumberRangeId, copied from u_mes_syst_numberRange.name"
+        },
+        "shelfLifeDays": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Shelf life (days)"
+        },
+        "safetyCharacteristic": {
+          "bsonType": "bool",
+          "description": "True when: safety characteristic"
+        },
+        "hsnCode": {
+          "bsonType": "string",
+          "description": "Harmonised system of nomenclature code"
+        },
+        "standardCostInr": {
+          "bsonType": "decimal",
+          "description": "Standard cost (Indian rupees)"
+        },
+        "erpMaterialNo": {
+          "bsonType": "string",
+          "description": "ERP material number"
+        },
+        "defaultStorageLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_storageLocation._id: default storage location"
+        },
+        "defaultStorageLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of defaultStorageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Phase Out",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

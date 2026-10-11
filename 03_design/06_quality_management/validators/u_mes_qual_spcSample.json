@@ -1,0 +1,213 @@
+{
+  "collMod": "u_mes_qual_spcSample",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_spcSample",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "spcChartId",
+        "spcChartName",
+        "characteristicId",
+        "characteristicName",
+        "workCenterId",
+        "workCenterName",
+        "subgroupNo",
+        "sampledAt",
+        "sampledById",
+        "sampledBy",
+        "shiftId",
+        "shiftName",
+        "subgroupMean",
+        "subgroupRange",
+        "stdDev",
+        "ucl",
+        "lcl",
+        "centerLine",
+        "inControl",
+        "assignableCause",
+        "correctiveAction",
+        "nonconformanceId",
+        "nonconformanceName",
+        "excludedFromLimits",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: SPS-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "spcChartId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_spcChart._id"
+        },
+        "spcChartName": {
+          "bsonType": "string",
+          "description": "Display value of spcChartId, copied from u_mes_qual_spcChart.name"
+        },
+        "characteristicId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": "string",
+          "description": "Display value of characteristicId, copied from u_mes_qual_characteristic.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "subgroupNo": {
+          "bsonType": "int",
+          "description": "Subgroup number"
+        },
+        "sampledAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was sampled"
+        },
+        "sampledById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'sampled'"
+        },
+        "sampledBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in sampledById, copied from u_mes_mast_user.fullName"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "subgroupMean": {
+          "bsonType": "decimal",
+          "description": "Subgroup mean"
+        },
+        "subgroupRange": {
+          "bsonType": "decimal",
+          "description": "Subgroup range"
+        },
+        "stdDev": {
+          "bsonType": "decimal",
+          "description": "Std dev"
+        },
+        "ucl": {
+          "bsonType": "decimal",
+          "description": "Upper control limit"
+        },
+        "lcl": {
+          "bsonType": "decimal",
+          "description": "Lower control limit"
+        },
+        "centerLine": {
+          "bsonType": "decimal",
+          "description": "Center line"
+        },
+        "inControl": {
+          "bsonType": "bool",
+          "description": "True when: in control"
+        },
+        "assignableCause": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Assignable cause"
+        },
+        "correctiveAction": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Corrective action"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "excludedFromLimits": {
+          "bsonType": "bool",
+          "description": "True when: excluded from limits"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Recorded",
+            "Under Investigation",
+            "Closed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

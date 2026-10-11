@@ -1,0 +1,218 @@
+{
+  "collMod": "u_mes_mast_user",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_user",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "userName",
+        "fullName",
+        "userType",
+        "departmentId",
+        "departmentName",
+        "designationId",
+        "designationName",
+        "badgeNo",
+        "email",
+        "mobile",
+        "defaultShiftId",
+        "defaultShiftName",
+        "homeWorkCenterId",
+        "homeWorkCenterName",
+        "reportsToUserId",
+        "reportsToUserName",
+        "dateOfJoining",
+        "employmentTypeId",
+        "employmentTypeName",
+        "contractorSupplierId",
+        "contractorSupplierName",
+        "languageId",
+        "languageName",
+        "lastLoginAt",
+        "failedLoginCount",
+        "passwordChangedAt",
+        "isLocked",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: USR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "userName": {
+          "bsonType": "string",
+          "description": "User name"
+        },
+        "fullName": {
+          "bsonType": "string",
+          "description": "Full name"
+        },
+        "userType": {
+          "bsonType": "string",
+          "description": "User type",
+          "enum": [
+            "Employee",
+            "Contractor",
+            "System"
+          ]
+        },
+        "departmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_department._id"
+        },
+        "departmentName": {
+          "bsonType": "string",
+          "description": "Display value of departmentId, copied from u_mes_mast_department.name"
+        },
+        "designationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_designation._id"
+        },
+        "designationName": {
+          "bsonType": "string",
+          "description": "Display value of designationId, copied from u_mes_mast_designation.name"
+        },
+        "badgeNo": {
+          "bsonType": "string",
+          "description": "Number encoded on the operator badge used for station login"
+        },
+        "email": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Email of the user"
+        },
+        "mobile": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Mobile of the user"
+        },
+        "defaultShiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_shift._id: default shift"
+        },
+        "defaultShiftName": {
+          "bsonType": "string",
+          "description": "Display value of defaultShiftId, copied from u_mes_mast_shift.name"
+        },
+        "homeWorkCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id: home work center"
+        },
+        "homeWorkCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of homeWorkCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "reportsToUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: reports to user"
+        },
+        "reportsToUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reportsToUserId, copied from u_mes_mast_user.fullName"
+        },
+        "dateOfJoining": {
+          "bsonType": "date",
+          "description": "Date of joining (calendar date, stored as the start of that day in IST converted to UTC)"
+        },
+        "employmentTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_employmentType._id"
+        },
+        "employmentTypeName": {
+          "bsonType": "string",
+          "description": "Display value of employmentTypeId, copied from u_mes_mast_employmentType.name"
+        },
+        "contractorSupplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_supplier._id: contractor supplier"
+        },
+        "contractorSupplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of contractorSupplierId, copied from u_mes_mast_supplier.name"
+        },
+        "languageId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_language._id"
+        },
+        "languageName": {
+          "bsonType": "string",
+          "description": "Display value of languageId, copied from u_mes_mast_language.name"
+        },
+        "lastLoginAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last login date and time"
+        },
+        "failedLoginCount": {
+          "bsonType": "int",
+          "description": "Failed login count"
+        },
+        "passwordChangedAt": {
+          "bsonType": "date",
+          "description": "Password changed date and time"
+        },
+        "isLocked": {
+          "bsonType": "bool",
+          "description": "True when the record is locked"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Suspended",
+            "Left"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

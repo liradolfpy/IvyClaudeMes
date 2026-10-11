@@ -8,7 +8,7 @@
 | A004 | 11 Oct 2026 | Seed timeline Mon 28 Sep to Sat 10 Oct 2026; 2 Oct holiday; 4 Oct weekly off; shifts A 06:00, B 14:00, C 22:00 IST | All seed dates shift |
 | A005 | 11 Oct 2026 | Final inspection and packing share work center WC-FIP-01 but remain two operations | One more work center document |
 | A006 | 11 Oct 2026 | Process values (torque, leak limits, T6 profile) will be representative engineering values, not an OEM specification | Values replaced when real ones are supplied |
-| A007 | 11 Oct 2026 | No functional baseline document exists in the project, so the module codes in D001 stand in for it | Collection names change if a baseline with other codes is supplied |
+| A007 | 11 Oct 2026 | No functional baseline document exists in the project, so the module codes were first derived by Claude (D001) and then set by the owner (D026) | Collection names change if a baseline with other codes is supplied |
 | A008 | 11 Oct 2026 | DATA-001 and DATA-002 mean exactly what the requirements text of 11 Oct states (flat scalar documents; a concrete BSON type for every numeric key); no separate rule document exists | Standard sections 2 and 8 are revised |
 | A009 | 11 Oct 2026 | BSON types in the field lists were assigned by naming rules and are confirmed collection by collection when each specification is written | Individual key types change |
 | A010 | 11 Oct 2026 | The "exactly 10 documents" rule applies to each of the 299 collections, including child, relationship and value-list collections | Seed volume changes |

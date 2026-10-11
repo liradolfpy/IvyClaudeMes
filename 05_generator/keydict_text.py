@@ -461,7 +461,7 @@ incidentType|Near Miss|Near Miss;Unsafe Condition;Unsafe Act;First Aid;Medical T
 bodyPart?|
 injuryType?|
 immediateAction|Area cordoned, spill cleaned, operator briefed
-collectionName|u_mes_exe_productionOrder
+collectionName|u_mes_plan_productionOrder
 statusCode|IN_PROGRESS||Stable code for the status value, upper case with underscores
 statusName|In Progress
 colourCode?|#F5A623

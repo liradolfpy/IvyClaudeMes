@@ -1,0 +1,27 @@
+// Sample document for u_mes_maint_maintenancePlan (illustrative; seed data is generated separately)
+db.getCollection("u_mes_maint_maintenancePlan").insertOne({
+  _id: "MP-PM-LKT-01-M",
+  recordNo: "PM-LKT-01-M",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  name: "Leak tester monthly preventive maintenance",
+  equipmentId: "EQ-TRQ-01-NR1",
+  equipmentName: "DC Nutrunner Station 1",
+  toolId: "TL-SKT-10-0007",
+  toolName: "Nutrunner socket 10 mm, torque station 1",
+  planType: "In Process",
+  strategy: "Torque Control Angle Monitor",
+  intervalType: "Calendar",
+  intervalValue: NumberDecimal("30"),
+  intervalUom: "Days",
+  counterSource: null,
+  estimatedMinutes: NumberInt(8),
+  lastDoneAt: ISODate("2026-03-31T18:30:00.000+0000"),
+  nextDueAt: ISODate("2026-10-27T18:30:00.000+0000"),
+  toleranceDays: NumberInt(7),
+  blockEquipmentWhenOverdue: true,
+  ownerDepartmentId: "DEPT-MAINT",
+  ownerDepartmentName: "Maintenance",
+  status: "Active",
+  schemaVersion: NumberInt(1)
+});

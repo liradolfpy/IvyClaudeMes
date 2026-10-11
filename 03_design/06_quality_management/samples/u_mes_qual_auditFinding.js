@@ -1,0 +1,26 @@
+// Sample document for u_mes_qual_auditFinding (illustrative; seed data is generated separately)
+db.getCollection("u_mes_qual_auditFinding").insertOne({
+  _id: "AUD-LPA-2026-0931-F001",
+  recordNo: "LPA-2026-0931-F001",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  auditId: "AUD-LPA-2026-0931",
+  auditName: "Layered process audit, Assembly line 1, week 40",
+  findingNo: NumberInt(1),
+  clause: "8.5.1.1",
+  description: "Torque analyser verification record not signed for 28 Sep shift C",
+  grade: "Minor",
+  ownerUserId: "USR-10087",
+  ownerUserName: "Anita Kulkarni",
+  dueAt: ISODate("2026-10-01T00:30:00.000+0000"),
+  closedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  capaId: "CAPA-2026-0014",
+  capaName: "8D - Leak at piston seal",
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10087",
+  createdBy: "Anita Kulkarni",
+  updatedAt: ISODate("2026-10-01T00:30:00.000+0000"),
+  updatedById: "USR-10087",
+  updatedBy: "Anita Kulkarni"
+});

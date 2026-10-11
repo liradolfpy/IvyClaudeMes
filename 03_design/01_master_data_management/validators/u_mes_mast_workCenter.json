@@ -1,0 +1,170 @@
+{
+  "collMod": "u_mes_mast_workCenter",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_workCenter",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "areaId",
+        "areaName",
+        "lineId",
+        "lineName",
+        "workCenterType",
+        "erpWorkCenterCode",
+        "costCenterId",
+        "costCenterName",
+        "capacityPerShift",
+        "standardManning",
+        "trackingGrain",
+        "inputLocationId",
+        "inputLocationName",
+        "outputLocationId",
+        "outputLocationName",
+        "andonEnabled",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: WC-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the work center; used as its display value in other collections"
+        },
+        "areaId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": "string",
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterType": {
+          "bsonType": "string",
+          "description": "Work center type",
+          "enum": [
+            "Machine Station",
+            "Manual Station",
+            "Test Station",
+            "Inspection Station",
+            "Batch Process"
+          ]
+        },
+        "erpWorkCenterCode": {
+          "bsonType": "string",
+          "description": "ERP work center code"
+        },
+        "costCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_costCenter._id"
+        },
+        "costCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of costCenterId, copied from u_mes_mast_costCenter.name"
+        },
+        "capacityPerShift": {
+          "bsonType": "int",
+          "description": "CAPAcity per shift"
+        },
+        "standardManning": {
+          "bsonType": "int",
+          "description": "Standard manning"
+        },
+        "trackingGrain": {
+          "bsonType": "string",
+          "description": "Level at which material is tracked at this point",
+          "enum": [
+            "Lot",
+            "Unit",
+            "Container"
+          ]
+        },
+        "inputLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_storageLocation._id: input location"
+        },
+        "inputLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of inputLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "outputLocationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_storageLocation._id: output location"
+        },
+        "outputLocationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of outputLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "andonEnabled": {
+          "bsonType": "bool",
+          "description": "True when: andon enabled"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

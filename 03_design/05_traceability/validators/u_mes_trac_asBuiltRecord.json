@@ -1,0 +1,330 @@
+{
+  "collMod": "u_mes_trac_asBuiltRecord",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_trac_asBuiltRecord",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "wipUnitId",
+        "wipUnitName",
+        "serialNumberId",
+        "serialNumberName",
+        "itemId",
+        "itemName",
+        "itemRevision",
+        "productVariantId",
+        "productVariantName",
+        "productionOrderId",
+        "productionOrderName",
+        "customerId",
+        "customerName",
+        "builtAt",
+        "torqueTorqueResultId",
+        "torqueTorqueResultName",
+        "torqueFinalTorqueNm",
+        "torqueFinalAngleDeg",
+        "leakTestLeakTestResultId",
+        "leakTestLeakTestResultName",
+        "leakTestVerdict",
+        "leakTestLeakRate",
+        "bodyLotId",
+        "bodyLotName",
+        "castingLotId",
+        "castingLotName",
+        "heatTreatmentLotId",
+        "heatTreatmentLotName",
+        "reworkCount",
+        "deviationPermitId",
+        "deviationPermitName",
+        "containerId",
+        "containerName",
+        "shipmentId",
+        "shipmentName",
+        "finalReleaseById",
+        "finalReleaseBy",
+        "finalReleaseAt",
+        "recordHash",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: ABR-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "wipUnitId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": "string",
+          "description": "Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo"
+        },
+        "serialNumberId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_trac_serialNumber._id"
+        },
+        "serialNumberName": {
+          "bsonType": "string",
+          "description": "Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "itemRevision": {
+          "bsonType": "string",
+          "description": "Item revision"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "builtAt": {
+          "bsonType": "date",
+          "description": "Date and time when the record was built"
+        },
+        "torqueTorqueResultId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_perf_torqueResult._id: torque torque result"
+        },
+        "torqueTorqueResultName": {
+          "bsonType": "string",
+          "description": "Display value of torqueTorqueResultId, copied from u_mes_perf_torqueResult.recordNo"
+        },
+        "torqueFinalTorqueNm": {
+          "bsonType": "decimal",
+          "description": "Torque final torque (N.m)"
+        },
+        "torqueFinalAngleDeg": {
+          "bsonType": "decimal",
+          "description": "Torque final angle (degrees)"
+        },
+        "leakTestLeakTestResultId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_perf_leakTestResult._id: leak test leak test result"
+        },
+        "leakTestLeakTestResultName": {
+          "bsonType": "string",
+          "description": "Display value of leakTestLeakTestResultId, copied from u_mes_perf_leakTestResult.recordNo"
+        },
+        "leakTestVerdict": {
+          "bsonType": "string",
+          "description": "Leak test verdict",
+          "enum": [
+            "Pass",
+            "Fail"
+          ]
+        },
+        "leakTestLeakRate": {
+          "bsonType": "decimal",
+          "description": "Measured leak rate at the high-pressure stage (sccm)"
+        },
+        "bodyLotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id: body lot"
+        },
+        "bodyLotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of bodyLotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "castingLotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id: casting lot"
+        },
+        "castingLotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of castingLotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "heatTreatmentLotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id: heat treatment lot"
+        },
+        "heatTreatmentLotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of heatTreatmentLotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "reworkCount": {
+          "bsonType": "int",
+          "description": "Rework count"
+        },
+        "deviationPermitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_deviationPermit._id"
+        },
+        "deviationPermitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of deviationPermitId, copied from u_mes_qual_deviationPermit.title"
+        },
+        "containerId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_container._id"
+        },
+        "containerName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of containerId, copied from u_mes_plan_container.recordNo"
+        },
+        "shipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_shipment._id"
+        },
+        "shipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shipmentId, copied from u_mes_matl_shipment.recordNo"
+        },
+        "finalReleaseById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'final release'"
+        },
+        "finalReleaseBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in finalReleaseById, copied from u_mes_mast_user.fullName"
+        },
+        "finalReleaseAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Final release date and time"
+        },
+        "recordHash": {
+          "bsonType": "string",
+          "description": "SHA-256 hash of the frozen record"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Compiling",
+            "Released"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

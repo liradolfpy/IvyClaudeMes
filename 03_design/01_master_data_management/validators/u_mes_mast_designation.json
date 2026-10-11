@@ -1,0 +1,85 @@
+{
+  "collMod": "u_mes_mast_designation",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_designation",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "description",
+        "departmentId",
+        "departmentName",
+        "gradeLevel",
+        "isSupervisory",
+        "sequenceNo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: DSG-<recordNo>"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Name of the designation; used as its display value in other collections"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "Description of the designation"
+        },
+        "departmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_department._id"
+        },
+        "departmentName": {
+          "bsonType": "string",
+          "description": "Display value of departmentId, copied from u_mes_mast_department.name"
+        },
+        "gradeLevel": {
+          "bsonType": "int",
+          "description": "Grade of the designation in the plant's grade structure (1 = lowest)"
+        },
+        "isSupervisory": {
+          "bsonType": "bool",
+          "description": "True when the record is supervisory"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

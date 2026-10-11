@@ -1,0 +1,28 @@
+// Sample document for u_mes_matl_goodsReceipt (illustrative; seed data is generated separately)
+db.getCollection("u_mes_matl_goodsReceipt").insertOne({
+  _id: "GRN-2026-000918",
+  recordNo: "2026-000918",
+  siteId: "SITE-PN1",
+  siteName: "Chakan Plant, Pune",
+  supplierId: "SUP-S1042",
+  supplierName: "Konkan Precision Pistons Pvt. Ltd.",
+  purchaseOrderNo: "4500117302",
+  supplierInvoiceNo: "KPP/26-27/1842",
+  supplierInvoiceDate: ISODate("2026-03-31T18:30:00.000+0000"),
+  deliveryChallanNo: "DC-07713",
+  vehicleNo: "MH14 GT 4471",
+  receivedAt: ISODate("2026-09-29T00:35:00.000+0000"),
+  receivedById: "USR-10150",
+  receivedBy: "Vikram Pawar",
+  gateEntryNo: "GE-260925-0044",
+  inspectionCompletedAt: ISODate("2026-09-29T02:10:00.000+0000"),
+  erpGrnNo: "5000209117",
+  status: "Accepted",
+  schemaVersion: NumberInt(1),
+  createdAt: ISODate("2026-09-29T00:30:00.000+0000"),
+  createdById: "USR-10150",
+  createdBy: "Vikram Pawar",
+  updatedAt: ISODate("2026-09-29T02:10:00.000+0000"),
+  updatedById: "USR-10150",
+  updatedBy: "Vikram Pawar"
+});
