@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_ehs_safetyIncident
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SAF-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -57,7 +57,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SAF-<recordNo>
 
 ## u_mes_ehs_safetyIncidentWitnessUser
 
-Kind: relationship | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id pattern: <safetyIncidentId>-WU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -80,7 +80,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_ehs_safetyIncident 
 
 ## u_mes_ehs_safetyIncidentAction
 
-Kind: child | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id pattern: <safetyIncidentId>-A<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -106,7 +106,7 @@ Kind: child | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id p
 
 ## u_mes_ehs_incidentType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ICT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -124,7 +124,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ICT-<recordNo>
 
 ## u_mes_ehs_bodyPart
 
-Kind: entity | Data class: master | Parent: - | _id pattern: BDP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -140,7 +140,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: BDP-<recordNo>
 
 ## u_mes_ehs_injuryType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: INJ-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_prod_item
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ITM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -48,7 +48,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ITM-<recordNo>
 
 ## u_mes_prod_itemRevision
 
-Kind: child | Data class: master | Parent: u_mes_prod_item | _id pattern: <itemId>-R<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_item | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -68,7 +68,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_item | _id pattern: <itemI
 
 ## u_mes_prod_itemCustomerPart
 
-Kind: child | Data class: master | Parent: u_mes_prod_item | _id pattern: <itemId>-CP<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_item | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -87,7 +87,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_item | _id pattern: <itemI
 
 ## u_mes_prod_productVariant
 
-Kind: entity | Data class: master | Parent: - | _id pattern: VAR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -122,7 +122,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: VAR-<recordNo>
 
 ## u_mes_prod_billOfMaterial
 
-Kind: entity | Data class: master | Parent: - | _id pattern: BOM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -151,7 +151,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: BOM-<recordNo>
 
 ## u_mes_prod_billOfMaterialComponent
 
-Kind: child | Data class: master | Parent: u_mes_prod_billOfMaterial | _id pattern: <billOfMaterialId>-C<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_billOfMaterial | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -178,7 +178,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_billOfMaterial | _id patte
 
 ## u_mes_prod_billOfMaterialComponentProductVariant
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_billOfMaterialComponent | _id pattern: <billOfMaterialComponentId>-PV<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_billOfMaterialComponent | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -195,7 +195,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_billOfMaterialCompo
 
 ## u_mes_prod_billOfMaterialComponentAlternateItem
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_billOfMaterialComponent | _id pattern: <billOfMaterialComponentId>-AI<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_billOfMaterialComponent | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -212,7 +212,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_billOfMaterialCompo
 
 ## u_mes_prod_operation
 
-Kind: entity | Data class: master | Parent: - | _id pattern: OPN-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -240,7 +240,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: OPN-<recordNo>
 
 ## u_mes_prod_operationRequiredSkill
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_operation | _id pattern: <operationId>-RS<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_operation | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -257,7 +257,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_operation | _id pat
 
 ## u_mes_prod_routing
 
-Kind: entity | Data class: master | Parent: - | _id pattern: RTG-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -287,7 +287,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: RTG-<recordNo>
 
 ## u_mes_prod_routingStep
 
-Kind: child | Data class: master | Parent: u_mes_prod_routing | _id pattern: <routingId>-S<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_routing | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -313,7 +313,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_routing | _id pattern: <ro
 
 ## u_mes_prod_routingStepAlternateWorkCenter
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_routingStep | _id pattern: <routingStepId>-AWC<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_routingStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -330,7 +330,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_routingStep | _id p
 
 ## u_mes_prod_routingStepNextStep
 
-Kind: child | Data class: master | Parent: u_mes_prod_routingStep | _id pattern: <routingStepId>-NS<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_routingStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -346,7 +346,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_routingStep | _id pattern:
 
 ## u_mes_prod_billOfProcess
 
-Kind: entity | Data class: master | Parent: - | _id pattern: BOP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -372,7 +372,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: BOP-<recordNo>
 
 ## u_mes_prod_billOfProcessStep
 
-Kind: child | Data class: master | Parent: u_mes_prod_billOfProcess | _id pattern: <billOfProcessId>-S<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_billOfProcess | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -397,7 +397,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_billOfProcess | _id patter
 
 ## u_mes_prod_billOfProcessStepEquipment
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: <billOfProcessStepId>-E<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -414,7 +414,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep |
 
 ## u_mes_prod_billOfProcessStepTool
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: <billOfProcessStepId>-T<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -431,7 +431,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep |
 
 ## u_mes_prod_billOfProcessStepRequiredSkill
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: <billOfProcessStepId>-RS<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -448,7 +448,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_billOfProcessStep |
 
 ## u_mes_prod_billOfProcessStepConsumedComponent
 
-Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: <billOfProcessStepId>-CC<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -467,7 +467,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pa
 
 ## u_mes_prod_billOfProcessStepInterlock
 
-Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: <billOfProcessStepId>-I<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -485,7 +485,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pa
 
 ## u_mes_prod_billOfProcessStepProcessParameter
 
-Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: <billOfProcessStepId>-PP<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -506,7 +506,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_billOfProcessStep | _id pa
 
 ## u_mes_prod_workInstruction
 
-Kind: entity | Data class: master | Parent: - | _id pattern: WI-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -538,7 +538,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: WI-<recordNo>
 
 ## u_mes_prod_workInstructionStep
 
-Kind: child | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: <workInstructionId>-S<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -563,7 +563,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_workInstruction | _id patt
 
 ## u_mes_prod_workInstructionStepMediaControlledDocument
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: <workInstructionStepId>-MCD<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -580,7 +580,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep
 
 ## u_mes_prod_workInstructionStepProductVariant
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: <workInstructionStepId>-PV<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -597,7 +597,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep
 
 ## u_mes_prod_workInstructionStepTool
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: <workInstructionStepId>-T<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -614,7 +614,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep
 
 ## u_mes_prod_workInstructionStepCharacteristic
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: <workInstructionStepId>-C<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -631,7 +631,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_workInstructionStep
 
 ## u_mes_prod_workInstructionPpeItem
 
-Kind: relationship | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: <workInstructionId>-PI<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -648,7 +648,7 @@ Kind: relationship | Data class: master | Parent: u_mes_prod_workInstruction | _
 
 ## u_mes_prod_workInstructionKeyPoint
 
-Kind: valueList | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: <workInstructionId>-KP<nnn>
+Kind: valueList | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -664,7 +664,7 @@ Kind: valueList | Data class: master | Parent: u_mes_prod_workInstruction | _id 
 
 ## u_mes_prod_recipe
 
-Kind: entity | Data class: master | Parent: - | _id pattern: RCP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -696,7 +696,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: RCP-<recordNo>
 
 ## u_mes_prod_recipeParameter
 
-Kind: child | Data class: master | Parent: u_mes_prod_recipe | _id pattern: <recipeId>-P<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_recipe | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -721,7 +721,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_recipe | _id pattern: <rec
 
 ## u_mes_prod_recipeStage
 
-Kind: child | Data class: master | Parent: u_mes_prod_recipe | _id pattern: <recipeId>-S<nnn>
+Kind: child | Data class: master | Parent: u_mes_prod_recipe | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -739,7 +739,7 @@ Kind: child | Data class: master | Parent: u_mes_prod_recipe | _id pattern: <rec
 
 ## u_mes_prod_engineeringChange
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: ECN-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -777,7 +777,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ECN-<recordNo>
 
 ## u_mes_prod_engineeringChangeAffectedItem
 
-Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: <engineeringChangeId>-AI<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -802,7 +802,7 @@ Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _
 
 ## u_mes_prod_engineeringChangeAffectedObject
 
-Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: <engineeringChangeId>-AO<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -827,7 +827,7 @@ Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _
 
 ## u_mes_prod_engineeringChangeApproval
 
-Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: <engineeringChangeId>-A<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -854,7 +854,7 @@ Kind: child | Data class: transaction | Parent: u_mes_prod_engineeringChange | _
 
 ## u_mes_prod_engineeringChangeControlledDocument
 
-Kind: relationship | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: <engineeringChangeId>-CD<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_prod_engineeringChange | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -877,7 +877,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_prod_engineeringCha
 
 ## u_mes_prod_itemGroup
 
-Kind: entity | Data class: master | Parent: - | _id pattern: IGR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -893,7 +893,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: IGR-<recordNo>
 
 ## u_mes_prod_itemFamily
 
-Kind: entity | Data class: master | Parent: - | _id pattern: IFM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -909,7 +909,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: IFM-<recordNo>
 
 ## u_mes_prod_ppeItem
 
-Kind: entity | Data class: master | Parent: - | _id pattern: PPE-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -925,7 +925,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: PPE-<recordNo>
 
 ## u_mes_prod_market
 
-Kind: entity | Data class: master | Parent: - | _id pattern: MKT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -941,7 +941,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: MKT-<recordNo>
 
 ## u_mes_prod_padCompound
 
-Kind: entity | Data class: master | Parent: - | _id pattern: PDC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -957,7 +957,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: PDC-<recordNo>
 
 ## u_mes_prod_surfaceFinish
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SFN-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -973,7 +973,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SFN-<recordNo>
 
 ## u_mes_prod_vehicleModel
 
-Kind: entity | Data class: master | Parent: - | _id pattern: VHM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

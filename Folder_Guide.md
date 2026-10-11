@@ -29,7 +29,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | 03_design/<module folder>/specs | Collection specification: field dictionary with requiredness, description, example, allowed values | Yes | Generated; corrections are made in the dictionaries in 05_generator |
 | 03_design/<module folder>/validators | JSON Schema validator per collection | Yes | Generated |
 | 03_design/<module folder>/indexes | Index definitions per collection | Yes | Generated |
-| 03_design/<module folder>/samples | One sample document per collection in MongoDB shell style | Yes | Generated |
+| 03_design/<module folder>/samples | Exactly 10 sample documents per collection in MongoDB shell style, one consistent sample-data universe | Yes | Generated |
 | 04_reference_data | The caliper reference story the seed data must follow | Yes | Hand, except code_lists/status_values.md (generated) |
 | 04_reference_data/product | BOM, routing, characteristics and tolerances | Yes | Hand |
 | 04_reference_data/process_values | Torque, leak test and heat treatment values | Yes | Hand |
@@ -67,6 +67,10 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | catalogue.py, keys.py, flatten_model.py, gen_docs.py, gen_specs.py | 05_generator |
 | keydict_text.py, keydict_num.py, entity_samples.py (dictionaries behind the specifications) | 05_generator |
 | master_refs.py (master collections and key conversions under DATA-003) | 05_generator |
+| spec_rules.py (rules shared by the specification and sample generators) | 05_generator |
+| gen_samples.py, sample_rules.py, sample_universe.py (sample documents) | 05_generator |
+| sample_data_registry.md (every sample _id, business number and display value) | 04_reference_data |
+| sample_data_validation.md | 08_validation/reports |
 | enumeration_values.md | 04_reference_data/code_lists |
 | master_data_review.md | 08_validation/reports |
 | module_summary.md (one per module) | 03_design/<module folder> |

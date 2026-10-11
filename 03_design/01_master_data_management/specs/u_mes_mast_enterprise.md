@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | ENT-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 26 (22 required, 4 may be null) |
 | Estimated volume per year | <20 total |
@@ -29,15 +29,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: ENT-<recordNo> | `"ENT-VBS"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1001000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"VBS"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the enterprise; used as its display value in other collections | `"Varuna Brake Systems Pvt. Ltd."` |  |
 | 6 | legalName | String | Yes | Legal name | `"Varuna Brake Systems Private Limited"` |  |
 | 7 | scope | String | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
-| 8 | parentEnterpriseId | String | No (null allowed) | Reference to u_mes_mast_enterprise._id: parent enterprise | `"ENT-VIG"` | Reference: u_mes_mast_enterprise._id |
-| 9 | parentEnterpriseName | String | No (null allowed) | Display value of parentEnterpriseId, copied from u_mes_mast_enterprise.name | `"Varuna Industries Group"` |  |
+| 8 | parentEnterpriseId | String | No (null allowed) | Reference to u_mes_mast_enterprise._id: parent enterprise | `null` | Reference: u_mes_mast_enterprise._id |
+| 9 | parentEnterpriseName | String | No (null allowed) | Display value of parentEnterpriseId, copied from u_mes_mast_enterprise.name | `null` |  |
 | 10 | cin | String | Yes | Corporate identification number | `"U34300PN2009PTC134567"` |  |
 | 11 | gstin | String | Yes | Goods and services tax identification number | `"27AAACV4521K1Z6"` |  |
 | 12 | pan | String | Yes | Permanent account number | `"AAACV4521K"` |  |
@@ -47,9 +47,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | registeredAddressCity | String | Yes | Registered address city | `"Pune"` |  |
 | 17 | registeredAddressState | String | Yes | Registered address state | `"Maharashtra"` |  |
 | 18 | registeredAddressPostalCode | String | Yes | Registered address postal code | `"410501"` |  |
-| 19 | registeredAddressCountryId | String | Yes | Reference to u_mes_mast_country._id: registered address country | `"CTY-IN"` | Reference: u_mes_mast_country._id |
+| 19 | registeredAddressCountryId | String | Yes | Reference to u_mes_mast_country._id: registered address country | `"1266000000000001"` | Reference: u_mes_mast_country._id |
 | 20 | registeredAddressCountryName | String | Yes | Display value of registeredAddressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
-| 21 | baseCurrencyId | String | Yes | Reference to u_mes_mast_currency._id: base currency | `"CUR-INR"` | Reference: u_mes_mast_currency._id |
+| 21 | baseCurrencyId | String | Yes | Reference to u_mes_mast_currency._id: base currency | `"1265000000000001"` | Reference: u_mes_mast_currency._id |
 | 22 | baseCurrencyName | String | Yes | Display value of baseCurrencyId, copied from u_mes_mast_currency.name | `"Indian Rupee"` |  |
 | 23 | fiscalYearStartMonth | Int32 | Yes | Month number in which the fiscal year starts (4 = April) | `NumberInt(4)` |  |
 | 24 | website | String | No (null allowed) | Website of the enterprise | `"https://www.varunabrakes.example"` |  |
@@ -78,4 +78,4 @@ u_mes_mast_enterprise, u_mes_mast_enterpriseContact, u_mes_mast_site.
 
 - Validator: 03_design/01_master_data_management/validators/u_mes_mast_enterprise.json
 - Indexes: 03_design/01_master_data_management/indexes/u_mes_mast_enterprise.js
-- Sample document: 03_design/01_master_data_management/samples/u_mes_mast_enterprise.js
+- Sample documents (10): 03_design/01_master_data_management/samples/u_mes_mast_enterprise.js

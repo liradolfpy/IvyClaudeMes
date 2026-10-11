@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | ICN-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 22 (18 required, 4 may be null) |
 | Estimated volume per year | 20-80 |
@@ -29,9 +29,9 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: ICN-<recordNo> | `"ICN-ERP-PRD"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1230000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"ERP-PRD"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the integration connector; used as its display value in other collections | `"ERP production interface"` |  |
 | 6 | connectorType | String | Yes | Connector type | `"ERP"` | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway |
@@ -44,10 +44,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | timeoutMs | Int32 | Yes | Timeout (milliseconds) | `NumberInt(15000)` |  |
 | 14 | retryPolicyMaxAttempts | Int32 | Yes | Retry policy maximum attempts | `NumberInt(5)` |  |
 | 15 | retryPolicyBackoffSec | Int32 | Yes | Retry policy backoff (seconds) | `NumberInt(60)` |  |
-| 16 | lastSuccessAt | Date | No (null allowed) | Last success date and time | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
+| 16 | lastSuccessAt | Date | No (null allowed) | Last success date and time | `null` |  |
 | 17 | lastFailureAt | Date | No (null allowed) | Last failure date and time | `null` |  |
 | 18 | healthStatus | String | Yes | Health status | `"Healthy"` | Healthy; Degraded; Down |
-| 19 | ownerUserId | String | No (null allowed) | Reference to u_mes_mast_user._id: owner user | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 19 | ownerUserId | String | No (null allowed) | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 20 | ownerUserName | String | No (null allowed) | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 | 21 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Disabled |
 | 22 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
@@ -72,4 +72,4 @@ u_mes_syst_erpMessage, u_mes_syst_integrationConnectorFunction, u_mes_syst_iotDe
 
 - Validator: 03_design/09_system_integration/validators/u_mes_syst_integrationConnector.json
 - Indexes: 03_design/09_system_integration/indexes/u_mes_syst_integrationConnector.js
-- Sample document: 03_design/09_system_integration/samples/u_mes_syst_integrationConnector.js
+- Sample documents (10): 03_design/09_system_integration/samples/u_mes_syst_integrationConnector.js

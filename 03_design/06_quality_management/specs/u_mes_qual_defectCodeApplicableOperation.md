@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Master |
 | Parent collection | u_mes_qual_defectCode |
-| _id pattern | <defectCodeId>-AO<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 10 (10 required, 0 may be null) |
 
@@ -22,15 +22,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <defectCodeId>-AO<nnn> | `"DEF-LK01-AO001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"LK01-AO001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1159000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"CS01-AO01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | defectCodeId | String | Yes | Reference to u_mes_qual_defectCode._id: the parent document this one belongs to | `"DEF-LK01"` | Reference: u_mes_qual_defectCode._id |
-| 6 | defectCodeName | String | Yes | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Leak at piston seal"` |  |
+| 5 | defectCodeId | String | Yes | Reference to u_mes_qual_defectCode._id: the parent document this one belongs to | `"1158000000000001"` | Reference: u_mes_qual_defectCode._id |
+| 6 | defectCodeName | String | Yes | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Shrinkage porosity"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | applicableOperationId | String | Yes | Reference to u_mes_prod_operation._id: applicable operation | `"OPN-OP070"` | Reference: u_mes_prod_operation._id |
-| 9 | applicableOperationName | String | Yes | Display value of applicableOperationId, copied from u_mes_prod_operation.name | `"Bleed screw torque"` |  |
+| 8 | applicableOperationId | String | Yes | Reference to u_mes_prod_operation._id: applicable operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 9 | applicableOperationName | String | Yes | Display value of applicableOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
@@ -48,4 +48,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_defectCodeApplicableOperation.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_defectCodeApplicableOperation.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_defectCodeApplicableOperation.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_defectCodeApplicableOperation.js

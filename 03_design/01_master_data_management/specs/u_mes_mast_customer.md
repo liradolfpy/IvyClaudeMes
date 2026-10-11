@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | CUS-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 26 (24 required, 2 may be null) |
 | Estimated volume per year | 10-100 |
@@ -30,9 +30,9 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: CUS-<recordNo> | `"CUS-SML"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1035000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SML"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the customer; used as its display value in other collections | `"Sahyadri Motors Ltd."` |  |
 | 6 | customerType | String | Yes | Customer type | `"OEM"` | OEM; Tier 1; Aftermarket |
@@ -42,16 +42,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | billingAddressCity | String | Yes | Billing address city | `"Pune"` |  |
 | 11 | billingAddressState | String | Yes | Billing address state | `"Maharashtra"` |  |
 | 12 | billingAddressPostalCode | String | Yes | Billing address postal code | `"410507"` |  |
-| 13 | billingAddressCountryId | String | Yes | Reference to u_mes_mast_country._id: billing address country | `"CTY-IN"` | Reference: u_mes_mast_country._id |
+| 13 | billingAddressCountryId | String | Yes | Reference to u_mes_mast_country._id: billing address country | `"1266000000000001"` | Reference: u_mes_mast_country._id |
 | 14 | billingAddressCountryName | String | Yes | Display value of billingAddressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
 | 15 | supplierCodeAtCustomer | String | Yes | Vendor code the customer uses for this plant | `"V10487"` |  |
-| 16 | labelTemplateId | String | Yes | Reference to u_mes_matl_labelTemplate._id | `"LBT-SML-BIN-A5"` | Reference: u_mes_matl_labelTemplate._id |
+| 16 | labelTemplateId | String | Yes | Reference to u_mes_matl_labelTemplate._id | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
 | 17 | labelTemplateName | String | Yes | Display value of labelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
 | 18 | asnRequired | Boolean | Yes | True when: ASN required | `true` |  |
 | 19 | ppapLevelDefault | Int32 | Yes | PPAP level default | `NumberInt(3)` |  |
 | 20 | ppmTarget | Int32 | Yes | Customer target in defective parts per million | `NumberInt(25)` |  |
 | 21 | paymentTermsDays | Int32 | Yes | Payment terms (days) | `NumberInt(45)` |  |
-| 22 | currencyId | String | Yes | Reference to u_mes_mast_currency._id | `"CUR-INR"` | Reference: u_mes_mast_currency._id |
+| 22 | currencyId | String | Yes | Reference to u_mes_mast_currency._id | `"1265000000000001"` | Reference: u_mes_mast_currency._id |
 | 23 | currencyName | String | Yes | Display value of currencyId, copied from u_mes_mast_currency.name | `"Indian Rupee"` |  |
 | 24 | portalUrl | String | No (null allowed) | Portal url | `"https://supplier.sahyadrimotors.example"` |  |
 | 25 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
@@ -79,4 +79,4 @@ u_mes_mast_customerShipTo, u_mes_mast_customerContact, u_mes_prod_itemCustomerPa
 
 - Validator: 03_design/01_master_data_management/validators/u_mes_mast_customer.json
 - Indexes: 03_design/01_master_data_management/indexes/u_mes_mast_customer.js
-- Sample document: 03_design/01_master_data_management/samples/u_mes_mast_customer.js
+- Sample documents (10): 03_design/01_master_data_management/samples/u_mes_mast_customer.js

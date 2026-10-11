@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Master |
 | Parent collection | u_mes_mast_supplier |
-| _id pattern | <supplierId>-SI<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 10 (10 required, 0 may be null) |
 
@@ -22,15 +22,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <supplierId>-SI<nnn> | `"SUP-S1042-SI001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"S1042-SI001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1041000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"S1042-SI01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | supplierId | String | Yes | Reference to u_mes_mast_supplier._id: the parent document this one belongs to | `"SUP-S1042"` | Reference: u_mes_mast_supplier._id |
+| 5 | supplierId | String | Yes | Reference to u_mes_mast_supplier._id: the parent document this one belongs to | `"1038000000000001"` | Reference: u_mes_mast_supplier._id |
 | 6 | supplierName | String | Yes | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Konkan Precision Pistons Pvt. Ltd."` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | suppliedItemId | String | Yes | Reference to u_mes_prod_item._id: supplied item | `"ITM-5110-10-0100"` | Reference: u_mes_prod_item._id |
-| 9 | suppliedItemName | String | Yes | Display value of suppliedItemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 8 | suppliedItemId | String | Yes | Reference to u_mes_prod_item._id: supplied item | `"1043000000000010"` | Reference: u_mes_prod_item._id |
+| 9 | suppliedItemName | String | Yes | Display value of suppliedItemId, copied from u_mes_prod_item.description | `"Aluminium alloy ingot AlSi7Mg0.3 (A356)"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
@@ -48,4 +48,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/01_master_data_management/validators/u_mes_mast_supplierSuppliedItem.json
 - Indexes: 03_design/01_master_data_management/indexes/u_mes_mast_supplierSuppliedItem.js
-- Sample document: 03_design/01_master_data_management/samples/u_mes_mast_supplierSuppliedItem.js
+- Sample documents (10): 03_design/01_master_data_management/samples/u_mes_mast_supplierSuppliedItem.js

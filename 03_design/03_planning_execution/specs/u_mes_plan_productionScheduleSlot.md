@@ -7,7 +7,7 @@
 | Kind | Child |
 | Data class | Transaction |
 | Parent collection | u_mes_plan_productionSchedule |
-| _id pattern | <productionScheduleId>-S<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 23 (21 required, 2 may be null) |
 
@@ -22,28 +22,28 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <productionScheduleId>-S<nnn> | `"SCH-20260929-ASY-01-A-S001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260929-ASY-01-A-S001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1087000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SCH-2026-000257-S01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | productionScheduleId | String | Yes | Reference to u_mes_plan_productionSchedule._id: the parent document this one belongs to | `"SCH-20260929-ASY-01-A"` | Reference: u_mes_plan_productionSchedule._id |
-| 6 | productionScheduleName | String | Yes | Display value of productionScheduleId, copied from u_mes_plan_productionSchedule.recordNo | `"20260929-ASY-01-A"` |  |
+| 5 | productionScheduleId | String | Yes | Reference to u_mes_plan_productionSchedule._id: the parent document this one belongs to | `"1086000000000001"` | Reference: u_mes_plan_productionSchedule._id |
+| 6 | productionScheduleName | String | Yes | Display value of productionScheduleId, copied from u_mes_plan_productionSchedule.recordNo | `"SCH-2026-000257"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | productionOrderId | String | Yes | Reference to u_mes_plan_productionOrder._id | `"PO-1000412"` | Reference: u_mes_plan_productionOrder._id |
-| 9 | productionOrderName | String | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"1000412"` |  |
-| 10 | itemId | String | No (null allowed) | Reference to u_mes_prod_item._id | `"ITM-5110-10-0100"` | Reference: u_mes_prod_item._id |
+| 8 | productionOrderId | String | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
+| 9 | productionOrderName | String | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
+| 10 | itemId | String | No (null allowed) | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
 | 11 | itemName | String | No (null allowed) | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
 | 12 | plannedQuantity | Int32 | Yes | Planned quantity | `NumberInt(480)` |  |
-| 13 | plannedStartAt | Date | Yes | Planned start date and time | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 14 | plannedEndAt | Date | Yes | Planned end date and time | `ISODate("2026-09-29T08:30:00.000+0000")` |  |
+| 13 | plannedStartAt | Date | Yes | Planned start date and time | `ISODate("2026-09-15T00:30:40.000+0000")` |  |
+| 14 | plannedEndAt | Date | Yes | Planned end date and time | `ISODate("2026-09-15T08:30:40.000+0000")` |  |
 | 15 | changeoverMinutes | Int32 | Yes | Changeover (minutes) | `NumberInt(0)` |  |
 | 16 | actualQuantity | Int32 | Yes | Actual quantity | `NumberInt(474)` |  |
 | 17 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 18 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 19 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 18 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:30:40.000+0000")` |  |
+| 19 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 20 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 21 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T08:30:00.000+0000")` |  |
-| 22 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 21 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T08:30:40.000+0000")` |  |
+| 22 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 23 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Indexes
@@ -62,4 +62,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/03_planning_execution/validators/u_mes_plan_productionScheduleSlot.json
 - Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_productionScheduleSlot.js
-- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_productionScheduleSlot.js
+- Sample documents (10): 03_design/03_planning_execution/samples/u_mes_plan_productionScheduleSlot.js

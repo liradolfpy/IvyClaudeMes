@@ -14,7 +14,8 @@ Rebuild the model documents from source:
     python flatten_model.py
     python gen_docs.py ..
     python gen_specs.py ..
+    python gen_samples.py ..
 
 Restore seed data (after Phase 3): `mongorestore --db mes 06_seed_data/bson`
 
-Position on 11 Oct 2026: research, model inventory and collection specifications complete (299 flat collections, 6,058 keys; specification, validator, index script and sample for each under 03_design). Seed data (06_seed_data), diagrams and data flows are not yet produced.
+Position on 12 Oct 2026: research, model inventory, collection specifications and sample documents complete (299 flat collections, 6,058 keys, 2,990 sample documents: exactly 10 per collection under 03_design/<module>/samples). BSON seed files (06_seed_data), diagrams and data flows are not yet produced.

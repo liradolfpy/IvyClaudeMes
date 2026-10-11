@@ -15,3 +15,5 @@
 | A011 | 11 Oct 2026 | MongoDB time-series collections remain a storage recommendation for processReading and energyReading; validators cannot be attached to time-series collections | Storage notes change |
 | A012 | 11 Oct 2026 | The Phase 1 research document keeps the collection names in use when it was written; `collection_inventory.md` is the authority for names | None |
 | A013 | 11 Oct 2026 | The split between master collection (rule A) and fixed enumeration (rule B) was made by Claude key by key; a key can be moved from B to A by adding it to 05_generator/master_refs.py | Individual keys change from coded text to a reference |
+| A014 | 12 Oct 2026 | All sample transactions belong to the Chakan plant; the other nine sites exist only as site master documents | Plant variation in transactions would need lines, work centers and equipment for those sites |
+| A015 | 12 Oct 2026 | Process values in the samples (torque 14 +/- 2 N.m, leak limit 50 Pa at 140 bar, T6 at 535 degC, bore 54.000 to 54.046 mm and so on) are representative engineering values | Values are replaced when real ones are supplied |

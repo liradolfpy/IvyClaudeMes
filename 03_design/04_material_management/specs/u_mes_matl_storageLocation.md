@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | LOC-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 24 (16 required, 8 may be null) |
 | Estimated volume per year | 500-5,000 |
@@ -23,18 +23,18 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: LOC-<recordNo> | `"LOC-LS-ASY-01"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"LS-ASY-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1112000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"WH-RM-01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the storage location; used as its display value in other collections | `"Line-side supermarket, Assembly 1"` |  |
-| 6 | locationType | String | Yes | Location type | `"Line Side"` | Warehouse Rack; Line Side; Quarantine; Dispatch Bay; Receiving Bay; Tool Crib; Scrap Yard |
-| 7 | areaId | String | No (null allowed) | Reference to u_mes_mast_area._id | `"AR-ASY"` | Reference: u_mes_mast_area._id |
-| 8 | areaName | String | No (null allowed) | Display value of areaId, copied from u_mes_mast_area.name | `"Assembly and Test"` |  |
-| 9 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"WC-TRQ-01"` | Reference: u_mes_mast_workCenter._id |
-| 10 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
-| 11 | parentLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: parent location | `"LOC-WH-A-R02-B14"` | Reference: u_mes_matl_storageLocation._id |
-| 12 | parentLocationName | String | No (null allowed) | Display value of parentLocationId, copied from u_mes_matl_storageLocation.name | `"Warehouse A, rack 02, bin 14"` |  |
+| 5 | name | String | Yes | Name of the storage location; used as its display value in other collections | `"Raw material yard, ingot bay"` |  |
+| 6 | locationType | String | Yes | Location type | `"Receiving Bay"` | Warehouse Rack; Line Side; Quarantine; Dispatch Bay; Receiving Bay; Tool Crib; Scrap Yard |
+| 7 | areaId | String | No (null allowed) | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
+| 8 | areaName | String | No (null allowed) | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
+| 9 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 10 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 11 | parentLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: parent location | `null` | Reference: u_mes_matl_storageLocation._id |
+| 12 | parentLocationName | String | No (null allowed) | Display value of parentLocationId, copied from u_mes_matl_storageLocation.name | `null` |  |
 | 13 | zone | String | Yes | Zone of the storage location | `"ASY"` |  |
 | 14 | rack | String | No (null allowed) | Rack of the storage location | `"R02"` |  |
 | 15 | level | Int32 | Yes | Level number on the scale of the parent record | `NumberInt(3)` |  |
@@ -70,4 +70,4 @@ u_mes_mast_workCenter, u_mes_prod_item, u_mes_plan_lot, u_mes_plan_container, u_
 
 - Validator: 03_design/04_material_management/validators/u_mes_matl_storageLocation.json
 - Indexes: 03_design/04_material_management/indexes/u_mes_matl_storageLocation.js
-- Sample document: 03_design/04_material_management/samples/u_mes_matl_storageLocation.js
+- Sample documents (10): 03_design/04_material_management/samples/u_mes_matl_storageLocation.js

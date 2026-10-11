@@ -7,7 +7,7 @@
 | Kind | Child |
 | Data class | Master |
 | Parent collection | u_mes_qual_samplingPlan |
-| _id pattern | <samplingPlanId>-SR<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 13 (13 required, 0 may be null) |
 
@@ -22,18 +22,18 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <samplingPlanId>-SR<nnn> | `"SMP-AQL-1.0-II-SR001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"AQL-1.0-II-SR001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1145000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"AQL-1.0-II-SR01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | samplingPlanId | String | Yes | Reference to u_mes_qual_samplingPlan._id: the parent document this one belongs to | `"SMP-AQL-1.0-II"` | Reference: u_mes_qual_samplingPlan._id |
+| 5 | samplingPlanId | String | Yes | Reference to u_mes_qual_samplingPlan._id: the parent document this one belongs to | `"1144000000000001"` | Reference: u_mes_qual_samplingPlan._id |
 | 6 | samplingPlanName | String | Yes | Display value of samplingPlanId, copied from u_mes_qual_samplingPlan.name | `"AQL 1.0, general inspection level II"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | lotSizeFrom | Int32 | Yes | Lot size from | `NumberInt(281)` |  |
-| 9 | lotSizeTo | Int32 | Yes | Lot size to | `NumberInt(500)` |  |
-| 10 | sampleSize | Int32 | Yes | Sample size | `NumberInt(5)` |  |
-| 11 | acceptNumber | Int32 | Yes | Accept number | `NumberInt(1)` |  |
-| 12 | rejectNumber | Int32 | Yes | Reject number | `NumberInt(2)` |  |
+| 8 | lotSizeFrom | Int32 | Yes | Lot size from | `NumberInt(2)` |  |
+| 9 | lotSizeTo | Int32 | Yes | Lot size to | `NumberInt(8)` |  |
+| 10 | sampleSize | Int32 | Yes | Sample size | `NumberInt(2)` |  |
+| 11 | acceptNumber | Int32 | Yes | Accept number | `NumberInt(0)` |  |
+| 12 | rejectNumber | Int32 | Yes | Reject number | `NumberInt(1)` |  |
 | 13 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
@@ -50,4 +50,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_samplingPlanSizeRow.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_samplingPlanSizeRow.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_samplingPlanSizeRow.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_samplingPlanSizeRow.js

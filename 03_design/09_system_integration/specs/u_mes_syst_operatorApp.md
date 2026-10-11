@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | APP-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 17 (9 required, 8 may be null) |
 | Estimated volume per year | 50-300 |
@@ -34,21 +34,21 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: APP-<recordNo> | `"APP-APP-TRQ-01"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"APP-TRQ-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1233000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"APP-GDC-01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the operator app; used as its display value in other collections | `"Torque station operator app"` |  |
+| 5 | name | String | Yes | Name of the operator app; used as its display value in other collections | `"Operator app, Gravity Die Casting Cell 1"` |  |
 | 6 | appType | String | Yes | App type | `"Operator Station"` | Operator Station; Inspection; Material Handling; Maintenance; Andon Board |
-| 7 | version | Int32 | Yes | Version of the operator app | `NumberInt(3)` |  |
-| 8 | publishedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'published' | `"USR-10045"` | Reference: u_mes_mast_user._id |
-| 9 | publishedBy | String | No (null allowed) | Display name of the user in publishedById, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 10 | publishedAt | Date | No (null allowed) | Date and time when the record was published | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
-| 11 | approvedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"USR-10019"` | Reference: u_mes_mast_user._id |
-| 12 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 13 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
-| 14 | previousVersionOperatorAppId | String | No (null allowed) | Reference to u_mes_syst_operatorApp._id: previous version operator app | `"APP-APP-TRQ-01-V2"` | Reference: u_mes_syst_operatorApp._id |
-| 15 | previousVersionOperatorAppName | String | No (null allowed) | Display value of previousVersionOperatorAppId, copied from u_mes_syst_operatorApp.name | `"Torque station operator app"` |  |
+| 7 | version | Int32 | Yes | Version of the operator app | `NumberInt(1)` |  |
+| 8 | publishedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'published' | `null` | Reference: u_mes_mast_user._id |
+| 9 | publishedBy | String | No (null allowed) | Display name of the user in publishedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 10 | publishedAt | Date | No (null allowed) | Date and time when the record was published | `null` |  |
+| 11 | approvedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
+| 12 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 13 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `null` |  |
+| 14 | previousVersionOperatorAppId | String | No (null allowed) | Reference to u_mes_syst_operatorApp._id: previous version operator app | `null` | Reference: u_mes_syst_operatorApp._id |
+| 15 | previousVersionOperatorAppName | String | No (null allowed) | Display value of previousVersionOperatorAppId, copied from u_mes_syst_operatorApp.name | `null` |  |
 | 16 | status | String | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
 | 17 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
@@ -72,4 +72,4 @@ u_mes_syst_operatorApp, u_mes_syst_operatorAppWorkCenter, u_mes_syst_operatorApp
 
 - Validator: 03_design/09_system_integration/validators/u_mes_syst_operatorApp.json
 - Indexes: 03_design/09_system_integration/indexes/u_mes_syst_operatorApp.js
-- Sample document: 03_design/09_system_integration/samples/u_mes_syst_operatorApp.js
+- Sample documents (10): 03_design/09_system_integration/samples/u_mes_syst_operatorApp.js

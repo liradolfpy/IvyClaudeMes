@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Transaction |
 | Parent collection | none |
-| _id pattern | DSP-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 22 (19 required, 3 may be null) |
 | Estimated volume per year | ~100,000 |
@@ -29,27 +29,27 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: DSP-<recordNo> | `"DSP-20260929-TRQ-01-A"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260929-TRQ-01-A"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1088000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"DSP-2026-000121"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"WC-TRQ-01"` | Reference: u_mes_mast_workCenter._id |
-| 6 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
-| 7 | shiftId | String | Yes | Reference to u_mes_mast_shift._id | `"SH-A"` | Reference: u_mes_mast_shift._id |
+| 5 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 6 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 7 | shiftId | String | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
 | 8 | shiftName | String | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 9 | productionDate | Date | Yes | Production date (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-09-28T18:30:00.000+0000")` |  |
-| 10 | generatedAt | Date | Yes | Date and time when the record was generated | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
+| 9 | productionDate | Date | Yes | Production date (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-09-14T18:30:00.000+0000")` |  |
+| 10 | generatedAt | Date | Yes | Date and time when the record was generated | `ISODate("2026-09-15T00:30:30.000+0000")` |  |
 | 11 | rule | String | Yes | Rule of the dispatch list | `"Earliest Due Date"` | Earliest Due Date; First In First Out; Critical Ratio; Priority |
-| 12 | acknowledgedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'acknowledged' | `"USR-10045"` | Reference: u_mes_mast_user._id |
-| 13 | acknowledgedBy | String | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 14 | acknowledgedAt | Date | No (null allowed) | Date and time when the record was acknowledged | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
-| 15 | status | String | Yes | Primary lifecycle state of the document | `"Closed"` | Generated; Acknowledged; Closed |
+| 12 | acknowledgedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'acknowledged' | `null` | Reference: u_mes_mast_user._id |
+| 13 | acknowledgedBy | String | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 14 | acknowledgedAt | Date | No (null allowed) | Date and time when the record was acknowledged | `null` |  |
+| 15 | status | String | Yes | Primary lifecycle state of the document | `"Generated"` | Generated; Acknowledged; Closed |
 | 16 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 17 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 18 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 17 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-14T18:30:00.000+0000")` |  |
+| 18 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 19 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 20 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
-| 21 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 20 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:30:30.000+0000")` |  |
+| 21 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 22 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
@@ -74,4 +74,4 @@ u_mes_plan_dispatchListEntry.
 
 - Validator: 03_design/03_planning_execution/validators/u_mes_plan_dispatchList.json
 - Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_dispatchList.js
-- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_dispatchList.js
+- Sample documents (10): 03_design/03_planning_execution/samples/u_mes_plan_dispatchList.js

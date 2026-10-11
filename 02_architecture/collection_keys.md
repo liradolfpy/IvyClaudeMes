@@ -1,6 +1,6 @@
 # Collection keys
 
-Model version 2.3 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Model version 2.4 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
 
 All documents are flat: every key is top-level and scalar. A key ending in Id is a reference and is followed by its display key (<entity>Name, or the same name without Id for keys ending in ById). Types are in 02_architecture/field_lists.
 

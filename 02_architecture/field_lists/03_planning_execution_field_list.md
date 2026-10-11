@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_plan_customerSchedule
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CSR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -36,7 +36,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CSR-<recordNo>
 
 ## u_mes_plan_customerScheduleLine
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_customerSchedule | _id pattern: <customerScheduleId>-L<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_customerSchedule | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -66,7 +66,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_customerSchedule | _i
 
 ## u_mes_plan_productionOrder
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: PO-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -120,7 +120,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: PO-<recordNo>
 
 ## u_mes_plan_productionOrderRelease
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_productionOrder | _id pattern: <productionOrderId>-R<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_productionOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -145,7 +145,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_productionOrder | _id
 
 ## u_mes_plan_productionOrderLot
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_productionOrder | _id pattern: <productionOrderId>-L<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_productionOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -168,7 +168,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_productionOrde
 
 ## u_mes_plan_productionSchedule
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SCH-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -202,7 +202,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SCH-<recordNo>
 
 ## u_mes_plan_productionScheduleSlot
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_productionSchedule | _id pattern: <productionScheduleId>-S<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_productionSchedule | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -232,7 +232,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_productionSchedule | 
 
 ## u_mes_plan_dispatchList
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: DSP-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -261,7 +261,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: DSP-<recordNo>
 
 ## u_mes_plan_dispatchListEntry
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_dispatchList | _id pattern: <dispatchListId>-E<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_dispatchList | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -296,7 +296,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_dispatchList | _id pa
 
 ## u_mes_plan_operationExecution
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: OPX-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -356,7 +356,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: OPX-<recordNo>
 
 ## u_mes_plan_operationExecutionDefectCode
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_operationExecution | _id pattern: <operationExecutionId>-DC<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_operationExecution | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -379,7 +379,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_operationExecu
 
 ## u_mes_plan_operationExecutionTool
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_operationExecution | _id pattern: <operationExecutionId>-T<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_operationExecution | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -402,7 +402,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_operationExecu
 
 ## u_mes_plan_stepCompletion
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: STC-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -449,7 +449,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: STC-<recordNo>
 
 ## u_mes_plan_wipUnit
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: WU-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -503,7 +503,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: WU-<recordNo>
 
 ## u_mes_plan_wipUnitCompletedStep
 
-Kind: valueList | Data class: transaction | Parent: u_mes_plan_wipUnit | _id pattern: <wipUnitId>-CS<nnn>
+Kind: valueList | Data class: transaction | Parent: u_mes_plan_wipUnit | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -525,7 +525,7 @@ Kind: valueList | Data class: transaction | Parent: u_mes_plan_wipUnit | _id pat
 
 ## u_mes_plan_lot
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: LOT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -579,7 +579,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: LOT-<recordNo>
 
 ## u_mes_plan_lotParentLot
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_lot | _id pattern: <lotId>-PL<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_lot | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -602,7 +602,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_lot | _id patt
 
 ## u_mes_plan_lotAttributesCavityNo
 
-Kind: valueList | Data class: transaction | Parent: u_mes_plan_lot | _id pattern: <lotId>-ACN<nnn>
+Kind: valueList | Data class: transaction | Parent: u_mes_plan_lot | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -624,7 +624,7 @@ Kind: valueList | Data class: transaction | Parent: u_mes_plan_lot | _id pattern
 
 ## u_mes_plan_container
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CNT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -670,7 +670,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CNT-<recordNo>
 
 ## u_mes_plan_containerLot
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_container | _id pattern: <containerId>-L<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_container | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -693,7 +693,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_container | _i
 
 ## u_mes_plan_labourBooking
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: LAB-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -736,7 +736,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: LAB-<recordNo>
 
 ## u_mes_plan_changeover
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CHG-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -783,7 +783,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CHG-<recordNo>
 
 ## u_mes_plan_changeoverStep
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: <changeoverId>-S<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -809,7 +809,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_changeover | _id patt
 
 ## u_mes_plan_changeoverRemovedTool
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: <changeoverId>-RT<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -832,7 +832,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _
 
 ## u_mes_plan_changeoverInstalledTool
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: <changeoverId>-IT<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -855,7 +855,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _
 
 ## u_mes_plan_changeoverPerformedByUser
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: <changeoverId>-PBU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -878,7 +878,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_changeover | _
 
 ## u_mes_plan_shiftHandover
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SHO-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -917,7 +917,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SHO-<recordNo>
 
 ## u_mes_plan_shiftHandoverProductionOrder
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: <shiftHandoverId>-PO<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -940,7 +940,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover 
 
 ## u_mes_plan_shiftHandoverDowntimeEvent
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: <shiftHandoverId>-DE<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -963,7 +963,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover 
 
 ## u_mes_plan_shiftHandoverNonconformance
 
-Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: <shiftHandoverId>-N<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -986,7 +986,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_plan_shiftHandover 
 
 ## u_mes_plan_shiftHandoverOpenItem
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: <shiftHandoverId>-OI<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1012,7 +1012,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_shiftHandover | _id p
 
 ## u_mes_plan_andonEvent
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: AND-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1057,7 +1057,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: AND-<recordNo>
 
 ## u_mes_plan_andonEventEscalation
 
-Kind: child | Data class: transaction | Parent: u_mes_plan_andonEvent | _id pattern: <andonEventId>-E<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_plan_andonEvent | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1083,7 +1083,7 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_andonEvent | _id patt
 
 ## u_mes_plan_indirectActivity
 
-Kind: entity | Data class: master | Parent: - | _id pattern: IND-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1102,7 +1102,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: IND-<recordNo>
 
 ## u_mes_plan_containerType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CTT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1123,7 +1123,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CTT-<recordNo>
 
 ## u_mes_plan_andonType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ANT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

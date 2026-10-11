@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Master |
 | Parent collection | u_mes_prod_workInstructionStep |
-| _id pattern | <workInstructionStepId>-MCD<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 10 (10 required, 0 may be null) |
 
@@ -22,15 +22,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <workInstructionStepId>-MCD<nnn> | `"WI-WI-OP070-001-S001-MCD001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"WI-OP070-001-S001-MCD001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1067000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"WI-OP010-001-S01-MCD01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | workInstructionStepId | String | Yes | Reference to u_mes_prod_workInstructionStep._id: the parent document this one belongs to | `"WI-WI-OP070-001-S001"` | Reference: u_mes_prod_workInstructionStep._id |
-| 6 | workInstructionStepName | String | Yes | Display value of workInstructionStepId, copied from u_mes_prod_workInstructionStep.title | `"WI-OP070-001-S001"` |  |
+| 5 | workInstructionStepId | String | Yes | Reference to u_mes_prod_workInstructionStep._id: the parent document this one belongs to | `"1066000000000001"` | Reference: u_mes_prod_workInstructionStep._id |
+| 6 | workInstructionStepName | String | Yes | Display value of workInstructionStepId, copied from u_mes_prod_workInstructionStep.recordNo | `"WI-OP010-001-S01"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | mediaControlledDocumentId | String | Yes | Reference to u_mes_syst_controlledDocument._id: media controlled document | `"DOC-WIM-OP070-02"` | Reference: u_mes_syst_controlledDocument._id |
-| 9 | mediaControlledDocumentName | String | Yes | Display value of mediaControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Work instruction picture, bleed screw seating"` |  |
+| 8 | mediaControlledDocumentId | String | Yes | Reference to u_mes_syst_controlledDocument._id: media controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |
+| 9 | mediaControlledDocumentName | String | Yes | Display value of mediaControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-20-0105 revision B, Caliper Body Casting LH"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
@@ -48,4 +48,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_workInstructionStepMediaControlledDocument.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_workInstructionStepMediaControlledDocument.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_workInstructionStepMediaControlledDocument.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_workInstructionStepMediaControlledDocument.js

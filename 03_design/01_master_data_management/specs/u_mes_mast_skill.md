@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | SKL-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 16 (14 required, 2 may be null) |
 | Estimated volume per year | 50-300 |
@@ -30,18 +30,18 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: SKL-<recordNo> | `"SKL-LEAK-TEST-OP"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"LEAK-TEST-OP"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1031000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-OP"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the skill; used as its display value in other collections | `"Leak Test Operation"` |  |
-| 6 | skillCategoryId | String | Yes | Reference to u_mes_mast_skillCategory._id | `"SKC-PROCESS"` | Reference: u_mes_mast_skillCategory._id |
+| 5 | name | String | Yes | Name of the skill; used as its display value in other collections | `"Gravity die casting operation"` |  |
+| 6 | skillCategoryId | String | Yes | Reference to u_mes_mast_skillCategory._id | `"1262000000000001"` | Reference: u_mes_mast_skillCategory._id |
 | 7 | skillCategoryName | String | Yes | Display value of skillCategoryId, copied from u_mes_mast_skillCategory.name | `"Process"` |  |
-| 8 | description | String | Yes | Description of the skill | `"Operate the pressure leak tester and react to a failed test"` |  |
+| 8 | description | String | Yes | Description of the skill | `"Can perform 'gravity die casting' to the work instruction and react to abnormalities"` |  |
 | 9 | minimumLevelRequired | Int32 | Yes | Lowest skill level allowed to work unsupervised | `NumberInt(3)` |  |
 | 10 | validityMonths | Int32 | Yes | Validity (months) | `NumberInt(12)` |  |
-| 11 | trainingControlledDocumentId | String | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: training controlled document | `"DOC-TRN-LEAK-TEST-OP"` | Reference: u_mes_syst_controlledDocument._id |
-| 12 | trainingControlledDocumentName | String | No (null allowed) | Display value of trainingControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Training module, leak test operation"` |  |
+| 11 | trainingControlledDocumentId | String | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: training controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |
+| 12 | trainingControlledDocumentName | String | No (null allowed) | Display value of trainingControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-20-0105 revision B, Caliper Body Casting LH"` |  |
 | 13 | assessmentMethod | String | Yes | Assessment method | `"Practical Test"` | Practical Test; Written Test; Observation; On the Job |
 | 14 | isSafetyCritical | Boolean | Yes | True when the record is safety critical | `true` |  |
 | 15 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
@@ -68,4 +68,4 @@ u_mes_mast_workCenterRequiresSkill, u_mes_mast_skillOperation, u_mes_mast_skillL
 
 - Validator: 03_design/01_master_data_management/validators/u_mes_mast_skill.json
 - Indexes: 03_design/01_master_data_management/indexes/u_mes_mast_skill.js
-- Sample document: 03_design/01_master_data_management/samples/u_mes_mast_skill.js
+- Sample documents (10): 03_design/01_master_data_management/samples/u_mes_mast_skill.js

@@ -5,6 +5,8 @@ from catalogue import C
 from keydict_text import TEXT
 from keydict_num import NUM
 from master_refs import OPTIONAL_MASTER_REFS,NEWC,NEWENT
+import gen_samples as _GS
+SEED=_GS.build()
 from entity_samples import ES_TEXT,ALT_TEXT,USERS,CHILD_TEXT,ENUM_OVERRIDE,REF_OVERRIDE,DOC_OVERRIDE,VALUE_OVERRIDE
 ROOT=sys.argv[1]
 M=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"model","flat_model.json")))
@@ -26,13 +28,13 @@ tags={}
 for c in cols:
     if c["parent"] is None:
         src=cat.get(c["sourceConcept"]); c["prefix"]=src[2] if src else {"statusDefinition":"STD","statusTransition":"STT","enumerationValue":"ENV"}[c["entity"]]
-        c["idPattern"]=c["prefix"]+"-<recordNo>"
+        c["idPattern"]="16-digit numeric string, unique across the database"
 for c in cols:
     if c["parent"]:
         pe=bycol[c["parent"]]["entity"]; suf=c["entity"][len(pe):]
         tag="".join(ch for ch in suf if ch.isupper())[:4] or suf[:3].upper(); base=tag; i=2
         while (c["parent"],tag) in tags: tag=base+str(i); i+=1
-        tags[(c["parent"],tag)]=1; c["tag"]=tag; c["idPattern"]="<%sId>-%s<nnn>"%(pe,tag)
+        tags[(c["parent"],tag)]=1; c["tag"]=tag; c["idPattern"]="16-digit numeric string, unique across the database"
 def ident(c):
     if c["parent"] is None:
         rec=ES[c["entity"]][0]; return c["prefix"]+"-"+rec,rec
@@ -325,7 +327,7 @@ for m in order:
     summ="# %s (%s) - module summary\n\n| # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |\n|---|---|---|---|---|---|---|---|\n"%(MODN[m],m); n=0
     for c in cols:
         if c["module"]!=m: continue
-        n+=1; name=c["collection"]; doc=sample(c); idx=indexes(c)
+        n+=1; name=c["collection"]; doc=SEED[name][0]; idx=indexes(c)
         rows=[]; props=collections.OrderedDict(); nreq=0; nen=0
         for i,f in enumerate(c["fields"],1):
             nul=nullable(c,f); en=enum(c,f); desc=describe(c,f,nul)
@@ -388,18 +390,16 @@ for m in order:
         rb=refby.get(c["entity"],[])
         s+="\n## Referenced by\n\n"+((", ".join(rb)+".\n") if rb else "No other collection refers to this one.\n")
         if c["entity"] in("site","user"): s+="\nIn addition, every collection carries siteId, and every transaction collection carries createdById and updatedById.\n"
-        s+="\n## Files\n\n- Validator: 03_design/%s/validators/%s.json\n- Indexes: 03_design/%s/indexes/%s.js\n- Sample document: 03_design/%s/samples/%s.js\n"%(DOMF[m],name,DOMF[m],name,DOMF[m],name)
+        s+="\n## Files\n\n- Validator: 03_design/%s/validators/%s.json\n- Indexes: 03_design/%s/indexes/%s.js\n- Sample documents (10): 03_design/%s/samples/%s.js\n"%(DOMF[m],name,DOMF[m],name,DOMF[m],name)
         w("03_design/%s/specs/%s.md"%(DOMF[m],name),s)
         val={"collMod":name,"validator":{"$jsonSchema":{"bsonType":"object","title":name,"required":[f["key"] for f in c["fields"]],"additionalProperties":False,"properties":props}},"validationLevel":"strict","validationAction":"error"}
         w("03_design/%s/validators/%s.json"%(DOMF[m],name),json.dumps(val,indent=2,ensure_ascii=False)+"\n")
         w("03_design/%s/indexes/%s.js"%(DOMF[m],name),js)
-        sj='// Sample document for %s (illustrative; seed data is generated separately)\ndb.getCollection("%s").insertOne({\n'%(name,name)+",\n".join("  %s: %s"%(k,sh(v)) for k,v in doc.items())+"\n});\n"
-        w("03_design/%s/samples/%s.js"%(DOMF[m],name),sj)
         summ+="| %d | %s | %s | %s | %d | %d | %d | %d |\n"%(n,name,KINDTXT[c["kind"]],c["dataClass"],len(c["fields"]),nreq,nen,len(idx))
     w("03_design/%s/module_summary.md"%DOMF[m],summ)
-r="# Specification check\n\nRun: 11 October 2026 | Tool: 05_generator/gen_specs.py\n\n| Item | Count |\n|---|---|\n| Collections specified | %d |\n| Keys specified | %d |\n| Required (non-null) keys | %d |\n| Keys that may be null | %d |\n| Keys with allowed values | %d |\n| Indexes defined | %d |\n| Files written (spec, validator, index script, sample per collection, plus 10 module summaries) | %d |\n\n## Sample documents checked against their own specification\n\nChecks: every key present; value type equals the BSON type; a null only where null is allowed; a value from the allowed list where one is defined.\n\n"%(tot["collections"],tot["keys"],tot["required"],tot["keys"]-tot["required"],tot["enums"],tot["indexes"],tot["collections"]*4+10)
+r="# Specification check\n\nRun: 11 October 2026 | Tool: 05_generator/gen_specs.py\n\n| Item | Count |\n|---|---|\n| Collections specified | %d |\n| Keys specified | %d |\n| Required (non-null) keys | %d |\n| Keys that may be null | %d |\n| Keys with allowed values | %d |\n| Indexes defined | %d |\n| Files written (spec, validator, index script per collection, plus 10 module summaries) | %d |\n\n## Example document (first sample document) checked against its own specification\n\nThe full check of all ten documents per collection is in sample_data_validation.md. Checks: every key present; value type equals the BSON type; a null only where null is allowed; a value from the allowed list where one is defined.\n\n"%(tot["collections"],tot["keys"],tot["required"],tot["keys"]-tot["required"],tot["enums"],tot["indexes"],tot["collections"]*3+10)
 r+=("Result: all %d sample documents pass.\n"%tot["collections"]) if not report else ("Result: %d findings.\n\n| Collection | Key | Finding |\n|---|---|---|\n"%len(report)+"".join("| %s | %s | %s |\n"%x for x in report))
-r+="\n## Not covered by this check\n\n- Reference values in sample documents are illustrative. That every reference points to an existing _id is checked on the seed data, where all collections are generated together.\n- Requiredness, allowed values and descriptions were produced from rules and dictionaries in 05_generator (keydict_text.py, keydict_num.py, gen_specs.py); they have not been reviewed collection by collection by a person.\n- Validators have not been loaded into a MongoDB server in this run.\n"
+r+="\n## Not covered by this check\n\n- Requiredness, allowed values and descriptions were produced from rules and dictionaries in 05_generator (keydict_text.py, keydict_num.py, gen_specs.py); they have not been reviewed collection by collection by a person.\n- Validators have not been loaded into a MongoDB server in this run.\n"
 w("08_validation/reports/specification_check.md",r)
 
 # ---- fixed enumerations (kept as coded text, values held in u_mes_syst_enumerationValue)

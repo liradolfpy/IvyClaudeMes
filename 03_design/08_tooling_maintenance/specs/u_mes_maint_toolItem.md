@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Master |
 | Parent collection | u_mes_maint_tool |
-| _id pattern | <toolId>-I<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 10 (10 required, 0 may be null) |
 
@@ -22,15 +22,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <toolId>-I<nnn> | `"TL-SKT-10-0007-I001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SKT-10-0007-I001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1227000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"DIE-5110-LH-02-I01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | toolId | String | Yes | Reference to u_mes_maint_tool._id: the parent document this one belongs to | `"TL-SKT-10-0007"` | Reference: u_mes_maint_tool._id |
-| 6 | toolName | String | Yes | Display value of toolId, copied from u_mes_maint_tool.name | `"Nutrunner socket 10 mm, torque station 1"` |  |
+| 5 | toolId | String | Yes | Reference to u_mes_maint_tool._id: the parent document this one belongs to | `"1226000000000001"` | Reference: u_mes_maint_tool._id |
+| 6 | toolName | String | Yes | Display value of toolId, copied from u_mes_maint_tool.name | `"Gravity die, caliper body LH, die 2"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"ITM-5110-10-0100"` | Reference: u_mes_prod_item._id |
-| 9 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 8 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 9 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
@@ -48,4 +48,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/08_tooling_maintenance/validators/u_mes_maint_toolItem.json
 - Indexes: 03_design/08_tooling_maintenance/indexes/u_mes_maint_toolItem.js
-- Sample document: 03_design/08_tooling_maintenance/samples/u_mes_maint_toolItem.js
+- Sample documents (10): 03_design/08_tooling_maintenance/samples/u_mes_maint_toolItem.js

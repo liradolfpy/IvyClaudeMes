@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | LN-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 22 (16 required, 6 may be null) |
 | Estimated volume per year | 10-40 per site |
@@ -30,25 +30,25 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: LN-<recordNo> | `"LN-ASY-01"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"ASY-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1006000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the line; used as its display value in other collections | `"Caliper Assembly Line 1"` |  |
-| 6 | areaId | String | Yes | Reference to u_mes_mast_area._id | `"AR-ASY"` | Reference: u_mes_mast_area._id |
-| 7 | areaName | String | Yes | Display value of areaId, copied from u_mes_mast_area.name | `"Assembly and Test"` |  |
-| 8 | lineType | String | Yes | Line type | `"Assembly"` | Casting; Heat Treatment; Machining; Surface Treatment; Assembly; Inspection; Packing |
-| 9 | itemFamilyId | String | Yes | Reference to u_mes_prod_itemFamily._id | `"IFM-FRONT-CALIPER"` | Reference: u_mes_prod_itemFamily._id |
-| 10 | itemFamilyName | String | Yes | Display value of itemFamilyId, copied from u_mes_prod_itemFamily.name | `"Front Caliper"` |  |
-| 11 | workCalendarId | String | No (null allowed) | Reference to u_mes_mast_workCalendar._id | `"CAL-PN1-2026"` | Reference: u_mes_mast_workCalendar._id |
-| 12 | workCalendarName | String | No (null allowed) | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Chakan Plant Calendar 2026"` |  |
+| 5 | name | String | Yes | Name of the line; used as its display value in other collections | `"Gravity Die Casting Line 1"` |  |
+| 6 | areaId | String | Yes | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
+| 7 | areaName | String | Yes | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
+| 8 | lineType | String | Yes | Line type | `"Casting"` | Casting; Heat Treatment; Machining; Surface Treatment; Assembly; Inspection; Packing |
+| 9 | itemFamilyId | String | Yes | Reference to u_mes_prod_itemFamily._id | `"1271000000000004"` | Reference: u_mes_prod_itemFamily._id |
+| 10 | itemFamilyName | String | Yes | Display value of itemFamilyId, copied from u_mes_prod_itemFamily.name | `"Caliper Body Casting"` |  |
+| 11 | workCalendarId | String | No (null allowed) | Reference to u_mes_mast_workCalendar._id | `"1018000000000002"` | Reference: u_mes_mast_workCalendar._id |
+| 12 | workCalendarName | String | No (null allowed) | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Foundry Continuous Calendar 2026"` |  |
 | 13 | taktTimeSec | Decimal128 | Yes | Takt time (seconds) | `NumberDecimal("36.0")` |  |
 | 14 | manningStandard | Int32 | Yes | Standard number of operators for the line | `NumberInt(6)` |  |
-| 15 | bottleneckWorkCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id: bottleneck work center | `"WC-TRQ-01"` | Reference: u_mes_mast_workCenter._id |
-| 16 | bottleneckWorkCenterName | String | No (null allowed) | Display value of bottleneckWorkCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
+| 15 | bottleneckWorkCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id: bottleneck work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 16 | bottleneckWorkCenterName | String | No (null allowed) | Display value of bottleneckWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
 | 17 | oeeTarget | Decimal128 | Yes | Target OEE in percent | `NumberDecimal("85.0")` |  |
-| 18 | costCenterId | String | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"CC-5120"` | Reference: u_mes_mast_costCenter._id |
-| 19 | costCenterName | String | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Assembly Line 1"` |  |
+| 18 | costCenterId | String | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"1259000000000001"` | Reference: u_mes_mast_costCenter._id |
+| 19 | costCenterName | String | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
 | 20 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 21 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
 | 22 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
@@ -77,4 +77,4 @@ u_mes_mast_lineDefaultShift, u_mes_mast_lineIdealRate, u_mes_mast_workCenter, u_
 
 - Validator: 03_design/01_master_data_management/validators/u_mes_mast_line.json
 - Indexes: 03_design/01_master_data_management/indexes/u_mes_mast_line.js
-- Sample document: 03_design/01_master_data_management/samples/u_mes_mast_line.js
+- Sample documents (10): 03_design/01_master_data_management/samples/u_mes_mast_line.js

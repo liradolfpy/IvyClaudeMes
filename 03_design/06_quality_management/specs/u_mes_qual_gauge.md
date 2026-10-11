@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | GAU-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 37 (26 required, 11 may be null) |
 | Estimated volume per year | 500-3,000 |
@@ -23,39 +23,39 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: GAU-<recordNo> | `"GAU-G-BG-054"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"G-BG-054"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1189000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"G-UT-001"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the gauge; used as its display value in other collections | `"Bore gauge 50-75 mm"` |  |
-| 6 | gaugeTypeId | String | Yes | Reference to u_mes_qual_gaugeType._id | `"GTY-BORE-GAUGE"` | Reference: u_mes_qual_gaugeType._id |
-| 7 | gaugeTypeName | String | Yes | Display value of gaugeTypeId, copied from u_mes_qual_gaugeType.name | `"Bore Gauge"` |  |
-| 8 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"MFR-ATLAS-COPCO"` | Reference: u_mes_mast_manufacturer._id |
-| 9 | manufacturerName | String | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"Atlas Copco"` |  |
-| 10 | model | String | Yes | Model of the gauge | `"PF6000 with ETV STR61"` |  |
-| 11 | serialNo | String | Yes | Serial number | `"AC-PF6-2231907"` |  |
-| 12 | rangeMin | Decimal128 | Yes | Range (minutes) | `NumberDecimal("50.000")` |  |
-| 13 | rangeMax | Decimal128 | Yes | Range max | `NumberDecimal("75.000")` |  |
-| 14 | rangeUnitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id: range unit of measure | `"UOM-MM"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 5 | name | String | Yes | Name of the gauge; used as its display value in other collections | `"Ultrasonic thickness gauge 1-25 mm"` |  |
+| 6 | gaugeTypeId | String | Yes | Reference to u_mes_qual_gaugeType._id | `"1283000000000001"` | Reference: u_mes_qual_gaugeType._id |
+| 7 | gaugeTypeName | String | Yes | Display value of gaugeTypeId, copied from u_mes_qual_gaugeType.name | `"Ultrasonic Thickness Gauge"` |  |
+| 8 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `null` | Reference: u_mes_mast_manufacturer._id |
+| 9 | manufacturerName | String | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `null` |  |
+| 10 | model | String | Yes | Model of the gauge | `"38DL Plus"` |  |
+| 11 | serialNo | String | Yes | Serial number | `"UT-21-0457"` |  |
+| 12 | rangeMin | Decimal128 | Yes | Range (minutes) | `NumberDecimal("1.000")` |  |
+| 13 | rangeMax | Decimal128 | Yes | Range max | `NumberDecimal("25.000")` |  |
+| 14 | rangeUnitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id: range unit of measure | `"1042000000000003"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 15 | rangeUnitOfMeasureName | String | Yes | Display value of rangeUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Millimetre"` |  |
-| 16 | resolution | Decimal128 | Yes | Resolution of the gauge | `NumberDecimal("0.001")` |  |
-| 17 | accuracy | Decimal128 | Yes | Accuracy of the gauge | `NumberDecimal("0.002")` |  |
-| 18 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"LOC-LS-ASY-01"` | Reference: u_mes_matl_storageLocation._id |
-| 19 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, Assembly 1"` |  |
-| 20 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"WC-TRQ-01"` | Reference: u_mes_mast_workCenter._id |
-| 21 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
-| 22 | ownerUserId | String | No (null allowed) | Reference to u_mes_mast_user._id: owner user | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 16 | resolution | Decimal128 | Yes | Resolution of the gauge | `NumberDecimal("0.010")` |  |
+| 17 | accuracy | Decimal128 | Yes | Accuracy of the gauge | `NumberDecimal("0.050")` |  |
+| 18 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
+| 19 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
+| 20 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 21 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 22 | ownerUserId | String | No (null allowed) | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 23 | ownerUserName | String | No (null allowed) | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 | 24 | calibrationIntervalDays | Int32 | Yes | Calibration interval (days) | `NumberInt(180)` |  |
-| 25 | calibrationSource | String | Yes | Calibration source | `"External"` | Internal; External |
-| 26 | calibrationSupplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id: calibration supplier | `"SUP-S1042"` | Reference: u_mes_mast_supplier._id |
-| 27 | calibrationSupplierName | String | No (null allowed) | Display value of calibrationSupplierId, copied from u_mes_mast_supplier.name | `"Konkan Precision Pistons Pvt. Ltd."` |  |
-| 28 | lastCalibratedAt | Date | No (null allowed) | Last calibrated date and time | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
-| 29 | nextCalibrationDueAt | Date | Yes | Next calibration due date and time | `ISODate("2026-10-27T18:30:00.000+0000")` |  |
-| 30 | lastGaugeCalibrationId | String | No (null allowed) | Reference to u_mes_qual_gaugeCalibration._id: last gauge calibration | `"GCAL-G-BG-054-2026-02"` | Reference: u_mes_qual_gaugeCalibration._id |
-| 31 | lastGaugeCalibrationName | String | No (null allowed) | Display value of lastGaugeCalibrationId, copied from u_mes_qual_gaugeCalibration.recordNo | `"G-BG-054-2026-02"` |  |
+| 25 | calibrationSource | String | Yes | Calibration source | `"Internal"` | Internal; External |
+| 26 | calibrationSupplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id: calibration supplier | `"1038000000000004"` | Reference: u_mes_mast_supplier._id |
+| 27 | calibrationSupplierName | String | No (null allowed) | Display value of calibrationSupplierId, copied from u_mes_mast_supplier.name | `"Western Aluminium Alloys Ltd."` |  |
+| 28 | lastCalibratedAt | Date | No (null allowed) | Last calibrated date and time | `ISODate("2026-05-05T18:30:00.000+0000")` |  |
+| 29 | nextCalibrationDueAt | Date | Yes | Next calibration due date and time | `ISODate("2026-11-05T18:30:00.000+0000")` |  |
+| 30 | lastGaugeCalibrationId | String | No (null allowed) | Reference to u_mes_qual_gaugeCalibration._id: last gauge calibration | `"1190000000000001"` | Reference: u_mes_qual_gaugeCalibration._id |
+| 31 | lastGaugeCalibrationName | String | No (null allowed) | Display value of lastGaugeCalibrationId, copied from u_mes_qual_gaugeCalibration.recordNo | `"GCAL-G-UT-001-2026-01"` |  |
 | 32 | usageCount | Int32 | Yes | Usage count | `NumberInt(1840)` |  |
-| 33 | purchasedAt | Date | Yes | Date and time when the record was purchased | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 33 | purchasedAt | Date | Yes | Date and time when the record was purchased | `ISODate("2019-01-03T18:30:00.000+0000")` |  |
 | 34 | isMasterGauge | Boolean | Yes | True when the record is master gauge | `false` |  |
 | 35 | blockedForUse | Boolean | Yes | True when: blocked for use | `false` |  |
 | 36 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Due For Calibration; Overdue; Under Calibration; Blocked; Retired |
@@ -85,4 +85,4 @@ u_mes_qual_characteristic, u_mes_qual_controlPlanLine, u_mes_qual_inspectionPlan
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_gauge.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_gauge.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_gauge.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_gauge.js

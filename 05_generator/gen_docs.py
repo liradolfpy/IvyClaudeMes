@@ -13,7 +13,7 @@ tags={}
 for c in cols:
     if c["parent"] is None:
         src=cat.get(c["sourceConcept"]); pre=src[2] if src else {"statusDefinition":"STD","statusTransition":"STT","enumerationValue":"ENV"}[c["entity"]]
-        c["idPattern"]=pre+"-<recordNo>"; c["recordNoMeaning"]=(src[3] if src else "definition code")
+        c["idPattern"]="16-digit numeric string"; c["recordNoMeaning"]=(src[3] if src else "definition code")
 for c in cols:
     if c["parent"]:
         pe=bycol[c["parent"]]["entity"]; suf=c["entity"][len(pe):]
@@ -21,10 +21,10 @@ for c in cols:
         base=tag; i=2
         while (c["parent"],tag) in tags: tag=base+str(i); i+=1
         tags[(c["parent"],tag)]=1
-        c["idPattern"]="<%sId>-%s<nnn>"%(pe,tag); c["recordNoMeaning"]="parent recordNo + -%s<nnn>"%tag
+        c["idPattern"]="16-digit numeric string"; c["recordNoMeaning"]="parent recordNo + -%s<nnn>"%tag
 NK=len(cols); NF=sum(len(c["fields"]) for c in cols)
 kinds=collections.Counter(c["kind"] for c in cols)
-HEAD="Model version 2.3 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
+HEAD="Model version 2.4 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
 KIND={"entity":"Entity","child":"Child (was an embedded array of objects)","relationship":"Relationship (was an array of IDs)","valueList":"Value list (was an array of values)"}
 # inventory
 s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\n| Module code | Module | Collections |\n|---|---|---|\n"
@@ -74,14 +74,14 @@ no=[c["collection"] for c in cols if c["kind"]=="entity" and not c["statusValues
 s+="\nEntity collections without a status key (append-only records): "+", ".join(no)+".\n"
 w("04_reference_data/code_lists/status_values.md",s)
 # register
-s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.3 | Date: 11 October 2026 | Database: mes | "+HEAD
+s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.4 | Date: 11 October 2026 | Database: mes | "+HEAD
 s+='''This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
 ## 1. Conventions in force
 
 - Collection name: `u_mes_<moduleCode>_<singularCollectionName>`, lower camelCase singular noun.
 - Flat documents (DATA-001): no embedded documents, no arrays. A repeated value or association is a separate collection with one document per occurrence.
-- `_id`: String, pattern in section 4. `recordNo`: String, the business identifier, present in every collection.
+- `_id`: String of 16 digits, never ObjectId and never a UUID. `recordNo`: String, the business identifier, present in every collection.
 - Reference: `<entity>Id` followed by `<entity>Name` (display value copied from the target). User references that record an action: `<action>ById` + `<action>By`.
 - Polymorphic reference: `relatedCollectionName` + `relatedEntityId` + `relatedEntityName`.
 - `siteId` + `siteName` in every collection except `u_mes_mast_site`.
@@ -91,66 +91,21 @@ s+='''This file is the single reference for collection names, identifiers and ma
 - `schemaVersion` (Int32) in every collection.
 - Types (DATA-002): Date, Int32, Int64, Decimal128 for measurements and money, Double only for geoLatitude, geoLongitude, tagValue, powerFactor, Boolean, String.
 
-## 2. Seed-data frame
+## 2. Sample-data frame
 
 | Item | Value |
 |---|---|
-| Enterprise | ENT-VBS - Varuna Brake Systems Pvt. Ltd. (fictional) |
-| Site | SITE-PN1 - Chakan Plant, Pune, Maharashtra (timezone Asia/Kolkata) |
-| OEM customer | CUS-SML - Sahyadri Motors Ltd. (fictional) |
-| Production period | Mon 28 Sep 2026 06:00 IST to Sat 10 Oct 2026 22:00 IST |
-| Non-working days | Fri 2 Oct 2026 (Gandhi Jayanti), Sun 4 Oct 2026 (weekly off) |
-| Shifts | SH-A 06:00-14:00, SH-B 14:00-22:00, SH-C 22:00-06:00 IST (UTC starts 00:30, 08:30, 16:30) |
-| Documents per collection | 10, except u_mes_prod_operation (11) and u_mes_prod_item (12) |
+| Enterprise | Varuna Brake Systems Pvt. Ltd. (fictional) |
+| Site of all transactions | Chakan Plant, Pune (timezone Asia/Kolkata) |
+| OEM customer | Sahyadri Motors Ltd. (fictional) |
+| Sample period | April to September 2026; production fortnight Tue 15 Sep to Sat 26 Sep 2026 |
+| Non-working days | Mon 14 Sep 2026 (Ganesh Chaturthi), Sun 20 Sep 2026 (weekly off) |
+| Shifts | A 06:00-14:00, B 14:00-22:00, C 22:00-06:00 IST (UTC starts 00:30, 08:30, 16:30) |
+| Documents per collection | Exactly 10 |
 
 ## 3. Master ID registry
 
-### 3.1 Items (u_mes_prod_item)
-
-| _id | recordNo | name | Type | Drawing revision |
-|---|---|---|---|---|
-| ITM-5110-10-0100 | 5110-10-0100 | Front Brake Caliper Assembly, LH | Finished good | D |
-| ITM-5110-10-0200 | 5110-10-0200 | Front Brake Caliper Assembly, RH | Finished good | D |
-| ITM-5110-20-0110 | 5110-20-0110 | Caliper Body, LH, machined and anodised | Semi-finished | C |
-| ITM-5110-20-0105 | 5110-20-0105 | Caliper Body Casting, LH, T6 | Semi-finished | B |
-| ITM-5110-30-0010 | 5110-30-0010 | Piston, dia 54 mm, steel, chrome plated | Purchased | B |
-| ITM-5110-30-0020 | 5110-30-0020 | Piston Seal, square section, EPDM | Purchased | A |
-| ITM-5110-30-0030 | 5110-30-0030 | Dust Boot, EPDM | Purchased | A |
-| ITM-5110-30-0040 | 5110-30-0040 | Bleed Screw M10 x 1.0 with cap | Purchased | A |
-| ITM-5110-30-0050 | 5110-30-0050 | Guide Pin with boot | Purchased | B |
-| ITM-5110-30-0060 | 5110-30-0060 | Brake Pad Set | Purchased | A |
-| ITM-5110-30-0070 | 5110-30-0070 | Mounting Bracket | Purchased | B |
-| ITM-RM-A356 | RM-A356 | Aluminium alloy ingot AlSi7Mg0.3 (A356) | Raw material | - |
-
-### 3.2 Operations and work centers
-
-| Step | u_mes_prod_operation._id | name | u_mes_mast_workCenter._id | u_mes_mast_line._id | u_mes_mast_area._id | Tracking grain |
-|---|---|---|---|---|---|---|
-| OP010 | OPN-OP010 | Gravity die casting | WC-GDC-01 | LN-GDC-01 | AR-FDY | Lot |
-| OP020 | OPN-OP020 | Heat treatment T6 | WC-HT-01 | LN-HT-01 | AR-HT | Lot |
-| OP030 | OPN-OP030 | CNC machining | WC-CNC-01 | LN-MC-01 | AR-MC | Lot |
-| OP040 | OPN-OP040 | Washing | WC-WSH-01 | LN-WSH-01 | AR-SF | Lot |
-| OP050 | OPN-OP050 | Anodising | WC-ANO-01 | LN-ANO-01 | AR-SF | Lot |
-| OP060 | OPN-OP060 | Piston and seal assembly | WC-ASY-01 | LN-ASY-01 | AR-ASY | Unit |
-| OP070 | OPN-OP070 | Bleed screw torque | WC-TRQ-01 | LN-ASY-01 | AR-ASY | Unit |
-| OP080 | OPN-OP080 | Pressure leak test | WC-LKT-01 | LN-ASY-01 | AR-ASY | Unit |
-| OP090 | OPN-OP090 | Laser marking (serial and 2D code) | WC-LSR-01 | LN-ASY-01 | AR-ASY | Unit |
-| OP100 | OPN-OP100 | Final inspection | WC-FIP-01 | LN-FIP-01 | AR-FIP | Unit |
-| OP110 | OPN-OP110 | Packing | WC-FIP-01 | LN-PKG-01 | AR-FIP | Container |
-
-Dispatch is recorded in u_mes_matl_shipment from area AR-WH; it is not a routing operation.
-
-### 3.3 Areas and lines
-
-Areas (u_mes_mast_area): AR-FDY Foundry, AR-HT Heat treatment, AR-MC Machining, AR-SF Surface treatment (washing and anodising), AR-ASY Assembly and test, AR-FIP Final inspection and packing, AR-WH Stores and dispatch, AR-QL Quality laboratory, AR-TR Tool room, AR-UT Utilities.
-
-Lines (u_mes_mast_line): LN-GDC-01, LN-GDC-02, LN-HT-01, LN-MC-01, LN-MC-02, LN-WSH-01, LN-ANO-01, LN-ASY-01, LN-FIP-01, LN-PKG-01.
-
-System account for automated writes: USR-SYSTEM, display name "MES System" (exists in u_mes_mast_user).
-
-### 3.4 IDs still to be assigned
-
-Equipment, users, roles, suppliers, remaining customers, gauges, tools, characteristics, defect codes and reason codes are assigned when their collection specification is written and are added here at that point.
+The registry of every _id, business number and display value in the sample data is 04_reference_data/sample_data_registry.md. It is generated together with the sample documents, so it always matches them. System IDs are 16-digit numeric strings: the first four digits are the collection number (1001 onwards, in inventory order), the last twelve are a running number.
 
 ## 4. Collection register
 
@@ -169,6 +124,7 @@ s+='''
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became %d collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.4 | 12 Oct 2026 | Sample documents: exactly 10 per collection in 03_design/<module>/samples; system IDs changed to 16-digit numeric strings; sample period moved to April-September 2026; master ID registry replaced by the generated 04_reference_data/sample_data_registry.md; child, relationship and value-list collections use recordNo as display value |
 | 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (Environment Health and Safety). Module folders renamed |
 | 2.2 | 11 Oct 2026 | Master data review: 41 master collections added (department, designation, employmentType and others), 67 text keys converted to master references, fixed enumerations mapped in u_mes_syst_enumerationValue; see 08_validation/reports/master_data_review.md |
 | 2.1 | 11 Oct 2026 | Collection specifications written for all modules: field dictionary, validator, indexes and sample per collection under 03_design; check report in 08_validation/reports/specification_check.md |

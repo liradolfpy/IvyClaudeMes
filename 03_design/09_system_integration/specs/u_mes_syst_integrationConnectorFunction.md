@@ -7,7 +7,7 @@
 | Kind | Child |
 | Data class | Master |
 | Parent collection | u_mes_syst_integrationConnector |
-| _id pattern | <integrationConnectorId>-F<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 13 (12 required, 1 may be null) |
 
@@ -22,15 +22,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <integrationConnectorId>-F<nnn> | `"ICN-ERP-PRD-F001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"ERP-PRD-F001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1231000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"ERP-PRD-F01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | integrationConnectorId | String | Yes | Reference to u_mes_syst_integrationConnector._id: the parent document this one belongs to | `"ICN-ERP-PRD"` | Reference: u_mes_syst_integrationConnector._id |
+| 5 | integrationConnectorId | String | Yes | Reference to u_mes_syst_integrationConnector._id: the parent document this one belongs to | `"1230000000000001"` | Reference: u_mes_syst_integrationConnector._id |
 | 6 | integrationConnectorName | String | Yes | Display value of integrationConnectorId, copied from u_mes_syst_integrationConnector.name | `"ERP production interface"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 8 | functionName | String | Yes | Function name | `"postOperationConfirmation"` |  |
-| 9 | direction | String | Yes | Direction of the integration connector function | `"Inbound"` | Inbound; Outbound |
+| 9 | direction | String | Yes | Direction of the integration connector function | `"Outbound"` | Inbound; Outbound |
 | 10 | messageType | String | Yes | Message type | `"Production Order Download"` | Production Order Download; Operation Confirmation; Goods Movement; Goods Receipt; Shipment Advice; Material Master; Quality Notification |
 | 11 | endpointPath | String | Yes | Endpoint path | `"/v1/confirmations"` |  |
 | 12 | scheduleExpression | String | No (null allowed) | Cron expression for scheduled functions | `"*/5 * * * *"` |  |
@@ -50,4 +50,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/09_system_integration/validators/u_mes_syst_integrationConnectorFunction.json
 - Indexes: 03_design/09_system_integration/indexes/u_mes_syst_integrationConnectorFunction.js
-- Sample document: 03_design/09_system_integration/samples/u_mes_syst_integrationConnectorFunction.js
+- Sample documents (10): 03_design/09_system_integration/samples/u_mes_syst_integrationConnectorFunction.js

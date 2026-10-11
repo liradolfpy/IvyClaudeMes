@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | VHM-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 13 (10 required, 3 may be null) |
 | Estimated volume per year | 10-100 |
@@ -23,13 +23,13 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: VHM-<recordNo> | `"VHM-SM-X42"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1276000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SM-X42"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the vehicle model; used as its display value in other collections | `"Sahyadri X42"` |  |
-| 6 | description | String | Yes | Description of the vehicle model | `"Sahyadri X42"` |  |
-| 7 | customerId | String | No (null allowed) | Reference to u_mes_mast_customer._id | `"CUS-SML"` | Reference: u_mes_mast_customer._id |
+| 5 | name | String | Yes | Name of the vehicle model; used as its display value in other collections | `"Sahyadri X42 Hatchback"` |  |
+| 6 | description | String | Yes | Description of the vehicle model | `"Sahyadri X42 Hatchback (SM-X42)"` |  |
+| 7 | customerId | String | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 8 | customerName | String | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 9 | modelYear | Int32 | Yes | Model year | `NumberInt(2026)` |  |
 | 10 | platformCode | String | No (null allowed) | Platform code | `"X4"` |  |
@@ -57,4 +57,4 @@ u_mes_prod_productVariant, u_mes_qual_customerComplaint.
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_vehicleModel.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_vehicleModel.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_vehicleModel.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_vehicleModel.js

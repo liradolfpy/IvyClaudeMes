@@ -1,6 +1,6 @@
 # Collection inventory
 
-Model version 2.3 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Model version 2.4 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
 
 Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.
 
@@ -24,7 +24,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
 | 1 | u_mes_mast_enterprise | entity | master | - | Legal entities of the group (ISA-95 Enterprise level); tax and registration data | name |
-| 2 | u_mes_mast_enterpriseContact | child | master | u_mes_mast_enterprise | One document per contact of a enterprise | name |
+| 2 | u_mes_mast_enterpriseContact | child | master | u_mes_mast_enterprise | One document per contact of a enterprise | recordNo |
 | 3 | u_mes_mast_site | entity | master | - | Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate | name |
 | 4 | u_mes_mast_siteCertificate | child | master | u_mes_mast_site | One document per certificate of a site | recordNo |
 | 5 | u_mes_mast_area | entity | master | - | Production and support areas inside a site (ISA-95 Area) | name |
@@ -38,13 +38,13 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 13 | u_mes_mast_equipment | entity | master | - | Machines, furnaces, testers (ISA-95 Unit / Equipment); hierarchy, make, model, capability | name |
 | 14 | u_mes_mast_equipmentIotDevice | relationship | master | u_mes_mast_equipment | Links one equipment to one iot device (one document per link) | recordNo |
 | 15 | u_mes_mast_shift | entity | master | - | Shift patterns with start/end and breaks | name |
-| 16 | u_mes_mast_shiftBreak | child | master | u_mes_mast_shift | One document per break of a shift | name |
+| 16 | u_mes_mast_shiftBreak | child | master | u_mes_mast_shift | One document per break of a shift | recordNo |
 | 17 | u_mes_mast_shiftWorkingDay | valueList | master | u_mes_mast_shift | One document per working day value of a shift | recordNo |
 | 18 | u_mes_mast_workCalendar | entity | master | - | Working calendars with holidays and exception days per site / line | name |
 | 19 | u_mes_mast_workCalendarLine | relationship | master | u_mes_mast_workCalendar | Links one workCalendar to one line (one document per link) | recordNo |
 | 20 | u_mes_mast_workCalendarShift | relationship | master | u_mes_mast_workCalendar | Links one workCalendar to one shift (one document per link) | recordNo |
 | 21 | u_mes_mast_workCalendarWeeklyOffDay | valueList | master | u_mes_mast_workCalendar | One document per weekly off day value of a workCalendar | recordNo |
-| 22 | u_mes_mast_workCalendarException | child | master | u_mes_mast_workCalendar | One document per exception of a workCalendar | description |
+| 22 | u_mes_mast_workCalendarException | child | master | u_mes_mast_workCalendar | One document per exception of a workCalendar | recordNo |
 | 23 | u_mes_mast_workCalendarExceptionShift | relationship | master | u_mes_mast_workCalendarException | Links one workCalendarException to one shift (one document per link) | recordNo |
 | 24 | u_mes_mast_shiftRoster | entity | transaction | - | Crew assignment per production day, shift and line (who is planned where) | recordNo |
 | 25 | u_mes_mast_shiftRosterAssignment | child | transaction | u_mes_mast_shiftRoster | One document per assignment of a shiftRoster | recordNo |
@@ -55,13 +55,13 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 30 | u_mes_mast_userRole | relationship | master | u_mes_mast_user | Links one user to one role (one document per link) | recordNo |
 | 31 | u_mes_mast_skill | entity | master | - | Skill definitions required by operations (e.g. leak-test operation, CMM programming) | name |
 | 32 | u_mes_mast_skillOperation | relationship | master | u_mes_mast_skill | Links one skill to one operation (one document per link) | recordNo |
-| 33 | u_mes_mast_skillLevelScale | child | master | u_mes_mast_skill | One document per level scale of a skill | description |
+| 33 | u_mes_mast_skillLevelScale | child | master | u_mes_mast_skill | One document per level scale of a skill | recordNo |
 | 34 | u_mes_mast_skillCertification | entity | transaction | - | Skills-matrix entries: user x skill, level, valid-from/to, assessor; used for operator lock-out | recordNo |
 | 35 | u_mes_mast_customer | entity | master | - | OEMs and aftermarket customers; ship-to addresses, label and ASN requirements | name |
-| 36 | u_mes_mast_customerShipTo | child | master | u_mes_mast_customer | One document per ship to of a customer | name |
-| 37 | u_mes_mast_customerContact | child | master | u_mes_mast_customer | One document per contact of a customer | name |
+| 36 | u_mes_mast_customerShipTo | child | master | u_mes_mast_customer | One document per ship to of a customer | recordNo |
+| 37 | u_mes_mast_customerContact | child | master | u_mes_mast_customer | One document per contact of a customer | recordNo |
 | 38 | u_mes_mast_supplier | entity | master | - | Material, tooling and service suppliers; approval status, certificates, PPM rating | name |
-| 39 | u_mes_mast_supplierContact | child | master | u_mes_mast_supplier | One document per contact of a supplier | name |
+| 39 | u_mes_mast_supplierContact | child | master | u_mes_mast_supplier | One document per contact of a supplier | recordNo |
 | 40 | u_mes_mast_supplierCertificate | child | master | u_mes_mast_supplier | One document per certificate of a supplier | recordNo |
 | 41 | u_mes_mast_supplierSuppliedItem | relationship | master | u_mes_mast_supplier | Links one supplier to one supplied item (one document per link) | recordNo |
 | 42 | u_mes_mast_unitOfMeasure | entity | master | - | Units and conversion factors (EA, kg, N.m, bar, mm, um, kWh) | name |
@@ -85,7 +85,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
 | 1 | u_mes_prod_item | entity | master | - | Parts: finished caliper, semi-finished body, purchased components, raw material, consumables; drawing revision | description |
-| 2 | u_mes_prod_itemRevision | child | master | u_mes_prod_item | One document per revision of a item | description |
+| 2 | u_mes_prod_itemRevision | child | master | u_mes_prod_item | One document per revision of a item | recordNo |
 | 3 | u_mes_prod_itemCustomerPart | child | master | u_mes_prod_item | One document per customer part of a item | recordNo |
 | 4 | u_mes_prod_productVariant | entity | master | - | Product variants (LH/RH, piston diameter, pad compound, market) that drive BOM, instruction and label selection | name |
 | 5 | u_mes_prod_billOfMaterial | entity | master | - | Multi-level bills of material per item revision with effectivity | recordNo |
@@ -104,10 +104,10 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 18 | u_mes_prod_billOfProcessStepTool | relationship | master | u_mes_prod_billOfProcessStep | Links one billOfProcessStep to one tool (one document per link) | recordNo |
 | 19 | u_mes_prod_billOfProcessStepRequiredSkill | relationship | master | u_mes_prod_billOfProcessStep | Links one billOfProcessStep to one required skill (one document per link) | recordNo |
 | 20 | u_mes_prod_billOfProcessStepConsumedComponent | child | master | u_mes_prod_billOfProcessStep | One document per consumed component of a billOfProcessStep | recordNo |
-| 21 | u_mes_prod_billOfProcessStepInterlock | child | master | u_mes_prod_billOfProcessStep | One document per interlock of a billOfProcessStep | description |
-| 22 | u_mes_prod_billOfProcessStepProcessParameter | child | master | u_mes_prod_billOfProcessStep | One document per process parameter of a billOfProcessStep | name |
+| 21 | u_mes_prod_billOfProcessStepInterlock | child | master | u_mes_prod_billOfProcessStep | One document per interlock of a billOfProcessStep | recordNo |
+| 22 | u_mes_prod_billOfProcessStepProcessParameter | child | master | u_mes_prod_billOfProcessStep | One document per process parameter of a billOfProcessStep | recordNo |
 | 23 | u_mes_prod_workInstruction | entity | master | - | Versioned visual work instructions with steps, media, cautions, variant applicability, required checks | title |
-| 24 | u_mes_prod_workInstructionStep | child | master | u_mes_prod_workInstruction | One document per step of a workInstruction | title |
+| 24 | u_mes_prod_workInstructionStep | child | master | u_mes_prod_workInstruction | One document per step of a workInstruction | recordNo |
 | 25 | u_mes_prod_workInstructionStepMediaControlledDocument | relationship | master | u_mes_prod_workInstructionStep | Links one workInstructionStep to one media controlled document (one document per link) | recordNo |
 | 26 | u_mes_prod_workInstructionStepProductVariant | relationship | master | u_mes_prod_workInstructionStep | Links one workInstructionStep to one product variant (one document per link) | recordNo |
 | 27 | u_mes_prod_workInstructionStepTool | relationship | master | u_mes_prod_workInstructionStep | Links one workInstructionStep to one tool (one document per link) | recordNo |
@@ -115,8 +115,8 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 29 | u_mes_prod_workInstructionPpeItem | relationship | master | u_mes_prod_workInstruction | Links one workInstruction to one ppe item (one document per link) | recordNo |
 | 30 | u_mes_prod_workInstructionKeyPoint | valueList | master | u_mes_prod_workInstruction | One document per key point value of a workInstruction | recordNo |
 | 31 | u_mes_prod_recipe | entity | master | - | Machine parameter sets with set-points and limits (die temperature, furnace profile, CNC program, torque program, leak-test program) | name |
-| 32 | u_mes_prod_recipeParameter | child | master | u_mes_prod_recipe | One document per parameter of a recipe | name |
-| 33 | u_mes_prod_recipeStage | child | master | u_mes_prod_recipe | One document per stage of a recipe | name |
+| 32 | u_mes_prod_recipeParameter | child | master | u_mes_prod_recipe | One document per parameter of a recipe | recordNo |
+| 33 | u_mes_prod_recipeStage | child | master | u_mes_prod_recipe | One document per stage of a recipe | recordNo |
 | 34 | u_mes_prod_engineeringChange | entity | transaction | - | Engineering change notices with affected objects, approvals and effectivity (cut-in serial / date) | title |
 | 35 | u_mes_prod_engineeringChangeAffectedItem | child | transaction | u_mes_prod_engineeringChange | One document per affected item of a engineeringChange | recordNo |
 | 36 | u_mes_prod_engineeringChangeAffectedObject | child | transaction | u_mes_prod_engineeringChange | One document per affected object of a engineeringChange | recordNo |
@@ -156,7 +156,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 20 | u_mes_plan_containerLot | relationship | transaction | u_mes_plan_container | Links one container to one lot (one document per link) | recordNo |
 | 21 | u_mes_plan_labourBooking | entity | transaction | - | Clock-on / clock-off of people against orders, operations and indirect activities | recordNo |
 | 22 | u_mes_plan_changeover | entity | transaction | - | Changeover from one item / variant to another: planned vs actual duration, checklist, first-off approval | recordNo |
-| 23 | u_mes_plan_changeoverStep | child | transaction | u_mes_plan_changeover | One document per step of a changeover | description |
+| 23 | u_mes_plan_changeoverStep | child | transaction | u_mes_plan_changeover | One document per step of a changeover | recordNo |
 | 24 | u_mes_plan_changeoverRemovedTool | relationship | transaction | u_mes_plan_changeover | Links one changeover to one removed tool (one document per link) | recordNo |
 | 25 | u_mes_plan_changeoverInstalledTool | relationship | transaction | u_mes_plan_changeover | Links one changeover to one installed tool (one document per link) | recordNo |
 | 26 | u_mes_plan_changeoverPerformedByUser | relationship | transaction | u_mes_plan_changeover | Links one changeover to one performed by user (one document per link) | recordNo |
@@ -164,7 +164,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 28 | u_mes_plan_shiftHandoverProductionOrder | relationship | transaction | u_mes_plan_shiftHandover | Links one shiftHandover to one production order (one document per link) | recordNo |
 | 29 | u_mes_plan_shiftHandoverDowntimeEvent | relationship | transaction | u_mes_plan_shiftHandover | Links one shiftHandover to one downtime event (one document per link) | recordNo |
 | 30 | u_mes_plan_shiftHandoverNonconformance | relationship | transaction | u_mes_plan_shiftHandover | Links one shiftHandover to one nonconformance (one document per link) | recordNo |
-| 31 | u_mes_plan_shiftHandoverOpenItem | child | transaction | u_mes_plan_shiftHandover | One document per open item of a shiftHandover | description |
+| 31 | u_mes_plan_shiftHandoverOpenItem | child | transaction | u_mes_plan_shiftHandover | One document per open item of a shiftHandover | recordNo |
 | 32 | u_mes_plan_andonEvent | entity | transaction | - | Help calls from stations (quality, material, maintenance, safety) with response and escalation times | description |
 | 33 | u_mes_plan_andonEventEscalation | child | transaction | u_mes_plan_andonEvent | One document per escalation of a andonEvent | recordNo |
 | 34 | u_mes_plan_indirectActivity | entity | master | - | Indirect labour activities (cleaning, training, waiting for material ...) | name |
@@ -233,12 +233,12 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 17 | u_mes_qual_spcSample | entity | transaction | - | Subgroups with readings, mean, range, rule violations and reaction | recordNo |
 | 18 | u_mes_qual_spcSampleReading | valueList | transaction | u_mes_qual_spcSample | One document per reading value of a spcSample | recordNo |
 | 19 | u_mes_qual_spcSampleInspectionResult | relationship | transaction | u_mes_qual_spcSample | Links one spcSample to one inspection result (one document per link) | recordNo |
-| 20 | u_mes_qual_spcSampleViolation | child | transaction | u_mes_qual_spcSample | One document per violation of a spcSample | description |
+| 20 | u_mes_qual_spcSampleViolation | child | transaction | u_mes_qual_spcSample | One document per violation of a spcSample | recordNo |
 | 21 | u_mes_qual_defectCode | entity | master | - | Defect / NC code catalogue with group, default disposition routing and severity | name |
 | 22 | u_mes_qual_defectCodeApplicableOperation | relationship | master | u_mes_qual_defectCode | Links one defectCode to one applicable operation (one document per link) | recordNo |
 | 23 | u_mes_qual_nonconformance | entity | transaction | - | Nonconformance reports: what, where, quantity, containment, disposition (use-as-is, rework, scrap, return) | title |
 | 24 | u_mes_qual_nonconformanceAffectedObject | child | transaction | u_mes_qual_nonconformance | One document per affected object of a nonconformance | recordNo |
-| 25 | u_mes_qual_nonconformanceContainmentAction | child | transaction | u_mes_qual_nonconformance | One document per containment action of a nonconformance | description |
+| 25 | u_mes_qual_nonconformanceContainmentAction | child | transaction | u_mes_qual_nonconformance | One document per containment action of a nonconformance | recordNo |
 | 26 | u_mes_qual_nonconformanceInspectionResult | relationship | transaction | u_mes_qual_nonconformance | Links one nonconformance to one inspection result (one document per link) | recordNo |
 | 27 | u_mes_qual_nonconformanceReworkOrder | relationship | transaction | u_mes_qual_nonconformance | Links one nonconformance to one rework order (one document per link) | recordNo |
 | 28 | u_mes_qual_nonconformanceScrapRecord | relationship | transaction | u_mes_qual_nonconformance | Links one nonconformance to one scrap record (one document per link) | recordNo |
@@ -246,7 +246,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 30 | u_mes_qual_nonconformanceMrbUser | relationship | transaction | u_mes_qual_nonconformance | Links one nonconformance to one mrb user (one document per link) | recordNo |
 | 31 | u_mes_qual_reworkOrder | entity | transaction | - | Rework instruction and execution on the rework routing with re-inspection result | recordNo |
 | 32 | u_mes_qual_reworkOrderWipUnit | relationship | transaction | u_mes_qual_reworkOrder | Links one reworkOrder to one wip unit (one document per link) | recordNo |
-| 33 | u_mes_qual_reworkOrderStep | child | transaction | u_mes_qual_reworkOrder | One document per step of a reworkOrder | description |
+| 33 | u_mes_qual_reworkOrderStep | child | transaction | u_mes_qual_reworkOrder | One document per step of a reworkOrder | recordNo |
 | 34 | u_mes_qual_scrapRecord | entity | transaction | - | Scrap declaration with quantity, weight, cost, defect code and operation of origin | recordNo |
 | 35 | u_mes_qual_qualityHold | entity | transaction | - | Hold / quarantine on units, lots, containers or locations with reason and release decision | recordNo |
 | 36 | u_mes_qual_qualityHoldHeldObject | child | transaction | u_mes_qual_qualityHold | One document per held object of a qualityHold | recordNo |
@@ -255,15 +255,15 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 39 | u_mes_qual_capa | entity | transaction | - | Corrective and preventive actions in 8D structure (D1-D8) with team, root cause, actions, verification | title |
 | 40 | u_mes_qual_capaNonconformance | relationship | transaction | u_mes_qual_capa | Links one capa to one nonconformance (one document per link) | recordNo |
 | 41 | u_mes_qual_capaTeamMember | child | transaction | u_mes_qual_capa | One document per team member of a capa | recordNo |
-| 42 | u_mes_qual_capaContainmentAction | child | transaction | u_mes_qual_capa | One document per containment action of a capa | description |
-| 43 | u_mes_qual_capaCorrectiveAction | child | transaction | u_mes_qual_capa | One document per corrective action of a capa | description |
-| 44 | u_mes_qual_capaImplementationAction | child | transaction | u_mes_qual_capa | One document per implementation action of a capa | description |
+| 42 | u_mes_qual_capaContainmentAction | child | transaction | u_mes_qual_capa | One document per containment action of a capa | recordNo |
+| 43 | u_mes_qual_capaCorrectiveAction | child | transaction | u_mes_qual_capa | One document per corrective action of a capa | recordNo |
+| 44 | u_mes_qual_capaImplementationAction | child | transaction | u_mes_qual_capa | One document per implementation action of a capa | recordNo |
 | 45 | u_mes_qual_capaControlledDocument | relationship | transaction | u_mes_qual_capa | Links one capa to one controlled document (one document per link) | recordNo |
 | 46 | u_mes_qual_pfmea | entity | master | - | Process FMEA per item / process: failure modes, effects, causes, S-O-D, action priority | title |
 | 47 | u_mes_qual_pfmeaCoreTeamUser | relationship | master | u_mes_qual_pfmea | Links one pfmea to one core team user (one document per link) | recordNo |
 | 48 | u_mes_qual_pfmeaLine | child | master | u_mes_qual_pfmea | One document per line of a pfmea | recordNo |
 | 49 | u_mes_qual_ppapSubmission | entity | transaction | - | PPAP package: level, 18 elements with status, PSW, customer decision | recordNo |
-| 50 | u_mes_qual_ppapSubmissionElement | child | transaction | u_mes_qual_ppapSubmission | One document per element of a ppapSubmission | name |
+| 50 | u_mes_qual_ppapSubmissionElement | child | transaction | u_mes_qual_ppapSubmission | One document per element of a ppapSubmission | recordNo |
 | 51 | u_mes_qual_ppapSubmissionMsaStudy | relationship | transaction | u_mes_qual_ppapSubmission | Links one ppapSubmission to one msa study (one document per link) | recordNo |
 | 52 | u_mes_qual_gauge | entity | master | - | Gauges and measuring instruments: type, range, resolution, calibration interval and due date, status | name |
 | 53 | u_mes_qual_gaugeCalibration | entity | transaction | - | Calibration events: as-found / as-left readings, standard used, result, certificate | recordNo |
@@ -273,7 +273,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 57 | u_mes_qual_msaStudyTrial | child | transaction | u_mes_qual_msaStudy | One document per trial of a msaStudy | recordNo |
 | 58 | u_mes_qual_audit | entity | transaction | - | Layered process, process (VDA 6.3), product and system audits with findings | title |
 | 59 | u_mes_qual_auditAuditorUser | relationship | transaction | u_mes_qual_audit | Links one audit to one auditor user (one document per link) | recordNo |
-| 60 | u_mes_qual_auditFinding | child | transaction | u_mes_qual_audit | One document per finding of a audit | description |
+| 60 | u_mes_qual_auditFinding | child | transaction | u_mes_qual_audit | One document per finding of a audit | recordNo |
 | 61 | u_mes_qual_customerComplaint | entity | transaction | - | Customer complaints / line rejections / warranty returns with affected serials and PPM impact | description |
 | 62 | u_mes_qual_customerComplaintSerialNumber | relationship | transaction | u_mes_qual_customerComplaint | Links one customerComplaint to one serial number (one document per link) | recordNo |
 | 63 | u_mes_qual_customerComplaintShipment | relationship | transaction | u_mes_qual_customerComplaint | Links one customerComplaint to one shipment (one document per link) | recordNo |
@@ -311,7 +311,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
 | 1 | u_mes_maint_maintenancePlan | entity | master | - | Preventive / condition-based plans per equipment or tool with tasks, interval and next due | name |
-| 2 | u_mes_maint_maintenancePlanTask | child | master | u_mes_maint_maintenancePlan | One document per task of a maintenancePlan | description |
+| 2 | u_mes_maint_maintenancePlanTask | child | master | u_mes_maint_maintenancePlan | One document per task of a maintenancePlan | recordNo |
 | 3 | u_mes_maint_maintenancePlanRequiredSkill | relationship | master | u_mes_maint_maintenancePlan | Links one maintenancePlan to one required skill (one document per link) | recordNo |
 | 4 | u_mes_maint_maintenancePlanRequiredSparePart | child | master | u_mes_maint_maintenancePlan | One document per required spare part of a maintenancePlan | recordNo |
 | 5 | u_mes_maint_maintenanceWorkOrder | entity | transaction | - | Breakdown, preventive and improvement work orders with labour, parts used, root cause | title |
@@ -336,7 +336,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 5 | u_mes_syst_operatorApp | entity | master | - | Composable operator screen definitions (versioned) bound to work centres and operations | name |
 | 6 | u_mes_syst_operatorAppWorkCenter | relationship | master | u_mes_syst_operatorApp | Links one operatorApp to one work center (one document per link) | recordNo |
 | 7 | u_mes_syst_operatorAppOperation | relationship | master | u_mes_syst_operatorApp | Links one operatorApp to one operation (one document per link) | recordNo |
-| 8 | u_mes_syst_operatorAppStep | child | master | u_mes_syst_operatorApp | One document per step of a operatorApp | name |
+| 8 | u_mes_syst_operatorAppStep | child | master | u_mes_syst_operatorApp | One document per step of a operatorApp | recordNo |
 | 9 | u_mes_syst_operatorAppStepTrigger | child | master | u_mes_syst_operatorAppStep | One document per trigger of a operatorAppStep | recordNo |
 | 10 | u_mes_syst_operatorAppDeviceBinding | child | master | u_mes_syst_operatorApp | One document per device binding of a operatorApp | recordNo |
 | 11 | u_mes_syst_operatorAppLanguage | relationship | master | u_mes_syst_operatorApp | Links one operatorApp to one language (one document per link) | recordNo |
@@ -363,7 +363,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 |---|---|---|---|---|---|---|
 | 1 | u_mes_ehs_safetyIncident | entity | transaction | - | Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions | title |
 | 2 | u_mes_ehs_safetyIncidentWitnessUser | relationship | transaction | u_mes_ehs_safetyIncident | Links one safetyIncident to one witness user (one document per link) | recordNo |
-| 3 | u_mes_ehs_safetyIncidentAction | child | transaction | u_mes_ehs_safetyIncident | One document per action of a safetyIncident | description |
+| 3 | u_mes_ehs_safetyIncidentAction | child | transaction | u_mes_ehs_safetyIncident | One document per action of a safetyIncident | recordNo |
 | 4 | u_mes_ehs_incidentType | entity | master | - | Types of safety incident | name |
 | 5 | u_mes_ehs_bodyPart | entity | master | - | Body parts for injury records | name |
 | 6 | u_mes_ehs_injuryType | entity | master | - | Types of injury | name |

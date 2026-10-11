@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_syst_erpMessage
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: MSG-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -53,7 +53,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: MSG-<recordNo>
 
 ## u_mes_syst_integrationConnector
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ICN-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -82,7 +82,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ICN-<recordNo>
 
 ## u_mes_syst_integrationConnectorFunction
 
-Kind: child | Data class: master | Parent: u_mes_syst_integrationConnector | _id pattern: <integrationConnectorId>-F<nnn>
+Kind: child | Data class: master | Parent: u_mes_syst_integrationConnector | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -102,7 +102,7 @@ Kind: child | Data class: master | Parent: u_mes_syst_integrationConnector | _id
 
 ## u_mes_syst_iotDevice
 
-Kind: entity | Data class: master | Parent: - | _id pattern: IOT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -140,7 +140,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: IOT-<recordNo>
 
 ## u_mes_syst_operatorApp
 
-Kind: entity | Data class: master | Parent: - | _id pattern: APP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -164,7 +164,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: APP-<recordNo>
 
 ## u_mes_syst_operatorAppWorkCenter
 
-Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: <operatorAppId>-WC<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -181,7 +181,7 @@ Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id p
 
 ## u_mes_syst_operatorAppOperation
 
-Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: <operatorAppId>-O<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -198,7 +198,7 @@ Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id p
 
 ## u_mes_syst_operatorAppStep
 
-Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: <operatorAppId>-S<nnn>
+Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -220,7 +220,7 @@ Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern:
 
 ## u_mes_syst_operatorAppStepTrigger
 
-Kind: child | Data class: master | Parent: u_mes_syst_operatorAppStep | _id pattern: <operatorAppStepId>-T<nnn>
+Kind: child | Data class: master | Parent: u_mes_syst_operatorAppStep | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -238,7 +238,7 @@ Kind: child | Data class: master | Parent: u_mes_syst_operatorAppStep | _id patt
 
 ## u_mes_syst_operatorAppDeviceBinding
 
-Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: <operatorAppId>-DB<nnn>
+Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -256,7 +256,7 @@ Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern:
 
 ## u_mes_syst_operatorAppLanguage
 
-Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: <operatorAppId>-L<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -273,7 +273,7 @@ Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id p
 
 ## u_mes_syst_businessEvent
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: EVT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -312,7 +312,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: EVT-<recordNo>
 
 ## u_mes_syst_auditTrail
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: ADT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -346,7 +346,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ADT-<recordNo>
 
 ## u_mes_syst_auditTrailChange
 
-Kind: child | Data class: transaction | Parent: u_mes_syst_auditTrail | _id pattern: <auditTrailId>-C<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_syst_auditTrail | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -370,7 +370,7 @@ Kind: child | Data class: transaction | Parent: u_mes_syst_auditTrail | _id patt
 
 ## u_mes_syst_electronicSignature
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SIG-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -406,7 +406,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SIG-<recordNo>
 
 ## u_mes_syst_notification
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: NTF-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -445,7 +445,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: NTF-<recordNo>
 
 ## u_mes_syst_notificationRecipient
 
-Kind: child | Data class: transaction | Parent: u_mes_syst_notification | _id pattern: <notificationId>-R<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_syst_notification | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -474,7 +474,7 @@ Kind: child | Data class: transaction | Parent: u_mes_syst_notification | _id pa
 
 ## u_mes_syst_controlledDocument
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: DOC-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -519,7 +519,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: DOC-<recordNo>
 
 ## u_mes_syst_controlledDocumentTag
 
-Kind: valueList | Data class: transaction | Parent: u_mes_syst_controlledDocument | _id pattern: <controlledDocumentId>-T<nnn>
+Kind: valueList | Data class: transaction | Parent: u_mes_syst_controlledDocument | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -541,7 +541,7 @@ Kind: valueList | Data class: transaction | Parent: u_mes_syst_controlledDocumen
 
 ## u_mes_syst_numberRange
 
-Kind: entity | Data class: master | Parent: - | _id pattern: NR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -572,7 +572,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: NR-<recordNo>
 
 ## u_mes_syst_systemConfiguration
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CFG-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -597,7 +597,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CFG-<recordNo>
 
 ## u_mes_syst_documentType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DCT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -615,7 +615,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DCT-<recordNo>
 
 ## u_mes_syst_deviceType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DVT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -631,7 +631,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DVT-<recordNo>
 
 ## u_mes_syst_notificationType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: NTT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -647,7 +647,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: NTT-<recordNo>
 
 ## u_mes_syst_statusDefinition
 
-Kind: entity | Data class: master | Parent: - | _id pattern: STD-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -669,7 +669,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: STD-<recordNo>
 
 ## u_mes_syst_enumerationValue
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ENV-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -689,7 +689,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ENV-<recordNo>
 
 ## u_mes_syst_statusTransition
 
-Kind: entity | Data class: master | Parent: - | _id pattern: STT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

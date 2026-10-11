@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Transaction |
 | Parent collection | u_mes_qual_customerComplaint |
-| _id pattern | <customerComplaintId>-S<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 16 (16 required, 0 may be null) |
 
@@ -22,21 +22,21 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <customerComplaintId>-S<nnn> | `"CMP-2026-0004-S001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"2026-0004-S001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1200000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"CMP-2026-0004-S01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | customerComplaintId | String | Yes | Reference to u_mes_qual_customerComplaint._id: the parent document this one belongs to | `"CMP-2026-0004"` | Reference: u_mes_qual_customerComplaint._id |
-| 6 | customerComplaintName | String | Yes | Display value of customerComplaintId, copied from u_mes_qual_customerComplaint.description | `"Bleed screw cap missing on three calipers at customer line"` |  |
+| 5 | customerComplaintId | String | Yes | Reference to u_mes_qual_customerComplaint._id: the parent document this one belongs to | `"1198000000000001"` | Reference: u_mes_qual_customerComplaint._id |
+| 6 | customerComplaintName | String | Yes | Display value of customerComplaintId, copied from u_mes_qual_customerComplaint.description | `"Porosity opened at customer machining of mounting face"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | shipmentId | String | Yes | Reference to u_mes_matl_shipment._id | `"SHP-2026-000377"` | Reference: u_mes_matl_shipment._id |
-| 9 | shipmentName | String | Yes | Display value of shipmentId, copied from u_mes_matl_shipment.recordNo | `"2026-000377"` |  |
+| 8 | shipmentId | String | Yes | Reference to u_mes_matl_shipment._id | `"1127000000000001"` | Reference: u_mes_matl_shipment._id |
+| 9 | shipmentName | String | Yes | Display value of shipmentId, copied from u_mes_matl_shipment.recordNo | `"SHP-2026-000377"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 11 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 12 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 11 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:31:20.000+0000")` |  |
+| 12 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 13 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 14 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 15 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 14 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:31:20.000+0000")` |  |
+| 15 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 16 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Indexes
@@ -54,4 +54,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_customerComplaintShipment.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_customerComplaintShipment.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_customerComplaintShipment.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_customerComplaintShipment.js

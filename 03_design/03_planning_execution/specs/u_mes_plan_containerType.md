@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | CTT-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 14 (14 required, 0 may be null) |
 | Estimated volume per year | 10-50 |
@@ -23,12 +23,12 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: CTT-<recordNo> | `"CTT-RB-6040"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1278000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"RB-6040"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the container type; used as its display value in other collections | `"Returnable Bin 600 x 400"` |  |
-| 6 | description | String | Yes | Description of the container type | `"Returnable Bin 600 x 400"` |  |
+| 6 | description | String | Yes | Description of the container type | `"Returnable Bin 600 x 400 (RB-6040)"` |  |
 | 7 | lengthMm | Decimal128 | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
 | 8 | widthMm | Decimal128 | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
 | 9 | heightMm | Decimal128 | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
@@ -57,4 +57,4 @@ u_mes_plan_container, u_mes_matl_packagingSpecification.
 
 - Validator: 03_design/03_planning_execution/validators/u_mes_plan_containerType.json
 - Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_containerType.js
-- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_containerType.js
+- Sample documents (10): 03_design/03_planning_execution/samples/u_mes_plan_containerType.js

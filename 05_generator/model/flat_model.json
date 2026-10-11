@@ -569,7 +569,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ENT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "enterpriseCode",
    "purpose": "Legal entities of the group (ISA-95 Enterprise level); tax and registration data"
   },
@@ -582,7 +582,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_enterprise",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -646,7 +646,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<enterpriseId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per contact of a enterprise"
   },
@@ -816,7 +816,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SITE-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "siteCode",
    "purpose": "Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate"
   },
@@ -893,7 +893,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<siteId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per certificate of a site"
   },
@@ -998,7 +998,7 @@
      "ref": null
     }
    ],
-   "idPattern": "AR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "areaCode",
    "purpose": "Production and support areas inside a site (ISA-95 Area)"
   },
@@ -1128,7 +1128,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "lineCode",
    "purpose": "Production lines / cells (ISA-95 Production Line / Work Cell)"
   },
@@ -1195,7 +1195,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<lineId>-DS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -DS<nnn>",
    "purpose": "Links one line to one default shift (one document per link)"
   },
@@ -1272,7 +1272,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<lineId>-IR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IR<nnn>",
    "purpose": "One document per ideal rate of a line"
   },
@@ -1412,7 +1412,7 @@
      "ref": null
     }
    ],
-   "idPattern": "WC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "workCentreCode",
    "purpose": "Stations where operations are executed and booked; ERP work centre mapping"
   },
@@ -1479,7 +1479,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCenterId>-E<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -E<nnn>",
    "purpose": "Links one workCenter to one equipment (one document per link)"
   },
@@ -1546,7 +1546,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCenterId>-O<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -O<nnn>",
    "purpose": "Links one workCenter to one operation (one document per link)"
   },
@@ -1613,7 +1613,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCenterId>-RS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RS<nnn>",
    "purpose": "Links one workCenter to one requires skill (one document per link)"
   },
@@ -1839,7 +1839,7 @@
      "ref": null
     }
    ],
-   "idPattern": "EQ-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "equipmentCode",
    "purpose": "Machines, furnaces, testers (ISA-95 Unit / Equipment); hierarchy, make, model, capability"
   },
@@ -1906,7 +1906,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<equipmentId>-ID<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -ID<nnn>",
    "purpose": "Links one equipment to one iot device (one document per link)"
   },
@@ -1996,7 +1996,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SH-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "shiftCode",
    "purpose": "Shift patterns with start/end and breaks"
   },
@@ -2009,7 +2009,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_shift",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -2073,7 +2073,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftId>-B<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -B<nnn>",
    "purpose": "One document per break of a shift"
   },
@@ -2135,7 +2135,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftId>-WD<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -WD<nnn>",
    "purpose": "One document per working day value of a shift"
   },
@@ -2210,7 +2210,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CAL-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "calendarCode",
    "purpose": "Working calendars with holidays and exception days per site / line"
   },
@@ -2277,7 +2277,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCalendarId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "Links one workCalendar to one line (one document per link)"
   },
@@ -2344,7 +2344,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCalendarId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "Links one workCalendar to one shift (one document per link)"
   },
@@ -2406,7 +2406,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCalendarId>-WOD<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -WOD<nnn>",
    "purpose": "One document per weekly off day value of a workCalendar"
   },
@@ -2419,7 +2419,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_workCalendar",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -2483,7 +2483,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCalendarId>-E<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -E<nnn>",
    "purpose": "One document per exception of a workCalendar"
   },
@@ -2550,7 +2550,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workCalendarExceptionId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "Links one workCalendarException to one shift (one document per link)"
   },
@@ -2696,7 +2696,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ROS-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "rosterNo",
    "purpose": "Crew assignment per production day, shift and line (who is planned where)"
   },
@@ -2823,7 +2823,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftRosterId>-A<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -A<nnn>",
    "purpose": "One document per assignment of a shiftRoster"
   },
@@ -2903,7 +2903,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ROLE-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "roleCode",
    "purpose": "Named sets of permissions (operator, setter, quality engineer ...)"
   },
@@ -2970,7 +2970,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<roleId>-P<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -P<nnn>",
    "purpose": "Links one role to one permission (one document per link)"
   },
@@ -3037,7 +3037,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<roleId>-SM<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -SM<nnn>",
    "purpose": "Links one role to one signature meaning (one document per link)"
   },
@@ -3223,7 +3223,7 @@
      "ref": null
     }
    ],
-   "idPattern": "USR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "employeeNo",
    "purpose": "People and system accounts; badge id, role, home work centre"
   },
@@ -3290,7 +3290,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<userId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "Links one user to one role (one document per link)"
   },
@@ -3390,7 +3390,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SKL-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "skillCode",
    "purpose": "Skill definitions required by operations (e.g. leak-test operation, CMM programming)"
   },
@@ -3457,7 +3457,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<skillId>-O<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -O<nnn>",
    "purpose": "Links one skill to one operation (one document per link)"
   },
@@ -3470,7 +3470,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_skill",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -3524,7 +3524,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<skillId>-LS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -LS<nnn>",
    "purpose": "One document per level scale of a skill"
   },
@@ -3701,7 +3701,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CERT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "certificationNo",
    "purpose": "Skills-matrix entries: user x skill, level, valid-from/to, assessor; used for operator lock-out"
   },
@@ -3851,7 +3851,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CUS-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "customerCode",
    "purpose": "OEMs and aftermarket customers; ship-to addresses, label and ASN requirements"
   },
@@ -3864,7 +3864,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_customer",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -3948,7 +3948,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerId>-ST<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -ST<nnn>",
    "purpose": "One document per ship to of a customer"
   },
@@ -3961,7 +3961,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_customer",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -4025,7 +4025,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per contact of a customer"
   },
@@ -4177,7 +4177,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SUP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "supplierCode",
    "purpose": "Material, tooling and service suppliers; approval status, certificates, PPM rating"
   },
@@ -4190,7 +4190,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_mast_supplier",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -4254,7 +4254,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<supplierId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per contact of a supplier"
   },
@@ -4326,7 +4326,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<supplierId>-C2<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C2<nnn>",
    "purpose": "One document per certificate of a supplier"
   },
@@ -4393,7 +4393,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<supplierId>-SI<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -SI<nnn>",
    "purpose": "Links one supplier to one supplied item (one document per link)"
   },
@@ -4498,7 +4498,7 @@
      "ref": null
     }
    ],
-   "idPattern": "UOM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "uomCode",
    "purpose": "Units and conversion factors (EA, kg, N.m, bar, mm, um, kWh)"
   },
@@ -4694,7 +4694,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ITM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "itemNo",
    "purpose": "Parts: finished caliper, semi-finished body, purchased components, raw material, consumables; drawing revision"
   },
@@ -4707,7 +4707,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_prod_item",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -4776,7 +4776,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<itemId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "One document per revision of a item"
   },
@@ -4853,7 +4853,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<itemId>-CP<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CP<nnn>",
    "purpose": "One document per customer part of a item"
   },
@@ -5014,7 +5014,7 @@
      "ref": null
     }
    ],
-   "idPattern": "VAR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "variantCode",
    "purpose": "Product variants (LH/RH, piston diameter, pad compound, market) that drive BOM, instruction and label selection"
   },
@@ -5145,7 +5145,7 @@
      "ref": null
     }
    ],
-   "idPattern": "BOM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "bomNo",
    "purpose": "Multi-level bills of material per item revision with effectivity"
   },
@@ -5262,7 +5262,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfMaterialId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per component of a billOfMaterial"
   },
@@ -5329,7 +5329,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfMaterialComponentId>-PV<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PV<nnn>",
    "purpose": "Links one billOfMaterialComponent to one product variant (one document per link)"
   },
@@ -5396,7 +5396,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfMaterialComponentId>-AI<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AI<nnn>",
    "purpose": "Links one billOfMaterialComponent to one alternate item (one document per link)"
   },
@@ -5521,7 +5521,7 @@
      "ref": null
     }
    ],
-   "idPattern": "OPN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "operationCode",
    "purpose": "Standard operation library (casting, T6, machining ... packing) reused by routings"
   },
@@ -5588,7 +5588,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operationId>-RS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RS<nnn>",
    "purpose": "Links one operation to one required skill (one document per link)"
   },
@@ -5724,7 +5724,7 @@
      "ref": null
     }
    ],
-   "idPattern": "RTG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "routingNo",
    "purpose": "Sequence of operations per item, including rework / disposition routings and alternate paths"
   },
@@ -5836,7 +5836,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<routingId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per step of a routing"
   },
@@ -5903,7 +5903,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<routingStepId>-AWC<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AWC<nnn>",
    "purpose": "Links one routingStep to one alternate work center (one document per link)"
   },
@@ -5965,7 +5965,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<routingStepId>-NS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -NS<nnn>",
    "purpose": "One document per next step of a routingStep"
   },
@@ -6081,7 +6081,7 @@
      "ref": null
     }
    ],
-   "idPattern": "BOP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "bopNo",
    "purpose": "Per routing step: required equipment, tools, recipe, work instruction, data collection, consumed components, cycle time"
   },
@@ -6188,7 +6188,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per step of a billOfProcess"
   },
@@ -6255,7 +6255,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessStepId>-E<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -E<nnn>",
    "purpose": "Links one billOfProcessStep to one equipment (one document per link)"
   },
@@ -6322,7 +6322,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessStepId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "Links one billOfProcessStep to one tool (one document per link)"
   },
@@ -6389,7 +6389,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessStepId>-RS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RS<nnn>",
    "purpose": "Links one billOfProcessStep to one required skill (one document per link)"
   },
@@ -6466,7 +6466,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessStepId>-CC<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CC<nnn>",
    "purpose": "One document per consumed component of a billOfProcessStep"
   },
@@ -6479,7 +6479,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_prod_billOfProcessStep",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -6538,7 +6538,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessStepId>-I<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -I<nnn>",
    "purpose": "One document per interlock of a billOfProcessStep"
   },
@@ -6551,7 +6551,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_prod_billOfProcessStep",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -6625,7 +6625,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<billOfProcessStepId>-PP<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PP<nnn>",
    "purpose": "One document per process parameter of a billOfProcessStep"
   },
@@ -6771,7 +6771,7 @@
      "ref": null
     }
    ],
-   "idPattern": "WI-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "instructionNo",
    "purpose": "Versioned visual work instructions with steps, media, cautions, variant applicability, required checks"
   },
@@ -6784,7 +6784,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_prod_workInstruction",
-   "displayField": "title",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -6878,7 +6878,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per step of a workInstruction"
   },
@@ -6945,7 +6945,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionStepId>-MCD<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -MCD<nnn>",
    "purpose": "Links one workInstructionStep to one media controlled document (one document per link)"
   },
@@ -7012,7 +7012,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionStepId>-PV<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PV<nnn>",
    "purpose": "Links one workInstructionStep to one product variant (one document per link)"
   },
@@ -7079,7 +7079,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionStepId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "Links one workInstructionStep to one tool (one document per link)"
   },
@@ -7146,7 +7146,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionStepId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "Links one workInstructionStep to one characteristic (one document per link)"
   },
@@ -7213,7 +7213,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionId>-PI<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PI<nnn>",
    "purpose": "Links one workInstruction to one ppe item (one document per link)"
   },
@@ -7275,7 +7275,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<workInstructionId>-KP<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -KP<nnn>",
    "purpose": "One document per key point value of a workInstruction"
   },
@@ -7421,7 +7421,7 @@
      "ref": null
     }
    ],
-   "idPattern": "RCP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "recipeNo",
    "purpose": "Machine parameter sets with set-points and limits (die temperature, furnace profile, CNC program, torque program, leak-test program)"
   },
@@ -7434,7 +7434,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_prod_recipe",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -7528,7 +7528,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<recipeId>-P<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -P<nnn>",
    "purpose": "One document per parameter of a recipe"
   },
@@ -7541,7 +7541,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_prod_recipe",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -7600,7 +7600,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<recipeId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per stage of a recipe"
   },
@@ -7779,7 +7779,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ECN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "ecnNo",
    "purpose": "Engineering change notices with affected objects, approvals and effectivity (cut-in serial / date)"
   },
@@ -7886,7 +7886,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<engineeringChangeId>-AI<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AI<nnn>",
    "purpose": "One document per affected item of a engineeringChange"
   },
@@ -7993,7 +7993,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<engineeringChangeId>-AO<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AO<nnn>",
    "purpose": "One document per affected object of a engineeringChange"
   },
@@ -8110,7 +8110,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<engineeringChangeId>-A<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -A<nnn>",
    "purpose": "One document per approval of a engineeringChange"
   },
@@ -8207,7 +8207,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<engineeringChangeId>-CD<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CD<nnn>",
    "purpose": "Links one engineeringChange to one controlled document (one document per link)"
   },
@@ -8345,7 +8345,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CSR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "releaseNo",
    "purpose": "OEM delivery schedules / releases (demand that drives production orders and shipments)"
   },
@@ -8477,7 +8477,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerScheduleId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a customerSchedule"
   },
@@ -8737,7 +8737,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PO-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "orderNo",
    "purpose": "Shop orders from ERP: item, quantity, routing/BOM version, partial releases, status"
   },
@@ -8844,7 +8844,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<productionOrderId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "One document per release of a productionOrder"
   },
@@ -8941,7 +8941,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<productionOrderId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "Links one productionOrder to one lot (one document per link)"
   },
@@ -9098,7 +9098,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SCH-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "scheduleNo",
    "purpose": "Finite schedule per line and shift with sequenced orders, planned start/end"
   },
@@ -9230,7 +9230,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<productionScheduleId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per slot of a productionSchedule"
   },
@@ -9361,7 +9361,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DSP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "dispatchNo",
    "purpose": "Prioritised work queue per work centre shown to the operator"
   },
@@ -9523,7 +9523,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<dispatchListId>-E<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -E<nnn>",
    "purpose": "One document per entry of a dispatchList"
   },
@@ -9809,7 +9809,7 @@
      "ref": null
     }
    ],
-   "idPattern": "OPX-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "executionNo",
    "purpose": "Start / complete record of an operation on a unit or lot: who, where, when, result, cycle time (track-in / track-out)"
   },
@@ -9906,7 +9906,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operationExecutionId>-DC<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -DC<nnn>",
    "purpose": "Links one operationExecution to one defect code (one document per link)"
   },
@@ -10003,7 +10003,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operationExecutionId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "Links one operationExecution to one tool (one document per link)"
   },
@@ -10224,7 +10224,7 @@
      "ref": null
     }
    ],
-   "idPattern": "STC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "completionNo",
    "purpose": "Completion record for each work-instruction step: values entered, confirmations, duration, device data"
   },
@@ -10485,7 +10485,7 @@
      "ref": null
     }
    ],
-   "idPattern": "WU-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "unitNo",
    "purpose": "Serialised unit in production (shop-floor control number): current operation, status, quality state"
   },
@@ -10577,7 +10577,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<wipUnitId>-CS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CS<nnn>",
    "purpose": "One document per completed step value of a wipUnit"
   },
@@ -10837,7 +10837,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LOT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "lotNo",
    "purpose": "Lots and batches: supplier lots, melt/heat lots, casting lots, heat-treatment charges, anodising loads"
   },
@@ -10934,7 +10934,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<lotId>-PL<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PL<nnn>",
    "purpose": "Links one lot to one parent lot (one document per link)"
   },
@@ -11026,7 +11026,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<lotId>-ACN<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -ACN<nnn>",
    "purpose": "One document per attributes cavity no value of a lot"
   },
@@ -11246,7 +11246,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CNT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "containerNo",
    "purpose": "Bins, trolleys, returnable crates and pallets with contents and nesting"
   },
@@ -11343,7 +11343,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<containerId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "Links one container to one lot (one document per link)"
   },
@@ -11544,7 +11544,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LAB-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "bookingNo",
    "purpose": "Clock-on / clock-off of people against orders, operations and indirect activities"
   },
@@ -11766,7 +11766,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CHG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "changeoverNo",
    "purpose": "Changeover from one item / variant to another: planned vs actual duration, checklist, first-off approval"
   },
@@ -11779,7 +11779,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_plan_changeover",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -11878,7 +11878,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<changeoverId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per step of a changeover"
   },
@@ -11975,7 +11975,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<changeoverId>-RT<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RT<nnn>",
    "purpose": "Links one changeover to one removed tool (one document per link)"
   },
@@ -12072,7 +12072,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<changeoverId>-IT<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IT<nnn>",
    "purpose": "Links one changeover to one installed tool (one document per link)"
   },
@@ -12169,7 +12169,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<changeoverId>-PBU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PBU<nnn>",
    "purpose": "Links one changeover to one performed by user (one document per link)"
   },
@@ -12350,7 +12350,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SHO-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "handoverNo",
    "purpose": "Shift logbook: output, open issues, safety and quality notes, acknowledgements"
   },
@@ -12447,7 +12447,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftHandoverId>-PO<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PO<nnn>",
    "purpose": "Links one shiftHandover to one production order (one document per link)"
   },
@@ -12544,7 +12544,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftHandoverId>-DE<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -DE<nnn>",
    "purpose": "Links one shiftHandover to one downtime event (one document per link)"
   },
@@ -12641,7 +12641,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftHandoverId>-N<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -N<nnn>",
    "purpose": "Links one shiftHandover to one nonconformance (one document per link)"
   },
@@ -12654,7 +12654,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_plan_shiftHandover",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -12753,7 +12753,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shiftHandoverId>-OI<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -OI<nnn>",
    "purpose": "One document per open item of a shiftHandover"
   },
@@ -12893,7 +12893,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LOC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "locationCode",
    "purpose": "Warehouses, racks, line-side supermarkets, quarantine cage, dispatch bay"
   },
@@ -13078,7 +13078,7 @@
      "ref": null
     }
    ],
-   "idPattern": "INV-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "inventoryNo",
    "purpose": "Stock on hand per item, lot, location and stock status"
   },
@@ -13338,7 +13338,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "movementNo",
    "purpose": "Every stock transaction: receipt, putaway, issue to line, return, scrap, transfer, shipment"
   },
@@ -13486,7 +13486,7 @@
      "ref": null
     }
    ],
-   "idPattern": "GRN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "grnNo",
    "purpose": "Receipts from suppliers with lines, supplier lot, certificate, incoming inspection status"
   },
@@ -13648,7 +13648,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<goodsReceiptId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a goodsReceipt"
   },
@@ -13745,7 +13745,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<goodsReceiptLineId>-IR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IR<nnn>",
    "purpose": "Links one goodsReceiptLine to one inspection result (one document per link)"
   },
@@ -13908,7 +13908,7 @@
      "ref": null
     }
    ],
-   "idPattern": "KIT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "kitNo",
    "purpose": "Kits of components picked for an order / line-side delivery"
   },
@@ -14040,7 +14040,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<kitId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a kit"
   },
@@ -14257,7 +14257,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MRQ-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "requestNo",
    "purpose": "Line-side replenishment calls (e-kanban) from a work centre to stores"
   },
@@ -14492,7 +14492,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CON-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "consumptionNo",
    "purpose": "Component / lot consumed at an operation on a unit or lot (backflush or scanned)"
   },
@@ -14653,7 +14653,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PKS-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "packSpecNo",
    "purpose": "Pack instruction: container type, quantity per bin, layers, dunnage, label template"
   },
@@ -14740,7 +14740,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<packagingSpecificationId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per level of a packagingSpecification"
   },
@@ -14856,7 +14856,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LBT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "templateCode",
    "purpose": "Label layouts (unit 2D code, bin label, customer shipping label, hold tag)"
   },
@@ -14943,7 +14943,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<labelTemplateId>-F<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -F<nnn>",
    "purpose": "One document per field of a labelTemplate"
   },
@@ -15170,7 +15170,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LBL-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "labelNo",
    "purpose": "Printed label instances with payload, printer, reprint count"
   },
@@ -15388,7 +15388,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SHP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "shipmentNo",
    "purpose": "Dispatch to customer: invoice / ASN, vehicle, containers shipped, proof of delivery"
   },
@@ -15495,7 +15495,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shipmentId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a shipment"
   },
@@ -15592,7 +15592,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shipmentLineId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "Links one shipmentLine to one container (one document per link)"
   },
@@ -15689,7 +15689,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<shipmentLineId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "Links one shipmentLine to one lot (one document per link)"
   },
@@ -15913,7 +15913,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "serialNo",
    "purpose": "Registry of every serial / 2D code issued: status, mark grade, unit and shipment linkage"
   },
@@ -16128,7 +16128,7 @@
      "ref": null
     }
    ],
-   "idPattern": "GEN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "linkNo",
    "purpose": "As-built parent-child edges: unit to component serial or component lot, with operation and time"
   },
@@ -16308,7 +16308,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CLL-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "lotLinkNo",
    "purpose": "Lot-to-lot lineage: ingot heat to melt to casting lot to heat-treatment charge to anodising load; split and merge"
   },
@@ -16583,7 +16583,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ABR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "recordNo",
    "purpose": "Device-history summary per shipped unit: components, key results, operators, sign-off (digital birth certificate)"
   },
@@ -16710,7 +16710,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<asBuiltRecordId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per component of a asBuiltRecord"
   },
@@ -16847,7 +16847,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<asBuiltRecordId>-O<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -O<nnn>",
    "purpose": "One document per operation of a asBuiltRecord"
   },
@@ -16944,7 +16944,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<asBuiltRecordId>-IR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IR<nnn>",
    "purpose": "Links one asBuiltRecord to one inspection result (one document per link)"
   },
@@ -17124,7 +17124,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CHR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "characteristicCode",
    "purpose": "Product and process characteristics with nominal, tolerance, class (critical / significant), method"
   },
@@ -17275,7 +17275,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "controlPlanNo",
    "purpose": "AIAG control plan per item and phase (prototype, pre-launch, production)"
   },
@@ -17342,7 +17342,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<controlPlanId>-CTU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CTU<nnn>",
    "purpose": "Links one controlPlan to one core team user (one document per link)"
   },
@@ -17479,7 +17479,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<controlPlanId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a controlPlan"
   },
@@ -17630,7 +17630,7 @@
      "ref": null
     }
    ],
-   "idPattern": "IP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "inspectionPlanNo",
    "purpose": "Executable data-collection group per operation: which characteristics, sample size, frequency, reaction"
   },
@@ -17747,7 +17747,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<inspectionPlanId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a inspectionPlan"
   },
@@ -17857,7 +17857,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SMP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "samplingPlanCode",
    "purpose": "Sampling rules: AQL tables, skip-lot, time or counter based frequency"
   },
@@ -17939,7 +17939,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<samplingPlanId>-SR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -SR<nnn>",
    "purpose": "One document per size row of a samplingPlan"
   },
@@ -18080,7 +18080,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CKS-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "checkSheetCode",
    "purpose": "Check sheet definitions: start-of-shift checks, poka-yoke verification, first-off, autonomous maintenance"
   },
@@ -18177,7 +18177,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<checkSheetId>-I<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -I<nnn>",
    "purpose": "One document per item of a checkSheet"
   },
@@ -18378,7 +18378,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CKR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "checkResultNo",
    "purpose": "Completed check sheets with answers, failures and reactions"
   },
@@ -18485,7 +18485,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<checkSheetResultId>-A<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -A<nnn>",
    "purpose": "One document per answer of a checkSheetResult"
   },
@@ -18775,7 +18775,7 @@
      "ref": null
     }
    ],
-   "idPattern": "IR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "resultNo",
    "purpose": "Measured and attribute results per unit / lot / receipt against a characteristic"
   },
@@ -18941,7 +18941,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SPC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "chartNo",
    "purpose": "Chart definition per characteristic and work centre: chart type, subgroup size, control limits, rules"
   },
@@ -19038,7 +19038,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<spcChartId>-CL<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CL<nnn>",
    "purpose": "One document per control limit of a spcChart"
   },
@@ -19100,7 +19100,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<spcChartId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "One document per rule value of a spcChart"
   },
@@ -19301,7 +19301,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SPS-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "sampleNo",
    "purpose": "Subgroups with readings, mean, range, rule violations and reaction"
   },
@@ -19393,7 +19393,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<spcSampleId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "One document per reading value of a spcSample"
   },
@@ -19490,7 +19490,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<spcSampleId>-IR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IR<nnn>",
    "purpose": "Links one spcSample to one inspection result (one document per link)"
   },
@@ -19503,7 +19503,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_spcSample",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -19587,7 +19587,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<spcSampleId>-V<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -V<nnn>",
    "purpose": "One document per violation of a spcSample"
   },
@@ -19712,7 +19712,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DEF-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "defectCode",
    "purpose": "Defect / NC code catalogue with group, default disposition routing and severity"
   },
@@ -19779,7 +19779,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<defectCodeId>-AO<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AO<nnn>",
    "purpose": "Links one defectCode to one applicable operation (one document per link)"
   },
@@ -20027,7 +20027,7 @@
      "ref": null
     }
    ],
-   "idPattern": "NCR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "ncrNo",
    "purpose": "Nonconformance reports: what, where, quantity, containment, disposition (use-as-is, rework, scrap, return)"
   },
@@ -20159,7 +20159,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-AO<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AO<nnn>",
    "purpose": "One document per affected object of a nonconformance"
   },
@@ -20172,7 +20172,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_nonconformance",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -20266,7 +20266,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-CA<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CA<nnn>",
    "purpose": "One document per containment action of a nonconformance"
   },
@@ -20363,7 +20363,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-IR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IR<nnn>",
    "purpose": "Links one nonconformance to one inspection result (one document per link)"
   },
@@ -20460,7 +20460,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-RO<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RO<nnn>",
    "purpose": "Links one nonconformance to one rework order (one document per link)"
   },
@@ -20557,7 +20557,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-SR<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -SR<nnn>",
    "purpose": "Links one nonconformance to one scrap record (one document per link)"
   },
@@ -20654,7 +20654,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-PCD<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -PCD<nnn>",
    "purpose": "Links one nonconformance to one photo controlled document (one document per link)"
   },
@@ -20751,7 +20751,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<nonconformanceId>-MU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -MU<nnn>",
    "purpose": "Links one nonconformance to one mrb user (one document per link)"
   },
@@ -20969,7 +20969,7 @@
      "ref": null
     }
    ],
-   "idPattern": "RWK-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "reworkNo",
    "purpose": "Rework instruction and execution on the rework routing with re-inspection result"
   },
@@ -21066,7 +21066,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<reworkOrderId>-WU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -WU<nnn>",
    "purpose": "Links one reworkOrder to one wip unit (one document per link)"
   },
@@ -21079,7 +21079,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_reworkOrder",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -21183,7 +21183,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<reworkOrderId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per step of a reworkOrder"
   },
@@ -21434,7 +21434,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SCR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "scrapNo",
    "purpose": "Scrap declaration with quantity, weight, cost, defect code and operation of origin"
   },
@@ -21620,7 +21620,7 @@
      "ref": null
     }
    ],
-   "idPattern": "HLD-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "holdNo",
    "purpose": "Hold / quarantine on units, lots, containers or locations with reason and release decision"
   },
@@ -21737,7 +21737,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<qualityHoldId>-HO<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -HO<nnn>",
    "purpose": "One document per held object of a qualityHold"
   },
@@ -21950,7 +21950,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DEV-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "deviationNo",
    "purpose": "Temporary deviations / concessions approved by the customer with quantity or date limit"
   },
@@ -22062,7 +22062,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<deviationPermitId>-A<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -A<nnn>",
    "purpose": "One document per approval of a deviationPermit"
   },
@@ -22296,7 +22296,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CAPA-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "capaNo",
    "purpose": "Corrective and preventive actions in 8D structure (D1-D8) with team, root cause, actions, verification"
   },
@@ -22393,7 +22393,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<capaId>-N<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -N<nnn>",
    "purpose": "Links one capa to one nonconformance (one document per link)"
   },
@@ -22495,7 +22495,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<capaId>-TM<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -TM<nnn>",
    "purpose": "One document per team member of a capa"
   },
@@ -22508,7 +22508,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_capa",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -22602,7 +22602,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<capaId>-CA<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CA<nnn>",
    "purpose": "One document per containment action of a capa"
   },
@@ -22615,7 +22615,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_capa",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -22709,7 +22709,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<capaId>-CA2<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CA2<nnn>",
    "purpose": "One document per corrective action of a capa"
   },
@@ -22722,7 +22722,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_capa",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -22821,7 +22821,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<capaId>-IA<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -IA<nnn>",
    "purpose": "One document per implementation action of a capa"
   },
@@ -22918,7 +22918,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<capaId>-CD<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CD<nnn>",
    "purpose": "Links one capa to one controlled document (one document per link)"
   },
@@ -23034,7 +23034,7 @@
      "ref": null
     }
    ],
-   "idPattern": "FMEA-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "pfmeaNo",
    "purpose": "Process FMEA per item / process: failure modes, effects, causes, S-O-D, action priority"
   },
@@ -23101,7 +23101,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<pfmeaId>-CTU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -CTU<nnn>",
    "purpose": "Links one pfmea to one core team user (one document per link)"
   },
@@ -23278,7 +23278,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<pfmeaId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per line of a pfmea"
   },
@@ -23476,7 +23476,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PPAP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "ppapNo",
    "purpose": "PPAP package: level, 18 elements with status, PSW, customer decision"
   },
@@ -23489,7 +23489,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_ppapSubmission",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": [
     "Not Started",
     "In Progress",
@@ -23593,7 +23593,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<ppapSubmissionId>-E<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -E<nnn>",
    "purpose": "One document per element of a ppapSubmission"
   },
@@ -23690,7 +23690,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<ppapSubmissionId>-MS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -MS<nnn>",
    "purpose": "Links one ppapSubmission to one msa study (one document per link)"
   },
@@ -23899,7 +23899,7 @@
      "ref": null
     }
    ],
-   "idPattern": "GAU-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "gaugeNo",
    "purpose": "Gauges and measuring instruments: type, range, resolution, calibration interval and due date, status"
   },
@@ -24095,7 +24095,7 @@
      "ref": null
     }
    ],
-   "idPattern": "GCAL-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "calibrationNo",
    "purpose": "Calibration events: as-found / as-left readings, standard used, result, certificate"
   },
@@ -24207,7 +24207,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<gaugeCalibrationId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "One document per reading of a gaugeCalibration"
   },
@@ -24434,7 +24434,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MSA-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "msaNo",
    "purpose": "Measurement system analysis: gauge R&R, bias, linearity, attribute agreement"
   },
@@ -24531,7 +24531,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<msaStudyId>-AU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AU<nnn>",
    "purpose": "Links one msaStudy to one appraiser user (one document per link)"
   },
@@ -24638,7 +24638,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<msaStudyId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "One document per trial of a msaStudy"
   },
@@ -24855,7 +24855,7 @@
      "ref": null
     }
    ],
-   "idPattern": "AUD-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "auditNo",
    "purpose": "Layered process, process (VDA 6.3), product and system audits with findings"
   },
@@ -24952,7 +24952,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<auditId>-AU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -AU<nnn>",
    "purpose": "Links one audit to one auditor user (one document per link)"
   },
@@ -24965,7 +24965,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_qual_audit",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -25084,7 +25084,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<auditId>-F<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -F<nnn>",
    "purpose": "One document per finding of a audit"
   },
@@ -25322,7 +25322,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CMP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "complaintNo",
    "purpose": "Customer complaints / line rejections / warranty returns with affected serials and PPM impact"
   },
@@ -25419,7 +25419,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerComplaintId>-SN<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -SN<nnn>",
    "purpose": "Links one customerComplaint to one serial number (one document per link)"
   },
@@ -25516,7 +25516,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerComplaintId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "Links one customerComplaint to one shipment (one document per link)"
   },
@@ -25613,7 +25613,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerComplaintId>-SL<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -SL<nnn>",
    "purpose": "Links one customerComplaint to one suspect lot (one document per link)"
   },
@@ -25725,7 +25725,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<customerComplaintId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per communication of a customerComplaint"
   },
@@ -25860,7 +25860,7 @@
      "ref": null
     }
    ],
-   "idPattern": "RSN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "reasonCode",
    "purpose": "Reason tree (up to 4 levels) for downtime, scrap, hold and andon with planned / unplanned category"
   },
@@ -26030,7 +26030,7 @@
      "ref": null
     }
    ],
-   "idPattern": "EST-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "stateEventNo",
    "purpose": "State intervals per equipment: running, idle, setup, down, starved, blocked"
   },
@@ -26286,7 +26286,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "downtimeNo",
    "purpose": "Classified stops with fault, reason path, action taken, duration, responsible group"
   },
@@ -26393,7 +26393,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<downtimeEventId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per comment of a downtimeEvent"
   },
@@ -26583,7 +26583,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "countNo",
    "purpose": "Hourly good / reject / rework counts per work centre against target (hour-by-hour board)"
   },
@@ -26813,7 +26813,7 @@
      "ref": null
     }
    ],
-   "idPattern": "OEE-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "oeeRecordNo",
    "purpose": "OEE per equipment / line and shift: availability, performance, quality with the time and count basis"
   },
@@ -26930,7 +26930,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<oeeRecordId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per loss of a oeeRecord"
   },
@@ -27090,7 +27090,7 @@
      "ref": null
     }
    ],
-   "idPattern": "TAG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "tagName",
    "purpose": "Tag definitions: source address, unit, deadband, limits, equipment"
   },
@@ -27227,7 +27227,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PD-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "readingNo",
    "purpose": "Tag values over time (die temperature, furnace zone temperature, spindle load, bath pH, current)"
   },
@@ -27428,7 +27428,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ALM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "alarmNo",
    "purpose": "Alarm occurrences with severity, raised / acknowledged / cleared times"
   },
@@ -27678,7 +27678,7 @@
      "ref": null
     }
    ],
-   "idPattern": "TRQ-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "torqueResultNo",
    "purpose": "Tightening results per unit: program, final torque, angle, status, curve reference"
   },
@@ -27873,7 +27873,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LKT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "leakTestNo",
    "purpose": "Leak test per unit: stage pressures, decay, leak rate, limits, verdict, retest counter"
   },
@@ -28010,7 +28010,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<leakTestResultId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per stage of a leakTestResult"
   },
@@ -28151,7 +28151,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "planNo",
    "purpose": "Preventive / condition-based plans per equipment or tool with tasks, interval and next due"
   },
@@ -28164,7 +28164,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_maint_maintenancePlan",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -28228,7 +28228,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<maintenancePlanId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "One document per task of a maintenancePlan"
   },
@@ -28295,7 +28295,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<maintenancePlanId>-RS<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RS<nnn>",
    "purpose": "Links one maintenancePlan to one required skill (one document per link)"
   },
@@ -28367,7 +28367,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<maintenancePlanId>-RSP<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -RSP<nnn>",
    "purpose": "One document per required spare part of a maintenancePlan"
   },
@@ -28606,7 +28606,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MWO-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "workOrderNo",
    "purpose": "Breakdown, preventive and improvement work orders with labour, parts used, root cause"
   },
@@ -28703,7 +28703,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<maintenanceWorkOrderId>-ATU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -ATU<nnn>",
    "purpose": "Links one maintenanceWorkOrder to one assigned to user (one document per link)"
   },
@@ -28805,7 +28805,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<maintenanceWorkOrderId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "One document per labour of a maintenanceWorkOrder"
   },
@@ -28912,7 +28912,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<maintenanceWorkOrderId>-USP<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -USP<nnn>",
    "purpose": "One document per used spare part of a maintenanceWorkOrder"
   },
@@ -29062,7 +29062,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SPR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "sparePartNo",
    "purpose": "Maintenance spares with stock, minimum, location, where-used"
   },
@@ -29129,7 +29129,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<sparePartId>-UOE<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -UOE<nnn>",
    "purpose": "Links one sparePart to one used on equipment (one document per link)"
   },
@@ -29317,7 +29317,7 @@
      "ref": null
     }
    ],
-   "idPattern": "TL-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "toolNo",
    "purpose": "Dies, fixtures, cutting tools, nutrunner spindles, test seals: life limit, life used, status, location"
   },
@@ -29384,7 +29384,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<toolId>-I<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -I<nnn>",
    "purpose": "Links one tool to one item (one document per link)"
   },
@@ -29569,7 +29569,7 @@
      "ref": null
     }
    ],
-   "idPattern": "TLR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "toolLifeNo",
    "purpose": "Tool mount / dismount / usage / regrind events with shots or cycles consumed"
   },
@@ -29792,7 +29792,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MSG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "messageNo",
    "purpose": "Inbound and outbound interface messages (order download, confirmation, goods movement) with payload, status, retries"
   },
@@ -29922,7 +29922,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ICN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "connectorCode",
    "purpose": "Connector definitions to ERP, PLM, OPC UA servers, tool controllers, label printers"
   },
@@ -30004,7 +30004,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<integrationConnectorId>-F<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -F<nnn>",
    "purpose": "One document per function of a integrationConnector"
   },
@@ -30180,7 +30180,7 @@
      "ref": null
     }
    ],
-   "idPattern": "IOT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "deviceCode",
    "purpose": "Registry of PLCs, gateways, nutrunner controllers, leak testers, scanners, printers, energy meters"
   },
@@ -30286,7 +30286,7 @@
      "ref": null
     }
    ],
-   "idPattern": "APP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "appCode",
    "purpose": "Composable operator screen definitions (versioned) bound to work centres and operations"
   },
@@ -30353,7 +30353,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operatorAppId>-WC<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -WC<nnn>",
    "purpose": "Links one operatorApp to one work center (one document per link)"
   },
@@ -30420,7 +30420,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operatorAppId>-O<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -O<nnn>",
    "purpose": "Links one operatorApp to one operation (one document per link)"
   },
@@ -30433,7 +30433,7 @@
    "kind": "child",
    "dataClass": "master",
    "parent": "u_mes_syst_operatorApp",
-   "displayField": "name",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -30512,7 +30512,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operatorAppId>-S<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -S<nnn>",
    "purpose": "One document per step of a operatorApp"
   },
@@ -30584,7 +30584,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operatorAppStepId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "One document per trigger of a operatorAppStep"
   },
@@ -30656,7 +30656,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operatorAppId>-DB<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -DB<nnn>",
    "purpose": "One document per device binding of a operatorApp"
   },
@@ -30723,7 +30723,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<operatorAppId>-L<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -L<nnn>",
    "purpose": "Links one operatorApp to one language (one document per link)"
   },
@@ -30900,7 +30900,7 @@
      "ref": null
     }
    ],
-   "idPattern": "EVT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "eventNo",
    "purpose": "Business event stream (order released, unit started, recipe downloaded, hold placed)"
   },
@@ -31052,7 +31052,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ADT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "auditTrailNo",
    "purpose": "Field-level change history of master and quality data (who, when, old, new, reason)"
   },
@@ -31154,7 +31154,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<auditTrailId>-C<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -C<nnn>",
    "purpose": "One document per change of a auditTrail"
   },
@@ -31316,7 +31316,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SIG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "signatureNo",
    "purpose": "Signature records for approvals and releases with meaning and signed-content hash"
   },
@@ -31498,7 +31498,7 @@
      "ref": null
     }
    ],
-   "idPattern": "NTF-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "notificationNo",
    "purpose": "Alerts and escalations sent to users / groups with delivery and acknowledgement status"
   },
@@ -31625,7 +31625,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<notificationId>-R<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -R<nnn>",
    "purpose": "One document per recipient of a notification"
   },
@@ -31836,7 +31836,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DOC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "documentNo",
    "purpose": "Controlled documents and attachments metadata (drawings, certificates, photos, reports); file in object store"
   },
@@ -31928,7 +31928,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<controlledDocumentId>-T<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -T<nnn>",
    "purpose": "One document per tag value of a controlledDocument"
   },
@@ -32068,7 +32068,7 @@
      "ref": null
     }
    ],
-   "idPattern": "NR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "rangeCode",
    "purpose": "Counters and format masks for serials, lots, orders, labels, NCRs"
   },
@@ -32178,7 +32178,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CFG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "configKey",
    "purpose": "Site and module settings (OEE basis, SPC rules, retention, label printer mapping)"
   },
@@ -32365,7 +32365,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ENR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "energyReadingNo",
    "purpose": "Interval energy, compressed air and gas consumption per meter and equipment"
   },
@@ -32577,7 +32577,7 @@
      "ref": null
     }
    ],
-   "idPattern": "AND-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "andonNo",
    "purpose": "Help calls from stations (quality, material, maintenance, safety) with response and escalation times"
   },
@@ -32689,7 +32689,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<andonEventId>-E<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -E<nnn>",
    "purpose": "One document per escalation of a andonEvent"
   },
@@ -32931,7 +32931,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SAF-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "incidentNo",
    "purpose": "Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions"
   },
@@ -33028,7 +33028,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<safetyIncidentId>-WU<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -WU<nnn>",
    "purpose": "Links one safetyIncident to one witness user (one document per link)"
   },
@@ -33041,7 +33041,7 @@
    "kind": "child",
    "dataClass": "transaction",
    "parent": "u_mes_ehs_safetyIncident",
-   "displayField": "description",
+   "displayField": "recordNo",
    "statusValues": null,
    "fields": [
     {
@@ -33140,7 +33140,7 @@
      "ref": null
     }
    ],
-   "idPattern": "<safetyIncidentId>-A<nnn>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "parent recordNo + -A<nnn>",
    "purpose": "One document per action of a safetyIncident"
   },
@@ -33235,7 +33235,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DEPT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Departments of the site (production, quality, maintenance ...)"
   },
@@ -33320,7 +33320,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DSG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Job designations of employees"
   },
@@ -33390,7 +33390,7 @@
      "ref": null
     }
    ],
-   "idPattern": "EMT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of employment (permanent, contract, trainee, apprentice)"
   },
@@ -33465,7 +33465,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Cost centers charged with activities, mapped to ERP"
   },
@@ -33545,7 +33545,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MFR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Manufacturers of equipment, gauges, devices and spare parts"
   },
@@ -33610,7 +33610,7 @@
      "ref": null
     }
    ],
-   "idPattern": "EQT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of equipment (casting machine, furnace, nutrunner, leak tester ...)"
   },
@@ -33675,7 +33675,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SKC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Categories of skills (process, quality, maintenance, safety)"
   },
@@ -33750,7 +33750,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PRM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Permissions that can be granted to roles"
   },
@@ -33815,7 +33815,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SGM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Meanings an electronic signature can carry (approved, reviewed, released ...)"
   },
@@ -33890,7 +33890,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CUR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Currencies used for costs and invoices"
   },
@@ -33960,7 +33960,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CTY-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Countries used in addresses"
   },
@@ -34025,7 +34025,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LNG-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Languages of users, instructions and documents"
   },
@@ -34100,7 +34100,7 @@
      "ref": null
     }
    ],
-   "idPattern": "TRP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Transport companies used for dispatch"
   },
@@ -34165,7 +34165,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CMD-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Purchasing commodities used to classify suppliers"
   },
@@ -34230,7 +34230,7 @@
      "ref": null
     }
    ],
-   "idPattern": "IGR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Item groups (brake caliper, piston, seal, fastener ...)"
   },
@@ -34295,7 +34295,7 @@
      "ref": null
     }
    ],
-   "idPattern": "IFM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Product families a line is built for (front caliper, rear caliper)"
   },
@@ -34360,7 +34360,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PPE-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Personal protective equipment that a work instruction can require"
   },
@@ -34425,7 +34425,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MKT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Sales markets of a product variant (domestic, export)"
   },
@@ -34490,7 +34490,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PDC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Brake pad friction compounds offered as a variant option"
   },
@@ -34555,7 +34555,7 @@
      "ref": null
     }
    ],
-   "idPattern": "SFN-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Surface finishes offered as a variant option"
   },
@@ -34640,7 +34640,7 @@
      "ref": null
     }
    ],
-   "idPattern": "VHM-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Customer vehicle models the parts are fitted to"
   },
@@ -34720,7 +34720,7 @@
      "ref": null
     }
    ],
-   "idPattern": "IND-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Indirect labour activities (cleaning, training, waiting for material ...)"
   },
@@ -34810,7 +34810,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CTT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of container with dimensions and tare weight"
   },
@@ -34890,7 +34890,7 @@
      "ref": null
     }
    ],
-   "idPattern": "MVT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Stock movement types with their ERP movement code and stock effect"
   },
@@ -34965,7 +34965,7 @@
      "ref": null
     }
    ],
-   "idPattern": "STS-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Stock statuses (unrestricted, quality inspection, blocked, reserved)"
   },
@@ -35030,7 +35030,7 @@
      "ref": null
     }
    ],
-   "idPattern": "PKT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Pack levels used in packaging specifications (bag, tray, bin, pallet)"
   },
@@ -35095,7 +35095,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DGR-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Groups of defect codes (casting, machining, leak, torque ...)"
   },
@@ -35160,7 +35160,7 @@
      "ref": null
     }
    ],
-   "idPattern": "GTY-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of gauge and measuring instrument"
   },
@@ -35240,7 +35240,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DSP-T-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Dispositions for nonconforming material (use as is, rework, scrap, return, sort)"
   },
@@ -35305,7 +35305,7 @@
      "ref": null
     }
    ],
-   "idPattern": "CPT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of customer complaint (line rejection, zero kilometre, warranty, logistics)"
   },
@@ -35380,7 +35380,7 @@
      "ref": null
     }
    ],
-   "idPattern": "LSC-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "OEE loss categories with the OEE factor they reduce"
   },
@@ -35445,7 +35445,7 @@
      "ref": null
     }
    ],
-   "idPattern": "RCT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Categories of reason codes (mechanical, electrical, process, material ...)"
   },
@@ -35515,7 +35515,7 @@
      "ref": null
     }
    ],
-   "idPattern": "TLT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of tool (die, fixture, cutting tool, socket, test seal)"
   },
@@ -35590,7 +35590,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DCT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of controlled document with retention"
   },
@@ -35655,7 +35655,7 @@
      "ref": null
     }
    ],
-   "idPattern": "DVT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of connected device (PLC, nutrunner controller, leak tester, printer ...)"
   },
@@ -35720,7 +35720,7 @@
      "ref": null
     }
    ],
-   "idPattern": "NTT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of notification sent by the system"
   },
@@ -35805,7 +35805,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ANT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of andon call with responsible department and target response time"
   },
@@ -35880,7 +35880,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ICT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of safety incident"
   },
@@ -35955,7 +35955,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ENT-T-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of energy and utility that are metered"
   },
@@ -36020,7 +36020,7 @@
      "ref": null
     }
    ],
-   "idPattern": "BDP-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Body parts for injury records"
   },
@@ -36085,7 +36085,7 @@
      "ref": null
     }
    ],
-   "idPattern": "INJ-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "code",
    "purpose": "Types of injury"
   },
@@ -36180,7 +36180,7 @@
      "ref": null
     }
    ],
-   "idPattern": "STD-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "definition code",
    "purpose": "Status values and allowed transitions per collection (status mapping)"
   },
@@ -36265,7 +36265,7 @@
      "ref": null
     }
    ],
-   "idPattern": "ENV-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "definition code",
    "purpose": "Allowed values of fixed enumeration keys, one document per collection, key and value"
   },
@@ -36360,7 +36360,7 @@
      "ref": null
     }
    ],
-   "idPattern": "STT-<recordNo>",
+   "idPattern": "16-digit numeric string",
    "recordNoMeaning": "definition code",
    "purpose": "Status values and allowed transitions per collection (status mapping)"
   }

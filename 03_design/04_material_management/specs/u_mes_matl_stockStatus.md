@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | STS-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 11 (10 required, 1 may be null) |
 | Estimated volume per year | 10-50 |
@@ -23,12 +23,12 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: STS-<recordNo> | `"STS-UNR"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1280000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"UNR"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the stock status; used as its display value in other collections | `"Unrestricted"` |  |
-| 6 | description | String | Yes | Description of the stock status | `"Free to use"` |  |
+| 6 | description | String | Yes | Description of the stock status | `"Unrestricted (UNR)"` |  |
 | 7 | isUsable | Boolean | Yes | True when the record is usable | `true` |  |
 | 8 | erpStockType | String | No (null allowed) | Stock type the status maps to in ERP | `"Unrestricted-use"` |  |
 | 9 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
@@ -54,4 +54,4 @@ u_mes_matl_inventoryBalance, u_mes_matl_materialMovement.
 
 - Validator: 03_design/04_material_management/validators/u_mes_matl_stockStatus.json
 - Indexes: 03_design/04_material_management/indexes/u_mes_matl_stockStatus.js
-- Sample document: 03_design/04_material_management/samples/u_mes_matl_stockStatus.js
+- Sample documents (10): 03_design/04_material_management/samples/u_mes_matl_stockStatus.js

@@ -38,7 +38,7 @@ Source: owner's requirements of 11 October 2026, with the project's own choices 
 
 ## 4. Identifiers
 
-- `_id`: unique identifier. Project choice: String, never ObjectId; entity collections use `<PREFIX>-<recordNo>`, child, relationship and value-list collections use `<parent _id>-<TAG><nnn>`. Patterns are in the register.
+- `_id`: unique system identifier. A String of exactly 16 digits (for example `1090000000000003`), never ObjectId and never a UUID. The first four digits are the collection number, the last twelve a running number. An external system's identifier is never used as `_id`; it is kept in its own key (for example `erpOrderNo`, `erpMaterialNo`).
 - `recordNo`: the separate business identifier. Project choice: present in every collection under this one name; what it holds for each collection is stated in the register.
 
 ## 5. References

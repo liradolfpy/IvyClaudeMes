@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Transaction |
 | Parent collection | none |
-| _id pattern | CSR-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 23 (20 required, 3 may be null) |
 | Estimated volume per year | 5,000-20,000 |
@@ -29,28 +29,28 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: CSR-<recordNo> | `"CSR-SML-DS-2026-40"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SML-DS-2026-40"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1081000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"CSR-SML-DS-2026-36"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | customerId | String | Yes | Reference to u_mes_mast_customer._id | `"CUS-SML"` | Reference: u_mes_mast_customer._id |
+| 5 | customerId | String | Yes | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 6 | customerName | String | Yes | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 7 | shipToCode | String | Yes | Ship to code | `"SML-TLG-D4"` |  |
 | 8 | scheduleType | String | Yes | Schedule type | `"Delivery Schedule"` | Forecast; Delivery Schedule; Just In Time Call Off |
 | 9 | customerOrderNo | String | Yes | Customer order number | `"4500218734"` |  |
-| 10 | receivedAt | Date | No (null allowed) | Date and time when the record was received | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
-| 11 | horizonFrom | Date | Yes | Horizon from (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-09-28T18:30:00.000+0000")` |  |
+| 10 | receivedAt | Date | No (null allowed) | Date and time when the record was received | `null` |  |
+| 11 | horizonFrom | Date | Yes | Horizon from (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-09-14T18:30:00.000+0000")` |  |
 | 12 | horizonTo | Date | Yes | Horizon to (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-10-12T18:30:00.000+0000")` |  |
-| 13 | supersedesCustomerScheduleId | String | No (null allowed) | Reference to u_mes_plan_customerSchedule._id: supersedes customer schedule | `"CSR-SML-DS-2026-39"` | Reference: u_mes_plan_customerSchedule._id |
-| 14 | supersedesCustomerScheduleName | String | No (null allowed) | Display value of supersedesCustomerScheduleId, copied from u_mes_plan_customerSchedule.recordNo | `"SML-DS-2026-39"` |  |
+| 13 | supersedesCustomerScheduleId | String | No (null allowed) | Reference to u_mes_plan_customerSchedule._id: supersedes customer schedule | `null` | Reference: u_mes_plan_customerSchedule._id |
+| 14 | supersedesCustomerScheduleName | String | No (null allowed) | Display value of supersedesCustomerScheduleId, copied from u_mes_plan_customerSchedule.recordNo | `null` |  |
 | 15 | erpSalesOrderNo | String | Yes | ERP sales order number | `"0020041877"` |  |
-| 16 | status | String | Yes | Primary lifecycle state of the document | `"Completed"` | Received; Confirmed; Partially Shipped; Completed; Replaced |
+| 16 | status | String | Yes | Primary lifecycle state of the document | `"Received"` | Received; Confirmed; Partially Shipped; Completed; Replaced |
 | 17 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 18 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 19 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 18 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-14T18:30:00.000+0000")` |  |
+| 19 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 20 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 21 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
-| 22 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 21 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-14T18:30:00.000+0000")` |  |
+| 22 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 23 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
@@ -75,4 +75,4 @@ u_mes_plan_customerSchedule, u_mes_plan_customerScheduleLine, u_mes_plan_product
 
 - Validator: 03_design/03_planning_execution/validators/u_mes_plan_customerSchedule.json
 - Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_customerSchedule.js
-- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_customerSchedule.js
+- Sample documents (10): 03_design/03_planning_execution/samples/u_mes_plan_customerSchedule.js

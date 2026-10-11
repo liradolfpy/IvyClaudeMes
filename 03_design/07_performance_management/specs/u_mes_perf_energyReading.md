@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Transaction |
 | Parent collection | none |
-| _id pattern | ENR-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 34 (25 required, 9 may be null) |
 | Estimated volume per year | ~3.5 million |
@@ -25,39 +25,39 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: ENR-<recordNo> | `"ENR-20260929-EM03-0031"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260929-EM03-0031"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1250000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"ENR-2026-000337"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | meterIotDeviceId | String | Yes | Reference to u_mes_syst_iotDevice._id: meter IoT device | `"IOT-EM-03"` | Reference: u_mes_syst_iotDevice._id |
-| 6 | meterIotDeviceName | String | Yes | Display value of meterIotDeviceId, copied from u_mes_syst_iotDevice.name | `"Energy meter, assembly line 1"` |  |
-| 7 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"EQ-TRQ-01-NR1"` | Reference: u_mes_mast_equipment._id |
-| 8 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"DC Nutrunner Station 1"` |  |
-| 9 | lineId | String | No (null allowed) | Reference to u_mes_mast_line._id | `"LN-ASY-01"` | Reference: u_mes_mast_line._id |
-| 10 | lineName | String | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Caliper Assembly Line 1"` |  |
-| 11 | shiftId | String | No (null allowed) | Reference to u_mes_mast_shift._id | `"SH-A"` | Reference: u_mes_mast_shift._id |
+| 5 | meterIotDeviceId | String | Yes | Reference to u_mes_syst_iotDevice._id: meter IoT device | `"1232000000000004"` | Reference: u_mes_syst_iotDevice._id |
+| 6 | meterIotDeviceName | String | Yes | Display value of meterIotDeviceId, copied from u_mes_syst_iotDevice.name | `"Energy meter, surface treatment line"` |  |
+| 7 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 8 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 9 | lineId | String | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 10 | lineName | String | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 11 | shiftId | String | No (null allowed) | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
 | 12 | shiftName | String | No (null allowed) | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 13 | energyTypeId | String | Yes | Reference to u_mes_perf_energyType._id | `"ENT-T-ELEC"` | Reference: u_mes_perf_energyType._id |
+| 13 | energyTypeId | String | Yes | Reference to u_mes_perf_energyType._id | `"1294000000000001"` | Reference: u_mes_perf_energyType._id |
 | 14 | energyTypeName | String | Yes | Display value of energyTypeId, copied from u_mes_perf_energyType.name | `"Electricity"` |  |
-| 15 | intervalStartAt | Date | Yes | Interval start date and time | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 16 | intervalEndAt | Date | Yes | Interval end date and time | `ISODate("2026-09-29T00:45:00.000+0000")` |  |
+| 15 | intervalStartAt | Date | Yes | Interval start date and time | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
+| 16 | intervalEndAt | Date | Yes | Interval end date and time | `ISODate("2026-09-15T00:45:00.000+0000")` |  |
 | 17 | consumption | Decimal128 | Yes | Quantity consumed in the interval, in the unit given by unitOfMeasureId | `NumberDecimal("41.6")` |  |
-| 18 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"UOM-KWH"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 18 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000010"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 19 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Kilowatt hour"` |  |
 | 20 | meterReadingStart | Decimal128 | Yes | Meter reading start | `NumberDecimal("184220.4")` |  |
 | 21 | meterReadingEnd | Decimal128 | Yes | Meter reading end | `NumberDecimal("184262.0")` |  |
 | 22 | demandKw | Decimal128 | No (null allowed) | Demand (kW) | `NumberDecimal("96.5")` |  |
 | 23 | powerFactor | Double | No (null allowed) | Power factor | `Double(0.96)` |  |
 | 24 | costInr | Decimal128 | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
-| 25 | unitsProduced | Int32 | Yes | Units produced | `NumberInt(762)` |  |
+| 25 | unitsProduced | Int32 | Yes | Units produced | `NumberInt(38)` |  |
 | 26 | specificConsumption | Decimal128 | No (null allowed) | Consumption per unit produced | `NumberDecimal("0.0546")` |  |
 | 27 | signalQuality | String | Yes | Signal quality | `"Good"` | Good; Uncertain; Bad |
 | 28 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 29 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 30 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-SYSTEM"` | Reference: u_mes_mast_user._id |
+| 29 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
+| 30 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
 | 31 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 32 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:45:00.000+0000")` |  |
-| 33 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-SYSTEM"` | Reference: u_mes_mast_user._id |
+| 32 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:45:00.000+0000")` |  |
+| 33 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
 | 34 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Indexes
@@ -81,4 +81,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/07_performance_management/validators/u_mes_perf_energyReading.json
 - Indexes: 03_design/07_performance_management/indexes/u_mes_perf_energyReading.js
-- Sample document: 03_design/07_performance_management/samples/u_mes_perf_energyReading.js
+- Sample documents (10): 03_design/07_performance_management/samples/u_mes_perf_energyReading.js

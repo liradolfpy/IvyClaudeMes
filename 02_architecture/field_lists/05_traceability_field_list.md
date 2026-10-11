@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_trac_serialNumber
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SN-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -53,7 +53,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SN-<recordNo>
 
 ## u_mes_trac_genealogyLink
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: GEN-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -99,7 +99,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: GEN-<recordNo>
 
 ## u_mes_trac_componentLotLink
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CLL-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -138,7 +138,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CLL-<recordNo>
 
 ## u_mes_trac_asBuiltRecord
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: ABR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -196,7 +196,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ABR-<recordNo>
 
 ## u_mes_trac_asBuiltRecordComponent
 
-Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id pattern: <asBuiltRecordId>-C<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -225,7 +225,7 @@ Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id p
 
 ## u_mes_trac_asBuiltRecordOperation
 
-Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id pattern: <asBuiltRecordId>-O<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -256,7 +256,7 @@ Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id p
 
 ## u_mes_trac_asBuiltRecordInspectionResult
 
-Kind: relationship | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id pattern: <asBuiltRecordId>-IR<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

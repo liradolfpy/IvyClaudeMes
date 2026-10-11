@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | IFM-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 9 (9 required, 0 may be null) |
 | Estimated volume per year | 10-50 |
@@ -23,12 +23,12 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: IFM-<recordNo> | `"IFM-FRONT-CALIPER"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1271000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"FRONT-CALIPER"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the item family; used as its display value in other collections | `"Front Caliper"` |  |
-| 6 | description | String | Yes | Description of the item family | `"Front Caliper"` |  |
+| 6 | description | String | Yes | Description of the item family | `"Front Caliper (FRONT-CALIPER)"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 8 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
 | 9 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
@@ -52,4 +52,4 @@ u_mes_mast_line.
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_itemFamily.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_itemFamily.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_itemFamily.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_itemFamily.js

@@ -7,8 +7,8 @@
 | Kind | Child |
 | Data class | Master |
 | Parent collection | u_mes_prod_workInstruction |
-| _id pattern | <workInstructionId>-S<nnn> |
-| Display value used by references | title |
+| _id pattern | 16-digit numeric string, unique across the database |
+| Display value used by references | recordNo |
 | Keys | 18 (14 required, 4 may be null) |
 
 ## Structure
@@ -22,19 +22,19 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <workInstructionId>-S<nnn> | `"WI-WI-OP070-001-S001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"WI-OP070-001-S001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1066000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"WI-OP010-001-S01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | workInstructionId | String | Yes | Reference to u_mes_prod_workInstruction._id: the parent document this one belongs to | `"WI-WI-OP070-001"` | Reference: u_mes_prod_workInstruction._id |
-| 6 | workInstructionName | String | Yes | Display value of workInstructionId, copied from u_mes_prod_workInstruction.title | `"Bleed screw tightening - Front caliper LH"` |  |
-| 7 | stepNo | Int32 | Yes | Step number within the parent record | `NumberInt(70)` |  |
-| 8 | title | String | Yes | Title of the work instruction step; used as its display value in other collections | `"Tighten bleed screw"` |  |
-| 9 | instructionText | String | Yes | Instruction text | `"Place the bleed screw in the socket and press both start buttons"` |  |
-| 10 | inputType | String | Yes | Input type | `"Confirmation"` | None; Confirmation; Number; Text; Scan; Photo; Device Value |
-| 11 | expectedValue | Decimal128 | No (null allowed) | Expected value | `NumberDecimal("14.0")` |  |
-| 12 | lowerLimit | Decimal128 | No (null allowed) | Lower limit | `NumberDecimal("12.0")` |  |
-| 13 | upperLimit | Decimal128 | No (null allowed) | Upper limit | `NumberDecimal("16.0")` |  |
+| 5 | workInstructionId | String | Yes | Reference to u_mes_prod_workInstruction._id: the parent document this one belongs to | `"1065000000000001"` | Reference: u_mes_prod_workInstruction._id |
+| 6 | workInstructionName | String | Yes | Display value of workInstructionId, copied from u_mes_prod_workInstruction.title | `"Pouring and die cycle - Caliper body LH"` |  |
+| 7 | stepNo | Int32 | Yes | Step number within the parent record | `NumberInt(10)` |  |
+| 8 | title | String | Yes | Title of the work instruction step | `"Skim the ladle, pour in one continuous stream and start the tilt cycle"` |  |
+| 9 | instructionText | String | Yes | Instruction text | `"Skim the ladle, pour in one continuous stream and start the tilt cycle"` |  |
+| 10 | inputType | String | Yes | Input type | `"None"` | None; Confirmation; Number; Text; Scan; Photo; Device Value |
+| 11 | expectedValue | Decimal128 | No (null allowed) | Expected value | `NumberDecimal("400.0")` |  |
+| 12 | lowerLimit | Decimal128 | No (null allowed) | Lower limit | `NumberDecimal("380.0")` |  |
+| 13 | upperLimit | Decimal128 | No (null allowed) | Upper limit | `NumberDecimal("420.0")` |  |
 | 14 | isMandatory | Boolean | Yes | True when the record is mandatory | `true` |  |
 | 15 | requiresScan | Boolean | Yes | True when scan is required | `true` |  |
 | 16 | caution | String | No (null allowed) | Caution of the work instruction step | `"Do not reuse a bleed screw that has been tightened once"` |  |
@@ -55,4 +55,4 @@ u_mes_prod_workInstructionStepMediaControlledDocument, u_mes_prod_workInstructio
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_workInstructionStep.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_workInstructionStep.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_workInstructionStep.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_workInstructionStep.js

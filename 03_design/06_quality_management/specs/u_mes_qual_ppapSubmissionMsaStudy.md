@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Transaction |
 | Parent collection | u_mes_qual_ppapSubmission |
-| _id pattern | <ppapSubmissionId>-MS<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 16 (16 required, 0 may be null) |
 
@@ -22,21 +22,21 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <ppapSubmissionId>-MS<nnn> | `"PPAP-5110-10-0100-D-L3-MS001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-D-L3-MS001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1188000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"PPAP-5110-10-0100-D-01-MS01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | ppapSubmissionId | String | Yes | Reference to u_mes_qual_ppapSubmission._id: the parent document this one belongs to | `"PPAP-5110-10-0100-D-L3"` | Reference: u_mes_qual_ppapSubmission._id |
-| 6 | ppapSubmissionName | String | Yes | Display value of ppapSubmissionId, copied from u_mes_qual_ppapSubmission.recordNo | `"5110-10-0100-D-L3"` |  |
+| 5 | ppapSubmissionId | String | Yes | Reference to u_mes_qual_ppapSubmission._id: the parent document this one belongs to | `"1186000000000001"` | Reference: u_mes_qual_ppapSubmission._id |
+| 6 | ppapSubmissionName | String | Yes | Display value of ppapSubmissionId, copied from u_mes_qual_ppapSubmission.recordNo | `"PPAP-5110-10-0100-D-01"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | msaStudyId | String | Yes | Reference to u_mes_qual_msaStudy._id | `"MSA-2026-0009"` | Reference: u_mes_qual_msaStudy._id |
-| 9 | msaStudyName | String | Yes | Display value of msaStudyId, copied from u_mes_qual_msaStudy.recordNo | `"2026-0009"` |  |
+| 8 | msaStudyId | String | Yes | Reference to u_mes_qual_msaStudy._id | `"1192000000000010"` | Reference: u_mes_qual_msaStudy._id |
+| 9 | msaStudyName | String | Yes | Display value of msaStudyId, copied from u_mes_qual_msaStudy.recordNo | `"MSA-2026-0018"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 11 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 12 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 11 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:33:00.000+0000")` |  |
+| 12 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 13 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 14 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 15 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 14 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:33:00.000+0000")` |  |
+| 15 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 16 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Indexes
@@ -54,4 +54,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_ppapSubmissionMsaStudy.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_ppapSubmissionMsaStudy.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_ppapSubmissionMsaStudy.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_ppapSubmissionMsaStudy.js

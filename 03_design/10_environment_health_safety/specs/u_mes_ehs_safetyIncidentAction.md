@@ -7,8 +7,8 @@
 | Kind | Child |
 | Data class | Transaction |
 | Parent collection | u_mes_ehs_safetyIncident |
-| _id pattern | <safetyIncidentId>-A<nnn> |
-| Display value used by references | description |
+| _id pattern | 16-digit numeric string, unique across the database |
+| Display value used by references | recordNo |
 | Keys | 19 (18 required, 1 may be null) |
 
 ## Structure
@@ -22,24 +22,24 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <safetyIncidentId>-A<nnn> | `"SAF-2026-0003-A001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"2026-0003-A001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1255000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SAF-2026-0003-A01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | safetyIncidentId | String | Yes | Reference to u_mes_ehs_safetyIncident._id: the parent document this one belongs to | `"SAF-2026-0003"` | Reference: u_mes_ehs_safetyIncident._id |
-| 6 | safetyIncidentName | String | Yes | Display value of safetyIncidentId, copied from u_mes_ehs_safetyIncident.title | `"Coolant spill near HMC-01 walkway"` |  |
+| 5 | safetyIncidentId | String | Yes | Reference to u_mes_ehs_safetyIncident._id: the parent document this one belongs to | `"1253000000000001"` | Reference: u_mes_ehs_safetyIncident._id |
+| 6 | safetyIncidentName | String | Yes | Display value of safetyIncidentId, copied from u_mes_ehs_safetyIncident.title | `"Molten metal splash near casting machine 1"` |  |
 | 7 | actionNo | Int32 | Yes | Action number | `NumberInt(1)` |  |
-| 8 | description | String | Yes | Description of the safety incident action | `"Replace coolant hose and add drip tray under the HMC-01 coupling"` |  |
-| 9 | ownerUserId | String | Yes | Reference to u_mes_mast_user._id: owner user | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 8 | description | String | Yes | Description of the safety incident action | `"Brief all shifts on the incident at the start-of-shift meeting"` |  |
+| 9 | ownerUserId | String | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 10 | ownerUserName | String | Yes | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 11 | dueAt | Date | Yes | Due date and time | `ISODate("2026-10-01T00:30:00.000+0000")` |  |
-| 12 | completedAt | Date | No (null allowed) | Date and time when the record was completed | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
+| 11 | dueAt | Date | Yes | Due date and time | `ISODate("2026-09-17T00:33:00.000+0000")` |  |
+| 12 | completedAt | Date | No (null allowed) | Date and time when the record was completed | `ISODate("2026-09-15T00:33:30.000+0000")` |  |
 | 13 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 14 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 15 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 14 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:33:00.000+0000")` |  |
+| 15 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 16 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 17 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-10-01T00:30:00.000+0000")` |  |
-| 18 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 17 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-17T00:33:00.000+0000")` |  |
+| 18 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 19 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Indexes
@@ -57,4 +57,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/10_environment_health_safety/validators/u_mes_ehs_safetyIncidentAction.json
 - Indexes: 03_design/10_environment_health_safety/indexes/u_mes_ehs_safetyIncidentAction.js
-- Sample document: 03_design/10_environment_health_safety/samples/u_mes_ehs_safetyIncidentAction.js
+- Sample documents (10): 03_design/10_environment_health_safety/samples/u_mes_ehs_safetyIncidentAction.js

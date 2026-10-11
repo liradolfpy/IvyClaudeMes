@@ -24,7 +24,7 @@
       "properties": {
         "_id": {
           "bsonType": "string",
-          "description": "Unique identifier of the document. Pattern: <billOfProcessStepId>-PP<nnn>"
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
         },
         "recordNo": {
           "bsonType": "string",
@@ -52,7 +52,7 @@
         },
         "name": {
           "bsonType": "string",
-          "description": "Name of the bill of process step process parameter; used as its display value in other collections"
+          "description": "Name of the bill of process step process parameter"
         },
         "nominal": {
           "bsonType": "decimal",

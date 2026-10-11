@@ -7,7 +7,7 @@
 | Kind | Child |
 | Data class | Master |
 | Parent collection | u_mes_prod_routingStep |
-| _id pattern | <routingStepId>-NS<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 9 (9 required, 0 may be null) |
 
@@ -22,13 +22,13 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <routingStepId>-NS<nnn> | `"RTG-5110-10-0100-R01-S001-NS001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-R01-S001-NS001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1056000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-R01-S01-NS01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | routingStepId | String | Yes | Reference to u_mes_prod_routingStep._id: the parent document this one belongs to | `"RTG-5110-10-0100-R01-S001"` | Reference: u_mes_prod_routingStep._id |
-| 6 | routingStepName | String | Yes | Display value of routingStepId, copied from u_mes_prod_routingStep.recordNo | `"5110-10-0100-R01-S001"` |  |
-| 7 | stepNo | Int32 | Yes | Step number within the parent record | `NumberInt(70)` |  |
+| 5 | routingStepId | String | Yes | Reference to u_mes_prod_routingStep._id: the parent document this one belongs to | `"1054000000000001"` | Reference: u_mes_prod_routingStep._id |
+| 6 | routingStepName | String | Yes | Display value of routingStepId, copied from u_mes_prod_routingStep.recordNo | `"5110-10-0100-R01-S01"` |  |
+| 7 | stepNo | Int32 | Yes | Step number within the parent record | `NumberInt(10)` |  |
 | 8 | nextStepCondition | String | Yes | Next step condition | `"Result OK"` | Result OK; Result Not OK; Rework Complete; Always |
 | 9 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
@@ -46,4 +46,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_routingStepNextStep.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_routingStepNextStep.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_routingStepNextStep.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_routingStepNextStep.js

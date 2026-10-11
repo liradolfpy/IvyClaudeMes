@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_matl_storageLocation
 
-Kind: entity | Data class: master | Parent: - | _id pattern: LOC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: LOC-<recordNo>
 
 ## u_mes_matl_inventoryBalance
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: INV-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -77,7 +77,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: INV-<recordNo>
 
 ## u_mes_matl_materialMovement
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: MM-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -132,7 +132,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: MM-<recordNo>
 
 ## u_mes_matl_goodsReceipt
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: GRN-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -164,7 +164,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: GRN-<recordNo>
 
 ## u_mes_matl_goodsReceiptLine
 
-Kind: child | Data class: transaction | Parent: u_mes_matl_goodsReceipt | _id pattern: <goodsReceiptId>-L<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_matl_goodsReceipt | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -200,7 +200,7 @@ Kind: child | Data class: transaction | Parent: u_mes_matl_goodsReceipt | _id pa
 
 ## u_mes_matl_goodsReceiptLineInspectionResult
 
-Kind: relationship | Data class: transaction | Parent: u_mes_matl_goodsReceiptLine | _id pattern: <goodsReceiptLineId>-IR<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_matl_goodsReceiptLine | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -223,7 +223,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_matl_goodsReceiptLi
 
 ## u_mes_matl_kit
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: KIT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -258,7 +258,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: KIT-<recordNo>
 
 ## u_mes_matl_kitLine
 
-Kind: child | Data class: transaction | Parent: u_mes_matl_kit | _id pattern: <kitId>-L<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_matl_kit | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -288,7 +288,7 @@ Kind: child | Data class: transaction | Parent: u_mes_matl_kit | _id pattern: <k
 
 ## u_mes_matl_materialRequest
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: MRQ-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -334,7 +334,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: MRQ-<recordNo>
 
 ## u_mes_matl_materialConsumption
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CON-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -384,7 +384,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CON-<recordNo>
 
 ## u_mes_matl_packagingSpecification
 
-Kind: entity | Data class: master | Parent: - | _id pattern: PKS-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -419,7 +419,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: PKS-<recordNo>
 
 ## u_mes_matl_packagingSpecificationLevel
 
-Kind: child | Data class: master | Parent: u_mes_matl_packagingSpecification | _id pattern: <packagingSpecificationId>-L<nnn>
+Kind: child | Data class: master | Parent: u_mes_matl_packagingSpecification | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -440,7 +440,7 @@ Kind: child | Data class: master | Parent: u_mes_matl_packagingSpecification | _
 
 ## u_mes_matl_labelTemplate
 
-Kind: entity | Data class: master | Parent: - | _id pattern: LBT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -466,7 +466,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: LBT-<recordNo>
 
 ## u_mes_matl_labelTemplateField
 
-Kind: child | Data class: master | Parent: u_mes_matl_labelTemplate | _id pattern: <labelTemplateId>-F<nnn>
+Kind: child | Data class: master | Parent: u_mes_matl_labelTemplate | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -487,7 +487,7 @@ Kind: child | Data class: master | Parent: u_mes_matl_labelTemplate | _id patter
 
 ## u_mes_matl_label
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: LBL-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -535,7 +535,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: LBL-<recordNo>
 
 ## u_mes_matl_shipment
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SHP-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -581,7 +581,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SHP-<recordNo>
 
 ## u_mes_matl_shipmentLine
 
-Kind: child | Data class: transaction | Parent: u_mes_matl_shipment | _id pattern: <shipmentId>-L<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_matl_shipment | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -606,7 +606,7 @@ Kind: child | Data class: transaction | Parent: u_mes_matl_shipment | _id patter
 
 ## u_mes_matl_shipmentLineContainer
 
-Kind: relationship | Data class: transaction | Parent: u_mes_matl_shipmentLine | _id pattern: <shipmentLineId>-C<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_matl_shipmentLine | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -629,7 +629,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_matl_shipmentLine |
 
 ## u_mes_matl_shipmentLineLot
 
-Kind: relationship | Data class: transaction | Parent: u_mes_matl_shipmentLine | _id pattern: <shipmentLineId>-L<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_matl_shipmentLine | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -652,7 +652,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_matl_shipmentLine |
 
 ## u_mes_matl_movementType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: MVT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -671,7 +671,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: MVT-<recordNo>
 
 ## u_mes_matl_stockStatus
 
-Kind: entity | Data class: master | Parent: - | _id pattern: STS-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -689,7 +689,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: STS-<recordNo>
 
 ## u_mes_matl_packType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: PKT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

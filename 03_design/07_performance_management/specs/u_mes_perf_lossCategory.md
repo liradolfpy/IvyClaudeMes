@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | LSC-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 11 (11 required, 0 may be null) |
 | Estimated volume per year | 10-50 |
@@ -23,12 +23,12 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: LSC-<recordNo> | `"LSC-BREAKDOWN"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1286000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"BREAKDOWN"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the loss category; used as its display value in other collections | `"Breakdown"` |  |
-| 6 | description | String | Yes | Description of the loss category | `"Unplanned equipment failure"` |  |
+| 6 | description | String | Yes | Description of the loss category | `"Breakdown (BREAKDOWN)"` |  |
 | 7 | oeeImpact | String | Yes | OEE impact | `"Availability"` | Availability; Performance; Quality; None |
 | 8 | sixBigLossNo | Int32 | Yes | Number of the loss in the six big losses of TPM (1 = breakdown) | `NumberInt(1)` |  |
 | 9 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
@@ -54,4 +54,4 @@ u_mes_perf_reasonCode, u_mes_perf_oeeRecordLoss.
 
 - Validator: 03_design/07_performance_management/validators/u_mes_perf_lossCategory.json
 - Indexes: 03_design/07_performance_management/indexes/u_mes_perf_lossCategory.js
-- Sample document: 03_design/07_performance_management/samples/u_mes_perf_lossCategory.js
+- Sample documents (10): 03_design/07_performance_management/samples/u_mes_perf_lossCategory.js

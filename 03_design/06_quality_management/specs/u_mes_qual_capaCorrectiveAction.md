@@ -7,8 +7,8 @@
 | Kind | Child |
 | Data class | Transaction |
 | Parent collection | u_mes_qual_capa |
-| _id pattern | <capaId>-CA2<nnn> |
-| Display value used by references | description |
+| _id pattern | 16-digit numeric string, unique across the database |
+| Display value used by references | recordNo |
 | Keys | 18 (18 required, 0 may be null) |
 
 ## Structure
@@ -22,23 +22,23 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <capaId>-CA2<nnn> | `"CAPA-2026-0014-CA2001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"2026-0014-CA2001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1180000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"CAPA-2026-0014-CA201"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | capaId | String | Yes | Reference to u_mes_qual_capa._id: the parent document this one belongs to | `"CAPA-2026-0014"` | Reference: u_mes_qual_capa._id |
-| 6 | capaName | String | Yes | Display value of capaId, copied from u_mes_qual_capa.title | `"8D - Leak at piston seal"` |  |
+| 5 | capaId | String | Yes | Reference to u_mes_qual_capa._id: the parent document this one belongs to | `"1176000000000001"` | Reference: u_mes_qual_capa._id |
+| 6 | capaName | String | Yes | Display value of capaId, copied from u_mes_qual_capa.title | `"8D - Shrinkage porosity in bridge section"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | description | String | Yes | Description of the CAPA corrective action | `"Enforce tool life interlock on grooving insert at 400 pieces"` |  |
-| 9 | ownerUserId | String | Yes | Reference to u_mes_mast_user._id: owner user | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 8 | description | String | Yes | Description of the CAPA corrective action | `"Ejector pin polished and die coat thickness corrected"` |  |
+| 9 | ownerUserId | String | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 10 | ownerUserName | String | Yes | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 11 | dueAt | Date | Yes | Due date and time | `ISODate("2026-10-01T00:30:00.000+0000")` |  |
+| 11 | dueAt | Date | Yes | Due date and time | `ISODate("2026-09-17T00:33:00.000+0000")` |  |
 | 12 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 13 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 14 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 13 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:33:00.000+0000")` |  |
+| 14 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 15 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 16 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-10-01T00:30:00.000+0000")` |  |
-| 17 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 16 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-17T00:33:00.000+0000")` |  |
+| 17 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 18 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Indexes
@@ -56,4 +56,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_capaCorrectiveAction.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_capaCorrectiveAction.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_capaCorrectiveAction.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_capaCorrectiveAction.js

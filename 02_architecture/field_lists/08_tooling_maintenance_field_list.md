@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_maint_maintenancePlan
 
-Kind: entity | Data class: master | Parent: - | _id pattern: MP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: MP-<recordNo>
 
 ## u_mes_maint_maintenancePlanTask
 
-Kind: child | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pattern: <maintenancePlanId>-T<nnn>
+Kind: child | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -56,7 +56,7 @@ Kind: child | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pat
 
 ## u_mes_maint_maintenancePlanRequiredSkill
 
-Kind: relationship | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pattern: <maintenancePlanId>-RS<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -73,7 +73,7 @@ Kind: relationship | Data class: master | Parent: u_mes_maint_maintenancePlan | 
 
 ## u_mes_maint_maintenancePlanRequiredSparePart
 
-Kind: child | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pattern: <maintenancePlanId>-RSP<nnn>
+Kind: child | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -91,7 +91,7 @@ Kind: child | Data class: master | Parent: u_mes_maint_maintenancePlan | _id pat
 
 ## u_mes_maint_maintenanceWorkOrder
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: MWO-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -141,7 +141,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: MWO-<recordNo>
 
 ## u_mes_maint_maintenanceWorkOrderAssignedToUser
 
-Kind: relationship | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder | _id pattern: <maintenanceWorkOrderId>-ATU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -164,7 +164,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_maint_maintenanceWo
 
 ## u_mes_maint_maintenanceWorkOrderLabour
 
-Kind: child | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder | _id pattern: <maintenanceWorkOrderId>-L<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -188,7 +188,7 @@ Kind: child | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder
 
 ## u_mes_maint_maintenanceWorkOrderUsedSparePart
 
-Kind: child | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder | _id pattern: <maintenanceWorkOrderId>-USP<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -213,7 +213,7 @@ Kind: child | Data class: transaction | Parent: u_mes_maint_maintenanceWorkOrder
 
 ## u_mes_maint_sparePart
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SPR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -246,7 +246,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SPR-<recordNo>
 
 ## u_mes_maint_sparePartUsedOnEquipment
 
-Kind: relationship | Data class: master | Parent: u_mes_maint_sparePart | _id pattern: <sparePartId>-UOE<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_maint_sparePart | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -263,7 +263,7 @@ Kind: relationship | Data class: master | Parent: u_mes_maint_sparePart | _id pa
 
 ## u_mes_maint_tool
 
-Kind: entity | Data class: master | Parent: - | _id pattern: TL-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -303,7 +303,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: TL-<recordNo>
 
 ## u_mes_maint_toolItem
 
-Kind: relationship | Data class: master | Parent: u_mes_maint_tool | _id pattern: <toolId>-I<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_maint_tool | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -320,7 +320,7 @@ Kind: relationship | Data class: master | Parent: u_mes_maint_tool | _id pattern
 
 ## u_mes_maint_toolLifeRecord
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: TLR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -360,7 +360,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: TLR-<recordNo>
 
 ## u_mes_maint_toolType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: TLT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

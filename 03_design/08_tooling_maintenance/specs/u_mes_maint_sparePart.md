@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | SPR-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | description |
 | Keys | 26 (20 required, 6 may be null) |
 | Estimated volume per year | 2,000-8,000 |
@@ -29,29 +29,29 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: SPR-<recordNo> | `"SPR-SP-004417"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1224000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SP-004417"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | description | String | Yes | Description of the spare part | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
-| 6 | category | String | Yes | Category of the spare part | `"Mechanical"` | Mechanical; Electrical; Process; Material; Quality; Organisation; Planned |
-| 7 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"MFR-ATLAS-COPCO"` | Reference: u_mes_mast_manufacturer._id |
+| 6 | category | String | Yes | Category of the spare part | `"Electrical"` | Mechanical; Electrical; Process; Material; Quality; Organisation; Planned |
+| 7 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000007"` | Reference: u_mes_mast_manufacturer._id |
 | 8 | manufacturerName | String | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"Atlas Copco"` |  |
 | 9 | manufacturerPartNo | String | Yes | Manufacturer part number | `"4220 3311 10"` |  |
-| 10 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `"SUP-S1042"` | Reference: u_mes_mast_supplier._id |
-| 11 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Konkan Precision Pistons Pvt. Ltd."` |  |
-| 12 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"UOM-EA"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 10 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `"1038000000000003"` | Reference: u_mes_mast_supplier._id |
+| 11 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Bharat Fasteners and Fittings Ltd."` |  |
+| 12 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 13 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 14 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"LOC-LS-ASY-01"` | Reference: u_mes_matl_storageLocation._id |
-| 15 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, Assembly 1"` |  |
+| 14 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |
+| 15 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, assembly 1"` |  |
 | 16 | stockQuantity | Decimal128 | Yes | Stock quantity | `NumberDecimal("6")` |  |
 | 17 | minimumQuantity | Decimal128 | Yes | Minimum quantity | `NumberDecimal("2")` |  |
 | 18 | reorderQuantity | Decimal128 | Yes | Reorder quantity | `NumberDecimal("4")` |  |
 | 19 | leadTimeDays | Int32 | Yes | Lead time (days) | `NumberInt(21)` |  |
 | 20 | unitCostInr | Decimal128 | Yes | Unit cost (Indian rupees) | `NumberDecimal("4320.00")` |  |
 | 21 | criticality | String | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
-| 22 | lastIssuedAt | Date | No (null allowed) | Last issued date and time | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
-| 23 | lastReceivedAt | Date | No (null allowed) | Last received date and time | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 22 | lastIssuedAt | Date | No (null allowed) | Last issued date and time | `null` |  |
+| 23 | lastReceivedAt | Date | No (null allowed) | Last received date and time | `null` |  |
 | 24 | isInsuranceSpare | Boolean | Yes | True when the record is insurance spare | `false` |  |
 | 25 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Obsolete |
 | 26 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
@@ -79,4 +79,4 @@ u_mes_maint_maintenancePlanRequiredSparePart, u_mes_maint_maintenanceWorkOrderUs
 
 - Validator: 03_design/08_tooling_maintenance/validators/u_mes_maint_sparePart.json
 - Indexes: 03_design/08_tooling_maintenance/indexes/u_mes_maint_sparePart.js
-- Sample document: 03_design/08_tooling_maintenance/samples/u_mes_maint_sparePart.js
+- Sample documents (10): 03_design/08_tooling_maintenance/samples/u_mes_maint_sparePart.js

@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Transaction |
 | Parent collection | none |
-| _id pattern | CHG-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 40 (27 required, 13 may be null) |
 | Estimated volume per year | ~3,000 |
@@ -32,45 +32,45 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: CHG-<recordNo> | `"CHG-20260930-ASY-01-01"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260930-ASY-01-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1102000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"CHG-2026-000307"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | lineId | String | Yes | Reference to u_mes_mast_line._id | `"LN-ASY-01"` | Reference: u_mes_mast_line._id |
-| 6 | lineName | String | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Caliper Assembly Line 1"` |  |
-| 7 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"WC-TRQ-01"` | Reference: u_mes_mast_workCenter._id |
-| 8 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
-| 9 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"EQ-TRQ-01-NR1"` | Reference: u_mes_mast_equipment._id |
-| 10 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"DC Nutrunner Station 1"` |  |
-| 11 | fromProductionOrderId | String | No (null allowed) | Reference to u_mes_plan_productionOrder._id: from production order | `"PO-1000409"` | Reference: u_mes_plan_productionOrder._id |
-| 12 | fromProductionOrderName | String | No (null allowed) | Display value of fromProductionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"1000409"` |  |
-| 13 | toProductionOrderId | String | Yes | Reference to u_mes_plan_productionOrder._id: to production order | `"PO-1000412"` | Reference: u_mes_plan_productionOrder._id |
-| 14 | toProductionOrderName | String | Yes | Display value of toProductionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"1000412"` |  |
-| 15 | fromItemId | String | No (null allowed) | Reference to u_mes_prod_item._id: from item | `"ITM-5110-30-0010"` | Reference: u_mes_prod_item._id |
-| 16 | fromItemName | String | No (null allowed) | Display value of fromItemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
-| 17 | toItemId | String | Yes | Reference to u_mes_prod_item._id: to item | `"ITM-5110-10-0100"` | Reference: u_mes_prod_item._id |
-| 18 | toItemName | String | Yes | Display value of toItemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 5 | lineId | String | Yes | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 6 | lineName | String | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 7 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 8 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 9 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 10 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 11 | fromProductionOrderId | String | No (null allowed) | Reference to u_mes_plan_productionOrder._id: from production order | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
+| 12 | fromProductionOrderName | String | No (null allowed) | Display value of fromProductionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
+| 13 | toProductionOrderId | String | Yes | Reference to u_mes_plan_productionOrder._id: to production order | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
+| 14 | toProductionOrderName | String | Yes | Display value of toProductionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
+| 15 | fromItemId | String | No (null allowed) | Reference to u_mes_prod_item._id: from item | `"1043000000000002"` | Reference: u_mes_prod_item._id |
+| 16 | fromItemName | String | No (null allowed) | Display value of fromItemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, RH"` |  |
+| 17 | toItemId | String | Yes | Reference to u_mes_prod_item._id: to item | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 18 | toItemName | String | Yes | Display value of toItemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
 | 19 | changeoverType | String | Yes | Changeover type | `"Variant Change"` | Variant Change; Item Change; Tool Change; Die Change |
-| 20 | plannedStartAt | Date | Yes | Planned start date and time | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 21 | startedAt | Date | Yes | Date and time when the record was started | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 22 | completedAt | Date | No (null allowed) | Date and time when the record was completed | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
+| 20 | plannedStartAt | Date | Yes | Planned start date and time | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
+| 21 | startedAt | Date | Yes | Date and time when the record was started | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
+| 22 | completedAt | Date | No (null allowed) | Date and time when the record was completed | `null` |  |
 | 23 | plannedMinutes | Int32 | Yes | Planned (minutes) | `NumberInt(20)` |  |
 | 24 | actualMinutes | Int32 | Yes | Actual (minutes) | `NumberInt(27)` |  |
-| 25 | recipeId | String | No (null allowed) | Reference to u_mes_prod_recipe._id | `"RCP-TRQ-PRG-07"` | Reference: u_mes_prod_recipe._id |
-| 26 | recipeName | String | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Bleed screw M10 torque program"` |  |
-| 27 | firstOffCheckSheetResultId | String | Yes | Reference to u_mes_qual_checkSheetResult._id: first off check sheet result | `"CKR-20260929-A-TRQ-01"` | Reference: u_mes_qual_checkSheetResult._id |
-| 28 | firstOffCheckSheetResultName | String | Yes | Display value of firstOffCheckSheetResultId, copied from u_mes_qual_checkSheetResult.recordNo | `"20260929-A-TRQ-01"` |  |
-| 29 | firstOffApprovedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'first off approved' | `"USR-10019"` | Reference: u_mes_mast_user._id |
-| 30 | firstOffApprovedBy | String | No (null allowed) | Display name of the user in firstOffApprovedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 31 | firstOffApprovedAt | Date | No (null allowed) | First off approved date and time | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
+| 25 | recipeId | String | No (null allowed) | Reference to u_mes_prod_recipe._id | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
+| 26 | recipeName | String | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
+| 27 | firstOffCheckSheetResultId | String | Yes | Reference to u_mes_qual_checkSheetResult._id: first off check sheet result | `"1148000000000001"` | Reference: u_mes_qual_checkSheetResult._id |
+| 28 | firstOffCheckSheetResultName | String | Yes | Display value of firstOffCheckSheetResultId, copied from u_mes_qual_checkSheetResult.recordNo | `"CKR-2026-000479"` |  |
+| 29 | firstOffApprovedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'first off approved' | `null` | Reference: u_mes_mast_user._id |
+| 30 | firstOffApprovedBy | String | No (null allowed) | Display name of the user in firstOffApprovedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 31 | firstOffApprovedAt | Date | No (null allowed) | First off approved date and time | `null` |  |
 | 32 | lossReason | String | No (null allowed) | Loss reason | `"Socket for RH variant not at point of use"` |  |
-| 33 | status | String | Yes | Primary lifecycle state of the document | `"Completed"` | Planned; In Progress; Awaiting First Off Approval; Completed |
+| 33 | status | String | Yes | Primary lifecycle state of the document | `"Planned"` | Planned; In Progress; Awaiting First Off Approval; Completed |
 | 34 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 35 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 36 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 35 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
+| 36 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 37 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 38 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
-| 39 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10231"` | Reference: u_mes_mast_user._id |
+| 38 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
+| 39 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 40 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
@@ -98,4 +98,4 @@ u_mes_plan_changeoverStep, u_mes_plan_changeoverRemovedTool, u_mes_plan_changeov
 
 - Validator: 03_design/03_planning_execution/validators/u_mes_plan_changeover.json
 - Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_changeover.js
-- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_changeover.js
+- Sample documents (10): 03_design/03_planning_execution/samples/u_mes_plan_changeover.js

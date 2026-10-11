@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Master |
 | Parent collection | u_mes_prod_billOfMaterialComponent |
-| _id pattern | <billOfMaterialComponentId>-AI<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 10 (10 required, 0 may be null) |
 
@@ -22,15 +22,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <billOfMaterialComponentId>-AI<nnn> | `"BOM-5110-10-0100-D-01-C001-AI001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-D-01-C001-AI001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1050000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"BOM-5110-10-0100-01-C01-AI01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | billOfMaterialComponentId | String | Yes | Reference to u_mes_prod_billOfMaterialComponent._id: the parent document this one belongs to | `"BOM-5110-10-0100-D-01-C001"` | Reference: u_mes_prod_billOfMaterialComponent._id |
-| 6 | billOfMaterialComponentName | String | Yes | Display value of billOfMaterialComponentId, copied from u_mes_prod_billOfMaterialComponent.recordNo | `"5110-10-0100-D-01-C001"` |  |
+| 5 | billOfMaterialComponentId | String | Yes | Reference to u_mes_prod_billOfMaterialComponent._id: the parent document this one belongs to | `"1048000000000001"` | Reference: u_mes_prod_billOfMaterialComponent._id |
+| 6 | billOfMaterialComponentName | String | Yes | Display value of billOfMaterialComponentId, copied from u_mes_prod_billOfMaterialComponent.recordNo | `"BOM-5110-10-0100-01-C01"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | alternateItemId | String | Yes | Reference to u_mes_prod_item._id: alternate item | `"ITM-5110-30-0010"` | Reference: u_mes_prod_item._id |
-| 9 | alternateItemName | String | Yes | Display value of alternateItemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
+| 8 | alternateItemId | String | Yes | Reference to u_mes_prod_item._id: alternate item | `"1043000000000010"` | Reference: u_mes_prod_item._id |
+| 9 | alternateItemName | String | Yes | Display value of alternateItemId, copied from u_mes_prod_item.description | `"Aluminium alloy ingot AlSi7Mg0.3 (A356)"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
@@ -48,4 +48,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_billOfMaterialComponentAlternateItem.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_billOfMaterialComponentAlternateItem.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_billOfMaterialComponentAlternateItem.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_billOfMaterialComponentAlternateItem.js

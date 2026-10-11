@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_perf_reasonCode
 
-Kind: entity | Data class: master | Parent: - | _id pattern: RSN-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -36,7 +36,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: RSN-<recordNo>
 
 ## u_mes_perf_equipmentState
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: EST-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -73,7 +73,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: EST-<recordNo>
 
 ## u_mes_perf_downtimeEvent
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: DT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -127,7 +127,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: DT-<recordNo>
 
 ## u_mes_perf_downtimeEventComment
 
-Kind: child | Data class: transaction | Parent: u_mes_perf_downtimeEvent | _id pattern: <downtimeEventId>-C<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_perf_downtimeEvent | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -152,7 +152,7 @@ Kind: child | Data class: transaction | Parent: u_mes_perf_downtimeEvent | _id p
 
 ## u_mes_perf_productionCount
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: PC-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -193,7 +193,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: PC-<recordNo>
 
 ## u_mes_perf_oeeRecord
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: OEE-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -242,7 +242,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: OEE-<recordNo>
 
 ## u_mes_perf_oeeRecordLoss
 
-Kind: child | Data class: transaction | Parent: u_mes_perf_oeeRecord | _id pattern: <oeeRecordId>-L<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_perf_oeeRecord | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -269,7 +269,7 @@ Kind: child | Data class: transaction | Parent: u_mes_perf_oeeRecord | _id patte
 
 ## u_mes_perf_processTag
 
-Kind: entity | Data class: master | Parent: - | _id pattern: TAG-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -304,7 +304,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: TAG-<recordNo>
 
 ## u_mes_perf_processReading
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: PD-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -335,7 +335,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: PD-<recordNo>
 
 ## u_mes_perf_alarm
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: ALM-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -378,7 +378,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ALM-<recordNo>
 
 ## u_mes_perf_torqueResult
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: TRQ-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -431,7 +431,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: TRQ-<recordNo>
 
 ## u_mes_perf_leakTestResult
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: LKT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -473,7 +473,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: LKT-<recordNo>
 
 ## u_mes_perf_leakTestResultStage
 
-Kind: child | Data class: transaction | Parent: u_mes_perf_leakTestResult | _id pattern: <leakTestResultId>-S<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_perf_leakTestResult | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -504,7 +504,7 @@ Kind: child | Data class: transaction | Parent: u_mes_perf_leakTestResult | _id 
 
 ## u_mes_perf_energyReading
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: ENR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -545,7 +545,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ENR-<recordNo>
 
 ## u_mes_perf_lossCategory
 
-Kind: entity | Data class: master | Parent: - | _id pattern: LSC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -563,7 +563,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: LSC-<recordNo>
 
 ## u_mes_perf_reasonCategory
 
-Kind: entity | Data class: master | Parent: - | _id pattern: RCT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -579,7 +579,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: RCT-<recordNo>
 
 ## u_mes_perf_energyType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ENT-T-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

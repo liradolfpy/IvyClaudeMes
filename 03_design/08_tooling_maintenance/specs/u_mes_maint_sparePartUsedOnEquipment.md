@@ -7,7 +7,7 @@
 | Kind | Relationship |
 | Data class | Master |
 | Parent collection | u_mes_maint_sparePart |
-| _id pattern | <sparePartId>-UOE<nnn> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 10 (10 required, 0 may be null) |
 
@@ -22,14 +22,14 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: <sparePartId>-UOE<nnn> | `"SPR-SP-004417-UOE001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SP-004417-UOE001"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1225000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SP-004417-UOE01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | sparePartId | String | Yes | Reference to u_mes_maint_sparePart._id: the parent document this one belongs to | `"SPR-SP-004417"` | Reference: u_mes_maint_sparePart._id |
+| 5 | sparePartId | String | Yes | Reference to u_mes_maint_sparePart._id: the parent document this one belongs to | `"1224000000000001"` | Reference: u_mes_maint_sparePart._id |
 | 6 | sparePartName | String | Yes | Display value of sparePartId, copied from u_mes_maint_sparePart.description | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
 | 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | usedOnEquipmentId | String | Yes | Reference to u_mes_mast_equipment._id: used on equipment | `"EQ-TRQ-01-NR1"` | Reference: u_mes_mast_equipment._id |
+| 8 | usedOnEquipmentId | String | Yes | Reference to u_mes_mast_equipment._id: used on equipment | `"1013000000000007"` | Reference: u_mes_mast_equipment._id |
 | 9 | usedOnEquipmentName | String | Yes | Display value of usedOnEquipmentId, copied from u_mes_mast_equipment.name | `"DC Nutrunner Station 1"` |  |
 | 10 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
@@ -48,4 +48,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/08_tooling_maintenance/validators/u_mes_maint_sparePartUsedOnEquipment.json
 - Indexes: 03_design/08_tooling_maintenance/indexes/u_mes_maint_sparePartUsedOnEquipment.js
-- Sample document: 03_design/08_tooling_maintenance/samples/u_mes_maint_sparePartUsedOnEquipment.js
+- Sample documents (10): 03_design/08_tooling_maintenance/samples/u_mes_maint_sparePartUsedOnEquipment.js

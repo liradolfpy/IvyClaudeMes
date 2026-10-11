@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | RCP-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 25 (16 required, 9 may be null) |
 | Estimated volume per year | 500-3,000 |
@@ -30,29 +30,29 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: RCP-<recordNo> | `"RCP-TRQ-PRG-07"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"TRQ-PRG-07"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1073000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-5110-LH-01"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the recipe; used as its display value in other collections | `"Bleed screw M10 torque program"` |  |
-| 6 | equipmentId | String | Yes | Reference to u_mes_mast_equipment._id | `"EQ-TRQ-01-NR1"` | Reference: u_mes_mast_equipment._id |
-| 7 | equipmentName | String | Yes | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"DC Nutrunner Station 1"` |  |
-| 8 | itemId | String | No (null allowed) | Reference to u_mes_prod_item._id | `"ITM-5110-10-0100"` | Reference: u_mes_prod_item._id |
-| 9 | itemName | String | No (null allowed) | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
-| 10 | operationId | String | Yes | Reference to u_mes_prod_operation._id | `"OPN-OP070"` | Reference: u_mes_prod_operation._id |
-| 11 | operationName | String | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Bleed screw torque"` |  |
-| 12 | version | Int32 | Yes | Version of the recipe | `NumberInt(3)` |  |
-| 13 | recipeType | String | Yes | Recipe type | `"Tightening Program"` | Die Casting Parameters; Furnace Profile; CNC Program; Washing Program; Anodising Program; Tightening Program; Leak Test Program; Laser Marking Program |
-| 14 | programNo | String | Yes | Program number | `"PSET-07"` |  |
-| 15 | effectiveFrom | Date | Yes | Effective from (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 5 | name | String | Yes | Name of the recipe; used as its display value in other collections | `"Caliper body LH casting parameters"` |  |
+| 6 | equipmentId | String | Yes | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 7 | equipmentName | String | Yes | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 8 | itemId | String | No (null allowed) | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 9 | itemName | String | No (null allowed) | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 10 | operationId | String | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 11 | operationName | String | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 12 | version | Int32 | Yes | Version of the recipe | `NumberInt(1)` |  |
+| 13 | recipeType | String | Yes | Recipe type | `"Die Casting Parameters"` | Die Casting Parameters; Furnace Profile; CNC Program; Washing Program; Anodising Program; Tightening Program; Leak Test Program; Laser Marking Program |
+| 14 | programNo | String | Yes | Program number | `"GDC-P12"` |  |
+| 15 | effectiveFrom | Date | Yes | Effective from (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
 | 16 | effectiveTo | Date | No (null allowed) | Effective to (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2027-03-31T18:29:59.000+0000")` |  |
-| 17 | engineeringChangeId | String | No (null allowed) | Reference to u_mes_prod_engineeringChange._id | `"ECN-2026-0031"` | Reference: u_mes_prod_engineeringChange._id |
-| 18 | engineeringChangeName | String | No (null allowed) | Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title | `"Bleed screw torque window revised"` |  |
+| 17 | engineeringChangeId | String | No (null allowed) | Reference to u_mes_prod_engineeringChange._id | `"1076000000000001"` | Reference: u_mes_prod_engineeringChange._id |
+| 18 | engineeringChangeName | String | No (null allowed) | Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title | `"Bleed screw torque window revised to 14 +/- 2 N.m"` |  |
 | 19 | checksum | String | Yes | Checksum of the parameter set used to detect an unapproved change at the controller | `"9f2c4a1be07d53c6"` |  |
-| 20 | approvedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"USR-10019"` | Reference: u_mes_mast_user._id |
-| 21 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 22 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
-| 23 | lastDownloadedAt | Date | No (null allowed) | Last downloaded date and time | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
+| 20 | approvedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
+| 21 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 22 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `null` |  |
+| 23 | lastDownloadedAt | Date | No (null allowed) | Last downloaded date and time | `null` |  |
 | 24 | status | String | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
 | 25 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
@@ -79,4 +79,4 @@ u_mes_prod_billOfProcessStep, u_mes_prod_recipeParameter, u_mes_prod_recipeStage
 
 - Validator: 03_design/02_product_definition/validators/u_mes_prod_recipe.json
 - Indexes: 03_design/02_product_definition/indexes/u_mes_prod_recipe.js
-- Sample document: 03_design/02_product_definition/samples/u_mes_prod_recipe.js
+- Sample documents (10): 03_design/02_product_definition/samples/u_mes_prod_recipe.js

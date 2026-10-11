@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_mast_enterprise
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ENT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -39,7 +39,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ENT-<recordNo>
 
 ## u_mes_mast_enterpriseContact
 
-Kind: child | Data class: master | Parent: u_mes_mast_enterprise | _id pattern: <enterpriseId>-C<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_enterprise | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -58,7 +58,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_enterprise | _id pattern: 
 
 ## u_mes_mast_site
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SITE-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -95,7 +95,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SITE-<recordNo>
 
 ## u_mes_mast_siteCertificate
 
-Kind: child | Data class: master | Parent: u_mes_mast_site | _id pattern: <siteId>-C<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_site | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -114,7 +114,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_site | _id pattern: <siteI
 
 ## u_mes_mast_area
 
-Kind: entity | Data class: master | Parent: - | _id pattern: AR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -138,7 +138,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: AR-<recordNo>
 
 ## u_mes_mast_line
 
-Kind: entity | Data class: master | Parent: - | _id pattern: LN-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -167,7 +167,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: LN-<recordNo>
 
 ## u_mes_mast_lineDefaultShift
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_line | _id pattern: <lineId>-DS<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_line | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -184,7 +184,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_line | _id pattern:
 
 ## u_mes_mast_lineIdealRate
 
-Kind: child | Data class: master | Parent: u_mes_mast_line | _id pattern: <lineId>-IR<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_line | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -203,7 +203,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_line | _id pattern: <lineI
 
 ## u_mes_mast_workCenter
 
-Kind: entity | Data class: master | Parent: - | _id pattern: WC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -234,7 +234,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: WC-<recordNo>
 
 ## u_mes_mast_workCenterEquipment
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pattern: <workCenterId>-E<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -251,7 +251,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pa
 
 ## u_mes_mast_workCenterOperation
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pattern: <workCenterId>-O<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -268,7 +268,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pa
 
 ## u_mes_mast_workCenterRequiresSkill
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pattern: <workCenterId>-RS<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -285,7 +285,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pa
 
 ## u_mes_mast_equipment
 
-Kind: entity | Data class: master | Parent: - | _id pattern: EQ-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -333,7 +333,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: EQ-<recordNo>
 
 ## u_mes_mast_equipmentIotDevice
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_equipment | _id pattern: <equipmentId>-ID<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_equipment | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -350,7 +350,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_equipment | _id pat
 
 ## u_mes_mast_shift
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SH-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -371,7 +371,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SH-<recordNo>
 
 ## u_mes_mast_shiftBreak
 
-Kind: child | Data class: master | Parent: u_mes_mast_shift | _id pattern: <shiftId>-B<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_shift | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -390,7 +390,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_shift | _id pattern: <shif
 
 ## u_mes_mast_shiftWorkingDay
 
-Kind: valueList | Data class: master | Parent: u_mes_mast_shift | _id pattern: <shiftId>-WD<nnn>
+Kind: valueList | Data class: master | Parent: u_mes_mast_shift | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -406,7 +406,7 @@ Kind: valueList | Data class: master | Parent: u_mes_mast_shift | _id pattern: <
 
 ## u_mes_mast_workCalendar
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CAL-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -424,7 +424,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CAL-<recordNo>
 
 ## u_mes_mast_workCalendarLine
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: <workCalendarId>-L<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -441,7 +441,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id 
 
 ## u_mes_mast_workCalendarShift
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: <workCalendarId>-S<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -458,7 +458,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id 
 
 ## u_mes_mast_workCalendarWeeklyOffDay
 
-Kind: valueList | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: <workCalendarId>-WOD<nnn>
+Kind: valueList | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -474,7 +474,7 @@ Kind: valueList | Data class: master | Parent: u_mes_mast_workCalendar | _id pat
 
 ## u_mes_mast_workCalendarException
 
-Kind: child | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: <workCalendarId>-E<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -493,7 +493,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern
 
 ## u_mes_mast_workCalendarExceptionShift
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendarException | _id pattern: <workCalendarExceptionId>-S<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendarException | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -510,7 +510,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendarExcepti
 
 ## u_mes_mast_shiftRoster
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: ROS-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -542,7 +542,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: ROS-<recordNo>
 
 ## u_mes_mast_shiftRosterAssignment
 
-Kind: child | Data class: transaction | Parent: u_mes_mast_shiftRoster | _id pattern: <shiftRosterId>-A<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_mast_shiftRoster | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -571,7 +571,7 @@ Kind: child | Data class: transaction | Parent: u_mes_mast_shiftRoster | _id pat
 
 ## u_mes_mast_role
 
-Kind: entity | Data class: master | Parent: - | _id pattern: ROLE-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -590,7 +590,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: ROLE-<recordNo>
 
 ## u_mes_mast_rolePermission
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern: <roleId>-P<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -607,7 +607,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern:
 
 ## u_mes_mast_roleSignatureMeaning
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern: <roleId>-SM<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -624,7 +624,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern:
 
 ## u_mes_mast_user
 
-Kind: entity | Data class: master | Parent: - | _id pattern: USR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -664,7 +664,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: USR-<recordNo>
 
 ## u_mes_mast_userRole
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_user | _id pattern: <userId>-R<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_user | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -681,7 +681,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_user | _id pattern:
 
 ## u_mes_mast_skill
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SKL-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -704,7 +704,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SKL-<recordNo>
 
 ## u_mes_mast_skillOperation
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_skill | _id pattern: <skillId>-O<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_skill | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -721,7 +721,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_skill | _id pattern
 
 ## u_mes_mast_skillLevelScale
 
-Kind: child | Data class: master | Parent: u_mes_mast_skill | _id pattern: <skillId>-LS<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_skill | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -738,7 +738,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_skill | _id pattern: <skil
 
 ## u_mes_mast_skillCertification
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CERT-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -776,7 +776,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CERT-<recordNo
 
 ## u_mes_mast_customer
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CUS-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -809,7 +809,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CUS-<recordNo>
 
 ## u_mes_mast_customerShipTo
 
-Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: <customerId>-ST<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -832,7 +832,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: <c
 
 ## u_mes_mast_customerContact
 
-Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: <customerId>-C<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -851,7 +851,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: <c
 
 ## u_mes_mast_supplier
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SUP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -884,7 +884,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SUP-<recordNo>
 
 ## u_mes_mast_supplierContact
 
-Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: <supplierId>-C<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -903,7 +903,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: <s
 
 ## u_mes_mast_supplierCertificate
 
-Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: <supplierId>-C2<nnn>
+Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -921,7 +921,7 @@ Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: <s
 
 ## u_mes_mast_supplierSuppliedItem
 
-Kind: relationship | Data class: master | Parent: u_mes_mast_supplier | _id pattern: <supplierId>-SI<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_mast_supplier | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -938,7 +938,7 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_supplier | _id patt
 
 ## u_mes_mast_unitOfMeasure
 
-Kind: entity | Data class: master | Parent: - | _id pattern: UOM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -962,7 +962,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: UOM-<recordNo>
 
 ## u_mes_mast_department
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DEPT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -984,7 +984,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DEPT-<recordNo>
 
 ## u_mes_mast_designation
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DSG-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1004,7 +1004,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DSG-<recordNo>
 
 ## u_mes_mast_employmentType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: EMT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1021,7 +1021,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: EMT-<recordNo>
 
 ## u_mes_mast_costCenter
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1039,7 +1039,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CC-<recordNo>
 
 ## u_mes_mast_manufacturer
 
-Kind: entity | Data class: master | Parent: - | _id pattern: MFR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1058,7 +1058,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: MFR-<recordNo>
 
 ## u_mes_mast_equipmentType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: EQT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1074,7 +1074,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: EQT-<recordNo>
 
 ## u_mes_mast_skillCategory
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SKC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1090,7 +1090,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SKC-<recordNo>
 
 ## u_mes_mast_permission
 
-Kind: entity | Data class: master | Parent: - | _id pattern: PRM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1108,7 +1108,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: PRM-<recordNo>
 
 ## u_mes_mast_signatureMeaning
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SGM-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1124,7 +1124,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SGM-<recordNo>
 
 ## u_mes_mast_currency
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CUR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1142,7 +1142,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CUR-<recordNo>
 
 ## u_mes_mast_country
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CTY-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1159,7 +1159,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CTY-<recordNo>
 
 ## u_mes_mast_language
 
-Kind: entity | Data class: master | Parent: - | _id pattern: LNG-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1175,7 +1175,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: LNG-<recordNo>
 
 ## u_mes_mast_transporter
 
-Kind: entity | Data class: master | Parent: - | _id pattern: TRP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1193,7 +1193,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: TRP-<recordNo>
 
 ## u_mes_mast_commodity
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CMD-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

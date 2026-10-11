@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Transaction |
 | Parent collection | none |
-| _id pattern | IR-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 54 (32 required, 22 may be null) |
 | Estimated volume per year | ~12 million |
@@ -23,59 +23,59 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: IR-<recordNo> | `"IR-20260929-000342"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"20260929-000342"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1150000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"IR-2026-000162"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | inspectionPlanId | String | No (null allowed) | Reference to u_mes_qual_inspectionPlan._id | `"IP-OP030-INP-01"` | Reference: u_mes_qual_inspectionPlan._id |
-| 6 | inspectionPlanName | String | No (null allowed) | Display value of inspectionPlanId, copied from u_mes_qual_inspectionPlan.name | `"Machining in-process inspection, caliper body LH"` |  |
+| 5 | inspectionPlanId | String | No (null allowed) | Reference to u_mes_qual_inspectionPlan._id | `"1142000000000001"` | Reference: u_mes_qual_inspectionPlan._id |
+| 6 | inspectionPlanName | String | No (null allowed) | Display value of inspectionPlanId, copied from u_mes_qual_inspectionPlan.name | `"In-process inspection, gravity die casting"` |  |
 | 7 | planLineNo | Int32 | Yes | Plan line number | `NumberInt(10)` |  |
-| 8 | characteristicId | String | Yes | Reference to u_mes_qual_characteristic._id | `"CHR-5110-20-0110-C012"` | Reference: u_mes_qual_characteristic._id |
-| 9 | characteristicName | String | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Piston bore diameter"` |  |
-| 10 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"ITM-5110-20-0110"` | Reference: u_mes_prod_item._id |
-| 11 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body, LH, machined and anodised"` |  |
-| 12 | wipUnitId | String | No (null allowed) | Reference to u_mes_plan_wipUnit._id | `"WU-U260929A0184"` | Reference: u_mes_plan_wipUnit._id |
-| 13 | wipUnitName | String | No (null allowed) | Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo | `"U260929A0184"` |  |
-| 14 | lotId | String | No (null allowed) | Reference to u_mes_plan_lot._id | `"LOT-L260928-GDC-014"` | Reference: u_mes_plan_lot._id |
-| 15 | lotName | String | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260928-GDC-014"` |  |
-| 16 | goodsReceiptId | String | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `"GRN-2026-000918"` | Reference: u_mes_matl_goodsReceipt._id |
-| 17 | goodsReceiptName | String | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `"2026-000918"` |  |
-| 18 | operationExecutionId | String | No (null allowed) | Reference to u_mes_plan_operationExecution._id | `"OPX-20260929-000184"` | Reference: u_mes_plan_operationExecution._id |
-| 19 | operationExecutionName | String | No (null allowed) | Display value of operationExecutionId, copied from u_mes_plan_operationExecution.recordNo | `"20260929-000184"` |  |
-| 20 | operationId | String | Yes | Reference to u_mes_prod_operation._id | `"OPN-OP030"` | Reference: u_mes_prod_operation._id |
-| 21 | operationName | String | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"CNC machining"` |  |
-| 22 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"WC-CNC-01"` | Reference: u_mes_mast_workCenter._id |
-| 23 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"CNC Machining Cell 1"` |  |
+| 8 | characteristicId | String | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000001"` | Reference: u_mes_qual_characteristic._id |
+| 9 | characteristicName | String | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Casting wall thickness at bridge"` |  |
+| 10 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 11 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 12 | wipUnitId | String | No (null allowed) | Reference to u_mes_plan_wipUnit._id | `null` | Reference: u_mes_plan_wipUnit._id |
+| 13 | wipUnitName | String | No (null allowed) | Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo | `null` |  |
+| 14 | lotId | String | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000001"` | Reference: u_mes_plan_lot._id |
+| 15 | lotName | String | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260915-GDC-014"` |  |
+| 16 | goodsReceiptId | String | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `null` | Reference: u_mes_matl_goodsReceipt._id |
+| 17 | goodsReceiptName | String | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `null` |  |
+| 18 | operationExecutionId | String | No (null allowed) | Reference to u_mes_plan_operationExecution._id | `"1090000000000001"` | Reference: u_mes_plan_operationExecution._id |
+| 19 | operationExecutionName | String | No (null allowed) | Display value of operationExecutionId, copied from u_mes_plan_operationExecution.recordNo | `"OPX-2026-000376"` |  |
+| 20 | operationId | String | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 21 | operationName | String | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 22 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 23 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
 | 24 | inspectionType | String | Yes | Inspection type | `"In Process"` | Incoming; In Process; First Off; Final; Audit |
 | 25 | sampleNo | Int32 | Yes | Sample number | `NumberInt(3)` |  |
-| 26 | measuredValue | Decimal128 | No (null allowed) | Measured value | `NumberDecimal("54.018")` |  |
-| 27 | attributeResult | String | No (null allowed) | Attribute result | `"Pass"` | Pass; Fail |
-| 28 | nominal | Decimal128 | Yes | Nominal of the inspection result | `NumberDecimal("14.0")` |  |
-| 29 | lowerSpecLimit | Decimal128 | No (null allowed) | Lower spec limit | `NumberDecimal("54.000")` |  |
-| 30 | upperSpecLimit | Decimal128 | No (null allowed) | Upper spec limit | `NumberDecimal("54.046")` |  |
-| 31 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"UOM-MM"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 26 | measuredValue | Decimal128 | No (null allowed) | Measured value | `NumberDecimal("8.05")` |  |
+| 27 | attributeResult | String | No (null allowed) | Attribute result | `null` | Pass; Fail |
+| 28 | nominal | Decimal128 | Yes | Nominal of the inspection result | `NumberDecimal("8.00")` |  |
+| 29 | lowerSpecLimit | Decimal128 | No (null allowed) | Lower spec limit | `NumberDecimal("7.50")` |  |
+| 30 | upperSpecLimit | Decimal128 | No (null allowed) | Upper spec limit | `NumberDecimal("8.50")` |  |
+| 31 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000003"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 32 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Millimetre"` |  |
-| 33 | deviation | Decimal128 | No (null allowed) | Measured value minus nominal | `NumberDecimal("0.018")` |  |
+| 33 | deviation | Decimal128 | No (null allowed) | Measured value minus nominal | `NumberDecimal("0.05")` |  |
 | 34 | result | String | Yes | Result of the inspection result | `"OK"` | OK; Not OK |
-| 35 | gaugeId | String | No (null allowed) | Reference to u_mes_qual_gauge._id | `"GAU-G-BG-054"` | Reference: u_mes_qual_gauge._id |
-| 36 | gaugeName | String | No (null allowed) | Display value of gaugeId, copied from u_mes_qual_gauge.name | `"Bore gauge 50-75 mm"` |  |
-| 37 | measuredById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'measured' | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 35 | gaugeId | String | No (null allowed) | Reference to u_mes_qual_gauge._id | `"1189000000000001"` | Reference: u_mes_qual_gauge._id |
+| 36 | gaugeName | String | No (null allowed) | Display value of gaugeId, copied from u_mes_qual_gauge.name | `"Ultrasonic thickness gauge 1-25 mm"` |  |
+| 37 | measuredById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'measured' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 38 | measuredBy | String | Yes | Display name of the user in measuredById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 39 | measuredAt | Date | Yes | Date and time when the record was measured | `ISODate("2026-09-29T00:30:34.000+0000")` |  |
+| 39 | measuredAt | Date | Yes | Date and time when the record was measured | `ISODate("2026-09-17T01:22:50.000+0000")` |  |
 | 40 | source | String | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
-| 41 | defectCodeId | String | No (null allowed) | Reference to u_mes_qual_defectCode._id | `"DEF-LK01"` | Reference: u_mes_qual_defectCode._id |
-| 42 | defectCodeName | String | No (null allowed) | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Leak at piston seal"` |  |
-| 43 | nonconformanceId | String | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `"NCR-2026-000118"` | Reference: u_mes_qual_nonconformance._id |
-| 44 | nonconformanceName | String | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `"Leak test failures on caliper LH"` |  |
+| 41 | defectCodeId | String | No (null allowed) | Reference to u_mes_qual_defectCode._id | `null` | Reference: u_mes_qual_defectCode._id |
+| 42 | defectCodeName | String | No (null allowed) | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `null` |  |
+| 43 | nonconformanceId | String | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
+| 44 | nonconformanceName | String | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
 | 45 | overridden | Boolean | Yes | True when: overridden | `false` |  |
 | 46 | remarks | String | No (null allowed) | Remarks of the inspection result | `"No abnormality observed"` |  |
 | 47 | status | String | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
 | 48 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 49 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 50 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 49 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-17T01:22:20.000+0000")` |  |
+| 50 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 51 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 52 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-29T00:30:34.000+0000")` |  |
-| 53 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 52 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-17T01:22:50.000+0000")` |  |
+| 53 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 54 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
@@ -103,4 +103,4 @@ u_mes_matl_goodsReceiptLineInspectionResult, u_mes_trac_asBuiltRecordInspectionR
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_inspectionResult.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_inspectionResult.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_inspectionResult.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_inspectionResult.js

@@ -21,7 +21,7 @@
       "properties": {
         "_id": {
           "bsonType": "string",
-          "description": "Unique identifier of the document. Pattern: CUR-<recordNo>"
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
         },
         "recordNo": {
           "bsonType": "string",

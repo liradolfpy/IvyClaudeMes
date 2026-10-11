@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Transaction |
 | Parent collection | none |
-| _id pattern | HLD-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
 | Keys | 33 (20 required, 13 may be null) |
 | Estimated volume per year | ~2,000 |
@@ -29,38 +29,38 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: HLD-<recordNo> | `"HLD-2026-000021"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"2026-000021"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1172000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"HLD-2026-000021"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | holdType | String | Yes | Hold type | `"Quality"` | Quality; Customer; Engineering; Supplier |
-| 6 | reasonText | String | No (null allowed) | Reason text | `"Replenishment against kanban call"` |  |
-| 7 | reasonCodeId | String | No (null allowed) | Reference to u_mes_perf_reasonCode._id | `"RSN-MECH-NR-02"` | Reference: u_mes_perf_reasonCode._id |
-| 8 | reasonCodeName | String | No (null allowed) | Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name | `"Nutrunner socket worn"` |  |
-| 9 | nonconformanceId | String | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `"NCR-2026-000118"` | Reference: u_mes_qual_nonconformance._id |
-| 10 | nonconformanceName | String | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `"Leak test failures on caliper LH"` |  |
-| 11 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"ITM-5110-10-0100"` | Reference: u_mes_prod_item._id |
+| 5 | holdType | String | Yes | Hold type | `"Supplier"` | Quality; Customer; Engineering; Supplier |
+| 6 | reasonText | String | No (null allowed) | Reason text | `"Hold pending disposition of nonconformance: Seal cut at piston insertion, supplier lot ES-260905-11"` |  |
+| 7 | reasonCodeId | String | No (null allowed) | Reference to u_mes_perf_reasonCode._id | `"1203000000000006"` | Reference: u_mes_perf_reasonCode._id |
+| 8 | reasonCodeName | String | No (null allowed) | Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name | `"Seal feeder jam"` |  |
+| 9 | nonconformanceId | String | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `"1160000000000006"` | Reference: u_mes_qual_nonconformance._id |
+| 10 | nonconformanceName | String | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `"Seal cut at piston insertion, supplier lot ES-260905-11"` |  |
+| 11 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
 | 12 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
 | 13 | totalQuantity | Int32 | Yes | Total quantity | `NumberInt(480)` |  |
-| 14 | quarantineLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: quarantine location | `"LOC-LS-ASY-01"` | Reference: u_mes_matl_storageLocation._id |
-| 15 | quarantineLocationName | String | No (null allowed) | Display value of quarantineLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, Assembly 1"` |  |
-| 16 | placedById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'placed' | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 14 | quarantineLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: quarantine location | `"1112000000000007"` | Reference: u_mes_matl_storageLocation._id |
+| 15 | quarantineLocationName | String | No (null allowed) | Display value of quarantineLocationId, copied from u_mes_matl_storageLocation.name | `"Quarantine cage, quality"` |  |
+| 16 | placedById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'placed' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 17 | placedBy | String | Yes | Display name of the user in placedById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 18 | placedAt | Date | Yes | Date and time when the record was placed | `ISODate("2026-09-29T00:35:00.000+0000")` |  |
-| 19 | expectedReleaseAt | Date | No (null allowed) | Expected release date and time | `ISODate("2026-10-01T00:30:00.000+0000")` |  |
-| 20 | releasedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'released' | `"USR-10019"` | Reference: u_mes_mast_user._id |
-| 21 | releasedBy | String | No (null allowed) | Display name of the user in releasedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 22 | releasedAt | Date | No (null allowed) | Date and time when the record was released | `ISODate("2026-09-29T02:10:00.000+0000")` |  |
-| 23 | releaseDecision | String | No (null allowed) | Release decision | `"Released"` | Released; Rework; Scrap; Return To Supplier |
+| 18 | placedAt | Date | Yes | Date and time when the record was placed | `ISODate("2026-09-19T17:56:10.000+0000")` |  |
+| 19 | expectedReleaseAt | Date | No (null allowed) | Expected release date and time | `null` |  |
+| 20 | releasedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'released' | `null` | Reference: u_mes_mast_user._id |
+| 21 | releasedBy | String | No (null allowed) | Display name of the user in releasedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 22 | releasedAt | Date | No (null allowed) | Date and time when the record was released | `null` |  |
+| 23 | releaseDecision | String | No (null allowed) | Release decision | `null` | Released; Rework; Scrap; Return To Supplier |
 | 24 | releaseComment | String | No (null allowed) | Release comment | `"100 percent leak retest completed, 2 units reworked"` |  |
 | 25 | customerNotified | Boolean | Yes | True when: customer notified | `true` |  |
-| 26 | status | String | Yes | Primary lifecycle state of the document | `"Released"` | Active; Partially Released; Released |
+| 26 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Partially Released; Released |
 | 27 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 28 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-29T00:30:00.000+0000")` |  |
-| 29 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 28 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-19T17:55:40.000+0000")` |  |
+| 29 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 30 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 31 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-10-01T00:30:00.000+0000")` |  |
-| 32 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"USR-10087"` | Reference: u_mes_mast_user._id |
+| 31 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-19T17:56:10.000+0000")` |  |
+| 32 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 33 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
@@ -87,4 +87,4 @@ u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_qual_nonconformance, u_mes_qual_qualit
 
 - Validator: 03_design/06_quality_management/validators/u_mes_qual_qualityHold.json
 - Indexes: 03_design/06_quality_management/indexes/u_mes_qual_qualityHold.js
-- Sample document: 03_design/06_quality_management/samples/u_mes_qual_qualityHold.js
+- Sample documents (10): 03_design/06_quality_management/samples/u_mes_qual_qualityHold.js

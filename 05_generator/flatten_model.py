@@ -151,6 +151,7 @@ def build(src,entity,keys,parents,top):
     dup=[k for k in ks if ks.count(k)>1]
     if dup: PROBLEMS.append((cname,"DUP",sorted(set(dup))))
     disp=next((d for d in ("name","title","description","fullName") if d in ks),"recordNo")
+    if not top: disp="recordNo"
     COLS[cname]=dict(collection=cname,module=mod,moduleName=MODNAME[mod],entity=entity,sourceConcept=src,kind="entity" if top else "child",dataClass="master" if master else "transaction",parent=("%s_%s_%s"%(APP,mod,parents[-1]) if parents else None),displayField=disp,statusValues=st,fields=[dict(key=a,type=b,ref=c) for a,b,c in f])
     for g,sub in groups.items():
         if sub==[""]:

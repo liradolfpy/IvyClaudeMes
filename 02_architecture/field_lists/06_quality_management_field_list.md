@@ -6,7 +6,7 @@ Shell constructors: String = "text"; Date = ISODate("YYYY-MM-DDTHH:mm:ss.sss+000
 
 ## u_mes_qual_characteristic
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CHR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -45,7 +45,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CHR-<recordNo>
 
 ## u_mes_qual_controlPlan
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -78,7 +78,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CP-<recordNo>
 
 ## u_mes_qual_controlPlanCoreTeamUser
 
-Kind: relationship | Data class: master | Parent: u_mes_qual_controlPlan | _id pattern: <controlPlanId>-CTU<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_qual_controlPlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -95,7 +95,7 @@ Kind: relationship | Data class: master | Parent: u_mes_qual_controlPlan | _id p
 
 ## u_mes_qual_controlPlanLine
 
-Kind: child | Data class: master | Parent: u_mes_qual_controlPlan | _id pattern: <controlPlanId>-L<nnn>
+Kind: child | Data class: master | Parent: u_mes_qual_controlPlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -126,7 +126,7 @@ Kind: child | Data class: master | Parent: u_mes_qual_controlPlan | _id pattern:
 
 ## u_mes_qual_inspectionPlan
 
-Kind: entity | Data class: master | Parent: - | _id pattern: IP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -159,7 +159,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: IP-<recordNo>
 
 ## u_mes_qual_inspectionPlanLine
 
-Kind: child | Data class: master | Parent: u_mes_qual_inspectionPlan | _id pattern: <inspectionPlanId>-L<nnn>
+Kind: child | Data class: master | Parent: u_mes_qual_inspectionPlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -186,7 +186,7 @@ Kind: child | Data class: master | Parent: u_mes_qual_inspectionPlan | _id patte
 
 ## u_mes_qual_samplingPlan
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SMP-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -211,7 +211,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SMP-<recordNo>
 
 ## u_mes_qual_samplingPlanSizeRow
 
-Kind: child | Data class: master | Parent: u_mes_qual_samplingPlan | _id pattern: <samplingPlanId>-SR<nnn>
+Kind: child | Data class: master | Parent: u_mes_qual_samplingPlan | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -231,7 +231,7 @@ Kind: child | Data class: master | Parent: u_mes_qual_samplingPlan | _id pattern
 
 ## u_mes_qual_checkSheet
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CKS-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -262,7 +262,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: CKS-<recordNo>
 
 ## u_mes_qual_checkSheetItem
 
-Kind: child | Data class: master | Parent: u_mes_qual_checkSheet | _id pattern: <checkSheetId>-I<nnn>
+Kind: child | Data class: master | Parent: u_mes_qual_checkSheet | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -285,7 +285,7 @@ Kind: child | Data class: master | Parent: u_mes_qual_checkSheet | _id pattern: 
 
 ## u_mes_qual_checkSheetResult
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CKR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -328,7 +328,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CKR-<recordNo>
 
 ## u_mes_qual_checkSheetResultAnswer
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_checkSheetResult | _id pattern: <checkSheetResultId>-A<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_checkSheetResult | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -353,7 +353,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_checkSheetResult | _i
 
 ## u_mes_qual_inspectionResult
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: IR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -414,7 +414,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: IR-<recordNo>
 
 ## u_mes_qual_spcChart
 
-Kind: entity | Data class: master | Parent: - | _id pattern: SPC-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -450,7 +450,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: SPC-<recordNo>
 
 ## u_mes_qual_spcChartControlLimit
 
-Kind: child | Data class: master | Parent: u_mes_qual_spcChart | _id pattern: <spcChartId>-CL<nnn>
+Kind: child | Data class: master | Parent: u_mes_qual_spcChart | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -473,7 +473,7 @@ Kind: child | Data class: master | Parent: u_mes_qual_spcChart | _id pattern: <s
 
 ## u_mes_qual_spcChartRule
 
-Kind: valueList | Data class: master | Parent: u_mes_qual_spcChart | _id pattern: <spcChartId>-R<nnn>
+Kind: valueList | Data class: master | Parent: u_mes_qual_spcChart | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -489,7 +489,7 @@ Kind: valueList | Data class: master | Parent: u_mes_qual_spcChart | _id pattern
 
 ## u_mes_qual_spcSample
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SPS-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -532,7 +532,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SPS-<recordNo>
 
 ## u_mes_qual_spcSampleReading
 
-Kind: valueList | Data class: transaction | Parent: u_mes_qual_spcSample | _id pattern: <spcSampleId>-R<nnn>
+Kind: valueList | Data class: transaction | Parent: u_mes_qual_spcSample | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -554,7 +554,7 @@ Kind: valueList | Data class: transaction | Parent: u_mes_qual_spcSample | _id p
 
 ## u_mes_qual_spcSampleInspectionResult
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_spcSample | _id pattern: <spcSampleId>-IR<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_spcSample | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -577,7 +577,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_spcSample | _i
 
 ## u_mes_qual_spcSampleViolation
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_spcSample | _id pattern: <spcSampleId>-V<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_spcSample | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -600,7 +600,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_spcSample | _id patte
 
 ## u_mes_qual_defectCode
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DEF-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -628,7 +628,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DEF-<recordNo>
 
 ## u_mes_qual_defectCodeApplicableOperation
 
-Kind: relationship | Data class: master | Parent: u_mes_qual_defectCode | _id pattern: <defectCodeId>-AO<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_qual_defectCode | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -645,7 +645,7 @@ Kind: relationship | Data class: master | Parent: u_mes_qual_defectCode | _id pa
 
 ## u_mes_qual_nonconformance
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: NCR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -697,7 +697,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: NCR-<recordNo>
 
 ## u_mes_qual_nonconformanceAffectedObject
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-AO<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -727,7 +727,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_nonconformance | _id 
 
 ## u_mes_qual_nonconformanceContainmentAction
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-CA<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -752,7 +752,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_nonconformance | _id 
 
 ## u_mes_qual_nonconformanceInspectionResult
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-IR<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -775,7 +775,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance
 
 ## u_mes_qual_nonconformanceReworkOrder
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-RO<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -798,7 +798,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance
 
 ## u_mes_qual_nonconformanceScrapRecord
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-SR<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -821,7 +821,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance
 
 ## u_mes_qual_nonconformancePhotoControlledDocument
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-PCD<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -844,7 +844,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance
 
 ## u_mes_qual_nonconformanceMrbUser
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: <nonconformanceId>-MU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -867,7 +867,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_nonconformance
 
 ## u_mes_qual_reworkOrder
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: RWK-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -913,7 +913,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: RWK-<recordNo>
 
 ## u_mes_qual_reworkOrderWipUnit
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_reworkOrder | _id pattern: <reworkOrderId>-WU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_reworkOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -936,7 +936,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_reworkOrder | 
 
 ## u_mes_qual_reworkOrderStep
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_reworkOrder | _id pattern: <reworkOrderId>-S<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_reworkOrder | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -963,7 +963,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_reworkOrder | _id pat
 
 ## u_mes_qual_scrapRecord
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: SCR-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1016,7 +1016,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: SCR-<recordNo>
 
 ## u_mes_qual_qualityHold
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: HLD-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1056,7 +1056,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: HLD-<recordNo>
 
 ## u_mes_qual_qualityHoldHeldObject
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_qualityHold | _id pattern: <qualityHoldId>-HO<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_qualityHold | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1083,7 +1083,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_qualityHold | _id pat
 
 ## u_mes_qual_deviationPermit
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: DEV-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1128,7 +1128,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: DEV-<recordNo>
 
 ## u_mes_qual_deviationPermitApproval
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_deviationPermit | _id pattern: <deviationPermitId>-A<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_deviationPermit | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1154,7 +1154,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_deviationPermit | _id
 
 ## u_mes_qual_capa
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CAPA-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1203,7 +1203,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CAPA-<recordNo
 
 ## u_mes_qual_capaNonconformance
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <capaId>-N<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1226,7 +1226,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_capa | _id pat
 
 ## u_mes_qual_capaTeamMember
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <capaId>-TM<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1250,7 +1250,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <
 
 ## u_mes_qual_capaContainmentAction
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <capaId>-CA<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1275,7 +1275,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <
 
 ## u_mes_qual_capaCorrectiveAction
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <capaId>-CA2<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1300,7 +1300,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <
 
 ## u_mes_qual_capaImplementationAction
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <capaId>-IA<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1326,7 +1326,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <
 
 ## u_mes_qual_capaControlledDocument
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: <capaId>-CD<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_capa | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1349,7 +1349,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_capa | _id pat
 
 ## u_mes_qual_pfmea
 
-Kind: entity | Data class: master | Parent: - | _id pattern: FMEA-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1375,7 +1375,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: FMEA-<recordNo>
 
 ## u_mes_qual_pfmeaCoreTeamUser
 
-Kind: relationship | Data class: master | Parent: u_mes_qual_pfmea | _id pattern: <pfmeaId>-CTU<nnn>
+Kind: relationship | Data class: master | Parent: u_mes_qual_pfmea | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1392,7 +1392,7 @@ Kind: relationship | Data class: master | Parent: u_mes_qual_pfmea | _id pattern
 
 ## u_mes_qual_pfmeaLine
 
-Kind: child | Data class: master | Parent: u_mes_qual_pfmea | _id pattern: <pfmeaId>-L<nnn>
+Kind: child | Data class: master | Parent: u_mes_qual_pfmea | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1431,7 +1431,7 @@ Kind: child | Data class: master | Parent: u_mes_qual_pfmea | _id pattern: <pfme
 
 ## u_mes_qual_ppapSubmission
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: PPAP-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1473,7 +1473,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: PPAP-<recordNo
 
 ## u_mes_qual_ppapSubmissionElement
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_ppapSubmission | _id pattern: <ppapSubmissionId>-E<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_ppapSubmission | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1499,7 +1499,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_ppapSubmission | _id 
 
 ## u_mes_qual_ppapSubmissionMsaStudy
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_ppapSubmission | _id pattern: <ppapSubmissionId>-MS<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_ppapSubmission | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1522,7 +1522,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_ppapSubmission
 
 ## u_mes_qual_gauge
 
-Kind: entity | Data class: master | Parent: - | _id pattern: GAU-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1566,7 +1566,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: GAU-<recordNo>
 
 ## u_mes_qual_gaugeCalibration
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: GCAL-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1608,7 +1608,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: GCAL-<recordNo
 
 ## u_mes_qual_gaugeCalibrationReading
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_gaugeCalibration | _id pattern: <gaugeCalibrationId>-R<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_gaugeCalibration | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1634,7 +1634,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_gaugeCalibration | _i
 
 ## u_mes_qual_msaStudy
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: MSA-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1682,7 +1682,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: MSA-<recordNo>
 
 ## u_mes_qual_msaStudyAppraiserUser
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_msaStudy | _id pattern: <msaStudyId>-AU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_msaStudy | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1705,7 +1705,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_msaStudy | _id
 
 ## u_mes_qual_msaStudyTrial
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_msaStudy | _id pattern: <msaStudyId>-T<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_msaStudy | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1730,7 +1730,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_msaStudy | _id patter
 
 ## u_mes_qual_audit
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: AUD-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1776,7 +1776,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: AUD-<recordNo>
 
 ## u_mes_qual_auditAuditorUser
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_audit | _id pattern: <auditId>-AU<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_audit | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1799,7 +1799,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_audit | _id pa
 
 ## u_mes_qual_auditFinding
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_audit | _id pattern: <auditId>-F<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_audit | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1829,7 +1829,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_audit | _id pattern: 
 
 ## u_mes_qual_customerComplaint
 
-Kind: entity | Data class: transaction | Parent: - | _id pattern: CMP-<recordNo>
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1879,7 +1879,7 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: CMP-<recordNo>
 
 ## u_mes_qual_customerComplaintSerialNumber
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: <customerComplaintId>-SN<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1902,7 +1902,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerCompla
 
 ## u_mes_qual_customerComplaintShipment
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: <customerComplaintId>-S<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1925,7 +1925,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerCompla
 
 ## u_mes_qual_customerComplaintSuspectLot
 
-Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: <customerComplaintId>-SL<nnn>
+Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1948,7 +1948,7 @@ Kind: relationship | Data class: transaction | Parent: u_mes_qual_customerCompla
 
 ## u_mes_qual_customerComplaintCommunication
 
-Kind: child | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: <customerComplaintId>-C<nnn>
+Kind: child | Data class: transaction | Parent: u_mes_qual_customerComplaint | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1974,7 +1974,7 @@ Kind: child | Data class: transaction | Parent: u_mes_qual_customerComplaint | _
 
 ## u_mes_qual_defectGroup
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DGR-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -1990,7 +1990,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DGR-<recordNo>
 
 ## u_mes_qual_gaugeType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: GTY-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -2006,7 +2006,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: GTY-<recordNo>
 
 ## u_mes_qual_dispositionType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: DSP-T-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|
@@ -2025,7 +2025,7 @@ Kind: entity | Data class: master | Parent: - | _id pattern: DSP-T-<recordNo>
 
 ## u_mes_qual_complaintType
 
-Kind: entity | Data class: master | Parent: - | _id pattern: CPT-<recordNo>
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
 
 | # | Key | BSON type | References |
 |---|---|---|---|

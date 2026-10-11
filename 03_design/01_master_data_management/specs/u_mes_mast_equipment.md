@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | EQ-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 41 (35 required, 6 may be null) |
 | Estimated volume per year | 200-1,000 per site |
@@ -29,43 +29,43 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: EQ-<recordNo> | `"EQ-TRQ-01-NR1"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"TRQ-01-NR1"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1013000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-01-M1"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the equipment; used as its display value in other collections | `"DC Nutrunner Station 1"` |  |
-| 6 | equipmentTypeId | String | Yes | Reference to u_mes_mast_equipmentType._id | `"EQT-DC-NUTRUNNER"` | Reference: u_mes_mast_equipmentType._id |
-| 7 | equipmentTypeName | String | Yes | Display value of equipmentTypeId, copied from u_mes_mast_equipmentType.name | `"DC Nutrunner"` |  |
+| 5 | name | String | Yes | Name of the equipment; used as its display value in other collections | `"Gravity Die Casting Machine 1"` |  |
+| 6 | equipmentTypeId | String | Yes | Reference to u_mes_mast_equipmentType._id | `"1261000000000001"` | Reference: u_mes_mast_equipmentType._id |
+| 7 | equipmentTypeName | String | Yes | Display value of equipmentTypeId, copied from u_mes_mast_equipmentType.name | `"Gravity Die Casting Machine"` |  |
 | 8 | equipmentClass | String | Yes | Equipment class | `"Production Equipment"` | Production Equipment; Test Equipment; Measuring Equipment; Utility |
-| 9 | lineId | String | Yes | Reference to u_mes_mast_line._id | `"LN-ASY-01"` | Reference: u_mes_mast_line._id |
-| 10 | lineName | String | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Caliper Assembly Line 1"` |  |
-| 11 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"WC-TRQ-01"` | Reference: u_mes_mast_workCenter._id |
-| 12 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
-| 13 | parentEquipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id: parent equipment | `"EQ-ASY-01"` | Reference: u_mes_mast_equipment._id |
-| 14 | parentEquipmentName | String | No (null allowed) | Display value of parentEquipmentId, copied from u_mes_mast_equipment.name | `"Assembly Cell 1"` |  |
-| 15 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"MFR-ATLAS-COPCO"` | Reference: u_mes_mast_manufacturer._id |
-| 16 | manufacturerName | String | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"Atlas Copco"` |  |
-| 17 | model | String | Yes | Model of the equipment | `"PF6000 with ETV STR61"` |  |
-| 18 | serialNo | String | Yes | Serial number | `"AC-PF6-2231907"` |  |
+| 9 | lineId | String | Yes | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 10 | lineName | String | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 11 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 12 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 13 | parentEquipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id: parent equipment | `null` | Reference: u_mes_mast_equipment._id |
+| 14 | parentEquipmentName | String | No (null allowed) | Display value of parentEquipmentId, copied from u_mes_mast_equipment.name | `null` |  |
+| 15 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000001"` | Reference: u_mes_mast_manufacturer._id |
+| 16 | manufacturerName | String | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"LK Machinery"` |  |
+| 17 | model | String | Yes | Model of the equipment | `"GDC-600T tilting"` |  |
+| 18 | serialNo | String | Yes | Serial number | `"LK-GDC-190457"` |  |
 | 19 | yearOfManufacture | Int32 | Yes | Year of manufacture | `NumberInt(2021)` |  |
-| 20 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `"SUP-S1042"` | Reference: u_mes_mast_supplier._id |
-| 21 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Konkan Precision Pistons Pvt. Ltd."` |  |
+| 20 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
+| 21 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
 | 22 | assetNo | String | Yes | Asset number | `"FA-PN1-004512"` |  |
-| 23 | commissionedAt | Date | Yes | Date and time when the record was commissioned | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 23 | commissionedAt | Date | Yes | Date and time when the record was commissioned | `ISODate("2019-01-03T18:30:00.000+0000")` |  |
 | 24 | ratedCapacity | Decimal128 | Yes | Rated CAPAcity | `NumberDecimal("50.0")` |  |
-| 25 | ratedCapacityUnitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id: rated CAPAcity unit of measure | `"UOM-NM"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 26 | ratedCapacityUnitOfMeasureName | String | Yes | Display value of ratedCapacityUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Newton metre"` |  |
+| 25 | ratedCapacityUnitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id: rated CAPAcity unit of measure | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 26 | ratedCapacityUnitOfMeasureName | String | Yes | Display value of ratedCapacityUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
 | 27 | ratedPowerKw | Decimal128 | Yes | Rated power (kW) | `NumberDecimal("1.5")` |  |
-| 28 | controllerMake | String | Yes | Controller make | `"Atlas Copco"` |  |
-| 29 | controllerModel | String | Yes | Controller model | `"Power Focus 6000"` |  |
+| 28 | controllerMake | String | Yes | Controller make | `"Siemens"` |  |
+| 29 | controllerModel | String | Yes | Controller model | `"S7-1500"` |  |
 | 30 | controllerIpAddress | String | Yes | Controller ip address | `"10.21.6.41"` |  |
-| 31 | controllerProtocol | String | Yes | Controller protocol | `"Open Protocol"` | OPC UA; Open Protocol; Modbus TCP; Profinet; MQTT; Ethernet/IP |
+| 31 | controllerProtocol | String | Yes | Controller protocol | `"OPC UA"` | OPC UA; Open Protocol; Modbus TCP; Profinet; MQTT; Ethernet/IP |
 | 32 | criticality | String | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
 | 33 | currentState | String | Yes | Current state | `"Running"` | Running; Idle; Setup; Down; Starved; Blocked; Planned Stop |
-| 34 | currentStateSince | Date | Yes | Current state since (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-03-31T18:30:00.000+0000")` |  |
+| 34 | currentStateSince | Date | Yes | Current state since (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
 | 35 | lifetimeCycles | Int64 | Yes | Lifetime cycles | `NumberLong("1284500")` |  |
 | 36 | lifetimeRunHours | Decimal128 | Yes | Lifetime run hours | `NumberDecimal("14820.5")` |  |
-| 37 | nextMaintenanceDueAt | Date | Yes | Next maintenance due date and time | `ISODate("2026-10-27T18:30:00.000+0000")` |  |
+| 37 | nextMaintenanceDueAt | Date | Yes | Next maintenance due date and time | `ISODate("2026-10-05T18:30:00.000+0000")` |  |
 | 38 | calibrationRequired | Boolean | Yes | True when: calibration required | `true` |  |
 | 39 | safetyCategory | String | Yes | Performance level of the safety function (ISO 13849-1) | `"PL d"` | PL a; PL b; PL c; PL d; PL e |
 | 40 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
@@ -95,4 +95,4 @@ u_mes_mast_workCenterEquipment, u_mes_mast_equipment, u_mes_mast_equipmentIotDev
 
 - Validator: 03_design/01_master_data_management/validators/u_mes_mast_equipment.json
 - Indexes: 03_design/01_master_data_management/indexes/u_mes_mast_equipment.js
-- Sample document: 03_design/01_master_data_management/samples/u_mes_mast_equipment.js
+- Sample documents (10): 03_design/01_master_data_management/samples/u_mes_mast_equipment.js

@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | ANT-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
 | Keys | 13 (10 required, 3 may be null) |
 | Estimated volume per year | 10-50 |
@@ -23,15 +23,15 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: ANT-<recordNo> | `"ANT-QUALITY"` |  |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1292000000000001"` |  |
 | 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"QUALITY"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | Yes | Name of the andon type; used as its display value in other collections | `"Quality"` |  |
-| 6 | description | String | Yes | Description of the andon type | `"Operator needs quality support at the station"` |  |
+| 6 | description | String | Yes | Description of the andon type | `"Quality (QUALITY)"` |  |
 | 7 | colourCode | String | No (null allowed) | Colour code | `"#F5A623"` |  |
-| 8 | responsibleDepartmentId | String | No (null allowed) | Reference to u_mes_mast_department._id: responsible department | `"DEPT-QUAL"` | Reference: u_mes_mast_department._id |
-| 9 | responsibleDepartmentName | String | No (null allowed) | Display value of responsibleDepartmentId, copied from u_mes_mast_department.name | `"Quality"` |  |
+| 8 | responsibleDepartmentId | String | No (null allowed) | Reference to u_mes_mast_department._id: responsible department | `"1256000000000001"` | Reference: u_mes_mast_department._id |
+| 9 | responsibleDepartmentName | String | No (null allowed) | Display value of responsibleDepartmentId, copied from u_mes_mast_department.name | `"Production"` |  |
 | 10 | targetResponseSec | Int32 | Yes | Target response (seconds) | `NumberInt(300)` |  |
 | 11 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 12 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
@@ -57,4 +57,4 @@ u_mes_plan_andonEvent.
 
 - Validator: 03_design/03_planning_execution/validators/u_mes_plan_andonType.json
 - Indexes: 03_design/03_planning_execution/indexes/u_mes_plan_andonType.js
-- Sample document: 03_design/03_planning_execution/samples/u_mes_plan_andonType.js
+- Sample documents (10): 03_design/03_planning_execution/samples/u_mes_plan_andonType.js

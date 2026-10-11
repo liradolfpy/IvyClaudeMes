@@ -7,7 +7,7 @@
 | Kind | Entity |
 | Data class | Master |
 | Parent collection | none |
-| _id pattern | STT-<recordNo> |
+| _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | transitionName |
 | Keys | 15 (15 required, 0 may be null) |
 
@@ -21,16 +21,16 @@ Every key is present in every document. "Required" means the value may not be nu
 
 | # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: STT-<recordNo> | `"STT-productionOrder.RELEASED-IN_PROGRESS"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"productionOrder.RELEASED-IN_PROGRESS"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"SITE-PN1"` | Reference: u_mes_mast_site._id |
+| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1299000000000001"` |  |
+| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"productionOrder.CREATED-RELEASED"` |  |
+| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | collectionName | String | Yes | Collection name | `"u_mes_plan_productionOrder"` |  |
-| 6 | fromStatusDefinitionId | String | Yes | Reference to u_mes_syst_statusDefinition._id: from status definition | `"STD-productionOrder.RELEASED"` | Reference: u_mes_syst_statusDefinition._id |
-| 7 | fromStatusDefinitionName | String | Yes | Display value of fromStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName | `"Released"` |  |
-| 8 | toStatusDefinitionId | String | Yes | Reference to u_mes_syst_statusDefinition._id: to status definition | `"STD-productionOrder.IN_PROGRESS"` | Reference: u_mes_syst_statusDefinition._id |
-| 9 | toStatusDefinitionName | String | Yes | Display value of toStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName | `"In Progress"` |  |
-| 10 | transitionName | String | Yes | Transition name | `"Start production"` |  |
+| 6 | fromStatusDefinitionId | String | Yes | Reference to u_mes_syst_statusDefinition._id: from status definition | `"1297000000000001"` | Reference: u_mes_syst_statusDefinition._id |
+| 7 | fromStatusDefinitionName | String | Yes | Display value of fromStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName | `"Created"` |  |
+| 8 | toStatusDefinitionId | String | Yes | Reference to u_mes_syst_statusDefinition._id: to status definition | `"1297000000000002"` | Reference: u_mes_syst_statusDefinition._id |
+| 9 | toStatusDefinitionName | String | Yes | Display value of toStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName | `"Released"` |  |
+| 10 | transitionName | String | Yes | Transition name | `"Release order"` |  |
 | 11 | requiresSignature | Boolean | Yes | True when signature is required | `true` |  |
 | 12 | requiresReason | Boolean | Yes | True when reason is required | `false` |  |
 | 13 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
@@ -58,4 +58,4 @@ No other collection refers to this one.
 
 - Validator: 03_design/09_system_integration/validators/u_mes_syst_statusTransition.json
 - Indexes: 03_design/09_system_integration/indexes/u_mes_syst_statusTransition.js
-- Sample document: 03_design/09_system_integration/samples/u_mes_syst_statusTransition.js
+- Sample documents (10): 03_design/09_system_integration/samples/u_mes_syst_statusTransition.js
