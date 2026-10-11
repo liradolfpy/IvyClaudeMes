@@ -1,0 +1,332 @@
+# Collection type matrix
+
+Model version 2.4 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+
+Type of each collection and the label used for it in the UI menu. A child, relationship or value-list collection has the type of the entity it belongs to; its label starts with the parent's name, because it is opened from the parent's screen.
+
+| Type | Meaning | Collections |
+|---|---|---|
+| Master | Reference data that changes rarely and is maintained by the plant | 162 |
+| Transaction | Business records created by daily operations | 122 |
+| Reports | Pre-aggregated or assembled records built from transactions for reporting | 7 |
+| Telemetry | Machine-generated, time-ordered signals and states | 4 |
+| Audit Trail | Append-only records of who did or changed what | 4 |
+
+## Collections per module and type
+
+| Code | ModuleName | Master | Transaction | Reports | Telemetry | Audit Trail | Total |
+|---|---|---|---|---|---|---|---|
+| mast | Master Data Management | 53 | 3 | 0 | 0 | 0 | 56 |
+| prod | Product Definition | 40 | 5 | 0 | 0 | 0 | 45 |
+| plan | Planning and Execution | 3 | 33 | 0 | 0 | 0 | 36 |
+| matl | Material Management | 8 | 14 | 0 | 0 | 0 | 22 |
+| trac | Traceability | 0 | 3 | 4 | 0 | 0 | 7 |
+| qual | Quality Management | 23 | 46 | 0 | 0 | 0 | 69 |
+| perf | Performance Management | 5 | 5 | 3 | 4 | 0 | 17 |
+| maint | Tooling & Maintenance | 9 | 5 | 0 | 0 | 0 | 14 |
+| syst | System and Integration | 18 | 5 | 0 | 0 | 4 | 27 |
+| ehs | Environment Health and Safety | 3 | 3 | 0 | 0 | 0 | 6 |
+
+## Matrix
+
+| Code | ModuleName | Collection | Type | Label |
+|---|---|---|---|---|
+| mast | Master Data Management | u_mes_mast_enterprise | Master | Enterprises |
+| mast | Master Data Management | u_mes_mast_enterpriseContact | Master | Enterprise Contacts |
+| mast | Master Data Management | u_mes_mast_site | Master | Sites |
+| mast | Master Data Management | u_mes_mast_siteCertificate | Master | Site Certificates |
+| mast | Master Data Management | u_mes_mast_area | Master | Areas |
+| mast | Master Data Management | u_mes_mast_line | Master | Lines |
+| mast | Master Data Management | u_mes_mast_lineDefaultShift | Master | Line Default Shifts |
+| mast | Master Data Management | u_mes_mast_lineIdealRate | Master | Line Ideal Rates |
+| mast | Master Data Management | u_mes_mast_workCenter | Master | Work Centers |
+| mast | Master Data Management | u_mes_mast_workCenterEquipment | Master | Work Center Equipment |
+| mast | Master Data Management | u_mes_mast_workCenterOperation | Master | Work Center Operations |
+| mast | Master Data Management | u_mes_mast_workCenterRequiresSkill | Master | Work Center Required Skills |
+| mast | Master Data Management | u_mes_mast_equipment | Master | Equipment |
+| mast | Master Data Management | u_mes_mast_equipmentIotDevice | Master | Equipment IoT Devices |
+| mast | Master Data Management | u_mes_mast_shift | Master | Shifts |
+| mast | Master Data Management | u_mes_mast_shiftBreak | Master | Shift Breaks |
+| mast | Master Data Management | u_mes_mast_shiftWorkingDay | Master | Shift Working Days |
+| mast | Master Data Management | u_mes_mast_workCalendar | Master | Work Calendars |
+| mast | Master Data Management | u_mes_mast_workCalendarLine | Master | Work Calendar Lines |
+| mast | Master Data Management | u_mes_mast_workCalendarShift | Master | Work Calendar Shifts |
+| mast | Master Data Management | u_mes_mast_workCalendarWeeklyOffDay | Master | Work Calendar Weekly Off Days |
+| mast | Master Data Management | u_mes_mast_workCalendarException | Master | Work Calendar Exceptions |
+| mast | Master Data Management | u_mes_mast_workCalendarExceptionShift | Master | Work Calendar Exception Shifts |
+| mast | Master Data Management | u_mes_mast_shiftRoster | Transaction | Shift Rosters |
+| mast | Master Data Management | u_mes_mast_shiftRosterAssignment | Transaction | Shift Roster Assignments |
+| mast | Master Data Management | u_mes_mast_role | Master | Roles |
+| mast | Master Data Management | u_mes_mast_rolePermission | Master | Role Permissions |
+| mast | Master Data Management | u_mes_mast_roleSignatureMeaning | Master | Role Signature Meanings |
+| mast | Master Data Management | u_mes_mast_user | Master | Users |
+| mast | Master Data Management | u_mes_mast_userRole | Master | User Roles |
+| mast | Master Data Management | u_mes_mast_skill | Master | Skills |
+| mast | Master Data Management | u_mes_mast_skillOperation | Master | Skill Operations |
+| mast | Master Data Management | u_mes_mast_skillLevelScale | Master | Skill Level Scales |
+| mast | Master Data Management | u_mes_mast_skillCertification | Transaction | Skill Certifications |
+| mast | Master Data Management | u_mes_mast_customer | Master | Customers |
+| mast | Master Data Management | u_mes_mast_customerShipTo | Master | Customer Ship-To Addresses |
+| mast | Master Data Management | u_mes_mast_customerContact | Master | Customer Contacts |
+| mast | Master Data Management | u_mes_mast_supplier | Master | Suppliers |
+| mast | Master Data Management | u_mes_mast_supplierContact | Master | Supplier Contacts |
+| mast | Master Data Management | u_mes_mast_supplierCertificate | Master | Supplier Certificates |
+| mast | Master Data Management | u_mes_mast_supplierSuppliedItem | Master | Supplier Supplied Items |
+| mast | Master Data Management | u_mes_mast_unitOfMeasure | Master | Units of Measure |
+| mast | Master Data Management | u_mes_mast_department | Master | Departments |
+| mast | Master Data Management | u_mes_mast_designation | Master | Designations |
+| mast | Master Data Management | u_mes_mast_employmentType | Master | Employment Types |
+| mast | Master Data Management | u_mes_mast_costCenter | Master | Cost Centers |
+| mast | Master Data Management | u_mes_mast_manufacturer | Master | Manufacturers |
+| mast | Master Data Management | u_mes_mast_equipmentType | Master | Equipment Types |
+| mast | Master Data Management | u_mes_mast_skillCategory | Master | Skill Categories |
+| mast | Master Data Management | u_mes_mast_permission | Master | Permissions |
+| mast | Master Data Management | u_mes_mast_signatureMeaning | Master | Signature Meanings |
+| mast | Master Data Management | u_mes_mast_currency | Master | Currencies |
+| mast | Master Data Management | u_mes_mast_country | Master | Countries |
+| mast | Master Data Management | u_mes_mast_language | Master | Languages |
+| mast | Master Data Management | u_mes_mast_transporter | Master | Transporters |
+| mast | Master Data Management | u_mes_mast_commodity | Master | Commodities |
+| prod | Product Definition | u_mes_prod_item | Master | Items |
+| prod | Product Definition | u_mes_prod_itemRevision | Master | Item Revisions |
+| prod | Product Definition | u_mes_prod_itemCustomerPart | Master | Item Customer Parts |
+| prod | Product Definition | u_mes_prod_productVariant | Master | Product Variants |
+| prod | Product Definition | u_mes_prod_billOfMaterial | Master | Bills of Material |
+| prod | Product Definition | u_mes_prod_billOfMaterialComponent | Master | BOM Components |
+| prod | Product Definition | u_mes_prod_billOfMaterialComponentProductVariant | Master | BOM Component Variants |
+| prod | Product Definition | u_mes_prod_billOfMaterialComponentAlternateItem | Master | BOM Component Alternate Items |
+| prod | Product Definition | u_mes_prod_operation | Master | Operations |
+| prod | Product Definition | u_mes_prod_operationRequiredSkill | Master | Operation Required Skills |
+| prod | Product Definition | u_mes_prod_routing | Master | Routings |
+| prod | Product Definition | u_mes_prod_routingStep | Master | Routing Steps |
+| prod | Product Definition | u_mes_prod_routingStepAlternateWorkCenter | Master | Routing Step Alternate Work Centers |
+| prod | Product Definition | u_mes_prod_routingStepNextStep | Master | Routing Step Next Steps |
+| prod | Product Definition | u_mes_prod_billOfProcess | Master | Bills of Process |
+| prod | Product Definition | u_mes_prod_billOfProcessStep | Master | BOP Steps |
+| prod | Product Definition | u_mes_prod_billOfProcessStepEquipment | Master | BOP Step Equipment |
+| prod | Product Definition | u_mes_prod_billOfProcessStepTool | Master | BOP Step Tools |
+| prod | Product Definition | u_mes_prod_billOfProcessStepRequiredSkill | Master | BOP Step Required Skills |
+| prod | Product Definition | u_mes_prod_billOfProcessStepConsumedComponent | Master | BOP Step Consumed Components |
+| prod | Product Definition | u_mes_prod_billOfProcessStepInterlock | Master | BOP Step Interlocks |
+| prod | Product Definition | u_mes_prod_billOfProcessStepProcessParameter | Master | BOP Step Process Parameters |
+| prod | Product Definition | u_mes_prod_workInstruction | Master | Work Instructions |
+| prod | Product Definition | u_mes_prod_workInstructionStep | Master | Work Instruction Steps |
+| prod | Product Definition | u_mes_prod_workInstructionStepMediaControlledDocument | Master | Work Instruction Step Media |
+| prod | Product Definition | u_mes_prod_workInstructionStepProductVariant | Master | Work Instruction Step Product Variants |
+| prod | Product Definition | u_mes_prod_workInstructionStepTool | Master | Work Instruction Step Tools |
+| prod | Product Definition | u_mes_prod_workInstructionStepCharacteristic | Master | Work Instruction Step Characteristics |
+| prod | Product Definition | u_mes_prod_workInstructionPpeItem | Master | Work Instruction PPE Items |
+| prod | Product Definition | u_mes_prod_workInstructionKeyPoint | Master | Work Instruction Key Points |
+| prod | Product Definition | u_mes_prod_recipe | Master | Recipes |
+| prod | Product Definition | u_mes_prod_recipeParameter | Master | Recipe Parameters |
+| prod | Product Definition | u_mes_prod_recipeStage | Master | Recipe Stages |
+| prod | Product Definition | u_mes_prod_engineeringChange | Transaction | Engineering Changes |
+| prod | Product Definition | u_mes_prod_engineeringChangeAffectedItem | Transaction | Engineering Change Affected Items |
+| prod | Product Definition | u_mes_prod_engineeringChangeAffectedObject | Transaction | Engineering Change Affected Objects |
+| prod | Product Definition | u_mes_prod_engineeringChangeApproval | Transaction | Engineering Change Approvals |
+| prod | Product Definition | u_mes_prod_engineeringChangeControlledDocument | Transaction | Engineering Change Documents |
+| prod | Product Definition | u_mes_prod_itemGroup | Master | Item Groups |
+| prod | Product Definition | u_mes_prod_itemFamily | Master | Item Families |
+| prod | Product Definition | u_mes_prod_ppeItem | Master | PPE Items |
+| prod | Product Definition | u_mes_prod_market | Master | Markets |
+| prod | Product Definition | u_mes_prod_padCompound | Master | Pad Compounds |
+| prod | Product Definition | u_mes_prod_surfaceFinish | Master | Surface Finishes |
+| prod | Product Definition | u_mes_prod_vehicleModel | Master | Vehicle Models |
+| plan | Planning and Execution | u_mes_plan_customerSchedule | Transaction | Customer Schedules |
+| plan | Planning and Execution | u_mes_plan_customerScheduleLine | Transaction | Customer Schedule Lines |
+| plan | Planning and Execution | u_mes_plan_productionOrder | Transaction | Production Orders |
+| plan | Planning and Execution | u_mes_plan_productionOrderRelease | Transaction | Production Order Releases |
+| plan | Planning and Execution | u_mes_plan_productionOrderLot | Transaction | Production Order Lots |
+| plan | Planning and Execution | u_mes_plan_productionSchedule | Transaction | Production Schedules |
+| plan | Planning and Execution | u_mes_plan_productionScheduleSlot | Transaction | Production Schedule Slots |
+| plan | Planning and Execution | u_mes_plan_dispatchList | Transaction | Dispatch Lists |
+| plan | Planning and Execution | u_mes_plan_dispatchListEntry | Transaction | Dispatch List Entries |
+| plan | Planning and Execution | u_mes_plan_operationExecution | Transaction | Operation Executions |
+| plan | Planning and Execution | u_mes_plan_operationExecutionDefectCode | Transaction | Operation Execution Defect Codes |
+| plan | Planning and Execution | u_mes_plan_operationExecutionTool | Transaction | Operation Execution Tools |
+| plan | Planning and Execution | u_mes_plan_stepCompletion | Transaction | Work Instruction Step Completions |
+| plan | Planning and Execution | u_mes_plan_wipUnit | Transaction | WIP Units |
+| plan | Planning and Execution | u_mes_plan_wipUnitCompletedStep | Transaction | WIP Unit Completed Steps |
+| plan | Planning and Execution | u_mes_plan_lot | Transaction | Lots and Batches |
+| plan | Planning and Execution | u_mes_plan_lotParentLot | Transaction | Lot Parent Lots |
+| plan | Planning and Execution | u_mes_plan_lotAttributesCavityNo | Transaction | Lot Cavity Numbers |
+| plan | Planning and Execution | u_mes_plan_container | Transaction | Containers |
+| plan | Planning and Execution | u_mes_plan_containerLot | Transaction | Container Lots |
+| plan | Planning and Execution | u_mes_plan_labourBooking | Transaction | Labour Bookings |
+| plan | Planning and Execution | u_mes_plan_changeover | Transaction | Changeovers |
+| plan | Planning and Execution | u_mes_plan_changeoverStep | Transaction | Changeover Steps |
+| plan | Planning and Execution | u_mes_plan_changeoverRemovedTool | Transaction | Changeover Removed Tools |
+| plan | Planning and Execution | u_mes_plan_changeoverInstalledTool | Transaction | Changeover Installed Tools |
+| plan | Planning and Execution | u_mes_plan_changeoverPerformedByUser | Transaction | Changeover Crew |
+| plan | Planning and Execution | u_mes_plan_shiftHandover | Transaction | Shift Handovers |
+| plan | Planning and Execution | u_mes_plan_shiftHandoverProductionOrder | Transaction | Shift Handover Production Orders |
+| plan | Planning and Execution | u_mes_plan_shiftHandoverDowntimeEvent | Transaction | Shift Handover Downtime Events |
+| plan | Planning and Execution | u_mes_plan_shiftHandoverNonconformance | Transaction | Shift Handover Nonconformances |
+| plan | Planning and Execution | u_mes_plan_shiftHandoverOpenItem | Transaction | Shift Handover Open Items |
+| plan | Planning and Execution | u_mes_plan_andonEvent | Transaction | Andon Events |
+| plan | Planning and Execution | u_mes_plan_andonEventEscalation | Transaction | Andon Event Escalations |
+| plan | Planning and Execution | u_mes_plan_indirectActivity | Master | Indirect Activities |
+| plan | Planning and Execution | u_mes_plan_containerType | Master | Container Types |
+| plan | Planning and Execution | u_mes_plan_andonType | Master | Andon Types |
+| matl | Material Management | u_mes_matl_storageLocation | Master | Storage Locations |
+| matl | Material Management | u_mes_matl_inventoryBalance | Transaction | Inventory Balances |
+| matl | Material Management | u_mes_matl_materialMovement | Transaction | Material Movements |
+| matl | Material Management | u_mes_matl_goodsReceipt | Transaction | Goods Receipts |
+| matl | Material Management | u_mes_matl_goodsReceiptLine | Transaction | Goods Receipt Lines |
+| matl | Material Management | u_mes_matl_goodsReceiptLineInspectionResult | Transaction | Goods Receipt Line Inspection Results |
+| matl | Material Management | u_mes_matl_kit | Transaction | Kits |
+| matl | Material Management | u_mes_matl_kitLine | Transaction | Kit Lines |
+| matl | Material Management | u_mes_matl_materialRequest | Transaction | Material Requests |
+| matl | Material Management | u_mes_matl_materialConsumption | Transaction | Material Consumptions |
+| matl | Material Management | u_mes_matl_packagingSpecification | Master | Packaging Specifications |
+| matl | Material Management | u_mes_matl_packagingSpecificationLevel | Master | Packaging Specification Levels |
+| matl | Material Management | u_mes_matl_labelTemplate | Master | Label Templates |
+| matl | Material Management | u_mes_matl_labelTemplateField | Master | Label Template Fields |
+| matl | Material Management | u_mes_matl_label | Transaction | Printed Labels |
+| matl | Material Management | u_mes_matl_shipment | Transaction | Shipments |
+| matl | Material Management | u_mes_matl_shipmentLine | Transaction | Shipment Lines |
+| matl | Material Management | u_mes_matl_shipmentLineContainer | Transaction | Shipment Line Containers |
+| matl | Material Management | u_mes_matl_shipmentLineLot | Transaction | Shipment Line Lots |
+| matl | Material Management | u_mes_matl_movementType | Master | Movement Types |
+| matl | Material Management | u_mes_matl_stockStatus | Master | Stock Statuses |
+| matl | Material Management | u_mes_matl_packType | Master | Pack Types |
+| trac | Traceability | u_mes_trac_serialNumber | Transaction | Serial Numbers |
+| trac | Traceability | u_mes_trac_genealogyLink | Transaction | Genealogy Links |
+| trac | Traceability | u_mes_trac_componentLotLink | Transaction | Component Lot Links |
+| trac | Traceability | u_mes_trac_asBuiltRecord | Reports | As-Built Records |
+| trac | Traceability | u_mes_trac_asBuiltRecordComponent | Reports | As-Built Record Components |
+| trac | Traceability | u_mes_trac_asBuiltRecordOperation | Reports | As-Built Record Operations |
+| trac | Traceability | u_mes_trac_asBuiltRecordInspectionResult | Reports | As-Built Record Inspection Results |
+| qual | Quality Management | u_mes_qual_characteristic | Master | Characteristics |
+| qual | Quality Management | u_mes_qual_controlPlan | Master | Control Plans |
+| qual | Quality Management | u_mes_qual_controlPlanCoreTeamUser | Master | Control Plan Core Team |
+| qual | Quality Management | u_mes_qual_controlPlanLine | Master | Control Plan Lines |
+| qual | Quality Management | u_mes_qual_inspectionPlan | Master | Inspection Plans |
+| qual | Quality Management | u_mes_qual_inspectionPlanLine | Master | Inspection Plan Lines |
+| qual | Quality Management | u_mes_qual_samplingPlan | Master | Sampling Plans |
+| qual | Quality Management | u_mes_qual_samplingPlanSizeRow | Master | Sampling Plan Sample Size Table |
+| qual | Quality Management | u_mes_qual_checkSheet | Master | Check Sheets |
+| qual | Quality Management | u_mes_qual_checkSheetItem | Master | Check Sheet Items |
+| qual | Quality Management | u_mes_qual_checkSheetResult | Transaction | Check Sheet Results |
+| qual | Quality Management | u_mes_qual_checkSheetResultAnswer | Transaction | Check Sheet Result Answers |
+| qual | Quality Management | u_mes_qual_inspectionResult | Transaction | Inspection Results |
+| qual | Quality Management | u_mes_qual_spcChart | Master | SPC Charts |
+| qual | Quality Management | u_mes_qual_spcChartControlLimit | Master | SPC Chart Control Limits |
+| qual | Quality Management | u_mes_qual_spcChartRule | Master | SPC Chart Rules |
+| qual | Quality Management | u_mes_qual_spcSample | Transaction | SPC Samples |
+| qual | Quality Management | u_mes_qual_spcSampleReading | Transaction | SPC Sample Readings |
+| qual | Quality Management | u_mes_qual_spcSampleInspectionResult | Transaction | SPC Sample Inspection Results |
+| qual | Quality Management | u_mes_qual_spcSampleViolation | Transaction | SPC Sample Violations |
+| qual | Quality Management | u_mes_qual_defectCode | Master | Defect Codes |
+| qual | Quality Management | u_mes_qual_defectCodeApplicableOperation | Master | Defect Code Applicable Operations |
+| qual | Quality Management | u_mes_qual_nonconformance | Transaction | Nonconformances |
+| qual | Quality Management | u_mes_qual_nonconformanceAffectedObject | Transaction | Nonconformance Affected Objects |
+| qual | Quality Management | u_mes_qual_nonconformanceContainmentAction | Transaction | Nonconformance Containment Actions |
+| qual | Quality Management | u_mes_qual_nonconformanceInspectionResult | Transaction | Nonconformance Inspection Results |
+| qual | Quality Management | u_mes_qual_nonconformanceReworkOrder | Transaction | Nonconformance Rework Orders |
+| qual | Quality Management | u_mes_qual_nonconformanceScrapRecord | Transaction | Nonconformance Scrap Records |
+| qual | Quality Management | u_mes_qual_nonconformancePhotoControlledDocument | Transaction | Nonconformance Photos |
+| qual | Quality Management | u_mes_qual_nonconformanceMrbUser | Transaction | Nonconformance MRB Members |
+| qual | Quality Management | u_mes_qual_reworkOrder | Transaction | Rework Orders |
+| qual | Quality Management | u_mes_qual_reworkOrderWipUnit | Transaction | Rework Order WIP Units |
+| qual | Quality Management | u_mes_qual_reworkOrderStep | Transaction | Rework Order Steps |
+| qual | Quality Management | u_mes_qual_scrapRecord | Transaction | Scrap Records |
+| qual | Quality Management | u_mes_qual_qualityHold | Transaction | Quality Holds |
+| qual | Quality Management | u_mes_qual_qualityHoldHeldObject | Transaction | Quality Hold Held Objects |
+| qual | Quality Management | u_mes_qual_deviationPermit | Transaction | Deviation Permits |
+| qual | Quality Management | u_mes_qual_deviationPermitApproval | Transaction | Deviation Permit Approvals |
+| qual | Quality Management | u_mes_qual_capa | Transaction | CAPA (8D) |
+| qual | Quality Management | u_mes_qual_capaNonconformance | Transaction | CAPA Nonconformances |
+| qual | Quality Management | u_mes_qual_capaTeamMember | Transaction | CAPA Team Members |
+| qual | Quality Management | u_mes_qual_capaContainmentAction | Transaction | CAPA Containment Actions |
+| qual | Quality Management | u_mes_qual_capaCorrectiveAction | Transaction | CAPA Corrective Actions |
+| qual | Quality Management | u_mes_qual_capaImplementationAction | Transaction | CAPA Implementation Actions |
+| qual | Quality Management | u_mes_qual_capaControlledDocument | Transaction | CAPA Documents |
+| qual | Quality Management | u_mes_qual_pfmea | Master | Process FMEAs |
+| qual | Quality Management | u_mes_qual_pfmeaCoreTeamUser | Master | PFMEA Core Team |
+| qual | Quality Management | u_mes_qual_pfmeaLine | Master | PFMEA Lines |
+| qual | Quality Management | u_mes_qual_ppapSubmission | Transaction | PPAP Submissions |
+| qual | Quality Management | u_mes_qual_ppapSubmissionElement | Transaction | PPAP Submission Elements |
+| qual | Quality Management | u_mes_qual_ppapSubmissionMsaStudy | Transaction | PPAP Submission MSA Studies |
+| qual | Quality Management | u_mes_qual_gauge | Master | Gauges |
+| qual | Quality Management | u_mes_qual_gaugeCalibration | Transaction | Gauge Calibrations |
+| qual | Quality Management | u_mes_qual_gaugeCalibrationReading | Transaction | Gauge Calibration Readings |
+| qual | Quality Management | u_mes_qual_msaStudy | Transaction | MSA Studies |
+| qual | Quality Management | u_mes_qual_msaStudyAppraiserUser | Transaction | MSA Study Appraisers |
+| qual | Quality Management | u_mes_qual_msaStudyTrial | Transaction | MSA Study Trials |
+| qual | Quality Management | u_mes_qual_audit | Transaction | Audits |
+| qual | Quality Management | u_mes_qual_auditAuditorUser | Transaction | Audit Auditors |
+| qual | Quality Management | u_mes_qual_auditFinding | Transaction | Audit Findings |
+| qual | Quality Management | u_mes_qual_customerComplaint | Transaction | Customer Complaints |
+| qual | Quality Management | u_mes_qual_customerComplaintSerialNumber | Transaction | Customer Complaint Serial Numbers |
+| qual | Quality Management | u_mes_qual_customerComplaintShipment | Transaction | Customer Complaint Shipments |
+| qual | Quality Management | u_mes_qual_customerComplaintSuspectLot | Transaction | Customer Complaint Suspect Lots |
+| qual | Quality Management | u_mes_qual_customerComplaintCommunication | Transaction | Customer Complaint Communications |
+| qual | Quality Management | u_mes_qual_defectGroup | Master | Defect Groups |
+| qual | Quality Management | u_mes_qual_gaugeType | Master | Gauge Types |
+| qual | Quality Management | u_mes_qual_dispositionType | Master | Disposition Types |
+| qual | Quality Management | u_mes_qual_complaintType | Master | Complaint Types |
+| perf | Performance Management | u_mes_perf_reasonCode | Master | Reason Codes |
+| perf | Performance Management | u_mes_perf_equipmentState | Telemetry | Equipment States |
+| perf | Performance Management | u_mes_perf_downtimeEvent | Transaction | Downtime Events |
+| perf | Performance Management | u_mes_perf_downtimeEventComment | Transaction | Downtime Event Comments |
+| perf | Performance Management | u_mes_perf_productionCount | Reports | Hourly Production Counts |
+| perf | Performance Management | u_mes_perf_oeeRecord | Reports | OEE Records |
+| perf | Performance Management | u_mes_perf_oeeRecordLoss | Reports | OEE Record Losses |
+| perf | Performance Management | u_mes_perf_processTag | Master | Process Tags |
+| perf | Performance Management | u_mes_perf_processReading | Telemetry | Process Readings |
+| perf | Performance Management | u_mes_perf_alarm | Telemetry | Alarms |
+| perf | Performance Management | u_mes_perf_torqueResult | Transaction | Torque Results |
+| perf | Performance Management | u_mes_perf_leakTestResult | Transaction | Leak Test Results |
+| perf | Performance Management | u_mes_perf_leakTestResultStage | Transaction | Leak Test Result Stages |
+| perf | Performance Management | u_mes_perf_energyReading | Telemetry | Energy Readings |
+| perf | Performance Management | u_mes_perf_lossCategory | Master | Loss Categories |
+| perf | Performance Management | u_mes_perf_reasonCategory | Master | Reason Categories |
+| perf | Performance Management | u_mes_perf_energyType | Master | Energy Types |
+| maint | Tooling & Maintenance | u_mes_maint_maintenancePlan | Master | Maintenance Plans |
+| maint | Tooling & Maintenance | u_mes_maint_maintenancePlanTask | Master | Maintenance Plan Tasks |
+| maint | Tooling & Maintenance | u_mes_maint_maintenancePlanRequiredSkill | Master | Maintenance Plan Required Skills |
+| maint | Tooling & Maintenance | u_mes_maint_maintenancePlanRequiredSparePart | Master | Maintenance Plan Required Spare Parts |
+| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrder | Transaction | Maintenance Work Orders |
+| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderAssignedToUser | Transaction | Maintenance Work Order Assignees |
+| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderLabour | Transaction | Maintenance Work Order Labour |
+| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderUsedSparePart | Transaction | Maintenance Work Order Used Spare Parts |
+| maint | Tooling & Maintenance | u_mes_maint_sparePart | Master | Spare Parts |
+| maint | Tooling & Maintenance | u_mes_maint_sparePartUsedOnEquipment | Master | Spare Part Used on Equipment |
+| maint | Tooling & Maintenance | u_mes_maint_tool | Master | Tools |
+| maint | Tooling & Maintenance | u_mes_maint_toolItem | Master | Tool Applicable Items |
+| maint | Tooling & Maintenance | u_mes_maint_toolLifeRecord | Transaction | Tool Life Records |
+| maint | Tooling & Maintenance | u_mes_maint_toolType | Master | Tool Types |
+| syst | System and Integration | u_mes_syst_erpMessage | Transaction | ERP Messages |
+| syst | System and Integration | u_mes_syst_integrationConnector | Master | Integration Connectors |
+| syst | System and Integration | u_mes_syst_integrationConnectorFunction | Master | Integration Connector Functions |
+| syst | System and Integration | u_mes_syst_iotDevice | Master | IoT Devices |
+| syst | System and Integration | u_mes_syst_operatorApp | Master | Operator Apps |
+| syst | System and Integration | u_mes_syst_operatorAppWorkCenter | Master | Operator App Work Centers |
+| syst | System and Integration | u_mes_syst_operatorAppOperation | Master | Operator App Operations |
+| syst | System and Integration | u_mes_syst_operatorAppStep | Master | Operator App Steps |
+| syst | System and Integration | u_mes_syst_operatorAppStepTrigger | Master | Operator App Step Triggers |
+| syst | System and Integration | u_mes_syst_operatorAppDeviceBinding | Master | Operator App Device Bindings |
+| syst | System and Integration | u_mes_syst_operatorAppLanguage | Master | Operator App Languages |
+| syst | System and Integration | u_mes_syst_businessEvent | Audit Trail | Business Events |
+| syst | System and Integration | u_mes_syst_auditTrail | Audit Trail | Audit Trail |
+| syst | System and Integration | u_mes_syst_auditTrailChange | Audit Trail | Audit Trail Changes |
+| syst | System and Integration | u_mes_syst_electronicSignature | Audit Trail | Electronic Signatures |
+| syst | System and Integration | u_mes_syst_notification | Transaction | Notifications |
+| syst | System and Integration | u_mes_syst_notificationRecipient | Transaction | Notification Recipients |
+| syst | System and Integration | u_mes_syst_controlledDocument | Transaction | Controlled Documents |
+| syst | System and Integration | u_mes_syst_controlledDocumentTag | Transaction | Controlled Document Tags |
+| syst | System and Integration | u_mes_syst_numberRange | Master | Number Ranges |
+| syst | System and Integration | u_mes_syst_systemConfiguration | Master | System Configurations |
+| syst | System and Integration | u_mes_syst_documentType | Master | Document Types |
+| syst | System and Integration | u_mes_syst_deviceType | Master | Device Types |
+| syst | System and Integration | u_mes_syst_notificationType | Master | Notification Types |
+| syst | System and Integration | u_mes_syst_statusDefinition | Master | Status Definitions |
+| syst | System and Integration | u_mes_syst_enumerationValue | Master | Enumeration Values |
+| syst | System and Integration | u_mes_syst_statusTransition | Master | Status Transitions |
+| ehs | Environment Health and Safety | u_mes_ehs_safetyIncident | Transaction | Safety Incidents |
+| ehs | Environment Health and Safety | u_mes_ehs_safetyIncidentWitnessUser | Transaction | Safety Incident Witnesses |
+| ehs | Environment Health and Safety | u_mes_ehs_safetyIncidentAction | Transaction | Safety Incident Actions |
+| ehs | Environment Health and Safety | u_mes_ehs_incidentType | Master | Incident Types |
+| ehs | Environment Health and Safety | u_mes_ehs_bodyPart | Master | Body Parts |
+| ehs | Environment Health and Safety | u_mes_ehs_injuryType | Master | Injury Types |

@@ -140,3 +140,53 @@ s+="\n## Keys by BSON type\n\n| BSON type | Keys |\n|---|---|\n"+"".join("| %s |
 s+="\n## Not checked yet\n\nRequiredness, allowed values, descriptions and examples are not defined in the model yet, so they are not checked. BSON types were assigned by naming rules (documented in flatten_model.py) and need a read-through per collection when its specification is written.\n"
 w("08_validation/reports/model_consistency_check.md",s)
 print(NK,NF,ns)
+# ---- collection type matrix (Master / Transaction / Reports / Telemetry / Audit Trail)
+TYPE_BY_ROOT={"auditTrail":"Audit Trail","electronicSignature":"Audit Trail","businessEvent":"Audit Trail",
+ "processReading":"Telemetry","energyReading":"Telemetry","equipmentState":"Telemetry","alarm":"Telemetry",
+ "oeeRecord":"Reports","productionCount":"Reports","asBuiltRecord":"Reports"}
+import re as _re
+LABEL_FULL={"unitOfMeasure":"Units of Measure","billOfMaterial":"Bills of Material","billOfProcess":"Bills of Process","equipment":"Equipment","capa":"CAPA (8D)","pfmea":"Process FMEAs","ppapSubmission":"PPAP Submissions","msaStudy":"MSA Studies",
+ "spcChart":"SPC Charts","spcSample":"SPC Samples","erpMessage":"ERP Messages","iotDevice":"IoT Devices","oeeRecord":"OEE Records","wipUnit":"WIP Units","ppeItem":"PPE Items","user":"Users","site":"Sites","processReading":"Process Readings",
+ "productionCount":"Hourly Production Counts","businessEvent":"Business Events","auditTrail":"Audit Trail","controlledDocument":"Controlled Documents","asBuiltRecord":"As-Built Records","lot":"Lots and Batches","label":"Printed Labels",
+ "kit":"Kits","audit":"Audits","alarm":"Alarms","tool":"Tools","gauge":"Gauges","recipe":"Recipes","item":"Items","stockStatus":"Stock Statuses","surfaceFinish":"Surface Finishes","equipmentState":"Equipment States",
+ "statusDefinition":"Status Definitions","statusTransition":"Status Transitions","enumerationValue":"Enumeration Values","workCalendar":"Work Calendars","skillCertification":"Skill Certifications","inventoryBalance":"Inventory Balances"}
+LABEL_FULL.update({"workCenterRequiresSkill":"Work Center Required Skills","customerShipTo":"Customer Ship-To Addresses","billOfMaterialComponentProductVariant":"BOM Component Variants","billOfMaterialComponentAlternateItem":"BOM Component Alternate Items",
+ "billOfProcessStepEquipment":"BOP Step Equipment","billOfProcessStepTool":"BOP Step Tools","billOfProcessStepRequiredSkill":"BOP Step Required Skills","billOfProcessStepConsumedComponent":"BOP Step Consumed Components","billOfProcessStepInterlock":"BOP Step Interlocks","billOfProcessStepProcessParameter":"BOP Step Process Parameters",
+ "workInstructionStepMediaControlledDocument":"Work Instruction Step Media","engineeringChangeControlledDocument":"Engineering Change Documents","capaControlledDocument":"CAPA Documents","nonconformancePhotoControlledDocument":"Nonconformance Photos",
+ "controlPlanCoreTeamUser":"Control Plan Core Team","pfmeaCoreTeamUser":"PFMEA Core Team","nonconformanceMrbUser":"Nonconformance MRB Members","msaStudyAppraiserUser":"MSA Study Appraisers","auditAuditorUser":"Audit Auditors","changeoverPerformedByUser":"Changeover Crew",
+ "maintenanceWorkOrderAssignedToUser":"Maintenance Work Order Assignees","safetyIncidentWitnessUser":"Safety Incident Witnesses","lotAttributesCavityNo":"Lot Cavity Numbers","toolItem":"Tool Applicable Items","samplingPlanSizeRow":"Sampling Plan Sample Size Table","stepCompletion":"Work Instruction Step Completions"})
+WORDFIX={"Bom":"BOM","Erp":"ERP","Iot":"IoT","Oee":"OEE","Spc":"SPC","Msa":"MSA","Ppap":"PPAP","Pfmea":"PFMEA","Capa":"CAPA","Wip":"WIP","Ppe":"PPE","Mrb":"MRB","Of":"of","To":"to","On":"on"}
+def plural(w):
+    if w in("Equipment","Labour","Data","Media","Staff"): return w
+    if w.endswith("y") and w[-2] not in "aeiou": return w[:-1]+"ies"
+    if w.endswith(("s","x","ch","sh")): return w+"es"
+    return w+"s"
+def words_of(ent):
+    ws=_re.sub(r"([a-z0-9])([A-Z])",r"\1 \2",ent).split(); ws=[x[0].upper()+x[1:] for x in ws]; return [WORDFIX.get(x,x) for x in ws]
+def label(c):
+    e=c["entity"]
+    if e in LABEL_FULL: return LABEL_FULL[e]
+    if c["parent"]:
+        p=bycol[c["parent"]]; pe=p["entity"]; rest=words_of(e[len(pe):])
+        pw=" ".join(words_of(pe)) if pe not in("billOfMaterial","billOfProcess","unitOfMeasure") else {"billOfMaterial":"BOM","billOfProcess":"BOP","unitOfMeasure":"Unit of Measure"}[pe]
+        if pe in LABEL_FULL and pe in("capa","pfmea","ppapSubmission","msaStudy","spcChart","spcSample","erpMessage","iotDevice","oeeRecord","wipUnit","asBuiltRecord","controlledDocument"):
+            pw={"capa":"CAPA","pfmea":"PFMEA","ppapSubmission":"PPAP Submission","msaStudy":"MSA Study","spcChart":"SPC Chart","spcSample":"SPC Sample","erpMessage":"ERP Message","iotDevice":"IoT Device","oeeRecord":"OEE Record","wipUnit":"WIP Unit","asBuiltRecord":"As-Built Record","controlledDocument":"Controlled Document"}[pe]
+        rest[-1]=plural(rest[-1]); return pw+" "+" ".join(rest)
+    ws=words_of(e); ws[-1]=plural(ws[-1]); return " ".join(ws)
+def root_entity(c):
+    while c["parent"]: c=bycol[c["parent"]]
+    return c["entity"]
+tm="# Collection type matrix\n\n"+HEAD+"Type of each collection and the label used for it in the UI menu. A child, relationship or value-list collection has the type of the entity it belongs to; its label starts with the parent's name, because it is opened from the parent's screen.\n\n| Type | Meaning | Collections |\n|---|---|---|\n"
+rows=[(m,MODN[m],c["collection"],TYPE_BY_ROOT.get(root_entity(c),"Master" if c["dataClass"]=="master" else "Transaction"),label(c)) for m in order for c in cols if c["module"]==m]
+assert len({(r[0],r[4]) for r in rows})==len(rows),"duplicate label in a module"
+cnt=collections.Counter(r[3] for r in rows)
+MEAN={"Master":"Reference data that changes rarely and is maintained by the plant","Transaction":"Business records created by daily operations","Reports":"Pre-aggregated or assembled records built from transactions for reporting","Telemetry":"Machine-generated, time-ordered signals and states","Audit Trail":"Append-only records of who did or changed what"}
+for t in ["Master","Transaction","Reports","Telemetry","Audit Trail"]: tm+="| %s | %s | %d |\n"%(t,MEAN[t],cnt[t])
+tm+="\n## Collections per module and type\n\n| Code | ModuleName | Master | Transaction | Reports | Telemetry | Audit Trail | Total |\n|---|---|---|---|---|---|---|---|\n"
+for m in order:
+    mc=collections.Counter(r[3] for r in rows if r[0]==m)
+    tm+="| %s | %s | %d | %d | %d | %d | %d | %d |\n"%(m,MODN[m],mc["Master"],mc["Transaction"],mc["Reports"],mc["Telemetry"],mc["Audit Trail"],sum(mc.values()))
+tm+="\n## Matrix\n\n| Code | ModuleName | Collection | Type | Label |\n|---|---|---|---|---|\n"+"".join("| %s | %s | %s | %s | %s |\n"%r for r in rows)
+w("02_architecture/collection_type_matrix.md",tm)
+w("02_architecture/collection_type_matrix.csv","Code,ModuleName,Collection,Type,Label\n"+"".join("%s,%s,%s,%s,%s\n"%r for r in rows))
+print("type matrix",dict(cnt))
