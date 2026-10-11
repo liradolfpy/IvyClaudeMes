@@ -1,0 +1,23 @@
+# Decision log
+
+All entries are in force. Decisions were taken by Claude under the approved-by-default rule unless the source column says Owner.
+
+| No | Date | Decision | Reason | Source |
+|---|---|---|---|---|
+| D001 | 11 Oct 2026 | Application code `u_mes`; module codes mdm, prd, exe, mat, trc, qlt, eqp, mnt, sys, ehs | The requirements name a functional baseline for module codes; none is in the project, so codes were derived from the ten domains of the catalogue | Claude |
+| D002 | 11 Oct 2026 | All collections renamed to `u_mes_<moduleCode>_<singular camelCase>`; snake_case plural names are no longer used | Owner requirement | Owner |
+| D003 | 11 Oct 2026 | Flat documents everywhere (DATA-001). Embedded documents became prefixed top-level keys; arrays of objects became child collections; arrays of IDs became relationship collections; arrays of values became value-list collections. 104 concepts became 257 collections | Owner requirement: no nesting, treat as SQL tables | Owner / Claude for the three kinds |
+| D004 | 11 Oct 2026 | `recordNo` is the business identifier in every collection, replacing the per-collection names (orderNo, ncrNo, serialNo and so on) | Requirements name `recordNo` as the separate business identifier and ask for one stable name per concept | Claude |
+| D005 | 11 Oct 2026 | `_id` stays a String: `<PREFIX>-<recordNo>` for entities, `<parent _id>-<TAG><nnn>` for child, relationship and value-list collections | Original brief (string, not ObjectId); requirements leave the ID type to the project | Claude |
+| D006 | 11 Oct 2026 | Every reference is `<entity>Id` + `<entity>Name`; user action references are `<action>ById` + `<action>By`; polymorphic references are relatedCollectionName + relatedEntityId + relatedEntityName | Owner requirement for ID plus display value; the `ById` form mirrors the required audit keys | Owner / Claude |
+| D007 | 11 Oct 2026 | Audit keys only on transaction collections. 44 concepts are classed master, 60 transaction; children inherit the class | Owner requirement. Supersedes the brief's rule that every document has createdAt and createdBy | Owner / Claude for the classification |
+| D008 | 11 Oct 2026 | `status` only where a lifecycle exists; values in Title Case; mapped in `u_mes_sys_statusDefinition` and `u_mes_sys_statusTransition`. Removed duplicate lifecycle keys unitStatus, containerStatus, toolStatus, serialStatus, messageStatus, calibrationStatus, approvalStatus | Owner requirement for one primary status and a separate mapping collection | Owner / Claude |
+| D009 | 11 Oct 2026 | Decimal128 kept for measurements and money; Double used only for geoLatitude, geoLongitude, tagValue, powerFactor | Original brief requires Decimal128; requirements ask for Double only where specified | Claude |
+| D010 | 11 Oct 2026 | Spelling `workCenter` (not workCentre), `centerLine` | Owner's own examples use workCenter | Owner |
+| D011 | 11 Oct 2026 | Reference keys use the full entity name: unitOfMeasureId, productVariantId, billOfMaterialId, workCalendarId, controlledDocumentId, qualityHoldId | Requirement that the reference stem is the singular entity name | Claude |
+| D012 | 11 Oct 2026 | Vague keys renamed (value to tagValue or measuredValue, data to eventPayloadText, body to bodyText, state to stateCode, and others listed in flatten_model.py) | Requirement against vague names | Claude |
+| D013 | 11 Oct 2026 | `u_mes_prd_operation` has 11 seed documents and `u_mes_prd_item` 12; every other collection has 10 | Recommended earlier; approved by default | Owner (default approval) |
+| D014 | 11 Oct 2026 | `siteId` + `siteName` and `schemaVersion` kept in every collection | Original brief; not contradicted by the requirements | Claude |
+| D015 | 11 Oct 2026 | Seed data is produced in three forms: BSON files, shell-style .js with the required constructors, and Extended JSON | Original brief asks for BSON; requirements define shell-style seed documents | Claude |
+| D016 | 11 Oct 2026 | Nested-model builders build_phase1.py and build_keys.py moved to 99_Archive/2026-10-11_nested_model | They write the old naming and nesting | Claude |
+| D017 | 11 Oct 2026 | Folder `99_archive` renamed `99_Archive`; `Folder_Guide.md` created at the root as the path authority | Requirements refer to these names | Owner |
