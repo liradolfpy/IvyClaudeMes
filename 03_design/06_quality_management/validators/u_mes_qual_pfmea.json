@@ -87,11 +87,11 @@
         },
         "originalDate": {
           "bsonType": "date",
-          "description": "Original date (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Original date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "revisionDate": {
           "bsonType": "date",
-          "description": "Revision date (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Revision date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "approvedById": {
           "bsonType": [
@@ -112,7 +112,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was approved"
+          "description": "Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",

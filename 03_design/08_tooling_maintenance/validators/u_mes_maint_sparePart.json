@@ -149,14 +149,14 @@
             "date",
             "null"
           ],
-          "description": "Last issued date and time"
+          "description": "Last issued date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "lastReceivedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Last received date and time"
+          "description": "Last received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "isInsuranceSpare": {
           "bsonType": "bool",

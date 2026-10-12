@@ -139,18 +139,18 @@
         },
         "issuedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was issued"
+          "description": "Date and time when the record was issued. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "startedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was started"
+          "description": "Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "completedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was completed"
+          "description": "Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "reinspectionResult": {
           "bsonType": [
@@ -183,7 +183,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was reinspected"
+          "description": "Date and time when the record was reinspected. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "quantityRecovered": {
           "bsonType": "int",
@@ -222,7 +222,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -234,7 +234,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

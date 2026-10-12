@@ -30,27 +30,27 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1233000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"APP-GDC-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the operator app; used as its display value in other collections | `"Operator app, Gravity Die Casting Cell 1"` |  |
-| 6 | appType | String | Yes | App type | `"Operator Station"` | Operator Station; Inspection; Material Handling; Maintenance; Andon Board |
-| 7 | version | Int32 | Yes | Version of the operator app | `NumberInt(1)` |  |
-| 8 | publishedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'published' | `null` | Reference: u_mes_mast_user._id |
-| 9 | publishedBy | String | No (null allowed) | Display name of the user in publishedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 10 | publishedAt | Date | No (null allowed) | Date and time when the record was published | `null` |  |
-| 11 | approvedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
-| 12 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 13 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `null` |  |
-| 14 | previousVersionOperatorAppId | String | No (null allowed) | Reference to u_mes_syst_operatorApp._id: previous version operator app | `null` | Reference: u_mes_syst_operatorApp._id |
-| 15 | previousVersionOperatorAppName | String | No (null allowed) | Display value of previousVersionOperatorAppId, copied from u_mes_syst_operatorApp.name | `null` |  |
-| 16 | status | String | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
-| 17 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1233000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"APP-GDC-01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the operator app; used as its display value in other collections | `"Operator app, Gravity Die Casting Cell 1"` |  |
+| 6 | appType | String | - | Yes | App type | `"Operator Station"` | Operator Station; Inspection; Material Handling; Maintenance; Andon Board |
+| 7 | version | Int32 | - | Yes | Version of the operator app | `NumberInt(1)` |  |
+| 8 | publishedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'published' | `null` | Reference: u_mes_mast_user._id |
+| 9 | publishedBy | String | - | No (null allowed) | Display name of the user in publishedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 10 | publishedAt | Date | Datetime | No (null allowed) | Date and time when the record was published. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 11 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
+| 12 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 13 | approvedAt | Date | Datetime | No (null allowed) | Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 14 | previousVersionOperatorAppId | String | - | No (null allowed) | Reference to u_mes_syst_operatorApp._id: previous version operator app | `null` | Reference: u_mes_syst_operatorApp._id |
+| 15 | previousVersionOperatorAppName | String | - | No (null allowed) | Display value of previousVersionOperatorAppId, copied from u_mes_syst_operatorApp.name | `null` |  |
+| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

@@ -19,27 +19,27 @@ Flat entity collection: one document per area, all keys top-level and scalar.
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1005000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"FDY"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the area; used as its display value in other collections | `"Foundry"` |  |
-| 6 | areaType | String | Yes | Area type | `"Production"` | Production; Storage; Quality; Maintenance; Utility |
-| 7 | parentAreaId | String | No (null allowed) | Reference to u_mes_mast_area._id: parent area | `null` | Reference: u_mes_mast_area._id |
-| 8 | parentAreaName | String | No (null allowed) | Display value of parentAreaId, copied from u_mes_mast_area.name | `null` |  |
-| 9 | costCenterId | String | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"1259000000000001"` | Reference: u_mes_mast_costCenter._id |
-| 10 | costCenterName | String | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
-| 11 | supervisorUserId | String | No (null allowed) | Reference to u_mes_mast_user._id: supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
-| 12 | supervisorUserName | String | No (null allowed) | Display value of supervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 13 | floorAreaSqm | Decimal128 | Yes | Floor area (square metres) | `NumberDecimal("1850.0")` |  |
-| 14 | isProductionArea | Boolean | Yes | True when the record is production area | `true` |  |
-| 15 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 16 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 17 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1005000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"FDY"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the area; used as its display value in other collections | `"Foundry"` |  |
+| 6 | areaType | String | - | Yes | Area type | `"Production"` | Production; Storage; Quality; Maintenance; Utility |
+| 7 | parentAreaId | String | - | No (null allowed) | Reference to u_mes_mast_area._id: parent area | `null` | Reference: u_mes_mast_area._id |
+| 8 | parentAreaName | String | - | No (null allowed) | Display value of parentAreaId, copied from u_mes_mast_area.name | `null` |  |
+| 9 | costCenterId | String | - | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"1259000000000001"` | Reference: u_mes_mast_costCenter._id |
+| 10 | costCenterName | String | - | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
+| 11 | supervisorUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
+| 12 | supervisorUserName | String | - | No (null allowed) | Display value of supervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
+| 13 | floorAreaSqm | Decimal128 | - | Yes | Floor area (square metres) | `NumberDecimal("1850.0")` |  |
+| 14 | isProductionArea | Boolean | - | Yes | True when the record is production area | `true` |  |
+| 15 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

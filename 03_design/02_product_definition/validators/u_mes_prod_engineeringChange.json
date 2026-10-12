@@ -119,7 +119,7 @@
         },
         "raisedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was raised"
+          "description": "Date and time when the record was raised. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "effectivityType": {
           "bsonType": "string",
@@ -133,7 +133,7 @@
         },
         "effectiveFrom": {
           "bsonType": "date",
-          "description": "Effective from (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "cutInSerialNo": {
           "bsonType": [
@@ -165,14 +165,14 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was implemented"
+          "description": "Date and time when the record was implemented. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "closedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was closed"
+          "description": "Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -192,7 +192,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -204,7 +204,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

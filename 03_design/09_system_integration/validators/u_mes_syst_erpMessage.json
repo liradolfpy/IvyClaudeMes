@@ -188,28 +188,28 @@
         },
         "createdInSourceAt": {
           "bsonType": "date",
-          "description": "Created in source date and time"
+          "description": "Created in source date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "receivedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was received"
+          "description": "Date and time when the record was received. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "processedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was processed"
+          "description": "Date and time when the record was processed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "nextRetryAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Next retry date and time"
+          "description": "Next retry date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "errorCode": {
           "bsonType": [
@@ -237,7 +237,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was acknowledged"
+          "description": "Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -256,7 +256,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -268,7 +268,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

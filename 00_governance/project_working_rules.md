@@ -42,5 +42,5 @@ Field-level specifications are documented and checked for consistency before use
 - No shortening, summarising or placeholders in specifications and data.
 - State every assumption (in `assumptions_log.md`).
 - Referential integrity: every reference points to an `_id` that exists.
-- Dates form one coherent timeline over the two-week production period, IST stored as UTC.
+- Dates form one coherent timeline over the two-week production period, stored as local plant time (IST) with the +0000 suffix, without UTC conversion (DATA-004, replaces 'IST stored as UTC').
 - `data_model_register.md` is kept up to date and handed over at the end of each phase.

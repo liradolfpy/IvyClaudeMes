@@ -58,10 +58,23 @@ Source: owner's requirements of 11 October 2026, with the project's own choices 
 - Status values are mapped in a separate collection: `u_mes_syst_statusDefinition` (one document per collection and value) and `u_mes_syst_statusTransition` (allowed moves). The values are listed in `04_reference_data/code_lists/status_values.md`.
 - A second state that is not the lifecycle keeps its own descriptive key (`qualityStatus`, `stockStatus`, `connectionStatus`).
 
-## 7. Dates and times
+## 7. DATA-004 Dates and times (local plant time)
 
-- Event timestamps end in `At` (`createdAt`, `approvedAt`, `completedAt`). Calendar dates end in `Date` or use `validFrom`, `validTo`, `effectiveFrom`, `effectiveTo`.
-- All are BSON dates, stored in UTC. Never strings.
+Source: owner's instruction of 12 October 2026.
+
+- Every date and time is stored as a BSON date, never as a string.
+- The value is the **local plant time (IST)**, written with the `+0000` suffix, **without converting to UTC**. The stored digits are what the clock on the shop floor showed. Example: 8 October 2026, 00:00 IST is stored as `ISODate("2026-10-08T00:00:00.000+0000")`, not as `2026-10-07T18:30:00.000+0000`. A shift starting at 06:00 IST is stored as `T06:00:00.000+0000`.
+- Every date key carries a tag in the key design (field lists, collection keys and specifications):
+
+| Tag | Holds | Stored as | Key name |
+|---|---|---|---|
+| Date | A calendar date with no time of day (due dates, validity dates, holidays, production dates) | 00:00:00.000 of that day | Ends in `Date`, or is one of `validFrom`, `validTo`, `effectiveFrom`, `effectiveTo`, `horizonFrom`, `horizonTo` |
+| Datetime | A moment at which something happened or is planned to happen | The local time to the second (milliseconds .000 unless measured) | Ends in `At` |
+
+- A new date key is tagged when it is created; the tag is part of its specification and decides how sample data and application code fill it.
+- An end-of-validity date (`validTo`, `effectiveTo`) is the last day on which the record is valid, stored as 00:00:00 of that day.
+- Keys that are named with `At` but hold a calendar date (for example `nextDueAt`, `nextCalibrationDueAt`, `expiryAt`) are tagged Date. They are listed in `decision_log.md` (D035) as candidates for renaming to `…Date`; until then the tag, not the name, decides the format.
+- If the plant time zone ever has to be shown in UTC, the application converts on display; the stored value stays local.
 
 ## 8. DATA-002 Numeric and other types
 

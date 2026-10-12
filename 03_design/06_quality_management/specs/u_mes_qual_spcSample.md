@@ -27,46 +27,46 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1154000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"SPS-2026-000253"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | spcChartId | String | Yes | Reference to u_mes_qual_spcChart._id | `"1151000000000001"` | Reference: u_mes_qual_spcChart._id |
-| 6 | spcChartName | String | Yes | Display value of spcChartId, copied from u_mes_qual_spcChart.name | `"Casting wall thickness at bridge, X-bar R chart"` |  |
-| 7 | characteristicId | String | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000001"` | Reference: u_mes_qual_characteristic._id |
-| 8 | characteristicName | String | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Casting wall thickness at bridge"` |  |
-| 9 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 10 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 11 | subgroupNo | Int32 | Yes | Subgroup number | `NumberInt(147)` |  |
-| 12 | sampledAt | Date | Yes | Date and time when the record was sampled | `ISODate("2026-09-15T00:30:30.000+0000")` |  |
-| 13 | sampledById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'sampled' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 14 | sampledBy | String | Yes | Display name of the user in sampledById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 15 | shiftId | String | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
-| 16 | shiftName | String | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 17 | subgroupMean | Decimal128 | Yes | Subgroup mean | `NumberDecimal("8.03")` |  |
-| 18 | subgroupRange | Decimal128 | Yes | Subgroup range | `NumberDecimal("0.14")` |  |
-| 19 | stdDev | Decimal128 | Yes | Std dev | `NumberDecimal("0.0600")` |  |
-| 20 | ucl | Decimal128 | Yes | Upper control limit | `NumberDecimal("8.20")` |  |
-| 21 | lcl | Decimal128 | Yes | Lower control limit | `NumberDecimal("7.84")` |  |
-| 22 | centerLine | Decimal128 | Yes | Center line | `NumberDecimal("8.02")` |  |
-| 23 | inControl | Boolean | Yes | True when: in control | `true` |  |
-| 24 | assignableCause | String | No (null allowed) | Assignable cause | `null` |  |
-| 25 | correctiveAction | String | No (null allowed) | Corrective action | `"Ejector pin polished and die coat thickness corrected"` |  |
-| 26 | nonconformanceId | String | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
-| 27 | nonconformanceName | String | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
-| 28 | excludedFromLimits | Boolean | Yes | True when: excluded from limits | `false` |  |
-| 29 | status | String | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Under Investigation; Closed |
-| 30 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 31 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
-| 32 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 33 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 34 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:30:30.000+0000")` |  |
-| 35 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 36 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1154000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SPS-2026-000253"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | spcChartId | String | - | Yes | Reference to u_mes_qual_spcChart._id | `"1151000000000001"` | Reference: u_mes_qual_spcChart._id |
+| 6 | spcChartName | String | - | Yes | Display value of spcChartId, copied from u_mes_qual_spcChart.name | `"Casting wall thickness at bridge, X-bar R chart"` |  |
+| 7 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000001"` | Reference: u_mes_qual_characteristic._id |
+| 8 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Casting wall thickness at bridge"` |  |
+| 9 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 10 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 11 | subgroupNo | Int32 | - | Yes | Subgroup number | `NumberInt(147)` |  |
+| 12 | sampledAt | Date | Datetime | Yes | Date and time when the record was sampled. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 13 | sampledById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'sampled' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 14 | sampledBy | String | - | Yes | Display name of the user in sampledById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 15 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
+| 16 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
+| 17 | subgroupMean | Decimal128 | - | Yes | Subgroup mean | `NumberDecimal("8.03")` |  |
+| 18 | subgroupRange | Decimal128 | - | Yes | Subgroup range | `NumberDecimal("0.14")` |  |
+| 19 | stdDev | Decimal128 | - | Yes | Std dev | `NumberDecimal("0.0600")` |  |
+| 20 | ucl | Decimal128 | - | Yes | Upper control limit | `NumberDecimal("8.20")` |  |
+| 21 | lcl | Decimal128 | - | Yes | Lower control limit | `NumberDecimal("7.84")` |  |
+| 22 | centerLine | Decimal128 | - | Yes | Center line | `NumberDecimal("8.02")` |  |
+| 23 | inControl | Boolean | - | Yes | True when: in control | `true` |  |
+| 24 | assignableCause | String | - | No (null allowed) | Assignable cause | `null` |  |
+| 25 | correctiveAction | String | - | No (null allowed) | Corrective action | `"Ejector pin polished and die coat thickness corrected"` |  |
+| 26 | nonconformanceId | String | - | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
+| 27 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
+| 28 | excludedFromLimits | Boolean | - | Yes | True when: excluded from limits | `false` |  |
+| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Under Investigation; Closed |
+| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 31 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 32 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 33 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 34 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 35 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 36 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 

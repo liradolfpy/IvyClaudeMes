@@ -17,6 +17,7 @@ Run before accepting a document or generating sample or seed data. Record the re
 | A9 | Audit keys are present on transaction collections and absent on master collections |
 | A10 | Every reference ID points to an `_id` that exists in the target collection |
 | A11 | Dates fall inside the production timeline and are in a possible order |
+| A13 | Every date value is local plant time with the +0000 suffix (no UTC conversion); every Date-tagged key is at 00:00:00 |
 | A12 | No classification is held as free text: each one is either a master reference (ID plus display key) or a fixed enumeration with its values in `enumeration_values.md` |
 
 ## B. Naming checklist for every new key
@@ -29,6 +30,7 @@ Run before accepting a document or generating sample or seed data. Record the re
 | B4 | Does the BSON type match the value being stored? |
 | B5 | Is the key consistent with the same concept in other documents and collections? |
 | B6 | Is the key necessary and limited to one clear purpose? |
+| B8 | If the key holds a date or time, is it tagged Date or Datetime and named to match (`…Date` or `…At`)? |
 | B7 | If the key classifies the document, has DATA-003 been applied: master collection (rule A) or fixed enumeration (rule B)? |
 
 ## C. Naming checklist for every new collection

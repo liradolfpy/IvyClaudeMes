@@ -120,8 +120,8 @@ def words(k):
 def describe(c,f,nul):
     k=f["key"]; t=f["type"]
     fixed={"_id":"Unique identifier of the document. Pattern: %s"%c["idPattern"],"recordNo":"Business identifier of the document, readable by people and unique within the site","siteId":"Reference to u_mes_mast_site._id: the site the document belongs to","siteName":"Display value of the site, copied from u_mes_mast_site.name",
-     "status":"Primary lifecycle state of the document","schemaVersion":"Version of this collection's document structure, starting at 1","createdAt":"Date and time the document was created","createdById":"Reference to u_mes_mast_user._id: user or process that created the document","createdBy":"Display name of the creator, copied from u_mes_mast_user.fullName",
-     "updatedAt":"Date and time of the most recent update","updatedById":"Reference to u_mes_mast_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mast_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
+     "status":"Primary lifecycle state of the document","schemaVersion":"Version of this collection's document structure, starting at 1","createdAt":"Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix","createdById":"Reference to u_mes_mast_user._id: user or process that created the document","createdBy":"Display name of the creator, copied from u_mes_mast_user.fullName",
+     "updatedAt":"Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix","updatedById":"Reference to u_mes_mast_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mast_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
      "relatedCollectionName":"Name of the collection the related document is in","relatedEntityId":"_id of the related document in the collection named by relatedCollectionName","relatedEntityName":"Display value of the related document"}
     if k in fixed: return fixed[k]
     ks=[x["key"] for x in c["fields"]]
@@ -142,12 +142,14 @@ def describe(c,f,nul):
         m=re.match(r"(is|has|can|requires)([A-Z].*)",k)
         if m: return {"is":"True when the record is %s","has":"True when the record has %s","can":"True when the holder can %s","requires":"True when %s is required"}[m.group(1)]%words(m.group(2))
         return "True when: %s"%words(k)
+    if t=="Date" and f.get("dateKind")=="Date":
+        return "%s. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"%words(k).capitalize()
     if t=="Date":
         if k.endswith("At"):
             st=k[:-2]; w=words(st)
-            if re.fullmatch(r"[a-z]+ed",st) or st in("sent","read","built"): return "Date and time when the record was %s"%w
-            return "%s date and time"%w.capitalize()
-        return "%s (calendar date, stored as the start of that day in IST converted to UTC)"%words(k).capitalize()
+            if re.fullmatch(r"[a-z]+ed",st) or st in("sent","read","built"): return "Date and time when the record was %s. Datetime field: local plant time (IST) stored with the +0000 suffix"%w
+            return "%s date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"%w.capitalize()
+        return "%s. Datetime field: local plant time (IST) stored with the +0000 suffix"%words(k).capitalize()
     w=words(k)
     for suf,txt in UNIT:
         if k.endswith(suf) and len(k)>len(suf):
@@ -337,7 +339,7 @@ for m in order:
             if f["ref"]=="(polymorphic)": ref="Any collection (see relatedCollectionName)"
             elif f["ref"]: ref=byent[f["ref"]]["collection"]+"._id"
             allowed="; ".join(en) if en else ("Reference: "+ref if ref else "")
-            rows.append("| %d | %s | %s | %s | %s | `%s` | %s |"%(i,f["key"],f["type"],"Yes" if not nul else "No (null allowed)",cell(desc),cell(sh(doc[f["key"]])),cell(allowed)))
+            rows.append("| %d | %s | %s | %s | %s | %s | `%s` | %s |"%(i,f["key"],f["type"],f.get("dateKind","-"),"Yes" if not nul else "No (null allowed)",cell(desc),cell(sh(doc[f["key"]])),cell(allowed)))
             p=collections.OrderedDict(); p["bsonType"]=BT[f["type"]] if not nul else [BT[f["type"]],"null"]; p["description"]=desc
             if en: p["enum"]=en+([None] if nul else [])
             props[f["key"]]=p
@@ -379,7 +381,7 @@ for m in order:
                 "relationship":"Relationship collection. A %s can be linked to several documents of another collection, and DATA-001 does not allow an array of IDs, so each link is its own document carrying one singular reference pair. %sId and %sName point to the parent.\n",
                 "valueList":"Value-list collection. A %s can have several values of this kind, and DATA-001 does not allow an array, so each value is its own document. %sId and %sName point to the parent.\n"}[c["kind"]]%(words(pe),pe,pe)
             s+="Data class (%s) and site are inherited from the parent. Documents are created, changed and removed together with the parent's lifecycle.\n"%c["dataClass"]
-        s+="\n## Field dictionary\n\nEvery key is present in every document. \"Required\" means the value may not be null.\n\n| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |\n|---|---|---|---|---|---|---|\n"+"\n".join(rows)+"\n"
+        s+="\n## Field dictionary\n\nEvery key is present in every document. \"Required\" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).\n\n| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |\n|---|---|---|---|---|---|---|---|\n"+"\n".join(rows)+"\n"
         if c["statusValues"]: s+="\n## Status values\n\n%s. Initial state: %s. The values are maintained in u_mes_syst_statusDefinition.\n"%(", ".join(c["statusValues"]),c["statusValues"][0])
         s+="\n## Indexes\n\n| # | Keys | Unique | Purpose |\n|---|---|---|---|\n"
         js='// Indexes for %s\n'%name

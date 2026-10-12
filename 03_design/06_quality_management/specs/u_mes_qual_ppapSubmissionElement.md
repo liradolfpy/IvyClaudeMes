@@ -18,29 +18,29 @@ Data class (transaction) and site are inherited from the parent. Documents are c
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1187000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"PPAP-5110-10-0100-D-01-E01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | ppapSubmissionId | String | Yes | Reference to u_mes_qual_ppapSubmission._id: the parent document this one belongs to | `"1186000000000001"` | Reference: u_mes_qual_ppapSubmission._id |
-| 6 | ppapSubmissionName | String | Yes | Display value of ppapSubmissionId, copied from u_mes_qual_ppapSubmission.recordNo | `"PPAP-5110-10-0100-D-01"` |  |
-| 7 | elementNo | Int32 | Yes | PPAP element number 1 to 18 | `NumberInt(1)` |  |
-| 8 | name | String | Yes | Name of the PPAP submission element | `"Design Records"` |  |
-| 9 | required | Boolean | Yes | True when: required | `true` |  |
-| 10 | status | String | Yes | Primary lifecycle state of the document | `"Not Started"` | Not Started; In Progress; Complete; Not Applicable |
-| 11 | controlledDocumentId | String | Yes | Reference to u_mes_syst_controlledDocument._id | `"1246000000000010"` | Reference: u_mes_syst_controlledDocument._id |
-| 12 | controlledDocumentName | String | Yes | Display value of controlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-10-0100 revision D, Front Brake Caliper Assembly LH"` |  |
-| 13 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 14 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:33:00.000+0000")` |  |
-| 15 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 16 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 17 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:33:00.000+0000")` |  |
-| 18 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 19 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1187000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PPAP-5110-10-0100-D-01-E01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | ppapSubmissionId | String | - | Yes | Reference to u_mes_qual_ppapSubmission._id: the parent document this one belongs to | `"1186000000000001"` | Reference: u_mes_qual_ppapSubmission._id |
+| 6 | ppapSubmissionName | String | - | Yes | Display value of ppapSubmissionId, copied from u_mes_qual_ppapSubmission.recordNo | `"PPAP-5110-10-0100-D-01"` |  |
+| 7 | elementNo | Int32 | - | Yes | PPAP element number 1 to 18 | `NumberInt(1)` |  |
+| 8 | name | String | - | Yes | Name of the PPAP submission element | `"Design Records"` |  |
+| 9 | required | Boolean | - | Yes | True when: required | `true` |  |
+| 10 | status | String | - | Yes | Primary lifecycle state of the document | `"Not Started"` | Not Started; In Progress; Complete; Not Applicable |
+| 11 | controlledDocumentId | String | - | Yes | Reference to u_mes_syst_controlledDocument._id | `"1246000000000010"` | Reference: u_mes_syst_controlledDocument._id |
+| 12 | controlledDocumentName | String | - | Yes | Display value of controlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-10-0100 revision D, Front Brake Caliper Assembly LH"` |  |
+| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 14 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
+| 15 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 16 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 17 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
+| 18 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 19 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 

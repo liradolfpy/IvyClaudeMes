@@ -79,7 +79,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was published"
+          "description": "Date and time when the record was published. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "approvedById": {
           "bsonType": [
@@ -100,7 +100,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was approved"
+          "description": "Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "previousVersionOperatorAppId": {
           "bsonType": [

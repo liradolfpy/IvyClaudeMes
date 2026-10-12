@@ -131,21 +131,21 @@
         },
         "firstReceivedAt": {
           "bsonType": "date",
-          "description": "First received date and time"
+          "description": "First received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "lastMovementAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Last movement date and time"
+          "description": "Last movement date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "lastCountedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Last counted date and time"
+          "description": "Last counted date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "lastCountedById": {
           "bsonType": [
@@ -166,7 +166,7 @@
             "date",
             "null"
           ],
-          "description": "Expiry date and time"
+          "description": "Expiry at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -182,7 +182,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -194,7 +194,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

@@ -143,11 +143,11 @@
             "date",
             "null"
           ],
-          "description": "Last done date and time"
+          "description": "Last done date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "nextDueAt": {
           "bsonType": "date",
-          "description": "Next due date and time"
+          "description": "Next due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "toleranceDays": {
           "bsonType": "int",

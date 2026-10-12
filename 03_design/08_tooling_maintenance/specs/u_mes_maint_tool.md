@@ -25,43 +25,43 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1226000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"DIE-5110-LH-02"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the tool; used as its display value in other collections | `"Gravity die, caliper body LH, die 2"` |  |
-| 6 | toolTypeId | String | Yes | Reference to u_mes_maint_toolType._id | `"1288000000000001"` | Reference: u_mes_maint_toolType._id |
-| 7 | toolTypeName | String | Yes | Display value of toolTypeId, copied from u_mes_maint_toolType.name | `"Die"` |  |
-| 8 | toolClass | String | Yes | Tool class | `"Production Tooling"` | Production Tooling; Customer Owned Tooling; Consumable Tooling |
-| 9 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
-| 10 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
-| 11 | mountedPosition | String | No (null allowed) | Mounted position | `"Station 1"` |  |
-| 12 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `"1038000000000004"` | Reference: u_mes_mast_supplier._id |
-| 13 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Western Aluminium Alloys Ltd."` |  |
-| 14 | drawingNo | String | Yes | Drawing number | `"5110-10-0100"` |  |
-| 15 | serialNo | String | Yes | Serial number | `"AC-PF6-2231907"` |  |
-| 16 | cavities | Int32 | Yes | Cavities of the tool | `NumberInt(2)` |  |
-| 17 | lifeUom | String | Yes | Life uom | `"Shots"` | Shots; Cycles; Pieces; Run Hours |
-| 18 | lifeLimit | Int64 | Yes | Life limit | `NumberLong("80000")` |  |
-| 19 | lifeUsed | Int64 | Yes | Life used | `NumberLong("61600")` |  |
-| 20 | lifeRemaining | Int64 | Yes | Life remaining | `NumberLong("18400")` |  |
-| 21 | warningThresholdPct | Decimal128 | Yes | Warning threshold (percent) | `NumberDecimal("80.0")` |  |
-| 22 | regrindCount | Int32 | Yes | Regrind count | `NumberInt(0)` |  |
-| 23 | maxRegrinds | Int32 | Yes | Maximum regrinds | `NumberInt(0)` |  |
-| 24 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
-| 25 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
-| 26 | lastMaintainedAt | Date | No (null allowed) | Last maintained date and time | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
-| 27 | nextMaintenanceDueAt | Date | Yes | Next maintenance due date and time | `ISODate("2026-10-05T18:30:00.000+0000")` |  |
-| 28 | purchasedAt | Date | Yes | Date and time when the record was purchased | `ISODate("2019-01-03T18:30:00.000+0000")` |  |
-| 29 | costInr | Decimal128 | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
-| 30 | ownedByCustomerId | String | No (null allowed) | Reference to u_mes_mast_customer._id: owned by customer | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
-| 31 | ownedByCustomerName | String | No (null allowed) | Display value of ownedByCustomerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
-| 32 | status | String | Yes | Primary lifecycle state of the document | `"Mounted"` | Available; Mounted; In Maintenance; Life Expired; Scrapped |
-| 33 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1226000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"DIE-5110-LH-02"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the tool; used as its display value in other collections | `"Gravity die, caliper body LH, die 2"` |  |
+| 6 | toolTypeId | String | - | Yes | Reference to u_mes_maint_toolType._id | `"1288000000000001"` | Reference: u_mes_maint_toolType._id |
+| 7 | toolTypeName | String | - | Yes | Display value of toolTypeId, copied from u_mes_maint_toolType.name | `"Die"` |  |
+| 8 | toolClass | String | - | Yes | Tool class | `"Production Tooling"` | Production Tooling; Customer Owned Tooling; Consumable Tooling |
+| 9 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 10 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 11 | mountedPosition | String | - | No (null allowed) | Mounted position | `"Station 1"` |  |
+| 12 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `"1038000000000004"` | Reference: u_mes_mast_supplier._id |
+| 13 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Western Aluminium Alloys Ltd."` |  |
+| 14 | drawingNo | String | - | Yes | Drawing number | `"5110-10-0100"` |  |
+| 15 | serialNo | String | - | Yes | Serial number | `"AC-PF6-2231907"` |  |
+| 16 | cavities | Int32 | - | Yes | Cavities of the tool | `NumberInt(2)` |  |
+| 17 | lifeUom | String | - | Yes | Life uom | `"Shots"` | Shots; Cycles; Pieces; Run Hours |
+| 18 | lifeLimit | Int64 | - | Yes | Life limit | `NumberLong("80000")` |  |
+| 19 | lifeUsed | Int64 | - | Yes | Life used | `NumberLong("61600")` |  |
+| 20 | lifeRemaining | Int64 | - | Yes | Life remaining | `NumberLong("18400")` |  |
+| 21 | warningThresholdPct | Decimal128 | - | Yes | Warning threshold (percent) | `NumberDecimal("80.0")` |  |
+| 22 | regrindCount | Int32 | - | Yes | Regrind count | `NumberInt(0)` |  |
+| 23 | maxRegrinds | Int32 | - | Yes | Maximum regrinds | `NumberInt(0)` |  |
+| 24 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
+| 25 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
+| 26 | lastMaintainedAt | Date | Datetime | No (null allowed) | Last maintained date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 27 | nextMaintenanceDueAt | Date | Date | Yes | Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
+| 28 | purchasedAt | Date | Datetime | Yes | Date and time when the record was purchased. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
+| 29 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
+| 30 | ownedByCustomerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id: owned by customer | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
+| 31 | ownedByCustomerName | String | - | No (null allowed) | Display value of ownedByCustomerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
+| 32 | status | String | - | Yes | Primary lifecycle state of the document | `"Mounted"` | Available; Mounted; In Maintenance; Life Expired; Scrapped |
+| 33 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

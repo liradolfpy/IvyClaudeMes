@@ -12,7 +12,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "A",
     engineeringChangeId: "1076000000000010",
     engineeringChangeName: "Work instruction pictures updated for RH variant",
-    effectiveFrom: ISODate("2026-04-01T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-04-02T00:00:00.000+0000"),
     description: "Initial release for production",
     schemaVersion: NumberInt(1)
   },
@@ -27,7 +27,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "B",
     engineeringChangeId: "1076000000000010",
     engineeringChangeName: "Work instruction pictures updated for RH variant",
-    effectiveFrom: ISODate("2026-05-08T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-05-09T00:00:00.000+0000"),
     description: "Revised after engineering change",
     schemaVersion: NumberInt(1)
   },
@@ -42,7 +42,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "A",
     engineeringChangeId: "1076000000000010",
     engineeringChangeName: "Work instruction pictures updated for RH variant",
-    effectiveFrom: ISODate("2026-06-15T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-06-16T00:00:00.000+0000"),
     description: "Initial release for production",
     schemaVersion: NumberInt(1)
   },
@@ -57,7 +57,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "B",
     engineeringChangeId: "1076000000000010",
     engineeringChangeName: "Work instruction pictures updated for RH variant",
-    effectiveFrom: ISODate("2026-07-22T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-07-23T00:00:00.000+0000"),
     description: "Revised after engineering change",
     schemaVersion: NumberInt(1)
   },
@@ -72,7 +72,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "A",
     engineeringChangeId: "1076000000000005",
     engineeringChangeName: "Laser mark layout changed to include plant code",
-    effectiveFrom: ISODate("2026-08-02T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-08-03T00:00:00.000+0000"),
     description: "Initial release for production",
     schemaVersion: NumberInt(1)
   },
@@ -87,7 +87,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "B",
     engineeringChangeId: "1076000000000005",
     engineeringChangeName: "Laser mark layout changed to include plant code",
-    effectiveFrom: ISODate("2026-04-09T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-04-10T00:00:00.000+0000"),
     description: "Revised after engineering change",
     schemaVersion: NumberInt(1)
   },
@@ -102,7 +102,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "A",
     engineeringChangeId: "1076000000000001",
     engineeringChangeName: "Bleed screw torque window revised to 14 +/- 2 N.m",
-    effectiveFrom: ISODate("2026-05-16T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-05-17T00:00:00.000+0000"),
     description: "Initial release for production",
     schemaVersion: NumberInt(1)
   },
@@ -117,7 +117,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "B",
     engineeringChangeId: "1076000000000001",
     engineeringChangeName: "Bleed screw torque window revised to 14 +/- 2 N.m",
-    effectiveFrom: ISODate("2026-06-23T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-06-24T00:00:00.000+0000"),
     description: "Revised after engineering change",
     schemaVersion: NumberInt(1)
   },
@@ -132,7 +132,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "A",
     engineeringChangeId: "1076000000000006",
     engineeringChangeName: "Casting die 2 gate geometry modified",
-    effectiveFrom: ISODate("2026-07-03T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-07-04T00:00:00.000+0000"),
     description: "Initial release for production",
     schemaVersion: NumberInt(1)
   },
@@ -147,7 +147,7 @@ db.getCollection("u_mes_prod_itemRevision").insertMany([
     revision: "B",
     engineeringChangeId: "1076000000000006",
     engineeringChangeName: "Casting die 2 gate geometry modified",
-    effectiveFrom: ISODate("2026-08-10T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-08-11T00:00:00.000+0000"),
     description: "Revised after engineering change",
     schemaVersion: NumberInt(1)
   }

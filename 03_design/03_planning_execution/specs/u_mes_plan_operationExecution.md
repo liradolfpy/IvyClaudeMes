@@ -26,63 +26,63 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1090000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"OPX-2026-000376"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | productionOrderId | String | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
-| 6 | productionOrderName | String | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
-| 7 | wipUnitId | String | No (null allowed) | Reference to u_mes_plan_wipUnit._id | `null` | Reference: u_mes_plan_wipUnit._id |
-| 8 | wipUnitName | String | No (null allowed) | Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo | `null` |  |
-| 9 | lotId | String | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000001"` | Reference: u_mes_plan_lot._id |
-| 10 | lotName | String | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260915-GDC-014"` |  |
-| 11 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
-| 12 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 13 | routingId | String | Yes | Reference to u_mes_prod_routing._id | `"1053000000000004"` | Reference: u_mes_prod_routing._id |
-| 14 | routingName | String | Yes | Display value of routingId, copied from u_mes_prod_routing.description | `"Caliper body casting LH, casting and T6"` |  |
-| 15 | stepNo | Int32 | Yes | Step number within the parent record | `NumberInt(10)` |  |
-| 16 | operationId | String | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 17 | operationName | String | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 18 | workCenterId | String | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 19 | workCenterName | String | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 20 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
-| 21 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
-| 22 | recipeId | String | No (null allowed) | Reference to u_mes_prod_recipe._id | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
-| 23 | recipeName | String | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
-| 24 | shiftId | String | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
-| 25 | shiftName | String | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 26 | operatorUserId | String | Yes | Reference to u_mes_mast_user._id: operator user | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 27 | operatorUserName | String | Yes | Display value of operatorUserId, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 28 | executionType | String | Yes | Execution type | `"Production"` | Production; Rework; Retest; Setup |
-| 29 | attemptNo | Int32 | Yes | 1 for the first attempt, higher for retests or repeats | `NumberInt(1)` |  |
-| 30 | startedAt | Date | Yes | Date and time when the record was started | `ISODate("2026-09-17T01:21:40.000+0000")` |  |
-| 31 | completedAt | Date | No (null allowed) | Date and time when the record was completed | `ISODate("2026-09-17T01:23:15.000+0000")` |  |
-| 32 | cycleTimeSec | Decimal128 | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
-| 33 | standardCycleTimeSec | Decimal128 | Yes | Standard cycle time (seconds) | `NumberDecimal("95.0")` |  |
-| 34 | quantityIn | Int32 | Yes | Quantity in | `NumberInt(240)` |  |
-| 35 | quantityGood | Int32 | Yes | Quantity good | `NumberInt(231)` |  |
-| 36 | quantityReject | Int32 | Yes | Quantity reject | `NumberInt(9)` |  |
-| 37 | quantityRework | Int32 | Yes | Quantity rework | `NumberInt(0)` |  |
-| 38 | result | String | Yes | Result of the operation execution | `"OK"` | OK; Not OK |
-| 39 | checksSkillVerified | Boolean | Yes | True when: checks skill verified | `true` |  |
-| 40 | checksRecipeVerified | Boolean | Yes | True when: checks recipe verified | `true` |  |
-| 41 | checksToolLifeOk | Boolean | Yes | True when: checks tool life ok | `true` |  |
-| 42 | checksGaugeCalibrationOk | Boolean | Yes | True when: checks gauge calibration ok | `true` |  |
-| 43 | checksPreviousStepComplete | Boolean | Yes | True when: checks previous step complete | `true` |  |
-| 44 | nextStepNo | Int32 | No (null allowed) | Next step number | `NumberInt(20)` |  |
-| 45 | remarks | String | No (null allowed) | Remarks of the operation execution | `"Die 2, both cavities running"` |  |
-| 46 | status | String | Yes | Primary lifecycle state of the document | `"Completed"` | Started; Completed; Aborted |
-| 47 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 48 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-17T01:21:40.000+0000")` |  |
-| 49 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 50 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 51 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-17T01:23:15.000+0000")` |  |
-| 52 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 53 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1090000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"OPX-2026-000376"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | productionOrderId | String | - | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
+| 6 | productionOrderName | String | - | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
+| 7 | wipUnitId | String | - | No (null allowed) | Reference to u_mes_plan_wipUnit._id | `null` | Reference: u_mes_plan_wipUnit._id |
+| 8 | wipUnitName | String | - | No (null allowed) | Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo | `null` |  |
+| 9 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000001"` | Reference: u_mes_plan_lot._id |
+| 10 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260915-GDC-014"` |  |
+| 11 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 12 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 13 | routingId | String | - | Yes | Reference to u_mes_prod_routing._id | `"1053000000000004"` | Reference: u_mes_prod_routing._id |
+| 14 | routingName | String | - | Yes | Display value of routingId, copied from u_mes_prod_routing.description | `"Caliper body casting LH, casting and T6"` |  |
+| 15 | stepNo | Int32 | - | Yes | Step number within the parent record | `NumberInt(10)` |  |
+| 16 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 17 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 18 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 19 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 20 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 21 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 22 | recipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
+| 23 | recipeName | String | - | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
+| 24 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
+| 25 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
+| 26 | operatorUserId | String | - | Yes | Reference to u_mes_mast_user._id: operator user | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 27 | operatorUserName | String | - | Yes | Display value of operatorUserId, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 28 | executionType | String | - | Yes | Execution type | `"Production"` | Production; Rework; Retest; Setup |
+| 29 | attemptNo | Int32 | - | Yes | 1 for the first attempt, higher for retests or repeats | `NumberInt(1)` |  |
+| 30 | startedAt | Date | Datetime | Yes | Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 31 | completedAt | Date | Datetime | No (null allowed) | Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
+| 32 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 33 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 34 | quantityIn | Int32 | - | Yes | Quantity in | `NumberInt(240)` |  |
+| 35 | quantityGood | Int32 | - | Yes | Quantity good | `NumberInt(231)` |  |
+| 36 | quantityReject | Int32 | - | Yes | Quantity reject | `NumberInt(9)` |  |
+| 37 | quantityRework | Int32 | - | Yes | Quantity rework | `NumberInt(0)` |  |
+| 38 | result | String | - | Yes | Result of the operation execution | `"OK"` | OK; Not OK |
+| 39 | checksSkillVerified | Boolean | - | Yes | True when: checks skill verified | `true` |  |
+| 40 | checksRecipeVerified | Boolean | - | Yes | True when: checks recipe verified | `true` |  |
+| 41 | checksToolLifeOk | Boolean | - | Yes | True when: checks tool life ok | `true` |  |
+| 42 | checksGaugeCalibrationOk | Boolean | - | Yes | True when: checks gauge calibration ok | `true` |  |
+| 43 | checksPreviousStepComplete | Boolean | - | Yes | True when: checks previous step complete | `true` |  |
+| 44 | nextStepNo | Int32 | - | No (null allowed) | Next step number | `NumberInt(20)` |  |
+| 45 | remarks | String | - | No (null allowed) | Remarks of the operation execution | `"Die 2, both cavities running"` |  |
+| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Started; Completed; Aborted |
+| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 48 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 49 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 50 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 51 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
+| 52 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 53 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

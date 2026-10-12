@@ -204,6 +204,11 @@ def sysc(entity,fields,src):
 sysc("statusDefinition",[("collectionName","String",None),("fieldName","String",None),("statusCode","String",None),("statusName","String",None),("description","String",None),("sequenceNo","Int32",None),("isInitial","Boolean",None),("isFinal","Boolean",None),("colourCode","String",None)],"(new) status mapping")
 sysc("enumerationValue",[("collectionName","String",None),("fieldName","String",None),("valueCode","String",None),("valueName","String",None),("description","String",None),("sequenceNo","Int32",None),("isDefault","Boolean",None)],"(new) fixed enumeration mapping")
 sysc("statusTransition",[("collectionName","String",None),("fromStatusDefinitionId","String","statusDefinition"),("fromStatusDefinitionName","String",None),("toStatusDefinitionId","String","statusDefinition"),("toStatusDefinitionName","String",None),("transitionName","String",None),("requiresSignature","Boolean",None),("requiresReason","Boolean",None),("sequenceNo","Int32",None)],"(new) status mapping")
+# ---- Date / Datetime tag of every date key (D035)
+DATEONLY={"validFrom","validTo","effectiveFrom","effectiveTo","horizonFrom","horizonTo","interimApprovalValidTo","dateOfJoining","expiryAt","nextDueAt","nextCalibrationDueAt","nextReviewAt","nextAuditDueAt","nextStudyDueAt","nextMaintenanceDueAt","certificateExpiresAt"}
+for col in COLS.values():
+    for fl in col["fields"]:
+        if fl["type"]=="Date": fl["dateKind"]="Date" if (fl["key"].endswith("Date") or fl["key"] in DATEONLY) else "Datetime"
 # ---- checks
 ents={c["entity"] for c in COLS.values()}
 for c in COLS.values():

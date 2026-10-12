@@ -142,7 +142,7 @@
         },
         "raisedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was raised"
+          "description": "Date and time when the record was raised. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "acknowledgedById": {
           "bsonType": [
@@ -163,14 +163,14 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was acknowledged"
+          "description": "Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "expiresAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Expires date and time"
+          "description": "Expires date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -188,7 +188,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -200,7 +200,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

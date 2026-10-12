@@ -27,53 +27,53 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1220000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"MWO-2026-000341"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | title | String | Yes | Title of the maintenance work order; used as its display value in other collections | `"Ejector pin sticking, casting machine 1, die 2"` |  |
-| 6 | workOrderType | String | Yes | Work order type | `"Breakdown"` | Breakdown; Preventive; Predictive; Improvement; Calibration |
-| 7 | equipmentId | String | Yes | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
-| 8 | equipmentName | String | Yes | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
-| 9 | toolId | String | No (null allowed) | Reference to u_mes_maint_tool._id | `"1226000000000001"` | Reference: u_mes_maint_tool._id |
-| 10 | toolName | String | No (null allowed) | Display value of toolId, copied from u_mes_maint_tool.name | `"Gravity die, caliper body LH, die 2"` |  |
-| 11 | maintenancePlanId | String | No (null allowed) | Reference to u_mes_maint_maintenancePlan._id | `"1216000000000001"` | Reference: u_mes_maint_maintenancePlan._id |
-| 12 | maintenancePlanName | String | No (null allowed) | Display value of maintenancePlanId, copied from u_mes_maint_maintenancePlan.name | `"Preventive maintenance, Gravity Die Casting Machine 1"` |  |
-| 13 | downtimeEventId | String | No (null allowed) | Reference to u_mes_perf_downtimeEvent._id | `"1205000000000001"` | Reference: u_mes_perf_downtimeEvent._id |
-| 14 | downtimeEventName | String | No (null allowed) | Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo | `"DT-2026-000196"` |  |
-| 15 | priority | String | Yes | Priority of the maintenance work order | `"Normal"` | Low; Normal; High; Urgent |
-| 16 | reportedById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'reported' | `"1029000000000006"` | Reference: u_mes_mast_user._id |
-| 17 | reportedBy | String | Yes | Display name of the user in reportedById, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
-| 18 | reportedAt | Date | Yes | Date and time when the record was reported | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
-| 19 | problemDescription | String | Yes | Problem description | `"Ejector pin sticks on cavity 2 and the casting does not release"` |  |
-| 20 | reasonCodeId | String | No (null allowed) | Reference to u_mes_perf_reasonCode._id | `"1203000000000001"` | Reference: u_mes_perf_reasonCode._id |
-| 21 | reasonCodeName | String | No (null allowed) | Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name | `"Die ejector pin stuck"` |  |
-| 22 | failureMode | String | Yes | Failure mode | `"Shrinkage porosity in the bridge section"` |  |
-| 23 | rootCause | String | No (null allowed) | Root cause | `"Ejector pin galled after die coating build-up"` |  |
-| 24 | actionTaken | String | No (null allowed) | Action taken | `"Ejector pin polished and die coat thickness corrected"` |  |
-| 25 | plannedStartAt | Date | Yes | Planned start date and time | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
-| 26 | startedAt | Date | Yes | Date and time when the record was started | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
-| 27 | completedAt | Date | No (null allowed) | Date and time when the record was completed | `ISODate("2026-09-15T00:30:30.000+0000")` |  |
-| 28 | downtimeMinutes | Int32 | Yes | Downtime (minutes) | `NumberInt(95)` |  |
-| 29 | responseMinutes | Int32 | Yes | Response (minutes) | `NumberInt(6)` |  |
-| 30 | repairMinutes | Int32 | Yes | Repair (minutes) | `NumberInt(12)` |  |
-| 31 | totalCostInr | Decimal128 | Yes | Total cost (Indian rupees) | `NumberDecimal("9840.00")` |  |
-| 32 | equipmentReleasedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'equipment released' | `"1029000000000007"` | Reference: u_mes_mast_user._id |
-| 33 | equipmentReleasedBy | String | No (null allowed) | Display name of the user in equipmentReleasedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 34 | equipmentReleasedAt | Date | No (null allowed) | Equipment released date and time | `ISODate("2026-09-15T01:40:30.000+0000")` |  |
-| 35 | followUpRequired | Boolean | Yes | True when: follow up required | `false` |  |
-| 36 | status | String | Yes | Primary lifecycle state of the document | `"Completed"` | Reported; Planned; In Progress; Completed; Closed; Cancelled |
-| 37 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 38 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:30:00.000+0000")` |  |
-| 39 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
-| 40 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
-| 41 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T01:40:30.000+0000")` |  |
-| 42 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
-| 43 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1220000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"MWO-2026-000341"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | title | String | - | Yes | Title of the maintenance work order; used as its display value in other collections | `"Ejector pin sticking, casting machine 1, die 2"` |  |
+| 6 | workOrderType | String | - | Yes | Work order type | `"Breakdown"` | Breakdown; Preventive; Predictive; Improvement; Calibration |
+| 7 | equipmentId | String | - | Yes | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 8 | equipmentName | String | - | Yes | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 9 | toolId | String | - | No (null allowed) | Reference to u_mes_maint_tool._id | `"1226000000000001"` | Reference: u_mes_maint_tool._id |
+| 10 | toolName | String | - | No (null allowed) | Display value of toolId, copied from u_mes_maint_tool.name | `"Gravity die, caliper body LH, die 2"` |  |
+| 11 | maintenancePlanId | String | - | No (null allowed) | Reference to u_mes_maint_maintenancePlan._id | `"1216000000000001"` | Reference: u_mes_maint_maintenancePlan._id |
+| 12 | maintenancePlanName | String | - | No (null allowed) | Display value of maintenancePlanId, copied from u_mes_maint_maintenancePlan.name | `"Preventive maintenance, Gravity Die Casting Machine 1"` |  |
+| 13 | downtimeEventId | String | - | No (null allowed) | Reference to u_mes_perf_downtimeEvent._id | `"1205000000000001"` | Reference: u_mes_perf_downtimeEvent._id |
+| 14 | downtimeEventName | String | - | No (null allowed) | Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo | `"DT-2026-000196"` |  |
+| 15 | priority | String | - | Yes | Priority of the maintenance work order | `"Normal"` | Low; Normal; High; Urgent |
+| 16 | reportedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'reported' | `"1029000000000006"` | Reference: u_mes_mast_user._id |
+| 17 | reportedBy | String | - | Yes | Display name of the user in reportedById, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
+| 18 | reportedAt | Date | Datetime | Yes | Date and time when the record was reported. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 19 | problemDescription | String | - | Yes | Problem description | `"Ejector pin sticks on cavity 2 and the casting does not release"` |  |
+| 20 | reasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id | `"1203000000000001"` | Reference: u_mes_perf_reasonCode._id |
+| 21 | reasonCodeName | String | - | No (null allowed) | Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name | `"Die ejector pin stuck"` |  |
+| 22 | failureMode | String | - | Yes | Failure mode | `"Shrinkage porosity in the bridge section"` |  |
+| 23 | rootCause | String | - | No (null allowed) | Root cause | `"Ejector pin galled after die coating build-up"` |  |
+| 24 | actionTaken | String | - | No (null allowed) | Action taken | `"Ejector pin polished and die coat thickness corrected"` |  |
+| 25 | plannedStartAt | Date | Datetime | Yes | Planned start date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 26 | startedAt | Date | Datetime | Yes | Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 27 | completedAt | Date | Datetime | No (null allowed) | Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 28 | downtimeMinutes | Int32 | - | Yes | Downtime (minutes) | `NumberInt(95)` |  |
+| 29 | responseMinutes | Int32 | - | Yes | Response (minutes) | `NumberInt(6)` |  |
+| 30 | repairMinutes | Int32 | - | Yes | Repair (minutes) | `NumberInt(12)` |  |
+| 31 | totalCostInr | Decimal128 | - | Yes | Total cost (Indian rupees) | `NumberDecimal("9840.00")` |  |
+| 32 | equipmentReleasedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'equipment released' | `"1029000000000007"` | Reference: u_mes_mast_user._id |
+| 33 | equipmentReleasedBy | String | - | No (null allowed) | Display name of the user in equipmentReleasedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
+| 34 | equipmentReleasedAt | Date | Datetime | No (null allowed) | Equipment released date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:30.000+0000")` |  |
+| 35 | followUpRequired | Boolean | - | Yes | True when: follow up required | `false` |  |
+| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Reported; Planned; In Progress; Completed; Closed; Cancelled |
+| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 38 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 39 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
+| 40 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
+| 41 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:30.000+0000")` |  |
+| 42 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
+| 43 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
 
 ## Status values
 

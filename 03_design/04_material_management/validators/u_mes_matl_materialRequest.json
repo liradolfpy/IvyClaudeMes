@@ -123,7 +123,7 @@
         },
         "requestedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was requested"
+          "description": "Date and time when the record was requested. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "fromLocationId": {
           "bsonType": [
@@ -176,14 +176,14 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was acknowledged"
+          "description": "Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "deliveredAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was delivered"
+          "description": "Date and time when the record was delivered. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "responseMinutes": {
           "bsonType": "int",
@@ -233,7 +233,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -245,7 +245,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

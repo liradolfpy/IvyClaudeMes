@@ -58,7 +58,7 @@
         },
         "productionDate": {
           "bsonType": "date",
-          "description": "Production date (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Production date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "shiftId": {
           "bsonType": "string",
@@ -145,14 +145,14 @@
             "date",
             "null"
           ],
-          "description": "Handed over date and time"
+          "description": "Handed over date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "acknowledgedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was acknowledged"
+          "description": "Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -169,7 +169,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -181,7 +181,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

@@ -174,7 +174,7 @@
             "date",
             "null"
           ],
-          "description": "Last seen date and time"
+          "description": "Last seen date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "connectionStatus": {
           "bsonType": "string",
@@ -187,11 +187,11 @@
         },
         "certificateExpiresAt": {
           "bsonType": "date",
-          "description": "Certificate expires date and time"
+          "description": "Certificate expires at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "installedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was installed"
+          "description": "Date and time when the record was installed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",

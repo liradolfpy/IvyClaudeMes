@@ -18,29 +18,29 @@ Data class (master) and site are inherited from the parent. Documents are create
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1054000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-R01-S01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | routingId | String | Yes | Reference to u_mes_prod_routing._id: the parent document this one belongs to | `"1053000000000001"` | Reference: u_mes_prod_routing._id |
-| 6 | routingName | String | Yes | Display value of routingId, copied from u_mes_prod_routing.description | `"Front caliper LH, full process routing"` |  |
-| 7 | stepNo | Int32 | Yes | Step number within the parent record | `NumberInt(10)` |  |
-| 8 | operationId | String | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 9 | operationName | String | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 10 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 11 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 12 | cycleTimeSec | Decimal128 | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
-| 13 | setupTimeMin | Int32 | Yes | Setup time (minutes) | `NumberInt(45)` |  |
-| 14 | isMilestone | Boolean | Yes | True when the record is milestone | `true` |  |
-| 15 | isOptional | Boolean | Yes | True when the record is optional | `false` |  |
-| 16 | reworkReturnStepNo | Int32 | No (null allowed) | Step to which a unit returns after rework | `null` |  |
-| 17 | maxQueueTimeMin | Int32 | No (null allowed) | Longest allowed waiting time before this step | `NumberInt(240)` |  |
-| 18 | maxReworkCount | Int32 | Yes | Maximum rework count | `NumberInt(2)` |  |
-| 19 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1054000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-R01-S01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | routingId | String | - | Yes | Reference to u_mes_prod_routing._id: the parent document this one belongs to | `"1053000000000001"` | Reference: u_mes_prod_routing._id |
+| 6 | routingName | String | - | Yes | Display value of routingId, copied from u_mes_prod_routing.description | `"Front caliper LH, full process routing"` |  |
+| 7 | stepNo | Int32 | - | Yes | Step number within the parent record | `NumberInt(10)` |  |
+| 8 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 9 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 10 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 11 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 12 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 13 | setupTimeMin | Int32 | - | Yes | Setup time (minutes) | `NumberInt(45)` |  |
+| 14 | isMilestone | Boolean | - | Yes | True when the record is milestone | `true` |  |
+| 15 | isOptional | Boolean | - | Yes | True when the record is optional | `false` |  |
+| 16 | reworkReturnStepNo | Int32 | - | No (null allowed) | Step to which a unit returns after rework | `null` |  |
+| 17 | maxQueueTimeMin | Int32 | - | No (null allowed) | Longest allowed waiting time before this step | `NumberInt(240)` |  |
+| 18 | maxReworkCount | Int32 | - | Yes | Maximum rework count | `NumberInt(2)` |  |
+| 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

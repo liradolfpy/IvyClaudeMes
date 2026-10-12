@@ -11,7 +11,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(1),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0412877",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -24,7 +24,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(2),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0412914",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -37,7 +37,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(1),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0412951",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -50,7 +50,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(2),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0412988",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -63,7 +63,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(1),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0413025",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -76,7 +76,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(2),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0413062",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -89,7 +89,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(1),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0413099",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -102,7 +102,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(2),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0413136",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -115,7 +115,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(1),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0413173",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -128,7 +128,7 @@ db.getCollection("u_mes_mast_supplierCertificate").insertMany([
     sequenceNo: NumberInt(2),
     standard: "IATF 16949:2016",
     certificateNo: "IATF-0413210",
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   }
 ]);

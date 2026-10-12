@@ -25,32 +25,32 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1230000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"ERP-PRD"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the integration connector; used as its display value in other collections | `"ERP production interface"` |  |
-| 6 | connectorType | String | Yes | Connector type | `"ERP"` | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway |
-| 7 | targetSystem | String | Yes | Target system | `"SAP S/4HANA"` |  |
-| 8 | protocol | String | Yes | Protocol of the integration connector | `"HTTPS REST"` | HTTPS REST; OPC UA; Open Protocol; Modbus TCP; MQTT; ZPL Over TCP; SMTP |
-| 9 | endpoint | String | Yes | Endpoint of the integration connector | `"https://erp-prd.varunabrakes.example/api/mes"` |  |
-| 10 | environment | String | Yes | Environment of the integration connector | `"Production"` | Production; Quality; Development |
-| 11 | authMethod | String | Yes | Auth method | `"OAuth2 Client Credentials"` | OAuth2 Client Credentials; Certificate; Basic; None |
-| 12 | credentialRef | String | Yes | Pointer to the secret in the vault; the secret itself is never stored | `"vault://mes/pn1/erp-prd"` |  |
-| 13 | timeoutMs | Int32 | Yes | Timeout (milliseconds) | `NumberInt(15000)` |  |
-| 14 | retryPolicyMaxAttempts | Int32 | Yes | Retry policy maximum attempts | `NumberInt(5)` |  |
-| 15 | retryPolicyBackoffSec | Int32 | Yes | Retry policy backoff (seconds) | `NumberInt(60)` |  |
-| 16 | lastSuccessAt | Date | No (null allowed) | Last success date and time | `null` |  |
-| 17 | lastFailureAt | Date | No (null allowed) | Last failure date and time | `null` |  |
-| 18 | healthStatus | String | Yes | Health status | `"Healthy"` | Healthy; Degraded; Down |
-| 19 | ownerUserId | String | No (null allowed) | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 20 | ownerUserName | String | No (null allowed) | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 21 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Disabled |
-| 22 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1230000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ERP-PRD"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the integration connector; used as its display value in other collections | `"ERP production interface"` |  |
+| 6 | connectorType | String | - | Yes | Connector type | `"ERP"` | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway |
+| 7 | targetSystem | String | - | Yes | Target system | `"SAP S/4HANA"` |  |
+| 8 | protocol | String | - | Yes | Protocol of the integration connector | `"HTTPS REST"` | HTTPS REST; OPC UA; Open Protocol; Modbus TCP; MQTT; ZPL Over TCP; SMTP |
+| 9 | endpoint | String | - | Yes | Endpoint of the integration connector | `"https://erp-prd.varunabrakes.example/api/mes"` |  |
+| 10 | environment | String | - | Yes | Environment of the integration connector | `"Production"` | Production; Quality; Development |
+| 11 | authMethod | String | - | Yes | Auth method | `"OAuth2 Client Credentials"` | OAuth2 Client Credentials; Certificate; Basic; None |
+| 12 | credentialRef | String | - | Yes | Pointer to the secret in the vault; the secret itself is never stored | `"vault://mes/pn1/erp-prd"` |  |
+| 13 | timeoutMs | Int32 | - | Yes | Timeout (milliseconds) | `NumberInt(15000)` |  |
+| 14 | retryPolicyMaxAttempts | Int32 | - | Yes | Retry policy maximum attempts | `NumberInt(5)` |  |
+| 15 | retryPolicyBackoffSec | Int32 | - | Yes | Retry policy backoff (seconds) | `NumberInt(60)` |  |
+| 16 | lastSuccessAt | Date | Datetime | No (null allowed) | Last success date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 17 | lastFailureAt | Date | Datetime | No (null allowed) | Last failure date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 18 | healthStatus | String | - | Yes | Health status | `"Healthy"` | Healthy; Degraded; Down |
+| 19 | ownerUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 20 | ownerUserName | String | - | No (null allowed) | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 21 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Disabled |
+| 22 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

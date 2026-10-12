@@ -17,23 +17,23 @@ Flat entity collection: one document per enumeration value, all keys top-level a
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1298000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"operationExecution.result.OK"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | collectionName | String | Yes | Collection name | `"u_mes_plan_operationExecution"` |  |
-| 6 | fieldName | String | Yes | Field name | `"result"` |  |
-| 7 | valueCode | String | Yes | Stable code of the enumeration value | `"OK"` |  |
-| 8 | valueName | String | Yes | Display text of the enumeration value | `"OK"` |  |
-| 9 | description | String | Yes | Description of the enumeration value | `"Operation finished within all limits"` |  |
-| 10 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 11 | isDefault | Boolean | Yes | True when the record is default | `true` |  |
-| 12 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 13 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1298000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"operationExecution.result.OK"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | collectionName | String | - | Yes | Collection name | `"u_mes_plan_operationExecution"` |  |
+| 6 | fieldName | String | - | Yes | Field name | `"result"` |  |
+| 7 | valueCode | String | - | Yes | Stable code of the enumeration value | `"OK"` |  |
+| 8 | valueName | String | - | Yes | Display text of the enumeration value | `"OK"` |  |
+| 9 | description | String | - | Yes | Description of the enumeration value | `"Operation finished within all limits"` |  |
+| 10 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 11 | isDefault | Boolean | - | Yes | True when the record is default | `true` |  |
+| 12 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

@@ -880,12 +880,14 @@
     {
      "key": "validFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "validTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "schemaVersion",
@@ -1746,7 +1748,8 @@
     {
      "key": "commissionedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "ratedCapacity",
@@ -1801,7 +1804,8 @@
     {
      "key": "currentStateSince",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lifetimeCycles",
@@ -1816,7 +1820,8 @@
     {
      "key": "nextMaintenanceDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "calibrationRequired",
@@ -2192,12 +2197,14 @@
     {
      "key": "validFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "validTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -2460,7 +2467,8 @@
     {
      "key": "exceptionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "exceptionType",
@@ -2593,7 +2601,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "shiftId",
@@ -2653,7 +2662,8 @@
     {
      "key": "publishedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -2668,7 +2678,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -2683,7 +2694,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -2795,7 +2807,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -2810,7 +2823,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -3160,7 +3174,8 @@
     {
      "key": "dateOfJoining",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "employmentTypeId",
@@ -3195,7 +3210,8 @@
     {
      "key": "lastLoginAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "failedLoginCount",
@@ -3205,7 +3221,8 @@
     {
      "key": "passwordChangedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "isLocked",
@@ -3593,17 +3610,20 @@
     {
      "key": "awardedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "validFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "validTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "assessorUserId",
@@ -3648,7 +3668,8 @@
     {
      "key": "revokedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "revokedReason",
@@ -3658,7 +3679,8 @@
     {
      "key": "nextReviewAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -3673,7 +3695,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -3688,7 +3711,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -4124,7 +4148,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "ppmLast12Months",
@@ -4318,7 +4343,8 @@
     {
      "key": "validTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "schemaVersion",
@@ -4581,7 +4607,8 @@
     {
      "key": "revisionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "materialSpecification",
@@ -4763,7 +4790,8 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "description",
@@ -4996,12 +5024,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -5097,12 +5127,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "engineeringChangeId",
@@ -5127,7 +5159,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "erpBomNo",
@@ -5661,12 +5694,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "engineeringChangeId",
@@ -5706,7 +5741,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "erpRoutingNo",
@@ -6038,12 +6074,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "billOfMaterialId",
@@ -6068,7 +6106,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -6708,12 +6747,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "engineeringChangeId",
@@ -6753,7 +6794,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "readAcknowledgementRequired",
@@ -7368,12 +7410,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "engineeringChangeId",
@@ -7403,12 +7447,14 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastDownloadedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -7696,7 +7742,8 @@
     {
      "key": "raisedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "effectivityType",
@@ -7706,7 +7753,8 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "cutInSerialNo",
@@ -7731,12 +7779,14 @@
     {
      "key": "implementedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -7751,7 +7801,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -7766,7 +7817,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -7858,7 +7910,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -7873,7 +7926,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -7965,7 +8019,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -7980,7 +8035,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8067,7 +8123,8 @@
     {
      "key": "decidedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "comment",
@@ -8082,7 +8139,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8097,7 +8155,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8179,7 +8238,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8194,7 +8254,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8277,17 +8338,20 @@
     {
      "key": "receivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "horizonFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "horizonTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "supersedesCustomerScheduleId",
@@ -8317,7 +8381,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8332,7 +8397,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8414,7 +8480,8 @@
     {
      "key": "dueDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "quantity",
@@ -8449,7 +8516,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8464,7 +8532,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8644,27 +8713,32 @@
     {
      "key": "plannedStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "plannedEndAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "actualStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "actualEndAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "dueDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "erpMessageId",
@@ -8679,7 +8753,8 @@
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "closedById",
@@ -8709,7 +8784,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8724,7 +8800,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8796,7 +8873,8 @@
     {
      "key": "releasedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "releasedById",
@@ -8816,7 +8894,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8831,7 +8910,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8913,7 +8993,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -8928,7 +9009,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -8985,7 +9067,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "lineId",
@@ -9045,7 +9128,8 @@
     {
      "key": "publishedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "publishedById",
@@ -9070,7 +9154,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9085,7 +9170,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -9177,12 +9263,14 @@
     {
      "key": "plannedStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "plannedEndAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "changeoverMinutes",
@@ -9202,7 +9290,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9217,7 +9306,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -9293,12 +9383,14 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "generatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "rule",
@@ -9318,7 +9410,8 @@
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -9333,7 +9426,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9348,7 +9442,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -9460,12 +9555,14 @@
     {
      "key": "dueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "queueSince",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "priority",
@@ -9495,7 +9592,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9510,7 +9608,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -9691,12 +9790,14 @@
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "cycleTimeSec",
@@ -9781,7 +9882,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9796,7 +9898,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -9878,7 +9981,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9893,7 +9997,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -9975,7 +10080,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -9990,7 +10096,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -10106,12 +10213,14 @@
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "durationSec",
@@ -10196,7 +10305,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -10211,7 +10321,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -10397,12 +10508,14 @@
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastOperationExecutionId",
@@ -10437,12 +10550,14 @@
     {
      "key": "scrappedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "shippedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -10457,7 +10572,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -10472,7 +10588,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -10549,7 +10666,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -10564,7 +10682,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -10679,17 +10798,20 @@
     {
      "key": "manufacturedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "receivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "expiryAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "initialQuantity",
@@ -10769,7 +10891,8 @@
     {
      "key": "attributesCureDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "certificateControlledDocumentId",
@@ -10794,7 +10917,8 @@
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -10809,7 +10933,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -10824,7 +10949,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -10906,7 +11032,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -10921,7 +11048,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -10998,7 +11126,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11013,7 +11142,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -11163,7 +11293,8 @@
     {
      "key": "packedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "packedById",
@@ -11198,7 +11329,8 @@
     {
      "key": "lastCleanedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "cycleCount",
@@ -11218,7 +11350,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11233,7 +11366,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -11315,7 +11449,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11330,7 +11465,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -11406,7 +11542,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "bookingType",
@@ -11456,12 +11593,14 @@
     {
      "key": "clockOnAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "clockOffAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "durationMinutes",
@@ -11491,7 +11630,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "erpConfirmationNo",
@@ -11516,7 +11656,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11531,7 +11672,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -11663,17 +11805,20 @@
     {
      "key": "plannedStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "plannedMinutes",
@@ -11718,7 +11863,8 @@
     {
      "key": "firstOffApprovedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lossReason",
@@ -11738,7 +11884,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11753,7 +11900,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -11830,7 +11978,8 @@
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedById",
@@ -11850,7 +11999,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11865,7 +12015,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -11947,7 +12098,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -11962,7 +12114,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12044,7 +12197,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12059,7 +12213,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12141,7 +12296,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12156,7 +12312,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12212,7 +12369,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "shiftId",
@@ -12302,12 +12460,14 @@
     {
      "key": "handedOverAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -12322,7 +12482,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12337,7 +12498,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12419,7 +12581,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12434,7 +12597,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12516,7 +12680,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12531,7 +12696,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12613,7 +12779,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12628,7 +12795,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -12710,7 +12878,8 @@
     {
      "key": "dueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "closed",
@@ -12725,7 +12894,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -12740,7 +12910,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -13010,17 +13181,20 @@
     {
      "key": "firstReceivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastMovementAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastCountedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastCountedById",
@@ -13035,7 +13209,8 @@
     {
      "key": "expiryAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -13050,7 +13225,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -13065,7 +13241,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -13255,7 +13432,8 @@
     {
      "key": "movedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "movedById",
@@ -13310,7 +13488,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -13325,7 +13504,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -13403,7 +13583,8 @@
     {
      "key": "supplierInvoiceDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "deliveryChallanNo",
@@ -13418,7 +13599,8 @@
     {
      "key": "receivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "receivedById",
@@ -13438,7 +13620,8 @@
     {
      "key": "inspectionCompletedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "erpGrnNo",
@@ -13458,7 +13641,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -13473,7 +13657,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -13620,7 +13805,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -13635,7 +13821,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -13717,7 +13904,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -13732,7 +13920,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -13815,7 +14004,8 @@
     {
      "key": "requiredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "toLocationId",
@@ -13840,17 +14030,20 @@
     {
      "key": "pickStartedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "pickCompletedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "deliveredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "receivedById",
@@ -13880,7 +14073,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -13895,7 +14089,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -14012,7 +14207,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -14027,7 +14223,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -14144,7 +14341,8 @@
     {
      "key": "requestedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "fromLocationId",
@@ -14184,12 +14382,14 @@
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "deliveredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "responseMinutes",
@@ -14229,7 +14429,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -14244,7 +14445,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -14409,7 +14611,8 @@
     {
      "key": "consumedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "consumedById",
@@ -14464,7 +14667,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -14479,7 +14683,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -14640,7 +14845,8 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -14843,7 +15049,8 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -15077,7 +15284,8 @@
     {
      "key": "printedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "printedById",
@@ -15117,7 +15325,8 @@
     {
      "key": "voidedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "voidedById",
@@ -15142,7 +15351,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -15157,7 +15367,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -15245,7 +15456,8 @@
     {
      "key": "invoiceDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "asnNo",
@@ -15255,7 +15467,8 @@
     {
      "key": "asnSentAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "eWayBillNo",
@@ -15330,22 +15543,26 @@
     {
      "key": "plannedDispatchAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "dispatchedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "deliveredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "podReceivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -15360,7 +15577,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -15375,7 +15593,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -15467,7 +15686,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -15482,7 +15702,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -15564,7 +15785,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -15579,7 +15801,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -15661,7 +15884,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -15676,7 +15900,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -15795,12 +16020,14 @@
     {
      "key": "issuedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "markedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "markedAtEquipmentId",
@@ -15820,7 +16047,8 @@
     {
      "key": "markVerifiedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "labelId",
@@ -15855,7 +16083,8 @@
     {
      "key": "shippedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "customerId",
@@ -15885,7 +16114,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -15900,7 +16130,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -16060,7 +16291,8 @@
     {
      "key": "linkedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "linkedById",
@@ -16080,7 +16312,8 @@
     {
      "key": "removedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "removedReason",
@@ -16100,7 +16333,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -16115,7 +16349,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -16250,7 +16485,8 @@
     {
      "key": "linkedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "linkedById",
@@ -16280,7 +16516,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -16295,7 +16532,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -16415,7 +16653,8 @@
     {
      "key": "builtAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "torqueTorqueResultId",
@@ -16535,7 +16774,8 @@
     {
      "key": "finalReleaseAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "recordHash",
@@ -16555,7 +16795,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -16570,7 +16811,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -16682,7 +16924,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -16697,7 +16940,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -16804,7 +17048,8 @@
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "result",
@@ -16819,7 +17064,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -16834,7 +17080,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -16916,7 +17163,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -16931,7 +17179,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -17212,7 +17461,8 @@
     {
      "key": "customerApprovalDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "engineeringChangeId",
@@ -17247,22 +17497,26 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "originalDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "revisionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -17597,12 +17851,14 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "effectiveTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "approvedById",
@@ -17617,7 +17873,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -18052,7 +18309,8 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "approvedById",
@@ -18067,7 +18325,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -18265,7 +18524,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "productionOrderId",
@@ -18290,12 +18550,14 @@
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "overallResult",
@@ -18325,7 +18587,8 @@
     {
      "key": "verifiedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nonconformanceId",
@@ -18350,7 +18613,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -18365,7 +18629,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -18457,7 +18722,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -18472,7 +18738,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -18697,7 +18964,8 @@
     {
      "key": "measuredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "source",
@@ -18747,7 +19015,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -18762,7 +19031,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -18908,7 +19178,8 @@
     {
      "key": "capabilityCalculatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "capabilitySampleCount",
@@ -18995,7 +19266,8 @@
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "ucl",
@@ -19178,7 +19450,8 @@
     {
      "key": "sampledAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "sampledById",
@@ -19273,7 +19546,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -19288,7 +19562,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -19365,7 +19640,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -19380,7 +19656,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -19462,7 +19739,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -19477,7 +19755,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -19559,7 +19838,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -19574,7 +19854,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -19844,7 +20125,8 @@
     {
      "key": "detectedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "detectedById",
@@ -19974,7 +20256,8 @@
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "closedById",
@@ -19999,7 +20282,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20014,7 +20298,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20121,7 +20406,8 @@
     {
      "key": "dispositionAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -20131,7 +20417,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20146,7 +20433,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20228,7 +20516,8 @@
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -20238,7 +20527,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20253,7 +20543,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20335,7 +20626,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20350,7 +20642,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20432,7 +20725,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20447,7 +20741,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20529,7 +20824,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20544,7 +20840,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20626,7 +20923,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20641,7 +20939,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20723,7 +21022,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20738,7 +21038,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -20871,17 +21172,20 @@
     {
      "key": "issuedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "reinspectionResult",
@@ -20901,7 +21205,8 @@
     {
      "key": "reinspectedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "quantityRecovered",
@@ -20941,7 +21246,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -20956,7 +21262,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -21038,7 +21345,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -21053,7 +21361,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -21135,7 +21444,8 @@
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedById",
@@ -21155,7 +21465,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -21170,7 +21481,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -21356,7 +21668,8 @@
     {
      "key": "declaredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "approvedById",
@@ -21371,7 +21684,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "scrapLocationId",
@@ -21406,7 +21720,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -21421,7 +21736,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -21542,12 +21858,14 @@
     {
      "key": "placedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "expectedReleaseAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "releasedById",
@@ -21562,7 +21880,8 @@
     {
      "key": "releasedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "releaseDecision",
@@ -21592,7 +21911,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -21607,7 +21927,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -21694,7 +22015,8 @@
     {
      "key": "releasedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "releaseDecision",
@@ -21709,7 +22031,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -21724,7 +22047,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -21877,12 +22201,14 @@
     {
      "key": "validFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "validTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "markingRequirement",
@@ -21902,12 +22228,14 @@
     {
      "key": "requestedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -21922,7 +22250,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -21937,7 +22266,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22024,7 +22354,8 @@
     {
      "key": "decidedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -22034,7 +22365,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22049,7 +22381,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22163,7 +22496,8 @@
     {
      "key": "openedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "openedById",
@@ -22238,7 +22572,8 @@
     {
      "key": "d8ClosureClosedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "d8ClosureCustomerAccepted",
@@ -22248,7 +22583,8 @@
     {
      "key": "dueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "currentDiscipline",
@@ -22268,7 +22604,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22283,7 +22620,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22365,7 +22703,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22380,7 +22719,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22467,7 +22807,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22482,7 +22823,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22564,7 +22906,8 @@
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -22574,7 +22917,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22589,7 +22933,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22671,7 +23016,8 @@
     {
      "key": "dueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -22681,7 +23027,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22696,7 +23043,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22768,7 +23116,8 @@
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "verifiedById",
@@ -22793,7 +23142,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22808,7 +23158,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -22890,7 +23241,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -22905,7 +23257,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -23001,12 +23354,14 @@
     {
      "key": "originalDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "revisionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "approvedById",
@@ -23021,7 +23376,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -23250,7 +23606,8 @@
     {
      "key": "targetDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "actionTaken",
@@ -23408,12 +23765,14 @@
     {
      "key": "pswSignedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "submittedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "customerDecision",
@@ -23423,7 +23782,8 @@
     {
      "key": "customerDecisionAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "customerRemarks",
@@ -23433,7 +23793,8 @@
     {
      "key": "interimApprovalValidTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -23448,7 +23809,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -23463,7 +23825,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -23565,7 +23928,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -23580,7 +23944,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -23662,7 +24027,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -23677,7 +24043,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -23851,12 +24218,14 @@
     {
      "key": "lastCalibratedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nextCalibrationDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "lastGaugeCalibrationId",
@@ -23876,7 +24245,8 @@
     {
      "key": "purchasedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "isMasterGauge",
@@ -23957,7 +24327,8 @@
     {
      "key": "calibratedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "calibratedById",
@@ -24042,7 +24413,8 @@
     {
      "key": "nextDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "impactAssessmentRequired",
@@ -24067,7 +24439,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24082,7 +24455,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -24179,7 +24553,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24194,7 +24569,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -24291,7 +24667,8 @@
     {
      "key": "studyDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "partsCount",
@@ -24386,12 +24763,14 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nextStudyDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -24406,7 +24785,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24421,7 +24801,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -24503,7 +24884,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24518,7 +24900,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -24610,7 +24993,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24625,7 +25009,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -24757,17 +25142,20 @@
     {
      "key": "plannedDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "checkSheetId",
@@ -24812,7 +25200,8 @@
     {
      "key": "nextAuditDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",
@@ -24827,7 +25216,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24842,7 +25232,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -24924,7 +25315,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -24939,7 +25331,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25031,12 +25424,14 @@
     {
      "key": "dueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "capaId",
@@ -25056,7 +25451,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -25071,7 +25467,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25174,7 +25571,8 @@
     {
      "key": "reportedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "receivedById",
@@ -25189,7 +25587,8 @@
     {
      "key": "occurredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "customerLocation",
@@ -25234,12 +25633,14 @@
     {
      "key": "containmentDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "containmentSentAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nonconformanceId",
@@ -25279,7 +25680,8 @@
     {
      "key": "customerClosedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -25294,7 +25696,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -25309,7 +25712,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25391,7 +25795,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -25406,7 +25811,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25488,7 +25894,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -25503,7 +25910,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25585,7 +25993,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -25600,7 +26009,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25667,7 +26077,8 @@
     {
      "key": "communicatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "direction",
@@ -25697,7 +26108,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -25712,7 +26124,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -25932,12 +26345,14 @@
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "endedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "durationSec",
@@ -25967,7 +26382,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "source",
@@ -26002,7 +26418,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -26017,7 +26434,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -26113,7 +26531,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "productionOrderId",
@@ -26128,12 +26547,14 @@
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "endedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "durationMinutes",
@@ -26228,7 +26649,8 @@
     {
      "key": "classifiedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "responseMinutes",
@@ -26258,7 +26680,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -26273,7 +26696,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -26340,7 +26764,8 @@
     {
      "key": "commentedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "authorUserId",
@@ -26365,7 +26790,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -26380,7 +26806,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -26465,17 +26892,20 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "hourStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "hourEndAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "productionOrderId",
@@ -26555,7 +26985,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -26570,7 +27001,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -26655,7 +27087,8 @@
     {
      "key": "productionDate",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "itemId",
@@ -26680,12 +27113,14 @@
     {
      "key": "periodStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "periodEndAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "calendarMinutes",
@@ -26765,7 +27200,8 @@
     {
      "key": "calculatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "calculationVersion",
@@ -26785,7 +27221,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -26800,7 +27237,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -26902,7 +27340,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -26917,7 +27356,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -27149,7 +27589,8 @@
     {
      "key": "timestamp",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "tagValue",
@@ -27199,7 +27640,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -27214,7 +27656,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -27320,12 +27763,14 @@
     {
      "key": "raisedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "acknowledgedById",
@@ -27340,7 +27785,8 @@
     {
      "key": "clearedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "durationSec",
@@ -27400,7 +27846,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -27415,7 +27862,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -27630,7 +28078,8 @@
     {
      "key": "tightenedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "controllerResultNo",
@@ -27650,7 +28099,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -27665,7 +28115,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -27815,7 +28266,8 @@
     {
      "key": "masterLeakVerifiedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "verdict",
@@ -27830,7 +28282,8 @@
     {
      "key": "testedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -27845,7 +28298,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -27860,7 +28314,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -27982,7 +28437,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -27997,7 +28453,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -28113,12 +28570,14 @@
     {
      "key": "lastDoneAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nextDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "toleranceDays",
@@ -28478,7 +28937,8 @@
     {
      "key": "reportedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "problemDescription",
@@ -28513,17 +28973,20 @@
     {
      "key": "plannedStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "startedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "downtimeMinutes",
@@ -28558,7 +29021,8 @@
     {
      "key": "equipmentReleasedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "followUpRequired",
@@ -28578,7 +29042,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -28593,7 +29058,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -28675,7 +29141,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -28690,7 +29157,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -28777,7 +29245,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -28792,7 +29261,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -28884,7 +29354,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -28899,7 +29370,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -29039,12 +29511,14 @@
     {
      "key": "lastIssuedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastReceivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "isInsuranceSpare",
@@ -29279,17 +29753,20 @@
     {
      "key": "lastMaintainedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nextMaintenanceDueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "purchasedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "costInr",
@@ -29461,7 +29938,8 @@
     {
      "key": "eventAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "performedById",
@@ -29541,7 +30019,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -29556,7 +30035,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -29714,22 +30194,26 @@
     {
      "key": "createdInSourceAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "receivedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "processedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "nextRetryAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "errorCode",
@@ -29749,7 +30233,8 @@
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -29764,7 +30249,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -29779,7 +30265,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -29889,12 +30376,14 @@
     {
      "key": "lastSuccessAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "lastFailureAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "healthStatus",
@@ -30152,7 +30641,8 @@
     {
      "key": "lastSeenAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "connectionStatus",
@@ -30162,12 +30652,14 @@
     {
      "key": "certificateExpiresAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "installedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -30248,7 +30740,8 @@
     {
      "key": "publishedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "approvedById",
@@ -30263,7 +30756,8 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "previousVersionOperatorAppId",
@@ -30772,7 +31266,8 @@
     {
      "key": "occurredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "relatedCollectionName",
@@ -30872,7 +31367,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -30887,7 +31383,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -30959,7 +31456,8 @@
     {
      "key": "changedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "changedById",
@@ -31024,7 +31522,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31039,7 +31538,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -31126,7 +31626,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31141,7 +31642,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -31238,7 +31740,8 @@
     {
      "key": "signedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "authenticationMethod",
@@ -31288,7 +31791,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31303,7 +31807,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -31435,7 +31940,8 @@
     {
      "key": "raisedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "acknowledgedById",
@@ -31450,12 +31956,14 @@
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "expiresAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -31470,7 +31978,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31485,7 +31994,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -31577,17 +32087,20 @@
     {
      "key": "sentAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "deliveredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "readAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -31597,7 +32110,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31612,7 +32126,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -31773,17 +32288,20 @@
     {
      "key": "approvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "effectiveFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "expiresAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "retentionYears",
@@ -31808,7 +32326,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31823,7 +32342,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -31900,7 +32420,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -31915,7 +32436,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -32030,7 +32552,8 @@
     {
      "key": "lastResetAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "checkDigitMethod",
@@ -32050,7 +32573,8 @@
     {
      "key": "lastIssuedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "exampleValue",
@@ -32160,7 +32684,8 @@
     {
      "key": "validFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "lastChangedReason",
@@ -32267,12 +32792,14 @@
     {
      "key": "intervalStartAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "intervalEndAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "consumption",
@@ -32337,7 +32864,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -32352,7 +32880,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -32469,7 +32998,8 @@
     {
      "key": "raisedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "acknowledgedById",
@@ -32484,7 +33014,8 @@
     {
      "key": "acknowledgedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "resolvedById",
@@ -32499,7 +33030,8 @@
     {
      "key": "resolvedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "responseSec",
@@ -32549,7 +33081,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -32564,7 +33097,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -32636,7 +33170,8 @@
     {
      "key": "escalatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "toUserId",
@@ -32661,7 +33196,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -32676,7 +33212,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -32783,7 +33320,8 @@
     {
      "key": "occurredAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "reportedById",
@@ -32798,7 +33336,8 @@
     {
      "key": "reportedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "description",
@@ -32878,7 +33417,8 @@
     {
      "key": "investigationCompletedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "reportableToAuthority",
@@ -32888,7 +33428,8 @@
     {
      "key": "closedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -32903,7 +33444,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -32918,7 +33460,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -33000,7 +33543,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -33015,7 +33559,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -33097,12 +33642,14 @@
     {
      "key": "dueAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "completedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "schemaVersion",
@@ -33112,7 +33659,8 @@
     {
      "key": "createdAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "createdById",
@@ -33127,7 +33675,8 @@
     {
      "key": "updatedAt",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "updatedById",
@@ -33447,12 +33996,14 @@
     {
      "key": "validFrom",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "validTo",
      "type": "Date",
-     "ref": null
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "status",

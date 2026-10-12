@@ -90,14 +90,14 @@
         },
         "dueAt": {
           "bsonType": "date",
-          "description": "Due date and time"
+          "description": "Due date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "closedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was closed"
+          "description": "Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "capaId": {
           "bsonType": [
@@ -119,7 +119,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -131,7 +131,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

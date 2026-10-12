@@ -18,39 +18,39 @@ Data class (transaction) and site are inherited from the parent. Documents are c
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1116000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"GRN-2026-000918-L01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | goodsReceiptId | String | Yes | Reference to u_mes_matl_goodsReceipt._id: the parent document this one belongs to | `"1115000000000001"` | Reference: u_mes_matl_goodsReceipt._id |
-| 6 | goodsReceiptName | String | Yes | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `"GRN-2026-000918"` |  |
-| 7 | lineNo | Int32 | Yes | Line number within the parent record | `NumberInt(10)` |  |
-| 8 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000005"` | Reference: u_mes_prod_item._id |
-| 9 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
-| 10 | supplierLotNo | String | No (null allowed) | Supplier lot number | `"KPP-260905-07"` |  |
-| 11 | lotId | String | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
-| 12 | lotName | String | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
-| 13 | orderedQuantity | Decimal128 | Yes | Ordered quantity | `NumberDecimal("5000")` |  |
-| 14 | receivedQuantity | Decimal128 | Yes | Received quantity | `NumberDecimal("5000")` |  |
-| 15 | acceptedQuantity | Decimal128 | Yes | Accepted quantity | `NumberDecimal("5000")` |  |
-| 16 | rejectedQuantity | Decimal128 | Yes | Rejected quantity | `NumberDecimal("0")` |  |
-| 17 | unitOfMeasureId | String | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 18 | unitOfMeasureName | String | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 19 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |
-| 20 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, assembly 1"` |  |
-| 21 | certificateReceived | Boolean | Yes | True when: certificate received | `true` |  |
-| 22 | inspectionStatus | String | Yes | Inspection status | `"Accepted"` | Pending; Accepted; Rejected; Accepted Under Deviation |
-| 23 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 24 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:31:48.000+0000")` |  |
-| 25 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 26 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
-| 27 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:31:48.000+0000")` |  |
-| 28 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 29 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1116000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"GRN-2026-000918-L01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | goodsReceiptId | String | - | Yes | Reference to u_mes_matl_goodsReceipt._id: the parent document this one belongs to | `"1115000000000001"` | Reference: u_mes_matl_goodsReceipt._id |
+| 6 | goodsReceiptName | String | - | Yes | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `"GRN-2026-000918"` |  |
+| 7 | lineNo | Int32 | - | Yes | Line number within the parent record | `NumberInt(10)` |  |
+| 8 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000005"` | Reference: u_mes_prod_item._id |
+| 9 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
+| 10 | supplierLotNo | String | - | No (null allowed) | Supplier lot number | `"KPP-260905-07"` |  |
+| 11 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
+| 12 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
+| 13 | orderedQuantity | Decimal128 | - | Yes | Ordered quantity | `NumberDecimal("5000")` |  |
+| 14 | receivedQuantity | Decimal128 | - | Yes | Received quantity | `NumberDecimal("5000")` |  |
+| 15 | acceptedQuantity | Decimal128 | - | Yes | Accepted quantity | `NumberDecimal("5000")` |  |
+| 16 | rejectedQuantity | Decimal128 | - | Yes | Rejected quantity | `NumberDecimal("0")` |  |
+| 17 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 18 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 19 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |
+| 20 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, assembly 1"` |  |
+| 21 | certificateReceived | Boolean | - | Yes | True when: certificate received | `true` |  |
+| 22 | inspectionStatus | String | - | Yes | Inspection status | `"Accepted"` | Pending; Accepted; Rejected; Accepted Under Deviation |
+| 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 24 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
+| 25 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 26 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 27 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
+| 28 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 29 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
 
 ## Indexes
 

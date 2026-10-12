@@ -151,18 +151,18 @@
         },
         "plannedDate": {
           "bsonType": "date",
-          "description": "Planned date (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Planned date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "startedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was started"
+          "description": "Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "completedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was completed"
+          "description": "Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "checkSheetId": {
           "bsonType": [
@@ -219,7 +219,7 @@
         },
         "nextAuditDueAt": {
           "bsonType": "date",
-          "description": "Next audit due date and time"
+          "description": "Next audit due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -237,7 +237,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -249,7 +249,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

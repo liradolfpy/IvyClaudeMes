@@ -25,40 +25,40 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1003000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"PN1"` |  |
-| 3 | name | String | Yes | Name of the site; used as its display value in other collections | `"Chakan Plant, Pune"` |  |
-| 4 | enterpriseId | String | Yes | Reference to u_mes_mast_enterprise._id | `"1001000000000001"` | Reference: u_mes_mast_enterprise._id |
-| 5 | enterpriseName | String | Yes | Display value of enterpriseId, copied from u_mes_mast_enterprise.name | `"Varuna Brake Systems Pvt. Ltd."` |  |
-| 6 | siteType | String | Yes | Site type | `"Manufacturing Plant"` | Manufacturing Plant; Warehouse; Technical Center; Head Office |
-| 7 | timezone | String | Yes | IANA time zone name | `"Asia/Kolkata"` |  |
-| 8 | utcOffsetMinutes | Int32 | Yes | Offset of local time from UTC in minutes (IST = 330) | `NumberInt(330)` |  |
-| 9 | addressLine1 | String | Yes | Address line1 | `"Plot B-14, Chakan MIDC Phase II"` |  |
-| 10 | addressLine2 | String | No (null allowed) | Address line2 | `"Village Khalumbre, Taluka Khed"` |  |
-| 11 | addressCity | String | Yes | Address city | `"Pune"` |  |
-| 12 | addressDistrict | String | Yes | Address district | `"Pune"` |  |
-| 13 | addressState | String | Yes | Address state | `"Maharashtra"` |  |
-| 14 | addressPostalCode | String | Yes | Address postal code | `"410501"` |  |
-| 15 | addressCountryId | String | Yes | Reference to u_mes_mast_country._id: address country | `"1266000000000001"` | Reference: u_mes_mast_country._id |
-| 16 | addressCountryName | String | Yes | Display value of addressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
-| 17 | geoLatitude | Double | Yes | Geo latitude | `Double(18.7606)` |  |
-| 18 | geoLongitude | Double | Yes | Geo longitude | `Double(73.8636)` |  |
-| 19 | gstin | String | Yes | Goods and services tax identification number | `"27AAACV4521K1Z6"` |  |
-| 20 | factoryLicenceNo | String | Yes | Factory licence number | `"MH/PUN/2(m)(i)/34300/2011/0871"` |  |
-| 21 | erpPlantCode | String | Yes | ERP plant code | `"PN01"` |  |
-| 22 | defaultWorkCalendarId | String | No (null allowed) | Reference to u_mes_mast_workCalendar._id: default work calendar | `"1018000000000001"` | Reference: u_mes_mast_workCalendar._id |
-| 23 | defaultWorkCalendarName | String | No (null allowed) | Display value of defaultWorkCalendarId, copied from u_mes_mast_workCalendar.name | `"Chakan Plant Calendar 2026"` |  |
-| 24 | currencyId | String | Yes | Reference to u_mes_mast_currency._id | `"1265000000000001"` | Reference: u_mes_mast_currency._id |
-| 25 | currencyName | String | Yes | Display value of currencyId, copied from u_mes_mast_currency.name | `"Indian Rupee"` |  |
-| 26 | languageId | String | Yes | Reference to u_mes_mast_language._id | `"1267000000000001"` | Reference: u_mes_mast_language._id |
-| 27 | languageName | String | Yes | Display value of languageId, copied from u_mes_mast_language.name | `"English"` |  |
-| 28 | headcount | Int32 | Yes | Headcount of the site | `NumberInt(412)` |  |
-| 29 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 30 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1003000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PN1"` |  |
+| 3 | name | String | - | Yes | Name of the site; used as its display value in other collections | `"Chakan Plant, Pune"` |  |
+| 4 | enterpriseId | String | - | Yes | Reference to u_mes_mast_enterprise._id | `"1001000000000001"` | Reference: u_mes_mast_enterprise._id |
+| 5 | enterpriseName | String | - | Yes | Display value of enterpriseId, copied from u_mes_mast_enterprise.name | `"Varuna Brake Systems Pvt. Ltd."` |  |
+| 6 | siteType | String | - | Yes | Site type | `"Manufacturing Plant"` | Manufacturing Plant; Warehouse; Technical Center; Head Office |
+| 7 | timezone | String | - | Yes | IANA time zone name | `"Asia/Kolkata"` |  |
+| 8 | utcOffsetMinutes | Int32 | - | Yes | Offset of local time from UTC in minutes (IST = 330) | `NumberInt(330)` |  |
+| 9 | addressLine1 | String | - | Yes | Address line1 | `"Plot B-14, Chakan MIDC Phase II"` |  |
+| 10 | addressLine2 | String | - | No (null allowed) | Address line2 | `"Village Khalumbre, Taluka Khed"` |  |
+| 11 | addressCity | String | - | Yes | Address city | `"Pune"` |  |
+| 12 | addressDistrict | String | - | Yes | Address district | `"Pune"` |  |
+| 13 | addressState | String | - | Yes | Address state | `"Maharashtra"` |  |
+| 14 | addressPostalCode | String | - | Yes | Address postal code | `"410501"` |  |
+| 15 | addressCountryId | String | - | Yes | Reference to u_mes_mast_country._id: address country | `"1266000000000001"` | Reference: u_mes_mast_country._id |
+| 16 | addressCountryName | String | - | Yes | Display value of addressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
+| 17 | geoLatitude | Double | - | Yes | Geo latitude | `Double(18.7606)` |  |
+| 18 | geoLongitude | Double | - | Yes | Geo longitude | `Double(73.8636)` |  |
+| 19 | gstin | String | - | Yes | Goods and services tax identification number | `"27AAACV4521K1Z6"` |  |
+| 20 | factoryLicenceNo | String | - | Yes | Factory licence number | `"MH/PUN/2(m)(i)/34300/2011/0871"` |  |
+| 21 | erpPlantCode | String | - | Yes | ERP plant code | `"PN01"` |  |
+| 22 | defaultWorkCalendarId | String | - | No (null allowed) | Reference to u_mes_mast_workCalendar._id: default work calendar | `"1018000000000001"` | Reference: u_mes_mast_workCalendar._id |
+| 23 | defaultWorkCalendarName | String | - | No (null allowed) | Display value of defaultWorkCalendarId, copied from u_mes_mast_workCalendar.name | `"Chakan Plant Calendar 2026"` |  |
+| 24 | currencyId | String | - | Yes | Reference to u_mes_mast_currency._id | `"1265000000000001"` | Reference: u_mes_mast_currency._id |
+| 25 | currencyName | String | - | Yes | Display value of currencyId, copied from u_mes_mast_currency.name | `"Indian Rupee"` |  |
+| 26 | languageId | String | - | Yes | Reference to u_mes_mast_language._id | `"1267000000000001"` | Reference: u_mes_mast_language._id |
+| 27 | languageName | String | - | Yes | Display value of languageId, copied from u_mes_mast_language.name | `"English"` |  |
+| 28 | headcount | Int32 | - | Yes | Headcount of the site | `NumberInt(412)` |  |
+| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

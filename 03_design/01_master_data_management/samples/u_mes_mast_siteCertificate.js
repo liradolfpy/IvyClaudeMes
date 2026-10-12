@@ -11,8 +11,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0412877",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-04-01T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-04-02T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -25,8 +25,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0412914",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-05-08T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-05-09T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -39,8 +39,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0412951",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-06-15T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-06-16T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -53,8 +53,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0412988",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-07-22T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-07-23T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -67,8 +67,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0413025",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-08-02T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-08-03T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -81,8 +81,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0413062",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-04-09T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-04-10T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -95,8 +95,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0413099",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-05-16T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-05-17T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -109,8 +109,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0413136",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-06-23T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-06-24T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -123,8 +123,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0413173",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-07-03T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-07-04T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   },
   {
@@ -137,8 +137,8 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
     certificateNo: "IATF-0413210",
     issuedById: "1029000000000005",
     issuedBy: "Rajesh Patil",
-    validFrom: ISODate("2026-08-10T18:30:00.000+0000"),
-    validTo: ISODate("2027-03-31T18:29:59.000+0000"),
+    validFrom: ISODate("2026-08-11T00:00:00.000+0000"),
+    validTo: ISODate("2027-03-31T00:00:00.000+0000"),
     schemaVersion: NumberInt(1)
   }
 ]);

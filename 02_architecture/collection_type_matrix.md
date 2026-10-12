@@ -1,6 +1,6 @@
 # Collection type matrix
 
-Model version 2.4 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Model version 2.5 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
 
 Type of each collection and the label used for it in the UI menu. A child, relationship or value-list collection has the type of the entity it belongs to; its label starts with the parent's name, because it is opened from the parent's screen.
 

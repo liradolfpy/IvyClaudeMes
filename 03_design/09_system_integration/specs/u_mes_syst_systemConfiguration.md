@@ -19,28 +19,28 @@ Flat entity collection: one document per system configuration, all keys top-leve
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1249000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"oee.plannedTimeBasis"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | module | String | Yes | Module of the system configuration | `"Master Data"` | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
-| 6 | description | String | Yes | Description of the system configuration | `"Time basis used as the denominator of availability (oee.plannedTimeBasis)"` |  |
-| 7 | valueType | String | Yes | Value type | `"Text"` | Text; Number; Flag; JSON |
-| 8 | configValueText | String | No (null allowed) | Config value text | `"Planned Production Time"` |  |
-| 9 | configValueNumber | Decimal128 | No (null allowed) | Config value number | `null` |  |
-| 10 | configValueFlag | Boolean | Yes | True when: config value flag | `false` |  |
-| 11 | configValueJson | String | No (null allowed) | Config value json | `null` |  |
-| 12 | scope | String | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
-| 13 | isEditable | Boolean | Yes | True when the record is editable | `true` |  |
-| 14 | isSecret | Boolean | Yes | True when the record is secret | `false` |  |
-| 15 | validFrom | Date | Yes | Valid from (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
-| 16 | lastChangedReason | String | No (null allowed) | Last changed reason | `null` |  |
-| 17 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 18 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1249000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"oee.plannedTimeBasis"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | module | String | - | Yes | Module of the system configuration | `"Master Data"` | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
+| 6 | description | String | - | Yes | Description of the system configuration | `"Time basis used as the denominator of availability (oee.plannedTimeBasis)"` |  |
+| 7 | valueType | String | - | Yes | Value type | `"Text"` | Text; Number; Flag; JSON |
+| 8 | configValueText | String | - | No (null allowed) | Config value text | `"Planned Production Time"` |  |
+| 9 | configValueNumber | Decimal128 | - | No (null allowed) | Config value number | `null` |  |
+| 10 | configValueFlag | Boolean | - | Yes | True when: config value flag | `false` |  |
+| 11 | configValueJson | String | - | No (null allowed) | Config value json | `null` |  |
+| 12 | scope | String | - | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
+| 13 | isEditable | Boolean | - | Yes | True when the record is editable | `true` |  |
+| 14 | isSecret | Boolean | - | Yes | True when the record is secret | `false` |  |
+| 15 | validFrom | Date | Date | Yes | Valid from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 16 | lastChangedReason | String | - | No (null allowed) | Last changed reason | `null` |  |
+| 17 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

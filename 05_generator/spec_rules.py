@@ -117,8 +117,8 @@ def words(k):
 def describe(c,f,nul):
     k=f["key"]; t=f["type"]
     fixed={"_id":"Unique identifier of the document. Pattern: %s"%c["idPattern"],"recordNo":"Business identifier of the document, readable by people and unique within the site","siteId":"Reference to u_mes_mast_site._id: the site the document belongs to","siteName":"Display value of the site, copied from u_mes_mast_site.name",
-     "status":"Primary lifecycle state of the document","schemaVersion":"Version of this collection's document structure, starting at 1","createdAt":"Date and time the document was created","createdById":"Reference to u_mes_mast_user._id: user or process that created the document","createdBy":"Display name of the creator, copied from u_mes_mast_user.fullName",
-     "updatedAt":"Date and time of the most recent update","updatedById":"Reference to u_mes_mast_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mast_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
+     "status":"Primary lifecycle state of the document","schemaVersion":"Version of this collection's document structure, starting at 1","createdAt":"Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix","createdById":"Reference to u_mes_mast_user._id: user or process that created the document","createdBy":"Display name of the creator, copied from u_mes_mast_user.fullName",
+     "updatedAt":"Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix","updatedById":"Reference to u_mes_mast_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mast_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
      "relatedCollectionName":"Name of the collection the related document is in","relatedEntityId":"_id of the related document in the collection named by relatedCollectionName","relatedEntityName":"Display value of the related document"}
     if k in fixed: return fixed[k]
     ks=[x["key"] for x in c["fields"]]
@@ -139,12 +139,14 @@ def describe(c,f,nul):
         m=re.match(r"(is|has|can|requires)([A-Z].*)",k)
         if m: return {"is":"True when the record is %s","has":"True when the record has %s","can":"True when the holder can %s","requires":"True when %s is required"}[m.group(1)]%words(m.group(2))
         return "True when: %s"%words(k)
+    if t=="Date" and f.get("dateKind")=="Date":
+        return "%s. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"%words(k).capitalize()
     if t=="Date":
         if k.endswith("At"):
             st=k[:-2]; w=words(st)
-            if re.fullmatch(r"[a-z]+ed",st) or st in("sent","read","built"): return "Date and time when the record was %s"%w
-            return "%s date and time"%w.capitalize()
-        return "%s (calendar date, stored as the start of that day in IST converted to UTC)"%words(k).capitalize()
+            if re.fullmatch(r"[a-z]+ed",st) or st in("sent","read","built"): return "Date and time when the record was %s. Datetime field: local plant time (IST) stored with the +0000 suffix"%w
+            return "%s date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"%w.capitalize()
+        return "%s. Datetime field: local plant time (IST) stored with the +0000 suffix"%words(k).capitalize()
     w=words(k)
     for suf,txt in UNIT:
         if k.endswith(suf) and len(k)>len(suf):

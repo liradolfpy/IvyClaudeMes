@@ -77,15 +77,15 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was received"
+          "description": "Date and time when the record was received. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "horizonFrom": {
           "bsonType": "date",
-          "description": "Horizon from (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Horizon from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "horizonTo": {
           "bsonType": "date",
-          "description": "Horizon to (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Horizon to. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "supersedesCustomerScheduleId": {
           "bsonType": [
@@ -122,7 +122,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -134,7 +134,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

@@ -79,7 +79,7 @@
         },
         "requiredAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was required"
+          "description": "Date and time when the record was required. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "toLocationId": {
           "bsonType": "string",
@@ -102,21 +102,21 @@
             "date",
             "null"
           ],
-          "description": "Pick started date and time"
+          "description": "Pick started date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "pickCompletedAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Pick completed date and time"
+          "description": "Pick completed date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "deliveredAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Date and time when the record was delivered"
+          "description": "Date and time when the record was delivered. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "receivedById": {
           "bsonType": [
@@ -153,7 +153,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -165,7 +165,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

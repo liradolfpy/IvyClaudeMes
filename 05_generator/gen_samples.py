@@ -13,7 +13,7 @@ def code(s): return s.split("|")[0]
 def name(s): return s.split("|")[1]
 PROCMAP={"operation":"op","workCenter":"wc","equipment":"eq","equipmentType":"eqt","manufacturer":"mfr","recipe":"rcp","tool":"tool","toolType":"tlt","iotDevice":"dev","deviceType":"dvt","skill":"skill","gauge":"gauge","gaugeType":"gty","processTag":"tag","defectCode":"defect","defectGroup":"dgroup","reasonCode":"reason"}
 ALIGNED=set(PROCMAP)|{"workInstruction","characteristic","checkSheet","inspectionPlan","spcChart","maintenancePlan","operatorApp"}
-IST=datetime.timedelta(hours=5,minutes=30)
+IST=datetime.timedelta(0)  # D035: times are stored as local plant time (IST) with a +0000 suffix, no conversion
 DAYS=[15,15,16,17,18,19,21,22,23,24]
 SHIFTSTART=[6,14,22]
 def basetime(i): return datetime.datetime(2026,9,DAYS[i],SHIFTSTART[i%3],0)-IST+datetime.timedelta(minutes=17*i)
@@ -287,6 +287,14 @@ def build_collection(c):
         for k in keys:
             if doc[k] is UNSET: doc[k]=None
         GENERIC_POST(env)
+        for f in fields:
+            v=doc[f["key"]]
+            if f["type"]=="Date" and isinstance(v,tuple):
+                t=v[1]
+                if (t.hour,t.minute)==(18,30) or (t.hour,t.minute,t.second)==(18,29,59): t=t.replace(second=0)+datetime.timedelta(hours=5,minutes=30)
+                if f.get("dateKind")=="Date": t=datetime.datetime(t.year,t.month,t.day)
+                doc[f["key"]]=("date",t)
+        if "createdAt" in doc and doc["createdAt"] and doc["updatedAt"] and doc["updatedAt"][1]<doc["createdAt"][1]: doc["updatedAt"]=doc["createdAt"]
         if e in POST: POST[e](env)
         out.append(doc); metas.append(meta)
     DOCS[name_]=out; META[name_]=metas; BUILDING.discard(name_)

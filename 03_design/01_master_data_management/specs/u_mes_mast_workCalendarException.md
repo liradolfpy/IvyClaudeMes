@@ -18,22 +18,22 @@ Data class (master) and site are inherited from the parent. Documents are create
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1022000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"PN1-2026-E01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | workCalendarId | String | Yes | Reference to u_mes_mast_workCalendar._id: the parent document this one belongs to | `"1018000000000001"` | Reference: u_mes_mast_workCalendar._id |
-| 6 | workCalendarName | String | Yes | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Chakan Plant Calendar 2026"` |  |
-| 7 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | exceptionDate | Date | Yes | Exception date (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-04-30T18:30:00.000+0000")` |  |
-| 9 | exceptionType | String | Yes | Exception type | `"Public Holiday"` | Public Holiday; Plant Shutdown; Extra Working Day; Reduced Shift |
-| 10 | description | String | Yes | Description of the work calendar exception | `"Maharashtra Day"` |  |
-| 11 | isWorking | Boolean | Yes | True when the record is working | `false` |  |
-| 12 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1022000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PN1-2026-E01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | workCalendarId | String | - | Yes | Reference to u_mes_mast_workCalendar._id: the parent document this one belongs to | `"1018000000000001"` | Reference: u_mes_mast_workCalendar._id |
+| 6 | workCalendarName | String | - | Yes | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Chakan Plant Calendar 2026"` |  |
+| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 8 | exceptionDate | Date | Date | Yes | Exception date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-05-01T00:00:00.000+0000")` |  |
+| 9 | exceptionType | String | - | Yes | Exception type | `"Public Holiday"` | Public Holiday; Plant Shutdown; Extra Working Day; Reduced Shift |
+| 10 | description | String | - | Yes | Description of the work calendar exception | `"Maharashtra Day"` |  |
+| 11 | isWorking | Boolean | - | Yes | True when the record is working | `false` |  |
+| 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

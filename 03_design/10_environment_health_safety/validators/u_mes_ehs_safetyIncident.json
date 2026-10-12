@@ -122,7 +122,7 @@
         },
         "occurredAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was occurred"
+          "description": "Date and time when the record was occurred. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "reportedById": {
           "bsonType": "string",
@@ -134,7 +134,7 @@
         },
         "reportedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was reported"
+          "description": "Date and time when the record was reported. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "description": {
           "bsonType": "string",
@@ -228,7 +228,7 @@
             "date",
             "null"
           ],
-          "description": "Investigation completed date and time"
+          "description": "Investigation completed date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "reportableToAuthority": {
           "bsonType": "bool",
@@ -239,7 +239,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was closed"
+          "description": "Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "status": {
           "bsonType": "string",
@@ -257,7 +257,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -269,7 +269,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

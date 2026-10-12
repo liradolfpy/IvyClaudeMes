@@ -120,7 +120,7 @@
             "date",
             "null"
           ],
-          "description": "Last reset date and time"
+          "description": "Last reset date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "checkDigitMethod": {
           "bsonType": [
@@ -148,7 +148,7 @@
             "date",
             "null"
           ],
-          "description": "Last issued date and time"
+          "description": "Last issued date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "exampleValue": {
           "bsonType": "string",

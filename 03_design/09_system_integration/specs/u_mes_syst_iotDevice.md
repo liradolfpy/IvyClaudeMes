@@ -19,41 +19,41 @@ Flat entity collection: one document per IoT device, all keys top-level and scal
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1232000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"PLC-GDC-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the IoT device; used as its display value in other collections | `"PLC, casting machine 1"` |  |
-| 6 | deviceTypeId | String | Yes | Reference to u_mes_syst_deviceType._id | `"1290000000000001"` | Reference: u_mes_syst_deviceType._id |
-| 7 | deviceTypeName | String | Yes | Display value of deviceTypeId, copied from u_mes_syst_deviceType.name | `"PLC"` |  |
-| 8 | manufacturerId | String | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000001"` | Reference: u_mes_mast_manufacturer._id |
-| 9 | manufacturerName | String | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"LK Machinery"` |  |
-| 10 | model | String | Yes | Model of the IoT device | `"PF6000 with ETV STR61"` |  |
-| 11 | serialNo | String | Yes | Serial number | `"AC-PF6-2231907"` |  |
-| 12 | firmwareVersion | String | Yes | Firmware version | `"3.9.12"` |  |
-| 13 | equipmentId | String | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
-| 14 | equipmentName | String | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
-| 15 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 16 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 17 | integrationConnectorId | String | Yes | Reference to u_mes_syst_integrationConnector._id | `"1230000000000001"` | Reference: u_mes_syst_integrationConnector._id |
-| 18 | integrationConnectorName | String | Yes | Display value of integrationConnectorId, copied from u_mes_syst_integrationConnector.name | `"ERP production interface"` |  |
-| 19 | ipAddress | String | Yes | Ip address | `"10.21.6.41"` |  |
-| 20 | macAddress | String | Yes | Mac address | `"00:1B:2C:4D:6E:91"` |  |
-| 21 | port | Int32 | Yes | Port of the IoT device | `NumberInt(4545)` |  |
-| 22 | protocol | String | Yes | Protocol of the IoT device | `"HTTPS REST"` | HTTPS REST; OPC UA; Open Protocol; Modbus TCP; MQTT; ZPL Over TCP; SMTP |
-| 23 | vlan | Int32 | Yes | Vlan of the IoT device | `NumberInt(216)` |  |
-| 24 | opcNodeAddress | String | No (null allowed) | OPC node address | `"ns=3;s=\"NR1\""` |  |
-| 25 | pollIntervalMs | Int32 | Yes | Poll interval (milliseconds) | `NumberInt(1000)` |  |
-| 26 | lastSeenAt | Date | No (null allowed) | Last seen date and time | `null` |  |
-| 27 | connectionStatus | String | Yes | Connection status | `"Online"` | Online; Offline; Degraded |
-| 28 | certificateExpiresAt | Date | Yes | Certificate expires date and time | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
-| 29 | installedAt | Date | Yes | Date and time when the record was installed | `ISODate("2019-01-03T18:30:00.000+0000")` |  |
-| 30 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive; Retired |
-| 31 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1232000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PLC-GDC-01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the IoT device; used as its display value in other collections | `"PLC, casting machine 1"` |  |
+| 6 | deviceTypeId | String | - | Yes | Reference to u_mes_syst_deviceType._id | `"1290000000000001"` | Reference: u_mes_syst_deviceType._id |
+| 7 | deviceTypeName | String | - | Yes | Display value of deviceTypeId, copied from u_mes_syst_deviceType.name | `"PLC"` |  |
+| 8 | manufacturerId | String | - | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000001"` | Reference: u_mes_mast_manufacturer._id |
+| 9 | manufacturerName | String | - | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"LK Machinery"` |  |
+| 10 | model | String | - | Yes | Model of the IoT device | `"PF6000 with ETV STR61"` |  |
+| 11 | serialNo | String | - | Yes | Serial number | `"AC-PF6-2231907"` |  |
+| 12 | firmwareVersion | String | - | Yes | Firmware version | `"3.9.12"` |  |
+| 13 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 14 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 15 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 16 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 17 | integrationConnectorId | String | - | Yes | Reference to u_mes_syst_integrationConnector._id | `"1230000000000001"` | Reference: u_mes_syst_integrationConnector._id |
+| 18 | integrationConnectorName | String | - | Yes | Display value of integrationConnectorId, copied from u_mes_syst_integrationConnector.name | `"ERP production interface"` |  |
+| 19 | ipAddress | String | - | Yes | Ip address | `"10.21.6.41"` |  |
+| 20 | macAddress | String | - | Yes | Mac address | `"00:1B:2C:4D:6E:91"` |  |
+| 21 | port | Int32 | - | Yes | Port of the IoT device | `NumberInt(4545)` |  |
+| 22 | protocol | String | - | Yes | Protocol of the IoT device | `"HTTPS REST"` | HTTPS REST; OPC UA; Open Protocol; Modbus TCP; MQTT; ZPL Over TCP; SMTP |
+| 23 | vlan | Int32 | - | Yes | Vlan of the IoT device | `NumberInt(216)` |  |
+| 24 | opcNodeAddress | String | - | No (null allowed) | OPC node address | `"ns=3;s=\"NR1\""` |  |
+| 25 | pollIntervalMs | Int32 | - | Yes | Poll interval (milliseconds) | `NumberInt(1000)` |  |
+| 26 | lastSeenAt | Date | Datetime | No (null allowed) | Last seen date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 27 | connectionStatus | String | - | Yes | Connection status | `"Online"` | Online; Offline; Degraded |
+| 28 | certificateExpiresAt | Date | Date | Yes | Certificate expires at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 29 | installedAt | Date | Datetime | Yes | Date and time when the record was installed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
+| 30 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive; Retired |
+| 31 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

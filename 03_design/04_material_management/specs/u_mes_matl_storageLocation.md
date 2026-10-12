@@ -19,34 +19,34 @@ Flat entity collection: one document per storage location, all keys top-level an
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1112000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"WH-RM-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the storage location; used as its display value in other collections | `"Raw material yard, ingot bay"` |  |
-| 6 | locationType | String | Yes | Location type | `"Receiving Bay"` | Warehouse Rack; Line Side; Quarantine; Dispatch Bay; Receiving Bay; Tool Crib; Scrap Yard |
-| 7 | areaId | String | No (null allowed) | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
-| 8 | areaName | String | No (null allowed) | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
-| 9 | workCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 10 | workCenterName | String | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 11 | parentLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: parent location | `null` | Reference: u_mes_matl_storageLocation._id |
-| 12 | parentLocationName | String | No (null allowed) | Display value of parentLocationId, copied from u_mes_matl_storageLocation.name | `null` |  |
-| 13 | zone | String | Yes | Zone of the storage location | `"ASY"` |  |
-| 14 | rack | String | No (null allowed) | Rack of the storage location | `"R02"` |  |
-| 15 | level | Int32 | Yes | Level number on the scale of the parent record | `NumberInt(3)` |  |
-| 16 | bin | String | No (null allowed) | Bin of the storage location | `"B14"` |  |
-| 17 | capacityQuantity | Int32 | Yes | CAPAcity quantity | `NumberInt(960)` |  |
-| 18 | isQuarantine | Boolean | Yes | True when the record is quarantine | `false` |  |
-| 19 | isLineSide | Boolean | Yes | True when the record is line side | `true` |  |
-| 20 | mixedLotsAllowed | Boolean | Yes | True when: mixed lots allowed | `false` |  |
-| 21 | erpStorageLocation | String | Yes | ERP storage location | `"LS01"` |  |
-| 22 | barcode | String | Yes | Barcode of the storage location | `"LOC-LS-ASY-01"` |  |
-| 23 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 24 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1112000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"WH-RM-01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the storage location; used as its display value in other collections | `"Raw material yard, ingot bay"` |  |
+| 6 | locationType | String | - | Yes | Location type | `"Receiving Bay"` | Warehouse Rack; Line Side; Quarantine; Dispatch Bay; Receiving Bay; Tool Crib; Scrap Yard |
+| 7 | areaId | String | - | No (null allowed) | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
+| 8 | areaName | String | - | No (null allowed) | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
+| 9 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 10 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 11 | parentLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: parent location | `null` | Reference: u_mes_matl_storageLocation._id |
+| 12 | parentLocationName | String | - | No (null allowed) | Display value of parentLocationId, copied from u_mes_matl_storageLocation.name | `null` |  |
+| 13 | zone | String | - | Yes | Zone of the storage location | `"ASY"` |  |
+| 14 | rack | String | - | No (null allowed) | Rack of the storage location | `"R02"` |  |
+| 15 | level | Int32 | - | Yes | Level number on the scale of the parent record | `NumberInt(3)` |  |
+| 16 | bin | String | - | No (null allowed) | Bin of the storage location | `"B14"` |  |
+| 17 | capacityQuantity | Int32 | - | Yes | CAPAcity quantity | `NumberInt(960)` |  |
+| 18 | isQuarantine | Boolean | - | Yes | True when the record is quarantine | `false` |  |
+| 19 | isLineSide | Boolean | - | Yes | True when the record is line side | `true` |  |
+| 20 | mixedLotsAllowed | Boolean | - | Yes | True when: mixed lots allowed | `false` |  |
+| 21 | erpStorageLocation | String | - | Yes | ERP storage location | `"LS01"` |  |
+| 22 | barcode | String | - | Yes | Barcode of the storage location | `"LOC-LS-ASY-01"` |  |
+| 23 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 24 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

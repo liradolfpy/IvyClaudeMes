@@ -163,7 +163,7 @@
             "date",
             "null"
           ],
-          "description": "Capability calculated date and time"
+          "description": "Capability calculated date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "capabilitySampleCount": {
           "bsonType": "int",

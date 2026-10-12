@@ -16,7 +16,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-04-01T18:30:00.000+0000"),
+    validFrom: ISODate("2026-04-02T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -36,7 +36,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-05-08T18:30:00.000+0000"),
+    validFrom: ISODate("2026-05-09T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -56,7 +56,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-06-15T18:30:00.000+0000"),
+    validFrom: ISODate("2026-06-16T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -76,7 +76,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-07-22T18:30:00.000+0000"),
+    validFrom: ISODate("2026-07-23T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -96,7 +96,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-08-02T18:30:00.000+0000"),
+    validFrom: ISODate("2026-08-03T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -116,7 +116,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-04-09T18:30:00.000+0000"),
+    validFrom: ISODate("2026-04-10T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -136,7 +136,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-05-16T18:30:00.000+0000"),
+    validFrom: ISODate("2026-05-17T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -156,7 +156,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-06-23T18:30:00.000+0000"),
+    validFrom: ISODate("2026-06-24T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -176,7 +176,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-07-03T18:30:00.000+0000"),
+    validFrom: ISODate("2026-07-04T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -196,7 +196,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
     scope: "Enterprise",
     isEditable: true,
     isSecret: false,
-    validFrom: ISODate("2026-08-10T18:30:00.000+0000"),
+    validFrom: ISODate("2026-08-11T00:00:00.000+0000"),
     lastChangedReason: null,
     status: "Active",
     schemaVersion: NumberInt(1)

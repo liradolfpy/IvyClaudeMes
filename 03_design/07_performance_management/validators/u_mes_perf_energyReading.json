@@ -118,11 +118,11 @@
         },
         "intervalStartAt": {
           "bsonType": "date",
-          "description": "Interval start date and time"
+          "description": "Interval start date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "intervalEndAt": {
           "bsonType": "date",
-          "description": "Interval end date and time"
+          "description": "Interval end date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "consumption": {
           "bsonType": "decimal",
@@ -188,7 +188,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -200,7 +200,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

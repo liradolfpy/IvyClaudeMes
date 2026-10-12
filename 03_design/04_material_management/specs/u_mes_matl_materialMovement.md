@@ -19,58 +19,58 @@ Flat entity collection: one document per material movement, all keys top-level a
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1114000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"MM-2026-000331"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | movementTypeId | String | Yes | Reference to u_mes_matl_movementType._id | `"1279000000000001"` | Reference: u_mes_matl_movementType._id |
-| 6 | movementTypeName | String | Yes | Display value of movementTypeId, copied from u_mes_matl_movementType.name | `"Goods Receipt Against Purchase Order"` |  |
-| 7 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000005"` | Reference: u_mes_prod_item._id |
-| 8 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
-| 9 | lotId | String | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
-| 10 | lotName | String | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
-| 11 | containerId | String | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
-| 12 | containerName | String | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
-| 13 | quantity | Decimal128 | Yes | Quantity of the material movement | `NumberDecimal("5000")` |  |
-| 14 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 15 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 16 | fromLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: from location | `null` | Reference: u_mes_matl_storageLocation._id |
-| 17 | fromLocationName | String | No (null allowed) | Display value of fromLocationId, copied from u_mes_matl_storageLocation.name | `null` |  |
-| 18 | toLocationId | String | No (null allowed) | Reference to u_mes_matl_storageLocation._id: to location | `"1112000000000002"` | Reference: u_mes_matl_storageLocation._id |
-| 19 | toLocationName | String | No (null allowed) | Display value of toLocationId, copied from u_mes_matl_storageLocation.name | `"Warehouse A, rack 02, bin 14"` |  |
-| 20 | fromStockStatusId | String | No (null allowed) | Reference to u_mes_matl_stockStatus._id: from stock status | `null` | Reference: u_mes_matl_stockStatus._id |
-| 21 | fromStockStatusName | String | No (null allowed) | Display value of fromStockStatusId, copied from u_mes_matl_stockStatus.name | `null` |  |
-| 22 | toStockStatusId | String | No (null allowed) | Reference to u_mes_matl_stockStatus._id: to stock status | `"1280000000000002"` | Reference: u_mes_matl_stockStatus._id |
-| 23 | toStockStatusName | String | No (null allowed) | Display value of toStockStatusId, copied from u_mes_matl_stockStatus.name | `"Quality Inspection"` |  |
-| 24 | productionOrderId | String | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `null` | Reference: u_mes_plan_productionOrder._id |
-| 25 | productionOrderName | String | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `null` |  |
-| 26 | goodsReceiptId | String | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `"1115000000000001"` | Reference: u_mes_matl_goodsReceipt._id |
-| 27 | goodsReceiptName | String | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `"GRN-2026-000918"` |  |
-| 28 | shipmentId | String | No (null allowed) | Reference to u_mes_matl_shipment._id | `null` | Reference: u_mes_matl_shipment._id |
-| 29 | shipmentName | String | No (null allowed) | Display value of shipmentId, copied from u_mes_matl_shipment.recordNo | `null` |  |
-| 30 | kitId | String | No (null allowed) | Reference to u_mes_matl_kit._id | `null` | Reference: u_mes_matl_kit._id |
-| 31 | kitName | String | No (null allowed) | Display value of kitId, copied from u_mes_matl_kit.recordNo | `null` |  |
-| 32 | movedAt | Date | Yes | Date and time when the record was moved | `ISODate("2026-09-15T00:32:18.000+0000")` |  |
-| 33 | movedById | String | Yes | Reference to u_mes_mast_user._id: user recorded for 'moved' | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 34 | movedBy | String | Yes | Display name of the user in movedById, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
-| 35 | scanSource | String | Yes | Scan source | `"Handheld Scanner"` | Handheld Scanner; Fixed Scanner; Manual Entry |
-| 36 | reasonText | String | No (null allowed) | Reason text | `"Replenishment against kanban call"` |  |
-| 37 | erpDocumentNo | String | No (null allowed) | ERP document number | `"4900318842"` |  |
-| 38 | erpMovementType | String | No (null allowed) | ERP movement type | `"261"` |  |
-| 39 | reversalOfMaterialMovementId | String | No (null allowed) | Reference to u_mes_matl_materialMovement._id: reversal of material movement | `null` | Reference: u_mes_matl_materialMovement._id |
-| 40 | reversalOfMaterialMovementName | String | No (null allowed) | Display value of reversalOfMaterialMovementId, copied from u_mes_matl_materialMovement.recordNo | `null` |  |
-| 41 | status | String | Yes | Primary lifecycle state of the document | `"Posted"` | Posted; Reversed |
-| 42 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 43 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-15T00:31:48.000+0000")` |  |
-| 44 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 45 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
-| 46 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-15T00:32:18.000+0000")` |  |
-| 47 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 48 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1114000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"MM-2026-000331"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | movementTypeId | String | - | Yes | Reference to u_mes_matl_movementType._id | `"1279000000000001"` | Reference: u_mes_matl_movementType._id |
+| 6 | movementTypeName | String | - | Yes | Display value of movementTypeId, copied from u_mes_matl_movementType.name | `"Goods Receipt Against Purchase Order"` |  |
+| 7 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000005"` | Reference: u_mes_prod_item._id |
+| 8 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
+| 9 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
+| 10 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
+| 11 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
+| 12 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
+| 13 | quantity | Decimal128 | - | Yes | Quantity of the material movement | `NumberDecimal("5000")` |  |
+| 14 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 15 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 16 | fromLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: from location | `null` | Reference: u_mes_matl_storageLocation._id |
+| 17 | fromLocationName | String | - | No (null allowed) | Display value of fromLocationId, copied from u_mes_matl_storageLocation.name | `null` |  |
+| 18 | toLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: to location | `"1112000000000002"` | Reference: u_mes_matl_storageLocation._id |
+| 19 | toLocationName | String | - | No (null allowed) | Display value of toLocationId, copied from u_mes_matl_storageLocation.name | `"Warehouse A, rack 02, bin 14"` |  |
+| 20 | fromStockStatusId | String | - | No (null allowed) | Reference to u_mes_matl_stockStatus._id: from stock status | `null` | Reference: u_mes_matl_stockStatus._id |
+| 21 | fromStockStatusName | String | - | No (null allowed) | Display value of fromStockStatusId, copied from u_mes_matl_stockStatus.name | `null` |  |
+| 22 | toStockStatusId | String | - | No (null allowed) | Reference to u_mes_matl_stockStatus._id: to stock status | `"1280000000000002"` | Reference: u_mes_matl_stockStatus._id |
+| 23 | toStockStatusName | String | - | No (null allowed) | Display value of toStockStatusId, copied from u_mes_matl_stockStatus.name | `"Quality Inspection"` |  |
+| 24 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `null` | Reference: u_mes_plan_productionOrder._id |
+| 25 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `null` |  |
+| 26 | goodsReceiptId | String | - | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `"1115000000000001"` | Reference: u_mes_matl_goodsReceipt._id |
+| 27 | goodsReceiptName | String | - | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `"GRN-2026-000918"` |  |
+| 28 | shipmentId | String | - | No (null allowed) | Reference to u_mes_matl_shipment._id | `null` | Reference: u_mes_matl_shipment._id |
+| 29 | shipmentName | String | - | No (null allowed) | Display value of shipmentId, copied from u_mes_matl_shipment.recordNo | `null` |  |
+| 30 | kitId | String | - | No (null allowed) | Reference to u_mes_matl_kit._id | `null` | Reference: u_mes_matl_kit._id |
+| 31 | kitName | String | - | No (null allowed) | Display value of kitId, copied from u_mes_matl_kit.recordNo | `null` |  |
+| 32 | movedAt | Date | Datetime | Yes | Date and time when the record was moved. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:18.000+0000")` |  |
+| 33 | movedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'moved' | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 34 | movedBy | String | - | Yes | Display name of the user in movedById, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 35 | scanSource | String | - | Yes | Scan source | `"Handheld Scanner"` | Handheld Scanner; Fixed Scanner; Manual Entry |
+| 36 | reasonText | String | - | No (null allowed) | Reason text | `"Replenishment against kanban call"` |  |
+| 37 | erpDocumentNo | String | - | No (null allowed) | ERP document number | `"4900318842"` |  |
+| 38 | erpMovementType | String | - | No (null allowed) | ERP movement type | `"261"` |  |
+| 39 | reversalOfMaterialMovementId | String | - | No (null allowed) | Reference to u_mes_matl_materialMovement._id: reversal of material movement | `null` | Reference: u_mes_matl_materialMovement._id |
+| 40 | reversalOfMaterialMovementName | String | - | No (null allowed) | Display value of reversalOfMaterialMovementId, copied from u_mes_matl_materialMovement.recordNo | `null` |  |
+| 41 | status | String | - | Yes | Primary lifecycle state of the document | `"Posted"` | Posted; Reversed |
+| 42 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 43 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
+| 44 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 45 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 46 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:18.000+0000")` |  |
+| 47 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 48 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
 
 ## Status values
 

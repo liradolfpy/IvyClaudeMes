@@ -18,7 +18,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(1),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-04-01T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-04-02T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -39,7 +39,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(2),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-05-08T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-05-09T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -60,7 +60,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(3),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-06-15T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-06-16T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -81,7 +81,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(1),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-07-22T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-07-23T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -102,7 +102,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(2),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-08-02T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-08-03T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -123,7 +123,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(1),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-04-09T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-04-10T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -144,7 +144,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(4),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-05-16T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-05-17T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -165,7 +165,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(2),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-06-23T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-06-24T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -186,7 +186,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(1),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-07-03T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-07-04T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -207,7 +207,7 @@ db.getCollection("u_mes_matl_labelTemplate").insertMany([
     payloadPattern: "[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}",
     version: NumberInt(3),
     copies: NumberInt(1),
-    effectiveFrom: ISODate("2026-08-10T18:30:00.000+0000"),
+    effectiveFrom: ISODate("2026-08-11T00:00:00.000+0000"),
     status: "Released",
     schemaVersion: NumberInt(1)
   }

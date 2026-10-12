@@ -78,7 +78,7 @@
         },
         "productionDate": {
           "bsonType": "date",
-          "description": "Production date (calendar date, stored as the start of that day in IST converted to UTC)"
+          "description": "Production date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "bookingType": {
           "bsonType": "string",
@@ -146,14 +146,14 @@
         },
         "clockOnAt": {
           "bsonType": "date",
-          "description": "Clock on date and time"
+          "description": "Clock on date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "clockOffAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Clock off date and time"
+          "description": "Clock off date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "durationMinutes": {
           "bsonType": "int",
@@ -186,7 +186,7 @@
             "date",
             "null"
           ],
-          "description": "Date and time when the record was approved"
+          "description": "Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "erpConfirmationNo": {
           "bsonType": [
@@ -222,7 +222,7 @@
         },
         "createdAt": {
           "bsonType": "date",
-          "description": "Date and time the document was created"
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "createdById": {
           "bsonType": "string",
@@ -234,7 +234,7 @@
         },
         "updatedAt": {
           "bsonType": "date",
-          "description": "Date and time of the most recent update"
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "updatedById": {
           "bsonType": "string",

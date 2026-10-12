@@ -233,7 +233,7 @@ db.getCollection("u_mes_syst_integrationConnector").insertMany([
     timeoutMs: NumberInt(15000),
     retryPolicyMaxAttempts: NumberInt(5),
     retryPolicyBackoffSec: NumberInt(60),
-    lastSuccessAt: ISODate("2026-08-10T18:30:00.000+0000"),
+    lastSuccessAt: ISODate("2026-08-11T00:00:00.000+0000"),
     lastFailureAt: null,
     healthStatus: "Down",
     ownerUserId: "1029000000000004",

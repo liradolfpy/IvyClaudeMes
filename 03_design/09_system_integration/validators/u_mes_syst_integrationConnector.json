@@ -124,14 +124,14 @@
             "date",
             "null"
           ],
-          "description": "Last success date and time"
+          "description": "Last success date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "lastFailureAt": {
           "bsonType": [
             "date",
             "null"
           ],
-          "description": "Last failure date and time"
+          "description": "Last failure date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "healthStatus": {
           "bsonType": "string",

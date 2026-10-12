@@ -27,32 +27,32 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1047000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"BOM-5110-10-0100-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
-| 6 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
-| 7 | itemRevision | String | Yes | Item revision | `"D"` |  |
-| 8 | bomVersion | Int32 | Yes | BOM version | `NumberInt(1)` |  |
-| 9 | bomType | String | Yes | BOM type | `"Production"` | Production; Engineering; Rework |
-| 10 | baseQuantity | Decimal128 | Yes | Base quantity | `NumberDecimal("1")` |  |
-| 11 | baseUnitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id: base unit of measure | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 12 | baseUnitOfMeasureName | String | Yes | Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 13 | effectiveFrom | Date | Yes | Effective from (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
-| 14 | effectiveTo | Date | No (null allowed) | Effective to (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2027-03-31T18:29:59.000+0000")` |  |
-| 15 | engineeringChangeId | String | No (null allowed) | Reference to u_mes_prod_engineeringChange._id | `"1076000000000010"` | Reference: u_mes_prod_engineeringChange._id |
-| 16 | engineeringChangeName | String | No (null allowed) | Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title | `"Work instruction pictures updated for RH variant"` |  |
-| 17 | approvedById | String | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
-| 18 | approvedBy | String | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 19 | approvedAt | Date | No (null allowed) | Date and time when the record was approved | `null` |  |
-| 20 | erpBomNo | String | Yes | ERP BOM number | `"00051101-01"` |  |
-| 21 | status | String | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
-| 22 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1047000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"BOM-5110-10-0100-01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
+| 6 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 7 | itemRevision | String | - | Yes | Item revision | `"D"` |  |
+| 8 | bomVersion | Int32 | - | Yes | BOM version | `NumberInt(1)` |  |
+| 9 | bomType | String | - | Yes | BOM type | `"Production"` | Production; Engineering; Rework |
+| 10 | baseQuantity | Decimal128 | - | Yes | Base quantity | `NumberDecimal("1")` |  |
+| 11 | baseUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: base unit of measure | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 12 | baseUnitOfMeasureName | String | - | Yes | Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 13 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 14 | effectiveTo | Date | Date | No (null allowed) | Effective to. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
+| 15 | engineeringChangeId | String | - | No (null allowed) | Reference to u_mes_prod_engineeringChange._id | `"1076000000000010"` | Reference: u_mes_prod_engineeringChange._id |
+| 16 | engineeringChangeName | String | - | No (null allowed) | Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title | `"Work instruction pictures updated for RH variant"` |  |
+| 17 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
+| 18 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 19 | approvedAt | Date | Datetime | No (null allowed) | Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 20 | erpBomNo | String | - | Yes | ERP BOM number | `"00051101-01"` |  |
+| 21 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 22 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

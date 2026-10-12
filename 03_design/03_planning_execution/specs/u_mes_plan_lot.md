@@ -26,57 +26,57 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1096000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"L260915-GDC-014"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | itemId | String | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
-| 6 | itemName | String | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 7 | lotType | String | Yes | Lot type | `"Casting Lot"` | Supplier Lot; Melt Lot; Casting Lot; Heat Treatment Charge; Machining Lot; Anodising Load; Finished Goods Lot |
-| 8 | supplierId | String | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
-| 9 | supplierName | String | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
-| 10 | supplierLotNo | String | No (null allowed) | Supplier lot number | `null` |  |
-| 11 | heatNo | String | No (null allowed) | Heat number of the alloy melt | `"H26-3418"` |  |
-| 12 | goodsReceiptId | String | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `null` | Reference: u_mes_matl_goodsReceipt._id |
-| 13 | goodsReceiptName | String | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `null` |  |
-| 14 | productionOrderId | String | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
-| 15 | productionOrderName | String | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
-| 16 | manufacturedAt | Date | Yes | Date and time when the record was manufactured | `ISODate("2026-04-01T18:30:00.000+0000")` |  |
-| 17 | receivedAt | Date | No (null allowed) | Date and time when the record was received | `ISODate("2026-09-17T01:21:40.000+0000")` |  |
-| 18 | expiryAt | Date | No (null allowed) | Expiry date and time | `ISODate("2027-03-31T18:29:59.000+0000")` |  |
-| 19 | initialQuantity | Decimal128 | Yes | Initial quantity | `NumberDecimal("240")` |  |
-| 20 | currentQuantity | Decimal128 | Yes | Current quantity | `NumberDecimal("0")` |  |
-| 21 | unitOfMeasureId | String | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 22 | unitOfMeasureName | String | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 23 | qualityStatus | String | Yes | Quality status | `"Released"` | Released; Under Inspection; On Hold; Rejected |
-| 24 | onHold | Boolean | Yes | True when: on hold | `false` |  |
-| 25 | qualityHoldId | String | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `null` | Reference: u_mes_qual_qualityHold._id |
-| 26 | qualityHoldName | String | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `null` |  |
-| 27 | storageLocationId | String | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
-| 28 | storageLocationName | String | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
-| 29 | attributesDieNo | String | No (null allowed) | Attributes die number | `"DIE-5110-LH-02"` |  |
-| 30 | attributesFurnaceChargeNo | String | No (null allowed) | Attributes furnace charge number | `null` |  |
-| 31 | attributesHardnessHbw | Decimal128 | No (null allowed) | Attributes hardness (Brinell HBW) | `null` |  |
-| 32 | attributesAnodisingLoadNo | String | No (null allowed) | Attributes anodising load number | `null` |  |
-| 33 | attributesCoatingThicknessUm | Decimal128 | No (null allowed) | Attributes coating thickness (micrometres) | `null` |  |
-| 34 | attributesCureDate | Date | No (null allowed) | Attributes cure date (calendar date, stored as the start of that day in IST converted to UTC) | `ISODate("2026-09-16T18:30:00.000+0000")` |  |
-| 35 | certificateControlledDocumentId | String | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: certificate controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |
-| 36 | certificateControlledDocumentName | String | No (null allowed) | Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-20-0105 revision B, Caliper Body Casting LH"` |  |
-| 37 | currentOperationId | String | No (null allowed) | Reference to u_mes_prod_operation._id: current operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 38 | currentOperationName | String | No (null allowed) | Display value of currentOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 39 | closedAt | Date | No (null allowed) | Date and time when the record was closed | `null` |  |
-| 40 | status | String | Yes | Primary lifecycle state of the document | `"Consumed"` | Created; Available; In Process; On Hold; Consumed; Closed; Rejected |
-| 41 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 42 | createdAt | Date | Yes | Date and time the document was created | `ISODate("2026-09-16T18:30:00.000+0000")` |  |
-| 43 | createdById | String | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 44 | createdBy | String | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 45 | updatedAt | Date | Yes | Date and time of the most recent update | `ISODate("2026-09-17T01:21:40.000+0000")` |  |
-| 46 | updatedById | String | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 47 | updatedBy | String | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1096000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"L260915-GDC-014"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 6 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 7 | lotType | String | - | Yes | Lot type | `"Casting Lot"` | Supplier Lot; Melt Lot; Casting Lot; Heat Treatment Charge; Machining Lot; Anodising Load; Finished Goods Lot |
+| 8 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
+| 9 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
+| 10 | supplierLotNo | String | - | No (null allowed) | Supplier lot number | `null` |  |
+| 11 | heatNo | String | - | No (null allowed) | Heat number of the alloy melt | `"H26-3418"` |  |
+| 12 | goodsReceiptId | String | - | No (null allowed) | Reference to u_mes_matl_goodsReceipt._id | `null` | Reference: u_mes_matl_goodsReceipt._id |
+| 13 | goodsReceiptName | String | - | No (null allowed) | Display value of goodsReceiptId, copied from u_mes_matl_goodsReceipt.recordNo | `null` |  |
+| 14 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
+| 15 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
+| 16 | manufacturedAt | Date | Datetime | Yes | Date and time when the record was manufactured. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 17 | receivedAt | Date | Datetime | No (null allowed) | Date and time when the record was received. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 18 | expiryAt | Date | Date | No (null allowed) | Expiry at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
+| 19 | initialQuantity | Decimal128 | - | Yes | Initial quantity | `NumberDecimal("240")` |  |
+| 20 | currentQuantity | Decimal128 | - | Yes | Current quantity | `NumberDecimal("0")` |  |
+| 21 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 22 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 23 | qualityStatus | String | - | Yes | Quality status | `"Released"` | Released; Under Inspection; On Hold; Rejected |
+| 24 | onHold | Boolean | - | Yes | True when: on hold | `false` |  |
+| 25 | qualityHoldId | String | - | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `null` | Reference: u_mes_qual_qualityHold._id |
+| 26 | qualityHoldName | String | - | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `null` |  |
+| 27 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
+| 28 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
+| 29 | attributesDieNo | String | - | No (null allowed) | Attributes die number | `"DIE-5110-LH-02"` |  |
+| 30 | attributesFurnaceChargeNo | String | - | No (null allowed) | Attributes furnace charge number | `null` |  |
+| 31 | attributesHardnessHbw | Decimal128 | - | No (null allowed) | Attributes hardness (Brinell HBW) | `null` |  |
+| 32 | attributesAnodisingLoadNo | String | - | No (null allowed) | Attributes anodising load number | `null` |  |
+| 33 | attributesCoatingThicknessUm | Decimal128 | - | No (null allowed) | Attributes coating thickness (micrometres) | `null` |  |
+| 34 | attributesCureDate | Date | Date | No (null allowed) | Attributes cure date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
+| 35 | certificateControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: certificate controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |
+| 36 | certificateControlledDocumentName | String | - | No (null allowed) | Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-20-0105 revision B, Caliper Body Casting LH"` |  |
+| 37 | currentOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: current operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 38 | currentOperationName | String | - | No (null allowed) | Display value of currentOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 39 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 40 | status | String | - | Yes | Primary lifecycle state of the document | `"Consumed"` | Created; Available; In Process; On Hold; Consumed; Closed; Rejected |
+| 41 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 42 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
+| 43 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 44 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 45 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 46 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 47 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

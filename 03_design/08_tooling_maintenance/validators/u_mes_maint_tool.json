@@ -172,15 +172,15 @@
             "date",
             "null"
           ],
-          "description": "Last maintained date and time"
+          "description": "Last maintained date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "nextMaintenanceDueAt": {
           "bsonType": "date",
-          "description": "Next maintenance due date and time"
+          "description": "Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix"
         },
         "purchasedAt": {
           "bsonType": "date",
-          "description": "Date and time when the record was purchased"
+          "description": "Date and time when the record was purchased. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "costInr": {
           "bsonType": "decimal",

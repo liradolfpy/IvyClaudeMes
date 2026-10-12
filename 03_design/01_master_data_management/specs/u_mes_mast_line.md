@@ -26,32 +26,32 @@ Repeating data of this entity is held in separate collections, one document per 
 
 ## Field dictionary
 
-Every key is present in every document. "Required" means the value may not be null.
+Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
 
-| # | Key | BSON type | Required | Description | Example (shell) | Allowed values / reference |
-|---|---|---|---|---|---|---|
-| 1 | _id | String | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1006000000000001"` |  |
-| 2 | recordNo | String | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-01"` |  |
-| 3 | siteId | String | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | Yes | Name of the line; used as its display value in other collections | `"Gravity Die Casting Line 1"` |  |
-| 6 | areaId | String | Yes | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
-| 7 | areaName | String | Yes | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
-| 8 | lineType | String | Yes | Line type | `"Casting"` | Casting; Heat Treatment; Machining; Surface Treatment; Assembly; Inspection; Packing |
-| 9 | itemFamilyId | String | Yes | Reference to u_mes_prod_itemFamily._id | `"1271000000000004"` | Reference: u_mes_prod_itemFamily._id |
-| 10 | itemFamilyName | String | Yes | Display value of itemFamilyId, copied from u_mes_prod_itemFamily.name | `"Caliper Body Casting"` |  |
-| 11 | workCalendarId | String | No (null allowed) | Reference to u_mes_mast_workCalendar._id | `"1018000000000002"` | Reference: u_mes_mast_workCalendar._id |
-| 12 | workCalendarName | String | No (null allowed) | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Foundry Continuous Calendar 2026"` |  |
-| 13 | taktTimeSec | Decimal128 | Yes | Takt time (seconds) | `NumberDecimal("36.0")` |  |
-| 14 | manningStandard | Int32 | Yes | Standard number of operators for the line | `NumberInt(6)` |  |
-| 15 | bottleneckWorkCenterId | String | No (null allowed) | Reference to u_mes_mast_workCenter._id: bottleneck work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 16 | bottleneckWorkCenterName | String | No (null allowed) | Display value of bottleneckWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 17 | oeeTarget | Decimal128 | Yes | Target OEE in percent | `NumberDecimal("85.0")` |  |
-| 18 | costCenterId | String | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"1259000000000001"` | Reference: u_mes_mast_costCenter._id |
-| 19 | costCenterName | String | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
-| 20 | sequenceNo | Int32 | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 21 | status | String | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 22 | schemaVersion | Int32 | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
+|---|---|---|---|---|---|---|---|
+| 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1006000000000001"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-01"` |  |
+| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 5 | name | String | - | Yes | Name of the line; used as its display value in other collections | `"Gravity Die Casting Line 1"` |  |
+| 6 | areaId | String | - | Yes | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
+| 7 | areaName | String | - | Yes | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
+| 8 | lineType | String | - | Yes | Line type | `"Casting"` | Casting; Heat Treatment; Machining; Surface Treatment; Assembly; Inspection; Packing |
+| 9 | itemFamilyId | String | - | Yes | Reference to u_mes_prod_itemFamily._id | `"1271000000000004"` | Reference: u_mes_prod_itemFamily._id |
+| 10 | itemFamilyName | String | - | Yes | Display value of itemFamilyId, copied from u_mes_prod_itemFamily.name | `"Caliper Body Casting"` |  |
+| 11 | workCalendarId | String | - | No (null allowed) | Reference to u_mes_mast_workCalendar._id | `"1018000000000002"` | Reference: u_mes_mast_workCalendar._id |
+| 12 | workCalendarName | String | - | No (null allowed) | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Foundry Continuous Calendar 2026"` |  |
+| 13 | taktTimeSec | Decimal128 | - | Yes | Takt time (seconds) | `NumberDecimal("36.0")` |  |
+| 14 | manningStandard | Int32 | - | Yes | Standard number of operators for the line | `NumberInt(6)` |  |
+| 15 | bottleneckWorkCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id: bottleneck work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 16 | bottleneckWorkCenterName | String | - | No (null allowed) | Display value of bottleneckWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 17 | oeeTarget | Decimal128 | - | Yes | Target OEE in percent | `NumberDecimal("85.0")` |  |
+| 18 | costCenterId | String | - | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"1259000000000001"` | Reference: u_mes_mast_costCenter._id |
+| 19 | costCenterName | String | - | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
+| 20 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 21 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 22 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
