@@ -48,7 +48,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_perf_reasonCode, u_mes_perf_oeeRecordLoss.
+u_mes_perf_reasonCode, u_mes_perf_oeeRecordLoss, u_mes_perf_lossSummary.
 
 ## Files
 

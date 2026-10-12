@@ -46,7 +46,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_prod_item.
+u_mes_prod_item, u_mes_matl_storageLocationAllowedItem.
 
 ## Files
 

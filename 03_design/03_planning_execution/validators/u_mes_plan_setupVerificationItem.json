@@ -1,0 +1,174 @@
+{
+  "collMod": "u_mes_plan_setupVerificationItem",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_plan_setupVerificationItem",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "setupVerificationId",
+        "setupVerificationName",
+        "itemNo",
+        "checkType",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "scannedCode",
+        "expectedValue",
+        "actualValue",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "passed",
+        "checkedAt",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "setupVerificationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_setupVerification._id: the parent document this one belongs to"
+        },
+        "setupVerificationName": {
+          "bsonType": "string",
+          "description": "Display value of setupVerificationId, copied from u_mes_plan_setupVerification.recordNo"
+        },
+        "itemNo": {
+          "bsonType": "int",
+          "description": "Check number within the verification"
+        },
+        "checkType": {
+          "bsonType": "string",
+          "description": "What is checked",
+          "enum": [
+            "Variant",
+            "Fixture",
+            "Tool",
+            "Program",
+            "Parameter",
+            "Component",
+            "Gauge"
+          ]
+        },
+        "relatedCollectionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of the related document"
+        },
+        "scannedCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Code scanned at the station"
+        },
+        "expectedValue": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Expected numeric value for parameter checks"
+        },
+        "actualValue": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Actual numeric value"
+        },
+        "unitOfMeasureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "passed": {
+          "bsonType": "bool",
+          "description": "Check result"
+        },
+        "checkedAt": {
+          "bsonType": "date",
+          "description": "Time of the check"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

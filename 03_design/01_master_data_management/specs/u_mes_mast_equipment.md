@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 41 (35 required, 6 may be null) |
+| Keys | 47 (36 required, 11 may be null) |
 | Estimated volume per year | 200-1,000 per site |
 | Storage | standard |
 
@@ -68,8 +68,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 37 | nextMaintenanceDueAt | Date | Date | Yes | Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
 | 38 | calibrationRequired | Boolean | - | Yes | True when: calibration required | `true` |  |
 | 39 | safetyCategory | String | - | Yes | Performance level of the safety function (ISO 13849-1) | `"PL d"` | PL a; PL b; PL c; PL d; PL e |
-| 40 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
-| 41 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 40 | isProductionReady | Boolean | - | Yes | True when the equipment may receive work: not down, not in maintenance, PM and calibration not overdue | `true` |  |
+| 41 | readinessReasonText | String | - | No (null allowed) | Why the equipment is not production-ready; null when it is ready | `null` |  |
+| 42 | healthScore | Decimal128 | - | No (null allowed) | Rule-based health score from 0 (failed) to 100 (as new) | `NumberDecimal("84")` |  |
+| 43 | healthScoreAt | Date | Datetime | No (null allowed) | Time the health score was last calculated | `ISODate("2026-09-24T23:00:00.000+0000")` |  |
+| 44 | acquisitionCostInr | Decimal128 | - | No (null allowed) | Purchase and installation cost (Indian rupees) | `NumberDecimal("14500000.00")` |  |
+| 45 | plannedReplacementDate | Date | Date | No (null allowed) | Planned replacement date from the lifecycle review | `ISODate("2027-11-30T00:00:00.000+0000")` |  |
+| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
+| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -89,7 +95,7 @@ Active, Under Maintenance, Decommissioned. Initial state: Active. The values are
 
 ## Referenced by
 
-u_mes_mast_workCenterEquipment, u_mes_mast_equipment, u_mes_mast_equipmentIotDevice, u_mes_prod_billOfProcessStepEquipment, u_mes_prod_recipe, u_mes_plan_operationExecution, u_mes_plan_changeover, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecordOperation, u_mes_qual_checkSheet, u_mes_qual_checkSheetResult, u_mes_qual_spcChart, u_mes_perf_equipmentState, u_mes_perf_downtimeEvent, u_mes_perf_oeeRecord, u_mes_perf_processTag, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_maint_maintenancePlan, u_mes_maint_maintenanceWorkOrder, u_mes_maint_sparePartUsedOnEquipment, u_mes_maint_tool, u_mes_maint_toolLifeRecord, u_mes_syst_iotDevice, u_mes_syst_businessEvent, u_mes_perf_energyReading, u_mes_ehs_safetyIncident.
+u_mes_mast_workCenterEquipment, u_mes_mast_equipment, u_mes_mast_equipmentIotDevice, u_mes_prod_billOfProcessStepEquipment, u_mes_prod_recipe, u_mes_plan_operationExecution, u_mes_plan_changeover, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecordOperation, u_mes_qual_checkSheet, u_mes_qual_checkSheetResult, u_mes_qual_spcChart, u_mes_qual_gauge, u_mes_perf_equipmentState, u_mes_perf_downtimeEvent, u_mes_perf_oeeRecord, u_mes_perf_processTag, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_maint_maintenancePlan, u_mes_maint_maintenanceWorkOrder, u_mes_maint_sparePartUsedOnEquipment, u_mes_maint_tool, u_mes_maint_toolLifeRecord, u_mes_syst_iotDevice, u_mes_syst_businessEvent, u_mes_perf_energyReading, u_mes_plan_andonEvent, u_mes_ehs_safetyIncident, u_mes_plan_operatorSession, u_mes_plan_interlockEvent, u_mes_plan_recipeDownload, u_mes_plan_setupVerification, u_mes_qual_measurementCurve, u_mes_qual_defectRecord, u_mes_maint_sparePartTransaction, u_mes_maint_reliabilitySummary, u_mes_maint_equipmentLifecycleEvent, u_mes_syst_alertRule, u_mes_syst_analyticsModel.
 
 ## Files
 

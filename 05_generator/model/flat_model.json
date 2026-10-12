@@ -1834,6 +1834,38 @@
      "ref": null
     },
     {
+     "key": "isProductionReady",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "readinessReasonText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "healthScore",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "healthScoreAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "acquisitionCostInr",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "plannedReplacementDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -2800,6 +2832,28 @@
      "ref": null
     },
     {
+     "key": "assignedFromAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "assignedToAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "assignmentSource",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "suggestionScore",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
      "key": "schemaVersion",
      "type": "Int32",
      "ref": null
@@ -3681,6 +3735,21 @@
      "type": "Date",
      "ref": null,
      "dateKind": "Date"
+    },
+    {
+     "key": "trainedDocumentRevision",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requalificationRequired",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "revocationSource",
+     "type": "String",
+     "ref": null
     },
     {
      "key": "status",
@@ -4708,6 +4777,21 @@
     {
      "key": "defaultStorageLocationName",
      "type": "String",
+     "ref": null
+    },
+    {
+     "key": "fefoRequired",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "exposureControlled",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "openLifeMinutes",
+     "type": "Int32",
      "ref": null
     },
     {
@@ -6803,6 +6887,26 @@
      "ref": null
     },
     {
+     "key": "reacknowledgeOnRevision",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "generationSource",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sourceBillOfProcessId",
+     "type": "String",
+     "ref": "billOfProcess"
+    },
+    {
+     "key": "sourceBillOfProcessName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -6912,6 +7016,21 @@
     {
      "key": "standardTimeSec",
      "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "arContentControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "arContentControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "arAnchorRef",
+     "type": "String",
      "ref": null
     },
     {
@@ -7455,6 +7574,63 @@
      "type": "Date",
      "ref": null,
      "dateKind": "Datetime"
+    },
+    {
+     "key": "previousVersionRecipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "previousVersionRecipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "changeReasonText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "releasedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "isGoldenRecipe",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "goldenDesignatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "goldenDesignatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "goldenDesignatedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "origin",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "analyticsModelId",
+     "type": "String",
+     "ref": "analyticsModel"
+    },
+    {
+     "key": "analyticsModelName",
+     "type": "String",
+     "ref": null
     },
     {
      "key": "status",
@@ -8772,6 +8948,36 @@
      "ref": null
     },
     {
+     "key": "onHold",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "qualityHoldId",
+     "type": "String",
+     "ref": "qualityHold"
+    },
+    {
+     "key": "qualityHoldName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "holdReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "holdReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "genealogyComplete",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -9870,6 +10076,91 @@
      "ref": null
     },
     {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeChecksum",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "taktTimeSec",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "taktBreached",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "captureMethod",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "startScanCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operatorSessionId",
+     "type": "String",
+     "ref": "operatorSession"
+    },
+    {
+     "key": "operatorSessionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "checksVariantVerified",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "checksDocumentAcknowledged",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "checksEquipmentReady",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "checksMaterialReleased",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "checksSetupVerified",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "checksEnvironmentOk",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "interlockEventCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -10289,6 +10580,21 @@
     },
     {
      "key": "photoControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "overrideReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "overrideReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "arSessionRef",
      "type": "String",
      "ref": null
     },
@@ -11640,6 +11946,36 @@
     },
     {
      "key": "source",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationExecutionId",
+     "type": "String",
+     "ref": "operationExecution"
+    },
+    {
+     "key": "operationExecutionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operatorSessionId",
+     "type": "String",
+     "ref": "operatorSession"
+    },
+    {
+     "key": "operatorSessionName",
      "type": "String",
      "ref": null
     },
@@ -14200,6 +14536,37 @@
      "ref": null
     },
     {
+     "key": "itemRevision",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "scannedItemRevision",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "scannedCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isMandatory",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "verifiedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "verificationResult",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "schemaVersion",
      "type": "Int32",
      "ref": null
@@ -14413,6 +14780,16 @@
     },
     {
      "key": "lotName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "replenishmentRuleId",
+     "type": "String",
+     "ref": "replenishmentRule"
+    },
+    {
+     "key": "replenishmentRuleName",
      "type": "String",
      "ref": null
     },
@@ -16102,6 +16479,21 @@
      "ref": null
     },
     {
+     "key": "markingRecipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "markingRecipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "markingRecipeVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -16317,6 +16709,26 @@
     },
     {
      "key": "removedReason",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "childSerialNumberId",
+     "type": "String",
+     "ref": "serialNumber"
+    },
+    {
+     "key": "childSerialNumberName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "childWipUnitId",
+     "type": "String",
+     "ref": "wipUnit"
+    },
+    {
+     "key": "childWipUnitName",
      "type": "String",
      "ref": null
     },
@@ -16783,6 +17195,16 @@
      "ref": null
     },
     {
+     "key": "genealogyComplete",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "missingComponentCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -17053,6 +17475,26 @@
     },
     {
      "key": "result",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "recipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeChecksum",
      "type": "String",
      "ref": null
     },
@@ -17360,6 +17802,11 @@
     {
      "key": "source",
      "type": "String",
+     "ref": null
+    },
+    {
+     "key": "positionCount",
+     "type": "Int32",
      "ref": null
     },
     {
@@ -17875,6 +18322,11 @@
      "type": "Date",
      "ref": null,
      "dateKind": "Datetime"
+    },
+    {
+     "key": "itemRevision",
+     "type": "String",
+     "ref": null
     },
     {
      "key": "status",
@@ -19003,6 +19455,61 @@
      "ref": null
     },
     {
+     "key": "positionNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "positionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "imageControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "imageControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "measurementCurveId",
+     "type": "String",
+     "ref": "measurementCurve"
+    },
+    {
+     "key": "measurementCurveName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "analyticsModelId",
+     "type": "String",
+     "ref": "analyticsModel"
+    },
+    {
+     "key": "analyticsModelName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelConfidence",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -19531,6 +20038,31 @@
     {
      "key": "excludedFromLimits",
      "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "reactionType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "qualityHoldId",
+     "type": "String",
+     "ref": "qualityHold"
+    },
+    {
+     "key": "qualityHoldName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "notificationId",
+     "type": "String",
+     "ref": "notification"
+    },
+    {
+     "key": "notificationName",
+     "type": "String",
      "ref": null
     },
     {
@@ -21234,6 +21766,32 @@
      "ref": null
     },
     {
+     "key": "reasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "reasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "releasedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "releasedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "releasedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -21708,6 +22266,26 @@
      "ref": null
     },
     {
+     "key": "serialNumberId",
+     "type": "String",
+     "ref": "serialNumber"
+    },
+    {
+     "key": "serialNumberName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "dispositionTypeId",
+     "type": "String",
+     "ref": "dispositionType"
+    },
+    {
+     "key": "dispositionTypeName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -21896,6 +22474,26 @@
     {
      "key": "customerNotified",
      "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "releaseReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "releaseReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "releaseElectronicSignatureId",
+     "type": "String",
+     "ref": "electronicSignature"
+    },
+    {
+     "key": "releaseElectronicSignatureName",
+     "type": "String",
      "ref": null
     },
     {
@@ -24259,6 +24857,16 @@
      "ref": null
     },
     {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -25202,6 +25810,32 @@
      "type": "Date",
      "ref": null,
      "dateKind": "Date"
+    },
+    {
+     "key": "auditScheduleId",
+     "type": "String",
+     "ref": "auditSchedule"
+    },
+    {
+     "key": "auditScheduleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "dueDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "isMissed",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "escalationLevel",
+     "type": "Int32",
+     "ref": null
     },
     {
      "key": "status",
@@ -26668,6 +27302,41 @@
      "ref": null
     },
     {
+     "key": "captureSource",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentStateId",
+     "type": "String",
+     "ref": "equipmentState"
+    },
+    {
+     "key": "equipmentStateName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "capaId",
+     "type": "String",
+     "ref": "capa"
+    },
+    {
+     "key": "capaName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -27520,6 +28189,36 @@
      "ref": null
     },
     {
+     "key": "areaId",
+     "type": "String",
+     "ref": "area"
+    },
+    {
+     "key": "areaName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -27631,6 +28330,32 @@
      "key": "inLimits",
      "type": "Boolean",
      "ref": null
+    },
+    {
+     "key": "areaId",
+     "type": "String",
+     "ref": "area"
+    },
+    {
+     "key": "areaName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
     },
     {
      "key": "schemaVersion",
@@ -27831,6 +28556,98 @@
     {
      "key": "actionTaken",
      "type": "String",
+     "ref": null
+    },
+    {
+     "key": "alarmDefinitionId",
+     "type": "String",
+     "ref": "alarmDefinition"
+    },
+    {
+     "key": "alarmDefinitionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "wipUnitId",
+     "type": "String",
+     "ref": "wipUnit"
+    },
+    {
+     "key": "wipUnitName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "blocksRestart",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "restartAuthorizedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "restartAuthorizedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "restartAuthorizedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "closureReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "closureReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "escalationLevel",
+     "type": "Int32",
      "ref": null
     },
     {
@@ -28087,6 +28904,31 @@
      "ref": null
     },
     {
+     "key": "curveEnvelopeId",
+     "type": "String",
+     "ref": "curveEnvelope"
+    },
+    {
+     "key": "curveEnvelopeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "measurementCurveId",
+     "type": "String",
+     "ref": "measurementCurve"
+    },
+    {
+     "key": "measurementCurveName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "envelopeResult",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -28284,6 +29126,16 @@
      "type": "Date",
      "ref": null,
      "dateKind": "Datetime"
+    },
+    {
+     "key": "measurementCurveId",
+     "type": "String",
+     "ref": "measurementCurve"
+    },
+    {
+     "key": "measurementCurveName",
+     "type": "String",
+     "ref": null
     },
     {
      "key": "status",
@@ -29028,6 +29880,74 @@
      "key": "followUpRequired",
      "type": "Boolean",
      "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "rootCauseCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "rootCauseCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "closureApprovedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "closureApprovedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "closureApprovedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "andonEventId",
+     "type": "String",
+     "ref": "andonEvent"
+    },
+    {
+     "key": "andonEventName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "priorityScore",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "schedulingSource",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "slaResponseDueAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "slaRepairDueAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
     },
     {
      "key": "status",
@@ -29784,6 +30704,33 @@
      "ref": null
     },
     {
+     "key": "blockAtLifeLimit",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "lastCertifiedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "certificationDueDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "certificateControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "certificateControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -30003,6 +30950,36 @@
     },
     {
      "key": "remarks",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationExecutionId",
+     "type": "String",
+     "ref": "operationExecution"
+    },
+    {
+     "key": "operationExecutionName",
      "type": "String",
      "ref": null
     },
@@ -31966,6 +32943,58 @@
      "dateKind": "Datetime"
     },
     {
+     "key": "alertRuleId",
+     "type": "String",
+     "ref": "alertRule"
+    },
+    {
+     "key": "alertRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "responseDueAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "resolvedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "resolvedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "resolvedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "interlockEventId",
+     "type": "String",
+     "ref": "interlockEvent"
+    },
+    {
+     "key": "interlockEventName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -33065,6 +34094,41 @@
     },
     {
      "key": "resolutionText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "severityClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "maintenanceWorkOrderId",
+     "type": "String",
+     "ref": "maintenanceWorkOrder"
+    },
+    {
+     "key": "maintenanceWorkOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
      "type": "String",
      "ref": null
     },
@@ -36346,6 +37410,21 @@
      "ref": null
     },
     {
+     "key": "targetRepairSec",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -36914,6 +37993,6535 @@
    "idPattern": "16-digit numeric string",
    "recordNoMeaning": "definition code",
    "purpose": "Status values and allowed transitions per collection (status mapping)"
+  },
+  {
+   "collection": "u_mes_mast_roleRequiredSkill",
+   "module": "mast",
+   "moduleName": "Master Data Management",
+   "entity": "roleRequiredSkill",
+   "sourceConcept": "roles",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_mast_role",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "roleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "roleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "requiredSkillId",
+     "type": "String",
+     "ref": "skill"
+    },
+    {
+     "key": "requiredSkillName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "minimumLevel",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RS<nnn>",
+   "purpose": "Links one role to one required skill (one document per link)"
+  },
+  {
+   "collection": "u_mes_prod_recipeProductVariant",
+   "module": "prod",
+   "moduleName": "Product Definition",
+   "entity": "recipeProductVariant",
+   "sourceConcept": "recipes",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_prod_recipe",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "recipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one recipe to one product variant (one document per link)"
+  },
+  {
+   "collection": "u_mes_prod_recipeControlledDocument",
+   "module": "prod",
+   "moduleName": "Product Definition",
+   "entity": "recipeControlledDocument",
+   "sourceConcept": "recipes",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_prod_recipe",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "recipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "controlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "controlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "fileRole",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CD<nnn>",
+   "purpose": "Links one recipe to one controlled document (one document per link)"
+  },
+  {
+   "collection": "u_mes_prod_workInstructionWorkCenter",
+   "module": "prod",
+   "moduleName": "Product Definition",
+   "entity": "workInstructionWorkCenter",
+   "sourceConcept": "work_instructions",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_prod_workInstruction",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workInstructionId",
+     "type": "String",
+     "ref": "workInstruction"
+    },
+    {
+     "key": "workInstructionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WC<nnn>",
+   "purpose": "Links one workInstruction to one work center (one document per link)"
+  },
+  {
+   "collection": "u_mes_prod_workInstructionProductVariant",
+   "module": "prod",
+   "moduleName": "Product Definition",
+   "entity": "workInstructionProductVariant",
+   "sourceConcept": "work_instructions",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_prod_workInstruction",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workInstructionId",
+     "type": "String",
+     "ref": "workInstruction"
+    },
+    {
+     "key": "workInstructionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one workInstruction to one product variant (one document per link)"
+  },
+  {
+   "collection": "u_mes_plan_operatorSession",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
+   "entity": "operatorSession",
+   "sourceConcept": "ext01:operatorSession",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Active",
+    "Closed",
+    "Rejected"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "userId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "userName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "productionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "productionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "authenticationMethod",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "loginAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "logoutAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "logoutReason",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "skillVerified",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "trainingVerified",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "interlockEventId",
+     "type": "String",
+     "ref": "interlockEvent"
+    },
+    {
+     "key": "interlockEventName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "clientWorkstation",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "OSN-<yyyymmdd>-<nnnnn>, e.g. OSN-20260916-00042",
+   "purpose": "One login-to-logout session of an operator at a station, with the authentication method and the checks done at login."
+  },
+  {
+   "collection": "u_mes_plan_documentAcknowledgement",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
+   "entity": "documentAcknowledgement",
+   "sourceConcept": "ext01:documentAcknowledgement",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Acknowledged",
+    "Superseded"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "documentVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "userId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "userName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "productionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operatorSessionId",
+     "type": "String",
+     "ref": "operatorSession"
+    },
+    {
+     "key": "operatorSessionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "acknowledgementType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "method",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "electronicSignatureId",
+     "type": "String",
+     "ref": "electronicSignature"
+    },
+    {
+     "key": "electronicSignatureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "acknowledgedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ACK-<yyyymmdd>-<nnnnn>",
+   "purpose": "Operator confirmation that a specific revision of a work instruction, recipe or controlled document was read at a station."
+  },
+  {
+   "collection": "u_mes_plan_interlockEvent",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
+   "entity": "interlockEvent",
+   "sourceConcept": "ext01:interlockEvent",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Blocked",
+    "Overridden",
+    "Cleared",
+    "Cancelled"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "interlockRuleId",
+     "type": "String",
+     "ref": "interlockRule"
+    },
+    {
+     "key": "interlockRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "ruleType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "productionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "wipUnitId",
+     "type": "String",
+     "ref": "wipUnit"
+    },
+    {
+     "key": "wipUnitName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lotId",
+     "type": "String",
+     "ref": "lot"
+    },
+    {
+     "key": "lotName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationExecutionId",
+     "type": "String",
+     "ref": "operationExecution"
+    },
+    {
+     "key": "operationExecutionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "foundValueText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "expectedValueText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "messageText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "operatorUserId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "operatorUserName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "raisedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "overrideReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "overrideReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "overrideComment",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "overrideById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "overrideBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "overrideAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "electronicSignatureId",
+     "type": "String",
+     "ref": "electronicSignature"
+    },
+    {
+     "key": "electronicSignatureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "clearedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "notificationId",
+     "type": "String",
+     "ref": "notification"
+    },
+    {
+     "key": "notificationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ILK-<yyyymmdd>-<nnnnn>",
+   "purpose": "Every time an interlock rule blocks a transaction, is overridden or is cleared: what was checked, expected and found, and who authorised the override."
+  },
+  {
+   "collection": "u_mes_plan_recipeDownload",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
+   "entity": "recipeDownload",
+   "sourceConcept": "ext01:recipeDownload",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Requested",
+    "Verified",
+    "Rejected"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "recipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "productionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "trigger",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "checksumExpected",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "checksumReported",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "verificationResult",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "downloadedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "verifiedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "requestedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "requestedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "interlockEventId",
+     "type": "String",
+     "ref": "interlockEvent"
+    },
+    {
+     "key": "interlockEventName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RDL-<yyyymmdd>-<nnnnn>",
+   "purpose": "Each download or selection of a program / recipe on a machine with the checksum verification result."
+  },
+  {
+   "collection": "u_mes_plan_setupVerification",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
+   "entity": "setupVerification",
+   "sourceConcept": "ext01:setupVerification",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "In Progress",
+    "Passed",
+    "Failed",
+    "Overridden"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "productionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "changeoverId",
+     "type": "String",
+     "ref": "changeover"
+    },
+    {
+     "key": "changeoverName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "billOfProcessId",
+     "type": "String",
+     "ref": "billOfProcess"
+    },
+    {
+     "key": "billOfProcessName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "trigger",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "failedCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "verifiedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "verifiedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "verifiedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "interlockEventId",
+     "type": "String",
+     "ref": "interlockEvent"
+    },
+    {
+     "key": "interlockEventName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SUV-<yyyymmdd>-<nnnnn>",
+   "purpose": "Pre-start verification of the set-up of a station or machine against the order, variant and bill of process."
+  },
+  {
+   "collection": "u_mes_plan_setupVerificationItem",
+   "module": "plan",
+   "moduleName": "Planning and Execution",
+   "entity": "setupVerificationItem",
+   "sourceConcept": "ext01:setupVerification",
+   "kind": "child",
+   "dataClass": "transaction",
+   "parent": "u_mes_plan_setupVerification",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "setupVerificationId",
+     "type": "String",
+     "ref": "setupVerification"
+    },
+    {
+     "key": "setupVerificationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "checkType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "scannedCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "expectedValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "actualValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "passed",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "checkedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -I<nnn>",
+   "purpose": "One document per item of a setupVerification"
+  },
+  {
+   "collection": "u_mes_matl_exposureTimer",
+   "module": "matl",
+   "moduleName": "Material Management",
+   "entity": "exposureTimer",
+   "sourceConcept": "ext01:exposureTimer",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Running",
+    "Paused",
+    "Expired",
+    "Reset",
+    "Consumed"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lotId",
+     "type": "String",
+     "ref": "lot"
+    },
+    {
+     "key": "lotName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "containerId",
+     "type": "String",
+     "ref": "container"
+    },
+    {
+     "key": "containerName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "timerType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "limitMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "startedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "pausedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "accumulatedMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "expiresAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "storageLocationId",
+     "type": "String",
+     "ref": "storageLocation"
+    },
+    {
+     "key": "storageLocationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resetReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "resetReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resetById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "resetBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resetAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "EXT-<yyyymmdd>-<nnnnn>",
+   "purpose": "Floor-life, pot-life or open-time clock for a lot or container of an exposure-controlled item."
+  },
+  {
+   "collection": "u_mes_matl_replenishmentRule",
+   "module": "matl",
+   "moduleName": "Material Management",
+   "entity": "replenishmentRule",
+   "sourceConcept": "ext01:replenishmentRule",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "toLocationId",
+     "type": "String",
+     "ref": "storageLocation"
+    },
+    {
+     "key": "toLocationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "fromLocationId",
+     "type": "String",
+     "ref": "storageLocation"
+    },
+    {
+     "key": "fromLocationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "triggerType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "minQuantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "maxQuantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "reorderPointQuantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "kanbanQuantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "kanbanCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "containerTypeId",
+     "type": "String",
+     "ref": "containerType"
+    },
+    {
+     "key": "containerTypeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "leadTimeMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "validFrom",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "validTo",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RPL-<item code>-<location code>, e.g. RPL-PST-54-LS-OP060",
+   "purpose": "Min-max or e-Kanban rule for replenishing an item at a line-side location."
+  },
+  {
+   "collection": "u_mes_matl_materialDemandForecast",
+   "module": "matl",
+   "moduleName": "Material Management",
+   "entity": "materialDemandForecast",
+   "sourceConcept": "ext01:materialDemandForecast",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Calculated",
+    "Superseded"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "bucketStartAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "bucketEndAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "scheduledDemand",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "consumptionRatePerHour",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "onHandQuantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "projectedOnHand",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "projectedShortageAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "method",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "analyticsModelId",
+     "type": "String",
+     "ref": "analyticsModel"
+    },
+    {
+     "key": "analyticsModelName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "calculatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "MDF-<yyyymmdd>-<line code>-<item code>-<hh>",
+   "purpose": "Short-term component demand and projected line-side shortage per item, line and time bucket."
+  },
+  {
+   "collection": "u_mes_trac_traceInvestigation",
+   "module": "trac",
+   "moduleName": "Traceability",
+   "entity": "traceInvestigation",
+   "sourceConcept": "ext01:traceInvestigation",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "title",
+   "statusValues": [
+    "Running",
+    "Completed",
+    "Closed"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "title",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "direction",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "depthLimit",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "resultCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "shippedCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "qualityHoldId",
+     "type": "String",
+     "ref": "qualityHold"
+    },
+    {
+     "key": "qualityHoldName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "nonconformanceId",
+     "type": "String",
+     "ref": "nonconformance"
+    },
+    {
+     "key": "nonconformanceName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "customerComplaintId",
+     "type": "String",
+     "ref": "customerComplaint"
+    },
+    {
+     "key": "customerComplaintName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requestedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "requestedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requestedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "completedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "exportControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "exportControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "TRC-<yyyymmdd>-<nnn>",
+   "purpose": "A saved forward or reverse trace run, its starting object and the containment it fed."
+  },
+  {
+   "collection": "u_mes_trac_traceInvestigationResult",
+   "module": "trac",
+   "moduleName": "Traceability",
+   "entity": "traceInvestigationResult",
+   "sourceConcept": "ext01:traceInvestigation",
+   "kind": "child",
+   "dataClass": "transaction",
+   "parent": "u_mes_trac_traceInvestigation",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "traceInvestigationId",
+     "type": "String",
+     "ref": "traceInvestigation"
+    },
+    {
+     "key": "traceInvestigationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "genealogyDepth",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "statusAtRun",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "storageLocationId",
+     "type": "String",
+     "ref": "storageLocation"
+    },
+    {
+     "key": "storageLocationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shipmentId",
+     "type": "String",
+     "ref": "shipment"
+    },
+    {
+     "key": "shipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "customerId",
+     "type": "String",
+     "ref": "customer"
+    },
+    {
+     "key": "customerName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "quantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per result of a traceInvestigation"
+  },
+  {
+   "collection": "u_mes_qual_characteristicPosition",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "characteristicPosition",
+   "sourceConcept": "characteristics",
+   "kind": "child",
+   "dataClass": "master",
+   "parent": "u_mes_qual_characteristic",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "characteristicId",
+     "type": "String",
+     "ref": "characteristic"
+    },
+    {
+     "key": "characteristicName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "positionNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "positionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "nominal",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "lowerSpecLimit",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "upperSpecLimit",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "curveEnvelopeId",
+     "type": "String",
+     "ref": "curveEnvelope"
+    },
+    {
+     "key": "curveEnvelopeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -P<nnn>",
+   "purpose": "One document per position of a characteristic"
+  },
+  {
+   "collection": "u_mes_qual_curveEnvelope",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "curveEnvelope",
+   "sourceConcept": "ext01:curveEnvelope",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "In Preparation",
+    "Released",
+    "Obsolete"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "characteristicId",
+     "type": "String",
+     "ref": "characteristic"
+    },
+    {
+     "key": "characteristicName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationId",
+     "type": "String",
+     "ref": "operation"
+    },
+    {
+     "key": "operationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "recipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "curveType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "xQuantity",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "xUnitText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "yQuantity",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "yUnitText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "version",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "goldenSampleSerialNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "referenceControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "referenceControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "effectiveFrom",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "effectiveTo",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "approvedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "approvedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "approvedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ENV-<characteristic code>-<version>, e.g. ENV-OP060-PISTON-PRESS-02",
+   "purpose": "Approved golden-sample envelope for a force\u2013displacement, torque\u2013angle, pressure\u2013time or signal curve."
+  },
+  {
+   "collection": "u_mes_qual_curveEnvelopeWindow",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "curveEnvelopeWindow",
+   "sourceConcept": "ext01:curveEnvelope",
+   "kind": "child",
+   "dataClass": "master",
+   "parent": "u_mes_qual_curveEnvelope",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "curveEnvelopeId",
+     "type": "String",
+     "ref": "curveEnvelope"
+    },
+    {
+     "key": "curveEnvelopeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "windowNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "windowType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "xMin",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "xMax",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "yMin",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "yMax",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "entrySide",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "exitSide",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -W<nnn>",
+   "purpose": "One document per window of a curveEnvelope"
+  },
+  {
+   "collection": "u_mes_qual_measurementCurve",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "measurementCurve",
+   "sourceConcept": "ext01:measurementCurve",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Recorded",
+    "Voided"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "curveEnvelopeId",
+     "type": "String",
+     "ref": "curveEnvelope"
+    },
+    {
+     "key": "curveEnvelopeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "characteristicId",
+     "type": "String",
+     "ref": "characteristic"
+    },
+    {
+     "key": "characteristicName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "positionNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "wipUnitId",
+     "type": "String",
+     "ref": "wipUnit"
+    },
+    {
+     "key": "wipUnitName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "serialNumberId",
+     "type": "String",
+     "ref": "serialNumber"
+    },
+    {
+     "key": "serialNumberName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationExecutionId",
+     "type": "String",
+     "ref": "operationExecution"
+    },
+    {
+     "key": "operationExecutionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recipeVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "capturedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "pointCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "peakX",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "peakY",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "finalX",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "finalY",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "result",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "failedWindowNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "rawControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "rawControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "inspectionResultId",
+     "type": "String",
+     "ref": "inspectionResult"
+    },
+    {
+     "key": "inspectionResultName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "CRV-<yyyymmdd>-<nnnnnn>",
+   "purpose": "One captured curve per unit, position and test, with the envelope verdict and summary values."
+  },
+  {
+   "collection": "u_mes_qual_measurementCurvePoint",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "measurementCurvePoint",
+   "sourceConcept": "ext01:measurementCurvePoint",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "measurementCurveId",
+     "type": "String",
+     "ref": "measurementCurve"
+    },
+    {
+     "key": "measurementCurveName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "pointNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "sampledAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "xValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "yValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent curve recordNo + -<nnnn>",
+   "purpose": "Points of a measurement curve. Created as a MongoDB time-series collection: timeField `sampledAt`, metaField `measurementCurveId`, granularity seconds."
+  },
+  {
+   "collection": "u_mes_qual_defectRecord",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "defectRecord",
+   "sourceConcept": "ext01:defectRecord",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Open",
+    "Reworked",
+    "Scrapped",
+    "Accepted",
+    "Closed"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "defectCodeId",
+     "type": "String",
+     "ref": "defectCode"
+    },
+    {
+     "key": "defectCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "wipUnitId",
+     "type": "String",
+     "ref": "wipUnit"
+    },
+    {
+     "key": "wipUnitName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "serialNumberId",
+     "type": "String",
+     "ref": "serialNumber"
+    },
+    {
+     "key": "serialNumberName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lotId",
+     "type": "String",
+     "ref": "lot"
+    },
+    {
+     "key": "lotName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "productionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "detectedAtOperationId",
+     "type": "String",
+     "ref": "operation"
+    },
+    {
+     "key": "detectedAtOperationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "detectedAtWorkCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "detectedAtWorkCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "originOperationId",
+     "type": "String",
+     "ref": "operation"
+    },
+    {
+     "key": "originOperationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isFirstFail",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "positionNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "defectLocationText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "quantity",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "fourMCategory",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operatorUserId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "operatorUserName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "componentLotId",
+     "type": "String",
+     "ref": "lot"
+    },
+    {
+     "key": "componentLotName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationExecutionId",
+     "type": "String",
+     "ref": "operationExecution"
+    },
+    {
+     "key": "operationExecutionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "inspectionResultId",
+     "type": "String",
+     "ref": "inspectionResult"
+    },
+    {
+     "key": "inspectionResultName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "detectedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "detectedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "detectedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "imageControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "imageControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "nonconformanceId",
+     "type": "String",
+     "ref": "nonconformance"
+    },
+    {
+     "key": "nonconformanceName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "reworkOrderId",
+     "type": "String",
+     "ref": "reworkOrder"
+    },
+    {
+     "key": "reworkOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "scrapRecordId",
+     "type": "String",
+     "ref": "scrapRecord"
+    },
+    {
+     "key": "scrapRecordName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "DEF-<yyyymmdd>-<nnnnn>",
+   "purpose": "One logged defect on one unit (or lot sample) with first-fail station, origin, 4M category and follow-up links."
+  },
+  {
+   "collection": "u_mes_qual_auditSchedule",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "auditSchedule",
+   "sourceConcept": "ext01:auditSchedule",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "auditType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "layer",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "areaId",
+     "type": "String",
+     "ref": "area"
+    },
+    {
+     "key": "areaName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "checkSheetId",
+     "type": "String",
+     "ref": "checkSheet"
+    },
+    {
+     "key": "checkSheetName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "frequencyType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "frequencyValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "auditorRoleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "auditorRoleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "auditorUserId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "auditorUserName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "toleranceHours",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "nextDueDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "validFrom",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "validTo",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "LPA-<layer>-<line code>-<nn>, e.g. LPA-L2-LN-CAL-01",
+   "purpose": "Plan for layered process audits (and other recurring audits): layer, area or line, check sheet, frequency and auditor."
+  },
+  {
+   "collection": "u_mes_qual_inspectionPlanProductVariant",
+   "module": "qual",
+   "moduleName": "Quality Management",
+   "entity": "inspectionPlanProductVariant",
+   "sourceConcept": "inspection_plans",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_qual_inspectionPlan",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "inspectionPlanId",
+     "type": "String",
+     "ref": "inspectionPlan"
+    },
+    {
+     "key": "inspectionPlanName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one inspectionPlan to one product variant (one document per link)"
+  },
+  {
+   "collection": "u_mes_perf_alarmDefinition",
+   "module": "perf",
+   "moduleName": "Performance Management",
+   "entity": "alarmDefinition",
+   "sourceConcept": "ext01:alarmDefinition",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentTypeId",
+     "type": "String",
+     "ref": "equipmentType"
+    },
+    {
+     "key": "equipmentTypeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "alarmCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "alarmText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "alarmClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "severityClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "blocksRestart",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "authorizingRoleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "authorizingRoleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "defaultReasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "defaultReasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "createsDowntime",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "responseInstruction",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ALM-<equipment type code>-<alarm code>, e.g. ALM-LEAKTESTER-E104",
+   "purpose": "Alarm code master per equipment type with class, severity, restart-block and escalation settings."
+  },
+  {
+   "collection": "u_mes_perf_lossSummary",
+   "module": "perf",
+   "moduleName": "Performance Management",
+   "entity": "lossSummary",
+   "sourceConcept": "ext01:lossSummary",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Calculated",
+    "Recalculated"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "lossCategoryId",
+     "type": "String",
+     "ref": "lossCategory"
+    },
+    {
+     "key": "lossCategoryName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "reasonCodeId",
+     "type": "String",
+     "ref": "reasonCode"
+    },
+    {
+     "key": "reasonCodeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isPlanned",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "occurrenceCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "lossMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "lossUnits",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "lossPctOfPlannedTime",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "paretoRank",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "cumulativePct",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "maintenanceWorkOrderCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "capaCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "calculatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "LSS-<yyyymmdd>-<line code>-<shift code>-<reason code>",
+   "purpose": "Loss Pareto row per line, shift, production date and reason code (downtime, speed and quality losses)."
+  },
+  {
+   "collection": "u_mes_perf_workCenterPerformance",
+   "module": "perf",
+   "moduleName": "Performance Management",
+   "entity": "workCenterPerformance",
+   "sourceConcept": "ext01:workCenterPerformance",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Calculated",
+    "Recalculated"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "periodStartAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "periodEndAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "unitsCompleted",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "throughputPerHour",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "averageCycleTimeSec",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "taktTimeSec",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "taktBreachCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "wipQuantity",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "blockedMinutes",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "starvedMinutes",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "isConstraint",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "rankInLine",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "calculatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "WCP-<yyyymmddhh>-<work centre code>",
+   "purpose": "Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag."
+  },
+  {
+   "collection": "u_mes_perf_operatorPerformance",
+   "module": "perf",
+   "moduleName": "Performance Management",
+   "entity": "operatorPerformance",
+   "sourceConcept": "ext01:operatorPerformance",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Calculated",
+    "Recalculated"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "userId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "userName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productionDate",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "attendedMinutes",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "earnedMinutes",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "efficiencyPct",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "goodQuantity",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "rejectQuantity",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "errorCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "interlockCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "calculatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "OPF-<yyyymmdd>-<badge no>-<work centre code>",
+   "purpose": "Labour efficiency per operator, station, variant, shift and date."
+  },
+  {
+   "collection": "u_mes_maint_maintenanceWorkOrderTask",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
+   "entity": "maintenanceWorkOrderTask",
+   "sourceConcept": "maintenance_work_orders",
+   "kind": "child",
+   "dataClass": "transaction",
+   "parent": "u_mes_maint_maintenanceWorkOrder",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "maintenanceWorkOrderId",
+     "type": "String",
+     "ref": "maintenanceWorkOrder"
+    },
+    {
+     "key": "maintenanceWorkOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "taskNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "maintenancePlanTaskId",
+     "type": "String",
+     "ref": "maintenancePlanTask"
+    },
+    {
+     "key": "maintenancePlanTaskName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "result",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "measuredValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "comment",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "completedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "completedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "completedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "One document per task of a maintenanceWorkOrder"
+  },
+  {
+   "collection": "u_mes_maint_sparePartTransaction",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
+   "entity": "sparePartTransaction",
+   "sourceConcept": "ext01:sparePartTransaction",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Posted",
+    "Reversed"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sparePartId",
+     "type": "String",
+     "ref": "sparePart"
+    },
+    {
+     "key": "sparePartName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "transactionType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "quantity",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "unitOfMeasureId",
+     "type": "String",
+     "ref": "unitOfMeasure"
+    },
+    {
+     "key": "unitOfMeasureName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "maintenanceWorkOrderId",
+     "type": "String",
+     "ref": "maintenanceWorkOrder"
+    },
+    {
+     "key": "maintenanceWorkOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "storageLocationId",
+     "type": "String",
+     "ref": "storageLocation"
+    },
+    {
+     "key": "storageLocationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "scanVerified",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "unitCostInr",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "transactedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "transactedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "transactedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "erpDocumentNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SPT-<yyyymmdd>-<nnnnn>",
+   "purpose": "Spare-part issue, return, receipt, adjustment and scrap with work order and equipment."
+  },
+  {
+   "collection": "u_mes_maint_reliabilitySummary",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
+   "entity": "reliabilitySummary",
+   "sourceConcept": "ext01:reliabilitySummary",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Calculated",
+    "Recalculated"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "periodType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "periodStartAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "periodEndAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "operatingHours",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "failureCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "repairMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "mtbfHours",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "mttrMinutes",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "availabilityPct",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "calculatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "REL-<yyyymm or yyyymmdd>-<equipment code>",
+   "purpose": "MTBF and MTTR per equipment, line and period."
+  },
+  {
+   "collection": "u_mes_maint_equipmentLifecycleEvent",
+   "module": "maint",
+   "moduleName": "Tooling & Maintenance",
+   "entity": "equipmentLifecycleEvent",
+   "sourceConcept": "ext01:equipmentLifecycleEvent",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "description",
+   "statusValues": [
+    "Recorded",
+    "Approved",
+    "Cancelled"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "eventType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "eventAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "costInr",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "healthScore",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "lifetimeCyclesAtEvent",
+     "type": "Int64",
+     "ref": null
+    },
+    {
+     "key": "lifetimeRunHoursAtEvent",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "maintenanceWorkOrderId",
+     "type": "String",
+     "ref": "maintenanceWorkOrder"
+    },
+    {
+     "key": "maintenanceWorkOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "engineeringChangeId",
+     "type": "String",
+     "ref": "engineeringChange"
+    },
+    {
+     "key": "engineeringChangeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelPredictionId",
+     "type": "String",
+     "ref": "modelPrediction"
+    },
+    {
+     "key": "modelPredictionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "approvedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "approvedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "approvedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ELE-<equipment code>-<nnn>",
+   "purpose": "Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning."
+  },
+  {
+   "collection": "u_mes_syst_interlockRule",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "interlockRule",
+   "sourceConcept": "ext01:interlockRule",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "ruleType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "transactionPoint",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "operationId",
+     "type": "String",
+     "ref": "operation"
+    },
+    {
+     "key": "operationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "enforcementMode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "overrideAllowed",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "overrideRoleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "overrideRoleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "overrideRequiresSignature",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "overrideRequiresReasonCode",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "messageText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "validFrom",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "validTo",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ILR-<rule type code>-<nnn>, e.g. ILR-SEQ-001",
+   "purpose": "Configured check that the application must pass before a transaction is allowed, with its scope and override policy."
+  },
+  {
+   "collection": "u_mes_syst_statusTransitionRole",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "statusTransitionRole",
+   "sourceConcept": "(new) status mapping",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_syst_statusTransition",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "statusTransitionId",
+     "type": "String",
+     "ref": "statusTransition"
+    },
+    {
+     "key": "statusTransitionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "roleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "roleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "Links one statusTransition to one role (one document per link)"
+  },
+  {
+   "collection": "u_mes_syst_escalationRule",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "escalationRule",
+   "sourceConcept": "ext01:escalationRule",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sourceType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "severityClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "firstResponderRoleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "firstResponderRoleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requiredSkillId",
+     "type": "String",
+     "ref": "skill"
+    },
+    {
+     "key": "requiredSkillName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "responseTargetMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "resolutionTargetMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ESC-<code>, e.g. ESC-BREAKDOWN-CRIT",
+   "purpose": "Routing and SLA rule for an exception type: first owner role, response and resolution targets."
+  },
+  {
+   "collection": "u_mes_syst_escalationRuleLevel",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "escalationRuleLevel",
+   "sourceConcept": "ext01:escalationRule",
+   "kind": "child",
+   "dataClass": "master",
+   "parent": "u_mes_syst_escalationRule",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "level",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "delayMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "basis",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "roleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "roleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "notificationTypeId",
+     "type": "String",
+     "ref": "notificationType"
+    },
+    {
+     "key": "notificationTypeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "channel",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per level of a escalationRule"
+  },
+  {
+   "collection": "u_mes_syst_alertRule",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "alertRule",
+   "sourceConcept": "ext01:alertRule",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "metric",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lineId",
+     "type": "String",
+     "ref": "line"
+    },
+    {
+     "key": "lineName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "processTagId",
+     "type": "String",
+     "ref": "processTag"
+    },
+    {
+     "key": "processTagName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "comparison",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "thresholdValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "thresholdUpperValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "evaluationWindowMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "severityClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "actionType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "notificationTypeId",
+     "type": "String",
+     "ref": "notificationType"
+    },
+    {
+     "key": "notificationTypeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "escalationRuleId",
+     "type": "String",
+     "ref": "escalationRule"
+    },
+    {
+     "key": "escalationRuleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "falseAlertCount",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ALR-<metric code>-<nnn>",
+   "purpose": "Threshold rule on a KPI or signal with the resulting action."
+  },
+  {
+   "collection": "u_mes_syst_analyticsModel",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "analyticsModel",
+   "sourceConcept": "ext01:analyticsModel",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "In Preparation",
+    "Released",
+    "Retired"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "framework",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "trainingDatasetRef",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "validationMetricName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "validationMetricValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "modelControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "effectiveFrom",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "effectiveTo",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "approvedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "approvedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "approvedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "AIM-<code>-<version>, e.g. AIM-VIS-BOOT-1.3",
+   "purpose": "Registry of AI / ML / rule models and their released versions."
+  },
+  {
+   "collection": "u_mes_syst_modelPrediction",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "modelPrediction",
+   "sourceConcept": "ext01:modelPrediction",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Open",
+    "Actioned",
+    "Dismissed",
+    "Verified"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "analyticsModelId",
+     "type": "String",
+     "ref": "analyticsModel"
+    },
+    {
+     "key": "analyticsModelName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "modelVersion",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "predictionType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "workCenterId",
+     "type": "String",
+     "ref": "workCenter"
+    },
+    {
+     "key": "workCenterName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "productVariantId",
+     "type": "String",
+     "ref": "productVariant"
+    },
+    {
+     "key": "productVariantName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "shiftId",
+     "type": "String",
+     "ref": "shift"
+    },
+    {
+     "key": "shiftName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "predictedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "horizonMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "predictedClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "predictedValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "confidence",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "recommendedAction",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "actionStatus",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "actionTakenById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "actionTakenBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "actionTakenAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "actualValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "actualClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "notificationId",
+     "type": "String",
+     "ref": "notification"
+    },
+    {
+     "key": "notificationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "PRD-<yyyymmdd>-<nnnnnn>",
+   "purpose": "Each prediction, classification, forecast or recommendation produced by a model, with the action and the actual outcome."
+  },
+  {
+   "collection": "u_mes_syst_simulationStudy",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "simulationStudy",
+   "sourceConcept": "ext01:simulationStudy",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "title",
+   "statusValues": [
+    "Planned",
+    "Completed",
+    "Approved",
+    "Rolled Out",
+    "Rejected"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "title",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "studyType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "relatedEntityId",
+     "type": "String",
+     "ref": "(polymorphic)"
+    },
+    {
+     "key": "relatedEntityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "scenarioText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "inputSnapshotAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "resultText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "predictedValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "predictedKpi",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recommendedRecipeId",
+     "type": "String",
+     "ref": "recipe"
+    },
+    {
+     "key": "recommendedRecipeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "rolloutProductionOrderId",
+     "type": "String",
+     "ref": "productionOrder"
+    },
+    {
+     "key": "rolloutProductionOrderName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "actualValue",
+     "type": "Decimal128",
+     "ref": null
+    },
+    {
+     "key": "comparisonResult",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resultControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "resultControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "approvedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "approvedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "approvedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SIM-<yyyy>-<nnn>",
+   "purpose": "Digital-twin / what-if study with its input snapshot, result, approval and controlled rollout and pre / post comparison."
+  },
+  {
+   "collection": "u_mes_syst_recordPolicy",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "recordPolicy",
+   "sourceConcept": "ext01:recordPolicy",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "collectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "editPolicy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lockOnStatusDefinitionId",
+     "type": "String",
+     "ref": "statusDefinition"
+    },
+    {
+     "key": "lockOnStatusDefinitionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "requiresReasonForEdit",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "requiresSignatureForEdit",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "editRoleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "editRoleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "deleteAllowed",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "retentionYears",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "archiveAfterMonths",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RPO-<collection name>",
+   "purpose": "Edit, lock and retention policy per collection."
+  },
+  {
+   "collection": "u_mes_syst_savedView",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "savedView",
+   "sourceConcept": "ext01:savedView",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "viewType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "collectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "filterJson",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sortJson",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "ownerUserId",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "ownerUserName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "roleId",
+     "type": "String",
+     "ref": "role"
+    },
+    {
+     "key": "roleName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isShared",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "VIEW-<user or role code>-<nnn>",
+   "purpose": "Saved dashboard and comparison filters per user or role."
+  },
+  {
+   "collection": "u_mes_syst_backupRun",
+   "module": "syst",
+   "moduleName": "System and Integration",
+   "entity": "backupRun",
+   "sourceConcept": "ext01:backupRun",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Running",
+    "Succeeded",
+    "Failed"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "runType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "startedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "completedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "sizeBytes",
+     "type": "Int64",
+     "ref": null
+    },
+    {
+     "key": "storageTarget",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recoveryTimeMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "recoveryPointMinutes",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "evidenceControlledDocumentId",
+     "type": "String",
+     "ref": "controlledDocument"
+    },
+    {
+     "key": "evidenceControlledDocumentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "performedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "performedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "BKP-<yyyymmdd>-<nn>",
+   "purpose": "Evidence of database backups and restore tests with measured recovery time (optional)."
+  },
+  {
+   "collection": "u_mes_matl_storageLocationAllowedItem",
+   "module": "matl",
+   "moduleName": "Material Management",
+   "entity": "storageLocationAllowedItem",
+   "sourceConcept": "storage_locations",
+   "kind": "relationship",
+   "dataClass": "master",
+   "parent": "u_mes_matl_storageLocation",
+   "displayField": "recordNo",
+   "statusValues": null,
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "storageLocationId",
+     "type": "String",
+     "ref": "storageLocation"
+    },
+    {
+     "key": "storageLocationName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sequenceNo",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "itemId",
+     "type": "String",
+     "ref": "item"
+    },
+    {
+     "key": "itemName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "itemGroupId",
+     "type": "String",
+     "ref": "itemGroup"
+    },
+    {
+     "key": "itemGroupName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AI<nnn>",
+   "purpose": "Links one storageLocation to one allowed item (one document per link)"
   }
  ]
 }

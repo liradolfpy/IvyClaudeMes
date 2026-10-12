@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 47 (31 required, 16 may be null) |
+| Keys | 54 (32 required, 22 may be null) |
 | Estimated volume per year | ~120,000 |
 | Storage | standard |
 
@@ -68,14 +68,21 @@ Every key is present in every document. "Required" means the value may not be nu
 | 37 | responseMinutes | Int32 | - | Yes | Response (minutes) | `NumberInt(3)` |  |
 | 38 | repairMinutes | Int32 | - | Yes | Repair (minutes) | `NumberInt(66)` |  |
 | 39 | unitsLost | Int32 | - | Yes | Units lost | `NumberInt(30)` |  |
-| 40 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Classified; Closed |
-| 41 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 42 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
-| 43 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 44 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 45 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 46 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 47 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 40 | captureSource | String | - | Yes | How the start of the downtime was captured | `"Operator Entry"` | Equipment Signal; Operator Entry; Andon |
+| 41 | equipmentStateId | String | - | No (null allowed) | Reference to u_mes_perf_equipmentState._id | `"1204000000000001"` | Reference: u_mes_perf_equipmentState._id |
+| 42 | equipmentStateName | String | - | No (null allowed) | Display value of equipmentStateId, copied from u_mes_perf_equipmentState.recordNo | `"EST-2026-000180"` |  |
+| 43 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `null` | Reference: u_mes_prod_productVariant._id |
+| 44 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `null` |  |
+| 45 | capaId | String | - | No (null allowed) | Reference to u_mes_qual_capa._id | `null` | Reference: u_mes_qual_capa._id |
+| 46 | capaName | String | - | No (null allowed) | Display value of capaId, copied from u_mes_qual_capa.title | `null` |  |
+| 47 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Classified; Closed |
+| 48 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 49 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
+| 50 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 51 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 52 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 53 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 54 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

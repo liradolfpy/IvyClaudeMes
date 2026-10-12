@@ -1,6 +1,6 @@
 # Status values per collection
 
-Model version 2.5 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
 
 Each collection with a lifecycle defines its own `status` values. The first value is the initial state. The values are stored as master data in `u_mes_syst_statusDefinition` (one document per collection and value) and the allowed moves in `u_mes_syst_statusTransition`. Collections not listed have no `status` key.
 
@@ -69,6 +69,11 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Planning and Execution | u_mes_plan_indirectActivity | Active, Inactive |
 | Planning and Execution | u_mes_plan_containerType | Active, Inactive |
 | Planning and Execution | u_mes_plan_andonType | Active, Inactive |
+| Planning and Execution | u_mes_plan_operatorSession | Active, Closed, Rejected |
+| Planning and Execution | u_mes_plan_documentAcknowledgement | Acknowledged, Superseded |
+| Planning and Execution | u_mes_plan_interlockEvent | Blocked, Overridden, Cleared, Cancelled |
+| Planning and Execution | u_mes_plan_recipeDownload | Requested, Verified, Rejected |
+| Planning and Execution | u_mes_plan_setupVerification | In Progress, Passed, Failed, Overridden |
 | Material Management | u_mes_matl_storageLocation | Active, Inactive |
 | Material Management | u_mes_matl_inventoryBalance | Active, Closed |
 | Material Management | u_mes_matl_materialMovement | Posted, Reversed |
@@ -83,10 +88,14 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Material Management | u_mes_matl_movementType | Active, Inactive |
 | Material Management | u_mes_matl_stockStatus | Active, Inactive |
 | Material Management | u_mes_matl_packType | Active, Inactive |
+| Material Management | u_mes_matl_exposureTimer | Running, Paused, Expired, Reset, Consumed |
+| Material Management | u_mes_matl_replenishmentRule | Active, Inactive |
+| Material Management | u_mes_matl_materialDemandForecast | Calculated, Superseded |
 | Traceability | u_mes_trac_serialNumber | Reserved, Issued, Marked, Shipped, Voided, Scrapped |
 | Traceability | u_mes_trac_genealogyLink | Active, Removed |
 | Traceability | u_mes_trac_componentLotLink | Active, Removed |
 | Traceability | u_mes_trac_asBuiltRecord | Compiling, Released |
+| Traceability | u_mes_trac_traceInvestigation | Running, Completed, Closed |
 | Quality Management | u_mes_qual_characteristic | Active, Inactive |
 | Quality Management | u_mes_qual_controlPlan | In Preparation, Released, Obsolete |
 | Quality Management | u_mes_qual_inspectionPlan | In Preparation, Released, Obsolete |
@@ -115,6 +124,10 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Quality Management | u_mes_qual_gaugeType | Active, Inactive |
 | Quality Management | u_mes_qual_dispositionType | Active, Inactive |
 | Quality Management | u_mes_qual_complaintType | Active, Inactive |
+| Quality Management | u_mes_qual_curveEnvelope | In Preparation, Released, Obsolete |
+| Quality Management | u_mes_qual_measurementCurve | Recorded, Voided |
+| Quality Management | u_mes_qual_defectRecord | Open, Reworked, Scrapped, Accepted, Closed |
+| Quality Management | u_mes_qual_auditSchedule | Active, Inactive |
 | Performance Management | u_mes_perf_reasonCode | Active, Inactive |
 | Performance Management | u_mes_perf_equipmentState | Open, Closed |
 | Performance Management | u_mes_perf_downtimeEvent | Open, Classified, Closed |
@@ -127,12 +140,19 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Performance Management | u_mes_perf_lossCategory | Active, Inactive |
 | Performance Management | u_mes_perf_reasonCategory | Active, Inactive |
 | Performance Management | u_mes_perf_energyType | Active, Inactive |
+| Performance Management | u_mes_perf_alarmDefinition | Active, Inactive |
+| Performance Management | u_mes_perf_lossSummary | Calculated, Recalculated |
+| Performance Management | u_mes_perf_workCenterPerformance | Calculated, Recalculated |
+| Performance Management | u_mes_perf_operatorPerformance | Calculated, Recalculated |
 | Tooling & Maintenance | u_mes_maint_maintenancePlan | Active, Suspended, Inactive |
 | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrder | Reported, Planned, In Progress, Completed, Closed, Cancelled |
 | Tooling & Maintenance | u_mes_maint_sparePart | Active, Obsolete |
 | Tooling & Maintenance | u_mes_maint_tool | Available, Mounted, In Maintenance, Life Expired, Scrapped |
 | Tooling & Maintenance | u_mes_maint_toolLifeRecord | Recorded, Voided |
 | Tooling & Maintenance | u_mes_maint_toolType | Active, Inactive |
+| Tooling & Maintenance | u_mes_maint_sparePartTransaction | Posted, Reversed |
+| Tooling & Maintenance | u_mes_maint_reliabilitySummary | Calculated, Recalculated |
+| Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | Recorded, Approved, Cancelled |
 | System and Integration | u_mes_syst_erpMessage | Queued, Sent, Acknowledged, Failed, Dead Letter |
 | System and Integration | u_mes_syst_integrationConnector | Active, Disabled |
 | System and Integration | u_mes_syst_iotDevice | Active, Inactive, Retired |
@@ -147,9 +167,18 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | System and Integration | u_mes_syst_statusDefinition | Active, Inactive |
 | System and Integration | u_mes_syst_enumerationValue | Active, Inactive |
 | System and Integration | u_mes_syst_statusTransition | Active, Inactive |
+| System and Integration | u_mes_syst_interlockRule | Active, Inactive |
+| System and Integration | u_mes_syst_escalationRule | Active, Inactive |
+| System and Integration | u_mes_syst_alertRule | Active, Inactive |
+| System and Integration | u_mes_syst_analyticsModel | In Preparation, Released, Retired |
+| System and Integration | u_mes_syst_modelPrediction | Open, Actioned, Dismissed, Verified |
+| System and Integration | u_mes_syst_simulationStudy | Planned, Completed, Approved, Rolled Out, Rejected |
+| System and Integration | u_mes_syst_recordPolicy | Active, Inactive |
+| System and Integration | u_mes_syst_savedView | Active, Inactive |
+| System and Integration | u_mes_syst_backupRun | Running, Succeeded, Failed |
 | Environment Health and Safety | u_mes_ehs_safetyIncident | Reported, Under Investigation, Actions Open, Closed |
 | Environment Health and Safety | u_mes_ehs_incidentType | Active, Inactive |
 | Environment Health and Safety | u_mes_ehs_bodyPart | Active, Inactive |
 | Environment Health and Safety | u_mes_ehs_injuryType | Active, Inactive |
 
-Entity collections without a status key (append-only records): u_mes_perf_processReading, u_mes_syst_businessEvent, u_mes_syst_auditTrail, u_mes_syst_electronicSignature, u_mes_perf_energyReading.
+Entity collections without a status key (append-only records): u_mes_perf_processReading, u_mes_syst_businessEvent, u_mes_syst_auditTrail, u_mes_syst_electronicSignature, u_mes_perf_energyReading, u_mes_qual_measurementCurvePoint.

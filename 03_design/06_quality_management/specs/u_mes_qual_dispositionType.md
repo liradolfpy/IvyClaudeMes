@@ -49,7 +49,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_prod_engineeringChange, u_mes_qual_defectCode, u_mes_qual_nonconformanceAffectedObject.
+u_mes_prod_engineeringChange, u_mes_qual_defectCode, u_mes_qual_nonconformanceAffectedObject, u_mes_qual_scrapRecord.
 
 ## Files
 

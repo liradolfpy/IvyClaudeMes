@@ -33,6 +33,11 @@
         "nonconformanceId",
         "nonconformanceName",
         "excludedFromLimits",
+        "reactionType",
+        "qualityHoldId",
+        "qualityHoldName",
+        "notificationId",
+        "notificationName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -167,6 +172,48 @@
         "excludedFromLimits": {
           "bsonType": "bool",
           "description": "True when: excluded from limits"
+        },
+        "reactionType": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reaction triggered by a rule violation; null when in control",
+          "enum": [
+            "Alert",
+            "Hold",
+            "Recheck",
+            "Stop Line",
+            null
+          ]
+        },
+        "qualityHoldId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_qualityHold._id"
+        },
+        "qualityHoldName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo"
+        },
+        "notificationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_notification._id"
+        },
+        "notificationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of notificationId, copied from u_mes_syst_notification.title"
         },
         "status": {
           "bsonType": "string",

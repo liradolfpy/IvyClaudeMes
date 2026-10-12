@@ -2,7 +2,7 @@
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|
-| 1 | u_mes_prod_item | Entity | master | 35 | 24 | 3 | 7 |
+| 1 | u_mes_prod_item | Entity | master | 38 | 26 | 3 | 7 |
 | 2 | u_mes_prod_itemRevision | Child | master | 13 | 13 | 0 | 2 |
 | 3 | u_mes_prod_itemCustomerPart | Child | master | 12 | 12 | 0 | 2 |
 | 4 | u_mes_prod_productVariant | Entity | master | 28 | 14 | 2 | 7 |
@@ -24,15 +24,15 @@
 | 20 | u_mes_prod_billOfProcessStepConsumedComponent | Child | master | 12 | 12 | 0 | 2 |
 | 21 | u_mes_prod_billOfProcessStepInterlock | Child | master | 11 | 11 | 1 | 1 |
 | 22 | u_mes_prod_billOfProcessStepProcessParameter | Child | master | 14 | 12 | 0 | 2 |
-| 23 | u_mes_prod_workInstruction | Entity | master | 25 | 18 | 1 | 7 |
-| 24 | u_mes_prod_workInstructionStep | Child | master | 18 | 14 | 1 | 1 |
+| 23 | u_mes_prod_workInstruction | Entity | master | 29 | 20 | 2 | 7 |
+| 24 | u_mes_prod_workInstructionStep | Child | master | 21 | 14 | 1 | 2 |
 | 25 | u_mes_prod_workInstructionStepMediaControlledDocument | Relationship | master | 10 | 10 | 0 | 2 |
 | 26 | u_mes_prod_workInstructionStepProductVariant | Relationship | master | 10 | 10 | 0 | 2 |
 | 27 | u_mes_prod_workInstructionStepTool | Relationship | master | 10 | 10 | 0 | 2 |
 | 28 | u_mes_prod_workInstructionStepCharacteristic | Relationship | master | 10 | 10 | 0 | 2 |
 | 29 | u_mes_prod_workInstructionPpeItem | Relationship | master | 10 | 10 | 0 | 2 |
 | 30 | u_mes_prod_workInstructionKeyPoint | Value list | master | 9 | 9 | 0 | 1 |
-| 31 | u_mes_prod_recipe | Entity | master | 25 | 16 | 2 | 6 |
+| 31 | u_mes_prod_recipe | Entity | master | 36 | 18 | 3 | 7 |
 | 32 | u_mes_prod_recipeParameter | Child | master | 18 | 14 | 0 | 3 |
 | 33 | u_mes_prod_recipeStage | Child | master | 11 | 11 | 0 | 1 |
 | 34 | u_mes_prod_engineeringChange | Entity | transaction | 31 | 23 | 4 | 5 |
@@ -47,3 +47,7 @@
 | 43 | u_mes_prod_padCompound | Entity | master | 9 | 9 | 1 | 2 |
 | 44 | u_mes_prod_surfaceFinish | Entity | master | 9 | 9 | 1 | 2 |
 | 45 | u_mes_prod_vehicleModel | Entity | master | 13 | 10 | 1 | 3 |
+| 46 | u_mes_prod_recipeProductVariant | Relationship | master | 10 | 10 | 0 | 2 |
+| 47 | u_mes_prod_recipeControlledDocument | Relationship | master | 11 | 11 | 1 | 2 |
+| 48 | u_mes_prod_workInstructionWorkCenter | Relationship | master | 10 | 10 | 0 | 2 |
+| 49 | u_mes_prod_workInstructionProductVariant | Relationship | master | 10 | 10 | 0 | 2 |

@@ -88,7 +88,7 @@ Empty, Filling, Full, Sealed, Shipped, Returned, Under Repair. Initial state: Em
 
 ## Referenced by
 
-u_mes_plan_wipUnit, u_mes_plan_container, u_mes_plan_containerLot, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_label, u_mes_matl_shipmentLineContainer, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecord.
+u_mes_plan_wipUnit, u_mes_plan_container, u_mes_plan_containerLot, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_label, u_mes_matl_shipmentLineContainer, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecord, u_mes_matl_exposureTimer.
 
 ## Files
 

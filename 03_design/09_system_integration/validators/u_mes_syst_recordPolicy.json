@@ -1,0 +1,126 @@
+{
+  "collMod": "u_mes_syst_recordPolicy",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_recordPolicy",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "collectionName",
+        "editPolicy",
+        "lockOnStatusDefinitionId",
+        "lockOnStatusDefinitionName",
+        "requiresReasonForEdit",
+        "requiresSignatureForEdit",
+        "editRoleId",
+        "editRoleName",
+        "deleteAllowed",
+        "retentionYears",
+        "archiveAfterMonths",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "collectionName": {
+          "bsonType": "string",
+          "description": "Collection governed"
+        },
+        "editPolicy": {
+          "bsonType": "string",
+          "description": "Edit policy",
+          "enum": [
+            "Free Edit",
+            "Controlled Edit",
+            "No Edit After Lock",
+            "Append Only"
+          ]
+        },
+        "lockOnStatusDefinitionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_statusDefinition._id: lock on status definition"
+        },
+        "lockOnStatusDefinitionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lockOnStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName"
+        },
+        "requiresReasonForEdit": {
+          "bsonType": "bool",
+          "description": "Edit needs a reason"
+        },
+        "requiresSignatureForEdit": {
+          "bsonType": "bool",
+          "description": "Edit needs an electronic signature"
+        },
+        "editRoleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_role._id: edit role"
+        },
+        "editRoleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of editRoleId, copied from u_mes_mast_role.name"
+        },
+        "deleteAllowed": {
+          "bsonType": "bool",
+          "description": "Physical delete allowed (false for all transaction data)"
+        },
+        "retentionYears": {
+          "bsonType": "int",
+          "description": "Retention period"
+        },
+        "archiveAfterMonths": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Move to archive storage after"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

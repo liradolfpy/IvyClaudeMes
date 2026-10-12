@@ -1,7 +1,7 @@
 # data_model_register.md
 
 MES on MongoDB - Front Brake Caliper Assembly LH - Pune
-Register version: 2.5 | Date: 11 October 2026 | Database: mes | Model version 2.5 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Register version: 2.6 | Date: 12 October 2026 | Database: mes | Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
 
 This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
@@ -55,7 +55,7 @@ The registry of every _id, business number and display value in the sample data 
 | 10 | u_mes_mast_workCenterEquipment | relationship | master | 16-digit numeric string | parent recordNo + -E<nnn> | u_mes_mast_workCenter | 10 |
 | 11 | u_mes_mast_workCenterOperation | relationship | master | 16-digit numeric string | parent recordNo + -O<nnn> | u_mes_mast_workCenter | 10 |
 | 12 | u_mes_mast_workCenterRequiresSkill | relationship | master | 16-digit numeric string | parent recordNo + -RS<nnn> | u_mes_mast_workCenter | 10 |
-| 13 | u_mes_mast_equipment | entity | master | 16-digit numeric string | equipmentCode | - | 41 |
+| 13 | u_mes_mast_equipment | entity | master | 16-digit numeric string | equipmentCode | - | 47 |
 | 14 | u_mes_mast_equipmentIotDevice | relationship | master | 16-digit numeric string | parent recordNo + -ID<nnn> | u_mes_mast_equipment | 10 |
 | 15 | u_mes_mast_shift | entity | master | 16-digit numeric string | shiftCode | - | 14 |
 | 16 | u_mes_mast_shiftBreak | child | master | 16-digit numeric string | parent recordNo + -B<nnn> | u_mes_mast_shift | 12 |
@@ -67,7 +67,7 @@ The registry of every _id, business number and display value in the sample data 
 | 22 | u_mes_mast_workCalendarException | child | master | 16-digit numeric string | parent recordNo + -E<nnn> | u_mes_mast_workCalendar | 12 |
 | 23 | u_mes_mast_workCalendarExceptionShift | relationship | master | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_mast_workCalendarException | 10 |
 | 24 | u_mes_mast_shiftRoster | entity | transaction | 16-digit numeric string | rosterNo | - | 25 |
-| 25 | u_mes_mast_shiftRosterAssignment | child | transaction | 16-digit numeric string | parent recordNo + -A<nnn> | u_mes_mast_shiftRoster | 22 |
+| 25 | u_mes_mast_shiftRosterAssignment | child | transaction | 16-digit numeric string | parent recordNo + -A<nnn> | u_mes_mast_shiftRoster | 26 |
 | 26 | u_mes_mast_role | entity | master | 16-digit numeric string | roleCode | - | 12 |
 | 27 | u_mes_mast_rolePermission | relationship | master | 16-digit numeric string | parent recordNo + -P<nnn> | u_mes_mast_role | 10 |
 | 28 | u_mes_mast_roleSignatureMeaning | relationship | master | 16-digit numeric string | parent recordNo + -SM<nnn> | u_mes_mast_role | 10 |
@@ -76,7 +76,7 @@ The registry of every _id, business number and display value in the sample data 
 | 31 | u_mes_mast_skill | entity | master | 16-digit numeric string | skillCode | - | 16 |
 | 32 | u_mes_mast_skillOperation | relationship | master | 16-digit numeric string | parent recordNo + -O<nnn> | u_mes_mast_skill | 10 |
 | 33 | u_mes_mast_skillLevelScale | child | master | 16-digit numeric string | parent recordNo + -LS<nnn> | u_mes_mast_skill | 10 |
-| 34 | u_mes_mast_skillCertification | entity | transaction | 16-digit numeric string | certificationNo | - | 31 |
+| 34 | u_mes_mast_skillCertification | entity | transaction | 16-digit numeric string | certificationNo | - | 34 |
 | 35 | u_mes_mast_customer | entity | master | 16-digit numeric string | customerCode | - | 26 |
 | 36 | u_mes_mast_customerShipTo | child | master | 16-digit numeric string | parent recordNo + -ST<nnn> | u_mes_mast_customer | 16 |
 | 37 | u_mes_mast_customerContact | child | master | 16-digit numeric string | parent recordNo + -C<nnn> | u_mes_mast_customer | 12 |
@@ -99,12 +99,13 @@ The registry of every _id, business number and display value in the sample data 
 | 54 | u_mes_mast_language | entity | master | 16-digit numeric string | code | - | 9 |
 | 55 | u_mes_mast_transporter | entity | master | 16-digit numeric string | code | - | 11 |
 | 56 | u_mes_mast_commodity | entity | master | 16-digit numeric string | code | - | 9 |
+| 57 | u_mes_mast_roleRequiredSkill | relationship | master | 16-digit numeric string | parent recordNo + -RS<nnn> | u_mes_mast_role | 11 |
 
 ### prod - Product Definition
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
-| 1 | u_mes_prod_item | entity | master | 16-digit numeric string | itemNo | - | 35 |
+| 1 | u_mes_prod_item | entity | master | 16-digit numeric string | itemNo | - | 38 |
 | 2 | u_mes_prod_itemRevision | child | master | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_prod_item | 13 |
 | 3 | u_mes_prod_itemCustomerPart | child | master | 16-digit numeric string | parent recordNo + -CP<nnn> | u_mes_prod_item | 12 |
 | 4 | u_mes_prod_productVariant | entity | master | 16-digit numeric string | variantCode | - | 28 |
@@ -126,15 +127,15 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_prod_billOfProcessStepConsumedComponent | child | master | 16-digit numeric string | parent recordNo + -CC<nnn> | u_mes_prod_billOfProcessStep | 12 |
 | 21 | u_mes_prod_billOfProcessStepInterlock | child | master | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_prod_billOfProcessStep | 11 |
 | 22 | u_mes_prod_billOfProcessStepProcessParameter | child | master | 16-digit numeric string | parent recordNo + -PP<nnn> | u_mes_prod_billOfProcessStep | 14 |
-| 23 | u_mes_prod_workInstruction | entity | master | 16-digit numeric string | instructionNo | - | 25 |
-| 24 | u_mes_prod_workInstructionStep | child | master | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_prod_workInstruction | 18 |
+| 23 | u_mes_prod_workInstruction | entity | master | 16-digit numeric string | instructionNo | - | 29 |
+| 24 | u_mes_prod_workInstructionStep | child | master | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_prod_workInstruction | 21 |
 | 25 | u_mes_prod_workInstructionStepMediaControlledDocument | relationship | master | 16-digit numeric string | parent recordNo + -MCD<nnn> | u_mes_prod_workInstructionStep | 10 |
 | 26 | u_mes_prod_workInstructionStepProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_prod_workInstructionStep | 10 |
 | 27 | u_mes_prod_workInstructionStepTool | relationship | master | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_prod_workInstructionStep | 10 |
 | 28 | u_mes_prod_workInstructionStepCharacteristic | relationship | master | 16-digit numeric string | parent recordNo + -C<nnn> | u_mes_prod_workInstructionStep | 10 |
 | 29 | u_mes_prod_workInstructionPpeItem | relationship | master | 16-digit numeric string | parent recordNo + -PI<nnn> | u_mes_prod_workInstruction | 10 |
 | 30 | u_mes_prod_workInstructionKeyPoint | valueList | master | 16-digit numeric string | parent recordNo + -KP<nnn> | u_mes_prod_workInstruction | 9 |
-| 31 | u_mes_prod_recipe | entity | master | 16-digit numeric string | recipeNo | - | 25 |
+| 31 | u_mes_prod_recipe | entity | master | 16-digit numeric string | recipeNo | - | 36 |
 | 32 | u_mes_prod_recipeParameter | child | master | 16-digit numeric string | parent recordNo + -P<nnn> | u_mes_prod_recipe | 18 |
 | 33 | u_mes_prod_recipeStage | child | master | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_prod_recipe | 11 |
 | 34 | u_mes_prod_engineeringChange | entity | transaction | 16-digit numeric string | ecnNo | - | 31 |
@@ -149,6 +150,10 @@ The registry of every _id, business number and display value in the sample data 
 | 43 | u_mes_prod_padCompound | entity | master | 16-digit numeric string | code | - | 9 |
 | 44 | u_mes_prod_surfaceFinish | entity | master | 16-digit numeric string | code | - | 9 |
 | 45 | u_mes_prod_vehicleModel | entity | master | 16-digit numeric string | code | - | 13 |
+| 46 | u_mes_prod_recipeProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_prod_recipe | 10 |
+| 47 | u_mes_prod_recipeControlledDocument | relationship | master | 16-digit numeric string | parent recordNo + -CD<nnn> | u_mes_prod_recipe | 11 |
+| 48 | u_mes_prod_workInstructionWorkCenter | relationship | master | 16-digit numeric string | parent recordNo + -WC<nnn> | u_mes_prod_workInstruction | 10 |
+| 49 | u_mes_prod_workInstructionProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_prod_workInstruction | 10 |
 
 ### plan - Planning and Execution
 
@@ -156,17 +161,17 @@ The registry of every _id, business number and display value in the sample data 
 |---|---|---|---|---|---|---|---|
 | 1 | u_mes_plan_customerSchedule | entity | transaction | 16-digit numeric string | releaseNo | - | 23 |
 | 2 | u_mes_plan_customerScheduleLine | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_plan_customerSchedule | 23 |
-| 3 | u_mes_plan_productionOrder | entity | transaction | 16-digit numeric string | orderNo | - | 47 |
+| 3 | u_mes_plan_productionOrder | entity | transaction | 16-digit numeric string | orderNo | - | 53 |
 | 4 | u_mes_plan_productionOrderRelease | child | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_plan_productionOrder | 18 |
 | 5 | u_mes_plan_productionOrderLot | relationship | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_plan_productionOrder | 16 |
 | 6 | u_mes_plan_productionSchedule | entity | transaction | 16-digit numeric string | scheduleNo | - | 27 |
 | 7 | u_mes_plan_productionScheduleSlot | child | transaction | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_plan_productionSchedule | 23 |
 | 8 | u_mes_plan_dispatchList | entity | transaction | 16-digit numeric string | dispatchNo | - | 22 |
 | 9 | u_mes_plan_dispatchListEntry | child | transaction | 16-digit numeric string | parent recordNo + -E<nnn> | u_mes_plan_dispatchList | 28 |
-| 10 | u_mes_plan_operationExecution | entity | transaction | 16-digit numeric string | executionNo | - | 53 |
+| 10 | u_mes_plan_operationExecution | entity | transaction | 16-digit numeric string | executionNo | - | 70 |
 | 11 | u_mes_plan_operationExecutionDefectCode | relationship | transaction | 16-digit numeric string | parent recordNo + -DC<nnn> | u_mes_plan_operationExecution | 16 |
 | 12 | u_mes_plan_operationExecutionTool | relationship | transaction | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_plan_operationExecution | 16 |
-| 13 | u_mes_plan_stepCompletion | entity | transaction | 16-digit numeric string | completionNo | - | 40 |
+| 13 | u_mes_plan_stepCompletion | entity | transaction | 16-digit numeric string | completionNo | - | 43 |
 | 14 | u_mes_plan_wipUnit | entity | transaction | 16-digit numeric string | unitNo | - | 47 |
 | 15 | u_mes_plan_wipUnitCompletedStep | valueList | transaction | 16-digit numeric string | parent recordNo + -CS<nnn> | u_mes_plan_wipUnit | 15 |
 | 16 | u_mes_plan_lot | entity | transaction | 16-digit numeric string | lotNo | - | 47 |
@@ -174,7 +179,7 @@ The registry of every _id, business number and display value in the sample data 
 | 18 | u_mes_plan_lotAttributesCavityNo | valueList | transaction | 16-digit numeric string | parent recordNo + -ACN<nnn> | u_mes_plan_lot | 15 |
 | 19 | u_mes_plan_container | entity | transaction | 16-digit numeric string | containerNo | - | 39 |
 | 20 | u_mes_plan_containerLot | relationship | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_plan_container | 16 |
-| 21 | u_mes_plan_labourBooking | entity | transaction | 16-digit numeric string | bookingNo | - | 36 |
+| 21 | u_mes_plan_labourBooking | entity | transaction | 16-digit numeric string | bookingNo | - | 42 |
 | 22 | u_mes_plan_changeover | entity | transaction | 16-digit numeric string | changeoverNo | - | 40 |
 | 23 | u_mes_plan_changeoverStep | child | transaction | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_plan_changeover | 19 |
 | 24 | u_mes_plan_changeoverRemovedTool | relationship | transaction | 16-digit numeric string | parent recordNo + -RT<nnn> | u_mes_plan_changeover | 16 |
@@ -185,11 +190,17 @@ The registry of every _id, business number and display value in the sample data 
 | 29 | u_mes_plan_shiftHandoverDowntimeEvent | relationship | transaction | 16-digit numeric string | parent recordNo + -DE<nnn> | u_mes_plan_shiftHandover | 16 |
 | 30 | u_mes_plan_shiftHandoverNonconformance | relationship | transaction | 16-digit numeric string | parent recordNo + -N<nnn> | u_mes_plan_shiftHandover | 16 |
 | 31 | u_mes_plan_shiftHandoverOpenItem | child | transaction | 16-digit numeric string | parent recordNo + -OI<nnn> | u_mes_plan_shiftHandover | 19 |
-| 32 | u_mes_plan_andonEvent | entity | transaction | 16-digit numeric string | andonNo | - | 38 |
+| 32 | u_mes_plan_andonEvent | entity | transaction | 16-digit numeric string | andonNo | - | 45 |
 | 33 | u_mes_plan_andonEventEscalation | child | transaction | 16-digit numeric string | parent recordNo + -E<nnn> | u_mes_plan_andonEvent | 19 |
 | 34 | u_mes_plan_indirectActivity | entity | master | 16-digit numeric string | code | - | 12 |
 | 35 | u_mes_plan_containerType | entity | master | 16-digit numeric string | code | - | 14 |
-| 36 | u_mes_plan_andonType | entity | master | 16-digit numeric string | code | - | 13 |
+| 36 | u_mes_plan_andonType | entity | master | 16-digit numeric string | code | - | 16 |
+| 37 | u_mes_plan_operatorSession | entity | transaction | 16-digit numeric string | OSN-<yyyymmdd>-<nnnnn>, e.g. OSN-20260916-00042 | - | 32 |
+| 38 | u_mes_plan_documentAcknowledgement | entity | transaction | 16-digit numeric string | ACK-<yyyymmdd>-<nnnnn> | - | 33 |
+| 39 | u_mes_plan_interlockEvent | entity | transaction | 16-digit numeric string | ILK-<yyyymmdd>-<nnnnn> | - | 50 |
+| 40 | u_mes_plan_recipeDownload | entity | transaction | 16-digit numeric string | RDL-<yyyymmdd>-<nnnnn> | - | 33 |
+| 41 | u_mes_plan_setupVerification | entity | transaction | 16-digit numeric string | SUV-<yyyymmdd>-<nnnnn> | - | 32 |
+| 42 | u_mes_plan_setupVerificationItem | child | transaction | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_plan_setupVerification | 25 |
 
 ### matl - Material Management
 
@@ -202,8 +213,8 @@ The registry of every _id, business number and display value in the sample data 
 | 5 | u_mes_matl_goodsReceiptLine | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_matl_goodsReceipt | 29 |
 | 6 | u_mes_matl_goodsReceiptLineInspectionResult | relationship | transaction | 16-digit numeric string | parent recordNo + -IR<nnn> | u_mes_matl_goodsReceiptLine | 16 |
 | 7 | u_mes_matl_kit | entity | transaction | 16-digit numeric string | kitNo | - | 28 |
-| 8 | u_mes_matl_kitLine | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_matl_kit | 23 |
-| 9 | u_mes_matl_materialRequest | entity | transaction | 16-digit numeric string | requestNo | - | 39 |
+| 8 | u_mes_matl_kitLine | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_matl_kit | 29 |
+| 9 | u_mes_matl_materialRequest | entity | transaction | 16-digit numeric string | requestNo | - | 41 |
 | 10 | u_mes_matl_materialConsumption | entity | transaction | 16-digit numeric string | consumptionNo | - | 43 |
 | 11 | u_mes_matl_packagingSpecification | entity | master | 16-digit numeric string | packSpecNo | - | 28 |
 | 12 | u_mes_matl_packagingSpecificationLevel | child | master | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_matl_packagingSpecification | 14 |
@@ -217,28 +228,34 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_matl_movementType | entity | master | 16-digit numeric string | code | - | 12 |
 | 21 | u_mes_matl_stockStatus | entity | master | 16-digit numeric string | code | - | 11 |
 | 22 | u_mes_matl_packType | entity | master | 16-digit numeric string | code | - | 9 |
+| 23 | u_mes_matl_exposureTimer | entity | transaction | 16-digit numeric string | EXT-<yyyymmdd>-<nnnnn> | - | 31 |
+| 24 | u_mes_matl_replenishmentRule | entity | master | 16-digit numeric string | RPL-<item code>-<location code>, e.g. RPL-PST-54-LS-OP060 | - | 27 |
+| 25 | u_mes_matl_materialDemandForecast | entity | transaction | 16-digit numeric string | MDF-<yyyymmdd>-<line code>-<item code>-<hh> | - | 30 |
+| 26 | u_mes_matl_storageLocationAllowedItem | relationship | master | 16-digit numeric string | parent recordNo + -AI<nnn> | u_mes_matl_storageLocation | 12 |
 
 ### trac - Traceability
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
-| 1 | u_mes_trac_serialNumber | entity | transaction | 16-digit numeric string | serialNo | - | 40 |
-| 2 | u_mes_trac_genealogyLink | entity | transaction | 16-digit numeric string | linkNo | - | 39 |
+| 1 | u_mes_trac_serialNumber | entity | transaction | 16-digit numeric string | serialNo | - | 43 |
+| 2 | u_mes_trac_genealogyLink | entity | transaction | 16-digit numeric string | linkNo | - | 43 |
 | 3 | u_mes_trac_componentLotLink | entity | transaction | 16-digit numeric string | lotLinkNo | - | 32 |
-| 4 | u_mes_trac_asBuiltRecord | entity | transaction | 16-digit numeric string | recordNo | - | 51 |
+| 4 | u_mes_trac_asBuiltRecord | entity | transaction | 16-digit numeric string | recordNo | - | 53 |
 | 5 | u_mes_trac_asBuiltRecordComponent | child | transaction | 16-digit numeric string | parent recordNo + -C<nnn> | u_mes_trac_asBuiltRecord | 22 |
-| 6 | u_mes_trac_asBuiltRecordOperation | child | transaction | 16-digit numeric string | parent recordNo + -O<nnn> | u_mes_trac_asBuiltRecord | 24 |
+| 6 | u_mes_trac_asBuiltRecordOperation | child | transaction | 16-digit numeric string | parent recordNo + -O<nnn> | u_mes_trac_asBuiltRecord | 28 |
 | 7 | u_mes_trac_asBuiltRecordInspectionResult | relationship | transaction | 16-digit numeric string | parent recordNo + -IR<nnn> | u_mes_trac_asBuiltRecord | 16 |
+| 8 | u_mes_trac_traceInvestigation | entity | transaction | 16-digit numeric string | TRC-<yyyymmdd>-<nnn> | - | 32 |
+| 9 | u_mes_trac_traceInvestigationResult | child | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_trac_traceInvestigation | 28 |
 
 ### qual - Quality Management
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
-| 1 | u_mes_qual_characteristic | entity | master | 16-digit numeric string | characteristicCode | - | 32 |
+| 1 | u_mes_qual_characteristic | entity | master | 16-digit numeric string | characteristicCode | - | 33 |
 | 2 | u_mes_qual_controlPlan | entity | master | 16-digit numeric string | controlPlanNo | - | 26 |
 | 3 | u_mes_qual_controlPlanCoreTeamUser | relationship | master | 16-digit numeric string | parent recordNo + -CTU<nnn> | u_mes_qual_controlPlan | 10 |
 | 4 | u_mes_qual_controlPlanLine | child | master | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_qual_controlPlan | 24 |
-| 5 | u_mes_qual_inspectionPlan | entity | master | 16-digit numeric string | inspectionPlanNo | - | 26 |
+| 5 | u_mes_qual_inspectionPlan | entity | master | 16-digit numeric string | inspectionPlanNo | - | 27 |
 | 6 | u_mes_qual_inspectionPlanLine | child | master | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_qual_inspectionPlan | 20 |
 | 7 | u_mes_qual_samplingPlan | entity | master | 16-digit numeric string | samplingPlanCode | - | 18 |
 | 8 | u_mes_qual_samplingPlanSizeRow | child | master | 16-digit numeric string | parent recordNo + -SR<nnn> | u_mes_qual_samplingPlan | 13 |
@@ -246,11 +263,11 @@ The registry of every _id, business number and display value in the sample data 
 | 10 | u_mes_qual_checkSheetItem | child | master | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_qual_checkSheet | 16 |
 | 11 | u_mes_qual_checkSheetResult | entity | transaction | 16-digit numeric string | checkResultNo | - | 36 |
 | 12 | u_mes_qual_checkSheetResultAnswer | child | transaction | 16-digit numeric string | parent recordNo + -A<nnn> | u_mes_qual_checkSheetResult | 18 |
-| 13 | u_mes_qual_inspectionResult | entity | transaction | 16-digit numeric string | resultNo | - | 54 |
+| 13 | u_mes_qual_inspectionResult | entity | transaction | 16-digit numeric string | resultNo | - | 65 |
 | 14 | u_mes_qual_spcChart | entity | master | 16-digit numeric string | chartNo | - | 29 |
 | 15 | u_mes_qual_spcChartControlLimit | child | master | 16-digit numeric string | parent recordNo + -CL<nnn> | u_mes_qual_spcChart | 16 |
 | 16 | u_mes_qual_spcChartRule | valueList | master | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_qual_spcChart | 9 |
-| 17 | u_mes_qual_spcSample | entity | transaction | 16-digit numeric string | sampleNo | - | 36 |
+| 17 | u_mes_qual_spcSample | entity | transaction | 16-digit numeric string | sampleNo | - | 41 |
 | 18 | u_mes_qual_spcSampleReading | valueList | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_qual_spcSample | 15 |
 | 19 | u_mes_qual_spcSampleInspectionResult | relationship | transaction | 16-digit numeric string | parent recordNo + -IR<nnn> | u_mes_qual_spcSample | 16 |
 | 20 | u_mes_qual_spcSampleViolation | child | transaction | 16-digit numeric string | parent recordNo + -V<nnn> | u_mes_qual_spcSample | 16 |
@@ -264,11 +281,11 @@ The registry of every _id, business number and display value in the sample data 
 | 28 | u_mes_qual_nonconformanceScrapRecord | relationship | transaction | 16-digit numeric string | parent recordNo + -SR<nnn> | u_mes_qual_nonconformance | 16 |
 | 29 | u_mes_qual_nonconformancePhotoControlledDocument | relationship | transaction | 16-digit numeric string | parent recordNo + -PCD<nnn> | u_mes_qual_nonconformance | 16 |
 | 30 | u_mes_qual_nonconformanceMrbUser | relationship | transaction | 16-digit numeric string | parent recordNo + -MU<nnn> | u_mes_qual_nonconformance | 16 |
-| 31 | u_mes_qual_reworkOrder | entity | transaction | 16-digit numeric string | reworkNo | - | 39 |
+| 31 | u_mes_qual_reworkOrder | entity | transaction | 16-digit numeric string | reworkNo | - | 44 |
 | 32 | u_mes_qual_reworkOrderWipUnit | relationship | transaction | 16-digit numeric string | parent recordNo + -WU<nnn> | u_mes_qual_reworkOrder | 16 |
 | 33 | u_mes_qual_reworkOrderStep | child | transaction | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_qual_reworkOrder | 20 |
-| 34 | u_mes_qual_scrapRecord | entity | transaction | 16-digit numeric string | scrapNo | - | 46 |
-| 35 | u_mes_qual_qualityHold | entity | transaction | 16-digit numeric string | holdNo | - | 33 |
+| 34 | u_mes_qual_scrapRecord | entity | transaction | 16-digit numeric string | scrapNo | - | 50 |
+| 35 | u_mes_qual_qualityHold | entity | transaction | 16-digit numeric string | holdNo | - | 37 |
 | 36 | u_mes_qual_qualityHoldHeldObject | child | transaction | 16-digit numeric string | parent recordNo + -HO<nnn> | u_mes_qual_qualityHold | 20 |
 | 37 | u_mes_qual_deviationPermit | entity | transaction | 16-digit numeric string | deviationNo | - | 38 |
 | 38 | u_mes_qual_deviationPermitApproval | child | transaction | 16-digit numeric string | parent recordNo + -A<nnn> | u_mes_qual_deviationPermit | 19 |
@@ -285,13 +302,13 @@ The registry of every _id, business number and display value in the sample data 
 | 49 | u_mes_qual_ppapSubmission | entity | transaction | 16-digit numeric string | ppapNo | - | 35 |
 | 50 | u_mes_qual_ppapSubmissionElement | child | transaction | 16-digit numeric string | parent recordNo + -E<nnn> | u_mes_qual_ppapSubmission | 19 |
 | 51 | u_mes_qual_ppapSubmissionMsaStudy | relationship | transaction | 16-digit numeric string | parent recordNo + -MS<nnn> | u_mes_qual_ppapSubmission | 16 |
-| 52 | u_mes_qual_gauge | entity | master | 16-digit numeric string | gaugeNo | - | 37 |
+| 52 | u_mes_qual_gauge | entity | master | 16-digit numeric string | gaugeNo | - | 39 |
 | 53 | u_mes_qual_gaugeCalibration | entity | transaction | 16-digit numeric string | calibrationNo | - | 35 |
 | 54 | u_mes_qual_gaugeCalibrationReading | child | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_qual_gaugeCalibration | 19 |
 | 55 | u_mes_qual_msaStudy | entity | transaction | 16-digit numeric string | msaNo | - | 41 |
 | 56 | u_mes_qual_msaStudyAppraiserUser | relationship | transaction | 16-digit numeric string | parent recordNo + -AU<nnn> | u_mes_qual_msaStudy | 16 |
 | 57 | u_mes_qual_msaStudyTrial | child | transaction | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_qual_msaStudy | 18 |
-| 58 | u_mes_qual_audit | entity | transaction | 16-digit numeric string | auditNo | - | 39 |
+| 58 | u_mes_qual_audit | entity | transaction | 16-digit numeric string | auditNo | - | 44 |
 | 59 | u_mes_qual_auditAuditorUser | relationship | transaction | 16-digit numeric string | parent recordNo + -AU<nnn> | u_mes_qual_audit | 16 |
 | 60 | u_mes_qual_auditFinding | child | transaction | 16-digit numeric string | parent recordNo + -F<nnn> | u_mes_qual_audit | 23 |
 | 61 | u_mes_qual_customerComplaint | entity | transaction | 16-digit numeric string | complaintNo | - | 43 |
@@ -303,6 +320,14 @@ The registry of every _id, business number and display value in the sample data 
 | 67 | u_mes_qual_gaugeType | entity | master | 16-digit numeric string | code | - | 9 |
 | 68 | u_mes_qual_dispositionType | entity | master | 16-digit numeric string | code | - | 12 |
 | 69 | u_mes_qual_complaintType | entity | master | 16-digit numeric string | code | - | 9 |
+| 70 | u_mes_qual_characteristicPosition | child | master | 16-digit numeric string | parent recordNo + -P<nnn> | u_mes_qual_characteristic | 16 |
+| 71 | u_mes_qual_curveEnvelope | entity | master | 16-digit numeric string | ENV-<characteristic code>-<version>, e.g. ENV-OP060-PISTON-PRESS-02 | - | 31 |
+| 72 | u_mes_qual_curveEnvelopeWindow | child | master | 16-digit numeric string | parent recordNo + -W<nnn> | u_mes_qual_curveEnvelope | 15 |
+| 73 | u_mes_qual_measurementCurve | entity | transaction | 16-digit numeric string | CRV-<yyyymmdd>-<nnnnnn> | - | 38 |
+| 74 | u_mes_qual_measurementCurvePoint | entity | transaction | 16-digit numeric string | parent curve recordNo + -<nnnn> | - | 17 |
+| 75 | u_mes_qual_defectRecord | entity | transaction | 16-digit numeric string | DEF-<yyyymmdd>-<nnnnn> | - | 61 |
+| 76 | u_mes_qual_auditSchedule | entity | master | 16-digit numeric string | LPA-<layer>-<line code>-<nn>, e.g. LPA-L2-LN-CAL-01 | - | 29 |
+| 77 | u_mes_qual_inspectionPlanProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_qual_inspectionPlan | 10 |
 
 ### perf - Performance Management
 
@@ -310,21 +335,25 @@ The registry of every _id, business number and display value in the sample data 
 |---|---|---|---|---|---|---|---|
 | 1 | u_mes_perf_reasonCode | entity | master | 16-digit numeric string | reasonCode | - | 23 |
 | 2 | u_mes_perf_equipmentState | entity | transaction | 16-digit numeric string | stateEventNo | - | 30 |
-| 3 | u_mes_perf_downtimeEvent | entity | transaction | 16-digit numeric string | downtimeNo | - | 47 |
+| 3 | u_mes_perf_downtimeEvent | entity | transaction | 16-digit numeric string | downtimeNo | - | 54 |
 | 4 | u_mes_perf_downtimeEventComment | child | transaction | 16-digit numeric string | parent recordNo + -C<nnn> | u_mes_perf_downtimeEvent | 18 |
 | 5 | u_mes_perf_productionCount | entity | transaction | 16-digit numeric string | countNo | - | 34 |
 | 6 | u_mes_perf_oeeRecord | entity | transaction | 16-digit numeric string | oeeRecordNo | - | 42 |
 | 7 | u_mes_perf_oeeRecordLoss | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_perf_oeeRecord | 20 |
-| 8 | u_mes_perf_processTag | entity | master | 16-digit numeric string | tagName | - | 28 |
-| 9 | u_mes_perf_processReading | entity | transaction | 16-digit numeric string | readingNo | - | 24 |
-| 10 | u_mes_perf_alarm | entity | transaction | 16-digit numeric string | alarmNo | - | 36 |
-| 11 | u_mes_perf_torqueResult | entity | transaction | 16-digit numeric string | torqueResultNo | - | 46 |
-| 12 | u_mes_perf_leakTestResult | entity | transaction | 16-digit numeric string | leakTestNo | - | 35 |
+| 8 | u_mes_perf_processTag | entity | master | 16-digit numeric string | tagName | - | 34 |
+| 9 | u_mes_perf_processReading | entity | transaction | 16-digit numeric string | readingNo | - | 29 |
+| 10 | u_mes_perf_alarm | entity | transaction | 16-digit numeric string | alarmNo | - | 54 |
+| 11 | u_mes_perf_torqueResult | entity | transaction | 16-digit numeric string | torqueResultNo | - | 51 |
+| 12 | u_mes_perf_leakTestResult | entity | transaction | 16-digit numeric string | leakTestNo | - | 37 |
 | 13 | u_mes_perf_leakTestResultStage | child | transaction | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_perf_leakTestResult | 24 |
 | 14 | u_mes_perf_energyReading | entity | transaction | 16-digit numeric string | energyReadingNo | - | 34 |
 | 15 | u_mes_perf_lossCategory | entity | master | 16-digit numeric string | code | - | 11 |
 | 16 | u_mes_perf_reasonCategory | entity | master | 16-digit numeric string | code | - | 9 |
 | 17 | u_mes_perf_energyType | entity | master | 16-digit numeric string | code | - | 11 |
+| 18 | u_mes_perf_alarmDefinition | entity | master | 16-digit numeric string | ALM-<equipment type code>-<alarm code>, e.g. ALM-LEAKTESTER-E104 | - | 21 |
+| 19 | u_mes_perf_lossSummary | entity | transaction | 16-digit numeric string | LSS-<yyyymmdd>-<line code>-<shift code>-<reason code> | - | 33 |
+| 20 | u_mes_perf_workCenterPerformance | entity | transaction | 16-digit numeric string | WCP-<yyyymmddhh>-<work centre code> | - | 34 |
+| 21 | u_mes_perf_operatorPerformance | entity | transaction | 16-digit numeric string | OPF-<yyyymmdd>-<badge no>-<work centre code> | - | 29 |
 
 ### maint - Tooling & Maintenance
 
@@ -334,16 +363,20 @@ The registry of every _id, business number and display value in the sample data 
 | 2 | u_mes_maint_maintenancePlanTask | child | master | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_maint_maintenancePlan | 12 |
 | 3 | u_mes_maint_maintenancePlanRequiredSkill | relationship | master | 16-digit numeric string | parent recordNo + -RS<nnn> | u_mes_maint_maintenancePlan | 10 |
 | 4 | u_mes_maint_maintenancePlanRequiredSparePart | child | master | 16-digit numeric string | parent recordNo + -RSP<nnn> | u_mes_maint_maintenancePlan | 11 |
-| 5 | u_mes_maint_maintenanceWorkOrder | entity | transaction | 16-digit numeric string | workOrderNo | - | 43 |
+| 5 | u_mes_maint_maintenanceWorkOrder | entity | transaction | 16-digit numeric string | workOrderNo | - | 56 |
 | 6 | u_mes_maint_maintenanceWorkOrderAssignedToUser | relationship | transaction | 16-digit numeric string | parent recordNo + -ATU<nnn> | u_mes_maint_maintenanceWorkOrder | 16 |
 | 7 | u_mes_maint_maintenanceWorkOrderLabour | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_maint_maintenanceWorkOrder | 17 |
 | 8 | u_mes_maint_maintenanceWorkOrderUsedSparePart | child | transaction | 16-digit numeric string | parent recordNo + -USP<nnn> | u_mes_maint_maintenanceWorkOrder | 18 |
 | 9 | u_mes_maint_sparePart | entity | master | 16-digit numeric string | sparePartNo | - | 26 |
 | 10 | u_mes_maint_sparePartUsedOnEquipment | relationship | master | 16-digit numeric string | parent recordNo + -UOE<nnn> | u_mes_maint_sparePart | 10 |
-| 11 | u_mes_maint_tool | entity | master | 16-digit numeric string | toolNo | - | 33 |
+| 11 | u_mes_maint_tool | entity | master | 16-digit numeric string | toolNo | - | 38 |
 | 12 | u_mes_maint_toolItem | relationship | master | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_maint_tool | 10 |
-| 13 | u_mes_maint_toolLifeRecord | entity | transaction | 16-digit numeric string | toolLifeNo | - | 33 |
+| 13 | u_mes_maint_toolLifeRecord | entity | transaction | 16-digit numeric string | toolLifeNo | - | 39 |
 | 14 | u_mes_maint_toolType | entity | master | 16-digit numeric string | code | - | 10 |
+| 15 | u_mes_maint_maintenanceWorkOrderTask | child | transaction | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_maint_maintenanceWorkOrder | 25 |
+| 16 | u_mes_maint_sparePartTransaction | entity | transaction | 16-digit numeric string | SPT-<yyyymmdd>-<nnnnn> | - | 30 |
+| 17 | u_mes_maint_reliabilitySummary | entity | transaction | 16-digit numeric string | REL-<yyyymm or yyyymmdd>-<equipment code> | - | 28 |
+| 18 | u_mes_maint_equipmentLifecycleEvent | entity | transaction | 16-digit numeric string | ELE-<equipment code>-<nnn> | - | 30 |
 
 ### syst - System and Integration
 
@@ -364,7 +397,7 @@ The registry of every _id, business number and display value in the sample data 
 | 13 | u_mes_syst_auditTrail | entity | transaction | 16-digit numeric string | auditTrailNo | - | 27 |
 | 14 | u_mes_syst_auditTrailChange | child | transaction | 16-digit numeric string | parent recordNo + -C<nnn> | u_mes_syst_auditTrail | 17 |
 | 15 | u_mes_syst_electronicSignature | entity | transaction | 16-digit numeric string | signatureNo | - | 29 |
-| 16 | u_mes_syst_notification | entity | transaction | 16-digit numeric string | notificationNo | - | 32 |
+| 16 | u_mes_syst_notification | entity | transaction | 16-digit numeric string | notificationNo | - | 42 |
 | 17 | u_mes_syst_notificationRecipient | child | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_syst_notification | 22 |
 | 18 | u_mes_syst_controlledDocument | entity | transaction | 16-digit numeric string | documentNo | - | 38 |
 | 19 | u_mes_syst_controlledDocumentTag | valueList | transaction | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_syst_controlledDocument | 15 |
@@ -376,6 +409,17 @@ The registry of every _id, business number and display value in the sample data 
 | 25 | u_mes_syst_statusDefinition | entity | master | 16-digit numeric string | definition code | - | 15 |
 | 26 | u_mes_syst_enumerationValue | entity | master | 16-digit numeric string | definition code | - | 13 |
 | 27 | u_mes_syst_statusTransition | entity | master | 16-digit numeric string | definition code | - | 15 |
+| 28 | u_mes_syst_interlockRule | entity | master | 16-digit numeric string | ILR-<rule type code>-<nnn>, e.g. ILR-SEQ-001 | - | 28 |
+| 29 | u_mes_syst_statusTransitionRole | relationship | master | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_syst_statusTransition | 10 |
+| 30 | u_mes_syst_escalationRule | entity | master | 16-digit numeric string | ESC-<code>, e.g. ESC-BREAKDOWN-CRIT | - | 17 |
+| 31 | u_mes_syst_escalationRuleLevel | child | master | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_syst_escalationRule | 15 |
+| 32 | u_mes_syst_alertRule | entity | master | 16-digit numeric string | ALR-<metric code>-<nnn> | - | 29 |
+| 33 | u_mes_syst_analyticsModel | entity | master | 16-digit numeric string | AIM-<code>-<version>, e.g. AIM-VIS-BOOT-1.3 | - | 22 |
+| 34 | u_mes_syst_modelPrediction | entity | transaction | 16-digit numeric string | PRD-<yyyymmdd>-<nnnnnn> | - | 39 |
+| 35 | u_mes_syst_simulationStudy | entity | transaction | 16-digit numeric string | SIM-<yyyy>-<nnn> | - | 33 |
+| 36 | u_mes_syst_recordPolicy | entity | master | 16-digit numeric string | RPO-<collection name> | - | 17 |
+| 37 | u_mes_syst_savedView | entity | master | 16-digit numeric string | VIEW-<user or role code>-<nnn> | - | 16 |
+| 38 | u_mes_syst_backupRun | entity | transaction | 16-digit numeric string | BKP-<yyyymmdd>-<nn> | - | 23 |
 
 ### ehs - Environment Health and Safety
 
@@ -394,7 +438,8 @@ The registry of every _id, business number and display value in the sample data 
 |---|---|---|
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
-| 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became 299 collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became 343 collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.6 | 12 Oct 2026 | MES_ExternalRequirement_01 implemented (D036-D042): 44 collections added (numbers 1300-1343, existing numbers unchanged), 212 keys added to 38 existing collections, allowed values extended; interlock rules and events, escalation and alert rules, operator sessions, document acknowledgements, recipe downloads, set-up verification, exposure timers, replenishment rules, trace investigations, per-position results and measurement curves, defect records, LPA schedules, alarm definitions, loss and performance reports, maintenance checklists, spare-part transactions, lifecycle events, analytics models and predictions, simulation studies, record policies, saved views, backup runs. Analysis: 01_research/MES_ExternalRequirement_01_impact_analysis.md |
 | 2.5 | 12 Oct 2026 | DATA-004: dates and times stored as local plant time (IST) with the +0000 suffix; every date key tagged Date or Datetime; sample data regenerated |
 | 2.4 | 12 Oct 2026 | Sample documents: exactly 10 per collection in 03_design/<module>/samples; system IDs changed to 16-digit numeric strings; sample period moved to April-September 2026; master ID registry replaced by the generated 04_reference_data/sample_data_registry.md; child, relationship and value-list collections use recordNo as display value |
 | 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (Environment Health and Safety). Module folders renamed |

@@ -4,27 +4,27 @@ Run: 11 October 2026 | Input: 05_generator/model/flat_model.json | Tool: 05_gene
 
 | Check | Scope | Result |
 |---|---|---|
-| Collection name matches u_mes_<3-letter module>_<lowerCamelCase singular> | 299 | Pass |
-| Collection names unique | 299 | Pass |
-| Key is lower camelCase with no dot, bracket, space or hyphen | 6058 | Pass |
-| No key ends in Ids (no pluralised references) | 6058 | Pass |
-| Every key ending in Id resolves to a collection in the inventory or is the polymorphic relatedEntityId | 1480 | Pass |
-| Every reference Id is paired with its display key | 1480 | Pass |
-| No duplicate key inside a collection | 299 | Pass |
-| Every key has a concrete BSON type | 6058 | Pass |
-| Audit keys present on all transaction collections and absent on all master collections | 299 | Pass |
-| _id and recordNo present in every collection | 299 | Pass |
+| Collection name matches u_mes_<3-letter module>_<lowerCamelCase singular> | 343 | Pass |
+| Collection names unique | 343 | Pass |
+| Key is lower camelCase with no dot, bracket, space or hyphen | 7383 | Pass |
+| No key ends in Ids (no pluralised references) | 7383 | Pass |
+| Every key ending in Id resolves to a collection in the inventory or is the polymorphic relatedEntityId | 1849 | Pass |
+| Every reference Id is paired with its display key | 1849 | Pass |
+| No duplicate key inside a collection | 343 | Pass |
+| Every key has a concrete BSON type | 7383 | Pass |
+| Audit keys present on all transaction collections and absent on all master collections | 343 | Pass |
+| _id and recordNo present in every collection | 343 | Pass |
 
 ## Keys by BSON type
 
 | BSON type | Keys |
 |---|---|
-| String | 4426 |
-| Int32 | 742 |
-| Date | 551 |
-| Decimal128 | 200 |
-| Boolean | 122 |
-| Int64 | 13 |
+| String | 5416 |
+| Int32 | 854 |
+| Date | 677 |
+| Decimal128 | 259 |
+| Boolean | 158 |
+| Int64 | 15 |
 | Double | 4 |
 
 ## Not checked yet

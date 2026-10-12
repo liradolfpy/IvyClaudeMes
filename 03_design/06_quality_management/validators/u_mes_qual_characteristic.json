@@ -35,6 +35,7 @@
         "targetCpk",
         "reactionPlan",
         "source",
+        "positionCount",
         "status",
         "schemaVersion"
       ],
@@ -212,6 +213,10 @@
             "Device",
             "Manual Entry"
           ]
+        },
+        "positionCount": {
+          "bsonType": "int",
+          "description": "Number of positions at which the characteristic is measured (1 for a single position)"
         },
         "status": {
           "bsonType": "string",

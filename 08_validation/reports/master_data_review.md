@@ -8,7 +8,7 @@ Scope: every text key of every collection was reviewed against data_modeling_sta
 |---|---|
 | New master collections | 41 |
 | Keys converted from text to a master reference | 67 |
-| Keys kept as fixed enumerations (values in u_mes_syst_enumerationValue) | 205 |
+| Keys kept as fixed enumerations (values in u_mes_syst_enumerationValue) | 265 |
 
 ## New master collections
 
@@ -50,7 +50,7 @@ Scope: every text key of every collection was reviewed against data_modeling_sta
 | 34 | u_mes_syst_documentType | Types of controlled document with retention | _id, recordNo, siteId, siteName, name, description, retentionYears, isControlled, sequenceNo, status, schemaVersion |
 | 35 | u_mes_syst_deviceType | Types of connected device (PLC, nutrunner controller, leak tester, printer ...) | _id, recordNo, siteId, siteName, name, description, sequenceNo, status, schemaVersion |
 | 36 | u_mes_syst_notificationType | Types of notification sent by the system | _id, recordNo, siteId, siteName, name, description, sequenceNo, status, schemaVersion |
-| 37 | u_mes_plan_andonType | Types of andon call with responsible department and target response time | _id, recordNo, siteId, siteName, name, description, colourCode, responsibleDepartmentId, responsibleDepartmentName, targetResponseSec, sequenceNo, status, schemaVersion |
+| 37 | u_mes_plan_andonType | Types of andon call with responsible department and target response time | _id, recordNo, siteId, siteName, name, description, colourCode, responsibleDepartmentId, responsibleDepartmentName, targetResponseSec, sequenceNo, targetRepairSec, escalationRuleId, escalationRuleName, status, schemaVersion |
 | 38 | u_mes_ehs_incidentType | Types of safety incident | _id, recordNo, siteId, siteName, name, description, isInjury, reportableToAuthority, sequenceNo, status, schemaVersion |
 | 39 | u_mes_perf_energyType | Types of energy and utility that are metered | _id, recordNo, siteId, siteName, name, description, unitOfMeasureId, unitOfMeasureName, sequenceNo, status, schemaVersion |
 | 40 | u_mes_ehs_bodyPart | Body parts for injury records | _id, recordNo, siteId, siteName, name, description, sequenceNo, status, schemaVersion |

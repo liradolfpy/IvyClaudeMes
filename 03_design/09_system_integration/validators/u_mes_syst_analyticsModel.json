@@ -1,0 +1,169 @@
+{
+  "collMod": "u_mes_syst_analyticsModel",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_analyticsModel",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "modelType",
+        "modelVersion",
+        "framework",
+        "trainingDatasetRef",
+        "validationMetricName",
+        "validationMetricValue",
+        "equipmentId",
+        "equipmentName",
+        "modelControlledDocumentId",
+        "modelControlledDocumentName",
+        "effectiveFrom",
+        "effectiveTo",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Model name"
+        },
+        "modelType": {
+          "bsonType": "string",
+          "description": "Model type",
+          "enum": [
+            "Vision Classification",
+            "Defect Prediction",
+            "OEE Forecast",
+            "Anomaly Detection",
+            "Maintenance Prediction",
+            "Demand Forecast",
+            "Recipe Optimisation",
+            "Operator Risk",
+            "Assignment Recommendation"
+          ]
+        },
+        "modelVersion": {
+          "bsonType": "string",
+          "description": "Model version"
+        },
+        "framework": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Framework / runtime"
+        },
+        "trainingDatasetRef": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Training data set reference"
+        },
+        "validationMetricName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Validation metric, e.g. Recall"
+        },
+        "validationMetricValue": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Validation result"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "modelControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: model controlled document"
+        },
+        "modelControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of modelControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Effective to"
+        },
+        "approvedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": "date",
+          "description": "Approval time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Retired"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

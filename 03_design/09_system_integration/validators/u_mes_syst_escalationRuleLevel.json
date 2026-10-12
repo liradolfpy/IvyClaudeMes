@@ -1,0 +1,102 @@
+{
+  "collMod": "u_mes_syst_escalationRuleLevel",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_escalationRuleLevel",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "escalationRuleId",
+        "escalationRuleName",
+        "level",
+        "delayMinutes",
+        "basis",
+        "roleId",
+        "roleName",
+        "notificationTypeId",
+        "notificationTypeName",
+        "channel",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "escalationRuleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_escalationRule._id: the parent document this one belongs to"
+        },
+        "escalationRuleName": {
+          "bsonType": "string",
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
+        },
+        "level": {
+          "bsonType": "int",
+          "description": "Escalation level (1 = first escalation)"
+        },
+        "delayMinutes": {
+          "bsonType": "int",
+          "description": "Minutes after raise without acknowledgement / resolution"
+        },
+        "basis": {
+          "bsonType": "string",
+          "description": "What triggers the level",
+          "enum": [
+            "Not Acknowledged",
+            "Not Resolved"
+          ]
+        },
+        "roleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id"
+        },
+        "roleName": {
+          "bsonType": "string",
+          "description": "Display value of roleId, copied from u_mes_mast_role.name"
+        },
+        "notificationTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_notificationType._id"
+        },
+        "notificationTypeName": {
+          "bsonType": "string",
+          "description": "Display value of notificationTypeId, copied from u_mes_syst_notificationType.name"
+        },
+        "channel": {
+          "bsonType": "string",
+          "description": "Channel",
+          "enum": [
+            "Andon Board",
+            "SMS",
+            "Email",
+            "Mobile App",
+            "Public Address"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

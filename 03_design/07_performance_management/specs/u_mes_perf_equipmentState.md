@@ -76,7 +76,7 @@ Open, Closed. Initial state: Open. The values are maintained in u_mes_syst_statu
 
 ## Referenced by
 
-No other collection refers to this one.
+u_mes_perf_downtimeEvent.
 
 ## Files
 

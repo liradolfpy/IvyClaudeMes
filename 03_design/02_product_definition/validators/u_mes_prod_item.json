@@ -38,6 +38,9 @@
         "erpMaterialNo",
         "defaultStorageLocationId",
         "defaultStorageLocationName",
+        "fefoRequired",
+        "exposureControlled",
+        "openLifeMinutes",
         "status",
         "schemaVersion"
       ],
@@ -220,6 +223,21 @@
             "null"
           ],
           "description": "Display value of defaultStorageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "fefoRequired": {
+          "bsonType": "bool",
+          "description": "True when lots of the item must be issued first-expiry-first-out"
+        },
+        "exposureControlled": {
+          "bsonType": "bool",
+          "description": "True when opened lots of the item run an exposure timer (pot life, open time)"
+        },
+        "openLifeMinutes": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Allowed exposure after opening (minutes); null when not exposure-controlled"
         },
         "status": {
           "bsonType": "string",

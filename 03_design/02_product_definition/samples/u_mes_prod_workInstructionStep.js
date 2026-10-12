@@ -19,6 +19,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -39,6 +42,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -59,6 +65,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -79,6 +88,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -99,6 +111,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -119,6 +134,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -139,6 +157,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -159,6 +180,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -179,6 +203,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   },
   {
@@ -199,6 +226,9 @@ db.getCollection("u_mes_prod_workInstructionStep").insertMany([
     requiresScan: true,
     caution: "Do not reuse a bleed screw that has been tightened once",
     standardTimeSec: NumberDecimal("12.0"),
+    arContentControlledDocumentId: null,
+    arContentControlledDocumentName: null,
+    arAnchorRef: null,
     schemaVersion: NumberInt(1)
   }
 ]);

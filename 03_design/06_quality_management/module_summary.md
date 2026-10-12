@@ -2,11 +2,11 @@
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|
-| 1 | u_mes_qual_characteristic | Entity | master | 32 | 23 | 6 | 7 |
+| 1 | u_mes_qual_characteristic | Entity | master | 33 | 24 | 6 | 7 |
 | 2 | u_mes_qual_controlPlan | Entity | master | 26 | 18 | 2 | 6 |
 | 3 | u_mes_qual_controlPlanCoreTeamUser | Relationship | master | 10 | 10 | 0 | 2 |
 | 4 | u_mes_qual_controlPlanLine | Child | master | 24 | 20 | 1 | 4 |
-| 5 | u_mes_qual_inspectionPlan | Entity | master | 26 | 16 | 3 | 7 |
+| 5 | u_mes_qual_inspectionPlan | Entity | master | 27 | 16 | 3 | 7 |
 | 6 | u_mes_qual_inspectionPlanLine | Child | master | 20 | 16 | 2 | 4 |
 | 7 | u_mes_qual_samplingPlan | Entity | master | 18 | 12 | 4 | 2 |
 | 8 | u_mes_qual_samplingPlanSizeRow | Child | master | 13 | 13 | 0 | 1 |
@@ -14,11 +14,11 @@
 | 10 | u_mes_qual_checkSheetItem | Child | master | 16 | 11 | 1 | 1 |
 | 11 | u_mes_qual_checkSheetResult | Entity | transaction | 36 | 25 | 2 | 8 |
 | 12 | u_mes_qual_checkSheetResultAnswer | Child | transaction | 18 | 15 | 0 | 1 |
-| 13 | u_mes_qual_inspectionResult | Entity | transaction | 54 | 32 | 5 | 8 |
+| 13 | u_mes_qual_inspectionResult | Entity | transaction | 65 | 32 | 5 | 8 |
 | 14 | u_mes_qual_spcChart | Entity | master | 29 | 20 | 2 | 7 |
 | 15 | u_mes_qual_spcChartControlLimit | Child | master | 16 | 13 | 0 | 1 |
 | 16 | u_mes_qual_spcChartRule | Value list | master | 9 | 9 | 1 | 1 |
-| 17 | u_mes_qual_spcSample | Entity | transaction | 36 | 32 | 1 | 8 |
+| 17 | u_mes_qual_spcSample | Entity | transaction | 41 | 32 | 2 | 8 |
 | 18 | u_mes_qual_spcSampleReading | Value list | transaction | 15 | 15 | 0 | 1 |
 | 19 | u_mes_qual_spcSampleInspectionResult | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 20 | u_mes_qual_spcSampleViolation | Child | transaction | 16 | 16 | 1 | 1 |
@@ -32,11 +32,11 @@
 | 28 | u_mes_qual_nonconformanceScrapRecord | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 29 | u_mes_qual_nonconformancePhotoControlledDocument | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 30 | u_mes_qual_nonconformanceMrbUser | Relationship | transaction | 16 | 16 | 0 | 2 |
-| 31 | u_mes_qual_reworkOrder | Entity | transaction | 39 | 32 | 3 | 8 |
+| 31 | u_mes_qual_reworkOrder | Entity | transaction | 44 | 32 | 3 | 8 |
 | 32 | u_mes_qual_reworkOrderWipUnit | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 33 | u_mes_qual_reworkOrderStep | Child | transaction | 20 | 17 | 0 | 2 |
-| 34 | u_mes_qual_scrapRecord | Entity | transaction | 46 | 33 | 3 | 8 |
-| 35 | u_mes_qual_qualityHold | Entity | transaction | 33 | 20 | 3 | 7 |
+| 34 | u_mes_qual_scrapRecord | Entity | transaction | 50 | 33 | 3 | 8 |
+| 35 | u_mes_qual_qualityHold | Entity | transaction | 37 | 20 | 3 | 8 |
 | 36 | u_mes_qual_qualityHoldHeldObject | Child | transaction | 20 | 18 | 1 | 1 |
 | 37 | u_mes_qual_deviationPermit | Entity | transaction | 38 | 27 | 3 | 8 |
 | 38 | u_mes_qual_deviationPermitApproval | Child | transaction | 19 | 18 | 2 | 2 |
@@ -53,13 +53,13 @@
 | 49 | u_mes_qual_ppapSubmission | Entity | transaction | 35 | 21 | 3 | 8 |
 | 50 | u_mes_qual_ppapSubmissionElement | Child | transaction | 19 | 19 | 1 | 2 |
 | 51 | u_mes_qual_ppapSubmissionMsaStudy | Relationship | transaction | 16 | 16 | 0 | 2 |
-| 52 | u_mes_qual_gauge | Entity | master | 37 | 26 | 2 | 7 |
+| 52 | u_mes_qual_gauge | Entity | master | 39 | 26 | 2 | 7 |
 | 53 | u_mes_qual_gaugeCalibration | Entity | transaction | 35 | 30 | 5 | 6 |
 | 54 | u_mes_qual_gaugeCalibrationReading | Child | transaction | 19 | 19 | 0 | 1 |
 | 55 | u_mes_qual_msaStudy | Entity | transaction | 41 | 28 | 4 | 6 |
 | 56 | u_mes_qual_msaStudyAppraiserUser | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 57 | u_mes_qual_msaStudyTrial | Child | transaction | 18 | 17 | 0 | 2 |
-| 58 | u_mes_qual_audit | Entity | transaction | 39 | 27 | 3 | 8 |
+| 58 | u_mes_qual_audit | Entity | transaction | 44 | 29 | 3 | 8 |
 | 59 | u_mes_qual_auditAuditorUser | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 60 | u_mes_qual_auditFinding | Child | transaction | 23 | 19 | 1 | 3 |
 | 61 | u_mes_qual_customerComplaint | Entity | transaction | 43 | 32 | 1 | 8 |
@@ -71,3 +71,11 @@
 | 67 | u_mes_qual_gaugeType | Entity | master | 9 | 9 | 1 | 2 |
 | 68 | u_mes_qual_dispositionType | Entity | master | 12 | 12 | 1 | 2 |
 | 69 | u_mes_qual_complaintType | Entity | master | 9 | 9 | 1 | 2 |
+| 70 | u_mes_qual_characteristicPosition | Child | master | 16 | 9 | 0 | 3 |
+| 71 | u_mes_qual_curveEnvelope | Entity | master | 31 | 23 | 2 | 7 |
+| 72 | u_mes_qual_curveEnvelopeWindow | Child | master | 15 | 11 | 3 | 1 |
+| 73 | u_mes_qual_measurementCurve | Entity | transaction | 38 | 25 | 2 | 8 |
+| 74 | u_mes_qual_measurementCurvePoint | Entity | transaction | 17 | 17 | 0 | 3 |
+| 75 | u_mes_qual_defectRecord | Entity | transaction | 61 | 29 | 2 | 8 |
+| 76 | u_mes_qual_auditSchedule | Entity | master | 29 | 17 | 3 | 7 |
+| 77 | u_mes_qual_inspectionPlanProductVariant | Relationship | master | 10 | 10 | 0 | 2 |

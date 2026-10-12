@@ -9,7 +9,7 @@
 | Parent collection | u_mes_prod_workInstruction |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 18 (14 required, 4 may be null) |
+| Keys | 21 (14 required, 7 may be null) |
 
 ## Structure
 
@@ -39,13 +39,17 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | requiresScan | Boolean | - | Yes | True when scan is required | `true` |  |
 | 16 | caution | String | - | No (null allowed) | Caution of the work instruction step | `"Do not reuse a bleed screw that has been tightened once"` |  |
 | 17 | standardTimeSec | Decimal128 | - | Yes | Standard time (seconds) | `NumberDecimal("12.0")` |  |
-| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 18 | arContentControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: ar content controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
+| 19 | arContentControlledDocumentName | String | - | No (null allowed) | Display value of arContentControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
+| 20 | arAnchorRef | String | - | No (null allowed) | Anchor reference of the overlay on the part or fixture | `null` |  |
+| 21 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 
 | # | Keys | Unique | Purpose |
 |---|---|---|---|
 | 1 | `{ workInstructionId: 1, stepNo: 1 }` | Yes | Lines of one parent in order; one line per number |
+| 2 | `{ arContentControlledDocumentId: 1 }` | No | Look-up of lines by ar content controlled document |
 
 ## Referenced by
 

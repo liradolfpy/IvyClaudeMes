@@ -1,0 +1,116 @@
+{
+  "collMod": "u_mes_syst_savedView",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_savedView",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "viewType",
+        "collectionName",
+        "filterJson",
+        "sortJson",
+        "ownerUserId",
+        "ownerUserName",
+        "roleId",
+        "roleName",
+        "isShared",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "View name"
+        },
+        "viewType": {
+          "bsonType": "string",
+          "description": "View type",
+          "enum": [
+            "Dashboard",
+            "Comparison",
+            "Pareto",
+            "Trend",
+            "List"
+          ]
+        },
+        "collectionName": {
+          "bsonType": "string",
+          "description": "Main collection queried"
+        },
+        "filterJson": {
+          "bsonType": "string",
+          "description": "Filter as JSON text"
+        },
+        "sortJson": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Sort as JSON text"
+        },
+        "ownerUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: owner user"
+        },
+        "ownerUserName": {
+          "bsonType": "string",
+          "description": "Display value of ownerUserId, copied from u_mes_mast_user.fullName"
+        },
+        "roleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_role._id"
+        },
+        "roleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of roleId, copied from u_mes_mast_role.name"
+        },
+        "isShared": {
+          "bsonType": "bool",
+          "description": "Visible to the role"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,80 @@
+{
+  "collMod": "u_mes_prod_recipeControlledDocument",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_prod_recipeControlledDocument",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "recipeId",
+        "recipeName",
+        "sequenceNo",
+        "controlledDocumentId",
+        "controlledDocumentName",
+        "fileRole",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "recipeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_recipe._id: the parent document this one belongs to"
+        },
+        "recipeName": {
+          "bsonType": "string",
+          "description": "Display value of recipeId, copied from u_mes_prod_recipe.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "controlledDocumentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_controlledDocument._id"
+        },
+        "controlledDocumentName": {
+          "bsonType": "string",
+          "description": "Display value of controlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "fileRole": {
+          "bsonType": "string",
+          "description": "What the file is used for",
+          "enum": [
+            "Program File",
+            "Golden Image",
+            "Reference Curve",
+            "Parameter Export",
+            "Process Specification",
+            "Product Drawing",
+            "Verification Record"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

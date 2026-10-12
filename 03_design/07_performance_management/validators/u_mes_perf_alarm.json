@@ -33,6 +33,24 @@
         "downtimeEventId",
         "downtimeEventName",
         "actionTaken",
+        "alarmDefinitionId",
+        "alarmDefinitionName",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
+        "shiftId",
+        "shiftName",
+        "productionDate",
+        "wipUnitId",
+        "wipUnitName",
+        "blocksRestart",
+        "restartAuthorizedById",
+        "restartAuthorizedBy",
+        "restartAuthorizedAt",
+        "closureReasonCodeId",
+        "closureReasonCodeName",
+        "escalationLevel",
         "status",
         "schemaVersion",
         "createdAt",
@@ -200,6 +218,126 @@
             "null"
           ],
           "description": "Action taken"
+        },
+        "alarmDefinitionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_alarmDefinition._id"
+        },
+        "alarmDefinitionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of alarmDefinitionId, copied from u_mes_perf_alarmDefinition.recordNo"
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "shiftId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "productionDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Production date"
+        },
+        "wipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo"
+        },
+        "blocksRestart": {
+          "bsonType": "bool",
+          "description": "True when restart needs authorisation (copied from the definition)"
+        },
+        "restartAuthorizedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'restart authorized'"
+        },
+        "restartAuthorizedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in restartAuthorizedById, copied from u_mes_mast_user.fullName"
+        },
+        "restartAuthorizedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the restart authorisation"
+        },
+        "closureReasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: closure reason code"
+        },
+        "closureReasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of closureReasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "escalationLevel": {
+          "bsonType": "int",
+          "description": "Escalation level reached (0 = not escalated)"
         },
         "status": {
           "bsonType": "string",

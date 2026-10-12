@@ -35,6 +35,13 @@
         "downtimeEventName",
         "description",
         "resolutionText",
+        "equipmentId",
+        "equipmentName",
+        "severityClass",
+        "maintenanceWorkOrderId",
+        "maintenanceWorkOrderName",
+        "escalationRuleId",
+        "escalationRuleName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -198,6 +205,58 @@
             "null"
           ],
           "description": "Resolution text"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "severityClass": {
+          "bsonType": "string",
+          "description": "Severity of the call",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            "Critical"
+          ]
+        },
+        "maintenanceWorkOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_maintenanceWorkOrder._id"
+        },
+        "maintenanceWorkOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of maintenanceWorkOrderId, copied from u_mes_maint_maintenanceWorkOrder.title"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
         },
         "status": {
           "bsonType": "string",

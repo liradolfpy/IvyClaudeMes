@@ -116,14 +116,21 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 37 | responseMinutes | Int32 | - |  |
 | 38 | repairMinutes | Int32 | - |  |
 | 39 | unitsLost | Int32 | - |  |
-| 40 | status | String | - |  |
-| 41 | schemaVersion | Int32 | - |  |
-| 42 | createdAt | Date | Datetime |  |
-| 43 | createdById | String | - | u_mes_mast_user._id |
-| 44 | createdBy | String | - |  |
-| 45 | updatedAt | Date | Datetime |  |
-| 46 | updatedById | String | - | u_mes_mast_user._id |
-| 47 | updatedBy | String | - |  |
+| 40 | captureSource | String | - |  |
+| 41 | equipmentStateId | String | - | u_mes_perf_equipmentState._id |
+| 42 | equipmentStateName | String | - |  |
+| 43 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 44 | productVariantName | String | - |  |
+| 45 | capaId | String | - | u_mes_qual_capa._id |
+| 46 | capaName | String | - |  |
+| 47 | status | String | - |  |
+| 48 | schemaVersion | Int32 | - |  |
+| 49 | createdAt | Date | Datetime |  |
+| 50 | createdById | String | - | u_mes_mast_user._id |
+| 51 | createdBy | String | - |  |
+| 52 | updatedAt | Date | Datetime |  |
+| 53 | updatedById | String | - | u_mes_mast_user._id |
+| 54 | updatedBy | String | - |  |
 
 ## u_mes_perf_downtimeEventComment
 
@@ -299,8 +306,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 24 | historise | Boolean | - |  |
 | 25 | retentionDays | Int32 | - |  |
 | 26 | aggregation | String | - |  |
-| 27 | status | String | - |  |
-| 28 | schemaVersion | Int32 | - |  |
+| 27 | areaId | String | - | u_mes_mast_area._id |
+| 28 | areaName | String | - |  |
+| 29 | lineId | String | - | u_mes_mast_line._id |
+| 30 | lineName | String | - |  |
+| 31 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 32 | workCenterName | String | - |  |
+| 33 | status | String | - |  |
+| 34 | schemaVersion | Int32 | - |  |
 
 ## u_mes_perf_processReading
 
@@ -325,13 +338,18 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 15 | lotId | String | - | u_mes_plan_lot._id |
 | 16 | lotName | String | - |  |
 | 17 | inLimits | Boolean | - |  |
-| 18 | schemaVersion | Int32 | - |  |
-| 19 | createdAt | Date | Datetime |  |
-| 20 | createdById | String | - | u_mes_mast_user._id |
-| 21 | createdBy | String | - |  |
-| 22 | updatedAt | Date | Datetime |  |
-| 23 | updatedById | String | - | u_mes_mast_user._id |
-| 24 | updatedBy | String | - |  |
+| 18 | areaId | String | - | u_mes_mast_area._id |
+| 19 | areaName | String | - |  |
+| 20 | shiftId | String | - | u_mes_mast_shift._id |
+| 21 | shiftName | String | - |  |
+| 22 | productionDate | Date | Date |  |
+| 23 | schemaVersion | Int32 | - |  |
+| 24 | createdAt | Date | Datetime |  |
+| 25 | createdById | String | - | u_mes_mast_user._id |
+| 26 | createdBy | String | - |  |
+| 27 | updatedAt | Date | Datetime |  |
+| 28 | updatedById | String | - | u_mes_mast_user._id |
+| 29 | updatedBy | String | - |  |
 
 ## u_mes_perf_alarm
 
@@ -367,14 +385,32 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 26 | downtimeEventId | String | - | u_mes_perf_downtimeEvent._id |
 | 27 | downtimeEventName | String | - |  |
 | 28 | actionTaken | String | - |  |
-| 29 | status | String | - |  |
-| 30 | schemaVersion | Int32 | - |  |
-| 31 | createdAt | Date | Datetime |  |
-| 32 | createdById | String | - | u_mes_mast_user._id |
-| 33 | createdBy | String | - |  |
-| 34 | updatedAt | Date | Datetime |  |
-| 35 | updatedById | String | - | u_mes_mast_user._id |
-| 36 | updatedBy | String | - |  |
+| 29 | alarmDefinitionId | String | - | u_mes_perf_alarmDefinition._id |
+| 30 | alarmDefinitionName | String | - |  |
+| 31 | lineId | String | - | u_mes_mast_line._id |
+| 32 | lineName | String | - |  |
+| 33 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 34 | workCenterName | String | - |  |
+| 35 | shiftId | String | - | u_mes_mast_shift._id |
+| 36 | shiftName | String | - |  |
+| 37 | productionDate | Date | Date |  |
+| 38 | wipUnitId | String | - | u_mes_plan_wipUnit._id |
+| 39 | wipUnitName | String | - |  |
+| 40 | blocksRestart | Boolean | - |  |
+| 41 | restartAuthorizedById | String | - | u_mes_mast_user._id |
+| 42 | restartAuthorizedBy | String | - |  |
+| 43 | restartAuthorizedAt | Date | Datetime |  |
+| 44 | closureReasonCodeId | String | - | u_mes_perf_reasonCode._id |
+| 45 | closureReasonCodeName | String | - |  |
+| 46 | escalationLevel | Int32 | - |  |
+| 47 | status | String | - |  |
+| 48 | schemaVersion | Int32 | - |  |
+| 49 | createdAt | Date | Datetime |  |
+| 50 | createdById | String | - | u_mes_mast_user._id |
+| 51 | createdBy | String | - |  |
+| 52 | updatedAt | Date | Datetime |  |
+| 53 | updatedById | String | - | u_mes_mast_user._id |
+| 54 | updatedBy | String | - |  |
 
 ## u_mes_perf_torqueResult
 
@@ -420,14 +456,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 36 | curveControlledDocumentName | String | - |  |
 | 37 | tightenedAt | Date | Datetime |  |
 | 38 | controllerResultNo | String | - |  |
-| 39 | status | String | - |  |
-| 40 | schemaVersion | Int32 | - |  |
-| 41 | createdAt | Date | Datetime |  |
-| 42 | createdById | String | - | u_mes_mast_user._id |
-| 43 | createdBy | String | - |  |
-| 44 | updatedAt | Date | Datetime |  |
-| 45 | updatedById | String | - | u_mes_mast_user._id |
-| 46 | updatedBy | String | - |  |
+| 39 | curveEnvelopeId | String | - | u_mes_qual_curveEnvelope._id |
+| 40 | curveEnvelopeName | String | - |  |
+| 41 | measurementCurveId | String | - | u_mes_qual_measurementCurve._id |
+| 42 | measurementCurveName | String | - |  |
+| 43 | envelopeResult | String | - |  |
+| 44 | status | String | - |  |
+| 45 | schemaVersion | Int32 | - |  |
+| 46 | createdAt | Date | Datetime |  |
+| 47 | createdById | String | - | u_mes_mast_user._id |
+| 48 | createdBy | String | - |  |
+| 49 | updatedAt | Date | Datetime |  |
+| 50 | updatedById | String | - | u_mes_mast_user._id |
+| 51 | updatedBy | String | - |  |
 
 ## u_mes_perf_leakTestResult
 
@@ -462,14 +503,16 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 25 | verdict | String | - |  |
 | 26 | failureReason | String | - |  |
 | 27 | testedAt | Date | Datetime |  |
-| 28 | status | String | - |  |
-| 29 | schemaVersion | Int32 | - |  |
-| 30 | createdAt | Date | Datetime |  |
-| 31 | createdById | String | - | u_mes_mast_user._id |
-| 32 | createdBy | String | - |  |
-| 33 | updatedAt | Date | Datetime |  |
-| 34 | updatedById | String | - | u_mes_mast_user._id |
-| 35 | updatedBy | String | - |  |
+| 28 | measurementCurveId | String | - | u_mes_qual_measurementCurve._id |
+| 29 | measurementCurveName | String | - |  |
+| 30 | status | String | - |  |
+| 31 | schemaVersion | Int32 | - |  |
+| 32 | createdAt | Date | Datetime |  |
+| 33 | createdById | String | - | u_mes_mast_user._id |
+| 34 | createdBy | String | - |  |
+| 35 | updatedAt | Date | Datetime |  |
+| 36 | updatedById | String | - | u_mes_mast_user._id |
+| 37 | updatedBy | String | - |  |
 
 ## u_mes_perf_leakTestResultStage
 
@@ -594,3 +637,148 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 9 | sequenceNo | Int32 | - |  |
 | 10 | status | String | - |  |
 | 11 | schemaVersion | Int32 | - |  |
+
+## u_mes_perf_alarmDefinition
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | equipmentTypeId | String | - | u_mes_mast_equipmentType._id |
+| 6 | equipmentTypeName | String | - |  |
+| 7 | alarmCode | String | - |  |
+| 8 | alarmText | String | - |  |
+| 9 | alarmClass | String | - |  |
+| 10 | severityClass | String | - |  |
+| 11 | blocksRestart | Boolean | - |  |
+| 12 | authorizingRoleId | String | - | u_mes_mast_role._id |
+| 13 | authorizingRoleName | String | - |  |
+| 14 | defaultReasonCodeId | String | - | u_mes_perf_reasonCode._id |
+| 15 | defaultReasonCodeName | String | - |  |
+| 16 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
+| 17 | escalationRuleName | String | - |  |
+| 18 | createsDowntime | Boolean | - |  |
+| 19 | responseInstruction | String | - |  |
+| 20 | status | String | - |  |
+| 21 | schemaVersion | Int32 | - |  |
+
+## u_mes_perf_lossSummary
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | lineId | String | - | u_mes_mast_line._id |
+| 6 | lineName | String | - |  |
+| 7 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 8 | workCenterName | String | - |  |
+| 9 | shiftId | String | - | u_mes_mast_shift._id |
+| 10 | shiftName | String | - |  |
+| 11 | productionDate | Date | Date |  |
+| 12 | lossCategoryId | String | - | u_mes_perf_lossCategory._id |
+| 13 | lossCategoryName | String | - |  |
+| 14 | reasonCodeId | String | - | u_mes_perf_reasonCode._id |
+| 15 | reasonCodeName | String | - |  |
+| 16 | isPlanned | Boolean | - |  |
+| 17 | occurrenceCount | Int32 | - |  |
+| 18 | lossMinutes | Int32 | - |  |
+| 19 | lossUnits | Int32 | - |  |
+| 20 | lossPctOfPlannedTime | Decimal128 | - |  |
+| 21 | paretoRank | Int32 | - |  |
+| 22 | cumulativePct | Decimal128 | - |  |
+| 23 | maintenanceWorkOrderCount | Int32 | - |  |
+| 24 | capaCount | Int32 | - |  |
+| 25 | calculatedAt | Date | Datetime |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
+| 28 | createdAt | Date | Datetime |  |
+| 29 | createdById | String | - | u_mes_mast_user._id |
+| 30 | createdBy | String | - |  |
+| 31 | updatedAt | Date | Datetime |  |
+| 32 | updatedById | String | - | u_mes_mast_user._id |
+| 33 | updatedBy | String | - |  |
+
+## u_mes_perf_workCenterPerformance
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 6 | workCenterName | String | - |  |
+| 7 | lineId | String | - | u_mes_mast_line._id |
+| 8 | lineName | String | - |  |
+| 9 | shiftId | String | - | u_mes_mast_shift._id |
+| 10 | shiftName | String | - |  |
+| 11 | productionDate | Date | Date |  |
+| 12 | periodStartAt | Date | Datetime |  |
+| 13 | periodEndAt | Date | Datetime |  |
+| 14 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 15 | productVariantName | String | - |  |
+| 16 | unitsCompleted | Int32 | - |  |
+| 17 | throughputPerHour | Decimal128 | - |  |
+| 18 | averageCycleTimeSec | Decimal128 | - |  |
+| 19 | taktTimeSec | Decimal128 | - |  |
+| 20 | taktBreachCount | Int32 | - |  |
+| 21 | wipQuantity | Int32 | - |  |
+| 22 | blockedMinutes | Decimal128 | - |  |
+| 23 | starvedMinutes | Decimal128 | - |  |
+| 24 | isConstraint | Boolean | - |  |
+| 25 | rankInLine | Int32 | - |  |
+| 26 | calculatedAt | Date | Datetime |  |
+| 27 | status | String | - |  |
+| 28 | schemaVersion | Int32 | - |  |
+| 29 | createdAt | Date | Datetime |  |
+| 30 | createdById | String | - | u_mes_mast_user._id |
+| 31 | createdBy | String | - |  |
+| 32 | updatedAt | Date | Datetime |  |
+| 33 | updatedById | String | - | u_mes_mast_user._id |
+| 34 | updatedBy | String | - |  |
+
+## u_mes_perf_operatorPerformance
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | userId | String | - | u_mes_mast_user._id |
+| 6 | userName | String | - |  |
+| 7 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 8 | workCenterName | String | - |  |
+| 9 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 10 | productVariantName | String | - |  |
+| 11 | shiftId | String | - | u_mes_mast_shift._id |
+| 12 | shiftName | String | - |  |
+| 13 | productionDate | Date | Date |  |
+| 14 | attendedMinutes | Decimal128 | - |  |
+| 15 | earnedMinutes | Decimal128 | - |  |
+| 16 | efficiencyPct | Decimal128 | - |  |
+| 17 | goodQuantity | Int32 | - |  |
+| 18 | rejectQuantity | Int32 | - |  |
+| 19 | errorCount | Int32 | - |  |
+| 20 | interlockCount | Int32 | - |  |
+| 21 | calculatedAt | Date | Datetime |  |
+| 22 | status | String | - |  |
+| 23 | schemaVersion | Int32 | - |  |
+| 24 | createdAt | Date | Datetime |  |
+| 25 | createdById | String | - | u_mes_mast_user._id |
+| 26 | createdBy | String | - |  |
+| 27 | updatedAt | Date | Datetime |  |
+| 28 | updatedById | String | - | u_mes_mast_user._id |
+| 29 | updatedBy | String | - |  |

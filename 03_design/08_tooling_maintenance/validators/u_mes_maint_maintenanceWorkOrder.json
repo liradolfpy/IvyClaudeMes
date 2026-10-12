@@ -40,6 +40,19 @@
         "equipmentReleasedBy",
         "equipmentReleasedAt",
         "followUpRequired",
+        "shiftId",
+        "shiftName",
+        "rootCauseCodeId",
+        "rootCauseCodeName",
+        "closureApprovedById",
+        "closureApprovedBy",
+        "closureApprovedAt",
+        "andonEventId",
+        "andonEventName",
+        "priorityScore",
+        "schedulingSource",
+        "slaResponseDueAt",
+        "slaRepairDueAt",
         "status",
         "schemaVersion",
         "createdAt",
@@ -245,6 +258,99 @@
         "followUpRequired": {
           "bsonType": "bool",
           "description": "True when: follow up required"
+        },
+        "shiftId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "rootCauseCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: root cause code"
+        },
+        "rootCauseCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of rootCauseCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "closureApprovedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'closure approved'"
+        },
+        "closureApprovedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in closureApprovedById, copied from u_mes_mast_user.fullName"
+        },
+        "closureApprovedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the closure approval"
+        },
+        "andonEventId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_andonEvent._id"
+        },
+        "andonEventName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of andonEventId, copied from u_mes_plan_andonEvent.description"
+        },
+        "priorityScore": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Priority score from criticality, due risk and production impact (0 to 100)"
+        },
+        "schedulingSource": {
+          "bsonType": "string",
+          "description": "How the work order was prioritised and scheduled",
+          "enum": [
+            "Manual",
+            "Rule",
+            "Model"
+          ]
+        },
+        "slaResponseDueAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time by which a technician must respond"
+        },
+        "slaRepairDueAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time by which the repair must be complete"
         },
         "status": {
           "bsonType": "string",

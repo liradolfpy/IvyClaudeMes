@@ -40,6 +40,8 @@
         "purchasedAt",
         "isMasterGauge",
         "blockedForUse",
+        "equipmentId",
+        "equipmentName",
         "status",
         "schemaVersion"
       ],
@@ -221,6 +223,20 @@
         "blockedForUse": {
           "bsonType": "bool",
           "description": "True when: blocked for use"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
         },
         "status": {
           "bsonType": "string",

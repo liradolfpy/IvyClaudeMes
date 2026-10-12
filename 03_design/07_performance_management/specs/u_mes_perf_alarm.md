@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 36 (23 required, 13 may be null) |
+| Keys | 54 (25 required, 29 may be null) |
 | Estimated volume per year | ~500,000 |
 | Storage | standard |
 
@@ -51,14 +51,32 @@ Every key is present in every document. "Required" means the value may not be nu
 | 26 | downtimeEventId | String | - | No (null allowed) | Reference to u_mes_perf_downtimeEvent._id | `"1205000000000001"` | Reference: u_mes_perf_downtimeEvent._id |
 | 27 | downtimeEventName | String | - | No (null allowed) | Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo | `"DT-2026-000196"` |  |
 | 28 | actionTaken | String | - | No (null allowed) | Action taken | `"Ejector pin polished and die coat thickness corrected"` |  |
-| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Acknowledged; Cleared |
-| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 31 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 32 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 33 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 34 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 35 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 36 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 29 | alarmDefinitionId | String | - | No (null allowed) | Reference to u_mes_perf_alarmDefinition._id | `"1324000000000001"` | Reference: u_mes_perf_alarmDefinition._id |
+| 30 | alarmDefinitionName | String | - | No (null allowed) | Display value of alarmDefinitionId, copied from u_mes_perf_alarmDefinition.recordNo | `"ALD-GDC-A2031"` |  |
+| 31 | lineId | String | - | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 32 | lineName | String | - | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 33 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 34 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 35 | shiftId | String | - | No (null allowed) | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
+| 36 | shiftName | String | - | No (null allowed) | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
+| 37 | productionDate | Date | Date | No (null allowed) | Production date | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
+| 38 | wipUnitId | String | - | No (null allowed) | Reference to u_mes_plan_wipUnit._id | `null` | Reference: u_mes_plan_wipUnit._id |
+| 39 | wipUnitName | String | - | No (null allowed) | Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo | `null` |  |
+| 40 | blocksRestart | Boolean | - | Yes | True when restart needs authorisation (copied from the definition) | `true` |  |
+| 41 | restartAuthorizedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'restart authorized' | `null` | Reference: u_mes_mast_user._id |
+| 42 | restartAuthorizedBy | String | - | No (null allowed) | Display name of the user in restartAuthorizedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 43 | restartAuthorizedAt | Date | Datetime | No (null allowed) | Time of the restart authorisation | `null` |  |
+| 44 | closureReasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id: closure reason code | `null` | Reference: u_mes_perf_reasonCode._id |
+| 45 | closureReasonCodeName | String | - | No (null allowed) | Display value of closureReasonCodeId, copied from u_mes_perf_reasonCode.name | `null` |  |
+| 46 | escalationLevel | Int32 | - | Yes | Escalation level reached (0 = not escalated) | `NumberInt(1)` |  |
+| 47 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Acknowledged; Cleared |
+| 48 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 49 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 50 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 51 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 52 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 53 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 54 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 

@@ -77,7 +77,8 @@
           "description": "Direction of the ERP message",
           "enum": [
             "Inbound",
-            "Outbound"
+            "Outbound",
+            "Publish"
           ]
         },
         "messageType": {

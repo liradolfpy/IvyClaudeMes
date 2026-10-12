@@ -1,0 +1,192 @@
+{
+  "collMod": "u_mes_maint_sparePartTransaction",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_sparePartTransaction",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "sparePartId",
+        "sparePartName",
+        "transactionType",
+        "quantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "maintenanceWorkOrderId",
+        "maintenanceWorkOrderName",
+        "equipmentId",
+        "equipmentName",
+        "storageLocationId",
+        "storageLocationName",
+        "scanVerified",
+        "unitCostInr",
+        "transactedAt",
+        "transactedById",
+        "transactedBy",
+        "erpDocumentNo",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "sparePartId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_maint_sparePart._id"
+        },
+        "sparePartName": {
+          "bsonType": "string",
+          "description": "Display value of sparePartId, copied from u_mes_maint_sparePart.description"
+        },
+        "transactionType": {
+          "bsonType": "string",
+          "description": "Transaction type",
+          "enum": [
+            "Issue",
+            "Return",
+            "Receipt",
+            "Adjustment",
+            "Scrap"
+          ]
+        },
+        "quantity": {
+          "bsonType": "decimal",
+          "description": "Quantity (positive)"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "maintenanceWorkOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_maintenanceWorkOrder._id"
+        },
+        "maintenanceWorkOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of maintenanceWorkOrderId, copied from u_mes_maint_maintenanceWorkOrder.title"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "storageLocationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_storageLocation._id"
+        },
+        "storageLocationName": {
+          "bsonType": "string",
+          "description": "Display value of storageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "scanVerified": {
+          "bsonType": "bool",
+          "description": "Part barcode scanned"
+        },
+        "unitCostInr": {
+          "bsonType": "decimal",
+          "description": "Unit cost in INR"
+        },
+        "transactedAt": {
+          "bsonType": "date",
+          "description": "Transaction time"
+        },
+        "transactedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'transacted'"
+        },
+        "transactedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in transactedById, copied from u_mes_mast_user.fullName"
+        },
+        "erpDocumentNo": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "ERP document number"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Posted",
+            "Reversed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

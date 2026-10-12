@@ -13,6 +13,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(1),
+    targetRepairSec: NumberInt(1800),
+    escalationRuleId: "1334000000000003",
+    escalationRuleName: "Quality andon not acknowledged",
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -28,6 +31,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(2),
+    targetRepairSec: NumberInt(1200),
+    escalationRuleId: "1334000000000009",
+    escalationRuleName: "Line-side material shortage",
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -43,6 +49,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(3),
+    targetRepairSec: NumberInt(3600),
+    escalationRuleId: "1334000000000002",
+    escalationRuleName: "Breakdown, all lines",
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -58,6 +67,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(4),
+    targetRepairSec: NumberInt(600),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -73,6 +85,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(5),
+    targetRepairSec: NumberInt(900),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -88,6 +103,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(6),
+    targetRepairSec: NumberInt(1800),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -103,6 +121,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(7),
+    targetRepairSec: NumberInt(2700),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -118,6 +139,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(8),
+    targetRepairSec: NumberInt(1800),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -133,6 +157,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(9),
+    targetRepairSec: NumberInt(600),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -148,6 +175,9 @@ db.getCollection("u_mes_plan_andonType").insertMany([
     responsibleDepartmentName: "Production",
     targetResponseSec: NumberInt(300),
     sequenceNo: NumberInt(10),
+    targetRepairSec: NumberInt(1200),
+    escalationRuleId: null,
+    escalationRuleName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   }

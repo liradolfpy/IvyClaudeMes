@@ -1,30 +1,30 @@
 # Collection type matrix
 
-Model version 2.5 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
 
 Type of each collection and the label used for it in the UI menu. A child, relationship or value-list collection has the type of the entity it belongs to; its label starts with the parent's name, because it is opened from the parent's screen.
 
 | Type | Meaning | Collections |
 |---|---|---|
-| Master | Reference data that changes rarely and is maintained by the plant | 162 |
-| Transaction | Business records created by daily operations | 122 |
-| Reports | Pre-aggregated or assembled records built from transactions for reporting | 7 |
-| Telemetry | Machine-generated, time-ordered signals and states | 4 |
+| Master | Reference data that changes rarely and is maintained by the plant | 183 |
+| Transaction | Business records created by daily operations | 139 |
+| Reports | Pre-aggregated or assembled records built from transactions for reporting | 12 |
+| Telemetry | Machine-generated, time-ordered signals and states | 5 |
 | Audit Trail | Append-only records of who did or changed what | 4 |
 
 ## Collections per module and type
 
 | Code | ModuleName | Master | Transaction | Reports | Telemetry | Audit Trail | Total |
 |---|---|---|---|---|---|---|---|
-| mast | Master Data Management | 53 | 3 | 0 | 0 | 0 | 56 |
-| prod | Product Definition | 40 | 5 | 0 | 0 | 0 | 45 |
-| plan | Planning and Execution | 3 | 33 | 0 | 0 | 0 | 36 |
-| matl | Material Management | 8 | 14 | 0 | 0 | 0 | 22 |
-| trac | Traceability | 0 | 3 | 4 | 0 | 0 | 7 |
-| qual | Quality Management | 23 | 46 | 0 | 0 | 0 | 69 |
-| perf | Performance Management | 5 | 5 | 3 | 4 | 0 | 17 |
-| maint | Tooling & Maintenance | 9 | 5 | 0 | 0 | 0 | 14 |
-| syst | System and Integration | 18 | 5 | 0 | 0 | 4 | 27 |
+| mast | Master Data Management | 54 | 3 | 0 | 0 | 0 | 57 |
+| prod | Product Definition | 44 | 5 | 0 | 0 | 0 | 49 |
+| plan | Planning and Execution | 3 | 39 | 0 | 0 | 0 | 42 |
+| matl | Material Management | 10 | 15 | 1 | 0 | 0 | 26 |
+| trac | Traceability | 0 | 5 | 4 | 0 | 0 | 9 |
+| qual | Quality Management | 28 | 48 | 0 | 1 | 0 | 77 |
+| perf | Performance Management | 6 | 5 | 6 | 4 | 0 | 21 |
+| maint | Tooling & Maintenance | 9 | 8 | 1 | 0 | 0 | 18 |
+| syst | System and Integration | 26 | 8 | 0 | 0 | 4 | 38 |
 | ehs | Environment Health and Safety | 3 | 3 | 0 | 0 | 0 | 6 |
 
 ## Matrix
@@ -87,6 +87,7 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | mast | Master Data Management | u_mes_mast_language | Master | Languages |
 | mast | Master Data Management | u_mes_mast_transporter | Master | Transporters |
 | mast | Master Data Management | u_mes_mast_commodity | Master | Commodities |
+| mast | Master Data Management | u_mes_mast_roleRequiredSkill | Master | Role Required Skills |
 | prod | Product Definition | u_mes_prod_item | Master | Items |
 | prod | Product Definition | u_mes_prod_itemRevision | Master | Item Revisions |
 | prod | Product Definition | u_mes_prod_itemCustomerPart | Master | Item Customer Parts |
@@ -132,6 +133,10 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | prod | Product Definition | u_mes_prod_padCompound | Master | Pad Compounds |
 | prod | Product Definition | u_mes_prod_surfaceFinish | Master | Surface Finishes |
 | prod | Product Definition | u_mes_prod_vehicleModel | Master | Vehicle Models |
+| prod | Product Definition | u_mes_prod_recipeProductVariant | Master | Recipe Variants |
+| prod | Product Definition | u_mes_prod_recipeControlledDocument | Master | Recipe Reference Files |
+| prod | Product Definition | u_mes_prod_workInstructionWorkCenter | Master | Work Instruction Stations |
+| prod | Product Definition | u_mes_prod_workInstructionProductVariant | Master | Work Instruction Variants |
 | plan | Planning and Execution | u_mes_plan_customerSchedule | Transaction | Customer Schedules |
 | plan | Planning and Execution | u_mes_plan_customerScheduleLine | Transaction | Customer Schedule Lines |
 | plan | Planning and Execution | u_mes_plan_productionOrder | Transaction | Production Orders |
@@ -168,6 +173,12 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | plan | Planning and Execution | u_mes_plan_indirectActivity | Master | Indirect Activities |
 | plan | Planning and Execution | u_mes_plan_containerType | Master | Container Types |
 | plan | Planning and Execution | u_mes_plan_andonType | Master | Andon Types |
+| plan | Planning and Execution | u_mes_plan_operatorSession | Transaction | Operator Sessions |
+| plan | Planning and Execution | u_mes_plan_documentAcknowledgement | Transaction | Document Acknowledgements |
+| plan | Planning and Execution | u_mes_plan_interlockEvent | Transaction | Interlock Events |
+| plan | Planning and Execution | u_mes_plan_recipeDownload | Transaction | Recipe Downloads |
+| plan | Planning and Execution | u_mes_plan_setupVerification | Transaction | Setup Verifications |
+| plan | Planning and Execution | u_mes_plan_setupVerificationItem | Transaction | Setup Verification Items |
 | matl | Material Management | u_mes_matl_storageLocation | Master | Storage Locations |
 | matl | Material Management | u_mes_matl_inventoryBalance | Transaction | Inventory Balances |
 | matl | Material Management | u_mes_matl_materialMovement | Transaction | Material Movements |
@@ -190,6 +201,10 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | matl | Material Management | u_mes_matl_movementType | Master | Movement Types |
 | matl | Material Management | u_mes_matl_stockStatus | Master | Stock Statuses |
 | matl | Material Management | u_mes_matl_packType | Master | Pack Types |
+| matl | Material Management | u_mes_matl_exposureTimer | Transaction | Exposure Timers |
+| matl | Material Management | u_mes_matl_replenishmentRule | Master | Replenishment Rules |
+| matl | Material Management | u_mes_matl_materialDemandForecast | Reports | Material Demand Forecast |
+| matl | Material Management | u_mes_matl_storageLocationAllowedItem | Master | Storage Allowed Items |
 | trac | Traceability | u_mes_trac_serialNumber | Transaction | Serial Numbers |
 | trac | Traceability | u_mes_trac_genealogyLink | Transaction | Genealogy Links |
 | trac | Traceability | u_mes_trac_componentLotLink | Transaction | Component Lot Links |
@@ -197,6 +212,8 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | trac | Traceability | u_mes_trac_asBuiltRecordComponent | Reports | As-Built Record Components |
 | trac | Traceability | u_mes_trac_asBuiltRecordOperation | Reports | As-Built Record Operations |
 | trac | Traceability | u_mes_trac_asBuiltRecordInspectionResult | Reports | As-Built Record Inspection Results |
+| trac | Traceability | u_mes_trac_traceInvestigation | Transaction | Trace Investigations |
+| trac | Traceability | u_mes_trac_traceInvestigationResult | Transaction | Trace Investigation Results |
 | qual | Quality Management | u_mes_qual_characteristic | Master | Characteristics |
 | qual | Quality Management | u_mes_qual_controlPlan | Master | Control Plans |
 | qual | Quality Management | u_mes_qual_controlPlanCoreTeamUser | Master | Control Plan Core Team |
@@ -266,6 +283,14 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | qual | Quality Management | u_mes_qual_gaugeType | Master | Gauge Types |
 | qual | Quality Management | u_mes_qual_dispositionType | Master | Disposition Types |
 | qual | Quality Management | u_mes_qual_complaintType | Master | Complaint Types |
+| qual | Quality Management | u_mes_qual_characteristicPosition | Master | Characteristic Positions |
+| qual | Quality Management | u_mes_qual_curveEnvelope | Master | Curve Envelopes |
+| qual | Quality Management | u_mes_qual_curveEnvelopeWindow | Master | Curve Envelope Windows |
+| qual | Quality Management | u_mes_qual_measurementCurve | Transaction | Measurement Curves |
+| qual | Quality Management | u_mes_qual_measurementCurvePoint | Telemetry | Measurement Curve Points |
+| qual | Quality Management | u_mes_qual_defectRecord | Transaction | Defect Records |
+| qual | Quality Management | u_mes_qual_auditSchedule | Master | Audit Schedules |
+| qual | Quality Management | u_mes_qual_inspectionPlanProductVariant | Master | Inspection Plan Variants |
 | perf | Performance Management | u_mes_perf_reasonCode | Master | Reason Codes |
 | perf | Performance Management | u_mes_perf_equipmentState | Telemetry | Equipment States |
 | perf | Performance Management | u_mes_perf_downtimeEvent | Transaction | Downtime Events |
@@ -283,6 +308,10 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | perf | Performance Management | u_mes_perf_lossCategory | Master | Loss Categories |
 | perf | Performance Management | u_mes_perf_reasonCategory | Master | Reason Categories |
 | perf | Performance Management | u_mes_perf_energyType | Master | Energy Types |
+| perf | Performance Management | u_mes_perf_alarmDefinition | Master | Alarm Definitions |
+| perf | Performance Management | u_mes_perf_lossSummary | Reports | Loss Summary |
+| perf | Performance Management | u_mes_perf_workCenterPerformance | Reports | Station Performance |
+| perf | Performance Management | u_mes_perf_operatorPerformance | Reports | Operator Performance |
 | maint | Tooling & Maintenance | u_mes_maint_maintenancePlan | Master | Maintenance Plans |
 | maint | Tooling & Maintenance | u_mes_maint_maintenancePlanTask | Master | Maintenance Plan Tasks |
 | maint | Tooling & Maintenance | u_mes_maint_maintenancePlanRequiredSkill | Master | Maintenance Plan Required Skills |
@@ -297,6 +326,10 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | maint | Tooling & Maintenance | u_mes_maint_toolItem | Master | Tool Applicable Items |
 | maint | Tooling & Maintenance | u_mes_maint_toolLifeRecord | Transaction | Tool Life Records |
 | maint | Tooling & Maintenance | u_mes_maint_toolType | Master | Tool Types |
+| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderTask | Transaction | Work Order Checklist |
+| maint | Tooling & Maintenance | u_mes_maint_sparePartTransaction | Transaction | Spare Part Transactions |
+| maint | Tooling & Maintenance | u_mes_maint_reliabilitySummary | Reports | Reliability Summary |
+| maint | Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | Transaction | Equipment Lifecycle |
 | syst | System and Integration | u_mes_syst_erpMessage | Transaction | ERP Messages |
 | syst | System and Integration | u_mes_syst_integrationConnector | Master | Integration Connectors |
 | syst | System and Integration | u_mes_syst_integrationConnectorFunction | Master | Integration Connector Functions |
@@ -324,6 +357,17 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | syst | System and Integration | u_mes_syst_statusDefinition | Master | Status Definitions |
 | syst | System and Integration | u_mes_syst_enumerationValue | Master | Enumeration Values |
 | syst | System and Integration | u_mes_syst_statusTransition | Master | Status Transitions |
+| syst | System and Integration | u_mes_syst_interlockRule | Master | Interlock Rules |
+| syst | System and Integration | u_mes_syst_statusTransitionRole | Master | Status Transition Roles |
+| syst | System and Integration | u_mes_syst_escalationRule | Master | Escalation Rules |
+| syst | System and Integration | u_mes_syst_escalationRuleLevel | Master | Escalation Levels |
+| syst | System and Integration | u_mes_syst_alertRule | Master | Alert Rules |
+| syst | System and Integration | u_mes_syst_analyticsModel | Master | Analytics Models |
+| syst | System and Integration | u_mes_syst_modelPrediction | Transaction | Model Predictions |
+| syst | System and Integration | u_mes_syst_simulationStudy | Transaction | Simulation Studies |
+| syst | System and Integration | u_mes_syst_recordPolicy | Master | Record Policies |
+| syst | System and Integration | u_mes_syst_savedView | Master | Saved Views |
+| syst | System and Integration | u_mes_syst_backupRun | Transaction | Backup and Restore Runs |
 | ehs | Environment Health and Safety | u_mes_ehs_safetyIncident | Transaction | Safety Incidents |
 | ehs | Environment Health and Safety | u_mes_ehs_safetyIncidentWitnessUser | Transaction | Safety Incident Witnesses |
 | ehs | Environment Health and Safety | u_mes_ehs_safetyIncidentAction | Transaction | Safety Incident Actions |

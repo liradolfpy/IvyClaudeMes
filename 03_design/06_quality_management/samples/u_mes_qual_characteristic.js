@@ -32,6 +32,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.33"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(2),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -66,6 +67,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.67"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -100,6 +102,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.67"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(3),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -134,6 +137,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.33"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -168,6 +172,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.33"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(5),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -202,6 +207,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.33"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -236,6 +242,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.67"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -270,6 +277,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.67"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -304,6 +312,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.33"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -338,6 +347,7 @@ db.getCollection("u_mes_qual_characteristic").insertMany([
     targetCpk: NumberDecimal("1.33"),
     reactionPlan: "Stop, segregate parts since last good check, inform line leader, raise NCR",
     source: "MES Terminal",
+    positionCount: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
   }

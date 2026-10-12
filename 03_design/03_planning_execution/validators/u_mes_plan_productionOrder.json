@@ -44,6 +44,12 @@
         "closedById",
         "closedBy",
         "remarks",
+        "onHold",
+        "qualityHoldId",
+        "qualityHoldName",
+        "holdReasonCodeId",
+        "holdReasonCodeName",
+        "genealogyComplete",
         "status",
         "schemaVersion",
         "createdAt",
@@ -258,6 +264,42 @@
             "null"
           ],
           "description": "Remarks of the production order"
+        },
+        "onHold": {
+          "bsonType": "bool",
+          "description": "True while the order is on hold"
+        },
+        "qualityHoldId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_qualityHold._id"
+        },
+        "qualityHoldName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo"
+        },
+        "holdReasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: hold reason code"
+        },
+        "holdReasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of holdReasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "genealogyComplete": {
+          "bsonType": "bool",
+          "description": "True when every unit of the order has complete component genealogy (closure check)"
         },
         "status": {
           "bsonType": "string",

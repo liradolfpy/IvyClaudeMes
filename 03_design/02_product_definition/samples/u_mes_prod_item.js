@@ -35,6 +35,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051110100",
     defaultStorageLocationId: "1112000000000008",
     defaultStorageLocationName: "Finished goods rack 01",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -72,6 +75,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051110200",
     defaultStorageLocationId: "1112000000000008",
     defaultStorageLocationName: "Finished goods rack 01",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -109,6 +115,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051120110",
     defaultStorageLocationId: "1112000000000005",
     defaultStorageLocationName: "Line-side supermarket, machining",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -146,6 +155,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051120105",
     defaultStorageLocationId: "1112000000000004",
     defaultStorageLocationName: "Line-side store, foundry",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -183,6 +195,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051130010",
     defaultStorageLocationId: "1112000000000002",
     defaultStorageLocationName: "Warehouse A, rack 02, bin 14",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -220,6 +235,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051130020",
     defaultStorageLocationId: "1112000000000003",
     defaultStorageLocationName: "Warehouse A, rack 05, bin 03",
+    fefoRequired: true,
+    exposureControlled: true,
+    openLifeMinutes: NumberInt(480),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -257,6 +275,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051130030",
     defaultStorageLocationId: "1112000000000003",
     defaultStorageLocationName: "Warehouse A, rack 05, bin 03",
+    fefoRequired: true,
+    exposureControlled: true,
+    openLifeMinutes: NumberInt(720),
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -294,6 +315,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051130040",
     defaultStorageLocationId: "1112000000000002",
     defaultStorageLocationName: "Warehouse A, rack 02, bin 14",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -331,6 +355,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051130050",
     defaultStorageLocationId: "1112000000000003",
     defaultStorageLocationName: "Warehouse A, rack 05, bin 03",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -368,6 +395,9 @@ db.getCollection("u_mes_prod_item").insertMany([
     erpMaterialNo: "000000000051190356",
     defaultStorageLocationId: "1112000000000001",
     defaultStorageLocationName: "Raw material yard, ingot bay",
+    fefoRequired: false,
+    exposureControlled: false,
+    openLifeMinutes: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   }

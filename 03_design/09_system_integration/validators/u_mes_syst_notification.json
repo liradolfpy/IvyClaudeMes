@@ -29,6 +29,16 @@
         "acknowledgedBy",
         "acknowledgedAt",
         "expiresAt",
+        "alertRuleId",
+        "alertRuleName",
+        "escalationRuleId",
+        "escalationRuleName",
+        "responseDueAt",
+        "resolvedAt",
+        "resolvedById",
+        "resolvedBy",
+        "interlockEventId",
+        "interlockEventName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -171,6 +181,76 @@
             "null"
           ],
           "description": "Expires date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "alertRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_alertRule._id"
+        },
+        "alertRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of alertRuleId, copied from u_mes_syst_alertRule.name"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
+        },
+        "responseDueAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time by which the notification must be acknowledged"
+        },
+        "resolvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the underlying exception was resolved"
+        },
+        "resolvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'resolved'"
+        },
+        "resolvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in resolvedById, copied from u_mes_mast_user.fullName"
+        },
+        "interlockEventId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_interlockEvent._id"
+        },
+        "interlockEventName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo"
         },
         "status": {
           "bsonType": "string",

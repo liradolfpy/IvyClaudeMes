@@ -50,6 +50,23 @@
         "checksPreviousStepComplete",
         "nextStepNo",
         "remarks",
+        "productVariantId",
+        "productVariantName",
+        "recipeVersion",
+        "recipeChecksum",
+        "taktTimeSec",
+        "taktBreached",
+        "captureMethod",
+        "startScanCode",
+        "operatorSessionId",
+        "operatorSessionName",
+        "checksVariantVerified",
+        "checksDocumentAcknowledged",
+        "checksEquipmentReady",
+        "checksMaterialReleased",
+        "checksSetupVerified",
+        "checksEnvironmentOk",
+        "interlockEventCount",
         "status",
         "schemaVersion",
         "createdAt",
@@ -283,6 +300,103 @@
             "null"
           ],
           "description": "Remarks of the operation execution"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "recipeVersion": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Version of the recipe / program used"
+        },
+        "recipeChecksum": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Checksum of the program reported by the controller"
+        },
+        "taktTimeSec": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Takt time of the line at the time of the operation (seconds)"
+        },
+        "taktBreached": {
+          "bsonType": "bool",
+          "description": "True when the cycle time was above takt"
+        },
+        "captureMethod": {
+          "bsonType": "string",
+          "description": "How the start and completion were captured",
+          "enum": [
+            "Scan",
+            "PLC Signal",
+            "Manual Entry"
+          ]
+        },
+        "startScanCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Code scanned at operation start"
+        },
+        "operatorSessionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_operatorSession._id"
+        },
+        "operatorSessionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operatorSessionId, copied from u_mes_plan_operatorSession.recordNo"
+        },
+        "checksVariantVerified": {
+          "bsonType": "bool",
+          "description": "Variant check passed at start"
+        },
+        "checksDocumentAcknowledged": {
+          "bsonType": "bool",
+          "description": "Current work instruction revision acknowledged by the operator"
+        },
+        "checksEquipmentReady": {
+          "bsonType": "bool",
+          "description": "Equipment was production-ready at start"
+        },
+        "checksMaterialReleased": {
+          "bsonType": "bool",
+          "description": "All consumed lots were released (not held, not expired)"
+        },
+        "checksSetupVerified": {
+          "bsonType": "bool",
+          "description": "Set-up verification passed for the order"
+        },
+        "checksEnvironmentOk": {
+          "bsonType": "bool",
+          "description": "Environmental conditions of the station were within limits"
+        },
+        "interlockEventCount": {
+          "bsonType": "int",
+          "description": "Number of interlock events raised during the operation"
         },
         "status": {
           "bsonType": "string",

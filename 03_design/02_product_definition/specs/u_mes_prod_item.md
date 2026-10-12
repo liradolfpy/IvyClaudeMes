@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | description |
-| Keys | 35 (24 required, 11 may be null) |
+| Keys | 38 (26 required, 12 may be null) |
 | Estimated volume per year | 500-5,000 |
 | Storage | standard |
 
@@ -63,8 +63,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 31 | erpMaterialNo | String | - | Yes | ERP material number | `"000000000051110100"` |  |
 | 32 | defaultStorageLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: default storage location | `"1112000000000008"` | Reference: u_mes_matl_storageLocation._id |
 | 33 | defaultStorageLocationName | String | - | No (null allowed) | Display value of defaultStorageLocationId, copied from u_mes_matl_storageLocation.name | `"Finished goods rack 01"` |  |
-| 34 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Phase Out; Obsolete |
-| 35 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 34 | fefoRequired | Boolean | - | Yes | True when lots of the item must be issued first-expiry-first-out | `false` |  |
+| 35 | exposureControlled | Boolean | - | Yes | True when opened lots of the item run an exposure timer (pot life, open time) | `false` |  |
+| 36 | openLifeMinutes | Int32 | - | No (null allowed) | Allowed exposure after opening (minutes); null when not exposure-controlled | `null` |  |
+| 37 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Phase Out; Obsolete |
+| 38 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -84,7 +87,7 @@ Active, Phase Out, Obsolete. Initial state: Active. The values are maintained in
 
 ## Referenced by
 
-u_mes_mast_lineIdealRate, u_mes_mast_supplierSuppliedItem, u_mes_prod_itemRevision, u_mes_prod_itemCustomerPart, u_mes_prod_productVariant, u_mes_prod_billOfMaterial, u_mes_prod_billOfMaterialComponent, u_mes_prod_billOfMaterialComponentAlternateItem, u_mes_prod_routing, u_mes_prod_billOfProcess, u_mes_prod_billOfProcessStepConsumedComponent, u_mes_prod_workInstruction, u_mes_prod_recipe, u_mes_prod_engineeringChangeAffectedItem, u_mes_plan_customerScheduleLine, u_mes_plan_productionOrder, u_mes_plan_productionScheduleSlot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_plan_container, u_mes_plan_changeover, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_packagingSpecification, u_mes_matl_shipmentLine, u_mes_trac_serialNumber, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_trac_asBuiltRecord, u_mes_trac_asBuiltRecordComponent, u_mes_qual_characteristic, u_mes_qual_controlPlan, u_mes_qual_inspectionPlan, u_mes_qual_checkSheet, u_mes_qual_inspectionResult, u_mes_qual_spcChart, u_mes_qual_nonconformance, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_qualityHold, u_mes_qual_deviationPermit, u_mes_qual_capa, u_mes_qual_pfmea, u_mes_qual_ppapSubmission, u_mes_qual_msaStudy, u_mes_qual_customerComplaint, u_mes_perf_productionCount, u_mes_perf_oeeRecord, u_mes_maint_toolItem, u_mes_syst_controlledDocument, u_mes_syst_numberRange.
+u_mes_mast_lineIdealRate, u_mes_mast_supplierSuppliedItem, u_mes_prod_itemRevision, u_mes_prod_itemCustomerPart, u_mes_prod_productVariant, u_mes_prod_billOfMaterial, u_mes_prod_billOfMaterialComponent, u_mes_prod_billOfMaterialComponentAlternateItem, u_mes_prod_routing, u_mes_prod_billOfProcess, u_mes_prod_billOfProcessStepConsumedComponent, u_mes_prod_workInstruction, u_mes_prod_recipe, u_mes_prod_engineeringChangeAffectedItem, u_mes_plan_customerScheduleLine, u_mes_plan_productionOrder, u_mes_plan_productionScheduleSlot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_plan_container, u_mes_plan_changeover, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_packagingSpecification, u_mes_matl_shipmentLine, u_mes_trac_serialNumber, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_trac_asBuiltRecord, u_mes_trac_asBuiltRecordComponent, u_mes_qual_characteristic, u_mes_qual_controlPlan, u_mes_qual_inspectionPlan, u_mes_qual_checkSheet, u_mes_qual_inspectionResult, u_mes_qual_spcChart, u_mes_qual_nonconformance, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_qualityHold, u_mes_qual_deviationPermit, u_mes_qual_capa, u_mes_qual_pfmea, u_mes_qual_ppapSubmission, u_mes_qual_msaStudy, u_mes_qual_customerComplaint, u_mes_perf_productionCount, u_mes_perf_oeeRecord, u_mes_maint_toolItem, u_mes_maint_toolLifeRecord, u_mes_syst_controlledDocument, u_mes_syst_numberRange, u_mes_matl_exposureTimer, u_mes_matl_replenishmentRule, u_mes_matl_materialDemandForecast, u_mes_trac_traceInvestigationResult, u_mes_qual_curveEnvelope, u_mes_qual_defectRecord, u_mes_syst_interlockRule, u_mes_syst_alertRule, u_mes_matl_storageLocationAllowedItem.
 
 ## Files
 

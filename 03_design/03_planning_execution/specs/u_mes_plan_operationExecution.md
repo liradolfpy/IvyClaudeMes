@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 53 (42 required, 11 may be null) |
+| Keys | 70 (51 required, 19 may be null) |
 | Estimated volume per year | ~4.3 million |
 | Storage | standard, partitioned by month |
 
@@ -75,14 +75,31 @@ Every key is present in every document. "Required" means the value may not be nu
 | 43 | checksPreviousStepComplete | Boolean | - | Yes | True when: checks previous step complete | `true` |  |
 | 44 | nextStepNo | Int32 | - | No (null allowed) | Next step number | `NumberInt(20)` |  |
 | 45 | remarks | String | - | No (null allowed) | Remarks of the operation execution | `"Die 2, both cavities running"` |  |
-| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Started; Completed; Aborted |
-| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 48 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 49 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 50 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 51 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
-| 52 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 53 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 46 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `null` | Reference: u_mes_prod_productVariant._id |
+| 47 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `null` |  |
+| 48 | recipeVersion | String | - | No (null allowed) | Version of the recipe / program used | `"1"` |  |
+| 49 | recipeChecksum | String | - | No (null allowed) | Checksum of the program reported by the controller | `"9f2c4a1be07d53c6"` |  |
+| 50 | taktTimeSec | Decimal128 | - | No (null allowed) | Takt time of the line at the time of the operation (seconds) | `null` |  |
+| 51 | taktBreached | Boolean | - | Yes | True when the cycle time was above takt | `false` |  |
+| 52 | captureMethod | String | - | Yes | How the start and completion were captured | `"PLC Signal"` | Scan; PLC Signal; Manual Entry |
+| 53 | startScanCode | String | - | No (null allowed) | Code scanned at operation start | `null` |  |
+| 54 | operatorSessionId | String | - | No (null allowed) | Reference to u_mes_plan_operatorSession._id | `null` | Reference: u_mes_plan_operatorSession._id |
+| 55 | operatorSessionName | String | - | No (null allowed) | Display value of operatorSessionId, copied from u_mes_plan_operatorSession.recordNo | `null` |  |
+| 56 | checksVariantVerified | Boolean | - | Yes | Variant check passed at start | `true` |  |
+| 57 | checksDocumentAcknowledged | Boolean | - | Yes | Current work instruction revision acknowledged by the operator | `true` |  |
+| 58 | checksEquipmentReady | Boolean | - | Yes | Equipment was production-ready at start | `true` |  |
+| 59 | checksMaterialReleased | Boolean | - | Yes | All consumed lots were released (not held, not expired) | `true` |  |
+| 60 | checksSetupVerified | Boolean | - | Yes | Set-up verification passed for the order | `true` |  |
+| 61 | checksEnvironmentOk | Boolean | - | Yes | Environmental conditions of the station were within limits | `true` |  |
+| 62 | interlockEventCount | Int32 | - | Yes | Number of interlock events raised during the operation | `NumberInt(0)` |  |
+| 63 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Started; Completed; Aborted |
+| 64 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 65 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 66 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 67 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 68 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
+| 69 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 70 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 
@@ -105,7 +122,7 @@ Started, Completed, Aborted. Initial state: Started. The values are maintained i
 
 ## Referenced by
 
-u_mes_plan_operationExecutionDefectCode, u_mes_plan_operationExecutionTool, u_mes_plan_stepCompletion, u_mes_plan_wipUnit, u_mes_matl_materialConsumption, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_qual_inspectionResult, u_mes_perf_torqueResult, u_mes_perf_leakTestResult.
+u_mes_plan_operationExecutionDefectCode, u_mes_plan_operationExecutionTool, u_mes_plan_stepCompletion, u_mes_plan_wipUnit, u_mes_plan_labourBooking, u_mes_matl_materialConsumption, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_qual_inspectionResult, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_maint_toolLifeRecord, u_mes_plan_interlockEvent, u_mes_qual_measurementCurve, u_mes_qual_defectRecord.
 
 ## Files
 

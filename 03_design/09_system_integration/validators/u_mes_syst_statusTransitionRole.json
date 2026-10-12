@@ -1,0 +1,66 @@
+{
+  "collMod": "u_mes_syst_statusTransitionRole",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_statusTransitionRole",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "statusTransitionId",
+        "statusTransitionName",
+        "sequenceNo",
+        "roleId",
+        "roleName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "statusTransitionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_statusTransition._id: the parent document this one belongs to"
+        },
+        "statusTransitionName": {
+          "bsonType": "string",
+          "description": "Display value of statusTransitionId, copied from u_mes_syst_statusTransition.transitionName"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "roleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id"
+        },
+        "roleName": {
+          "bsonType": "string",
+          "description": "Display value of roleId, copied from u_mes_mast_role.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

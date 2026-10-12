@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 33 (20 required, 13 may be null) |
+| Keys | 37 (20 required, 17 may be null) |
 | Estimated volume per year | ~2,000 |
 | Storage | standard |
 
@@ -54,14 +54,18 @@ Every key is present in every document. "Required" means the value may not be nu
 | 23 | releaseDecision | String | - | No (null allowed) | Release decision | `null` | Released; Rework; Scrap; Return To Supplier |
 | 24 | releaseComment | String | - | No (null allowed) | Release comment | `"100 percent leak retest completed, 2 units reworked"` |  |
 | 25 | customerNotified | Boolean | - | Yes | True when: customer notified | `true` |  |
-| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Partially Released; Released |
-| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-19T23:25:40.000+0000")` |  |
-| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-19T23:26:10.000+0000")` |  |
-| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 26 | releaseReasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id: release reason code | `null` | Reference: u_mes_perf_reasonCode._id |
+| 27 | releaseReasonCodeName | String | - | No (null allowed) | Display value of releaseReasonCodeId, copied from u_mes_perf_reasonCode.name | `null` |  |
+| 28 | releaseElectronicSignatureId | String | - | No (null allowed) | Reference to u_mes_syst_electronicSignature._id: release electronic signature | `null` | Reference: u_mes_syst_electronicSignature._id |
+| 29 | releaseElectronicSignatureName | String | - | No (null allowed) | Display value of releaseElectronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo | `null` |  |
+| 30 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Partially Released; Released |
+| 31 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 32 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-19T23:25:40.000+0000")` |  |
+| 33 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 34 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 35 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-19T23:26:10.000+0000")` |  |
+| 36 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 37 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 
@@ -77,11 +81,12 @@ Active, Partially Released, Released. Initial state: Active. The values are main
 | 4 | `{ nonconformanceId: 1 }` | No | Look-up of documents by nonconformance |
 | 5 | `{ itemId: 1 }` | No | Look-up of documents by item |
 | 6 | `{ quarantineLocationId: 1 }` | No | Look-up of documents by quarantine location |
-| 7 | `{ siteId: 1, placedAt: -1 }` | No | Time-ordered lists and reports by placed at |
+| 7 | `{ releaseReasonCodeId: 1 }` | No | Look-up of documents by release reason code |
+| 8 | `{ siteId: 1, placedAt: -1 }` | No | Time-ordered lists and reports by placed at |
 
 ## Referenced by
 
-u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_qual_nonconformance, u_mes_qual_qualityHoldHeldObject.
+u_mes_plan_productionOrder, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_qual_spcSample, u_mes_qual_nonconformance, u_mes_qual_qualityHoldHeldObject, u_mes_trac_traceInvestigation.
 
 ## Files
 

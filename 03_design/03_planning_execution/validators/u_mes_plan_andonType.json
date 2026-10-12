@@ -16,6 +16,9 @@
         "responsibleDepartmentName",
         "targetResponseSec",
         "sequenceNo",
+        "targetRepairSec",
+        "escalationRuleId",
+        "escalationRuleName",
         "status",
         "schemaVersion"
       ],
@@ -73,6 +76,27 @@
         "sequenceNo": {
           "bsonType": "int",
           "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "targetRepairSec": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Target time to resolve (seconds)"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
         },
         "status": {
           "bsonType": "string",

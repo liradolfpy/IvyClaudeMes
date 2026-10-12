@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 35 (31 required, 4 may be null) |
+| Keys | 37 (31 required, 6 may be null) |
 | Estimated volume per year | ~760,000 |
 | Storage | standard |
 
@@ -56,14 +56,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 25 | verdict | String | - | Yes | Verdict of the leak test result | `"Fail"` | Pass; Fail |
 | 26 | failureReason | String | - | No (null allowed) | Failure reason | `"Fill pressure not reached at the high-pressure stage, inlet test seal of the tester leaking"` |  |
 | 27 | testedAt | Date | Datetime | Yes | Date and time when the record was tested. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:33.000+0000")` |  |
-| 28 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
-| 29 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 30 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:03.000+0000")` |  |
-| 31 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 32 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 33 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:33.000+0000")` |  |
-| 34 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 35 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 28 | measurementCurveId | String | - | No (null allowed) | Reference to u_mes_qual_measurementCurve._id | `"1319000000000007"` | Reference: u_mes_qual_measurementCurve._id |
+| 29 | measurementCurveName | String | - | No (null allowed) | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260918-01882"` |  |
+| 30 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
+| 31 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 32 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:03.000+0000")` |  |
+| 33 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 34 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 35 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:33.000+0000")` |  |
+| 36 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 37 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 

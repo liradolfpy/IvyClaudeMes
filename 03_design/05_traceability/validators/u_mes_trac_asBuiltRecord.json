@@ -48,6 +48,8 @@
         "finalReleaseBy",
         "finalReleaseAt",
         "recordHash",
+        "genealogyComplete",
+        "missingComponentCount",
         "status",
         "schemaVersion",
         "createdAt",
@@ -285,6 +287,14 @@
         "recordHash": {
           "bsonType": "string",
           "description": "SHA-256 hash of the frozen record"
+        },
+        "genealogyComplete": {
+          "bsonType": "bool",
+          "description": "True when every traceable BOM component is linked"
+        },
+        "missingComponentCount": {
+          "bsonType": "int",
+          "description": "Number of traceable BOM components not linked"
         },
         "status": {
           "bsonType": "string",

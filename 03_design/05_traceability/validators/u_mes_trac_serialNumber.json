@@ -37,6 +37,9 @@
         "customerId",
         "customerName",
         "voidReason",
+        "markingRecipeId",
+        "markingRecipeName",
+        "markingRecipeVersion",
         "status",
         "schemaVersion",
         "createdAt",
@@ -246,6 +249,27 @@
             "null"
           ],
           "description": "Void reason"
+        },
+        "markingRecipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_recipe._id: marking recipe"
+        },
+        "markingRecipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of markingRecipeId, copied from u_mes_prod_recipe.name"
+        },
+        "markingRecipeVersion": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Version of the marking program"
         },
         "status": {
           "bsonType": "string",

@@ -28,7 +28,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | name | String | - | Yes | Name of the reason code; used as its display value in other collections | `"Die ejector pin stuck"` |  |
-| 6 | reasonType | String | - | Yes | Reason type | `"Downtime"` | Downtime; Scrap; Hold; Andon; Changeover Loss |
+| 6 | reasonType | String | - | Yes | Reason type | `"Downtime"` | Downtime; Scrap; Hold; Andon; Changeover Loss; Hold Release; Interlock Override; Rework; Root Cause; Alarm Closure; Exposure Reset |
 | 7 | level | Int32 | - | Yes | Level number on the scale of the parent record | `NumberInt(3)` |  |
 | 8 | parentReasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id: parent reason code | `null` | Reference: u_mes_perf_reasonCode._id |
 | 9 | parentReasonCodeName | String | - | No (null allowed) | Display value of parentReasonCodeId, copied from u_mes_perf_reasonCode.name | `null` |  |
@@ -64,7 +64,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_qual_qualityHold, u_mes_perf_reasonCode, u_mes_perf_downtimeEvent, u_mes_perf_oeeRecordLoss, u_mes_maint_maintenanceWorkOrder, u_mes_plan_andonEvent.
+u_mes_plan_productionOrder, u_mes_plan_stepCompletion, u_mes_qual_reworkOrder, u_mes_qual_qualityHold, u_mes_perf_reasonCode, u_mes_perf_downtimeEvent, u_mes_perf_oeeRecordLoss, u_mes_perf_alarm, u_mes_maint_maintenanceWorkOrder, u_mes_plan_andonEvent, u_mes_plan_interlockEvent, u_mes_matl_exposureTimer, u_mes_perf_alarmDefinition, u_mes_perf_lossSummary.
 
 ## Files
 

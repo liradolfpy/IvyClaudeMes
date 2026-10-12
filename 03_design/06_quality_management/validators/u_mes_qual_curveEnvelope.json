@@ -1,0 +1,207 @@
+{
+  "collMod": "u_mes_qual_curveEnvelope",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_curveEnvelope",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "characteristicId",
+        "characteristicName",
+        "itemId",
+        "itemName",
+        "productVariantId",
+        "productVariantName",
+        "operationId",
+        "operationName",
+        "recipeId",
+        "recipeName",
+        "curveType",
+        "xQuantity",
+        "xUnitText",
+        "yQuantity",
+        "yUnitText",
+        "version",
+        "goldenSampleSerialNo",
+        "referenceControlledDocumentId",
+        "referenceControlledDocumentName",
+        "effectiveFrom",
+        "effectiveTo",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Envelope name"
+        },
+        "characteristicId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": "string",
+          "description": "Display value of characteristicId, copied from u_mes_qual_characteristic.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "operationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_operation._id"
+        },
+        "operationName": {
+          "bsonType": "string",
+          "description": "Display value of operationId, copied from u_mes_prod_operation.name"
+        },
+        "recipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_recipe._id"
+        },
+        "recipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of recipeId, copied from u_mes_prod_recipe.name"
+        },
+        "curveType": {
+          "bsonType": "string",
+          "description": "Curve type",
+          "enum": [
+            "Force Displacement",
+            "Torque Angle",
+            "Pressure Time",
+            "Sound Spectrum",
+            "Vibration Acceleration"
+          ]
+        },
+        "xQuantity": {
+          "bsonType": "string",
+          "description": "X-axis quantity, e.g. Displacement"
+        },
+        "xUnitText": {
+          "bsonType": "string",
+          "description": "X-axis unit as delivered by the controller, e.g. mm, deg, ms"
+        },
+        "yQuantity": {
+          "bsonType": "string",
+          "description": "Y-axis quantity, e.g. Force"
+        },
+        "yUnitText": {
+          "bsonType": "string",
+          "description": "Y-axis unit as delivered by the controller, e.g. N, N.m, bar"
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Envelope version number"
+        },
+        "goldenSampleSerialNo": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Serial of the golden sample used"
+        },
+        "referenceControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: reference controlled document"
+        },
+        "referenceControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of referenceControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "effectiveFrom": {
+          "bsonType": "date",
+          "description": "Effective from"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Effective to"
+        },
+        "approvedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": "date",
+          "description": "Approval time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "Released",
+            "Obsolete"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -1,0 +1,184 @@
+{
+  "collMod": "u_mes_matl_materialDemandForecast",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_matl_materialDemandForecast",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "itemId",
+        "itemName",
+        "lineId",
+        "lineName",
+        "productionDate",
+        "bucketStartAt",
+        "bucketEndAt",
+        "scheduledDemand",
+        "consumptionRatePerHour",
+        "onHandQuantity",
+        "projectedOnHand",
+        "projectedShortageAt",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "method",
+        "analyticsModelId",
+        "analyticsModelName",
+        "calculatedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "productionDate": {
+          "bsonType": "date",
+          "description": "Production date"
+        },
+        "bucketStartAt": {
+          "bsonType": "date",
+          "description": "Bucket start"
+        },
+        "bucketEndAt": {
+          "bsonType": "date",
+          "description": "Bucket end"
+        },
+        "scheduledDemand": {
+          "bsonType": "decimal",
+          "description": "Demand from the schedule and BOM"
+        },
+        "consumptionRatePerHour": {
+          "bsonType": "decimal",
+          "description": "Actual consumption rate"
+        },
+        "onHandQuantity": {
+          "bsonType": "decimal",
+          "description": "Line-side and supermarket stock at calculation"
+        },
+        "projectedOnHand": {
+          "bsonType": "decimal",
+          "description": "Projected stock at bucket end"
+        },
+        "projectedShortageAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Projected time the line starves"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "method": {
+          "bsonType": "string",
+          "description": "Calculation method",
+          "enum": [
+            "Schedule",
+            "Consumption Rate",
+            "Model"
+          ]
+        },
+        "analyticsModelId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_analyticsModel._id"
+        },
+        "analyticsModelName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of analyticsModelId, copied from u_mes_syst_analyticsModel.name"
+        },
+        "calculatedAt": {
+          "bsonType": "date",
+          "description": "Calculation time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Calculated",
+            "Superseded"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -30,6 +30,12 @@
         "maintenanceWorkOrderId",
         "maintenanceWorkOrderName",
         "remarks",
+        "workCenterId",
+        "workCenterName",
+        "itemId",
+        "itemName",
+        "operationExecutionId",
+        "operationExecutionName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -181,6 +187,48 @@
             "null"
           ],
           "description": "Remarks of the tool life record"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "operationExecutionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_operationExecution._id"
+        },
+        "operationExecutionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operationExecutionId, copied from u_mes_plan_operationExecution.recordNo"
         },
         "status": {
           "bsonType": "string",

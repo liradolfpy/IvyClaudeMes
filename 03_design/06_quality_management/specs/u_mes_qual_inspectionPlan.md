@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 26 (16 required, 10 may be null) |
+| Keys | 27 (16 required, 11 may be null) |
 | Estimated volume per year | 1,000-5,000 |
 | Storage | standard |
 
@@ -22,6 +22,7 @@ Repeating data of this entity is held in separate collections, one document per 
 | Collection | Kind | Holds |
 |---|---|---|
 | u_mes_qual_inspectionPlanLine | Child | line |
+| u_mes_qual_inspectionPlanProductVariant | Relationship | product variant |
 
 ## Field dictionary
 
@@ -53,8 +54,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 22 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `null` | Reference: u_mes_mast_user._id |
 | 23 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `null` |  |
 | 24 | approvedAt | Date | Datetime | No (null allowed) | Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 25 | itemRevision | String | - | No (null allowed) | Item revision the plan applies to; null = all revisions | `null` |  |
+| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -74,7 +76,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_prod_billOfProcessStep, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_syst_operatorAppStep.
+u_mes_prod_billOfProcessStep, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_syst_operatorAppStep, u_mes_qual_inspectionPlanProductVariant.
 
 ## Files
 

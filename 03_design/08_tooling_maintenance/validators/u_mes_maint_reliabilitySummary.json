@@ -1,0 +1,178 @@
+{
+  "collMod": "u_mes_maint_reliabilitySummary",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_reliabilitySummary",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "equipmentId",
+        "equipmentName",
+        "lineId",
+        "lineName",
+        "shiftId",
+        "shiftName",
+        "periodType",
+        "periodStartAt",
+        "periodEndAt",
+        "operatingHours",
+        "failureCount",
+        "repairMinutes",
+        "mtbfHours",
+        "mttrMinutes",
+        "availabilityPct",
+        "calculatedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "lineId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": "string",
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "shiftId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "periodType": {
+          "bsonType": "string",
+          "description": "Period type",
+          "enum": [
+            "Shift",
+            "Day",
+            "Week",
+            "Month"
+          ]
+        },
+        "periodStartAt": {
+          "bsonType": "date",
+          "description": "Period start"
+        },
+        "periodEndAt": {
+          "bsonType": "date",
+          "description": "Period end"
+        },
+        "operatingHours": {
+          "bsonType": "decimal",
+          "description": "Run hours"
+        },
+        "failureCount": {
+          "bsonType": "int",
+          "description": "Breakdowns"
+        },
+        "repairMinutes": {
+          "bsonType": "int",
+          "description": "Total repair minutes"
+        },
+        "mtbfHours": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Mean time between failures; null when no failure"
+        },
+        "mttrMinutes": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Mean time to repair; null when no failure"
+        },
+        "availabilityPct": {
+          "bsonType": "decimal",
+          "description": "Technical availability"
+        },
+        "calculatedAt": {
+          "bsonType": "date",
+          "description": "Calculation time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Calculated",
+            "Recalculated"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

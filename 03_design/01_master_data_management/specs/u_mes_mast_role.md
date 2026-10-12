@@ -23,6 +23,7 @@ Repeating data of this entity is held in separate collections, one document per 
 |---|---|---|
 | u_mes_mast_rolePermission | Relationship | permission |
 | u_mes_mast_roleSignatureMeaning | Relationship | signature meaning |
+| u_mes_mast_roleRequiredSkill | Relationship | required skill |
 
 ## Field dictionary
 
@@ -56,7 +57,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_mast_rolePermission, u_mes_mast_roleSignatureMeaning, u_mes_mast_userRole, u_mes_syst_electronicSignature, u_mes_syst_notificationRecipient.
+u_mes_mast_rolePermission, u_mes_mast_roleSignatureMeaning, u_mes_mast_userRole, u_mes_syst_electronicSignature, u_mes_syst_notificationRecipient, u_mes_mast_roleRequiredSkill, u_mes_qual_auditSchedule, u_mes_perf_alarmDefinition, u_mes_syst_interlockRule, u_mes_syst_statusTransitionRole, u_mes_syst_escalationRule, u_mes_syst_escalationRuleLevel, u_mes_syst_recordPolicy, u_mes_syst_savedView.
 
 ## Files
 

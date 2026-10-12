@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 43 (29 required, 14 may be null) |
+| Keys | 56 (30 required, 26 may be null) |
 | Estimated volume per year | ~8,000 |
 | Storage | standard |
 
@@ -24,6 +24,7 @@ Repeating data of this entity is held in separate collections, one document per 
 | u_mes_maint_maintenanceWorkOrderAssignedToUser | Relationship | assigned to user |
 | u_mes_maint_maintenanceWorkOrderLabour | Child | labour |
 | u_mes_maint_maintenanceWorkOrderUsedSparePart | Child | used spare part |
+| u_mes_maint_maintenanceWorkOrderTask | Child | task |
 
 ## Field dictionary
 
@@ -66,14 +67,27 @@ Every key is present in every document. "Required" means the value may not be nu
 | 33 | equipmentReleasedBy | String | - | No (null allowed) | Display name of the user in equipmentReleasedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
 | 34 | equipmentReleasedAt | Date | Datetime | No (null allowed) | Equipment released date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:30.000+0000")` |  |
 | 35 | followUpRequired | Boolean | - | Yes | True when: follow up required | `false` |  |
-| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Reported; Planned; In Progress; Completed; Closed; Cancelled |
-| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 38 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 39 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
-| 40 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
-| 41 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:30.000+0000")` |  |
-| 42 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
-| 43 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
+| 36 | shiftId | String | - | No (null allowed) | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
+| 37 | shiftName | String | - | No (null allowed) | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
+| 38 | rootCauseCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id: root cause code | `"1203000000000001"` | Reference: u_mes_perf_reasonCode._id |
+| 39 | rootCauseCodeName | String | - | No (null allowed) | Display value of rootCauseCodeId, copied from u_mes_perf_reasonCode.name | `"Die ejector pin stuck"` |  |
+| 40 | closureApprovedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'closure approved' | `null` | Reference: u_mes_mast_user._id |
+| 41 | closureApprovedBy | String | - | No (null allowed) | Display name of the user in closureApprovedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 42 | closureApprovedAt | Date | Datetime | No (null allowed) | Time of the closure approval | `null` |  |
+| 43 | andonEventId | String | - | No (null allowed) | Reference to u_mes_plan_andonEvent._id | `"1251000000000001"` | Reference: u_mes_plan_andonEvent._id |
+| 44 | andonEventName | String | - | No (null allowed) | Display value of andonEventId, copied from u_mes_plan_andonEvent.description | `"Castings sticking in die 2, operator needs maintenance"` |  |
+| 45 | priorityScore | Decimal128 | - | No (null allowed) | Priority score from criticality, due risk and production impact (0 to 100) | `NumberDecimal("72")` |  |
+| 46 | schedulingSource | String | - | Yes | How the work order was prioritised and scheduled | `"Manual"` | Manual; Rule; Model |
+| 47 | slaResponseDueAt | Date | Datetime | No (null allowed) | Time by which a technician must respond | `ISODate("2026-09-15T06:10:00.000+0000")` |  |
+| 48 | slaRepairDueAt | Date | Datetime | No (null allowed) | Time by which the repair must be complete | `ISODate("2026-09-15T08:00:00.000+0000")` |  |
+| 49 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Reported; Planned; In Progress; Completed; Closed; Cancelled |
+| 50 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 51 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 52 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
+| 53 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
+| 54 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:30.000+0000")` |  |
+| 55 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |
+| 56 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Imran Shaikh"` |  |
 
 ## Status values
 
@@ -94,7 +108,7 @@ Reported, Planned, In Progress, Completed, Closed, Cancelled. Initial state: Rep
 
 ## Referenced by
 
-u_mes_perf_downtimeEvent, u_mes_maint_maintenanceWorkOrderAssignedToUser, u_mes_maint_maintenanceWorkOrderLabour, u_mes_maint_maintenanceWorkOrderUsedSparePart, u_mes_maint_toolLifeRecord.
+u_mes_perf_downtimeEvent, u_mes_maint_maintenanceWorkOrderAssignedToUser, u_mes_maint_maintenanceWorkOrderLabour, u_mes_maint_maintenanceWorkOrderUsedSparePart, u_mes_maint_toolLifeRecord, u_mes_plan_andonEvent, u_mes_maint_maintenanceWorkOrderTask, u_mes_maint_sparePartTransaction, u_mes_maint_equipmentLifecycleEvent.
 
 ## Files
 

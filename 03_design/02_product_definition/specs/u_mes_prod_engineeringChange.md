@@ -80,7 +80,7 @@ Raised, Under Evaluation, Approved, Implemented, Closed, Rejected. Initial state
 
 ## Referenced by
 
-u_mes_prod_itemRevision, u_mes_prod_billOfMaterial, u_mes_prod_routing, u_mes_prod_workInstruction, u_mes_prod_recipe, u_mes_prod_engineeringChangeAffectedItem, u_mes_prod_engineeringChangeAffectedObject, u_mes_prod_engineeringChangeApproval, u_mes_prod_engineeringChangeControlledDocument, u_mes_qual_controlPlan, u_mes_qual_deviationPermit, u_mes_qual_ppapSubmission.
+u_mes_prod_itemRevision, u_mes_prod_billOfMaterial, u_mes_prod_routing, u_mes_prod_workInstruction, u_mes_prod_recipe, u_mes_prod_engineeringChangeAffectedItem, u_mes_prod_engineeringChangeAffectedObject, u_mes_prod_engineeringChangeApproval, u_mes_prod_engineeringChangeControlledDocument, u_mes_qual_controlPlan, u_mes_qual_deviationPermit, u_mes_qual_ppapSubmission, u_mes_maint_equipmentLifecycleEvent.
 
 ## Files
 

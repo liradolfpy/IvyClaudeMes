@@ -35,7 +35,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | gaugeId | String | - | Yes | Reference to u_mes_qual_gauge._id | `"1189000000000001"` | Reference: u_mes_qual_gauge._id |
 | 6 | gaugeName | String | - | Yes | Display value of gaugeId, copied from u_mes_qual_gauge.name | `"Ultrasonic thickness gauge 1-25 mm"` |  |
-| 7 | calibrationType | String | - | Yes | Calibration type | `"Periodic"` | Initial; Periodic; After Repair; After Shock Or Damage |
+| 7 | calibrationType | String | - | Yes | Calibration type | `"Periodic"` | Initial; Periodic; After Repair; After Shock Or Damage; Automatic Closed Loop |
 | 8 | calibratedAt | Date | Datetime | Yes | Date and time when the record was calibrated. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 9 | calibratedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'calibrated' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 10 | calibratedBy | String | - | Yes | Display name of the user in calibratedById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |

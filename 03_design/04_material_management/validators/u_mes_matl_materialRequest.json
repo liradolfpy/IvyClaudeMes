@@ -36,6 +36,8 @@
         "andonEventName",
         "lotId",
         "lotName",
+        "replenishmentRuleId",
+        "replenishmentRuleName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -216,6 +218,20 @@
             "null"
           ],
           "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "replenishmentRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_replenishmentRule._id"
+        },
+        "replenishmentRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of replenishmentRuleId, copied from u_mes_matl_replenishmentRule.recordNo"
         },
         "status": {
           "bsonType": "string",

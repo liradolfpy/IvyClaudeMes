@@ -37,6 +37,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2019-01-04T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -76,6 +78,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2022-06-06T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -115,6 +119,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2019-11-08T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -154,6 +160,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2022-04-10T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -193,6 +201,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2019-09-12T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: true,
+    equipmentId: null,
+    equipmentName: null,
     status: "Overdue",
     schemaVersion: NumberInt(1)
   },
@@ -232,6 +242,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2022-02-14T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -271,6 +283,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2019-07-16T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: "1013000000000007",
+    equipmentName: "DC Nutrunner Station 1",
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -310,6 +324,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2022-12-18T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: "1013000000000008",
+    equipmentName: "Pressure Leak Tester 1",
     status: "Due For Calibration",
     schemaVersion: NumberInt(1)
   },
@@ -349,6 +365,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2019-05-20T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -388,6 +406,8 @@ db.getCollection("u_mes_qual_gauge").insertMany([
     purchasedAt: ISODate("2022-10-22T00:00:00.000+0000"),
     isMasterGauge: false,
     blockedForUse: false,
+    equipmentId: null,
+    equipmentName: null,
     status: "Under Calibration",
     schemaVersion: NumberInt(1)
   }

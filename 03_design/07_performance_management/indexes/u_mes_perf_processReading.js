@@ -4,5 +4,6 @@ db.getCollection("u_mes_perf_processReading").createIndex({ processTagId: 1 }, {
 db.getCollection("u_mes_perf_processReading").createIndex({ equipmentId: 1 }, { name: "ix_equipmentId" });
 db.getCollection("u_mes_perf_processReading").createIndex({ productionOrderId: 1 }, { name: "ix_productionOrderId" });
 db.getCollection("u_mes_perf_processReading").createIndex({ lotId: 1 }, { name: "ix_lotId" });
+db.getCollection("u_mes_perf_processReading").createIndex({ areaId: 1 }, { name: "ix_areaId" });
 db.getCollection("u_mes_perf_processReading").createIndex({ siteId: 1, timestamp: -1 }, { name: "ix_siteId_timestamp" });
 db.getCollection("u_mes_perf_processReading").createIndex({ processTagId: 1, timestamp: -1 }, { name: "ix_processTagId_timestamp" });

@@ -37,6 +37,9 @@
         "overrideReason",
         "photoControlledDocumentId",
         "photoControlledDocumentName",
+        "overrideReasonCodeId",
+        "overrideReasonCodeName",
+        "arSessionRef",
         "status",
         "schemaVersion",
         "createdAt",
@@ -188,6 +191,7 @@
             "Leak Tester",
             "Gauge Interface",
             "PLC",
+            "AR Headset",
             null
           ]
         },
@@ -229,6 +233,27 @@
             "null"
           ],
           "description": "Display value of photoControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "overrideReasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: override reason code"
+        },
+        "overrideReasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of overrideReasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "arSessionRef": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference of the AR session that confirmed the step"
         },
         "status": {
           "bsonType": "string",

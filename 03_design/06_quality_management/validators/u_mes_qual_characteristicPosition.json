@@ -1,0 +1,117 @@
+{
+  "collMod": "u_mes_qual_characteristicPosition",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_characteristicPosition",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "characteristicId",
+        "characteristicName",
+        "positionNo",
+        "positionName",
+        "nominal",
+        "lowerSpecLimit",
+        "upperSpecLimit",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "curveEnvelopeId",
+        "curveEnvelopeName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "characteristicId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_characteristic._id: the parent document this one belongs to"
+        },
+        "characteristicName": {
+          "bsonType": "string",
+          "description": "Display value of characteristicId, copied from u_mes_qual_characteristic.name"
+        },
+        "positionNo": {
+          "bsonType": "int",
+          "description": "Position number"
+        },
+        "positionName": {
+          "bsonType": "string",
+          "description": "Position name, e.g. Piston 1 inboard"
+        },
+        "nominal": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Nominal at this position"
+        },
+        "lowerSpecLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Lower limit at this position"
+        },
+        "upperSpecLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Upper limit at this position"
+        },
+        "unitOfMeasureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "curveEnvelopeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_curveEnvelope._id"
+        },
+        "curveEnvelopeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

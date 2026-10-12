@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 13 (10 required, 3 may be null) |
+| Keys | 16 (10 required, 6 may be null) |
 | Estimated volume per year | 10-50 |
 | Storage | standard |
 
@@ -34,8 +34,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | responsibleDepartmentName | String | - | No (null allowed) | Display value of responsibleDepartmentId, copied from u_mes_mast_department.name | `"Production"` |  |
 | 10 | targetResponseSec | Int32 | - | Yes | Target response (seconds) | `NumberInt(300)` |  |
 | 11 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 12 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 12 | targetRepairSec | Int32 | - | No (null allowed) | Target time to resolve (seconds) | `NumberInt(1800)` |  |
+| 13 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000003"` | Reference: u_mes_syst_escalationRule._id |
+| 14 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"Quality andon not acknowledged"` |  |
+| 15 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -48,6 +51,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 | 1 | `{ siteId: 1, recordNo: 1 }` | Yes | Business identifier is unique within the site |
 | 2 | `{ siteId: 1, status: 1 }` | No | Work lists filtered by lifecycle state |
 | 3 | `{ responsibleDepartmentId: 1 }` | No | Look-up of documents by responsible department |
+| 4 | `{ escalationRuleId: 1 }` | No | Look-up of documents by escalation rule |
 
 ## Referenced by
 

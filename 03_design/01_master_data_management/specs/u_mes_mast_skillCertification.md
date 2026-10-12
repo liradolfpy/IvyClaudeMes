@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 31 (24 required, 7 may be null) |
+| Keys | 34 (25 required, 9 may be null) |
 | Estimated volume per year | 5,000-20,000 |
 | Storage | standard |
 
@@ -46,14 +46,17 @@ Every key is present in every document. "Required" means the value may not be nu
 | 21 | revokedAt | Date | Datetime | No (null allowed) | Date and time when the record was revoked. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 22 | revokedReason | String | - | No (null allowed) | Revoked reason | `null` |  |
 | 23 | nextReviewAt | Date | Date | No (null allowed) | Next review at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
-| 24 | status | String | - | Yes | Primary lifecycle state of the document | `"Valid"` | Valid; Expiring Soon; Expired; Revoked |
-| 25 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 26 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 27 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 28 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 29 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 30 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 31 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 24 | trainedDocumentRevision | String | - | No (null allowed) | Revision of the training document the operator was trained on | `"1"` |  |
+| 25 | requalificationRequired | Boolean | - | Yes | True when a new document revision requires the operator to be trained again | `false` |  |
+| 26 | revocationSource | String | - | No (null allowed) | Why the certification was revoked or suspended; null while valid | `null` | Expiry; Document Revision; Manual; Assessment Failure |
+| 27 | status | String | - | Yes | Primary lifecycle state of the document | `"Valid"` | Valid; Expiring Soon; Expired; Revoked |
+| 28 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 29 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 30 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 31 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 32 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 33 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 34 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

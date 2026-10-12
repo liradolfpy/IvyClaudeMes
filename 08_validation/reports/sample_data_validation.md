@@ -1,6 +1,6 @@
 # Sample data validation
 
-Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 299 | Documents: 2990
+Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 343 | Documents: 3430
 
 | # | Check | Scope | Result | Findings |
 |---|---|---|---|---|
@@ -28,19 +28,25 @@ Shell format: every Int32 is written with NumberInt(), Int64 with NumberLong(), 
 
 ## Schema Observation
 
-Nothing was added to or removed from any collection. These points were noticed while filling the documents and are reported only.
+These points were noticed while filling the documents and are reported only. On 12 Oct 2026 the 44 collections and 212 keys of MES_ExternalRequirement_01 were added (D036-D042).
 
 | # | Collection | Observation | What the samples do |
 |---|---|---|---|
-| 1 | u_mes_prod_recipe | recipeType has no allowed value for an assembly press program or a vision job | The recipes at those two positions are a second tightening program and a second laser marking layout; executions at the press and at final inspection carry no recipe |
+| 1 | u_mes_prod_recipe | Resolved on 12 Oct 2026 (MES_ExternalRequirement_01): recipeType now allows Press Program, Dispensing Program and Vision Job | The ten sample recipes are unchanged; executions at the press and at final inspection still carry no recipe |
 | 2 | u_mes_plan_operationExecution | result is required, so an execution that is still running cannot be stored without a result | All ten executions are completed |
 | 3 | u_mes_plan_container | ownerCustomerId is required, although in-plant trolleys and racks have no customer owner | All containers carry the customer of the part |
 | 4 | u_mes_prod_operation, u_mes_prod_item | Exactly 10 documents: the eleventh operation (packing) and the items brake pad set and mounting bracket are not represented | Ten operations OP010 to OP100 and ten items |
 | 5 | u_mes_prod_billOfMaterialComponent | The RH assembly BOM points to the LH body, because an RH body is not among the ten items | Left as is |
 | 6 | all transaction collections | All documents belong to the Chakan plant; the other nine sites exist only in u_mes_mast_site | Plant is not varied in transactions, so that lines, work centers and equipment stay consistent with their site |
+| 7 | u_mes_perf_reasonCode | The reason types added on 12 Oct 2026 (Hold Release, Interlock Override, Rework, Root Cause, Alarm Closure, Exposure Reset) have no sample reason code, because the ten sample codes are downtime causes | Hold, override, rework, root-cause, alarm-closure and reset references point to the downtime cause that fits the story |
+| 8 | u_mes_qual_inspectionResult | positionNo, model and image keys are filled only where a sample result fits; no sample result was classified by a vision model | Model classifications are shown in u_mes_syst_modelPrediction |
+| 9 | u_mes_mast_unitOfMeasure | The ten sample units have no newton, degree or millisecond | Curve envelope axis units are held as text (xUnitText, yUnitText), as delivered by the controller |
+| 10 | u_mes_qual_measurementCurvePoint | A time-series collection; ten points of one press-in curve are shown, one second apart because the shell format carries whole seconds | Real curves carry 250 to 620 points each |
+| 11 | u_mes_trac_genealogyLink | childSerialNumberId and childWipUnitId are empty, because all sample components are bought-in lots | Sub-assemblies serialised by the MES would use them |
 
 ## How realistic the documents are
 
 - Read through and corrected by hand: production orders, WIP units, operation executions, torque and leak results, lots, goods receipt lines, stock movements, inspection results, nonconformances, gauges, equipment, users, items, BOM components, routing steps, downtime events, serial numbers.
+- Written collection by collection for MES_ExternalRequirement_01: the 44 new collections and the 212 added keys (05_generator/ext_req01_samples.py).
 - Built by the same rules but not read line by line: the remaining collections. Their keys, types, references, allowed values and dates are checked by the table above; individual text or number combinations in them can still read oddly.
 - Each collection has exactly ten documents, so stories are short: for example, ten leak tests are spread over four units.

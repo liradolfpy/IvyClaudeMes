@@ -44,6 +44,12 @@
         "nextMaintenanceDueAt",
         "calibrationRequired",
         "safetyCategory",
+        "isProductionReady",
+        "readinessReasonText",
+        "healthScore",
+        "healthScoreAt",
+        "acquisitionCostInr",
+        "plannedReplacementDate",
         "status",
         "schemaVersion"
       ],
@@ -257,6 +263,45 @@
             "PL d",
             "PL e"
           ]
+        },
+        "isProductionReady": {
+          "bsonType": "bool",
+          "description": "True when the equipment may receive work: not down, not in maintenance, PM and calibration not overdue"
+        },
+        "readinessReasonText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Why the equipment is not production-ready; null when it is ready"
+        },
+        "healthScore": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Rule-based health score from 0 (failed) to 100 (as new)"
+        },
+        "healthScoreAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the health score was last calculated"
+        },
+        "acquisitionCostInr": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Purchase and installation cost (Indian rupees)"
+        },
+        "plannedReplacementDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Planned replacement date from the lifecycle review"
         },
         "status": {
           "bsonType": "string",

@@ -43,6 +43,11 @@
         "curveControlledDocumentName",
         "tightenedAt",
         "controllerResultNo",
+        "curveEnvelopeId",
+        "curveEnvelopeName",
+        "measurementCurveId",
+        "measurementCurveName",
+        "envelopeResult",
         "status",
         "schemaVersion",
         "createdAt",
@@ -230,6 +235,46 @@
         "controllerResultNo": {
           "bsonType": "string",
           "description": "Result identifier issued by the device controller"
+        },
+        "curveEnvelopeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_curveEnvelope._id"
+        },
+        "curveEnvelopeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name"
+        },
+        "measurementCurveId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_measurementCurve._id"
+        },
+        "measurementCurveName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo"
+        },
+        "envelopeResult": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Verdict of the envelope check",
+          "enum": [
+            "OK",
+            "NOK",
+            null
+          ]
         },
         "status": {
           "bsonType": "string",

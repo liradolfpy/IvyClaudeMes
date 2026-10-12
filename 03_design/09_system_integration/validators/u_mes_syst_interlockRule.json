@@ -1,0 +1,242 @@
+{
+  "collMod": "u_mes_syst_interlockRule",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_interlockRule",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "ruleType",
+        "transactionPoint",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
+        "operationId",
+        "operationName",
+        "itemId",
+        "itemName",
+        "enforcementMode",
+        "overrideAllowed",
+        "overrideRoleId",
+        "overrideRoleName",
+        "overrideRequiresSignature",
+        "overrideRequiresReasonCode",
+        "escalationRuleId",
+        "escalationRuleName",
+        "messageText",
+        "validFrom",
+        "validTo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Rule name"
+        },
+        "ruleType": {
+          "bsonType": "string",
+          "description": "Check type",
+          "enum": [
+            "Hold Check",
+            "Sequence Check",
+            "Mandatory Scan",
+            "Duplicate Serial",
+            "Wrong Order",
+            "Wrong Station",
+            "Variant Check",
+            "Component Lot Capture",
+            "Lot Release Check",
+            "Expiry Check",
+            "Kit Completeness",
+            "Genealogy Completeness",
+            "Recipe Release Check",
+            "Program Version Check",
+            "Work Instruction Release Check",
+            "Acknowledgement Check",
+            "Mandatory Inspection",
+            "NOK Result",
+            "Skill Check",
+            "Login Check",
+            "Equipment Readiness",
+            "Tool Life",
+            "Calibration Check",
+            "Environment Check",
+            "Setup Check",
+            "Alarm Restart"
+          ]
+        },
+        "transactionPoint": {
+          "bsonType": "string",
+          "description": "Where the check runs",
+          "enum": [
+            "Operation Start",
+            "Operation Complete",
+            "Material Issue",
+            "Kit Release",
+            "Pack Out",
+            "Dispatch",
+            "Order Close",
+            "Login",
+            "Inspection Accept"
+          ]
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "operationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_operation._id"
+        },
+        "operationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operationId, copied from u_mes_prod_operation.name"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "enforcementMode": {
+          "bsonType": "string",
+          "description": "Warning only, or block the transaction",
+          "enum": [
+            "Warning",
+            "Block"
+          ]
+        },
+        "overrideAllowed": {
+          "bsonType": "bool",
+          "description": "Override permitted"
+        },
+        "overrideRoleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_role._id: override role"
+        },
+        "overrideRoleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of overrideRoleId, copied from u_mes_mast_role.name"
+        },
+        "overrideRequiresSignature": {
+          "bsonType": "bool",
+          "description": "Override needs an electronic signature"
+        },
+        "overrideRequiresReasonCode": {
+          "bsonType": "bool",
+          "description": "Override needs a reason code"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
+        },
+        "messageText": {
+          "bsonType": "string",
+          "description": "Operator message"
+        },
+        "validFrom": {
+          "bsonType": "date",
+          "description": "Valid from"
+        },
+        "validTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Valid to"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

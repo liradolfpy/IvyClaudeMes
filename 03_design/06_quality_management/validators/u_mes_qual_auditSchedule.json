@@ -1,0 +1,213 @@
+{
+  "collMod": "u_mes_qual_auditSchedule",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_auditSchedule",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "auditType",
+        "layer",
+        "areaId",
+        "areaName",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
+        "checkSheetId",
+        "checkSheetName",
+        "frequencyType",
+        "frequencyValue",
+        "auditorRoleId",
+        "auditorRoleName",
+        "auditorUserId",
+        "auditorUserName",
+        "toleranceHours",
+        "escalationRuleId",
+        "escalationRuleName",
+        "nextDueDate",
+        "validFrom",
+        "validTo",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Schedule name"
+        },
+        "auditType": {
+          "bsonType": "string",
+          "description": "Audit type",
+          "enum": [
+            "Layered Process Audit",
+            "Product Audit",
+            "Process Audit",
+            "5S Audit"
+          ]
+        },
+        "layer": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "LPA layer"
+        },
+        "areaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "checkSheetId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_checkSheet._id"
+        },
+        "checkSheetName": {
+          "bsonType": "string",
+          "description": "Display value of checkSheetId, copied from u_mes_qual_checkSheet.name"
+        },
+        "frequencyType": {
+          "bsonType": "string",
+          "description": "Frequency",
+          "enum": [
+            "Shift",
+            "Daily",
+            "Weekly",
+            "Monthly"
+          ]
+        },
+        "frequencyValue": {
+          "bsonType": "decimal",
+          "description": "Every n periods"
+        },
+        "auditorRoleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id: auditor role"
+        },
+        "auditorRoleName": {
+          "bsonType": "string",
+          "description": "Display value of auditorRoleId, copied from u_mes_mast_role.name"
+        },
+        "auditorUserId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: auditor user"
+        },
+        "auditorUserName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of auditorUserId, copied from u_mes_mast_user.fullName"
+        },
+        "toleranceHours": {
+          "bsonType": "int",
+          "description": "Grace period before the audit counts as missed"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
+        },
+        "nextDueDate": {
+          "bsonType": "date",
+          "description": "Next due date"
+        },
+        "validFrom": {
+          "bsonType": "date",
+          "description": "Valid from"
+        },
+        "validTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Valid to"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

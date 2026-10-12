@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 37 (26 required, 11 may be null) |
+| Keys | 39 (26 required, 13 may be null) |
 | Estimated volume per year | 500-3,000 |
 | Storage | standard |
 
@@ -58,8 +58,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 33 | purchasedAt | Date | Datetime | Yes | Date and time when the record was purchased. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
 | 34 | isMasterGauge | Boolean | - | Yes | True when the record is master gauge | `false` |  |
 | 35 | blockedForUse | Boolean | - | Yes | True when: blocked for use | `false` |  |
-| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Due For Calibration; Overdue; Under Calibration; Blocked; Retired |
-| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 36 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `null` | Reference: u_mes_mast_equipment._id |
+| 37 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `null` |  |
+| 38 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Due For Calibration; Overdue; Under Calibration; Blocked; Retired |
+| 39 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

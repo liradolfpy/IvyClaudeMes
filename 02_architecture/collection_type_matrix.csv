@@ -55,6 +55,7 @@ mast,Master Data Management,u_mes_mast_country,Master,Countries
 mast,Master Data Management,u_mes_mast_language,Master,Languages
 mast,Master Data Management,u_mes_mast_transporter,Master,Transporters
 mast,Master Data Management,u_mes_mast_commodity,Master,Commodities
+mast,Master Data Management,u_mes_mast_roleRequiredSkill,Master,Role Required Skills
 prod,Product Definition,u_mes_prod_item,Master,Items
 prod,Product Definition,u_mes_prod_itemRevision,Master,Item Revisions
 prod,Product Definition,u_mes_prod_itemCustomerPart,Master,Item Customer Parts
@@ -100,6 +101,10 @@ prod,Product Definition,u_mes_prod_market,Master,Markets
 prod,Product Definition,u_mes_prod_padCompound,Master,Pad Compounds
 prod,Product Definition,u_mes_prod_surfaceFinish,Master,Surface Finishes
 prod,Product Definition,u_mes_prod_vehicleModel,Master,Vehicle Models
+prod,Product Definition,u_mes_prod_recipeProductVariant,Master,Recipe Variants
+prod,Product Definition,u_mes_prod_recipeControlledDocument,Master,Recipe Reference Files
+prod,Product Definition,u_mes_prod_workInstructionWorkCenter,Master,Work Instruction Stations
+prod,Product Definition,u_mes_prod_workInstructionProductVariant,Master,Work Instruction Variants
 plan,Planning and Execution,u_mes_plan_customerSchedule,Transaction,Customer Schedules
 plan,Planning and Execution,u_mes_plan_customerScheduleLine,Transaction,Customer Schedule Lines
 plan,Planning and Execution,u_mes_plan_productionOrder,Transaction,Production Orders
@@ -136,6 +141,12 @@ plan,Planning and Execution,u_mes_plan_andonEventEscalation,Transaction,Andon Ev
 plan,Planning and Execution,u_mes_plan_indirectActivity,Master,Indirect Activities
 plan,Planning and Execution,u_mes_plan_containerType,Master,Container Types
 plan,Planning and Execution,u_mes_plan_andonType,Master,Andon Types
+plan,Planning and Execution,u_mes_plan_operatorSession,Transaction,Operator Sessions
+plan,Planning and Execution,u_mes_plan_documentAcknowledgement,Transaction,Document Acknowledgements
+plan,Planning and Execution,u_mes_plan_interlockEvent,Transaction,Interlock Events
+plan,Planning and Execution,u_mes_plan_recipeDownload,Transaction,Recipe Downloads
+plan,Planning and Execution,u_mes_plan_setupVerification,Transaction,Setup Verifications
+plan,Planning and Execution,u_mes_plan_setupVerificationItem,Transaction,Setup Verification Items
 matl,Material Management,u_mes_matl_storageLocation,Master,Storage Locations
 matl,Material Management,u_mes_matl_inventoryBalance,Transaction,Inventory Balances
 matl,Material Management,u_mes_matl_materialMovement,Transaction,Material Movements
@@ -158,6 +169,10 @@ matl,Material Management,u_mes_matl_shipmentLineLot,Transaction,Shipment Line Lo
 matl,Material Management,u_mes_matl_movementType,Master,Movement Types
 matl,Material Management,u_mes_matl_stockStatus,Master,Stock Statuses
 matl,Material Management,u_mes_matl_packType,Master,Pack Types
+matl,Material Management,u_mes_matl_exposureTimer,Transaction,Exposure Timers
+matl,Material Management,u_mes_matl_replenishmentRule,Master,Replenishment Rules
+matl,Material Management,u_mes_matl_materialDemandForecast,Reports,Material Demand Forecast
+matl,Material Management,u_mes_matl_storageLocationAllowedItem,Master,Storage Allowed Items
 trac,Traceability,u_mes_trac_serialNumber,Transaction,Serial Numbers
 trac,Traceability,u_mes_trac_genealogyLink,Transaction,Genealogy Links
 trac,Traceability,u_mes_trac_componentLotLink,Transaction,Component Lot Links
@@ -165,6 +180,8 @@ trac,Traceability,u_mes_trac_asBuiltRecord,Reports,As-Built Records
 trac,Traceability,u_mes_trac_asBuiltRecordComponent,Reports,As-Built Record Components
 trac,Traceability,u_mes_trac_asBuiltRecordOperation,Reports,As-Built Record Operations
 trac,Traceability,u_mes_trac_asBuiltRecordInspectionResult,Reports,As-Built Record Inspection Results
+trac,Traceability,u_mes_trac_traceInvestigation,Transaction,Trace Investigations
+trac,Traceability,u_mes_trac_traceInvestigationResult,Transaction,Trace Investigation Results
 qual,Quality Management,u_mes_qual_characteristic,Master,Characteristics
 qual,Quality Management,u_mes_qual_controlPlan,Master,Control Plans
 qual,Quality Management,u_mes_qual_controlPlanCoreTeamUser,Master,Control Plan Core Team
@@ -234,6 +251,14 @@ qual,Quality Management,u_mes_qual_defectGroup,Master,Defect Groups
 qual,Quality Management,u_mes_qual_gaugeType,Master,Gauge Types
 qual,Quality Management,u_mes_qual_dispositionType,Master,Disposition Types
 qual,Quality Management,u_mes_qual_complaintType,Master,Complaint Types
+qual,Quality Management,u_mes_qual_characteristicPosition,Master,Characteristic Positions
+qual,Quality Management,u_mes_qual_curveEnvelope,Master,Curve Envelopes
+qual,Quality Management,u_mes_qual_curveEnvelopeWindow,Master,Curve Envelope Windows
+qual,Quality Management,u_mes_qual_measurementCurve,Transaction,Measurement Curves
+qual,Quality Management,u_mes_qual_measurementCurvePoint,Telemetry,Measurement Curve Points
+qual,Quality Management,u_mes_qual_defectRecord,Transaction,Defect Records
+qual,Quality Management,u_mes_qual_auditSchedule,Master,Audit Schedules
+qual,Quality Management,u_mes_qual_inspectionPlanProductVariant,Master,Inspection Plan Variants
 perf,Performance Management,u_mes_perf_reasonCode,Master,Reason Codes
 perf,Performance Management,u_mes_perf_equipmentState,Telemetry,Equipment States
 perf,Performance Management,u_mes_perf_downtimeEvent,Transaction,Downtime Events
@@ -251,6 +276,10 @@ perf,Performance Management,u_mes_perf_energyReading,Telemetry,Energy Readings
 perf,Performance Management,u_mes_perf_lossCategory,Master,Loss Categories
 perf,Performance Management,u_mes_perf_reasonCategory,Master,Reason Categories
 perf,Performance Management,u_mes_perf_energyType,Master,Energy Types
+perf,Performance Management,u_mes_perf_alarmDefinition,Master,Alarm Definitions
+perf,Performance Management,u_mes_perf_lossSummary,Reports,Loss Summary
+perf,Performance Management,u_mes_perf_workCenterPerformance,Reports,Station Performance
+perf,Performance Management,u_mes_perf_operatorPerformance,Reports,Operator Performance
 maint,Tooling & Maintenance,u_mes_maint_maintenancePlan,Master,Maintenance Plans
 maint,Tooling & Maintenance,u_mes_maint_maintenancePlanTask,Master,Maintenance Plan Tasks
 maint,Tooling & Maintenance,u_mes_maint_maintenancePlanRequiredSkill,Master,Maintenance Plan Required Skills
@@ -265,6 +294,10 @@ maint,Tooling & Maintenance,u_mes_maint_tool,Master,Tools
 maint,Tooling & Maintenance,u_mes_maint_toolItem,Master,Tool Applicable Items
 maint,Tooling & Maintenance,u_mes_maint_toolLifeRecord,Transaction,Tool Life Records
 maint,Tooling & Maintenance,u_mes_maint_toolType,Master,Tool Types
+maint,Tooling & Maintenance,u_mes_maint_maintenanceWorkOrderTask,Transaction,Work Order Checklist
+maint,Tooling & Maintenance,u_mes_maint_sparePartTransaction,Transaction,Spare Part Transactions
+maint,Tooling & Maintenance,u_mes_maint_reliabilitySummary,Reports,Reliability Summary
+maint,Tooling & Maintenance,u_mes_maint_equipmentLifecycleEvent,Transaction,Equipment Lifecycle
 syst,System and Integration,u_mes_syst_erpMessage,Transaction,ERP Messages
 syst,System and Integration,u_mes_syst_integrationConnector,Master,Integration Connectors
 syst,System and Integration,u_mes_syst_integrationConnectorFunction,Master,Integration Connector Functions
@@ -292,6 +325,17 @@ syst,System and Integration,u_mes_syst_notificationType,Master,Notification Type
 syst,System and Integration,u_mes_syst_statusDefinition,Master,Status Definitions
 syst,System and Integration,u_mes_syst_enumerationValue,Master,Enumeration Values
 syst,System and Integration,u_mes_syst_statusTransition,Master,Status Transitions
+syst,System and Integration,u_mes_syst_interlockRule,Master,Interlock Rules
+syst,System and Integration,u_mes_syst_statusTransitionRole,Master,Status Transition Roles
+syst,System and Integration,u_mes_syst_escalationRule,Master,Escalation Rules
+syst,System and Integration,u_mes_syst_escalationRuleLevel,Master,Escalation Levels
+syst,System and Integration,u_mes_syst_alertRule,Master,Alert Rules
+syst,System and Integration,u_mes_syst_analyticsModel,Master,Analytics Models
+syst,System and Integration,u_mes_syst_modelPrediction,Transaction,Model Predictions
+syst,System and Integration,u_mes_syst_simulationStudy,Transaction,Simulation Studies
+syst,System and Integration,u_mes_syst_recordPolicy,Master,Record Policies
+syst,System and Integration,u_mes_syst_savedView,Master,Saved Views
+syst,System and Integration,u_mes_syst_backupRun,Transaction,Backup and Restore Runs
 ehs,Environment Health and Safety,u_mes_ehs_safetyIncident,Transaction,Safety Incidents
 ehs,Environment Health and Safety,u_mes_ehs_safetyIncidentWitnessUser,Transaction,Safety Incident Witnesses
 ehs,Environment Health and Safety,u_mes_ehs_safetyIncidentAction,Transaction,Safety Incident Actions

@@ -5,6 +5,8 @@ M=json.load(open("model/flat_model.json")); cols=M["collections"]; MODN=M["modul
 order=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs"]
 DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety'}
 cat={c[0]:c for c in C}
+import ext_req01 as EXT
+cat.update(EXT.CAT)
 bycol={c["collection"]:c for c in cols}
 def w(p,t):
     p=os.path.join(ROOT,p); os.makedirs(os.path.dirname(p),exist_ok=True); open(p,"w").write(t)
@@ -24,7 +26,7 @@ for c in cols:
         c["idPattern"]="16-digit numeric string"; c["recordNoMeaning"]="parent recordNo + -%s<nnn>"%tag
 NK=len(cols); NF=sum(len(c["fields"]) for c in cols)
 kinds=collections.Counter(c["kind"] for c in cols)
-HEAD="Model version 2.5 | 11 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
+HEAD="Model version 2.6 | 12 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
 KIND={"entity":"Entity","child":"Child (was an embedded array of objects)","relationship":"Relationship (was an array of IDs)","valueList":"Value list (was an array of values)"}
 # inventory
 s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\n| Module code | Module | Collections |\n|---|---|---|\n"
@@ -74,7 +76,7 @@ no=[c["collection"] for c in cols if c["kind"]=="entity" and not c["statusValues
 s+="\nEntity collections without a status key (append-only records): "+", ".join(no)+".\n"
 w("04_reference_data/code_lists/status_values.md",s)
 # register
-s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.5 | Date: 11 October 2026 | Database: mes | "+HEAD
+s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.6 | Date: 12 October 2026 | Database: mes | "+HEAD
 s+='''This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
 ## 1. Conventions in force
@@ -125,6 +127,7 @@ s+='''
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became %d collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.6 | 12 Oct 2026 | MES_ExternalRequirement_01 implemented (D036-D042): 44 collections added (numbers 1300-1343, existing numbers unchanged), 212 keys added to 38 existing collections, allowed values extended; interlock rules and events, escalation and alert rules, operator sessions, document acknowledgements, recipe downloads, set-up verification, exposure timers, replenishment rules, trace investigations, per-position results and measurement curves, defect records, LPA schedules, alarm definitions, loss and performance reports, maintenance checklists, spare-part transactions, lifecycle events, analytics models and predictions, simulation studies, record policies, saved views, backup runs. Analysis: 01_research/MES_ExternalRequirement_01_impact_analysis.md |
 | 2.5 | 12 Oct 2026 | DATA-004: dates and times stored as local plant time (IST) with the +0000 suffix; every date key tagged Date or Datetime; sample data regenerated |
 | 2.4 | 12 Oct 2026 | Sample documents: exactly 10 per collection in 03_design/<module>/samples; system IDs changed to 16-digit numeric strings; sample period moved to April-September 2026; master ID registry replaced by the generated 04_reference_data/sample_data_registry.md; child, relationship and value-list collections use recordNo as display value |
 | 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (Environment Health and Safety). Module folders renamed |
@@ -146,6 +149,7 @@ print(NK,NF,ns)
 TYPE_BY_ROOT={"auditTrail":"Audit Trail","electronicSignature":"Audit Trail","businessEvent":"Audit Trail",
  "processReading":"Telemetry","energyReading":"Telemetry","equipmentState":"Telemetry","alarm":"Telemetry",
  "oeeRecord":"Reports","productionCount":"Reports","asBuiltRecord":"Reports"}
+TYPE_BY_ROOT.update(EXT.TYPE_BY_ROOT)
 import re as _re
 LABEL_FULL={"unitOfMeasure":"Units of Measure","billOfMaterial":"Bills of Material","billOfProcess":"Bills of Process","equipment":"Equipment","capa":"CAPA (8D)","pfmea":"Process FMEAs","ppapSubmission":"PPAP Submissions","msaStudy":"MSA Studies",
  "spcChart":"SPC Charts","spcSample":"SPC Samples","erpMessage":"ERP Messages","iotDevice":"IoT Devices","oeeRecord":"OEE Records","wipUnit":"WIP Units","ppeItem":"PPE Items","user":"Users","site":"Sites","processReading":"Process Readings",
@@ -157,6 +161,7 @@ LABEL_FULL.update({"workCenterRequiresSkill":"Work Center Required Skills","cust
  "workInstructionStepMediaControlledDocument":"Work Instruction Step Media","engineeringChangeControlledDocument":"Engineering Change Documents","capaControlledDocument":"CAPA Documents","nonconformancePhotoControlledDocument":"Nonconformance Photos",
  "controlPlanCoreTeamUser":"Control Plan Core Team","pfmeaCoreTeamUser":"PFMEA Core Team","nonconformanceMrbUser":"Nonconformance MRB Members","msaStudyAppraiserUser":"MSA Study Appraisers","auditAuditorUser":"Audit Auditors","changeoverPerformedByUser":"Changeover Crew",
  "maintenanceWorkOrderAssignedToUser":"Maintenance Work Order Assignees","safetyIncidentWitnessUser":"Safety Incident Witnesses","lotAttributesCavityNo":"Lot Cavity Numbers","toolItem":"Tool Applicable Items","samplingPlanSizeRow":"Sampling Plan Sample Size Table","stepCompletion":"Work Instruction Step Completions"})
+LABEL_FULL.update(EXT.LABELS)
 WORDFIX={"Bom":"BOM","Erp":"ERP","Iot":"IoT","Oee":"OEE","Spc":"SPC","Msa":"MSA","Ppap":"PPAP","Pfmea":"PFMEA","Capa":"CAPA","Wip":"WIP","Ppe":"PPE","Mrb":"MRB","Of":"of","To":"to","On":"on"}
 def plural(w):
     if w in("Equipment","Labour","Data","Media","Staff"): return w

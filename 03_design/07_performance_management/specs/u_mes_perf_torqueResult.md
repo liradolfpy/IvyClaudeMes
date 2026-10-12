@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 46 (41 required, 5 may be null) |
+| Keys | 51 (41 required, 10 may be null) |
 | Estimated volume per year | ~1.5 million |
 | Storage | standard |
 
@@ -61,14 +61,19 @@ Every key is present in every document. "Required" means the value may not be nu
 | 36 | curveControlledDocumentName | String | - | No (null allowed) | Display value of curveControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
 | 37 | tightenedAt | Date | Datetime | Yes | Date and time when the record was tightened. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:51.000+0000")` |  |
 | 38 | controllerResultNo | String | - | Yes | Result identifier issued by the device controller | `"PF6-000418871"` |  |
-| 39 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
-| 40 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 41 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:21.000+0000")` |  |
-| 42 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 43 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 44 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:51.000+0000")` |  |
-| 45 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 46 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 39 | curveEnvelopeId | String | - | No (null allowed) | Reference to u_mes_qual_curveEnvelope._id | `"1317000000000003"` | Reference: u_mes_qual_curveEnvelope._id |
+| 40 | curveEnvelopeName | String | - | No (null allowed) | Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name | `"Bleed screw M10 torque-angle, LH"` |  |
+| 41 | measurementCurveId | String | - | No (null allowed) | Reference to u_mes_qual_measurementCurve._id | `"1319000000000002"` | Reference: u_mes_qual_measurementCurve._id |
+| 42 | measurementCurveName | String | - | No (null allowed) | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260915-01847"` |  |
+| 43 | envelopeResult | String | - | No (null allowed) | Verdict of the envelope check | `"OK"` | OK; NOK |
+| 44 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
+| 45 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 46 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:21.000+0000")` |  |
+| 47 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 48 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 49 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:51.000+0000")` |  |
+| 50 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 51 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 

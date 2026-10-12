@@ -9,7 +9,7 @@
 | Parent collection | u_mes_matl_kit |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 23 (19 required, 4 may be null) |
+| Keys | 29 (20 required, 9 may be null) |
 
 ## Structure
 
@@ -38,13 +38,19 @@ Every key is present in every document. "Required" means the value may not be nu
 | 14 | fromLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: from location | `"1112000000000001"` | Reference: u_mes_matl_storageLocation._id |
 | 15 | fromLocationName | String | - | No (null allowed) | Display value of fromLocationId, copied from u_mes_matl_storageLocation.name | `"Raw material yard, ingot bay"` |  |
 | 16 | shortQuantity | Decimal128 | - | Yes | Short quantity | `NumberDecimal("0")` |  |
-| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 18 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
-| 19 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 20 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
-| 21 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
-| 22 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 23 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 17 | itemRevision | String | - | No (null allowed) | Revision required by the active BOM | `"C"` |  |
+| 18 | scannedItemRevision | String | - | No (null allowed) | Revision read from the scanned label | `"C"` |  |
+| 19 | scannedCode | String | - | No (null allowed) | Label code scanned at picking | `"5110300040/L260921-BS-003"` |  |
+| 20 | isMandatory | Boolean | - | Yes | True when the kit cannot be released without this line | `true` |  |
+| 21 | verifiedAt | Date | Datetime | No (null allowed) | Time the line was verified | `ISODate("2026-09-15T06:02:18.000+0000")` |  |
+| 22 | verificationResult | String | - | No (null allowed) | Result of the BOM check of the line | `"Match"` | Match; Wrong Item; Wrong Revision; Wrong Quantity; Not Scanned |
+| 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 24 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
+| 25 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 26 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 27 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:18.000+0000")` |  |
+| 28 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 29 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
 
 ## Indexes
 

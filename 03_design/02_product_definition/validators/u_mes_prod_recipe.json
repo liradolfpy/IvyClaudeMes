@@ -28,6 +28,17 @@
         "approvedBy",
         "approvedAt",
         "lastDownloadedAt",
+        "previousVersionRecipeId",
+        "previousVersionRecipeName",
+        "changeReasonText",
+        "releasedAt",
+        "isGoldenRecipe",
+        "goldenDesignatedAt",
+        "goldenDesignatedById",
+        "goldenDesignatedBy",
+        "origin",
+        "analyticsModelId",
+        "analyticsModelName",
         "status",
         "schemaVersion"
       ],
@@ -98,7 +109,10 @@
             "Anodising Program",
             "Tightening Program",
             "Leak Test Program",
-            "Laser Marking Program"
+            "Laser Marking Program",
+            "Press Program",
+            "Dispensing Program",
+            "Vision Job"
           ]
         },
         "programNo": {
@@ -161,6 +175,82 @@
             "null"
           ],
           "description": "Last downloaded date and time. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "previousVersionRecipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_recipe._id: previous version recipe"
+        },
+        "previousVersionRecipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of previousVersionRecipeId, copied from u_mes_prod_recipe.name"
+        },
+        "changeReasonText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reason for the change from the previous version"
+        },
+        "releasedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the version was released for production"
+        },
+        "isGoldenRecipe": {
+          "bsonType": "bool",
+          "description": "True when the version is the approved golden recipe for its variant and machine"
+        },
+        "goldenDesignatedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the version was designated golden recipe"
+        },
+        "goldenDesignatedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'golden designated'"
+        },
+        "goldenDesignatedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in goldenDesignatedById, copied from u_mes_mast_user.fullName"
+        },
+        "origin": {
+          "bsonType": "string",
+          "description": "Where the parameter set came from",
+          "enum": [
+            "Engineering",
+            "Optimisation Model",
+            "Simulation Study"
+          ]
+        },
+        "analyticsModelId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_analyticsModel._id"
+        },
+        "analyticsModelName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of analyticsModelId, copied from u_mes_syst_analyticsModel.name"
         },
         "status": {
           "bsonType": "string",

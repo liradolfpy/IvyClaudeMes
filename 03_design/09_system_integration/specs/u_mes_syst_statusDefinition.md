@@ -51,7 +51,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_syst_statusTransition.
+u_mes_syst_statusTransition, u_mes_syst_recordPolicy.
 
 ## Files
 

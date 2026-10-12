@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 40 (19 required, 21 may be null) |
+| Keys | 43 (19 required, 24 may be null) |
 | Estimated volume per year | ~720,000 |
 | Storage | standard |
 
@@ -55,14 +55,17 @@ Every key is present in every document. "Required" means the value may not be nu
 | 30 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 31 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 32 | voidReason | String | - | No (null allowed) | Void reason | `null` |  |
-| 33 | status | String | - | Yes | Primary lifecycle state of the document | `"Issued"` | Reserved; Issued; Marked; Shipped; Voided; Scrapped |
-| 34 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 35 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:20.000+0000")` |  |
-| 36 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 37 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 38 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:50.000+0000")` |  |
-| 39 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 40 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 33 | markingRecipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id: marking recipe | `null` | Reference: u_mes_prod_recipe._id |
+| 34 | markingRecipeName | String | - | No (null allowed) | Display value of markingRecipeId, copied from u_mes_prod_recipe.name | `null` |  |
+| 35 | markingRecipeVersion | String | - | No (null allowed) | Version of the marking program | `null` |  |
+| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Issued"` | Reserved; Issued; Marked; Shipped; Voided; Scrapped |
+| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 38 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:20.000+0000")` |  |
+| 39 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 40 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 41 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:50.000+0000")` |  |
+| 42 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 43 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 
@@ -84,7 +87,7 @@ Reserved, Issued, Marked, Shipped, Voided, Scrapped. Initial state: Reserved. Th
 
 ## Referenced by
 
-u_mes_plan_wipUnit, u_mes_trac_genealogyLink, u_mes_trac_asBuiltRecord, u_mes_qual_customerComplaintSerialNumber.
+u_mes_plan_wipUnit, u_mes_trac_genealogyLink, u_mes_trac_asBuiltRecord, u_mes_qual_scrapRecord, u_mes_qual_customerComplaintSerialNumber, u_mes_qual_measurementCurve, u_mes_qual_defectRecord.
 
 ## Files
 

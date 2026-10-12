@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 54 (32 required, 22 may be null) |
+| Keys | 65 (32 required, 33 may be null) |
 | Estimated volume per year | ~12 million |
 | Storage | standard, partitioned by month |
 
@@ -69,14 +69,25 @@ Every key is present in every document. "Required" means the value may not be nu
 | 44 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
 | 45 | overridden | Boolean | - | Yes | True when: overridden | `false` |  |
 | 46 | remarks | String | - | No (null allowed) | Remarks of the inspection result | `"No abnormality observed"` |  |
-| 47 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
-| 48 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 49 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:20.000+0000")` |  |
-| 50 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 51 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 52 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:50.000+0000")` |  |
-| 53 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 54 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 47 | positionNo | Int32 | - | No (null allowed) | Position number (u_mes_qual_characteristicPosition.positionNo) | `NumberInt(1)` |  |
+| 48 | positionName | String | - | No (null allowed) | Position name | `"Bridge, left of centre"` |  |
+| 49 | imageControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: image controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
+| 50 | imageControlledDocumentName | String | - | No (null allowed) | Display value of imageControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
+| 51 | measurementCurveId | String | - | No (null allowed) | Reference to u_mes_qual_measurementCurve._id | `null` | Reference: u_mes_qual_measurementCurve._id |
+| 52 | measurementCurveName | String | - | No (null allowed) | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `null` |  |
+| 53 | analyticsModelId | String | - | No (null allowed) | Reference to u_mes_syst_analyticsModel._id | `null` | Reference: u_mes_syst_analyticsModel._id |
+| 54 | analyticsModelName | String | - | No (null allowed) | Display value of analyticsModelId, copied from u_mes_syst_analyticsModel.name | `null` |  |
+| 55 | modelVersion | String | - | No (null allowed) | Version of the model | `null` |  |
+| 56 | modelClass | String | - | No (null allowed) | Class returned by the model, e.g. OK, NOK, Low Confidence | `null` |  |
+| 57 | modelConfidence | Decimal128 | - | No (null allowed) | Confidence of the model classification (0 to 1) | `null` |  |
+| 58 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
+| 59 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 60 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:20.000+0000")` |  |
+| 61 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 62 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 63 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:50.000+0000")` |  |
+| 64 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 65 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 
@@ -97,7 +108,7 @@ Recorded, Voided. Initial state: Recorded. The values are maintained in u_mes_sy
 
 ## Referenced by
 
-u_mes_matl_goodsReceiptLineInspectionResult, u_mes_trac_asBuiltRecordInspectionResult, u_mes_qual_spcSampleInspectionResult, u_mes_qual_nonconformanceInspectionResult.
+u_mes_matl_goodsReceiptLineInspectionResult, u_mes_trac_asBuiltRecordInspectionResult, u_mes_qual_spcSampleInspectionResult, u_mes_qual_nonconformanceInspectionResult, u_mes_qual_measurementCurve, u_mes_qual_defectRecord.
 
 ## Files
 

@@ -21,6 +21,8 @@ def parse(t,n):
         p=l.split("|"); p+=[""]*(n-len(p)); k=p[0]; nul=k.endswith("?"); d[k.rstrip("?")]=(nul,p[1:])
     return d
 TD=parse(TEXT,4); ND=parse(NUM,3)
+import ext_req01 as EXT
+EXT.install(cat,ENUM_OVERRIDE,TD)
 ES={l.split("|")[0]:(l.split("|")+["",""])[1:4] for l in ES_TEXT.strip().split("\n")}
 ALT={l.split("|")[0]:(l.split("|")+[""])[1:3] for l in ALT_TEXT.strip().split("\n")}
 # ---------- identifiers
@@ -87,6 +89,7 @@ def userrole(key,c):
     return "operator"
 def nullable(c,f):
     k=f["key"]
+    if (c["entity"],k) in EXT.NULLABLE: return EXT.NULLABLE[(c["entity"],k)]
     if k in STD: return False
     if c["parent"]:
         pe=bycol[c["parent"]]["entity"]
@@ -124,6 +127,7 @@ def describe(c,f,nul):
      "updatedAt":"Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix","updatedById":"Reference to u_mes_mast_user._id: user or process that last updated the document","updatedBy":"Display name of the last updater, copied from u_mes_mast_user.fullName","sequenceNo":"Position of this document in its list (within the same parent for child collections), starting at 1",
      "relatedCollectionName":"Name of the collection the related document is in","relatedEntityId":"_id of the related document in the collection named by relatedCollectionName","relatedEntityName":"Display value of the related document"}
     if k in fixed: return fixed[k]
+    if (c["entity"],k) in EXT.DESC: return EXT.DESC[(c["entity"],k)]
     ks=[x["key"] for x in c["fields"]]
     if f["ref"]:
         tc=byent[f["ref"]]; stem=k[:-2]
@@ -267,7 +271,7 @@ def enum(c,f):
     if (c["entity"],k) in ENUM_OVERRIDE: return ENUM_OVERRIDE[(c["entity"],k)]
     if k in TD and TD[k][1][1]: return TD[k][1][1].split(";")
     return None
-LINEKEYS=["lineNo","stepNo","itemNo","taskNo","actionNo","findingNo","elementNo","levelNo","stageNo","releaseNo","revisionNo","rank","level","lotSizeFrom","subgroupNo"]
+LINEKEYS=["lineNo","stepNo","itemNo","taskNo","actionNo","findingNo","elementNo","levelNo","stageNo","releaseNo","revisionNo","rank","level","lotSizeFrom","subgroupNo","positionNo","windowNo"]
 def indexes(c):
     ks=[f["key"] for f in c["fields"]]; out=[]; e=c["entity"]
     def add(keys,unique,why): out.append((collections.OrderedDict(keys),unique,why))

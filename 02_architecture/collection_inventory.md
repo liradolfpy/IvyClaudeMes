@@ -1,6 +1,6 @@
 # Collection inventory
 
-Model version 2.5 | 11 October 2026 | 299 collections (148 entity, 76 child, 67 relationship, 8 value-list), 6058 keys
+Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
 
 Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.
 
@@ -8,15 +8,15 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 
 | Module code | Module | Collections |
 |---|---|---|
-| mast | Master Data Management | 56 |
-| prod | Product Definition | 45 |
-| plan | Planning and Execution | 36 |
-| matl | Material Management | 22 |
-| trac | Traceability | 7 |
-| qual | Quality Management | 69 |
-| perf | Performance Management | 17 |
-| maint | Tooling & Maintenance | 14 |
-| syst | System and Integration | 27 |
+| mast | Master Data Management | 57 |
+| prod | Product Definition | 49 |
+| plan | Planning and Execution | 42 |
+| matl | Material Management | 26 |
+| trac | Traceability | 9 |
+| qual | Quality Management | 77 |
+| perf | Performance Management | 21 |
+| maint | Tooling & Maintenance | 18 |
+| syst | System and Integration | 38 |
 | ehs | Environment Health and Safety | 6 |
 
 ## mast - Master Data Management
@@ -79,6 +79,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 54 | u_mes_mast_language | entity | master | - | Languages of users, instructions and documents | name |
 | 55 | u_mes_mast_transporter | entity | master | - | Transport companies used for dispatch | name |
 | 56 | u_mes_mast_commodity | entity | master | - | Purchasing commodities used to classify suppliers | name |
+| 57 | u_mes_mast_roleRequiredSkill | relationship | master | u_mes_mast_role | Links one role to one required skill (one document per link) | recordNo |
 
 ## prod - Product Definition
 
@@ -129,6 +130,10 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 43 | u_mes_prod_padCompound | entity | master | - | Brake pad friction compounds offered as a variant option | name |
 | 44 | u_mes_prod_surfaceFinish | entity | master | - | Surface finishes offered as a variant option | name |
 | 45 | u_mes_prod_vehicleModel | entity | master | - | Customer vehicle models the parts are fitted to | name |
+| 46 | u_mes_prod_recipeProductVariant | relationship | master | u_mes_prod_recipe | Links one recipe to one product variant (one document per link) | recordNo |
+| 47 | u_mes_prod_recipeControlledDocument | relationship | master | u_mes_prod_recipe | Links one recipe to one controlled document (one document per link) | recordNo |
+| 48 | u_mes_prod_workInstructionWorkCenter | relationship | master | u_mes_prod_workInstruction | Links one workInstruction to one work center (one document per link) | recordNo |
+| 49 | u_mes_prod_workInstructionProductVariant | relationship | master | u_mes_prod_workInstruction | Links one workInstruction to one product variant (one document per link) | recordNo |
 
 ## plan - Planning and Execution
 
@@ -170,6 +175,12 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 34 | u_mes_plan_indirectActivity | entity | master | - | Indirect labour activities (cleaning, training, waiting for material ...) | name |
 | 35 | u_mes_plan_containerType | entity | master | - | Types of container with dimensions and tare weight | name |
 | 36 | u_mes_plan_andonType | entity | master | - | Types of andon call with responsible department and target response time | name |
+| 37 | u_mes_plan_operatorSession | entity | transaction | - | One login-to-logout session of an operator at a station, with the authentication method and the checks done at login. | recordNo |
+| 38 | u_mes_plan_documentAcknowledgement | entity | transaction | - | Operator confirmation that a specific revision of a work instruction, recipe or controlled document was read at a station. | recordNo |
+| 39 | u_mes_plan_interlockEvent | entity | transaction | - | Every time an interlock rule blocks a transaction, is overridden or is cleared: what was checked, expected and found, and who authorised the override. | recordNo |
+| 40 | u_mes_plan_recipeDownload | entity | transaction | - | Each download or selection of a program / recipe on a machine with the checksum verification result. | recordNo |
+| 41 | u_mes_plan_setupVerification | entity | transaction | - | Pre-start verification of the set-up of a station or machine against the order, variant and bill of process. | recordNo |
+| 42 | u_mes_plan_setupVerificationItem | child | transaction | u_mes_plan_setupVerification | One document per item of a setupVerification | recordNo |
 
 ## matl - Material Management
 
@@ -197,6 +208,10 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 20 | u_mes_matl_movementType | entity | master | - | Stock movement types with their ERP movement code and stock effect | name |
 | 21 | u_mes_matl_stockStatus | entity | master | - | Stock statuses (unrestricted, quality inspection, blocked, reserved) | name |
 | 22 | u_mes_matl_packType | entity | master | - | Pack levels used in packaging specifications (bag, tray, bin, pallet) | name |
+| 23 | u_mes_matl_exposureTimer | entity | transaction | - | Floor-life, pot-life or open-time clock for a lot or container of an exposure-controlled item. | recordNo |
+| 24 | u_mes_matl_replenishmentRule | entity | master | - | Min-max or e-Kanban rule for replenishing an item at a line-side location. | recordNo |
+| 25 | u_mes_matl_materialDemandForecast | entity | transaction | - | Short-term component demand and projected line-side shortage per item, line and time bucket. | recordNo |
+| 26 | u_mes_matl_storageLocationAllowedItem | relationship | master | u_mes_matl_storageLocation | Links one storageLocation to one allowed item (one document per link) | recordNo |
 
 ## trac - Traceability
 
@@ -209,6 +224,8 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 5 | u_mes_trac_asBuiltRecordComponent | child | transaction | u_mes_trac_asBuiltRecord | One document per component of a asBuiltRecord | recordNo |
 | 6 | u_mes_trac_asBuiltRecordOperation | child | transaction | u_mes_trac_asBuiltRecord | One document per operation of a asBuiltRecord | recordNo |
 | 7 | u_mes_trac_asBuiltRecordInspectionResult | relationship | transaction | u_mes_trac_asBuiltRecord | Links one asBuiltRecord to one inspection result (one document per link) | recordNo |
+| 8 | u_mes_trac_traceInvestigation | entity | transaction | - | A saved forward or reverse trace run, its starting object and the containment it fed. | title |
+| 9 | u_mes_trac_traceInvestigationResult | child | transaction | u_mes_trac_traceInvestigation | One document per result of a traceInvestigation | recordNo |
 
 ## qual - Quality Management
 
@@ -283,6 +300,14 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 67 | u_mes_qual_gaugeType | entity | master | - | Types of gauge and measuring instrument | name |
 | 68 | u_mes_qual_dispositionType | entity | master | - | Dispositions for nonconforming material (use as is, rework, scrap, return, sort) | name |
 | 69 | u_mes_qual_complaintType | entity | master | - | Types of customer complaint (line rejection, zero kilometre, warranty, logistics) | name |
+| 70 | u_mes_qual_characteristicPosition | child | master | u_mes_qual_characteristic | One document per position of a characteristic | recordNo |
+| 71 | u_mes_qual_curveEnvelope | entity | master | - | Approved golden-sample envelope for a force–displacement, torque–angle, pressure–time or signal curve. | name |
+| 72 | u_mes_qual_curveEnvelopeWindow | child | master | u_mes_qual_curveEnvelope | One document per window of a curveEnvelope | recordNo |
+| 73 | u_mes_qual_measurementCurve | entity | transaction | - | One captured curve per unit, position and test, with the envelope verdict and summary values. | recordNo |
+| 74 | u_mes_qual_measurementCurvePoint | entity | transaction | - | Points of a measurement curve. Created as a MongoDB time-series collection: timeField `sampledAt`, metaField `measurementCurveId`, granularity seconds. | recordNo |
+| 75 | u_mes_qual_defectRecord | entity | transaction | - | One logged defect on one unit (or lot sample) with first-fail station, origin, 4M category and follow-up links. | recordNo |
+| 76 | u_mes_qual_auditSchedule | entity | master | - | Plan for layered process audits (and other recurring audits): layer, area or line, check sheet, frequency and auditor. | name |
+| 77 | u_mes_qual_inspectionPlanProductVariant | relationship | master | u_mes_qual_inspectionPlan | Links one inspectionPlan to one product variant (one document per link) | recordNo |
 
 ## perf - Performance Management
 
@@ -305,6 +330,10 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 15 | u_mes_perf_lossCategory | entity | master | - | OEE loss categories with the OEE factor they reduce | name |
 | 16 | u_mes_perf_reasonCategory | entity | master | - | Categories of reason codes (mechanical, electrical, process, material ...) | name |
 | 17 | u_mes_perf_energyType | entity | master | - | Types of energy and utility that are metered | name |
+| 18 | u_mes_perf_alarmDefinition | entity | master | - | Alarm code master per equipment type with class, severity, restart-block and escalation settings. | recordNo |
+| 19 | u_mes_perf_lossSummary | entity | transaction | - | Loss Pareto row per line, shift, production date and reason code (downtime, speed and quality losses). | recordNo |
+| 20 | u_mes_perf_workCenterPerformance | entity | transaction | - | Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag. | recordNo |
+| 21 | u_mes_perf_operatorPerformance | entity | transaction | - | Labour efficiency per operator, station, variant, shift and date. | recordNo |
 
 ## maint - Tooling & Maintenance
 
@@ -324,6 +353,10 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 12 | u_mes_maint_toolItem | relationship | master | u_mes_maint_tool | Links one tool to one item (one document per link) | recordNo |
 | 13 | u_mes_maint_toolLifeRecord | entity | transaction | - | Tool mount / dismount / usage / regrind events with shots or cycles consumed | recordNo |
 | 14 | u_mes_maint_toolType | entity | master | - | Types of tool (die, fixture, cutting tool, socket, test seal) | name |
+| 15 | u_mes_maint_maintenanceWorkOrderTask | child | transaction | u_mes_maint_maintenanceWorkOrder | One document per task of a maintenanceWorkOrder | recordNo |
+| 16 | u_mes_maint_sparePartTransaction | entity | transaction | - | Spare-part issue, return, receipt, adjustment and scrap with work order and equipment. | recordNo |
+| 17 | u_mes_maint_reliabilitySummary | entity | transaction | - | MTBF and MTTR per equipment, line and period. | recordNo |
+| 18 | u_mes_maint_equipmentLifecycleEvent | entity | transaction | - | Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning. | description |
 
 ## syst - System and Integration
 
@@ -356,6 +389,17 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 25 | u_mes_syst_statusDefinition | entity | master | - | Status values and allowed transitions per collection (status mapping) | statusName |
 | 26 | u_mes_syst_enumerationValue | entity | master | - | Allowed values of fixed enumeration keys, one document per collection, key and value | valueName |
 | 27 | u_mes_syst_statusTransition | entity | master | - | Status values and allowed transitions per collection (status mapping) | transitionName |
+| 28 | u_mes_syst_interlockRule | entity | master | - | Configured check that the application must pass before a transaction is allowed, with its scope and override policy. | name |
+| 29 | u_mes_syst_statusTransitionRole | relationship | master | u_mes_syst_statusTransition | Links one statusTransition to one role (one document per link) | recordNo |
+| 30 | u_mes_syst_escalationRule | entity | master | - | Routing and SLA rule for an exception type: first owner role, response and resolution targets. | name |
+| 31 | u_mes_syst_escalationRuleLevel | child | master | u_mes_syst_escalationRule | One document per level of a escalationRule | recordNo |
+| 32 | u_mes_syst_alertRule | entity | master | - | Threshold rule on a KPI or signal with the resulting action. | name |
+| 33 | u_mes_syst_analyticsModel | entity | master | - | Registry of AI / ML / rule models and their released versions. | name |
+| 34 | u_mes_syst_modelPrediction | entity | transaction | - | Each prediction, classification, forecast or recommendation produced by a model, with the action and the actual outcome. | recordNo |
+| 35 | u_mes_syst_simulationStudy | entity | transaction | - | Digital-twin / what-if study with its input snapshot, result, approval and controlled rollout and pre / post comparison. | title |
+| 36 | u_mes_syst_recordPolicy | entity | master | - | Edit, lock and retention policy per collection. | recordNo |
+| 37 | u_mes_syst_savedView | entity | master | - | Saved dashboard and comparison filters per user or role. | name |
+| 38 | u_mes_syst_backupRun | entity | transaction | - | Evidence of database backups and restore tests with measured recovery time (optional). | recordNo |
 
 ## ehs - Environment Health and Safety
 

@@ -29,6 +29,7 @@
         "approvedById",
         "approvedBy",
         "approvedAt",
+        "itemRevision",
         "status",
         "schemaVersion"
       ],
@@ -175,6 +176,13 @@
             "null"
           ],
           "description": "Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "itemRevision": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Item revision the plan applies to; null = all revisions"
         },
         "status": {
           "bsonType": "string",

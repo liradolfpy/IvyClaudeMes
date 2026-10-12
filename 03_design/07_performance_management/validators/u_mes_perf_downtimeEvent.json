@@ -44,6 +44,13 @@
         "responseMinutes",
         "repairMinutes",
         "unitsLost",
+        "captureSource",
+        "equipmentStateId",
+        "equipmentStateName",
+        "productVariantId",
+        "productVariantName",
+        "capaId",
+        "capaName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -262,6 +269,57 @@
         "unitsLost": {
           "bsonType": "int",
           "description": "Units lost"
+        },
+        "captureSource": {
+          "bsonType": "string",
+          "description": "How the start of the downtime was captured",
+          "enum": [
+            "Equipment Signal",
+            "Operator Entry",
+            "Andon"
+          ]
+        },
+        "equipmentStateId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_equipmentState._id"
+        },
+        "equipmentStateName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentStateId, copied from u_mes_perf_equipmentState.recordNo"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "capaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_capa._id"
+        },
+        "capaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of capaId, copied from u_mes_qual_capa.title"
         },
         "status": {
           "bsonType": "string",

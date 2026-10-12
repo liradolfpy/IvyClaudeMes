@@ -20,6 +20,10 @@
         "attendance",
         "replacedUserId",
         "replacedUserName",
+        "assignedFromAt",
+        "assignedToAt",
+        "assignmentSource",
+        "suggestionScore",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -114,6 +118,36 @@
             "null"
           ],
           "description": "Display value of replacedUserId, copied from u_mes_mast_user.fullName"
+        },
+        "assignedFromAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Start of the assignment when the operator joins the station during the shift; null = from shift start"
+        },
+        "assignedToAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of the assignment when the operator leaves the station during the shift; null = to shift end"
+        },
+        "assignmentSource": {
+          "bsonType": "string",
+          "description": "How the assignment was made",
+          "enum": [
+            "Manual",
+            "Rule",
+            "Model"
+          ]
+        },
+        "suggestionScore": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Score of the suggested assignment (0 to 1) when made by a rule or model"
         },
         "schemaVersion": {
           "bsonType": "int",

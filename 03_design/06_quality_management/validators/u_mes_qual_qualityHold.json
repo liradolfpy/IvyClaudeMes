@@ -30,6 +30,10 @@
         "releaseDecision",
         "releaseComment",
         "customerNotified",
+        "releaseReasonCodeId",
+        "releaseReasonCodeName",
+        "releaseElectronicSignatureId",
+        "releaseElectronicSignatureName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -192,6 +196,34 @@
         "customerNotified": {
           "bsonType": "bool",
           "description": "True when: customer notified"
+        },
+        "releaseReasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: release reason code"
+        },
+        "releaseReasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of releaseReasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "releaseElectronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id: release electronic signature"
+        },
+        "releaseElectronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of releaseElectronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
         },
         "status": {
           "bsonType": "string",

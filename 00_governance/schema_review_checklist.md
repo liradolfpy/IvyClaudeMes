@@ -32,6 +32,7 @@ Run before accepting a document or generating sample or seed data. Record the re
 | B6 | Is the key necessary and limited to one clear purpose? |
 | B8 | If the key holds a date or time, is it tagged Date or Datetime and named to match (`…Date` or `…At`)? |
 | B7 | If the key classifies the document, has DATA-003 been applied: master collection (rule A) or fixed enumeration (rule B)? |
+| B9 | Does the key name already exist in another collection with a different BSON type (standard section 13)? |
 
 ## C. Naming checklist for every new collection
 
@@ -42,3 +43,5 @@ Run before accepting a document or generating sample or seed data. Record the re
 | C3 | Is the data class (master or transaction) decided and recorded in the inventory? |
 | C4 | If it has a lifecycle, are its status values defined in `status_values.md`? |
 | C5 | Does every master list the collection uses exist as its own collection in the inventory? |
+| C6 | If the collection supports a rule the application enforces, is there a configuration collection and an evidence record for it (standard section 12)? |
+| C7 | Is the new collection numbered after the last existing one, leaving existing numbers unchanged? |

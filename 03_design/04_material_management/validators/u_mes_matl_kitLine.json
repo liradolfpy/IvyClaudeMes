@@ -21,6 +21,12 @@
         "fromLocationId",
         "fromLocationName",
         "shortQuantity",
+        "itemRevision",
+        "scannedItemRevision",
+        "scannedCode",
+        "isMandatory",
+        "verifiedAt",
+        "verificationResult",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -106,6 +112,53 @@
         "shortQuantity": {
           "bsonType": "decimal",
           "description": "Short quantity"
+        },
+        "itemRevision": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Revision required by the active BOM"
+        },
+        "scannedItemRevision": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Revision read from the scanned label"
+        },
+        "scannedCode": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Label code scanned at picking"
+        },
+        "isMandatory": {
+          "bsonType": "bool",
+          "description": "True when the kit cannot be released without this line"
+        },
+        "verifiedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the line was verified"
+        },
+        "verificationResult": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Result of the BOM check of the line",
+          "enum": [
+            "Match",
+            "Wrong Item",
+            "Wrong Revision",
+            "Wrong Quantity",
+            "Not Scanned",
+            null
+          ]
         },
         "schemaVersion": {
           "bsonType": "int",

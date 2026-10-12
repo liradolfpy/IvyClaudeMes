@@ -51,7 +51,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_plan_container, u_mes_matl_packagingSpecification.
+u_mes_plan_container, u_mes_matl_packagingSpecification, u_mes_matl_replenishmentRule.
 
 ## Files
 

@@ -5,3 +5,4 @@ db.getCollection("u_mes_prod_recipe").createIndex({ equipmentId: 1 }, { name: "i
 db.getCollection("u_mes_prod_recipe").createIndex({ itemId: 1 }, { name: "ix_itemId" });
 db.getCollection("u_mes_prod_recipe").createIndex({ operationId: 1 }, { name: "ix_operationId" });
 db.getCollection("u_mes_prod_recipe").createIndex({ engineeringChangeId: 1 }, { name: "ix_engineeringChangeId" });
+db.getCollection("u_mes_prod_recipe").createIndex({ previousVersionRecipeId: 1 }, { name: "ix_previousVersionRecipeId" });

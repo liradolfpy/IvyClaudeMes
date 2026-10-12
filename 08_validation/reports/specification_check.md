@@ -4,19 +4,19 @@ Run: 11 October 2026 | Tool: 05_generator/gen_specs.py
 
 | Item | Count |
 |---|---|
-| Collections specified | 299 |
-| Keys specified | 6058 |
-| Required (non-null) keys | 5011 |
-| Keys that may be null | 1047 |
-| Keys with allowed values | 350 |
-| Indexes defined | 1078 |
-| Files written (spec, validator, index script per collection, plus 10 module summaries) | 907 |
+| Collections specified | 343 |
+| Keys specified | 7383 |
+| Required (non-null) keys | 5837 |
+| Keys that may be null | 1546 |
+| Keys with allowed values | 439 |
+| Indexes defined | 1324 |
+| Files written (spec, validator, index script per collection, plus 10 module summaries) | 1039 |
 
 ## Example document (first sample document) checked against its own specification
 
 The full check of all ten documents per collection is in sample_data_validation.md. Checks: every key present; value type equals the BSON type; a null only where null is allowed; a value from the allowed list where one is defined.
 
-Result: all 299 sample documents pass.
+Result: all 343 sample documents pass.
 
 ## Not covered by this check
 

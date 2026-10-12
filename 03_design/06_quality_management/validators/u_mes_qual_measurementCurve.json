@@ -1,0 +1,253 @@
+{
+  "collMod": "u_mes_qual_measurementCurve",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_measurementCurve",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "curveEnvelopeId",
+        "curveEnvelopeName",
+        "characteristicId",
+        "characteristicName",
+        "positionNo",
+        "wipUnitId",
+        "wipUnitName",
+        "serialNumberId",
+        "serialNumberName",
+        "operationExecutionId",
+        "operationExecutionName",
+        "equipmentId",
+        "equipmentName",
+        "recipeVersion",
+        "capturedAt",
+        "pointCount",
+        "peakX",
+        "peakY",
+        "finalX",
+        "finalY",
+        "result",
+        "failedWindowNo",
+        "rawControlledDocumentId",
+        "rawControlledDocumentName",
+        "inspectionResultId",
+        "inspectionResultName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "curveEnvelopeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_curveEnvelope._id"
+        },
+        "curveEnvelopeName": {
+          "bsonType": "string",
+          "description": "Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name"
+        },
+        "characteristicId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_characteristic._id"
+        },
+        "characteristicName": {
+          "bsonType": "string",
+          "description": "Display value of characteristicId, copied from u_mes_qual_characteristic.name"
+        },
+        "positionNo": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Position number (see collection 1316)"
+        },
+        "wipUnitId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_wipUnit._id"
+        },
+        "wipUnitName": {
+          "bsonType": "string",
+          "description": "Display value of wipUnitId, copied from u_mes_plan_wipUnit.recordNo"
+        },
+        "serialNumberId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_trac_serialNumber._id"
+        },
+        "serialNumberName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo"
+        },
+        "operationExecutionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_operationExecution._id"
+        },
+        "operationExecutionName": {
+          "bsonType": "string",
+          "description": "Display value of operationExecutionId, copied from u_mes_plan_operationExecution.recordNo"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "recipeVersion": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Program version"
+        },
+        "capturedAt": {
+          "bsonType": "date",
+          "description": "Capture time"
+        },
+        "pointCount": {
+          "bsonType": "int",
+          "description": "Number of points stored"
+        },
+        "peakX": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "X at peak"
+        },
+        "peakY": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Peak Y value"
+        },
+        "finalX": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Final X"
+        },
+        "finalY": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Final Y"
+        },
+        "result": {
+          "bsonType": "string",
+          "description": "Envelope verdict",
+          "enum": [
+            "OK",
+            "NOK"
+          ]
+        },
+        "failedWindowNo": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "First failed window"
+        },
+        "rawControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: raw controlled document"
+        },
+        "rawControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of rawControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "inspectionResultId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_inspectionResult._id"
+        },
+        "inspectionResultName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of inspectionResultId, copied from u_mes_qual_inspectionResult.recordNo"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Recorded",
+            "Voided"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

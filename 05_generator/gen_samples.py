@@ -358,7 +358,7 @@ def validate(docs):
             if "createdAt" in d and (d["createdAt"] is None or d["createdById"] is None or d["createdBy"] is None or d["updatedById"] is None): F(CHECKS[15],"doc %d"%x)
             if c["dataClass"]=="master" and "createdAt" in d: F(CHECKS[15],"audit keys on a master collection")
     return fails
-R_LINEKEYS=["lineNo","stepNo","itemNo","taskNo","actionNo","findingNo","elementNo","levelNo","stageNo","releaseNo","revisionNo","rank","level","lotSizeFrom","subgroupNo"]
+R_LINEKEYS=["lineNo","stepNo","itemNo","taskNo","actionNo","findingNo","elementNo","levelNo","stageNo","releaseNo","revisionNo","rank","level","lotSizeFrom","subgroupNo","positionNo","windowNo"]
 def write(root):
     docs=build(); fails=validate(docs)
     def w(p,t):

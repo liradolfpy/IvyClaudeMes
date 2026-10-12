@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 39 (32 required, 7 may be null) |
+| Keys | 44 (32 required, 12 may be null) |
 | Estimated volume per year | ~5,000 |
 | Storage | standard |
 
@@ -61,14 +61,19 @@ Every key is present in every document. "Required" means the value may not be nu
 | 29 | reworkAttemptNo | Int32 | - | Yes | Rework attempt number | `NumberInt(1)` |  |
 | 30 | returnStepNo | Int32 | - | Yes | Return step number | `NumberInt(80)` |  |
 | 31 | labourMinutes | Int32 | - | Yes | Labour (minutes) | `NumberInt(35)` |  |
-| 32 | status | String | - | Yes | Primary lifecycle state of the document | `"Issued"` | Issued; In Progress; Awaiting Reinspection; Completed; Scrapped |
-| 33 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 34 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-22T15:59:40.000+0000")` |  |
-| 35 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 36 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 37 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-22T16:00:10.000+0000")` |  |
-| 38 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 39 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 32 | reasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id | `"1203000000000008"` | Reference: u_mes_perf_reasonCode._id |
+| 33 | reasonCodeName | String | - | No (null allowed) | Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name | `"Test seal worn"` |  |
+| 34 | releasedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'released' | `null` | Reference: u_mes_mast_user._id |
+| 35 | releasedBy | String | - | No (null allowed) | Display name of the user in releasedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 36 | releasedAt | Date | Datetime | No (null allowed) | Time of the release | `null` |  |
+| 37 | status | String | - | Yes | Primary lifecycle state of the document | `"Issued"` | Issued; In Progress; Awaiting Reinspection; Completed; Scrapped |
+| 38 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 39 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-22T15:59:40.000+0000")` |  |
+| 40 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 41 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 42 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-22T16:00:10.000+0000")` |  |
+| 43 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 44 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 
@@ -89,7 +94,7 @@ Issued, In Progress, Awaiting Reinspection, Completed, Scrapped. Initial state: 
 
 ## Referenced by
 
-u_mes_qual_nonconformanceReworkOrder, u_mes_qual_reworkOrderWipUnit, u_mes_qual_reworkOrderStep.
+u_mes_qual_nonconformanceReworkOrder, u_mes_qual_reworkOrderWipUnit, u_mes_qual_reworkOrderStep, u_mes_qual_defectRecord.
 
 ## Files
 

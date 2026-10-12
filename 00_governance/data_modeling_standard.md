@@ -131,3 +131,19 @@ Further rules:
 - Text that describes one person or thing outside the plant's lists stays text under a name that cannot be mistaken for a reference (`jobTitle` of a customer contact, not `designation`).
 - Free text is allowed only for names, descriptions, notes, numbers issued by other parties, and technical addresses.
 - `status` follows section 6 and is mapped in `u_mes_syst_statusDefinition`.
+
+## 12. Enforcement, evidence and analytics records
+
+Source: MES_ExternalRequirement_01 (owner decision of 12 October 2026, D036-D042).
+
+- A rule that the application enforces is configured in a master collection and every execution of the rule leaves a transaction record. Interlocks: `u_mes_syst_interlockRule` and `u_mes_plan_interlockEvent`. Escalation: `u_mes_syst_escalationRule` with `u_mes_syst_escalationRuleLevel`. Threshold alerts: `u_mes_syst_alertRule`, raising `u_mes_syst_notification`. Role authorisation of status changes: `u_mes_syst_statusTransitionRole`.
+- An override of an interlock carries a reason code (`u_mes_perf_reasonCode`, reasonType Interlock Override), the user (`overrideById` + `overrideBy`), the time and, when the rule requires it, an electronic signature.
+- Station evidence is recorded as its own transaction: operator login (`u_mes_plan_operatorSession`), document acknowledgement (`u_mes_plan_documentAcknowledgement`), program load (`u_mes_plan_recipeDownload`), set-up verification (`u_mes_plan_setupVerification` + `u_mes_plan_setupVerificationItem`).
+- Curve data: one document per captured curve in `u_mes_qual_measurementCurve` with the envelope verdict; the points go to the time-series collection `u_mes_qual_measurementCurvePoint` (timeField `sampledAt`, metaField `measurementCurveId`). Like the other time-series collections, it cannot carry a JSON Schema validator; its validator file is the rule the application enforces.
+- AI / ML and rule models are registered with their version in `u_mes_syst_analyticsModel`; every prediction, classification or recommendation is stored in `u_mes_syst_modelPrediction` with the model version used.
+- Edit, lock and retention behaviour per collection is configured in `u_mes_syst_recordPolicy`. Transaction data is not physically deleted.
+- New collections are numbered after the last existing collection; existing numbers never change.
+
+## 13. One key name, one BSON type
+
+A key name has the same BSON type in every collection where it appears. flatten_model.py lists any key with more than one type. Documented exception: `quantity` is Int32 for countable units and Decimal128 for material quantities. A new key that would clash takes a more specific name (for example `severityClass` for a Low-Critical scale, because `severity` is an Int32 rating).

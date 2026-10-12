@@ -1,0 +1,124 @@
+{
+  "collMod": "u_mes_qual_curveEnvelopeWindow",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_curveEnvelopeWindow",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "curveEnvelopeId",
+        "curveEnvelopeName",
+        "windowNo",
+        "windowType",
+        "xMin",
+        "xMax",
+        "yMin",
+        "yMax",
+        "entrySide",
+        "exitSide",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "curveEnvelopeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_curveEnvelope._id: the parent document this one belongs to"
+        },
+        "curveEnvelopeName": {
+          "bsonType": "string",
+          "description": "Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name"
+        },
+        "windowNo": {
+          "bsonType": "int",
+          "description": "Window number"
+        },
+        "windowType": {
+          "bsonType": "string",
+          "description": "Window type",
+          "enum": [
+            "Box",
+            "Upper Band",
+            "Lower Band",
+            "Peak",
+            "Final Value"
+          ]
+        },
+        "xMin": {
+          "bsonType": "decimal",
+          "description": "Window start on X"
+        },
+        "xMax": {
+          "bsonType": "decimal",
+          "description": "Window end on X"
+        },
+        "yMin": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Lower Y limit"
+        },
+        "yMax": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Upper Y limit"
+        },
+        "entrySide": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Side the curve must enter (box windows)",
+          "enum": [
+            "Left",
+            "Right",
+            "Top",
+            "Bottom",
+            null
+          ]
+        },
+        "exitSide": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Side the curve must leave (box windows)",
+          "enum": [
+            "Left",
+            "Right",
+            "Top",
+            "Bottom",
+            null
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

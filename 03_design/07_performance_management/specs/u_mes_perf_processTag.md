@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | description |
-| Keys | 28 (24 required, 4 may be null) |
+| Keys | 34 (24 required, 10 may be null) |
 | Estimated volume per year | 5,000-20,000 |
 | Storage | standard |
 
@@ -36,7 +36,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | dataType | String | - | Yes | Data type | `"Variable"` | Variable; Attribute |
 | 12 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 13 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
-| 14 | tagClass | String | - | Yes | Tag class | `"Process Value"` | Process Value; Setpoint; Counter; State; Alarm Bit; Energy |
+| 14 | tagClass | String | - | Yes | Tag class | `"Process Value"` | Process Value; Setpoint; Counter; State; Alarm Bit; Energy; Environment |
 | 15 | scanRateMs | Int32 | - | Yes | Scan rate (milliseconds) | `NumberInt(1000)` |  |
 | 16 | deadband | Decimal128 | - | Yes | Deadband of the process tag | `NumberDecimal("0.5")` |  |
 | 17 | lowLimit | Decimal128 | - | No (null allowed) | Low limit | `NumberDecimal("380.0")` |  |
@@ -49,8 +49,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 24 | historise | Boolean | - | Yes | True when: historise | `true` |  |
 | 25 | retentionDays | Int32 | - | Yes | Retention (days) | `NumberInt(730)` |  |
 | 26 | aggregation | String | - | Yes | Aggregation of the process tag | `"None"` | None; Average; Minimum; Maximum; Last; Sum |
-| 27 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 28 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 27 | areaId | String | - | No (null allowed) | Reference to u_mes_mast_area._id | `"1005000000000001"` | Reference: u_mes_mast_area._id |
+| 28 | areaName | String | - | No (null allowed) | Display value of areaId, copied from u_mes_mast_area.name | `"Foundry"` |  |
+| 29 | lineId | String | - | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 30 | lineName | String | - | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 31 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 32 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 33 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 34 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -65,10 +71,12 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 | 3 | `{ equipmentId: 1 }` | No | Look-up of documents by equipment |
 | 4 | `{ iotDeviceId: 1 }` | No | Look-up of documents by IoT device |
 | 5 | `{ unitOfMeasureId: 1 }` | No | Look-up of documents by unit of measure |
+| 6 | `{ areaId: 1 }` | No | Look-up of documents by area |
+| 7 | `{ lineId: 1 }` | No | Look-up of documents by line |
 
 ## Referenced by
 
-u_mes_prod_recipeParameter, u_mes_perf_processReading, u_mes_perf_alarm.
+u_mes_prod_recipeParameter, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_syst_alertRule.
 
 ## Files
 

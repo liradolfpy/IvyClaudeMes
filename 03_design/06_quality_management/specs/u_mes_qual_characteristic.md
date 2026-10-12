@@ -9,13 +9,19 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 32 (23 required, 9 may be null) |
+| Keys | 33 (24 required, 9 may be null) |
 | Estimated volume per year | 2,000-10,000 |
 | Storage | standard |
 
 ## Structure
 
 Flat entity collection: one document per characteristic, all keys top-level and scalar.
+
+Repeating data of this entity is held in separate collections, one document per occurrence, each pointing back with characteristicId:
+
+| Collection | Kind | Holds |
+|---|---|---|
+| u_mes_qual_characteristicPosition | Child | position |
 
 ## Field dictionary
 
@@ -53,8 +59,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 28 | targetCpk | Decimal128 | - | No (null allowed) | Target cpk | `NumberDecimal("1.33")` |  |
 | 29 | reactionPlan | String | - | Yes | Reaction plan | `"Stop, segregate parts since last good check, inform line leader, raise NCR"` |  |
 | 30 | source | String | - | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
-| 31 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 32 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 31 | positionCount | Int32 | - | Yes | Number of positions at which the characteristic is measured (1 for a single position) | `NumberInt(2)` |  |
+| 32 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 33 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -74,7 +81,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_prod_workInstructionStepCharacteristic, u_mes_qual_controlPlanLine, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_qual_spcChart, u_mes_qual_spcSample, u_mes_qual_deviationPermit, u_mes_qual_pfmeaLine, u_mes_qual_msaStudy.
+u_mes_prod_workInstructionStepCharacteristic, u_mes_qual_controlPlanLine, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_qual_spcChart, u_mes_qual_spcSample, u_mes_qual_deviationPermit, u_mes_qual_pfmeaLine, u_mes_qual_msaStudy, u_mes_qual_characteristicPosition, u_mes_qual_curveEnvelope, u_mes_qual_measurementCurve.
 
 ## Files
 

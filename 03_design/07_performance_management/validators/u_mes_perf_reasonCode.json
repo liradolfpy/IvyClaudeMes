@@ -59,7 +59,13 @@
             "Scrap",
             "Hold",
             "Andon",
-            "Changeover Loss"
+            "Changeover Loss",
+            "Hold Release",
+            "Interlock Override",
+            "Rework",
+            "Root Cause",
+            "Alarm Closure",
+            "Exposure Reset"
           ]
         },
         "level": {

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 47 (35 required, 12 may be null) |
+| Keys | 53 (37 required, 16 may be null) |
 | Estimated volume per year | 8,000-15,000 |
 | Storage | standard |
 
@@ -69,14 +69,20 @@ Every key is present in every document. "Required" means the value may not be nu
 | 37 | closedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'closed' | `null` | Reference: u_mes_mast_user._id |
 | 38 | closedBy | String | - | No (null allowed) | Display name of the user in closedById, copied from u_mes_mast_user.fullName | `null` |  |
 | 39 | remarks | String | - | No (null allowed) | Remarks of the production order | `"No abnormality observed"` |  |
-| 40 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Created; Released; In Progress; On Hold; Completed; Closed; Cancelled |
-| 41 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 42 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 43 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 44 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 45 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T14:00:00.000+0000")` |  |
-| 46 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 47 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 40 | onHold | Boolean | - | Yes | True while the order is on hold | `false` |  |
+| 41 | qualityHoldId | String | - | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `null` | Reference: u_mes_qual_qualityHold._id |
+| 42 | qualityHoldName | String | - | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `null` |  |
+| 43 | holdReasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id: hold reason code | `null` | Reference: u_mes_perf_reasonCode._id |
+| 44 | holdReasonCodeName | String | - | No (null allowed) | Display value of holdReasonCodeId, copied from u_mes_perf_reasonCode.name | `null` |  |
+| 45 | genealogyComplete | Boolean | - | Yes | True when every unit of the order has complete component genealogy (closure check) | `true` |  |
+| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Created; Released; In Progress; On Hold; Completed; Closed; Cancelled |
+| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 48 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 49 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 50 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 51 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T14:00:00.000+0000")` |  |
+| 52 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 53 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 
@@ -97,7 +103,7 @@ Created, Released, In Progress, On Hold, Completed, Closed, Cancelled. Initial s
 
 ## Referenced by
 
-u_mes_plan_productionOrderRelease, u_mes_plan_productionOrderLot, u_mes_plan_productionScheduleSlot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_plan_labourBooking, u_mes_plan_changeover, u_mes_plan_shiftHandoverProductionOrder, u_mes_matl_materialMovement, u_mes_matl_kit, u_mes_matl_materialConsumption, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecord, u_mes_qual_checkSheetResult, u_mes_perf_equipmentState, u_mes_perf_downtimeEvent, u_mes_perf_productionCount, u_mes_perf_oeeRecord, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_maint_toolLifeRecord, u_mes_syst_erpMessage, u_mes_syst_businessEvent.
+u_mes_plan_productionOrderRelease, u_mes_plan_productionOrderLot, u_mes_plan_productionScheduleSlot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_plan_labourBooking, u_mes_plan_changeover, u_mes_plan_shiftHandoverProductionOrder, u_mes_matl_materialMovement, u_mes_matl_kit, u_mes_matl_materialConsumption, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecord, u_mes_qual_checkSheetResult, u_mes_perf_equipmentState, u_mes_perf_downtimeEvent, u_mes_perf_productionCount, u_mes_perf_oeeRecord, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_maint_toolLifeRecord, u_mes_syst_erpMessage, u_mes_syst_businessEvent, u_mes_plan_operatorSession, u_mes_plan_documentAcknowledgement, u_mes_plan_interlockEvent, u_mes_plan_recipeDownload, u_mes_plan_setupVerification, u_mes_qual_defectRecord, u_mes_syst_simulationStudy.
 
 ## Files
 

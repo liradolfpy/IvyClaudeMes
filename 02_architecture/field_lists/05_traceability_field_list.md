@@ -42,14 +42,17 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 30 | customerId | String | - | u_mes_mast_customer._id |
 | 31 | customerName | String | - |  |
 | 32 | voidReason | String | - |  |
-| 33 | status | String | - |  |
-| 34 | schemaVersion | Int32 | - |  |
-| 35 | createdAt | Date | Datetime |  |
-| 36 | createdById | String | - | u_mes_mast_user._id |
-| 37 | createdBy | String | - |  |
-| 38 | updatedAt | Date | Datetime |  |
-| 39 | updatedById | String | - | u_mes_mast_user._id |
-| 40 | updatedBy | String | - |  |
+| 33 | markingRecipeId | String | - | u_mes_prod_recipe._id |
+| 34 | markingRecipeName | String | - |  |
+| 35 | markingRecipeVersion | String | - |  |
+| 36 | status | String | - |  |
+| 37 | schemaVersion | Int32 | - |  |
+| 38 | createdAt | Date | Datetime |  |
+| 39 | createdById | String | - | u_mes_mast_user._id |
+| 40 | createdBy | String | - |  |
+| 41 | updatedAt | Date | Datetime |  |
+| 42 | updatedById | String | - | u_mes_mast_user._id |
+| 43 | updatedBy | String | - |  |
 
 ## u_mes_trac_genealogyLink
 
@@ -88,14 +91,18 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 29 | linkType | String | - |  |
 | 30 | removedAt | Date | Datetime |  |
 | 31 | removedReason | String | - |  |
-| 32 | status | String | - |  |
-| 33 | schemaVersion | Int32 | - |  |
-| 34 | createdAt | Date | Datetime |  |
-| 35 | createdById | String | - | u_mes_mast_user._id |
-| 36 | createdBy | String | - |  |
-| 37 | updatedAt | Date | Datetime |  |
-| 38 | updatedById | String | - | u_mes_mast_user._id |
-| 39 | updatedBy | String | - |  |
+| 32 | childSerialNumberId | String | - | u_mes_trac_serialNumber._id |
+| 33 | childSerialNumberName | String | - |  |
+| 34 | childWipUnitId | String | - | u_mes_plan_wipUnit._id |
+| 35 | childWipUnitName | String | - |  |
+| 36 | status | String | - |  |
+| 37 | schemaVersion | Int32 | - |  |
+| 38 | createdAt | Date | Datetime |  |
+| 39 | createdById | String | - | u_mes_mast_user._id |
+| 40 | createdBy | String | - |  |
+| 41 | updatedAt | Date | Datetime |  |
+| 42 | updatedById | String | - | u_mes_mast_user._id |
+| 43 | updatedBy | String | - |  |
 
 ## u_mes_trac_componentLotLink
 
@@ -185,14 +192,16 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 41 | finalReleaseBy | String | - |  |
 | 42 | finalReleaseAt | Date | Datetime |  |
 | 43 | recordHash | String | - |  |
-| 44 | status | String | - |  |
-| 45 | schemaVersion | Int32 | - |  |
-| 46 | createdAt | Date | Datetime |  |
-| 47 | createdById | String | - | u_mes_mast_user._id |
-| 48 | createdBy | String | - |  |
-| 49 | updatedAt | Date | Datetime |  |
-| 50 | updatedById | String | - | u_mes_mast_user._id |
-| 51 | updatedBy | String | - |  |
+| 44 | genealogyComplete | Boolean | - |  |
+| 45 | missingComponentCount | Int32 | - |  |
+| 46 | status | String | - |  |
+| 47 | schemaVersion | Int32 | - |  |
+| 48 | createdAt | Date | Datetime |  |
+| 49 | createdById | String | - | u_mes_mast_user._id |
+| 50 | createdBy | String | - |  |
+| 51 | updatedAt | Date | Datetime |  |
+| 52 | updatedById | String | - | u_mes_mast_user._id |
+| 53 | updatedBy | String | - |  |
 
 ## u_mes_trac_asBuiltRecordComponent
 
@@ -246,13 +255,17 @@ Kind: child | Data class: transaction | Parent: u_mes_trac_asBuiltRecord | _id p
 | 15 | operatorUserName | String | - |  |
 | 16 | completedAt | Date | Datetime |  |
 | 17 | result | String | - |  |
-| 18 | schemaVersion | Int32 | - |  |
-| 19 | createdAt | Date | Datetime |  |
-| 20 | createdById | String | - | u_mes_mast_user._id |
-| 21 | createdBy | String | - |  |
-| 22 | updatedAt | Date | Datetime |  |
-| 23 | updatedById | String | - | u_mes_mast_user._id |
-| 24 | updatedBy | String | - |  |
+| 18 | recipeId | String | - | u_mes_prod_recipe._id |
+| 19 | recipeName | String | - |  |
+| 20 | recipeVersion | String | - |  |
+| 21 | recipeChecksum | String | - |  |
+| 22 | schemaVersion | Int32 | - |  |
+| 23 | createdAt | Date | Datetime |  |
+| 24 | createdById | String | - | u_mes_mast_user._id |
+| 25 | createdBy | String | - |  |
+| 26 | updatedAt | Date | Datetime |  |
+| 27 | updatedById | String | - | u_mes_mast_user._id |
+| 28 | updatedBy | String | - |  |
 
 ## u_mes_trac_asBuiltRecordInspectionResult
 
@@ -276,3 +289,77 @@ Kind: relationship | Data class: transaction | Parent: u_mes_trac_asBuiltRecord 
 | 14 | updatedAt | Date | Datetime |  |
 | 15 | updatedById | String | - | u_mes_mast_user._id |
 | 16 | updatedBy | String | - |  |
+
+## u_mes_trac_traceInvestigation
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | title | String | - |  |
+| 6 | direction | String | - |  |
+| 7 | relatedCollectionName | String | - |  |
+| 8 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 9 | relatedEntityName | String | - |  |
+| 10 | depthLimit | Int32 | - |  |
+| 11 | resultCount | Int32 | - |  |
+| 12 | shippedCount | Int32 | - |  |
+| 13 | qualityHoldId | String | - | u_mes_qual_qualityHold._id |
+| 14 | qualityHoldName | String | - |  |
+| 15 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
+| 16 | nonconformanceName | String | - |  |
+| 17 | customerComplaintId | String | - | u_mes_qual_customerComplaint._id |
+| 18 | customerComplaintName | String | - |  |
+| 19 | requestedById | String | - | u_mes_mast_user._id |
+| 20 | requestedBy | String | - |  |
+| 21 | requestedAt | Date | Datetime |  |
+| 22 | completedAt | Date | Datetime |  |
+| 23 | exportControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 24 | exportControlledDocumentName | String | - |  |
+| 25 | status | String | - |  |
+| 26 | schemaVersion | Int32 | - |  |
+| 27 | createdAt | Date | Datetime |  |
+| 28 | createdById | String | - | u_mes_mast_user._id |
+| 29 | createdBy | String | - |  |
+| 30 | updatedAt | Date | Datetime |  |
+| 31 | updatedById | String | - | u_mes_mast_user._id |
+| 32 | updatedBy | String | - |  |
+
+## u_mes_trac_traceInvestigationResult
+
+Kind: child | Data class: transaction | Parent: u_mes_trac_traceInvestigation | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | traceInvestigationId | String | - | u_mes_trac_traceInvestigation._id |
+| 6 | traceInvestigationName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | relatedCollectionName | String | - |  |
+| 9 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 10 | relatedEntityName | String | - |  |
+| 11 | genealogyDepth | Int32 | - |  |
+| 12 | itemId | String | - | u_mes_prod_item._id |
+| 13 | itemName | String | - |  |
+| 14 | statusAtRun | String | - |  |
+| 15 | storageLocationId | String | - | u_mes_matl_storageLocation._id |
+| 16 | storageLocationName | String | - |  |
+| 17 | shipmentId | String | - | u_mes_matl_shipment._id |
+| 18 | shipmentName | String | - |  |
+| 19 | customerId | String | - | u_mes_mast_customer._id |
+| 20 | customerName | String | - |  |
+| 21 | quantity | Decimal128 | - |  |
+| 22 | schemaVersion | Int32 | - |  |
+| 23 | createdAt | Date | Datetime |  |
+| 24 | createdById | String | - | u_mes_mast_user._id |
+| 25 | createdBy | String | - |  |
+| 26 | updatedAt | Date | Datetime |  |
+| 27 | updatedById | String | - | u_mes_mast_user._id |
+| 28 | updatedBy | String | - |  |

@@ -40,8 +40,9 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 28 | targetCpk | Decimal128 | - |  |
 | 29 | reactionPlan | String | - |  |
 | 30 | source | String | - |  |
-| 31 | status | String | - |  |
-| 32 | schemaVersion | Int32 | - |  |
+| 31 | positionCount | Int32 | - |  |
+| 32 | status | String | - |  |
+| 33 | schemaVersion | Int32 | - |  |
 
 ## u_mes_qual_controlPlan
 
@@ -154,8 +155,9 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 22 | approvedById | String | - | u_mes_mast_user._id |
 | 23 | approvedBy | String | - |  |
 | 24 | approvedAt | Date | Datetime |  |
-| 25 | status | String | - |  |
-| 26 | schemaVersion | Int32 | - |  |
+| 25 | itemRevision | String | - |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
 
 ## u_mes_qual_inspectionPlanLine
 
@@ -403,14 +405,25 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 44 | nonconformanceName | String | - |  |
 | 45 | overridden | Boolean | - |  |
 | 46 | remarks | String | - |  |
-| 47 | status | String | - |  |
-| 48 | schemaVersion | Int32 | - |  |
-| 49 | createdAt | Date | Datetime |  |
-| 50 | createdById | String | - | u_mes_mast_user._id |
-| 51 | createdBy | String | - |  |
-| 52 | updatedAt | Date | Datetime |  |
-| 53 | updatedById | String | - | u_mes_mast_user._id |
-| 54 | updatedBy | String | - |  |
+| 47 | positionNo | Int32 | - |  |
+| 48 | positionName | String | - |  |
+| 49 | imageControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 50 | imageControlledDocumentName | String | - |  |
+| 51 | measurementCurveId | String | - | u_mes_qual_measurementCurve._id |
+| 52 | measurementCurveName | String | - |  |
+| 53 | analyticsModelId | String | - | u_mes_syst_analyticsModel._id |
+| 54 | analyticsModelName | String | - |  |
+| 55 | modelVersion | String | - |  |
+| 56 | modelClass | String | - |  |
+| 57 | modelConfidence | Decimal128 | - |  |
+| 58 | status | String | - |  |
+| 59 | schemaVersion | Int32 | - |  |
+| 60 | createdAt | Date | Datetime |  |
+| 61 | createdById | String | - | u_mes_mast_user._id |
+| 62 | createdBy | String | - |  |
+| 63 | updatedAt | Date | Datetime |  |
+| 64 | updatedById | String | - | u_mes_mast_user._id |
+| 65 | updatedBy | String | - |  |
 
 ## u_mes_qual_spcChart
 
@@ -521,14 +534,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 26 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
 | 27 | nonconformanceName | String | - |  |
 | 28 | excludedFromLimits | Boolean | - |  |
-| 29 | status | String | - |  |
-| 30 | schemaVersion | Int32 | - |  |
-| 31 | createdAt | Date | Datetime |  |
-| 32 | createdById | String | - | u_mes_mast_user._id |
-| 33 | createdBy | String | - |  |
-| 34 | updatedAt | Date | Datetime |  |
-| 35 | updatedById | String | - | u_mes_mast_user._id |
-| 36 | updatedBy | String | - |  |
+| 29 | reactionType | String | - |  |
+| 30 | qualityHoldId | String | - | u_mes_qual_qualityHold._id |
+| 31 | qualityHoldName | String | - |  |
+| 32 | notificationId | String | - | u_mes_syst_notification._id |
+| 33 | notificationName | String | - |  |
+| 34 | status | String | - |  |
+| 35 | schemaVersion | Int32 | - |  |
+| 36 | createdAt | Date | Datetime |  |
+| 37 | createdById | String | - | u_mes_mast_user._id |
+| 38 | createdBy | String | - |  |
+| 39 | updatedAt | Date | Datetime |  |
+| 40 | updatedById | String | - | u_mes_mast_user._id |
+| 41 | updatedBy | String | - |  |
 
 ## u_mes_qual_spcSampleReading
 
@@ -902,14 +920,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 29 | reworkAttemptNo | Int32 | - |  |
 | 30 | returnStepNo | Int32 | - |  |
 | 31 | labourMinutes | Int32 | - |  |
-| 32 | status | String | - |  |
-| 33 | schemaVersion | Int32 | - |  |
-| 34 | createdAt | Date | Datetime |  |
-| 35 | createdById | String | - | u_mes_mast_user._id |
-| 36 | createdBy | String | - |  |
-| 37 | updatedAt | Date | Datetime |  |
-| 38 | updatedById | String | - | u_mes_mast_user._id |
-| 39 | updatedBy | String | - |  |
+| 32 | reasonCodeId | String | - | u_mes_perf_reasonCode._id |
+| 33 | reasonCodeName | String | - |  |
+| 34 | releasedById | String | - | u_mes_mast_user._id |
+| 35 | releasedBy | String | - |  |
+| 36 | releasedAt | Date | Datetime |  |
+| 37 | status | String | - |  |
+| 38 | schemaVersion | Int32 | - |  |
+| 39 | createdAt | Date | Datetime |  |
+| 40 | createdById | String | - | u_mes_mast_user._id |
+| 41 | createdBy | String | - |  |
+| 42 | updatedAt | Date | Datetime |  |
+| 43 | updatedById | String | - | u_mes_mast_user._id |
+| 44 | updatedBy | String | - |  |
 
 ## u_mes_qual_reworkOrderWipUnit
 
@@ -1005,14 +1028,18 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 36 | scrapLocationName | String | - |  |
 | 37 | disposalMethod | String | - |  |
 | 38 | erpPosted | Boolean | - |  |
-| 39 | status | String | - |  |
-| 40 | schemaVersion | Int32 | - |  |
-| 41 | createdAt | Date | Datetime |  |
-| 42 | createdById | String | - | u_mes_mast_user._id |
-| 43 | createdBy | String | - |  |
-| 44 | updatedAt | Date | Datetime |  |
-| 45 | updatedById | String | - | u_mes_mast_user._id |
-| 46 | updatedBy | String | - |  |
+| 39 | serialNumberId | String | - | u_mes_trac_serialNumber._id |
+| 40 | serialNumberName | String | - |  |
+| 41 | dispositionTypeId | String | - | u_mes_qual_dispositionType._id |
+| 42 | dispositionTypeName | String | - |  |
+| 43 | status | String | - |  |
+| 44 | schemaVersion | Int32 | - |  |
+| 45 | createdAt | Date | Datetime |  |
+| 46 | createdById | String | - | u_mes_mast_user._id |
+| 47 | createdBy | String | - |  |
+| 48 | updatedAt | Date | Datetime |  |
+| 49 | updatedById | String | - | u_mes_mast_user._id |
+| 50 | updatedBy | String | - |  |
 
 ## u_mes_qual_qualityHold
 
@@ -1045,14 +1072,18 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 23 | releaseDecision | String | - |  |
 | 24 | releaseComment | String | - |  |
 | 25 | customerNotified | Boolean | - |  |
-| 26 | status | String | - |  |
-| 27 | schemaVersion | Int32 | - |  |
-| 28 | createdAt | Date | Datetime |  |
-| 29 | createdById | String | - | u_mes_mast_user._id |
-| 30 | createdBy | String | - |  |
-| 31 | updatedAt | Date | Datetime |  |
-| 32 | updatedById | String | - | u_mes_mast_user._id |
-| 33 | updatedBy | String | - |  |
+| 26 | releaseReasonCodeId | String | - | u_mes_perf_reasonCode._id |
+| 27 | releaseReasonCodeName | String | - |  |
+| 28 | releaseElectronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 29 | releaseElectronicSignatureName | String | - |  |
+| 30 | status | String | - |  |
+| 31 | schemaVersion | Int32 | - |  |
+| 32 | createdAt | Date | Datetime |  |
+| 33 | createdById | String | - | u_mes_mast_user._id |
+| 34 | createdBy | String | - |  |
+| 35 | updatedAt | Date | Datetime |  |
+| 36 | updatedById | String | - | u_mes_mast_user._id |
+| 37 | updatedBy | String | - |  |
 
 ## u_mes_qual_qualityHoldHeldObject
 
@@ -1561,8 +1592,10 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 33 | purchasedAt | Date | Datetime |  |
 | 34 | isMasterGauge | Boolean | - |  |
 | 35 | blockedForUse | Boolean | - |  |
-| 36 | status | String | - |  |
-| 37 | schemaVersion | Int32 | - |  |
+| 36 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 37 | equipmentName | String | - |  |
+| 38 | status | String | - |  |
+| 39 | schemaVersion | Int32 | - |  |
 
 ## u_mes_qual_gaugeCalibration
 
@@ -1765,14 +1798,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 29 | reportControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
 | 30 | reportControlledDocumentName | String | - |  |
 | 31 | nextAuditDueAt | Date | Date |  |
-| 32 | status | String | - |  |
-| 33 | schemaVersion | Int32 | - |  |
-| 34 | createdAt | Date | Datetime |  |
-| 35 | createdById | String | - | u_mes_mast_user._id |
-| 36 | createdBy | String | - |  |
-| 37 | updatedAt | Date | Datetime |  |
-| 38 | updatedById | String | - | u_mes_mast_user._id |
-| 39 | updatedBy | String | - |  |
+| 32 | auditScheduleId | String | - | u_mes_qual_auditSchedule._id |
+| 33 | auditScheduleName | String | - |  |
+| 34 | dueDate | Date | Date |  |
+| 35 | isMissed | Boolean | - |  |
+| 36 | escalationLevel | Int32 | - |  |
+| 37 | status | String | - |  |
+| 38 | schemaVersion | Int32 | - |  |
+| 39 | createdAt | Date | Datetime |  |
+| 40 | createdById | String | - | u_mes_mast_user._id |
+| 41 | createdBy | String | - |  |
+| 42 | updatedAt | Date | Datetime |  |
+| 43 | updatedById | String | - | u_mes_mast_user._id |
+| 44 | updatedBy | String | - |  |
 
 ## u_mes_qual_auditAuditorUser
 
@@ -2038,3 +2076,276 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 7 | sequenceNo | Int32 | - |  |
 | 8 | status | String | - |  |
 | 9 | schemaVersion | Int32 | - |  |
+
+## u_mes_qual_characteristicPosition
+
+Kind: child | Data class: master | Parent: u_mes_qual_characteristic | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | characteristicId | String | - | u_mes_qual_characteristic._id |
+| 6 | characteristicName | String | - |  |
+| 7 | positionNo | Int32 | - |  |
+| 8 | positionName | String | - |  |
+| 9 | nominal | Decimal128 | - |  |
+| 10 | lowerSpecLimit | Decimal128 | - |  |
+| 11 | upperSpecLimit | Decimal128 | - |  |
+| 12 | unitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 13 | unitOfMeasureName | String | - |  |
+| 14 | curveEnvelopeId | String | - | u_mes_qual_curveEnvelope._id |
+| 15 | curveEnvelopeName | String | - |  |
+| 16 | schemaVersion | Int32 | - |  |
+
+## u_mes_qual_curveEnvelope
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | name | String | - |  |
+| 6 | characteristicId | String | - | u_mes_qual_characteristic._id |
+| 7 | characteristicName | String | - |  |
+| 8 | itemId | String | - | u_mes_prod_item._id |
+| 9 | itemName | String | - |  |
+| 10 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 11 | productVariantName | String | - |  |
+| 12 | operationId | String | - | u_mes_prod_operation._id |
+| 13 | operationName | String | - |  |
+| 14 | recipeId | String | - | u_mes_prod_recipe._id |
+| 15 | recipeName | String | - |  |
+| 16 | curveType | String | - |  |
+| 17 | xQuantity | String | - |  |
+| 18 | xUnitText | String | - |  |
+| 19 | yQuantity | String | - |  |
+| 20 | yUnitText | String | - |  |
+| 21 | version | Int32 | - |  |
+| 22 | goldenSampleSerialNo | String | - |  |
+| 23 | referenceControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 24 | referenceControlledDocumentName | String | - |  |
+| 25 | effectiveFrom | Date | Date |  |
+| 26 | effectiveTo | Date | Date |  |
+| 27 | approvedById | String | - | u_mes_mast_user._id |
+| 28 | approvedBy | String | - |  |
+| 29 | approvedAt | Date | Datetime |  |
+| 30 | status | String | - |  |
+| 31 | schemaVersion | Int32 | - |  |
+
+## u_mes_qual_curveEnvelopeWindow
+
+Kind: child | Data class: master | Parent: u_mes_qual_curveEnvelope | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | curveEnvelopeId | String | - | u_mes_qual_curveEnvelope._id |
+| 6 | curveEnvelopeName | String | - |  |
+| 7 | windowNo | Int32 | - |  |
+| 8 | windowType | String | - |  |
+| 9 | xMin | Decimal128 | - |  |
+| 10 | xMax | Decimal128 | - |  |
+| 11 | yMin | Decimal128 | - |  |
+| 12 | yMax | Decimal128 | - |  |
+| 13 | entrySide | String | - |  |
+| 14 | exitSide | String | - |  |
+| 15 | schemaVersion | Int32 | - |  |
+
+## u_mes_qual_measurementCurve
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | curveEnvelopeId | String | - | u_mes_qual_curveEnvelope._id |
+| 6 | curveEnvelopeName | String | - |  |
+| 7 | characteristicId | String | - | u_mes_qual_characteristic._id |
+| 8 | characteristicName | String | - |  |
+| 9 | positionNo | Int32 | - |  |
+| 10 | wipUnitId | String | - | u_mes_plan_wipUnit._id |
+| 11 | wipUnitName | String | - |  |
+| 12 | serialNumberId | String | - | u_mes_trac_serialNumber._id |
+| 13 | serialNumberName | String | - |  |
+| 14 | operationExecutionId | String | - | u_mes_plan_operationExecution._id |
+| 15 | operationExecutionName | String | - |  |
+| 16 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 17 | equipmentName | String | - |  |
+| 18 | recipeVersion | String | - |  |
+| 19 | capturedAt | Date | Datetime |  |
+| 20 | pointCount | Int32 | - |  |
+| 21 | peakX | Decimal128 | - |  |
+| 22 | peakY | Decimal128 | - |  |
+| 23 | finalX | Decimal128 | - |  |
+| 24 | finalY | Decimal128 | - |  |
+| 25 | result | String | - |  |
+| 26 | failedWindowNo | Int32 | - |  |
+| 27 | rawControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 28 | rawControlledDocumentName | String | - |  |
+| 29 | inspectionResultId | String | - | u_mes_qual_inspectionResult._id |
+| 30 | inspectionResultName | String | - |  |
+| 31 | status | String | - |  |
+| 32 | schemaVersion | Int32 | - |  |
+| 33 | createdAt | Date | Datetime |  |
+| 34 | createdById | String | - | u_mes_mast_user._id |
+| 35 | createdBy | String | - |  |
+| 36 | updatedAt | Date | Datetime |  |
+| 37 | updatedById | String | - | u_mes_mast_user._id |
+| 38 | updatedBy | String | - |  |
+
+## u_mes_qual_measurementCurvePoint
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | measurementCurveId | String | - | u_mes_qual_measurementCurve._id |
+| 6 | measurementCurveName | String | - |  |
+| 7 | pointNo | Int32 | - |  |
+| 8 | sampledAt | Date | Datetime |  |
+| 9 | xValue | Decimal128 | - |  |
+| 10 | yValue | Decimal128 | - |  |
+| 11 | schemaVersion | Int32 | - |  |
+| 12 | createdAt | Date | Datetime |  |
+| 13 | createdById | String | - | u_mes_mast_user._id |
+| 14 | createdBy | String | - |  |
+| 15 | updatedAt | Date | Datetime |  |
+| 16 | updatedById | String | - | u_mes_mast_user._id |
+| 17 | updatedBy | String | - |  |
+
+## u_mes_qual_defectRecord
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | defectCodeId | String | - | u_mes_qual_defectCode._id |
+| 6 | defectCodeName | String | - |  |
+| 7 | wipUnitId | String | - | u_mes_plan_wipUnit._id |
+| 8 | wipUnitName | String | - |  |
+| 9 | serialNumberId | String | - | u_mes_trac_serialNumber._id |
+| 10 | serialNumberName | String | - |  |
+| 11 | lotId | String | - | u_mes_plan_lot._id |
+| 12 | lotName | String | - |  |
+| 13 | itemId | String | - | u_mes_prod_item._id |
+| 14 | itemName | String | - |  |
+| 15 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 16 | productVariantName | String | - |  |
+| 17 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 18 | productionOrderName | String | - |  |
+| 19 | detectedAtOperationId | String | - | u_mes_prod_operation._id |
+| 20 | detectedAtOperationName | String | - |  |
+| 21 | detectedAtWorkCenterId | String | - | u_mes_mast_workCenter._id |
+| 22 | detectedAtWorkCenterName | String | - |  |
+| 23 | originOperationId | String | - | u_mes_prod_operation._id |
+| 24 | originOperationName | String | - |  |
+| 25 | isFirstFail | Boolean | - |  |
+| 26 | positionNo | Int32 | - |  |
+| 27 | defectLocationText | String | - |  |
+| 28 | quantity | Int32 | - |  |
+| 29 | fourMCategory | String | - |  |
+| 30 | operatorUserId | String | - | u_mes_mast_user._id |
+| 31 | operatorUserName | String | - |  |
+| 32 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 33 | equipmentName | String | - |  |
+| 34 | componentLotId | String | - | u_mes_plan_lot._id |
+| 35 | componentLotName | String | - |  |
+| 36 | operationExecutionId | String | - | u_mes_plan_operationExecution._id |
+| 37 | operationExecutionName | String | - |  |
+| 38 | inspectionResultId | String | - | u_mes_qual_inspectionResult._id |
+| 39 | inspectionResultName | String | - |  |
+| 40 | shiftId | String | - | u_mes_mast_shift._id |
+| 41 | shiftName | String | - |  |
+| 42 | productionDate | Date | Date |  |
+| 43 | detectedAt | Date | Datetime |  |
+| 44 | detectedById | String | - | u_mes_mast_user._id |
+| 45 | detectedBy | String | - |  |
+| 46 | imageControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 47 | imageControlledDocumentName | String | - |  |
+| 48 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
+| 49 | nonconformanceName | String | - |  |
+| 50 | reworkOrderId | String | - | u_mes_qual_reworkOrder._id |
+| 51 | reworkOrderName | String | - |  |
+| 52 | scrapRecordId | String | - | u_mes_qual_scrapRecord._id |
+| 53 | scrapRecordName | String | - |  |
+| 54 | status | String | - |  |
+| 55 | schemaVersion | Int32 | - |  |
+| 56 | createdAt | Date | Datetime |  |
+| 57 | createdById | String | - | u_mes_mast_user._id |
+| 58 | createdBy | String | - |  |
+| 59 | updatedAt | Date | Datetime |  |
+| 60 | updatedById | String | - | u_mes_mast_user._id |
+| 61 | updatedBy | String | - |  |
+
+## u_mes_qual_auditSchedule
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | name | String | - |  |
+| 6 | auditType | String | - |  |
+| 7 | layer | Int32 | - |  |
+| 8 | areaId | String | - | u_mes_mast_area._id |
+| 9 | areaName | String | - |  |
+| 10 | lineId | String | - | u_mes_mast_line._id |
+| 11 | lineName | String | - |  |
+| 12 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 13 | workCenterName | String | - |  |
+| 14 | checkSheetId | String | - | u_mes_qual_checkSheet._id |
+| 15 | checkSheetName | String | - |  |
+| 16 | frequencyType | String | - |  |
+| 17 | frequencyValue | Decimal128 | - |  |
+| 18 | auditorRoleId | String | - | u_mes_mast_role._id |
+| 19 | auditorRoleName | String | - |  |
+| 20 | auditorUserId | String | - | u_mes_mast_user._id |
+| 21 | auditorUserName | String | - |  |
+| 22 | toleranceHours | Int32 | - |  |
+| 23 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
+| 24 | escalationRuleName | String | - |  |
+| 25 | nextDueDate | Date | Date |  |
+| 26 | validFrom | Date | Date |  |
+| 27 | validTo | Date | Date |  |
+| 28 | status | String | - |  |
+| 29 | schemaVersion | Int32 | - |  |
+
+## u_mes_qual_inspectionPlanProductVariant
+
+Kind: relationship | Data class: master | Parent: u_mes_qual_inspectionPlan | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | inspectionPlanId | String | - | u_mes_qual_inspectionPlan._id |
+| 6 | inspectionPlanName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 9 | productVariantName | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |

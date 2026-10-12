@@ -19,7 +19,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | (root) | Folder_Guide.md, README.md | Yes | Hand |
 | 00_governance | Requirements and rules that every other file must follow: working rules, data modeling standard, MongoDB output rules, schema review checklist, data model register, decision log, assumptions log | Yes, highest | Hand, except data_model_register.md (generated) |
 | 00_governance/decisions | Longer write-ups for a single decision, when the log entry is not enough (optional) | Yes | Hand |
-| 01_research | Phase 1 research, feature matrix, source notes per product | Background | Hand |
+| 01_research | Phase 1 research, feature matrix, source notes per product, external requirement workbooks and their impact analyses | Background | Hand |
 | 01_research/sources | One notes file per product studied (optional) | Background | Hand |
 | 02_architecture | Whole-model view: collection inventory, collection keys, field lists, diagrams, data flows, storage strategy | Yes | Generated: collection_inventory.md, collection_keys.md, field_lists/*. Hand: the rest |
 | 02_architecture/field_lists | Key, BSON type and reference target per collection, one file per module | Yes | Generated |
@@ -61,12 +61,14 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | data_model_register.md | 00_governance |
 | decision_log.md, assumptions_log.md | 00_governance |
 | phase1_research_feature_matrix_catalogue.md | 01_research (copy in 09_deliverables/phase1) |
+| MES_ExternalRequirement_01.xlsx (owner's requirement workbook), MES_ExternalRequirement_01_impact_analysis.md | 01_research |
 | collection_inventory.md, collection_keys.md | 02_architecture |
 | <module folder>_field_list.md (10 files) | 02_architecture/field_lists |
 | status_values.md | 04_reference_data/code_lists |
 | catalogue.py, keys.py, flatten_model.py, gen_docs.py, gen_specs.py | 05_generator |
 | keydict_text.py, keydict_num.py, entity_samples.py (dictionaries behind the specifications) | 05_generator |
 | master_refs.py (master collections and key conversions under DATA-003) | 05_generator |
+| ext_req01.py (44 collections and 212 keys of MES_ExternalRequirement_01), ext_req01_samples.py (their sample rules) | 05_generator |
 | spec_rules.py (rules shared by the specification and sample generators) | 05_generator |
 | gen_samples.py, sample_rules.py, sample_universe.py (sample documents) | 05_generator |
 | sample_data_registry.md (every sample _id, business number and display value) | 04_reference_data |
@@ -74,7 +76,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | enumeration_values.md | 04_reference_data/code_lists |
 | master_data_review.md | 08_validation/reports |
 | module_summary.md (one per module) | 03_design/<module folder> |
-| <collection name>.md / .json / .js / .js (257 each) | 03_design/<module folder>/specs, validators, indexes, samples |
+| <collection name>.md / .json / .js / .js (343 each) | 03_design/<module folder>/specs, validators, indexes, samples |
 | specification_check.md | 08_validation/reports |
 | flat_model.json | 05_generator/model |
 | model_consistency_check.md | 08_validation/reports |

@@ -22,6 +22,11 @@
         "lotId",
         "lotName",
         "inLimits",
+        "areaId",
+        "areaName",
+        "shiftId",
+        "shiftName",
+        "productionDate",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -119,6 +124,41 @@
         "inLimits": {
           "bsonType": "bool",
           "description": "True when: in limits"
+        },
+        "areaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "shiftId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "productionDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Production date of the reading"
         },
         "schemaVersion": {
           "bsonType": "int",

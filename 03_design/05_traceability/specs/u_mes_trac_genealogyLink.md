@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 39 (26 required, 13 may be null) |
+| Keys | 43 (26 required, 17 may be null) |
 | Estimated volume per year | ~6.5 million |
 | Storage | standard, partitioned by month |
 
@@ -54,14 +54,18 @@ Every key is present in every document. "Required" means the value may not be nu
 | 29 | linkType | String | - | Yes | Link type | `"Assembled"` | Assembled; Replaced; Split; Merge; Transformed |
 | 30 | removedAt | Date | Datetime | No (null allowed) | Date and time when the record was removed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 31 | removedReason | String | - | No (null allowed) | Removed reason | `null` |  |
-| 32 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Removed |
-| 33 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 34 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:07.000+0000")` |  |
-| 35 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 36 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 37 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:37.000+0000")` |  |
-| 38 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 39 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 32 | childSerialNumberId | String | - | No (null allowed) | Reference to u_mes_trac_serialNumber._id: child serial number | `null` | Reference: u_mes_trac_serialNumber._id |
+| 33 | childSerialNumberName | String | - | No (null allowed) | Display value of childSerialNumberId, copied from u_mes_trac_serialNumber.recordNo | `null` |  |
+| 34 | childWipUnitId | String | - | No (null allowed) | Reference to u_mes_plan_wipUnit._id: child wip unit | `null` | Reference: u_mes_plan_wipUnit._id |
+| 35 | childWipUnitName | String | - | No (null allowed) | Display value of childWipUnitId, copied from u_mes_plan_wipUnit.recordNo | `null` |  |
+| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Removed |
+| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 38 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:07.000+0000")` |  |
+| 39 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 40 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 41 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:37.000+0000")` |  |
+| 42 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 43 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

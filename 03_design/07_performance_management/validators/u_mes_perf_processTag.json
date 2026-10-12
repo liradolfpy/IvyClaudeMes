@@ -31,6 +31,12 @@
         "historise",
         "retentionDays",
         "aggregation",
+        "areaId",
+        "areaName",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
         "status",
         "schemaVersion"
       ],
@@ -101,7 +107,8 @@
             "Counter",
             "State",
             "Alarm Bit",
-            "Energy"
+            "Energy",
+            "Environment"
           ]
         },
         "scanRateMs": {
@@ -171,6 +178,48 @@
             "Last",
             "Sum"
           ]
+        },
+        "areaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
         },
         "status": {
           "bsonType": "string",

@@ -43,8 +43,11 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 31 | erpMaterialNo | String | - |  |
 | 32 | defaultStorageLocationId | String | - | u_mes_matl_storageLocation._id |
 | 33 | defaultStorageLocationName | String | - |  |
-| 34 | status | String | - |  |
-| 35 | schemaVersion | Int32 | - |  |
+| 34 | fefoRequired | Boolean | - |  |
+| 35 | exposureControlled | Boolean | - |  |
+| 36 | openLifeMinutes | Int32 | - |  |
+| 37 | status | String | - |  |
+| 38 | schemaVersion | Int32 | - |  |
 
 ## u_mes_prod_itemRevision
 
@@ -533,8 +536,12 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 21 | approvedBy | String | - |  |
 | 22 | approvedAt | Date | Datetime |  |
 | 23 | readAcknowledgementRequired | Boolean | - |  |
-| 24 | status | String | - |  |
-| 25 | schemaVersion | Int32 | - |  |
+| 24 | reacknowledgeOnRevision | Boolean | - |  |
+| 25 | generationSource | String | - |  |
+| 26 | sourceBillOfProcessId | String | - | u_mes_prod_billOfProcess._id |
+| 27 | sourceBillOfProcessName | String | - |  |
+| 28 | status | String | - |  |
+| 29 | schemaVersion | Int32 | - |  |
 
 ## u_mes_prod_workInstructionStep
 
@@ -559,7 +566,10 @@ Kind: child | Data class: master | Parent: u_mes_prod_workInstruction | _id patt
 | 15 | requiresScan | Boolean | - |  |
 | 16 | caution | String | - |  |
 | 17 | standardTimeSec | Decimal128 | - |  |
-| 18 | schemaVersion | Int32 | - |  |
+| 18 | arContentControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 19 | arContentControlledDocumentName | String | - |  |
+| 20 | arAnchorRef | String | - |  |
+| 21 | schemaVersion | Int32 | - |  |
 
 ## u_mes_prod_workInstructionStepMediaControlledDocument
 
@@ -691,8 +701,19 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 21 | approvedBy | String | - |  |
 | 22 | approvedAt | Date | Datetime |  |
 | 23 | lastDownloadedAt | Date | Datetime |  |
-| 24 | status | String | - |  |
-| 25 | schemaVersion | Int32 | - |  |
+| 24 | previousVersionRecipeId | String | - | u_mes_prod_recipe._id |
+| 25 | previousVersionRecipeName | String | - |  |
+| 26 | changeReasonText | String | - |  |
+| 27 | releasedAt | Date | Datetime |  |
+| 28 | isGoldenRecipe | Boolean | - |  |
+| 29 | goldenDesignatedAt | Date | Datetime |  |
+| 30 | goldenDesignatedById | String | - | u_mes_mast_user._id |
+| 31 | goldenDesignatedBy | String | - |  |
+| 32 | origin | String | - |  |
+| 33 | analyticsModelId | String | - | u_mes_syst_analyticsModel._id |
+| 34 | analyticsModelName | String | - |  |
+| 35 | status | String | - |  |
+| 36 | schemaVersion | Int32 | - |  |
 
 ## u_mes_prod_recipeParameter
 
@@ -990,3 +1011,72 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 11 | sequenceNo | Int32 | - |  |
 | 12 | status | String | - |  |
 | 13 | schemaVersion | Int32 | - |  |
+
+## u_mes_prod_recipeProductVariant
+
+Kind: relationship | Data class: master | Parent: u_mes_prod_recipe | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | recipeId | String | - | u_mes_prod_recipe._id |
+| 6 | recipeName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 9 | productVariantName | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
+
+## u_mes_prod_recipeControlledDocument
+
+Kind: relationship | Data class: master | Parent: u_mes_prod_recipe | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | recipeId | String | - | u_mes_prod_recipe._id |
+| 6 | recipeName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | controlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 9 | controlledDocumentName | String | - |  |
+| 10 | fileRole | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
+
+## u_mes_prod_workInstructionWorkCenter
+
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | workInstructionId | String | - | u_mes_prod_workInstruction._id |
+| 6 | workInstructionName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 9 | workCenterName | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
+
+## u_mes_prod_workInstructionProductVariant
+
+Kind: relationship | Data class: master | Parent: u_mes_prod_workInstruction | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | workInstructionId | String | - | u_mes_prod_workInstruction._id |
+| 6 | workInstructionName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 9 | productVariantName | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |

@@ -1,0 +1,288 @@
+{
+  "collMod": "u_mes_syst_modelPrediction",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_modelPrediction",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "analyticsModelId",
+        "analyticsModelName",
+        "modelVersion",
+        "predictionType",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "workCenterId",
+        "workCenterName",
+        "productVariantId",
+        "productVariantName",
+        "shiftId",
+        "shiftName",
+        "predictedAt",
+        "horizonMinutes",
+        "predictedClass",
+        "predictedValue",
+        "confidence",
+        "recommendedAction",
+        "actionStatus",
+        "actionTakenById",
+        "actionTakenBy",
+        "actionTakenAt",
+        "actualValue",
+        "actualClass",
+        "notificationId",
+        "notificationName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "analyticsModelId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_analyticsModel._id"
+        },
+        "analyticsModelName": {
+          "bsonType": "string",
+          "description": "Display value of analyticsModelId, copied from u_mes_syst_analyticsModel.name"
+        },
+        "modelVersion": {
+          "bsonType": "string",
+          "description": "Model version used"
+        },
+        "predictionType": {
+          "bsonType": "string",
+          "description": "Prediction type",
+          "enum": [
+            "Classification",
+            "Forecast",
+            "Anomaly",
+            "Maintenance Priority",
+            "Remaining Useful Life",
+            "Recommendation",
+            "Operator Risk",
+            "Assignment Recommendation"
+          ]
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in"
+        },
+        "relatedEntityId": {
+          "bsonType": "string",
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": "string",
+          "description": "Display value of the related document"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "shiftId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "predictedAt": {
+          "bsonType": "date",
+          "description": "Prediction time"
+        },
+        "horizonMinutes": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Forecast horizon"
+        },
+        "predictedClass": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Predicted class / label"
+        },
+        "predictedValue": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Predicted numeric value"
+        },
+        "confidence": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Confidence / score 0 to 1"
+        },
+        "recommendedAction": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Recommended action"
+        },
+        "actionStatus": {
+          "bsonType": "string",
+          "description": "Action status",
+          "enum": [
+            "Not Required",
+            "Pending",
+            "Approved",
+            "Applied",
+            "Rejected"
+          ]
+        },
+        "actionTakenById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'action taken'"
+        },
+        "actionTakenBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in actionTakenById, copied from u_mes_mast_user.fullName"
+        },
+        "actionTakenAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Action time"
+        },
+        "actualValue": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Observed value for accuracy tracking"
+        },
+        "actualClass": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Observed class"
+        },
+        "notificationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_notification._id"
+        },
+        "notificationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of notificationId, copied from u_mes_syst_notification.title"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "Actioned",
+            "Dismissed",
+            "Verified"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

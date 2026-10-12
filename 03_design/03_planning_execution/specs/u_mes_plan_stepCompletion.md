@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 40 (28 required, 12 may be null) |
+| Keys | 43 (28 required, 15 may be null) |
 | Estimated volume per year | ~20 million |
 | Storage | standard, archive after 15 months |
 
@@ -48,21 +48,24 @@ Every key is present in every document. "Required" means the value may not be nu
 | 23 | enteredFlag | Boolean | - | Yes | True when: entered flag | `false` |  |
 | 24 | scannedCode | String | - | No (null allowed) | Scanned code | `"5110300040/L260921-BS-003"` |  |
 | 25 | withinLimits | Boolean | - | Yes | True when: within limits | `true` |  |
-| 26 | deviceSource | String | - | No (null allowed) | Device source | `"Manual Entry"` | Manual Entry; Scanner; Nutrunner Controller; Leak Tester; Gauge Interface; PLC |
+| 26 | deviceSource | String | - | No (null allowed) | Device source | `"Manual Entry"` | Manual Entry; Scanner; Nutrunner Controller; Leak Tester; Gauge Interface; PLC; AR Headset |
 | 27 | overridden | Boolean | - | Yes | True when: overridden | `false` |  |
 | 28 | overrideById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'override' | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 29 | overrideBy | String | - | No (null allowed) | Display name of the user in overrideById, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 | 30 | overrideReason | String | - | No (null allowed) | Override reason | `null` |  |
 | 31 | photoControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: photo controlled document | `"1246000000000006"` | Reference: u_mes_syst_controlledDocument._id |
 | 32 | photoControlledDocumentName | String | - | No (null allowed) | Display value of photoControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Material certificate, piston lot KPP-260905-07"` |  |
-| 33 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Completed; Skipped; Overridden |
-| 34 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 35 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:07.000+0000")` |  |
-| 36 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 37 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 38 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:37.000+0000")` |  |
-| 39 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 40 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 33 | overrideReasonCodeId | String | - | No (null allowed) | Reference to u_mes_perf_reasonCode._id: override reason code | `null` | Reference: u_mes_perf_reasonCode._id |
+| 34 | overrideReasonCodeName | String | - | No (null allowed) | Display value of overrideReasonCodeId, copied from u_mes_perf_reasonCode.name | `null` |  |
+| 35 | arSessionRef | String | - | No (null allowed) | Reference of the AR session that confirmed the step | `null` |  |
+| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Completed; Skipped; Overridden |
+| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 38 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:07.000+0000")` |  |
+| 39 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 40 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 41 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:37.000+0000")` |  |
+| 42 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 43 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

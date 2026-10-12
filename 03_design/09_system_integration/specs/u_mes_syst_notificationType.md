@@ -46,7 +46,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_syst_notification.
+u_mes_syst_notification, u_mes_syst_escalationRuleLevel, u_mes_syst_alertRule.
 
 ## Files
 

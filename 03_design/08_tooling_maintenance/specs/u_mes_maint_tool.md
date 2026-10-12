@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 33 (25 required, 8 may be null) |
+| Keys | 38 (26 required, 12 may be null) |
 | Estimated volume per year | 1,000-5,000 |
 | Storage | standard |
 
@@ -36,7 +36,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 5 | name | String | - | Yes | Name of the tool; used as its display value in other collections | `"Gravity die, caliper body LH, die 2"` |  |
 | 6 | toolTypeId | String | - | Yes | Reference to u_mes_maint_toolType._id | `"1288000000000001"` | Reference: u_mes_maint_toolType._id |
 | 7 | toolTypeName | String | - | Yes | Display value of toolTypeId, copied from u_mes_maint_toolType.name | `"Die"` |  |
-| 8 | toolClass | String | - | Yes | Tool class | `"Production Tooling"` | Production Tooling; Customer Owned Tooling; Consumable Tooling |
+| 8 | toolClass | String | - | Yes | Tool class | `"Production Tooling"` | Production Tooling; Customer Owned Tooling; Consumable Tooling; Fixture |
 | 9 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
 | 10 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
 | 11 | mountedPosition | String | - | No (null allowed) | Mounted position | `"Station 1"` |  |
@@ -60,8 +60,13 @@ Every key is present in every document. "Required" means the value may not be nu
 | 29 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
 | 30 | ownedByCustomerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id: owned by customer | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 31 | ownedByCustomerName | String | - | No (null allowed) | Display value of ownedByCustomerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
-| 32 | status | String | - | Yes | Primary lifecycle state of the document | `"Mounted"` | Available; Mounted; In Maintenance; Life Expired; Scrapped |
-| 33 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 32 | blockAtLifeLimit | Boolean | - | Yes | True when production is blocked once life used reaches the life limit | `true` |  |
+| 33 | lastCertifiedAt | Date | Datetime | No (null allowed) | Time of the last fixture certification | `null` |  |
+| 34 | certificationDueDate | Date | Date | No (null allowed) | Next fixture certification due date | `null` |  |
+| 35 | certificateControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: certificate controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
+| 36 | certificateControlledDocumentName | String | - | No (null allowed) | Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
+| 37 | status | String | - | Yes | Primary lifecycle state of the document | `"Mounted"` | Available; Mounted; In Maintenance; Life Expired; Scrapped |
+| 38 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

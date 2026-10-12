@@ -1,0 +1,171 @@
+{
+  "collMod": "u_mes_perf_operatorPerformance",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_perf_operatorPerformance",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "userId",
+        "userName",
+        "workCenterId",
+        "workCenterName",
+        "productVariantId",
+        "productVariantName",
+        "shiftId",
+        "shiftName",
+        "productionDate",
+        "attendedMinutes",
+        "earnedMinutes",
+        "efficiencyPct",
+        "goodQuantity",
+        "rejectQuantity",
+        "errorCount",
+        "interlockCount",
+        "calculatedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "userId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id"
+        },
+        "userName": {
+          "bsonType": "string",
+          "description": "Display value of userId, copied from u_mes_mast_user.fullName"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "shiftId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_shift._id"
+        },
+        "shiftName": {
+          "bsonType": "string",
+          "description": "Display value of shiftId, copied from u_mes_mast_shift.name"
+        },
+        "productionDate": {
+          "bsonType": "date",
+          "description": "Production date"
+        },
+        "attendedMinutes": {
+          "bsonType": "decimal",
+          "description": "Minutes logged in"
+        },
+        "earnedMinutes": {
+          "bsonType": "decimal",
+          "description": "Standard minutes earned"
+        },
+        "efficiencyPct": {
+          "bsonType": "decimal",
+          "description": "Earned / attended"
+        },
+        "goodQuantity": {
+          "bsonType": "int",
+          "description": "Good units"
+        },
+        "rejectQuantity": {
+          "bsonType": "int",
+          "description": "Rejected units"
+        },
+        "errorCount": {
+          "bsonType": "int",
+          "description": "Defects with 4M category Man"
+        },
+        "interlockCount": {
+          "bsonType": "int",
+          "description": "Interlocks triggered"
+        },
+        "calculatedAt": {
+          "bsonType": "date",
+          "description": "Calculation time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Calculated",
+            "Recalculated"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

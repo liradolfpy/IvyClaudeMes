@@ -1,0 +1,235 @@
+{
+  "collMod": "u_mes_syst_alertRule",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_alertRule",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "metric",
+        "lineId",
+        "lineName",
+        "workCenterId",
+        "workCenterName",
+        "equipmentId",
+        "equipmentName",
+        "processTagId",
+        "processTagName",
+        "itemId",
+        "itemName",
+        "comparison",
+        "thresholdValue",
+        "thresholdUpperValue",
+        "evaluationWindowMinutes",
+        "severityClass",
+        "actionType",
+        "notificationTypeId",
+        "notificationTypeName",
+        "escalationRuleId",
+        "escalationRuleName",
+        "falseAlertCount",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Rule name"
+        },
+        "metric": {
+          "bsonType": "string",
+          "description": "Metric watched",
+          "enum": [
+            "OEE",
+            "Availability",
+            "Downtime Minutes",
+            "Reject Rate",
+            "Output Gap",
+            "Process Deviation",
+            "SPC Rule Violation",
+            "Line-side Stock Cover",
+            "Environment Limit",
+            "Model Anomaly Score"
+          ]
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "processTagId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_processTag._id"
+        },
+        "processTagName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of processTagId, copied from u_mes_perf_processTag.description"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "comparison": {
+          "bsonType": "string",
+          "description": "Comparison",
+          "enum": [
+            "Less Than",
+            "Greater Than",
+            "Outside Band"
+          ]
+        },
+        "thresholdValue": {
+          "bsonType": "decimal",
+          "description": "Threshold"
+        },
+        "thresholdUpperValue": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Upper value for Outside Band"
+        },
+        "evaluationWindowMinutes": {
+          "bsonType": "int",
+          "description": "Window evaluated"
+        },
+        "severityClass": {
+          "bsonType": "string",
+          "description": "Severity",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            "Critical"
+          ]
+        },
+        "actionType": {
+          "bsonType": "string",
+          "description": "Action",
+          "enum": [
+            "Notify",
+            "Hold",
+            "Stop Equipment",
+            "Block Process",
+            "Create Work Order",
+            "Create Nonconformance"
+          ]
+        },
+        "notificationTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_notificationType._id"
+        },
+        "notificationTypeName": {
+          "bsonType": "string",
+          "description": "Display value of notificationTypeId, copied from u_mes_syst_notificationType.name"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
+        },
+        "falseAlertCount": {
+          "bsonType": "int",
+          "description": "Alerts closed as false (tuning, Level 4)"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

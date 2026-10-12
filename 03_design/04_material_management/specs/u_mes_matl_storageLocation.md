@@ -17,6 +17,12 @@
 
 Flat entity collection: one document per storage location, all keys top-level and scalar.
 
+Repeating data of this entity is held in separate collections, one document per occurrence, each pointing back with storageLocationId:
+
+| Collection | Kind | Holds |
+|---|---|---|
+| u_mes_matl_storageLocationAllowedItem | Relationship | allowed item |
+
 ## Field dictionary
 
 Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
@@ -64,7 +70,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_mast_workCenter, u_mes_prod_item, u_mes_plan_lot, u_mes_plan_container, u_mes_matl_storageLocation, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kit, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_shipment, u_mes_qual_scrapRecord, u_mes_qual_qualityHold, u_mes_qual_gauge, u_mes_maint_sparePart, u_mes_maint_tool.
+u_mes_mast_workCenter, u_mes_prod_item, u_mes_plan_lot, u_mes_plan_container, u_mes_matl_storageLocation, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kit, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_shipment, u_mes_qual_scrapRecord, u_mes_qual_qualityHold, u_mes_qual_gauge, u_mes_maint_sparePart, u_mes_maint_tool, u_mes_matl_exposureTimer, u_mes_matl_replenishmentRule, u_mes_trac_traceInvestigationResult, u_mes_maint_sparePartTransaction, u_mes_matl_storageLocationAllowedItem.
 
 ## Files
 

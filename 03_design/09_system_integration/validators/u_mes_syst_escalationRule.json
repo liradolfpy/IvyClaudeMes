@@ -1,0 +1,137 @@
+{
+  "collMod": "u_mes_syst_escalationRule",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_escalationRule",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "sourceType",
+        "severityClass",
+        "lineId",
+        "lineName",
+        "firstResponderRoleId",
+        "firstResponderRoleName",
+        "requiredSkillId",
+        "requiredSkillName",
+        "responseTargetMinutes",
+        "resolutionTargetMinutes",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Rule name"
+        },
+        "sourceType": {
+          "bsonType": "string",
+          "description": "Exception source",
+          "enum": [
+            "Interlock",
+            "Andon",
+            "Alarm",
+            "Alert Rule",
+            "Breakdown",
+            "Audit",
+            "Nonconformance",
+            "Customer Complaint"
+          ]
+        },
+        "severityClass": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Severity the rule applies to (null = all)",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            "Critical",
+            null
+          ]
+        },
+        "lineId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_line._id"
+        },
+        "lineName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineId, copied from u_mes_mast_line.name"
+        },
+        "firstResponderRoleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id: first responder role"
+        },
+        "firstResponderRoleName": {
+          "bsonType": "string",
+          "description": "Display value of firstResponderRoleId, copied from u_mes_mast_role.name"
+        },
+        "requiredSkillId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_skill._id: required skill"
+        },
+        "requiredSkillName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of requiredSkillId, copied from u_mes_mast_skill.name"
+        },
+        "responseTargetMinutes": {
+          "bsonType": "int",
+          "description": "Target to acknowledge"
+        },
+        "resolutionTargetMinutes": {
+          "bsonType": "int",
+          "description": "Target to resolve"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

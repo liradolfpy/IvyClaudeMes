@@ -328,8 +328,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 37 | nextMaintenanceDueAt | Date | Date |  |
 | 38 | calibrationRequired | Boolean | - |  |
 | 39 | safetyCategory | String | - |  |
-| 40 | status | String | - |  |
-| 41 | schemaVersion | Int32 | - |  |
+| 40 | isProductionReady | Boolean | - |  |
+| 41 | readinessReasonText | String | - |  |
+| 42 | healthScore | Decimal128 | - |  |
+| 43 | healthScoreAt | Date | Datetime |  |
+| 44 | acquisitionCostInr | Decimal128 | - |  |
+| 45 | plannedReplacementDate | Date | Date |  |
+| 46 | status | String | - |  |
+| 47 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_equipmentIotDevice
 
@@ -561,13 +567,17 @@ Kind: child | Data class: transaction | Parent: u_mes_mast_shiftRoster | _id pat
 | 13 | attendance | String | - |  |
 | 14 | replacedUserId | String | - | u_mes_mast_user._id |
 | 15 | replacedUserName | String | - |  |
-| 16 | schemaVersion | Int32 | - |  |
-| 17 | createdAt | Date | Datetime |  |
-| 18 | createdById | String | - | u_mes_mast_user._id |
-| 19 | createdBy | String | - |  |
-| 20 | updatedAt | Date | Datetime |  |
-| 21 | updatedById | String | - | u_mes_mast_user._id |
-| 22 | updatedBy | String | - |  |
+| 16 | assignedFromAt | Date | Datetime |  |
+| 17 | assignedToAt | Date | Datetime |  |
+| 18 | assignmentSource | String | - |  |
+| 19 | suggestionScore | Decimal128 | - |  |
+| 20 | schemaVersion | Int32 | - |  |
+| 21 | createdAt | Date | Datetime |  |
+| 22 | createdById | String | - | u_mes_mast_user._id |
+| 23 | createdBy | String | - |  |
+| 24 | updatedAt | Date | Datetime |  |
+| 25 | updatedById | String | - | u_mes_mast_user._id |
+| 26 | updatedBy | String | - |  |
 
 ## u_mes_mast_role
 
@@ -765,14 +775,17 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 21 | revokedAt | Date | Datetime |  |
 | 22 | revokedReason | String | - |  |
 | 23 | nextReviewAt | Date | Date |  |
-| 24 | status | String | - |  |
-| 25 | schemaVersion | Int32 | - |  |
-| 26 | createdAt | Date | Datetime |  |
-| 27 | createdById | String | - | u_mes_mast_user._id |
-| 28 | createdBy | String | - |  |
-| 29 | updatedAt | Date | Datetime |  |
-| 30 | updatedById | String | - | u_mes_mast_user._id |
-| 31 | updatedBy | String | - |  |
+| 24 | trainedDocumentRevision | String | - |  |
+| 25 | requalificationRequired | Boolean | - |  |
+| 26 | revocationSource | String | - |  |
+| 27 | status | String | - |  |
+| 28 | schemaVersion | Int32 | - |  |
+| 29 | createdAt | Date | Datetime |  |
+| 30 | createdById | String | - | u_mes_mast_user._id |
+| 31 | createdBy | String | - |  |
+| 32 | updatedAt | Date | Datetime |  |
+| 33 | updatedById | String | - | u_mes_mast_user._id |
+| 34 | updatedBy | String | - |  |
 
 ## u_mes_mast_customer
 
@@ -1206,3 +1219,21 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 7 | sequenceNo | Int32 | - |  |
 | 8 | status | String | - |  |
 | 9 | schemaVersion | Int32 | - |  |
+
+## u_mes_mast_roleRequiredSkill
+
+Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | roleId | String | - | u_mes_mast_role._id |
+| 6 | roleName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | requiredSkillId | String | - | u_mes_mast_skill._id |
+| 9 | requiredSkillName | String | - |  |
+| 10 | minimumLevel | Int32 | - |  |
+| 11 | schemaVersion | Int32 | - |  |

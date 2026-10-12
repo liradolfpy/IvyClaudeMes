@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 46 (33 required, 13 may be null) |
+| Keys | 50 (33 required, 17 may be null) |
 | Estimated volume per year | ~15,000 |
 | Storage | standard |
 
@@ -61,14 +61,18 @@ Every key is present in every document. "Required" means the value may not be nu
 | 36 | scrapLocationName | String | - | No (null allowed) | Display value of scrapLocationId, copied from u_mes_matl_storageLocation.name | `"Scrap yard, aluminium"` |  |
 | 37 | disposalMethod | String | - | Yes | Disposal method | `"Remelt"` | Remelt; Sell As Scrap; Return To Supplier |
 | 38 | erpPosted | Boolean | - | Yes | True when: ERP posted | `true` |  |
-| 39 | status | String | - | Yes | Primary lifecycle state of the document | `"Declared"` | Declared; Approved; Disposed |
-| 40 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 41 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:20.000+0000")` |  |
-| 42 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 43 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 44 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:50.000+0000")` |  |
-| 45 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 46 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 39 | serialNumberId | String | - | No (null allowed) | Reference to u_mes_trac_serialNumber._id | `null` | Reference: u_mes_trac_serialNumber._id |
+| 40 | serialNumberName | String | - | No (null allowed) | Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo | `null` |  |
+| 41 | dispositionTypeId | String | - | No (null allowed) | Reference to u_mes_qual_dispositionType._id | `"1284000000000003"` | Reference: u_mes_qual_dispositionType._id |
+| 42 | dispositionTypeName | String | - | No (null allowed) | Display value of dispositionTypeId, copied from u_mes_qual_dispositionType.name | `"Scrap"` |  |
+| 43 | status | String | - | Yes | Primary lifecycle state of the document | `"Declared"` | Declared; Approved; Disposed |
+| 44 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 45 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:20.000+0000")` |  |
+| 46 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 47 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 48 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:50.000+0000")` |  |
+| 49 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 50 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 
@@ -89,7 +93,7 @@ Declared, Approved, Disposed. Initial state: Declared. The values are maintained
 
 ## Referenced by
 
-u_mes_qual_nonconformanceScrapRecord.
+u_mes_qual_nonconformanceScrapRecord, u_mes_qual_defectRecord.
 
 ## Files
 

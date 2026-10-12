@@ -278,13 +278,19 @@ Kind: child | Data class: transaction | Parent: u_mes_matl_kit | _id pattern: 16
 | 14 | fromLocationId | String | - | u_mes_matl_storageLocation._id |
 | 15 | fromLocationName | String | - |  |
 | 16 | shortQuantity | Decimal128 | - |  |
-| 17 | schemaVersion | Int32 | - |  |
-| 18 | createdAt | Date | Datetime |  |
-| 19 | createdById | String | - | u_mes_mast_user._id |
-| 20 | createdBy | String | - |  |
-| 21 | updatedAt | Date | Datetime |  |
-| 22 | updatedById | String | - | u_mes_mast_user._id |
-| 23 | updatedBy | String | - |  |
+| 17 | itemRevision | String | - |  |
+| 18 | scannedItemRevision | String | - |  |
+| 19 | scannedCode | String | - |  |
+| 20 | isMandatory | Boolean | - |  |
+| 21 | verifiedAt | Date | Datetime |  |
+| 22 | verificationResult | String | - |  |
+| 23 | schemaVersion | Int32 | - |  |
+| 24 | createdAt | Date | Datetime |  |
+| 25 | createdById | String | - | u_mes_mast_user._id |
+| 26 | createdBy | String | - |  |
+| 27 | updatedAt | Date | Datetime |  |
+| 28 | updatedById | String | - | u_mes_mast_user._id |
+| 29 | updatedBy | String | - |  |
 
 ## u_mes_matl_materialRequest
 
@@ -323,14 +329,16 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 29 | andonEventName | String | - |  |
 | 30 | lotId | String | - | u_mes_plan_lot._id |
 | 31 | lotName | String | - |  |
-| 32 | status | String | - |  |
-| 33 | schemaVersion | Int32 | - |  |
-| 34 | createdAt | Date | Datetime |  |
-| 35 | createdById | String | - | u_mes_mast_user._id |
-| 36 | createdBy | String | - |  |
-| 37 | updatedAt | Date | Datetime |  |
-| 38 | updatedById | String | - | u_mes_mast_user._id |
-| 39 | updatedBy | String | - |  |
+| 32 | replenishmentRuleId | String | - | u_mes_matl_replenishmentRule._id |
+| 33 | replenishmentRuleName | String | - |  |
+| 34 | status | String | - |  |
+| 35 | schemaVersion | Int32 | - |  |
+| 36 | createdAt | Date | Datetime |  |
+| 37 | createdById | String | - | u_mes_mast_user._id |
+| 38 | createdBy | String | - |  |
+| 39 | updatedAt | Date | Datetime |  |
+| 40 | updatedById | String | - | u_mes_mast_user._id |
+| 41 | updatedBy | String | - |  |
 
 ## u_mes_matl_materialConsumption
 
@@ -702,3 +710,131 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 7 | sequenceNo | Int32 | - |  |
 | 8 | status | String | - |  |
 | 9 | schemaVersion | Int32 | - |  |
+
+## u_mes_matl_exposureTimer
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | itemId | String | - | u_mes_prod_item._id |
+| 6 | itemName | String | - |  |
+| 7 | lotId | String | - | u_mes_plan_lot._id |
+| 8 | lotName | String | - |  |
+| 9 | containerId | String | - | u_mes_plan_container._id |
+| 10 | containerName | String | - |  |
+| 11 | timerType | String | - |  |
+| 12 | limitMinutes | Int32 | - |  |
+| 13 | startedAt | Date | Datetime |  |
+| 14 | pausedAt | Date | Datetime |  |
+| 15 | accumulatedMinutes | Int32 | - |  |
+| 16 | expiresAt | Date | Datetime |  |
+| 17 | storageLocationId | String | - | u_mes_matl_storageLocation._id |
+| 18 | storageLocationName | String | - |  |
+| 19 | resetReasonCodeId | String | - | u_mes_perf_reasonCode._id |
+| 20 | resetReasonCodeName | String | - |  |
+| 21 | resetById | String | - | u_mes_mast_user._id |
+| 22 | resetBy | String | - |  |
+| 23 | resetAt | Date | Datetime |  |
+| 24 | status | String | - |  |
+| 25 | schemaVersion | Int32 | - |  |
+| 26 | createdAt | Date | Datetime |  |
+| 27 | createdById | String | - | u_mes_mast_user._id |
+| 28 | createdBy | String | - |  |
+| 29 | updatedAt | Date | Datetime |  |
+| 30 | updatedById | String | - | u_mes_mast_user._id |
+| 31 | updatedBy | String | - |  |
+
+## u_mes_matl_replenishmentRule
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | itemId | String | - | u_mes_prod_item._id |
+| 6 | itemName | String | - |  |
+| 7 | toLocationId | String | - | u_mes_matl_storageLocation._id |
+| 8 | toLocationName | String | - |  |
+| 9 | fromLocationId | String | - | u_mes_matl_storageLocation._id |
+| 10 | fromLocationName | String | - |  |
+| 11 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 12 | workCenterName | String | - |  |
+| 13 | triggerType | String | - |  |
+| 14 | minQuantity | Decimal128 | - |  |
+| 15 | maxQuantity | Decimal128 | - |  |
+| 16 | reorderPointQuantity | Decimal128 | - |  |
+| 17 | kanbanQuantity | Decimal128 | - |  |
+| 18 | kanbanCount | Int32 | - |  |
+| 19 | containerTypeId | String | - | u_mes_plan_containerType._id |
+| 20 | containerTypeName | String | - |  |
+| 21 | unitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 22 | unitOfMeasureName | String | - |  |
+| 23 | leadTimeMinutes | Int32 | - |  |
+| 24 | validFrom | Date | Date |  |
+| 25 | validTo | Date | Date |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
+
+## u_mes_matl_materialDemandForecast
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | itemId | String | - | u_mes_prod_item._id |
+| 6 | itemName | String | - |  |
+| 7 | lineId | String | - | u_mes_mast_line._id |
+| 8 | lineName | String | - |  |
+| 9 | productionDate | Date | Date |  |
+| 10 | bucketStartAt | Date | Datetime |  |
+| 11 | bucketEndAt | Date | Datetime |  |
+| 12 | scheduledDemand | Decimal128 | - |  |
+| 13 | consumptionRatePerHour | Decimal128 | - |  |
+| 14 | onHandQuantity | Decimal128 | - |  |
+| 15 | projectedOnHand | Decimal128 | - |  |
+| 16 | projectedShortageAt | Date | Datetime |  |
+| 17 | unitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 18 | unitOfMeasureName | String | - |  |
+| 19 | method | String | - |  |
+| 20 | analyticsModelId | String | - | u_mes_syst_analyticsModel._id |
+| 21 | analyticsModelName | String | - |  |
+| 22 | calculatedAt | Date | Datetime |  |
+| 23 | status | String | - |  |
+| 24 | schemaVersion | Int32 | - |  |
+| 25 | createdAt | Date | Datetime |  |
+| 26 | createdById | String | - | u_mes_mast_user._id |
+| 27 | createdBy | String | - |  |
+| 28 | updatedAt | Date | Datetime |  |
+| 29 | updatedById | String | - | u_mes_mast_user._id |
+| 30 | updatedBy | String | - |  |
+
+## u_mes_matl_storageLocationAllowedItem
+
+Kind: relationship | Data class: master | Parent: u_mes_matl_storageLocation | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | storageLocationId | String | - | u_mes_matl_storageLocation._id |
+| 6 | storageLocationName | String | - |  |
+| 7 | sequenceNo | Int32 | - |  |
+| 8 | itemId | String | - | u_mes_prod_item._id |
+| 9 | itemName | String | - |  |
+| 10 | itemGroupId | String | - | u_mes_prod_itemGroup._id |
+| 11 | itemGroupName | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |

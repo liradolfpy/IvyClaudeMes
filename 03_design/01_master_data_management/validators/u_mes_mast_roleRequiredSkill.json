@@ -1,0 +1,71 @@
+{
+  "collMod": "u_mes_mast_roleRequiredSkill",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mast_roleRequiredSkill",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "roleId",
+        "roleName",
+        "sequenceNo",
+        "requiredSkillId",
+        "requiredSkillName",
+        "minimumLevel",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "roleId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_role._id: the parent document this one belongs to"
+        },
+        "roleName": {
+          "bsonType": "string",
+          "description": "Display value of roleId, copied from u_mes_mast_role.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "requiredSkillId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_skill._id: required skill"
+        },
+        "requiredSkillName": {
+          "bsonType": "string",
+          "description": "Display value of requiredSkillId, copied from u_mes_mast_skill.name"
+        },
+        "minimumLevel": {
+          "bsonType": "int",
+          "description": "Minimum skill level required for the role"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

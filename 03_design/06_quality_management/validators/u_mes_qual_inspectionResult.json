@@ -51,6 +51,17 @@
         "nonconformanceName",
         "overridden",
         "remarks",
+        "positionNo",
+        "positionName",
+        "imageControlledDocumentId",
+        "imageControlledDocumentName",
+        "measurementCurveId",
+        "measurementCurveName",
+        "analyticsModelId",
+        "analyticsModelName",
+        "modelVersion",
+        "modelClass",
+        "modelConfidence",
         "status",
         "schemaVersion",
         "createdAt",
@@ -335,6 +346,83 @@
             "null"
           ],
           "description": "Remarks of the inspection result"
+        },
+        "positionNo": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Position number (u_mes_qual_characteristicPosition.positionNo)"
+        },
+        "positionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Position name"
+        },
+        "imageControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: image controlled document"
+        },
+        "imageControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of imageControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "measurementCurveId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_measurementCurve._id"
+        },
+        "measurementCurveName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo"
+        },
+        "analyticsModelId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_analyticsModel._id"
+        },
+        "analyticsModelName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of analyticsModelId, copied from u_mes_syst_analyticsModel.name"
+        },
+        "modelVersion": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Version of the model"
+        },
+        "modelClass": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Class returned by the model, e.g. OK, NOK, Low Confidence"
+        },
+        "modelConfidence": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Confidence of the model classification (0 to 1)"
         },
         "status": {
           "bsonType": "string",

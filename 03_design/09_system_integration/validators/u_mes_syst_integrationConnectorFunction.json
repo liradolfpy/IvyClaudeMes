@@ -58,7 +58,8 @@
           "description": "Direction of the integration connector function",
           "enum": [
             "Inbound",
-            "Outbound"
+            "Outbound",
+            "Publish"
           ]
         },
         "messageType": {

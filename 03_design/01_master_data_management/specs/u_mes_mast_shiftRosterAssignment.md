@@ -9,7 +9,7 @@
 | Parent collection | u_mes_mast_shiftRoster |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 22 (18 required, 4 may be null) |
+| Keys | 26 (19 required, 7 may be null) |
 
 ## Structure
 
@@ -37,13 +37,17 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | attendance | String | - | Yes | Attendance of the shift roster assignment | `"Present"` | Present; Absent; Leave; Overtime |
 | 14 | replacedUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: replaced user | `null` | Reference: u_mes_mast_user._id |
 | 15 | replacedUserName | String | - | No (null allowed) | Display value of replacedUserId, copied from u_mes_mast_user.fullName | `null` |  |
-| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 17 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
-| 18 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 19 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 20 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
-| 21 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 22 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 16 | assignedFromAt | Date | Datetime | No (null allowed) | Start of the assignment when the operator joins the station during the shift; null = from shift start | `null` |  |
+| 17 | assignedToAt | Date | Datetime | No (null allowed) | End of the assignment when the operator leaves the station during the shift; null = to shift end | `null` |  |
+| 18 | assignmentSource | String | - | Yes | How the assignment was made | `"Manual"` | Manual; Rule; Model |
+| 19 | suggestionScore | Decimal128 | - | No (null allowed) | Score of the suggested assignment (0 to 1) when made by a rule or model | `null` |  |
+| 20 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 21 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
+| 22 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 23 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 24 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
+| 25 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 26 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Indexes
 

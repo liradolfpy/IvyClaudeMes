@@ -14,7 +14,7 @@
 | 10 | u_mes_mast_workCenterEquipment | Relationship | master | 10 | 10 | 0 | 2 |
 | 11 | u_mes_mast_workCenterOperation | Relationship | master | 10 | 10 | 0 | 2 |
 | 12 | u_mes_mast_workCenterRequiresSkill | Relationship | master | 10 | 10 | 0 | 2 |
-| 13 | u_mes_mast_equipment | Entity | master | 41 | 35 | 6 | 7 |
+| 13 | u_mes_mast_equipment | Entity | master | 47 | 36 | 6 | 7 |
 | 14 | u_mes_mast_equipmentIotDevice | Relationship | master | 10 | 10 | 0 | 2 |
 | 15 | u_mes_mast_shift | Entity | master | 14 | 14 | 1 | 2 |
 | 16 | u_mes_mast_shiftBreak | Child | master | 12 | 12 | 0 | 1 |
@@ -26,7 +26,7 @@
 | 22 | u_mes_mast_workCalendarException | Child | master | 12 | 12 | 1 | 1 |
 | 23 | u_mes_mast_workCalendarExceptionShift | Relationship | master | 10 | 10 | 0 | 2 |
 | 24 | u_mes_mast_shiftRoster | Entity | transaction | 25 | 23 | 1 | 6 |
-| 25 | u_mes_mast_shiftRosterAssignment | Child | transaction | 22 | 18 | 2 | 4 |
+| 25 | u_mes_mast_shiftRosterAssignment | Child | transaction | 26 | 19 | 3 | 4 |
 | 26 | u_mes_mast_role | Entity | master | 12 | 11 | 2 | 2 |
 | 27 | u_mes_mast_rolePermission | Relationship | master | 10 | 10 | 0 | 2 |
 | 28 | u_mes_mast_roleSignatureMeaning | Relationship | master | 10 | 10 | 0 | 2 |
@@ -35,7 +35,7 @@
 | 31 | u_mes_mast_skill | Entity | master | 16 | 14 | 2 | 4 |
 | 32 | u_mes_mast_skillOperation | Relationship | master | 10 | 10 | 0 | 2 |
 | 33 | u_mes_mast_skillLevelScale | Child | master | 10 | 10 | 0 | 1 |
-| 34 | u_mes_mast_skillCertification | Entity | transaction | 31 | 24 | 2 | 8 |
+| 34 | u_mes_mast_skillCertification | Entity | transaction | 34 | 25 | 3 | 8 |
 | 35 | u_mes_mast_customer | Entity | master | 26 | 24 | 2 | 5 |
 | 36 | u_mes_mast_customerShipTo | Child | master | 16 | 16 | 0 | 1 |
 | 37 | u_mes_mast_customerContact | Child | master | 12 | 10 | 1 | 1 |
@@ -58,3 +58,4 @@
 | 54 | u_mes_mast_language | Entity | master | 9 | 9 | 1 | 2 |
 | 55 | u_mes_mast_transporter | Entity | master | 11 | 9 | 1 | 2 |
 | 56 | u_mes_mast_commodity | Entity | master | 9 | 9 | 1 | 2 |
+| 57 | u_mes_mast_roleRequiredSkill | Relationship | master | 11 | 11 | 0 | 2 |

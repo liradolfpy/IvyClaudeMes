@@ -26,6 +26,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: null,
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -54,6 +55,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: null,
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -82,6 +84,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "C",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -110,6 +113,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "C",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -138,6 +142,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "C",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -166,6 +171,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "D",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -194,6 +200,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "D",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -222,6 +229,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "D",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -250,6 +258,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "D",
     status: "Released",
     schemaVersion: NumberInt(1)
   },
@@ -278,6 +287,7 @@ db.getCollection("u_mes_qual_inspectionPlan").insertMany([
     approvedById: null,
     approvedBy: null,
     approvedAt: null,
+    itemRevision: "D",
     status: "Released",
     schemaVersion: NumberInt(1)
   }

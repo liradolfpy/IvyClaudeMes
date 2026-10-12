@@ -74,7 +74,8 @@
             "Initial",
             "Periodic",
             "After Repair",
-            "After Shock Or Damage"
+            "After Shock Or Damage",
+            "Automatic Closed Loop"
           ]
         },
         "calibratedAt": {

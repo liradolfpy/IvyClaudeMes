@@ -36,6 +36,11 @@
         "costInr",
         "ownedByCustomerId",
         "ownedByCustomerName",
+        "blockAtLifeLimit",
+        "lastCertifiedAt",
+        "certificationDueDate",
+        "certificateControlledDocumentId",
+        "certificateControlledDocumentName",
         "status",
         "schemaVersion"
       ],
@@ -75,7 +80,8 @@
           "enum": [
             "Production Tooling",
             "Customer Owned Tooling",
-            "Consumable Tooling"
+            "Consumable Tooling",
+            "Fixture"
           ]
         },
         "equipmentId": {
@@ -199,6 +205,38 @@
             "null"
           ],
           "description": "Display value of ownedByCustomerId, copied from u_mes_mast_customer.name"
+        },
+        "blockAtLifeLimit": {
+          "bsonType": "bool",
+          "description": "True when production is blocked once life used reaches the life limit"
+        },
+        "lastCertifiedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the last fixture certification"
+        },
+        "certificationDueDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Next fixture certification due date"
+        },
+        "certificateControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: certificate controlled document"
+        },
+        "certificateControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
         },
         "status": {
           "bsonType": "string",

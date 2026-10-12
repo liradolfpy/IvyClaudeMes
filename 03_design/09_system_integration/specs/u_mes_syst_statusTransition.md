@@ -15,6 +15,12 @@
 
 Flat entity collection: one document per status transition, all keys top-level and scalar.
 
+Repeating data of this entity is held in separate collections, one document per occurrence, each pointing back with statusTransitionId:
+
+| Collection | Kind | Holds |
+|---|---|---|
+| u_mes_syst_statusTransitionRole | Relationship | role |
+
 ## Field dictionary
 
 Every key is present in every document. "Required" means the value may not be null. Date tag: Date = calendar date stored as 00:00:00 local plant time; Datetime = local plant time stored with the +0000 suffix (no UTC conversion).
@@ -52,7 +58,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-No other collection refers to this one.
+u_mes_syst_statusTransitionRole.
 
 ## Files
 

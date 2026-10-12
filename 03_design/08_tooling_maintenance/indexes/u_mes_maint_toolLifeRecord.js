@@ -5,4 +5,5 @@ db.getCollection("u_mes_maint_toolLifeRecord").createIndex({ toolId: 1 }, { name
 db.getCollection("u_mes_maint_toolLifeRecord").createIndex({ equipmentId: 1 }, { name: "ix_equipmentId" });
 db.getCollection("u_mes_maint_toolLifeRecord").createIndex({ productionOrderId: 1 }, { name: "ix_productionOrderId" });
 db.getCollection("u_mes_maint_toolLifeRecord").createIndex({ maintenanceWorkOrderId: 1 }, { name: "ix_maintenanceWorkOrderId" });
+db.getCollection("u_mes_maint_toolLifeRecord").createIndex({ workCenterId: 1 }, { name: "ix_workCenterId" });
 db.getCollection("u_mes_maint_toolLifeRecord").createIndex({ siteId: 1, eventAt: -1 }, { name: "ix_siteId_eventAt" });

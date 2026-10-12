@@ -32,6 +32,8 @@
         "verdict",
         "failureReason",
         "testedAt",
+        "measurementCurveId",
+        "measurementCurveName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -171,6 +173,20 @@
         "testedAt": {
           "bsonType": "date",
           "description": "Date and time when the record was tested. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "measurementCurveId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_measurementCurve._id"
+        },
+        "measurementCurveName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo"
         },
         "status": {
           "bsonType": "string",

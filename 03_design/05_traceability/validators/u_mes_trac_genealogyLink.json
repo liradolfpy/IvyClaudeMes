@@ -36,6 +36,10 @@
         "linkType",
         "removedAt",
         "removedReason",
+        "childSerialNumberId",
+        "childSerialNumberName",
+        "childWipUnitId",
+        "childWipUnitName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -220,6 +224,34 @@
             "null"
           ],
           "description": "Removed reason"
+        },
+        "childSerialNumberId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_trac_serialNumber._id: child serial number"
+        },
+        "childSerialNumberName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of childSerialNumberId, copied from u_mes_trac_serialNumber.recordNo"
+        },
+        "childWipUnitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_wipUnit._id: child wip unit"
+        },
+        "childWipUnitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of childWipUnitId, copied from u_mes_plan_wipUnit.recordNo"
         },
         "status": {
           "bsonType": "string",

@@ -1,0 +1,88 @@
+{
+  "collMod": "u_mes_matl_storageLocationAllowedItem",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_matl_storageLocationAllowedItem",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "storageLocationId",
+        "storageLocationName",
+        "sequenceNo",
+        "itemId",
+        "itemName",
+        "itemGroupId",
+        "itemGroupName",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "storageLocationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_storageLocation._id: the parent document this one belongs to"
+        },
+        "storageLocationName": {
+          "bsonType": "string",
+          "description": "Display value of storageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "sequenceNo": {
+          "bsonType": "int",
+          "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "itemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "itemGroupId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_itemGroup._id"
+        },
+        "itemGroupName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of itemGroupId, copied from u_mes_prod_itemGroup.name"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

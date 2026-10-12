@@ -43,6 +43,10 @@
         "scrapLocationName",
         "disposalMethod",
         "erpPosted",
+        "serialNumberId",
+        "serialNumberName",
+        "dispositionTypeId",
+        "dispositionTypeName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -255,6 +259,34 @@
         "erpPosted": {
           "bsonType": "bool",
           "description": "True when: ERP posted"
+        },
+        "serialNumberId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_trac_serialNumber._id"
+        },
+        "serialNumberName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo"
+        },
+        "dispositionTypeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_dispositionType._id"
+        },
+        "dispositionTypeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of dispositionTypeId, copied from u_mes_qual_dispositionType.name"
         },
         "status": {
           "bsonType": "string",

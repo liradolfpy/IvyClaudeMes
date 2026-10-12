@@ -22,6 +22,10 @@
         "operatorUserName",
         "completedAt",
         "result",
+        "recipeId",
+        "recipeName",
+        "recipeVersion",
+        "recipeChecksum",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -118,6 +122,34 @@
             "OK",
             "Not OK"
           ]
+        },
+        "recipeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_recipe._id"
+        },
+        "recipeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of recipeId, copied from u_mes_prod_recipe.name"
+        },
+        "recipeVersion": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Version of the recipe / program"
+        },
+        "recipeChecksum": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Checksum of the program"
         },
         "schemaVersion": {
           "bsonType": "int",

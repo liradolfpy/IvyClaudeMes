@@ -1,0 +1,160 @@
+{
+  "collMod": "u_mes_syst_backupRun",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_backupRun",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "runType",
+        "startedAt",
+        "completedAt",
+        "sizeBytes",
+        "storageTarget",
+        "recoveryTimeMinutes",
+        "recoveryPointMinutes",
+        "evidenceControlledDocumentId",
+        "evidenceControlledDocumentName",
+        "performedById",
+        "performedBy",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "runType": {
+          "bsonType": "string",
+          "description": "Run type",
+          "enum": [
+            "Full Backup",
+            "Incremental Backup",
+            "Restore Test",
+            "Failover Test"
+          ]
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Start"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End"
+        },
+        "sizeBytes": {
+          "bsonType": [
+            "long",
+            "null"
+          ],
+          "description": "Backup size"
+        },
+        "storageTarget": {
+          "bsonType": "string",
+          "description": "Target storage"
+        },
+        "recoveryTimeMinutes": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Measured recovery time (restore tests)"
+        },
+        "recoveryPointMinutes": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Data loss window (restore tests)"
+        },
+        "evidenceControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: evidence controlled document"
+        },
+        "evidenceControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of evidenceControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "performedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'performed'"
+        },
+        "performedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in performedById, copied from u_mes_mast_user.fullName"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Running",
+            "Succeeded",
+            "Failed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -36,6 +36,11 @@
         "reworkAttemptNo",
         "returnStepNo",
         "labourMinutes",
+        "reasonCodeId",
+        "reasonCodeName",
+        "releasedById",
+        "releasedBy",
+        "releasedAt",
         "status",
         "schemaVersion",
         "createdAt",
@@ -204,6 +209,41 @@
         "labourMinutes": {
           "bsonType": "int",
           "description": "Labour (minutes)"
+        },
+        "reasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id"
+        },
+        "reasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "releasedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'released'"
+        },
+        "releasedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in releasedById, copied from u_mes_mast_user.fullName"
+        },
+        "releasedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the release"
         },
         "status": {
           "bsonType": "string",

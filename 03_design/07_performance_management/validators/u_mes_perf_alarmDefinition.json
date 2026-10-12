@@ -1,0 +1,159 @@
+{
+  "collMod": "u_mes_perf_alarmDefinition",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_perf_alarmDefinition",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "equipmentTypeId",
+        "equipmentTypeName",
+        "alarmCode",
+        "alarmText",
+        "alarmClass",
+        "severityClass",
+        "blocksRestart",
+        "authorizingRoleId",
+        "authorizingRoleName",
+        "defaultReasonCodeId",
+        "defaultReasonCodeName",
+        "escalationRuleId",
+        "escalationRuleName",
+        "createsDowntime",
+        "responseInstruction",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "equipmentTypeId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipmentType._id"
+        },
+        "equipmentTypeName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentTypeId, copied from u_mes_mast_equipmentType.name"
+        },
+        "alarmCode": {
+          "bsonType": "string",
+          "description": "Controller alarm code"
+        },
+        "alarmText": {
+          "bsonType": "string",
+          "description": "Standard alarm text"
+        },
+        "alarmClass": {
+          "bsonType": "string",
+          "description": "Alarm class",
+          "enum": [
+            "Process",
+            "Equipment",
+            "Safety",
+            "Quality",
+            "Utility"
+          ]
+        },
+        "severityClass": {
+          "bsonType": "string",
+          "description": "Severity",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            "Critical"
+          ]
+        },
+        "blocksRestart": {
+          "bsonType": "bool",
+          "description": "Restart requires authorisation"
+        },
+        "authorizingRoleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_role._id: authorizing role"
+        },
+        "authorizingRoleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of authorizingRoleId, copied from u_mes_mast_role.name"
+        },
+        "defaultReasonCodeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_reasonCode._id: default reason code"
+        },
+        "defaultReasonCodeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of defaultReasonCodeId, copied from u_mes_perf_reasonCode.name"
+        },
+        "escalationRuleId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_escalationRule._id"
+        },
+        "escalationRuleName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name"
+        },
+        "createsDowntime": {
+          "bsonType": "bool",
+          "description": "Alarm opens a downtime event"
+        },
+        "responseInstruction": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Response instruction text"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

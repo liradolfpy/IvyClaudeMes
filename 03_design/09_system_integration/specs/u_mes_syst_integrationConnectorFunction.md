@@ -30,7 +30,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 6 | integrationConnectorName | String | - | Yes | Display value of integrationConnectorId, copied from u_mes_syst_integrationConnector.name | `"ERP production interface"` |  |
 | 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 8 | functionName | String | - | Yes | Function name | `"postOperationConfirmation"` |  |
-| 9 | direction | String | - | Yes | Direction of the integration connector function | `"Outbound"` | Inbound; Outbound |
+| 9 | direction | String | - | Yes | Direction of the integration connector function | `"Outbound"` | Inbound; Outbound; Publish |
 | 10 | messageType | String | - | Yes | Message type | `"Production Order Download"` | Production Order Download; Operation Confirmation; Goods Movement; Goods Receipt; Shipment Advice; Material Master; Quality Notification |
 | 11 | endpointPath | String | - | Yes | Endpoint path | `"/v1/confirmations"` |  |
 | 12 | scheduleExpression | String | - | No (null allowed) | Cron expression for scheduled functions | `"*/5 * * * *"` |  |

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 32 (20 required, 12 may be null) |
+| Keys | 42 (20 required, 22 may be null) |
 | Estimated volume per year | ~400,000 |
 | Storage | standard, TTL |
 
@@ -53,14 +53,24 @@ Every key is present in every document. "Required" means the value may not be nu
 | 22 | acknowledgedBy | String | - | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `null` |  |
 | 23 | acknowledgedAt | Date | Datetime | No (null allowed) | Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 24 | expiresAt | Date | Datetime | No (null allowed) | Expires date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2027-03-31T23:59:00.000+0000")` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Sent; Acknowledged; Expired |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 25 | alertRuleId | String | - | No (null allowed) | Reference to u_mes_syst_alertRule._id | `null` | Reference: u_mes_syst_alertRule._id |
+| 26 | alertRuleName | String | - | No (null allowed) | Display value of alertRuleId, copied from u_mes_syst_alertRule.name | `null` |  |
+| 27 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000002"` | Reference: u_mes_syst_escalationRule._id |
+| 28 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"Breakdown, all lines"` |  |
+| 29 | responseDueAt | Date | Datetime | No (null allowed) | Time by which the notification must be acknowledged | `ISODate("2026-09-15T06:05:00.000+0000")` |  |
+| 30 | resolvedAt | Date | Datetime | No (null allowed) | Time the underlying exception was resolved | `null` |  |
+| 31 | resolvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'resolved' | `null` | Reference: u_mes_mast_user._id |
+| 32 | resolvedBy | String | - | No (null allowed) | Display name of the user in resolvedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 33 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
+| 34 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
+| 35 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Sent; Acknowledged; Expired |
+| 36 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 37 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 38 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 39 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 40 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 41 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 42 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 
@@ -76,12 +86,13 @@ Raised, Sent, Acknowledged, Expired. Initial state: Raised. The values are maint
 | 4 | `{ andonEventId: 1 }` | No | Look-up of documents by andon event |
 | 5 | `{ alarmId: 1 }` | No | Look-up of documents by alarm |
 | 6 | `{ nonconformanceId: 1 }` | No | Look-up of documents by nonconformance |
-| 7 | `{ relatedCollectionName: 1, relatedEntityId: 1 }` | No | Look-up by the related document |
-| 8 | `{ siteId: 1, raisedAt: -1 }` | No | Time-ordered lists and reports by raised at |
+| 7 | `{ alertRuleId: 1 }` | No | Look-up of documents by alert rule |
+| 8 | `{ relatedCollectionName: 1, relatedEntityId: 1 }` | No | Look-up by the related document |
+| 9 | `{ siteId: 1, raisedAt: -1 }` | No | Time-ordered lists and reports by raised at |
 
 ## Referenced by
 
-u_mes_syst_notificationRecipient.
+u_mes_qual_spcSample, u_mes_syst_notificationRecipient, u_mes_plan_interlockEvent, u_mes_syst_modelPrediction.
 
 ## Files
 

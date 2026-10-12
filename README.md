@@ -18,4 +18,4 @@ Rebuild the model documents from source:
 
 Restore seed data (after Phase 3): `mongorestore --db mes 06_seed_data/bson`
 
-Position on 12 Oct 2026: research, model inventory, collection specifications and sample documents complete (299 flat collections, 6,058 keys, 2,990 sample documents: exactly 10 per collection under 03_design/<module>/samples). BSON seed files (06_seed_data), diagrams and data flows are not yet produced.
+Position on 12 Oct 2026: research, model inventory, collection specifications and sample documents complete (343 flat collections, 7,383 keys, 3,430 sample documents: exactly 10 per collection under 03_design/<module>/samples). Includes the 44 collections and 212 keys of MES_ExternalRequirement_01 (01_research/MES_ExternalRequirement_01_impact_analysis.md). BSON seed files (06_seed_data), diagrams and data flows are not yet produced.

@@ -33,6 +33,12 @@
         "approvedAt",
         "erpConfirmationNo",
         "source",
+        "operationExecutionId",
+        "operationExecutionName",
+        "productVariantId",
+        "productVariantName",
+        "operatorSessionId",
+        "operatorSessionName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -206,6 +212,48 @@
             "Device",
             "Manual Entry"
           ]
+        },
+        "operationExecutionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_operationExecution._id"
+        },
+        "operationExecutionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operationExecutionId, copied from u_mes_plan_operationExecution.recordNo"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "operatorSessionId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_operatorSession._id"
+        },
+        "operatorSessionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of operatorSessionId, copied from u_mes_plan_operatorSession.recordNo"
         },
         "status": {
           "bsonType": "string",

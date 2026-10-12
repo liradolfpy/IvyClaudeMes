@@ -5,4 +5,5 @@ db.getCollection("u_mes_qual_qualityHold").createIndex({ reasonCodeId: 1 }, { na
 db.getCollection("u_mes_qual_qualityHold").createIndex({ nonconformanceId: 1 }, { name: "ix_nonconformanceId" });
 db.getCollection("u_mes_qual_qualityHold").createIndex({ itemId: 1 }, { name: "ix_itemId" });
 db.getCollection("u_mes_qual_qualityHold").createIndex({ quarantineLocationId: 1 }, { name: "ix_quarantineLocationId" });
+db.getCollection("u_mes_qual_qualityHold").createIndex({ releaseReasonCodeId: 1 }, { name: "ix_releaseReasonCodeId" });
 db.getCollection("u_mes_qual_qualityHold").createIndex({ siteId: 1, placedAt: -1 }, { name: "ix_siteId_placedAt" });

@@ -29,7 +29,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 5 | integrationConnectorId | String | - | Yes | Reference to u_mes_syst_integrationConnector._id | `"1230000000000001"` | Reference: u_mes_syst_integrationConnector._id |
 | 6 | integrationConnectorName | String | - | Yes | Display value of integrationConnectorId, copied from u_mes_syst_integrationConnector.name | `"ERP production interface"` |  |
-| 7 | direction | String | - | Yes | Direction of the ERP message | `"Outbound"` | Inbound; Outbound |
+| 7 | direction | String | - | Yes | Direction of the ERP message | `"Outbound"` | Inbound; Outbound; Publish |
 | 8 | messageType | String | - | Yes | Message type | `"Production Order Download"` | Production Order Download; Operation Confirmation; Goods Movement; Goods Receipt; Shipment Advice; Material Master; Quality Notification |
 | 9 | idempotencyKey | String | - | Yes | Key that makes repeated delivery of the same message harmless | `"ERP-PRD-000100041200-0001"` |  |
 | 10 | correlationNo | String | - | Yes | Identifier shared by records that belong to the same business transaction | `"c7a41e06-2d1f-4b7e-9a52-0c5f3e8b1d44"` |  |

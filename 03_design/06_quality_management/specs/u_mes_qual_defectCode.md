@@ -67,7 +67,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_plan_operationExecutionDefectCode, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_qual_defectCodeApplicableOperation, u_mes_qual_nonconformance, u_mes_qual_scrapRecord.
+u_mes_plan_operationExecutionDefectCode, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_qual_defectCodeApplicableOperation, u_mes_qual_nonconformance, u_mes_qual_scrapRecord, u_mes_qual_defectRecord.
 
 ## Files
 

@@ -73,7 +73,7 @@ Active, Obsolete. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_maint_maintenancePlanRequiredSparePart, u_mes_maint_maintenanceWorkOrderUsedSparePart, u_mes_maint_sparePartUsedOnEquipment.
+u_mes_maint_maintenancePlanRequiredSparePart, u_mes_maint_maintenanceWorkOrderUsedSparePart, u_mes_maint_sparePartUsedOnEquipment, u_mes_maint_sparePartTransaction.
 
 ## Files
 
