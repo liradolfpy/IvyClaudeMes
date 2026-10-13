@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 16 (10 required, 6 may be null) |
+| Keys | 17 (11 required, 6 may be null) |
 | Estimated volume per year | 10-50 |
 | Storage | standard |
 
@@ -25,20 +25,21 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1292000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"QUALITY"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the andon type; used as its display value in other collections | `"Quality"` |  |
-| 6 | description | String | - | Yes | Description of the andon type | `"Quality (QUALITY)"` |  |
-| 7 | colourCode | String | - | No (null allowed) | Colour code | `"#F5A623"` |  |
-| 8 | responsibleDepartmentId | String | - | No (null allowed) | Reference to u_mes_mast_department._id: responsible department | `"1256000000000001"` | Reference: u_mes_mast_department._id |
-| 9 | responsibleDepartmentName | String | - | No (null allowed) | Display value of responsibleDepartmentId, copied from u_mes_mast_department.name | `"Production"` |  |
-| 10 | targetResponseSec | Int32 | - | Yes | Target response (seconds) | `NumberInt(300)` |  |
-| 11 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 12 | targetRepairSec | Int32 | - | No (null allowed) | Target time to resolve (seconds) | `NumberInt(1800)` |  |
-| 13 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000003"` | Reference: u_mes_syst_escalationRule._id |
-| 14 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"Quality andon not acknowledged"` |  |
-| 15 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the andon type; used as its display value in other collections | `"Quality"` |  |
+| 7 | description | String | - | Yes | Description of the andon type | `"Quality (QUALITY)"` |  |
+| 8 | colourCode | String | - | No (null allowed) | Colour code | `"#F5A623"` |  |
+| 9 | responsibleDepartmentId | String | - | No (null allowed) | Reference to u_mes_mast_department._id: responsible department | `"1256000000000001"` | Reference: u_mes_mast_department._id |
+| 10 | responsibleDepartmentName | String | - | No (null allowed) | Display value of responsibleDepartmentId, copied from u_mes_mast_department.name | `"Production"` |  |
+| 11 | targetResponseSec | Int32 | - | Yes | Target response (seconds) | `NumberInt(300)` |  |
+| 12 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 13 | targetRepairSec | Int32 | - | No (null allowed) | Target time to resolve (seconds) | `NumberInt(1800)` |  |
+| 14 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000003"` | Reference: u_mes_syst_escalationRule._id |
+| 15 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"Quality andon not acknowledged"` |  |
+| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

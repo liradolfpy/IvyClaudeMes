@@ -575,7 +575,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "enterpriseCode",
+   "purpose": "Legal entities of the group (ISA-95 Enterprise level); tax and registration data"
   },
   {
    "collection": "u_mes_mast_enterpriseContact",
@@ -654,7 +657,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per contact of a enterprise"
   },
   {
    "collection": "u_mes_mast_site",
@@ -826,7 +832,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "siteCode",
+   "purpose": "Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate"
   },
   {
    "collection": "u_mes_mast_siteCertificate",
@@ -907,7 +916,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per certificate of a site"
   },
   {
    "collection": "u_mes_mast_area",
@@ -1029,7 +1041,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "areaCode",
+   "purpose": "Production and support areas inside a site (ISA-95 Area)"
   },
   {
    "collection": "u_mes_mast_line",
@@ -1161,7 +1176,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "lineCode",
+   "purpose": "Production lines / cells (ISA-95 Production Line / Work Cell)"
   },
   {
    "collection": "u_mes_mast_lineDefaultShift",
@@ -1230,7 +1248,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -DS<nnn>",
+   "purpose": "Links one line to one default shift (one document per link)"
   },
   {
    "collection": "u_mes_mast_lineIdealRate",
@@ -1309,7 +1330,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IR<nnn>",
+   "purpose": "One document per ideal rate of a line"
   },
   {
    "collection": "u_mes_mast_workCenter",
@@ -1451,7 +1475,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "workCentreCode",
+   "purpose": "Stations where operations are executed and booked; ERP work centre mapping"
   },
   {
    "collection": "u_mes_mast_workCenterEquipment",
@@ -1520,7 +1547,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "Links one workCenter to one equipment (one document per link)"
   },
   {
    "collection": "u_mes_mast_workCenterOperation",
@@ -1589,7 +1619,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -O<nnn>",
+   "purpose": "Links one workCenter to one operation (one document per link)"
   },
   {
    "collection": "u_mes_mast_workCenterRequiresSkill",
@@ -1658,7 +1691,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RS<nnn>",
+   "purpose": "Links one workCenter to one requires skill (one document per link)"
   },
   {
    "collection": "u_mes_mast_equipment",
@@ -1953,7 +1989,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "equipmentCode",
+   "purpose": "Machines, furnaces, testers (ISA-95 Unit / Equipment); hierarchy, make, model, capability"
   },
   {
    "collection": "u_mes_mast_equipmentIotDevice",
@@ -2022,7 +2061,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -ID<nnn>",
+   "purpose": "Links one equipment to one iot device (one document per link)"
   },
   {
    "collection": "u_mes_mast_shift",
@@ -2114,7 +2156,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "shiftCode",
+   "purpose": "Shift patterns with start/end and breaks"
   },
   {
    "collection": "u_mes_mast_shiftBreak",
@@ -2193,7 +2238,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -B<nnn>",
+   "purpose": "One document per break of a shift"
   },
   {
    "collection": "u_mes_mast_shiftWorkingDay",
@@ -2257,7 +2305,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WD<nnn>",
+   "purpose": "One document per working day value of a shift"
   },
   {
    "collection": "u_mes_mast_workCalendar",
@@ -2336,7 +2387,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "calendarCode",
+   "purpose": "Working calendars with holidays and exception days per site / line"
   },
   {
    "collection": "u_mes_mast_workCalendarLine",
@@ -2405,7 +2459,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "Links one workCalendar to one line (one document per link)"
   },
   {
    "collection": "u_mes_mast_workCalendarShift",
@@ -2474,7 +2531,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "Links one workCalendar to one shift (one document per link)"
   },
   {
    "collection": "u_mes_mast_workCalendarWeeklyOffDay",
@@ -2538,7 +2598,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WOD<nnn>",
+   "purpose": "One document per weekly off day value of a workCalendar"
   },
   {
    "collection": "u_mes_mast_workCalendarException",
@@ -2618,7 +2681,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "One document per exception of a workCalendar"
   },
   {
    "collection": "u_mes_mast_workCalendarExceptionShift",
@@ -2687,7 +2753,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "Links one workCalendarException to one shift (one document per link)"
   },
   {
    "collection": "u_mes_mast_shiftRoster",
@@ -2839,7 +2908,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "rosterNo",
+   "purpose": "Crew assignment per production day, shift and line (who is planned where)"
   },
   {
    "collection": "u_mes_mast_shiftRosterAssignment",
@@ -2992,7 +3064,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -A<nnn>",
+   "purpose": "One document per assignment of a shiftRoster"
   },
   {
    "collection": "u_mes_mast_role",
@@ -3074,7 +3149,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "roleCode",
+   "purpose": "Named sets of permissions (operator, setter, quality engineer ...)"
   },
   {
    "collection": "u_mes_mast_rolePermission",
@@ -3143,7 +3221,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -P<nnn>",
+   "purpose": "Links one role to one permission (one document per link)"
   },
   {
    "collection": "u_mes_mast_roleSignatureMeaning",
@@ -3212,7 +3293,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -SM<nnn>",
+   "purpose": "Links one role to one signature meaning (one document per link)"
   },
   {
    "collection": "u_mes_mast_user",
@@ -3415,7 +3499,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "employeeNo",
+   "purpose": "People and system accounts; badge id, role, home work centre"
   },
   {
    "collection": "u_mes_mast_userRole",
@@ -3484,7 +3571,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "Links one user to one role (one document per link)"
   },
   {
    "collection": "u_mes_mast_skill",
@@ -3586,7 +3676,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "skillCode",
+   "purpose": "Skill definitions required by operations (e.g. leak-test operation, CMM programming)"
   },
   {
    "collection": "u_mes_mast_skillOperation",
@@ -3655,7 +3748,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -O<nnn>",
+   "purpose": "Links one skill to one operation (one document per link)"
   },
   {
    "collection": "u_mes_mast_skillLevelScale",
@@ -3724,7 +3820,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -LS<nnn>",
+   "purpose": "One document per level scale of a skill"
   },
   {
    "collection": "u_mes_mast_skillCertification",
@@ -3925,7 +4024,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "certificationNo",
+   "purpose": "Skills-matrix entries: user x skill, level, valid-from/to, assessor; used for operator lock-out"
   },
   {
    "collection": "u_mes_mast_customer",
@@ -4077,7 +4179,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "customerCode",
+   "purpose": "OEMs and aftermarket customers; ship-to addresses, label and ASN requirements"
   },
   {
    "collection": "u_mes_mast_customerShipTo",
@@ -4176,7 +4281,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -ST<nnn>",
+   "purpose": "One document per ship to of a customer"
   },
   {
    "collection": "u_mes_mast_customerContact",
@@ -4255,7 +4363,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per contact of a customer"
   },
   {
    "collection": "u_mes_mast_supplier",
@@ -4410,7 +4521,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "supplierCode",
+   "purpose": "Material, tooling and service suppliers; approval status, certificates, PPM rating"
   },
   {
    "collection": "u_mes_mast_supplierContact",
@@ -4489,7 +4603,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per contact of a supplier"
   },
   {
    "collection": "u_mes_mast_supplierCertificate",
@@ -4564,7 +4681,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C2<nnn>",
+   "purpose": "One document per certificate of a supplier"
   },
   {
    "collection": "u_mes_mast_supplierSuppliedItem",
@@ -4644,7 +4764,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -SI<nnn>",
+   "purpose": "Links one supplier to one supplied item (one document per link)"
   },
   {
    "collection": "u_mes_mast_unitOfMeasure",
@@ -4751,7 +4874,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "uomCode",
+   "purpose": "Units and conversion factors (EA, kg, N.m, bar, mm, um, kWh)"
   },
   {
    "collection": "u_mes_prod_item",
@@ -4965,7 +5091,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "itemNo",
+   "purpose": "Parts: finished caliper, semi-finished body, purchased components, raw material, consumables; drawing revision"
   },
   {
    "collection": "u_mes_prod_itemRevision",
@@ -5050,7 +5179,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per revision of a item"
   },
   {
    "collection": "u_mes_prod_itemCustomerPart",
@@ -5129,7 +5261,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CP<nnn>",
+   "purpose": "One document per customer part of a item"
   },
   {
    "collection": "u_mes_prod_productVariant",
@@ -5294,7 +5429,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "variantCode",
+   "purpose": "Product variants (LH/RH, piston diameter, pad compound, market) that drive BOM, instruction and label selection"
   },
   {
    "collection": "u_mes_prod_billOfMaterial",
@@ -5430,7 +5568,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "bomNo",
+   "purpose": "Multi-level bills of material per item revision with effectivity"
   },
   {
    "collection": "u_mes_prod_billOfMaterialComponent",
@@ -5549,7 +5690,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per component of a billOfMaterial"
   },
   {
    "collection": "u_mes_prod_billOfMaterialComponentProductVariant",
@@ -5618,7 +5762,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one billOfMaterialComponent to one product variant (one document per link)"
   },
   {
    "collection": "u_mes_prod_billOfMaterialComponentAlternateItem",
@@ -5687,7 +5834,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AI<nnn>",
+   "purpose": "Links one billOfMaterialComponent to one alternate item (one document per link)"
   },
   {
    "collection": "u_mes_prod_operation",
@@ -5814,7 +5964,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "operationCode",
+   "purpose": "Standard operation library (casting, T6, machining ... packing) reused by routings"
   },
   {
    "collection": "u_mes_prod_operationRequiredSkill",
@@ -5883,7 +6036,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RS<nnn>",
+   "purpose": "Links one operation to one required skill (one document per link)"
   },
   {
    "collection": "u_mes_prod_routing",
@@ -6024,7 +6180,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "routingNo",
+   "purpose": "Sequence of operations per item, including rework / disposition routings and alternate paths"
   },
   {
    "collection": "u_mes_prod_routingStep",
@@ -6138,7 +6297,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per step of a routing"
   },
   {
    "collection": "u_mes_prod_routingStepAlternateWorkCenter",
@@ -6207,7 +6369,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AWC<nnn>",
+   "purpose": "Links one routingStep to one alternate work center (one document per link)"
   },
   {
    "collection": "u_mes_prod_routingStepNextStep",
@@ -6271,7 +6436,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -NS<nnn>",
+   "purpose": "One document per next step of a routingStep"
   },
   {
    "collection": "u_mes_prod_billOfProcess",
@@ -6392,7 +6560,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "bopNo",
+   "purpose": "Per routing step: required equipment, tools, recipe, work instruction, data collection, consumed components, cycle time"
   },
   {
    "collection": "u_mes_prod_billOfProcessStep",
@@ -6501,7 +6672,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per step of a billOfProcess"
   },
   {
    "collection": "u_mes_prod_billOfProcessStepEquipment",
@@ -6570,7 +6744,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "Links one billOfProcessStep to one equipment (one document per link)"
   },
   {
    "collection": "u_mes_prod_billOfProcessStepTool",
@@ -6639,7 +6816,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "Links one billOfProcessStep to one tool (one document per link)"
   },
   {
    "collection": "u_mes_prod_billOfProcessStepRequiredSkill",
@@ -6708,7 +6888,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RS<nnn>",
+   "purpose": "Links one billOfProcessStep to one required skill (one document per link)"
   },
   {
    "collection": "u_mes_prod_billOfProcessStepConsumedComponent",
@@ -6787,7 +6970,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CC<nnn>",
+   "purpose": "One document per consumed component of a billOfProcessStep"
   },
   {
    "collection": "u_mes_prod_billOfProcessStepInterlock",
@@ -6861,7 +7047,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -I<nnn>",
+   "purpose": "One document per interlock of a billOfProcessStep"
   },
   {
    "collection": "u_mes_prod_billOfProcessStepProcessParameter",
@@ -6950,7 +7139,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PP<nnn>",
+   "purpose": "One document per process parameter of a billOfProcessStep"
   },
   {
    "collection": "u_mes_prod_workInstruction",
@@ -7121,7 +7313,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "instructionNo",
+   "purpose": "Versioned visual work instructions with steps, media, cautions, variant applicability, required checks"
   },
   {
    "collection": "u_mes_prod_workInstructionStep",
@@ -7245,7 +7440,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per step of a workInstruction"
   },
   {
    "collection": "u_mes_prod_workInstructionStepMediaControlledDocument",
@@ -7314,7 +7512,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -MCD<nnn>",
+   "purpose": "Links one workInstructionStep to one media controlled document (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionStepProductVariant",
@@ -7383,7 +7584,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one workInstructionStep to one product variant (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionStepTool",
@@ -7452,7 +7656,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "Links one workInstructionStep to one tool (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionStepCharacteristic",
@@ -7521,7 +7728,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "Links one workInstructionStep to one characteristic (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionPpeItem",
@@ -7590,7 +7800,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PI<nnn>",
+   "purpose": "Links one workInstruction to one ppe item (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionKeyPoint",
@@ -7654,7 +7867,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -KP<nnn>",
+   "purpose": "One document per key point value of a workInstruction"
   },
   {
    "collection": "u_mes_prod_recipe",
@@ -7863,7 +8079,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "recipeNo",
+   "purpose": "Machine parameter sets with set-points and limits (die temperature, furnace profile, CNC program, torque program, leak-test program)"
   },
   {
    "collection": "u_mes_prod_recipeParameter",
@@ -7972,7 +8191,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -P<nnn>",
+   "purpose": "One document per parameter of a recipe"
   },
   {
    "collection": "u_mes_prod_recipeStage",
@@ -8046,7 +8268,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per stage of a recipe"
   },
   {
    "collection": "u_mes_prod_engineeringChange",
@@ -8258,7 +8483,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ecnNo",
+   "purpose": "Engineering change notices with affected objects, approvals and effectivity (cut-in serial / date)"
   },
   {
    "collection": "u_mes_prod_engineeringChangeAffectedItem",
@@ -8369,7 +8597,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AI<nnn>",
+   "purpose": "One document per affected item of a engineeringChange"
   },
   {
    "collection": "u_mes_prod_engineeringChangeAffectedObject",
@@ -8480,7 +8711,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AO<nnn>",
+   "purpose": "One document per affected object of a engineeringChange"
   },
   {
    "collection": "u_mes_prod_engineeringChangeApproval",
@@ -8602,7 +8836,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -A<nnn>",
+   "purpose": "One document per approval of a engineeringChange"
   },
   {
    "collection": "u_mes_prod_engineeringChangeControlledDocument",
@@ -8703,7 +8940,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CD<nnn>",
+   "purpose": "Links one engineeringChange to one controlled document (one document per link)"
   },
   {
    "collection": "u_mes_plan_customerSchedule",
@@ -8848,7 +9088,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "releaseNo",
+   "purpose": "OEM delivery schedules / releases (demand that drives production orders and shipments)"
   },
   {
    "collection": "u_mes_plan_customerScheduleLine",
@@ -8985,7 +9228,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a customerSchedule"
   },
   {
    "collection": "u_mes_plan_productionOrder",
@@ -9310,7 +9556,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "orderNo",
+   "purpose": "Shop orders from ERP: item, quantity, routing/BOM version, partial releases, status"
   },
   {
    "collection": "u_mes_plan_productionOrderRelease",
@@ -9422,7 +9671,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per release of a productionOrder"
   },
   {
    "collection": "u_mes_plan_productionOrderLot",
@@ -9523,7 +9775,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "Links one productionOrder to one lot (one document per link)"
   },
   {
    "collection": "u_mes_plan_productionSchedule",
@@ -9686,7 +9941,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "scheduleNo",
+   "purpose": "Finite schedule per line and shift with sequenced orders, planned start/end"
   },
   {
    "collection": "u_mes_plan_productionScheduleSlot",
@@ -9824,7 +10082,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per slot of a productionSchedule"
   },
   {
    "collection": "u_mes_plan_dispatchList",
@@ -9962,7 +10223,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "dispatchNo",
+   "purpose": "Prioritised work queue per work centre shown to the operator"
   },
   {
    "collection": "u_mes_plan_dispatchListEntry",
@@ -10130,7 +10394,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "One document per entry of a dispatchList"
   },
   {
    "collection": "u_mes_plan_operationExecution",
@@ -10507,7 +10774,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "executionNo",
+   "purpose": "Start / complete record of an operation on a unit or lot: who, where, when, result, cycle time (track-in / track-out)"
   },
   {
    "collection": "u_mes_plan_operationExecutionDefectCode",
@@ -10608,7 +10878,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -DC<nnn>",
+   "purpose": "Links one operationExecution to one defect code (one document per link)"
   },
   {
    "collection": "u_mes_plan_operationExecutionTool",
@@ -10709,7 +10982,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "Links one operationExecution to one tool (one document per link)"
   },
   {
    "collection": "u_mes_plan_stepCompletion",
@@ -10951,7 +11227,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "completionNo",
+   "purpose": "Completion record for each work-instruction step: values entered, confirmations, duration, device data"
   },
   {
    "collection": "u_mes_plan_wipUnit",
@@ -11220,7 +11499,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "unitNo",
+   "purpose": "Serialised unit in production (shop-floor control number): current operation, status, quality state"
   },
   {
    "collection": "u_mes_plan_wipUnitCompletedStep",
@@ -11316,7 +11598,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CS<nnn>",
+   "purpose": "One document per completed step value of a wipUnit"
   },
   {
    "collection": "u_mes_plan_lot",
@@ -11601,7 +11886,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "lotNo",
+   "purpose": "Lots and batches: supplier lots, melt/heat lots, casting lots, heat-treatment charges, anodising loads"
   },
   {
    "collection": "u_mes_plan_lotParentLot",
@@ -11702,7 +11990,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PL<nnn>",
+   "purpose": "Links one lot to one parent lot (one document per link)"
   },
   {
    "collection": "u_mes_plan_lotAttributesCavityNo",
@@ -11798,7 +12089,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -ACN<nnn>",
+   "purpose": "One document per attributes cavity no value of a lot"
   },
   {
    "collection": "u_mes_plan_container",
@@ -12024,7 +12318,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "containerNo",
+   "purpose": "Bins, trolleys, returnable crates and pallets with contents and nesting"
   },
   {
    "collection": "u_mes_plan_containerLot",
@@ -12125,7 +12422,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "Links one container to one lot (one document per link)"
   },
   {
    "collection": "u_mes_plan_labourBooking",
@@ -12364,7 +12664,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "bookingNo",
+   "purpose": "Clock-on / clock-off of people against orders, operations and indirect activities"
   },
   {
    "collection": "u_mes_plan_changeover",
@@ -12594,7 +12897,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "changeoverNo",
+   "purpose": "Changeover from one item / variant to another: planned vs actual duration, checklist, first-off approval"
   },
   {
    "collection": "u_mes_plan_changeoverStep",
@@ -12711,7 +13017,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per step of a changeover"
   },
   {
    "collection": "u_mes_plan_changeoverRemovedTool",
@@ -12812,7 +13121,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RT<nnn>",
+   "purpose": "Links one changeover to one removed tool (one document per link)"
   },
   {
    "collection": "u_mes_plan_changeoverInstalledTool",
@@ -12913,7 +13225,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IT<nnn>",
+   "purpose": "Links one changeover to one installed tool (one document per link)"
   },
   {
    "collection": "u_mes_plan_changeoverPerformedByUser",
@@ -13014,7 +13329,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PBU<nnn>",
+   "purpose": "Links one changeover to one performed by user (one document per link)"
   },
   {
    "collection": "u_mes_plan_shiftHandover",
@@ -13202,7 +13520,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "handoverNo",
+   "purpose": "Shift logbook: output, open issues, safety and quality notes, acknowledgements"
   },
   {
    "collection": "u_mes_plan_shiftHandoverProductionOrder",
@@ -13303,7 +13624,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PO<nnn>",
+   "purpose": "Links one shiftHandover to one production order (one document per link)"
   },
   {
    "collection": "u_mes_plan_shiftHandoverDowntimeEvent",
@@ -13404,7 +13728,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -DE<nnn>",
+   "purpose": "Links one shiftHandover to one downtime event (one document per link)"
   },
   {
    "collection": "u_mes_plan_shiftHandoverNonconformance",
@@ -13505,7 +13832,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -N<nnn>",
+   "purpose": "Links one shiftHandover to one nonconformance (one document per link)"
   },
   {
    "collection": "u_mes_plan_shiftHandoverOpenItem",
@@ -13622,7 +13952,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -OI<nnn>",
+   "purpose": "One document per open item of a shiftHandover"
   },
   {
    "collection": "u_mes_matl_storageLocation",
@@ -13764,7 +14097,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "locationCode",
+   "purpose": "Warehouses, racks, line-side supermarkets, quarantine cage, dispatch bay"
   },
   {
    "collection": "u_mes_matl_inventoryBalance",
@@ -13957,7 +14293,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "inventoryNo",
+   "purpose": "Stock on hand per item, lot, location and stock status"
   },
   {
    "collection": "u_mes_matl_materialMovement",
@@ -14222,7 +14561,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "movementNo",
+   "purpose": "Every stock transaction: receipt, putaway, issue to line, return, scrap, transfer, shipment"
   },
   {
    "collection": "u_mes_matl_goodsReceipt",
@@ -14377,7 +14719,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "grnNo",
+   "purpose": "Receipts from suppliers with lines, supplier lot, certificate, incoming inspection status"
   },
   {
    "collection": "u_mes_matl_goodsReceiptLine",
@@ -14543,7 +14888,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a goodsReceipt"
   },
   {
    "collection": "u_mes_matl_goodsReceiptLineInspectionResult",
@@ -14644,7 +14992,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IR<nnn>",
+   "purpose": "Links one goodsReceiptLine to one inspection result (one document per link)"
   },
   {
    "collection": "u_mes_matl_kit",
@@ -14815,7 +15166,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "kitNo",
+   "purpose": "Kits of components picked for an order / line-side delivery"
   },
   {
    "collection": "u_mes_matl_kitLine",
@@ -14982,7 +15336,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a kit"
   },
   {
    "collection": "u_mes_matl_materialRequest",
@@ -15216,7 +15573,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "requestNo",
+   "purpose": "Line-side replenishment calls (e-kanban) from a work centre to stores"
   },
   {
    "collection": "u_mes_matl_materialConsumption",
@@ -15456,7 +15816,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "consumptionNo",
+   "purpose": "Component / lot consumed at an operation on a unit or lot (backflush or scanned)"
   },
   {
    "collection": "u_mes_matl_packagingSpecification",
@@ -15620,7 +15983,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "packSpecNo",
+   "purpose": "Pack instruction: container type, quantity per bin, layers, dunnage, label template"
   },
   {
    "collection": "u_mes_matl_packagingSpecificationLevel",
@@ -15709,7 +16075,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per level of a packagingSpecification"
   },
   {
    "collection": "u_mes_matl_labelTemplate",
@@ -15828,7 +16197,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "templateCode",
+   "purpose": "Label layouts (unit 2D code, bin label, customer shipping label, hold tag)"
   },
   {
    "collection": "u_mes_matl_labelTemplateField",
@@ -15917,7 +16289,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -F<nnn>",
+   "purpose": "One document per field of a labelTemplate"
   },
   {
    "collection": "u_mes_matl_label",
@@ -16150,7 +16525,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "labelNo",
+   "purpose": "Printed label instances with payload, printer, reprint count"
   },
   {
    "collection": "u_mes_matl_shipment",
@@ -16378,7 +16756,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "shipmentNo",
+   "purpose": "Dispatch to customer: invoice / ASN, vehicle, containers shipped, proof of delivery"
   },
   {
    "collection": "u_mes_matl_shipmentLine",
@@ -16489,7 +16870,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a shipment"
   },
   {
    "collection": "u_mes_matl_shipmentLineContainer",
@@ -16590,7 +16974,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "Links one shipmentLine to one container (one document per link)"
   },
   {
    "collection": "u_mes_matl_shipmentLineLot",
@@ -16691,7 +17078,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "Links one shipmentLine to one lot (one document per link)"
   },
   {
    "collection": "u_mes_trac_serialNumber",
@@ -16938,7 +17328,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "serialNo",
+   "purpose": "Registry of every serial / 2D code issued: status, mark grade, unit and shipment linkage"
   },
   {
    "collection": "u_mes_trac_genealogyLink",
@@ -17179,7 +17572,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "linkNo",
+   "purpose": "As-built parent-child edges: unit to component serial or component lot, with operation and time"
   },
   {
    "collection": "u_mes_trac_componentLotLink",
@@ -17364,7 +17760,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "lotLinkNo",
+   "purpose": "Lot-to-lot lineage: ingot heat to melt to casting lot to heat-treatment charge to anodising load; split and merge"
   },
   {
    "collection": "u_mes_trac_asBuiltRecord",
@@ -17655,7 +18054,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "recordNo",
+   "purpose": "Device-history summary per shipped unit: components, key results, operators, sign-off (digital birth certificate)"
   },
   {
    "collection": "u_mes_trac_asBuiltRecordComponent",
@@ -17786,7 +18188,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per component of a asBuiltRecord"
   },
   {
    "collection": "u_mes_trac_asBuiltRecordOperation",
@@ -17948,7 +18353,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -O<nnn>",
+   "purpose": "One document per operation of a asBuiltRecord"
   },
   {
    "collection": "u_mes_trac_asBuiltRecordInspectionResult",
@@ -18049,7 +18457,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IR<nnn>",
+   "purpose": "Links one asBuiltRecord to one inspection result (one document per link)"
   },
   {
    "collection": "u_mes_qual_characteristic",
@@ -18236,7 +18647,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "characteristicCode",
+   "purpose": "Product and process characteristics with nominal, tolerance, class (critical / significant), method"
   },
   {
    "collection": "u_mes_qual_controlPlan",
@@ -18394,7 +18808,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "controlPlanNo",
+   "purpose": "AIAG control plan per item and phase (prototype, pre-launch, production)"
   },
   {
    "collection": "u_mes_qual_controlPlanCoreTeamUser",
@@ -18463,7 +18880,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CTU<nnn>",
+   "purpose": "Links one controlPlan to one core team user (one document per link)"
   },
   {
    "collection": "u_mes_qual_controlPlanLine",
@@ -18602,7 +19022,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a controlPlan"
   },
   {
    "collection": "u_mes_qual_inspectionPlan",
@@ -18763,7 +19186,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "inspectionPlanNo",
+   "purpose": "Executable data-collection group per operation: which characteristics, sample size, frequency, reaction"
   },
   {
    "collection": "u_mes_qual_inspectionPlanLine",
@@ -18882,7 +19308,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a inspectionPlan"
   },
   {
    "collection": "u_mes_qual_samplingPlan",
@@ -18994,7 +19423,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "samplingPlanCode",
+   "purpose": "Sampling rules: AQL tables, skip-lot, time or counter based frequency"
   },
   {
    "collection": "u_mes_qual_samplingPlanSizeRow",
@@ -19078,7 +19510,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -SR<nnn>",
+   "purpose": "One document per size row of a samplingPlan"
   },
   {
    "collection": "u_mes_qual_checkSheet",
@@ -19223,7 +19658,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "checkSheetCode",
+   "purpose": "Check sheet definitions: start-of-shift checks, poka-yoke verification, first-off, autonomous maintenance"
   },
   {
    "collection": "u_mes_qual_checkSheetItem",
@@ -19322,7 +19760,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -I<nnn>",
+   "purpose": "One document per item of a checkSheet"
   },
   {
    "collection": "u_mes_qual_checkSheetResult",
@@ -19531,7 +19972,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "checkResultNo",
+   "purpose": "Completed check sheets with answers, failures and reactions"
   },
   {
    "collection": "u_mes_qual_checkSheetResultAnswer",
@@ -19642,7 +20086,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -A<nnn>",
+   "purpose": "One document per answer of a checkSheetResult"
   },
   {
    "collection": "u_mes_qual_inspectionResult",
@@ -19992,7 +20439,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "resultNo",
+   "purpose": "Measured and attribute results per unit / lot / receipt against a characteristic"
   },
   {
    "collection": "u_mes_qual_spcChart",
@@ -20161,7 +20611,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "chartNo",
+   "purpose": "Chart definition per characteristic and work centre: chart type, subgroup size, control limits, rules"
   },
   {
    "collection": "u_mes_qual_spcChartControlLimit",
@@ -20261,7 +20714,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CL<nnn>",
+   "purpose": "One document per control limit of a spcChart"
   },
   {
    "collection": "u_mes_qual_spcChartRule",
@@ -20325,7 +20781,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per rule value of a spcChart"
   },
   {
    "collection": "u_mes_qual_spcSample",
@@ -20556,7 +21015,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "sampleNo",
+   "purpose": "Subgroups with readings, mean, range, rule violations and reaction"
   },
   {
    "collection": "u_mes_qual_spcSampleReading",
@@ -20652,7 +21114,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per reading value of a spcSample"
   },
   {
    "collection": "u_mes_qual_spcSampleInspectionResult",
@@ -20753,7 +21218,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IR<nnn>",
+   "purpose": "Links one spcSample to one inspection result (one document per link)"
   },
   {
    "collection": "u_mes_qual_spcSampleViolation",
@@ -20854,7 +21322,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -V<nnn>",
+   "purpose": "One document per violation of a spcSample"
   },
   {
    "collection": "u_mes_qual_defectCode",
@@ -20981,7 +21452,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "defectCode",
+   "purpose": "Defect / NC code catalogue with group, default disposition routing and severity"
   },
   {
    "collection": "u_mes_qual_defectCodeApplicableOperation",
@@ -21050,7 +21524,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AO<nnn>",
+   "purpose": "Links one defectCode to one applicable operation (one document per link)"
   },
   {
    "collection": "u_mes_qual_nonconformance",
@@ -21346,7 +21823,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ncrNo",
+   "purpose": "Nonconformance reports: what, where, quantity, containment, disposition (use-as-is, rework, scrap, return)"
   },
   {
    "collection": "u_mes_qual_nonconformanceAffectedObject",
@@ -21483,7 +21963,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AO<nnn>",
+   "purpose": "One document per affected object of a nonconformance"
   },
   {
    "collection": "u_mes_qual_nonconformanceContainmentAction",
@@ -21595,7 +22078,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CA<nnn>",
+   "purpose": "One document per containment action of a nonconformance"
   },
   {
    "collection": "u_mes_qual_nonconformanceInspectionResult",
@@ -21696,7 +22182,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IR<nnn>",
+   "purpose": "Links one nonconformance to one inspection result (one document per link)"
   },
   {
    "collection": "u_mes_qual_nonconformanceReworkOrder",
@@ -21797,7 +22286,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RO<nnn>",
+   "purpose": "Links one nonconformance to one rework order (one document per link)"
   },
   {
    "collection": "u_mes_qual_nonconformanceScrapRecord",
@@ -21898,7 +22390,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -SR<nnn>",
+   "purpose": "Links one nonconformance to one scrap record (one document per link)"
   },
   {
    "collection": "u_mes_qual_nonconformancePhotoControlledDocument",
@@ -21999,7 +22494,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PCD<nnn>",
+   "purpose": "Links one nonconformance to one photo controlled document (one document per link)"
   },
   {
    "collection": "u_mes_qual_nonconformanceMrbUser",
@@ -22100,7 +22598,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -MU<nnn>",
+   "purpose": "Links one nonconformance to one mrb user (one document per link)"
   },
   {
    "collection": "u_mes_qual_reworkOrder",
@@ -22352,7 +22853,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "reworkNo",
+   "purpose": "Rework instruction and execution on the rework routing with re-inspection result"
   },
   {
    "collection": "u_mes_qual_reworkOrderWipUnit",
@@ -22453,7 +22957,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WU<nnn>",
+   "purpose": "Links one reworkOrder to one wip unit (one document per link)"
   },
   {
    "collection": "u_mes_qual_reworkOrderStep",
@@ -22575,7 +23082,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per step of a reworkOrder"
   },
   {
    "collection": "u_mes_qual_scrapRecord",
@@ -22852,7 +23362,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "scrapNo",
+   "purpose": "Scrap declaration with quantity, weight, cost, defect code and operation of origin"
   },
   {
    "collection": "u_mes_qual_qualityHold",
@@ -23065,7 +23578,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "holdNo",
+   "purpose": "Hold / quarantine on units, lots, containers or locations with reason and release decision"
   },
   {
    "collection": "u_mes_qual_qualityHoldHeldObject",
@@ -23187,7 +23703,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -HO<nnn>",
+   "purpose": "One document per held object of a qualityHold"
   },
   {
    "collection": "u_mes_qual_deviationPermit",
@@ -23408,7 +23927,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "deviationNo",
+   "purpose": "Temporary deviations / concessions approved by the customer with quantity or date limit"
   },
   {
    "collection": "u_mes_qual_deviationPermitApproval",
@@ -23525,7 +24047,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -A<nnn>",
+   "purpose": "One document per approval of a deviationPermit"
   },
   {
    "collection": "u_mes_qual_capa",
@@ -23766,7 +24291,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "capaNo",
+   "purpose": "Corrective and preventive actions in 8D structure (D1-D8) with team, root cause, actions, verification"
   },
   {
    "collection": "u_mes_qual_capaNonconformance",
@@ -23867,7 +24395,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -N<nnn>",
+   "purpose": "Links one capa to one nonconformance (one document per link)"
   },
   {
    "collection": "u_mes_qual_capaTeamMember",
@@ -23973,7 +24504,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -TM<nnn>",
+   "purpose": "One document per team member of a capa"
   },
   {
    "collection": "u_mes_qual_capaContainmentAction",
@@ -24085,7 +24619,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CA<nnn>",
+   "purpose": "One document per containment action of a capa"
   },
   {
    "collection": "u_mes_qual_capaCorrectiveAction",
@@ -24197,7 +24734,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CA2<nnn>",
+   "purpose": "One document per corrective action of a capa"
   },
   {
    "collection": "u_mes_qual_capaImplementationAction",
@@ -24314,7 +24854,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -IA<nnn>",
+   "purpose": "One document per implementation action of a capa"
   },
   {
    "collection": "u_mes_qual_capaControlledDocument",
@@ -24415,7 +24958,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CD<nnn>",
+   "purpose": "Links one capa to one controlled document (one document per link)"
   },
   {
    "collection": "u_mes_qual_pfmea",
@@ -24536,7 +25082,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "pfmeaNo",
+   "purpose": "Process FMEA per item / process: failure modes, effects, causes, S-O-D, action priority"
   },
   {
    "collection": "u_mes_qual_pfmeaCoreTeamUser",
@@ -24605,7 +25154,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CTU<nnn>",
+   "purpose": "Links one pfmea to one core team user (one document per link)"
   },
   {
    "collection": "u_mes_qual_pfmeaLine",
@@ -24785,7 +25337,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a pfmea"
   },
   {
    "collection": "u_mes_qual_ppapSubmission",
@@ -24991,7 +25546,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ppapNo",
+   "purpose": "PPAP package: level, 18 elements with status, PSW, customer decision"
   },
   {
    "collection": "u_mes_qual_ppapSubmissionElement",
@@ -25112,7 +25670,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "One document per element of a ppapSubmission"
   },
   {
    "collection": "u_mes_qual_ppapSubmissionMsaStudy",
@@ -25213,7 +25774,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -MS<nnn>",
+   "purpose": "Links one ppapSubmission to one msa study (one document per link)"
   },
   {
    "collection": "u_mes_qual_gauge",
@@ -25437,7 +26001,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "gaugeNo",
+   "purpose": "Gauges and measuring instruments: type, range, resolution, calibration interval and due date, status"
   },
   {
    "collection": "u_mes_qual_gaugeCalibration",
@@ -25639,7 +26206,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "calibrationNo",
+   "purpose": "Calibration events: as-found / as-left readings, standard used, result, certificate"
   },
   {
    "collection": "u_mes_qual_gaugeCalibrationReading",
@@ -25755,7 +26325,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per reading of a gaugeCalibration"
   },
   {
    "collection": "u_mes_qual_msaStudy",
@@ -25989,7 +26562,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "msaNo",
+   "purpose": "Measurement system analysis: gauge R&R, bias, linearity, attribute agreement"
   },
   {
    "collection": "u_mes_qual_msaStudyAppraiserUser",
@@ -26090,7 +26666,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AU<nnn>",
+   "purpose": "Links one msaStudy to one appraiser user (one document per link)"
   },
   {
    "collection": "u_mes_qual_msaStudyTrial",
@@ -26201,7 +26780,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "One document per trial of a msaStudy"
   },
   {
    "collection": "u_mes_qual_audit",
@@ -26452,7 +27034,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "auditNo",
+   "purpose": "Layered process, process (VDA 6.3), product and system audits with findings"
   },
   {
    "collection": "u_mes_qual_auditAuditorUser",
@@ -26553,7 +27138,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AU<nnn>",
+   "purpose": "Links one audit to one auditor user (one document per link)"
   },
   {
    "collection": "u_mes_qual_auditFinding",
@@ -26691,7 +27279,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -F<nnn>",
+   "purpose": "One document per finding of a audit"
   },
   {
    "collection": "u_mes_qual_customerComplaint",
@@ -26938,7 +27529,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "complaintNo",
+   "purpose": "Customer complaints / line rejections / warranty returns with affected serials and PPM impact"
   },
   {
    "collection": "u_mes_qual_customerComplaintSerialNumber",
@@ -27039,7 +27633,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -SN<nnn>",
+   "purpose": "Links one customerComplaint to one serial number (one document per link)"
   },
   {
    "collection": "u_mes_qual_customerComplaintShipment",
@@ -27140,7 +27737,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "Links one customerComplaint to one shipment (one document per link)"
   },
   {
    "collection": "u_mes_qual_customerComplaintSuspectLot",
@@ -27241,7 +27841,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -SL<nnn>",
+   "purpose": "Links one customerComplaint to one suspect lot (one document per link)"
   },
   {
    "collection": "u_mes_qual_customerComplaintCommunication",
@@ -27358,7 +27961,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per communication of a customerComplaint"
   },
   {
    "collection": "u_mes_perf_reasonCode",
@@ -27495,7 +28101,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "reasonCode",
+   "purpose": "Reason tree (up to 4 levels) for downtime, scrap, hold and andon with planned / unplanned category"
   },
   {
    "collection": "u_mes_perf_equipmentState",
@@ -27672,7 +28281,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "stateEventNo",
+   "purpose": "State intervals per equipment: running, idle, setup, down, starved, blocked"
   },
   {
    "collection": "u_mes_perf_downtimeEvent",
@@ -27971,7 +28583,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "downtimeNo",
+   "purpose": "Classified stops with fault, reason path, action taken, duration, responsible group"
   },
   {
    "collection": "u_mes_perf_downtimeEventComment",
@@ -28083,7 +28698,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per comment of a downtimeEvent"
   },
   {
    "collection": "u_mes_perf_productionCount",
@@ -28280,7 +28898,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "countNo",
+   "purpose": "Hourly good / reject / rework counts per work centre against target (hour-by-hour board)"
   },
   {
    "collection": "u_mes_perf_oeeRecord",
@@ -28518,7 +29139,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "oeeRecordNo",
+   "purpose": "OEE per equipment / line and shift: availability, performance, quality with the time and count basis"
   },
   {
    "collection": "u_mes_perf_oeeRecordLoss",
@@ -28639,7 +29263,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per loss of a oeeRecord"
   },
   {
    "collection": "u_mes_perf_processTag",
@@ -28831,7 +29458,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "tagName",
+   "purpose": "Tag definitions: source address, unit, deadband, limits, equipment"
   },
   {
    "collection": "u_mes_perf_processReading",
@@ -28999,7 +29629,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "readingNo",
+   "purpose": "Tag values over time (die temperature, furnace zone temperature, spindle load, bath pH, current)"
   },
   {
    "collection": "u_mes_perf_alarm",
@@ -29299,7 +29932,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "alarmNo",
+   "purpose": "Alarm occurrences with severity, raised / acknowledged / cleared times"
   },
   {
    "collection": "u_mes_perf_torqueResult",
@@ -29579,7 +30215,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "torqueResultNo",
+   "purpose": "Tightening results per unit: program, final torque, angle, status, curve reference"
   },
   {
    "collection": "u_mes_perf_leakTestResult",
@@ -29790,7 +30429,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "leakTestNo",
+   "purpose": "Leak test per unit: stage pressures, decay, leak rate, limits, verdict, retest counter"
   },
   {
    "collection": "u_mes_perf_leakTestResultStage",
@@ -29931,7 +30573,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per stage of a leakTestResult"
   },
   {
    "collection": "u_mes_maint_maintenancePlan",
@@ -30076,7 +30721,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "planNo",
+   "purpose": "Preventive / condition-based plans per equipment or tool with tasks, interval and next due"
   },
   {
    "collection": "u_mes_maint_maintenancePlanTask",
@@ -30155,7 +30803,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "One document per task of a maintenancePlan"
   },
   {
    "collection": "u_mes_maint_maintenancePlanRequiredSkill",
@@ -30224,7 +30875,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RS<nnn>",
+   "purpose": "Links one maintenancePlan to one required skill (one document per link)"
   },
   {
    "collection": "u_mes_maint_maintenancePlanRequiredSparePart",
@@ -30298,7 +30952,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RSP<nnn>",
+   "purpose": "One document per required spare part of a maintenancePlan"
   },
   {
    "collection": "u_mes_maint_maintenanceWorkOrder",
@@ -30614,7 +31271,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "workOrderNo",
+   "purpose": "Breakdown, preventive and improvement work orders with labour, parts used, root cause"
   },
   {
    "collection": "u_mes_maint_maintenanceWorkOrderAssignedToUser",
@@ -30715,7 +31375,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -ATU<nnn>",
+   "purpose": "Links one maintenanceWorkOrder to one assigned to user (one document per link)"
   },
   {
    "collection": "u_mes_maint_maintenanceWorkOrderLabour",
@@ -30821,7 +31484,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per labour of a maintenanceWorkOrder"
   },
   {
    "collection": "u_mes_maint_maintenanceWorkOrderUsedSparePart",
@@ -30932,7 +31598,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -USP<nnn>",
+   "purpose": "One document per used spare part of a maintenanceWorkOrder"
   },
   {
    "collection": "u_mes_maint_sparePart",
@@ -31086,7 +31755,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "sparePartNo",
+   "purpose": "Maintenance spares with stock, minimum, location, where-used"
   },
   {
    "collection": "u_mes_maint_sparePartUsedOnEquipment",
@@ -31155,7 +31827,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -UOE<nnn>",
+   "purpose": "Links one sparePart to one used on equipment (one document per link)"
   },
   {
    "collection": "u_mes_maint_tool",
@@ -31375,7 +32050,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "toolNo",
+   "purpose": "Dies, fixtures, cutting tools, nutrunner spindles, test seals: life limit, life used, status, location"
   },
   {
    "collection": "u_mes_maint_toolItem",
@@ -31444,7 +32122,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -I<nnn>",
+   "purpose": "Links one tool to one item (one document per link)"
   },
   {
    "collection": "u_mes_maint_toolLifeRecord",
@@ -31664,7 +32345,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "toolLifeNo",
+   "purpose": "Tool mount / dismount / usage / regrind events with shots or cycles consumed"
   },
   {
    "collection": "u_mes_syst_erpMessage",
@@ -31896,7 +32580,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "messageNo",
+   "purpose": "Inbound and outbound interface messages (order download, confirmation, goods movement) with payload, status, retries"
   },
   {
    "collection": "u_mes_syst_integrationConnector",
@@ -32030,7 +32717,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "connectorCode",
+   "purpose": "Connector definitions to ERP, PLM, OPC UA servers, tool controllers, label printers"
   },
   {
    "collection": "u_mes_syst_integrationConnectorFunction",
@@ -32114,7 +32804,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -F<nnn>",
+   "purpose": "One document per function of a integrationConnector"
   },
   {
    "collection": "u_mes_syst_iotDevice",
@@ -32295,7 +32988,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "deviceCode",
+   "purpose": "Registry of PLCs, gateways, nutrunner controllers, leak testers, scanners, printers, energy meters"
   },
   {
    "collection": "u_mes_syst_operatorApp",
@@ -32405,7 +33101,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "appCode",
+   "purpose": "Composable operator screen definitions (versioned) bound to work centres and operations"
   },
   {
    "collection": "u_mes_syst_operatorAppWorkCenter",
@@ -32474,7 +33173,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WC<nnn>",
+   "purpose": "Links one operatorApp to one work center (one document per link)"
   },
   {
    "collection": "u_mes_syst_operatorAppOperation",
@@ -32543,7 +33245,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -O<nnn>",
+   "purpose": "Links one operatorApp to one operation (one document per link)"
   },
   {
    "collection": "u_mes_syst_operatorAppStep",
@@ -32637,7 +33342,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -S<nnn>",
+   "purpose": "One document per step of a operatorApp"
   },
   {
    "collection": "u_mes_syst_operatorAppStepTrigger",
@@ -32711,7 +33419,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "One document per trigger of a operatorAppStep"
   },
   {
    "collection": "u_mes_syst_operatorAppDeviceBinding",
@@ -32785,7 +33496,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -DB<nnn>",
+   "purpose": "One document per device binding of a operatorApp"
   },
   {
    "collection": "u_mes_syst_operatorAppLanguage",
@@ -32854,7 +33568,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "Links one operatorApp to one language (one document per link)"
   },
   {
    "collection": "u_mes_syst_businessEvent",
@@ -33036,7 +33753,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "eventNo",
+   "purpose": "Business event stream (order released, unit started, recipe downloaded, hold placed)"
   },
   {
    "collection": "u_mes_syst_auditTrail",
@@ -33208,7 +33928,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "auditTrailNo",
+   "purpose": "Field-level change history of master and quality data (who, when, old, new, reason)"
   },
   {
    "collection": "u_mes_syst_auditTrailChange",
@@ -33314,7 +34037,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -C<nnn>",
+   "purpose": "One document per change of a auditTrail"
   },
   {
    "collection": "u_mes_syst_electronicSignature",
@@ -33496,7 +34222,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "signatureNo",
+   "purpose": "Signature records for approvals and releases with meaning and signed-content hash"
   },
   {
    "collection": "u_mes_syst_notification",
@@ -33737,7 +34466,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "notificationNo",
+   "purpose": "Alerts and escalations sent to users / groups with delivery and acknowledgement status"
   },
   {
    "collection": "u_mes_syst_notificationRecipient",
@@ -33871,7 +34603,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per recipient of a notification"
   },
   {
    "collection": "u_mes_syst_controlledDocument",
@@ -34089,7 +34824,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "documentNo",
+   "purpose": "Controlled documents and attachments metadata (drawings, certificates, photos, reports); file in object store"
   },
   {
    "collection": "u_mes_syst_controlledDocumentTag",
@@ -34185,7 +34923,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "One document per tag value of a controlledDocument"
   },
   {
    "collection": "u_mes_syst_numberRange",
@@ -34329,7 +35070,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "rangeCode",
+   "purpose": "Counters and format masks for serials, lots, orders, labels, NCRs"
   },
   {
    "collection": "u_mes_syst_systemConfiguration",
@@ -34442,7 +35186,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "configKey",
+   "purpose": "Site and module settings (OEE basis, SPC rules, retention, label printer mapping)"
   },
   {
    "collection": "u_mes_perf_energyReading",
@@ -34635,7 +35382,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "energyReadingNo",
+   "purpose": "Interval energy, compressed air and gas consumption per meter and equipment"
   },
   {
    "collection": "u_mes_plan_andonEvent",
@@ -34889,7 +35639,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "andonNo",
+   "purpose": "Help calls from stations (quality, material, maintenance, safety) with response and escalation times"
   },
   {
    "collection": "u_mes_plan_andonEventEscalation",
@@ -35006,7 +35759,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "One document per escalation of a andonEvent"
   },
   {
    "collection": "u_mes_ehs_safetyIncident",
@@ -35256,7 +36012,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "incidentNo",
+   "purpose": "Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions"
   },
   {
    "collection": "u_mes_ehs_safetyIncidentWitnessUser",
@@ -35357,7 +36116,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WU<nnn>",
+   "purpose": "Links one safetyIncident to one witness user (one document per link)"
   },
   {
    "collection": "u_mes_ehs_safetyIncidentAction",
@@ -35475,7 +36237,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -A<nnn>",
+   "purpose": "One document per action of a safetyIncident"
   },
   {
    "collection": "u_mes_mast_department",
@@ -35572,7 +36337,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Departments of the site (production, quality, maintenance ...)"
   },
   {
    "collection": "u_mes_mast_designation",
@@ -35659,7 +36427,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Job designations of employees"
   },
   {
    "collection": "u_mes_mast_employmentType",
@@ -35731,7 +36502,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of employment (permanent, contract, trainee, apprentice)"
   },
   {
    "collection": "u_mes_mast_costCenter",
@@ -35810,7 +36584,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Cost centers charged with activities, mapped to ERP"
   },
   {
    "collection": "u_mes_mast_manufacturer",
@@ -35892,7 +36669,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Manufacturers of equipment, gauges, devices and spare parts"
   },
   {
    "collection": "u_mes_mast_equipmentType",
@@ -35959,7 +36739,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of equipment (casting machine, furnace, nutrunner, leak tester ...)"
   },
   {
    "collection": "u_mes_mast_skillCategory",
@@ -36026,7 +36809,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Categories of skills (process, quality, maintenance, safety)"
   },
   {
    "collection": "u_mes_mast_permission",
@@ -36103,7 +36889,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Permissions that can be granted to roles"
   },
   {
    "collection": "u_mes_mast_signatureMeaning",
@@ -36170,7 +36959,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Meanings an electronic signature can carry (approved, reviewed, released ...)"
   },
   {
    "collection": "u_mes_mast_currency",
@@ -36247,7 +37039,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Currencies used for costs and invoices"
   },
   {
    "collection": "u_mes_mast_country",
@@ -36319,7 +37114,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Countries used in addresses"
   },
   {
    "collection": "u_mes_mast_language",
@@ -36386,7 +37184,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Languages of users, instructions and documents"
   },
   {
    "collection": "u_mes_mast_transporter",
@@ -36463,7 +37264,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Transport companies used for dispatch"
   },
   {
    "collection": "u_mes_mast_commodity",
@@ -36530,7 +37334,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Purchasing commodities used to classify suppliers"
   },
   {
    "collection": "u_mes_prod_itemGroup",
@@ -36597,7 +37404,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Item groups (brake caliper, piston, seal, fastener ...)"
   },
   {
    "collection": "u_mes_prod_itemFamily",
@@ -36664,7 +37474,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Product families a line is built for (front caliper, rear caliper)"
   },
   {
    "collection": "u_mes_prod_ppeItem",
@@ -36731,7 +37544,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Personal protective equipment that a work instruction can require"
   },
   {
    "collection": "u_mes_prod_market",
@@ -36798,7 +37614,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Sales markets of a product variant (domestic, export)"
   },
   {
    "collection": "u_mes_prod_padCompound",
@@ -36865,7 +37684,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Brake pad friction compounds offered as a variant option"
   },
   {
    "collection": "u_mes_prod_surfaceFinish",
@@ -36932,7 +37754,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Surface finishes offered as a variant option"
   },
   {
    "collection": "u_mes_prod_vehicleModel",
@@ -37019,7 +37844,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Customer vehicle models the parts are fitted to"
   },
   {
    "collection": "u_mes_plan_indirectActivity",
@@ -37101,7 +37929,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Indirect labour activities (cleaning, training, waiting for material ...)"
   },
   {
    "collection": "u_mes_plan_containerType",
@@ -37193,7 +38024,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of container with dimensions and tare weight"
   },
   {
    "collection": "u_mes_matl_movementType",
@@ -37275,7 +38109,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Stock movement types with their ERP movement code and stock effect"
   },
   {
    "collection": "u_mes_matl_stockStatus",
@@ -37352,7 +38189,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Stock statuses (unrestricted, quality inspection, blocked, reserved)"
   },
   {
    "collection": "u_mes_matl_packType",
@@ -37419,7 +38259,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Pack levels used in packaging specifications (bag, tray, bin, pallet)"
   },
   {
    "collection": "u_mes_qual_defectGroup",
@@ -37486,7 +38329,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Groups of defect codes (casting, machining, leak, torque ...)"
   },
   {
    "collection": "u_mes_qual_gaugeType",
@@ -37553,7 +38399,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of gauge and measuring instrument"
   },
   {
    "collection": "u_mes_qual_dispositionType",
@@ -37635,7 +38484,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Dispositions for nonconforming material (use as is, rework, scrap, return, sort)"
   },
   {
    "collection": "u_mes_qual_complaintType",
@@ -37702,7 +38554,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of customer complaint (line rejection, zero kilometre, warranty, logistics)"
   },
   {
    "collection": "u_mes_perf_lossCategory",
@@ -37779,7 +38634,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "OEE loss categories with the OEE factor they reduce"
   },
   {
    "collection": "u_mes_perf_reasonCategory",
@@ -37846,7 +38704,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Categories of reason codes (mechanical, electrical, process, material ...)"
   },
   {
    "collection": "u_mes_maint_toolType",
@@ -37918,7 +38779,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of tool (die, fixture, cutting tool, socket, test seal)"
   },
   {
    "collection": "u_mes_syst_documentType",
@@ -37995,7 +38859,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of controlled document with retention"
   },
   {
    "collection": "u_mes_syst_deviceType",
@@ -38062,7 +38929,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of connected device (PLC, nutrunner controller, leak tester, printer ...)"
   },
   {
    "collection": "u_mes_syst_notificationType",
@@ -38129,7 +38999,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of notification sent by the system"
   },
   {
    "collection": "u_mes_plan_andonType",
@@ -38231,7 +39104,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of andon call with responsible department and target response time"
   },
   {
    "collection": "u_mes_ehs_incidentType",
@@ -38308,7 +39184,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of safety incident"
   },
   {
    "collection": "u_mes_perf_energyType",
@@ -38385,7 +39264,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of energy and utility that are metered"
   },
   {
    "collection": "u_mes_ehs_bodyPart",
@@ -38452,7 +39334,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Body parts for injury records"
   },
   {
    "collection": "u_mes_ehs_injuryType",
@@ -38519,7 +39404,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "code",
+   "purpose": "Types of injury"
   },
   {
    "collection": "u_mes_syst_statusDefinition",
@@ -38616,7 +39504,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "definition code",
+   "purpose": "Status values and allowed transitions per collection (status mapping)"
   },
   {
    "collection": "u_mes_syst_enumerationValue",
@@ -38703,7 +39594,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "definition code",
+   "purpose": "Allowed values of fixed enumeration keys, one document per collection, key and value"
   },
   {
    "collection": "u_mes_syst_statusTransition",
@@ -38800,7 +39694,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "definition code",
+   "purpose": "Status values and allowed transitions per collection (status mapping)"
   },
   {
    "collection": "u_mes_mast_roleRequiredSkill",
@@ -38874,7 +39771,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -RS<nnn>",
+   "purpose": "Links one role to one required skill (one document per link)"
   },
   {
    "collection": "u_mes_prod_recipeProductVariant",
@@ -38943,7 +39843,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one recipe to one product variant (one document per link)"
   },
   {
    "collection": "u_mes_prod_recipeControlledDocument",
@@ -39017,7 +39920,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -CD<nnn>",
+   "purpose": "Links one recipe to one controlled document (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionWorkCenter",
@@ -39086,7 +39992,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -WC<nnn>",
+   "purpose": "Links one workInstruction to one work center (one document per link)"
   },
   {
    "collection": "u_mes_prod_workInstructionProductVariant",
@@ -39155,7 +40064,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one workInstruction to one product variant (one document per link)"
   },
   {
    "collection": "u_mes_plan_operatorSession",
@@ -39343,7 +40255,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "OSN-<yyyymmdd>-<nnnnn>, e.g. OSN-20260916-00042",
+   "purpose": "One login-to-logout session of an operator at a station, with the authentication method and the checks done at login."
   },
   {
    "collection": "u_mes_plan_documentAcknowledgement",
@@ -39533,7 +40448,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ACK-<yyyymmdd>-<nnnnn>",
+   "purpose": "Operator confirmation that a specific revision of a work instruction, recipe or controlled document was read at a station."
   },
   {
    "collection": "u_mes_plan_interlockEvent",
@@ -39813,7 +40731,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ILK-<yyyymmdd>-<nnnnn>",
+   "purpose": "Every time an interlock rule blocks a transaction, is overridden or is cleared: what was checked, expected and found, and who authorised the override."
   },
   {
    "collection": "u_mes_plan_recipeDownload",
@@ -40005,7 +40926,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RDL-<yyyymmdd>-<nnnnn>",
+   "purpose": "Each download or selection of a program / recipe on a machine with the checksum verification result."
   },
   {
    "collection": "u_mes_plan_setupVerification",
@@ -40192,7 +41116,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SUV-<yyyymmdd>-<nnnnn>",
+   "purpose": "Pre-start verification of the set-up of a station or machine against the order, variant and bill of process."
   },
   {
    "collection": "u_mes_plan_setupVerificationItem",
@@ -40339,7 +41266,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -I<nnn>",
+   "purpose": "One document per item of a setupVerification"
   },
   {
    "collection": "u_mes_matl_exposureTimer",
@@ -40525,7 +41455,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "EXT-<yyyymmdd>-<nnnnn>",
+   "purpose": "Floor-life, pot-life or open-time clock for a lot or container of an exposure-controlled item."
   },
   {
    "collection": "u_mes_matl_replenishmentRule",
@@ -40684,7 +41617,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RPL-<item code>-<location code>, e.g. RPL-PST-54-LS-OP060",
+   "purpose": "Min-max or e-Kanban rule for replenishing an item at a line-side location."
   },
   {
    "collection": "u_mes_matl_materialDemandForecast",
@@ -40863,7 +41799,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "MDF-<yyyymmdd>-<line code>-<item code>-<hh>",
+   "purpose": "Short-term component demand and projected line-side shortage per item, line and time bucket."
   },
   {
    "collection": "u_mes_trac_traceInvestigation",
@@ -41050,7 +41989,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "TRC-<yyyymmdd>-<nnn>",
+   "purpose": "A saved forward or reverse trace run, its starting object and the containment it fed."
   },
   {
    "collection": "u_mes_trac_traceInvestigationResult",
@@ -41211,7 +42153,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "One document per result of a traceInvestigation"
   },
   {
    "collection": "u_mes_qual_characteristicPosition",
@@ -41310,7 +42255,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -P<nnn>",
+   "purpose": "One document per position of a characteristic"
   },
   {
    "collection": "u_mes_qual_curveEnvelope",
@@ -41491,7 +42439,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ENV-<characteristic code>-<version>, e.g. ENV-OP060-PISTON-PRESS-02",
+   "purpose": "Approved golden-sample envelope for a force\u2013displacement, torque\u2013angle, pressure\u2013time or signal curve."
   },
   {
    "collection": "u_mes_qual_curveEnvelopeWindow",
@@ -41585,7 +42536,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -W<nnn>",
+   "purpose": "One document per window of a curveEnvelope"
   },
   {
    "collection": "u_mes_qual_measurementCurve",
@@ -41800,7 +42754,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "CRV-<yyyymmdd>-<nnnnnn>",
+   "purpose": "One captured curve per unit, position and test, with the envelope verdict and summary values."
   },
   {
    "collection": "u_mes_qual_measurementCurvePoint",
@@ -41907,7 +42864,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent curve recordNo + -<nnnn>",
+   "purpose": "Points of a measurement curve. Created as a MongoDB time-series collection: timeField `sampledAt`, metaField `measurementCurveId`, granularity seconds."
   },
   {
    "collection": "u_mes_qual_defectRecord",
@@ -42241,7 +43201,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "DEF-<yyyymmdd>-<nnnnn>",
+   "purpose": "One logged defect on one unit (or lot sample) with first-fail station, origin, 4M category and follow-up links."
   },
   {
    "collection": "u_mes_qual_auditSchedule",
@@ -42411,7 +43374,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "LPA-<layer>-<line code>-<nn>, e.g. LPA-L2-LN-CAL-01",
+   "purpose": "Plan for layered process audits (and other recurring audits): layer, area or line, check sheet, frequency and auditor."
   },
   {
    "collection": "u_mes_qual_inspectionPlanProductVariant",
@@ -42480,7 +43446,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -PV<nnn>",
+   "purpose": "Links one inspectionPlan to one product variant (one document per link)"
   },
   {
    "collection": "u_mes_perf_alarmDefinition",
@@ -42607,7 +43576,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ALM-<equipment type code>-<alarm code>, e.g. ALM-LEAKTESTER-E104",
+   "purpose": "Alarm code master per equipment type with class, severity, restart-block and escalation settings."
   },
   {
    "collection": "u_mes_perf_lossSummary",
@@ -42798,7 +43770,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "LSS-<yyyymmdd>-<line code>-<shift code>-<reason code>",
+   "purpose": "Loss Pareto row per line, shift, production date and reason code (downtime, speed and quality losses)."
   },
   {
    "collection": "u_mes_perf_workCenterPerformance",
@@ -42996,7 +43971,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "WCP-<yyyymmddhh>-<work centre code>",
+   "purpose": "Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag."
   },
   {
    "collection": "u_mes_perf_operatorPerformance",
@@ -43167,7 +44145,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "OPF-<yyyymmdd>-<badge no>-<work centre code>",
+   "purpose": "Labour efficiency per operator, station, variant, shift and date."
   },
   {
    "collection": "u_mes_maint_maintenanceWorkOrderTask",
@@ -43314,7 +44295,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -T<nnn>",
+   "purpose": "One document per task of a maintenanceWorkOrder"
   },
   {
    "collection": "u_mes_maint_sparePartTransaction",
@@ -43489,7 +44473,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SPT-<yyyymmdd>-<nnnnn>",
+   "purpose": "Spare-part issue, return, receipt, adjustment and scrap with work order and equipment."
   },
   {
    "collection": "u_mes_maint_reliabilitySummary",
@@ -43656,7 +44643,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "REL-<yyyymm or yyyymmdd>-<equipment code>",
+   "purpose": "MTBF and MTTR per equipment, line and period."
   },
   {
    "collection": "u_mes_maint_equipmentLifecycleEvent",
@@ -43833,7 +44823,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ELE-<equipment code>-<nnn>",
+   "purpose": "Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning."
   },
   {
    "collection": "u_mes_syst_interlockRule",
@@ -43997,7 +44990,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ILR-<rule type code>-<nnn>, e.g. ILR-SEQ-001",
+   "purpose": "Configured check that the application must pass before a transaction is allowed, with its scope and override policy."
   },
   {
    "collection": "u_mes_syst_statusTransitionRole",
@@ -44066,7 +45062,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "Links one statusTransition to one role (one document per link)"
   },
   {
    "collection": "u_mes_syst_escalationRule",
@@ -44173,7 +45172,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ESC-<code>, e.g. ESC-BREAKDOWN-CRIT",
+   "purpose": "Routing and SLA rule for an exception type: first owner role, response and resolution targets."
   },
   {
    "collection": "u_mes_syst_escalationRuleLevel",
@@ -44267,7 +45269,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per level of a escalationRule"
   },
   {
    "collection": "u_mes_syst_alertRule",
@@ -44434,7 +45439,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ALR-<metric code>-<nnn>",
+   "purpose": "Threshold rule on a KPI or signal with the resulting action."
   },
   {
    "collection": "u_mes_syst_analyticsModel",
@@ -44570,7 +45578,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "AIM-<code>-<version>, e.g. AIM-VIS-BOOT-1.3",
+   "purpose": "Registry of AI / ML / rule models and their released versions."
   },
   {
    "collection": "u_mes_syst_modelPrediction",
@@ -44793,7 +45804,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "PRD-<yyyymmdd>-<nnnnnn>",
+   "purpose": "Each prediction, classification, forecast or recommendation produced by a model, with the action and the actual outcome."
   },
   {
    "collection": "u_mes_syst_simulationStudy",
@@ -44987,7 +46001,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SIM-<yyyy>-<nnn>",
+   "purpose": "Digital-twin / what-if study with its input snapshot, result, approval and controlled rollout and pre / post comparison."
   },
   {
    "collection": "u_mes_syst_recordPolicy",
@@ -45099,7 +46116,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RPO-<collection name>",
+   "purpose": "Edit, lock and retention policy per collection."
   },
   {
    "collection": "u_mes_syst_savedView",
@@ -45201,7 +46221,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "VIEW-<user or role code>-<nnn>",
+   "purpose": "Saved dashboard and comparison filters per user or role."
   },
   {
    "collection": "u_mes_syst_backupRun",
@@ -45343,7 +46366,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "BKP-<yyyymmdd>-<nn>",
+   "purpose": "Evidence of database backups and restore tests with measured recovery time (optional)."
   },
   {
    "collection": "u_mes_matl_storageLocationAllowedItem",
@@ -45422,7 +46448,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -AI<nnn>",
+   "purpose": "Links one storageLocation to one allowed item (one document per link)"
   },
   {
    "collection": "u_mes_syst_computerisedSystem",
@@ -45582,7 +46611,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "CSY-<system code>, e.g. CSY-MES-PN1",
+   "purpose": "Inventory of the computerised systems that create, hold or process GMP records, with their GxP impact, GAMP category, owners and periodic review cycle."
   },
   {
    "collection": "u_mes_syst_systemValidation",
@@ -45803,7 +46835,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "CSV-<yyyy>-<nnn>, e.g. CSV-2026-014",
+   "purpose": "One validation or computer software assurance activity on a computerised system: initial validation, revalidation after a change, or decommissioning, with its test evidence and approval."
   },
   {
    "collection": "u_mes_syst_systemPeriodicReview",
@@ -45989,7 +47024,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "SPR-<system code>-<yyyy>-<nn>, e.g. SPR-MES-PN1-2026-01",
+   "purpose": "Periodic evaluation that a computerised system remains in a validated state: changes, incidents, deviations, audit trails, access and backup over the review period."
   },
   {
    "collection": "u_mes_syst_auditTrailReview",
@@ -46173,7 +47211,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "ATR-<yyyymmdd>-<nnn>, e.g. ATR-20260916-004",
+   "purpose": "Documented review of the audit-trail entries of a production record, a system or an investigation: period, number of entries, critical entries, anomalies and outcome."
   },
   {
    "collection": "u_mes_syst_userAccessReview",
@@ -46327,7 +47368,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "UAR-<system code>-<yyyy>-<nn>, e.g. UAR-MES-PN1-2026-03",
+   "purpose": "Periodic review of the user accounts and roles of a computerised system, confirming that every account is still needed and has the right authority."
   },
   {
    "collection": "u_mes_syst_userAccessReviewLine",
@@ -46459,7 +47503,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per line of a userAccessReview"
   },
   {
    "collection": "u_mes_bmr_batchRecordReview",
@@ -46668,7 +47715,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "BRR-<order number>, e.g. BRR-PO-1000412",
+   "purpose": "Review of the electronic production record of an order before release: production review, quality review by exception, exceptions found and their closure."
   },
   {
    "collection": "u_mes_bmr_batchRecordReviewException",
@@ -46805,7 +47855,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -E<nnn>",
+   "purpose": "One document per exception of a batchRecordReview"
   },
   {
    "collection": "u_mes_bmr_batchRelease",
@@ -47007,7 +48060,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "BRL-<lot number>, e.g. BRL-L260915-GDC-014",
+   "purpose": "Release decision of the quality unit for a lot after review of its production record: released, conditionally released under a deviation, or rejected."
   },
   {
    "collection": "u_mes_bmr_yieldReconciliation",
@@ -47214,7 +48270,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "YRC-<order number>-<nn>, e.g. YRC-PO-1000412-01",
+   "purpose": "Calculated yield of an order, and reconciliation of issued components and labels against use, return and destruction, with the limits and the outcome."
   },
   {
    "collection": "u_mes_plan_lineClearance",
@@ -47438,7 +48497,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "LCL-<yyyymmdd>-<nnn>, e.g. LCL-20260915-001",
+   "purpose": "Check that a line or station is free of materials, labels, documents and product of the previous order before the next order starts, with a second-person verification."
   },
   {
    "collection": "u_mes_maint_logbookEntry",
@@ -47635,7 +48697,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "LOG-<equipment or area code>-<nnnnn>, e.g. LOG-ASY-01-P1-00412",
+   "purpose": "Chronological use log of a piece of equipment or an area: production, cleaning, maintenance, calibration, line clearance, qualification and idle periods, with the order and lot concerned."
   },
   {
    "collection": "u_mes_maint_cleaningRecord",
@@ -47847,7 +48912,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "CLN-<yyyymmdd>-<nnn>, e.g. CLN-20260915-003",
+   "purpose": "Cleaning of a piece of equipment after use or before a product change: procedure, dirty hold time, cleaning, verification and the clean hold time it opens."
   },
   {
    "collection": "u_mes_qual_environmentalMonitoringPoint",
@@ -47969,7 +49037,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "EMP-<area code>-<nn>, e.g. EMP-ASY-01",
+   "purpose": "A monitored location and parameter in a controlled area, with its alert and action limits and sampling frequency."
   },
   {
    "collection": "u_mes_qual_environmentalMonitoringResult",
@@ -48116,7 +49187,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "EMR-<yyyymmdd>-<nnnn>, e.g. EMR-20260915-0012",
+   "purpose": "One environmental monitoring result with its evaluation against alert and action limits and the excursion handling."
   },
   {
    "collection": "u_mes_matl_dispenseRecord",
@@ -48350,7 +49424,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "DSP-<yyyymmdd>-<nnnn>, e.g. DSP-20260915-0031",
+   "purpose": "Weighing or counting of a material lot for an order, with target, tolerance, tare, gross and net weight and the second-person or system verification."
   },
   {
    "collection": "u_mes_qual_retentionSample",
@@ -48548,7 +49625,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RSM-<lot number>-<nn>, e.g. RSM-L260915-GDC-014-01",
+   "purpose": "Reserve or retention sample taken from a lot, with quantity, storage location, retention date and withdrawals."
   },
   {
    "collection": "u_mes_qual_riskAssessment",
@@ -48716,7 +49796,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "QRA-<yyyy>-<nnn>, e.g. QRA-2026-031",
+   "purpose": "Documented quality risk assessment of a change, system, deviation, equipment or product: method, initial and residual risk, controls and acceptance."
   },
   {
    "collection": "u_mes_qual_productQualityReview",
@@ -48909,7 +49992,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "PQR-<item>-<yyyy>-<period>, e.g. PQR-5110-10-0100-2026-H1",
+   "purpose": "Periodic product quality review of an item: lots made, released and rejected, deviations, complaints, CAPA, changes, recalls and capability over the review period, with conclusion and actions."
   },
   {
    "collection": "u_mes_qual_productRecall",
@@ -49124,7 +50210,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "RCL-<yyyy>-<nnn>, e.g. RCL-2026-003",
+   "purpose": "Recall or field action for product already shipped: class, scope, reason, linked complaint, investigation and trace, quantities shipped and recovered, authority notification and effectiveness check."
   },
   {
    "collection": "u_mes_qual_productRecallLot",
@@ -49245,7 +50334,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -L<nnn>",
+   "purpose": "One document per lot of a productRecall"
   },
   {
    "collection": "u_mes_qual_processValidation",
@@ -49446,7 +50538,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "PVL-<yyyy>-<nnn>, e.g. PVL-2026-007",
+   "purpose": "Process validation study of an item on a line by lifecycle stage (process design, process qualification, continued process verification), with protocol, lots, acceptance criteria and result."
   },
   {
    "collection": "u_mes_maint_equipmentQualification",
@@ -49647,7 +50742,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "EQQ-<equipment code>-<phase>-<nn>, e.g. EQQ-LKT-01-T1-PQ-01",
+   "purpose": "Qualification of a piece of equipment by phase (design, installation, operational, performance, periodic requalification), with protocol, tests, deviations, approval and the next requalification date."
   },
   {
    "collection": "u_mes_mmr_masterManufacturingRecord",
@@ -49941,7 +51039,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "MMR-<item number>-<version>, e.g. MMR-5110-10-0100-03",
+   "purpose": "One approved, versioned master manufacturing record per item revision: the bill of material, routing, bill of process, recipes, control plan, inspection plan, packaging specification and label template that together define how a batch is made, with standard batch size, theoretical yield, yield limits, effective dates and approvals."
   },
   {
    "collection": "u_mes_mmr_masterManufacturingRecordRecipe",
@@ -50010,7 +51111,10 @@
      "type": "Int32",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "parent recordNo + -R<nnn>",
+   "purpose": "Links one masterManufacturingRecord to one recipe (one document per link)"
   },
   {
    "collection": "u_mes_bmr_batchManufacturingRecord",
@@ -50242,7 +51346,10 @@
      "type": "String",
      "ref": null
     }
-   ]
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "BMR-<order number>, e.g. BMR-PO-1000412",
+   "purpose": "Header of the executed batch record of one production order: the master record version frozen at opening, links to line clearance, yield reconciliation, review and release, and the exported true copy of the compiled record with its checksum."
   }
  ]
 }

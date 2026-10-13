@@ -9,7 +9,7 @@
 | Parent collection | u_mes_qual_samplingPlan |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 13 (13 required, 0 may be null) |
+| Keys | 14 (14 required, 0 may be null) |
 
 ## Structure
 
@@ -24,17 +24,18 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1145000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"AQL-1.0-II-SR01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | samplingPlanId | String | - | Yes | Reference to u_mes_qual_samplingPlan._id: the parent document this one belongs to | `"1144000000000001"` | Reference: u_mes_qual_samplingPlan._id |
-| 6 | samplingPlanName | String | - | Yes | Display value of samplingPlanId, copied from u_mes_qual_samplingPlan.name | `"AQL 1.0, general inspection level II"` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | lotSizeFrom | Int32 | - | Yes | Lot size from | `NumberInt(2)` |  |
-| 9 | lotSizeTo | Int32 | - | Yes | Lot size to | `NumberInt(8)` |  |
-| 10 | sampleSize | Int32 | - | Yes | Sample size | `NumberInt(2)` |  |
-| 11 | acceptNumber | Int32 | - | Yes | Accept number | `NumberInt(0)` |  |
-| 12 | rejectNumber | Int32 | - | Yes | Reject number | `NumberInt(1)` |  |
-| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | samplingPlanId | String | - | Yes | Reference to u_mes_qual_samplingPlan._id: the parent document this one belongs to | `"1144000000000001"` | Reference: u_mes_qual_samplingPlan._id |
+| 7 | samplingPlanName | String | - | Yes | Display value of samplingPlanId, copied from u_mes_qual_samplingPlan.name | `"AQL 1.0, general inspection level II"` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | lotSizeFrom | Int32 | - | Yes | Lot size from | `NumberInt(2)` |  |
+| 10 | lotSizeTo | Int32 | - | Yes | Lot size to | `NumberInt(8)` |  |
+| 11 | sampleSize | Int32 | - | Yes | Sample size | `NumberInt(2)` |  |
+| 12 | acceptNumber | Int32 | - | Yes | Accept number | `NumberInt(0)` |  |
+| 13 | rejectNumber | Int32 | - | Yes | Reject number | `NumberInt(1)` |  |
+| 14 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

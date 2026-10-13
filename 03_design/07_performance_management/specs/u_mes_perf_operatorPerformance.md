@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 29 (27 required, 2 may be null) |
+| Keys | 30 (28 required, 2 may be null) |
 | Estimated volume per year | about 40,000 |
 | Storage | standard collection (report table) |
 
@@ -25,33 +25,34 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1327000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"OPF-20260915-10344-ASY-01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000002"` | Reference: u_mes_mast_user._id |
-| 6 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
-| 7 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
-| 8 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
-| 9 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
-| 10 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
-| 11 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
-| 12 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
-| 13 | productionDate | Date | Date | Yes | Production date | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 14 | attendedMinutes | Decimal128 | - | Yes | Minutes logged in | `NumberDecimal("455")` |  |
-| 15 | earnedMinutes | Decimal128 | - | Yes | Standard minutes earned | `NumberDecimal("421")` |  |
-| 16 | efficiencyPct | Decimal128 | - | Yes | Earned / attended | `NumberDecimal("92.5")` |  |
-| 17 | goodQuantity | Int32 | - | Yes | Good units | `NumberInt(742)` |  |
-| 18 | rejectQuantity | Int32 | - | Yes | Rejected units | `NumberInt(2)` |  |
-| 19 | errorCount | Int32 | - | Yes | Defects with 4M category Man | `NumberInt(0)` |  |
-| 20 | interlockCount | Int32 | - | Yes | Interlocks triggered | `NumberInt(1)` |  |
-| 21 | calculatedAt | Date | Datetime | Yes | Calculation time | `ISODate("2026-09-16T00:20:00.000+0000")` |  |
-| 22 | status | String | - | Yes | Primary lifecycle state of the document | `"Calculated"` | Calculated; Recalculated |
-| 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 24 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 25 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 26 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 27 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-16T00:20:00.000+0000")` |  |
-| 28 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 29 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000002"` | Reference: u_mes_mast_user._id |
+| 7 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
+| 8 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
+| 9 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
+| 10 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
+| 11 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
+| 12 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
+| 13 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
+| 14 | productionDate | Date | Date | Yes | Production date | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 15 | attendedMinutes | Decimal128 | - | Yes | Minutes logged in | `NumberDecimal("455")` |  |
+| 16 | earnedMinutes | Decimal128 | - | Yes | Standard minutes earned | `NumberDecimal("421")` |  |
+| 17 | efficiencyPct | Decimal128 | - | Yes | Earned / attended | `NumberDecimal("92.5")` |  |
+| 18 | goodQuantity | Int32 | - | Yes | Good units | `NumberInt(742)` |  |
+| 19 | rejectQuantity | Int32 | - | Yes | Rejected units | `NumberInt(2)` |  |
+| 20 | errorCount | Int32 | - | Yes | Defects with 4M category Man | `NumberInt(0)` |  |
+| 21 | interlockCount | Int32 | - | Yes | Interlocks triggered | `NumberInt(1)` |  |
+| 22 | calculatedAt | Date | Datetime | Yes | Calculation time | `ISODate("2026-09-16T00:20:00.000+0000")` |  |
+| 23 | status | String | - | Yes | Primary lifecycle state of the document | `"Calculated"` | Calculated; Recalculated |
+| 24 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 25 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 26 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 27 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 28 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-16T00:20:00.000+0000")` |  |
+| 29 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 30 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

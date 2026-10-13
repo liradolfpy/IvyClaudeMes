@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 33 (25 required, 8 may be null) |
+| Keys | 34 (26 required, 8 may be null) |
 | Estimated volume per year | about 20 per year |
 | Storage | standard collection |
 
@@ -24,38 +24,39 @@ Every key is present in every document. "Required" means the value may not be nu
 | # | Key | BSON type | Date tag | Required | Description | Example (shell) | Allowed values / reference |
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1362000000000001"` |  |
-| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PQR-5110-10-0100-2026-Q2"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
-| 6 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
-| 7 | reviewPeriodFromDate | Date | Date | Yes | First day of the review period | `ISODate("2026-04-01T00:00:00.000+0000")` |  |
-| 8 | reviewPeriodToDate | Date | Date | Yes | Last day of the review period | `ISODate("2026-06-30T00:00:00.000+0000")` |  |
-| 9 | lotsProducedCount | Int32 | - | Yes | Lots or orders produced | `NumberInt(118)` |  |
-| 10 | lotsReleasedCount | Int32 | - | Yes | Lots released | `NumberInt(117)` |  |
-| 11 | lotsRejectedCount | Int32 | - | Yes | Lots rejected | `NumberInt(1)` |  |
-| 12 | nonconformanceCount | Int32 | - | Yes | Nonconformances and deviations | `NumberInt(6)` |  |
-| 13 | deviationPermitCount | Int32 | - | Yes | Deviation permits used | `NumberInt(1)` |  |
-| 14 | customerComplaintCount | Int32 | - | Yes | Customer complaints | `NumberInt(3)` |  |
-| 15 | capaCount | Int32 | - | Yes | CAPA opened | `NumberInt(2)` |  |
-| 16 | engineeringChangeCount | Int32 | - | Yes | Changes implemented | `NumberInt(2)` |  |
-| 17 | productRecallCount | Int32 | - | Yes | Recalls | `NumberInt(1)` |  |
-| 18 | processCapabilityText | String | - | No (null allowed) | Capability of the critical characteristics | `"Bleed screw torque Cpk 1.92; pressure drop at 140 bar Cpk 2.10"` |  |
-| 19 | conclusionText | String | - | No (null allowed) | Conclusion; null while in preparation | `"Process in a state of control; no change to the control strategy"` |  |
-| 20 | actionsText | String | - | No (null allowed) | Actions decided | `"None"` |  |
-| 21 | reportControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: report controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
-| 22 | reportControlledDocumentName | String | - | No (null allowed) | Display value of reportControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
-| 23 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"1029000000000007"` | Reference: u_mes_mast_user._id |
-| 24 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 25 | approvedAt | Date | Datetime | No (null allowed) | Approval time | `ISODate("2026-07-15T11:00:00.000+0000")` |  |
-| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Approved"` | In Preparation; In Review; Approved |
-| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-07-15T11:00:00.000+0000")` |  |
-| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-07-15T11:00:00.000+0000")` |  |
-| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PQR-FG-PCM500-B10-2026-Q2"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Gamp"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000011"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Ranjangaon OSD Plant, Pune"` |  |
+| 6 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000011"` | Reference: u_mes_prod_item._id |
+| 7 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Paracetamol Tablets IP 500 mg, blister 10 x 10"` |  |
+| 8 | reviewPeriodFromDate | Date | Date | Yes | First day of the review period | `ISODate("2026-04-01T00:00:00.000+0000")` |  |
+| 9 | reviewPeriodToDate | Date | Date | Yes | Last day of the review period | `ISODate("2026-06-30T00:00:00.000+0000")` |  |
+| 10 | lotsProducedCount | Int32 | - | Yes | Lots or orders produced | `NumberInt(38)` |  |
+| 11 | lotsReleasedCount | Int32 | - | Yes | Lots released | `NumberInt(37)` |  |
+| 12 | lotsRejectedCount | Int32 | - | Yes | Lots rejected | `NumberInt(1)` |  |
+| 13 | nonconformanceCount | Int32 | - | Yes | Nonconformances and deviations | `NumberInt(5)` |  |
+| 14 | deviationPermitCount | Int32 | - | Yes | Deviation permits used | `NumberInt(1)` |  |
+| 15 | customerComplaintCount | Int32 | - | Yes | Customer complaints | `NumberInt(3)` |  |
+| 16 | capaCount | Int32 | - | Yes | CAPA opened | `NumberInt(2)` |  |
+| 17 | engineeringChangeCount | Int32 | - | Yes | Changes implemented | `NumberInt(2)` |  |
+| 18 | productRecallCount | Int32 | - | Yes | Recalls | `NumberInt(1)` |  |
+| 19 | processCapabilityText | String | - | No (null allowed) | Capability of the critical characteristics | `"Tablet weight Cpk 1.92; blister leak test pass rate 99.6 percent"` |  |
+| 20 | conclusionText | String | - | No (null allowed) | Conclusion; null while in preparation | `"Process in a state of control; no change to the control strategy"` |  |
+| 21 | actionsText | String | - | No (null allowed) | Actions decided | `"None"` |  |
+| 22 | reportControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: report controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
+| 23 | reportControlledDocumentName | String | - | No (null allowed) | Display value of reportControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
+| 24 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"1029000000000017"` | Reference: u_mes_mast_user._id |
+| 25 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Vandana Iyer"` |  |
+| 26 | approvedAt | Date | Datetime | No (null allowed) | Approval time | `ISODate("2026-07-15T11:00:00.000+0000")` |  |
+| 27 | status | String | - | Yes | Primary lifecycle state of the document | `"Approved"` | In Preparation; In Review; Approved |
+| 28 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 29 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-07-15T11:00:00.000+0000")` |  |
+| 30 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 31 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
+| 32 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-07-15T11:00:00.000+0000")` |  |
+| 33 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 34 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
 
 ## Status values
 

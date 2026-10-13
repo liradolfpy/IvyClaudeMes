@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 26 (24 required, 2 may be null) |
+| Keys | 27 (24 required, 3 may be null) |
 | Estimated volume per year | 10-100 |
 | Storage | standard |
 
@@ -32,30 +32,31 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1035000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SML"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the customer; used as its display value in other collections | `"Sahyadri Motors Ltd."` |  |
-| 6 | customerType | String | - | Yes | Customer type | `"OEM"` | OEM; Tier 1; Aftermarket |
-| 7 | parentCustomerCode | String | - | No (null allowed) | Code of the customer's parent group | `"SMG"` |  |
-| 8 | gstin | String | - | Yes | Goods and services tax identification number | `"27AAACV4521K1Z6"` |  |
-| 9 | billingAddressLine1 | String | - | Yes | Billing address line1 | `"Survey No. 212, Talegaon Industrial Area"` |  |
-| 10 | billingAddressCity | String | - | Yes | Billing address city | `"Pune"` |  |
-| 11 | billingAddressState | String | - | Yes | Billing address state | `"Maharashtra"` |  |
-| 12 | billingAddressPostalCode | String | - | Yes | Billing address postal code | `"410507"` |  |
-| 13 | billingAddressCountryId | String | - | Yes | Reference to u_mes_mast_country._id: billing address country | `"1266000000000001"` | Reference: u_mes_mast_country._id |
-| 14 | billingAddressCountryName | String | - | Yes | Display value of billingAddressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
-| 15 | supplierCodeAtCustomer | String | - | Yes | Vendor code the customer uses for this plant | `"V10487"` |  |
-| 16 | labelTemplateId | String | - | Yes | Reference to u_mes_matl_labelTemplate._id | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
-| 17 | labelTemplateName | String | - | Yes | Display value of labelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
-| 18 | asnRequired | Boolean | - | Yes | True when: ASN required | `true` |  |
-| 19 | ppapLevelDefault | Int32 | - | Yes | PPAP level default | `NumberInt(3)` |  |
-| 20 | ppmTarget | Int32 | - | Yes | Customer target in defective parts per million | `NumberInt(25)` |  |
-| 21 | paymentTermsDays | Int32 | - | Yes | Payment terms (days) | `NumberInt(45)` |  |
-| 22 | currencyId | String | - | Yes | Reference to u_mes_mast_currency._id | `"1265000000000001"` | Reference: u_mes_mast_currency._id |
-| 23 | currencyName | String | - | Yes | Display value of currencyId, copied from u_mes_mast_currency.name | `"Indian Rupee"` |  |
-| 24 | portalUrl | String | - | No (null allowed) | Portal url | `"https://supplier.sahyadrimotors.example"` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the customer; used as its display value in other collections | `"Sahyadri Motors Ltd."` |  |
+| 7 | customerType | String | - | Yes | Customer type | `"OEM"` | OEM; Tier 1; Aftermarket; Distributor; Hospital; Institutional; Export |
+| 8 | parentCustomerCode | String | - | No (null allowed) | Code of the customer's parent group | `"SMG"` |  |
+| 9 | gstin | String | - | Yes | Goods and services tax identification number | `"27AAACV4521K1Z6"` |  |
+| 10 | billingAddressLine1 | String | - | Yes | Billing address line1 | `"Survey No. 212, Talegaon Industrial Area"` |  |
+| 11 | billingAddressCity | String | - | Yes | Billing address city | `"Pune"` |  |
+| 12 | billingAddressState | String | - | Yes | Billing address state | `"Maharashtra"` |  |
+| 13 | billingAddressPostalCode | String | - | Yes | Billing address postal code | `"410507"` |  |
+| 14 | billingAddressCountryId | String | - | Yes | Reference to u_mes_mast_country._id: billing address country | `"1266000000000001"` | Reference: u_mes_mast_country._id |
+| 15 | billingAddressCountryName | String | - | Yes | Display value of billingAddressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
+| 16 | supplierCodeAtCustomer | String | - | Yes | Vendor code the customer uses for this plant | `"V10487"` |  |
+| 17 | labelTemplateId | String | - | Yes | Reference to u_mes_matl_labelTemplate._id | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
+| 18 | labelTemplateName | String | - | Yes | Display value of labelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
+| 19 | asnRequired | Boolean | - | Yes | True when: ASN required | `true` |  |
+| 20 | ppapLevelDefault | Int32 | - | No (null allowed) | PPAP level default | `NumberInt(3)` |  |
+| 21 | ppmTarget | Int32 | - | Yes | Customer target in defective parts per million | `NumberInt(25)` |  |
+| 22 | paymentTermsDays | Int32 | - | Yes | Payment terms (days) | `NumberInt(45)` |  |
+| 23 | currencyId | String | - | Yes | Reference to u_mes_mast_currency._id | `"1265000000000001"` | Reference: u_mes_mast_currency._id |
+| 24 | currencyName | String | - | Yes | Display value of currencyId, copied from u_mes_mast_currency.name | `"Indian Rupee"` |  |
+| 25 | portalUrl | String | - | No (null allowed) | Portal url | `"https://supplier.sahyadrimotors.example"` |  |
+| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

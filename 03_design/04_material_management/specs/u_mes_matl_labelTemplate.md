@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 19 (17 required, 2 may be null) |
+| Keys | 20 (18 required, 2 may be null) |
 | Estimated volume per year | 20-100 |
 | Storage | standard |
 
@@ -31,23 +31,24 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1124000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SML-BIN-A5"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the label template; used as its display value in other collections | `"Sahyadri Motors bin label A5"` |  |
-| 6 | labelType | String | - | Yes | Label type | `"Container Label"` | Unit Mark; Container Label; Shipping Label; Hold Tag; Location Label |
-| 7 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
-| 8 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
-| 9 | standard | String | - | Yes | Standard or specification the record refers to | `"IATF 16949:2016"` |  |
-| 10 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
-| 11 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
-| 12 | printerLanguage | String | - | Yes | Printer language | `"ZPL"` | ZPL; EPL; PDF |
-| 13 | symbology | String | - | Yes | Symbology of the label template | `"Data Matrix ECC200"` | Data Matrix ECC200; QR Code; Code 128; Code 39; PDF417 |
-| 14 | payloadPattern | String | - | Yes | Payload pattern | `"[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}"` |  |
-| 15 | version | Int32 | - | Yes | Version of the label template | `NumberInt(1)` |  |
-| 16 | copies | Int32 | - | Yes | Copies of the label template | `NumberInt(1)` |  |
-| 17 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 18 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
-| 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the label template; used as its display value in other collections | `"Sahyadri Motors bin label A5"` |  |
+| 7 | labelType | String | - | Yes | Label type | `"Container Label"` | Unit Mark; Container Label; Shipping Label; Hold Tag; Location Label |
+| 8 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
+| 9 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
+| 10 | standard | String | - | Yes | Standard or specification the record refers to | `"IATF 16949:2016"` |  |
+| 11 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
+| 12 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
+| 13 | printerLanguage | String | - | Yes | Printer language | `"ZPL"` | ZPL; EPL; PDF |
+| 14 | symbology | String | - | Yes | Symbology of the label template | `"Data Matrix ECC200"` | Data Matrix ECC200; QR Code; Code 128; Code 39; PDF417 |
+| 15 | payloadPattern | String | - | Yes | Payload pattern | `"[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}"` |  |
+| 16 | version | Int32 | - | Yes | Version of the label template | `NumberInt(1)` |  |
+| 17 | copies | Int32 | - | Yes | Copies of the label template | `NumberInt(1)` |  |
+| 18 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 19 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 20 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

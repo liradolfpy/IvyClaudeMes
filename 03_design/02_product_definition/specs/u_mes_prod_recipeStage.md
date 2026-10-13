@@ -9,7 +9,7 @@
 | Parent collection | u_mes_prod_recipe |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 11 (11 required, 0 may be null) |
+| Keys | 12 (12 required, 0 may be null) |
 
 ## Structure
 
@@ -24,15 +24,16 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1075000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-5110-LH-01-S01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | recipeId | String | - | Yes | Reference to u_mes_prod_recipe._id: the parent document this one belongs to | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
-| 6 | recipeName | String | - | Yes | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
-| 7 | stageNo | Int32 | - | Yes | Stage number | `NumberInt(1)` |  |
-| 8 | name | String | - | Yes | Name of the recipe stage | `"Approach"` |  |
-| 9 | durationSec | Int32 | - | Yes | Duration (seconds) | `NumberInt(42)` |  |
-| 10 | setPoint | Decimal128 | - | Yes | Set point | `NumberDecimal("400.0")` |  |
-| 11 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | recipeId | String | - | Yes | Reference to u_mes_prod_recipe._id: the parent document this one belongs to | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
+| 7 | recipeName | String | - | Yes | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
+| 8 | stageNo | Int32 | - | Yes | Stage number | `NumberInt(1)` |  |
+| 9 | name | String | - | Yes | Name of the recipe stage | `"Approach"` |  |
+| 10 | durationSec | Int32 | - | Yes | Duration (seconds) | `NumberInt(42)` |  |
+| 11 | setPoint | Decimal128 | - | Yes | Set point | `NumberDecimal("400.0")` |  |
+| 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | description |
-| Keys | 38 (26 required, 12 may be null) |
+| Keys | 39 (27 required, 12 may be null) |
 | Estimated volume per year | 500-5,000 |
 | Storage | standard |
 
@@ -32,42 +32,43 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1043000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | description | String | - | Yes | Description of the item | `"Front Brake Caliper Assembly, LH"` |  |
-| 6 | itemType | String | - | Yes | Item type | `"Finished Good"` | Finished Good; Semi Finished; Purchased Component; Raw Material; Consumable; Packaging |
-| 7 | itemGroupId | String | - | Yes | Reference to u_mes_prod_itemGroup._id | `"1270000000000001"` | Reference: u_mes_prod_itemGroup._id |
-| 8 | itemGroupName | String | - | Yes | Display value of itemGroupId, copied from u_mes_prod_itemGroup.name | `"Brake Caliper Assembly"` |  |
-| 9 | baseUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: base unit of measure | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 10 | baseUnitOfMeasureName | String | - | Yes | Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 11 | drawingNo | String | - | Yes | Drawing number | `"5110-10-0100"` |  |
-| 12 | drawingRevision | String | - | Yes | Drawing revision | `"D"` |  |
-| 13 | revisionDate | Date | Date | Yes | Revision date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 14 | materialSpecification | String | - | No (null allowed) | Material specification | `null` |  |
-| 15 | materialGrade | String | - | No (null allowed) | Material grade | `null` |  |
-| 16 | netWeightKg | Decimal128 | - | Yes | Net weight (kg) | `NumberDecimal("3.420")` |  |
-| 17 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `NumberDecimal("3.480")` |  |
-| 18 | procurementType | String | - | Yes | Procurement type | `"In House"` | In House; Purchased; Subcontracted |
-| 19 | defaultSupplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id: default supplier | `null` | Reference: u_mes_mast_supplier._id |
-| 20 | defaultSupplierName | String | - | No (null allowed) | Display value of defaultSupplierId, copied from u_mes_mast_supplier.name | `null` |  |
-| 21 | isSerialised | Boolean | - | Yes | True when the record is serialised | `true` |  |
-| 22 | isLotControlled | Boolean | - | Yes | True when the record is lot controlled | `false` |  |
-| 23 | serialNumberRangeId | String | - | No (null allowed) | Reference to u_mes_syst_numberRange._id: serial number range | `"1248000000000001"` | Reference: u_mes_syst_numberRange._id |
-| 24 | serialNumberRangeName | String | - | No (null allowed) | Display value of serialNumberRangeId, copied from u_mes_syst_numberRange.name | `"Serial numbers, front caliper LH"` |  |
-| 25 | lotNumberRangeId | String | - | No (null allowed) | Reference to u_mes_syst_numberRange._id: lot number range | `null` | Reference: u_mes_syst_numberRange._id |
-| 26 | lotNumberRangeName | String | - | No (null allowed) | Display value of lotNumberRangeId, copied from u_mes_syst_numberRange.name | `null` |  |
-| 27 | shelfLifeDays | Int32 | - | No (null allowed) | Shelf life (days) | `null` |  |
-| 28 | safetyCharacteristic | Boolean | - | Yes | True when: safety characteristic | `true` |  |
-| 29 | hsnCode | String | - | Yes | Harmonised system of nomenclature code | `"87083000"` |  |
-| 30 | standardCostInr | Decimal128 | - | Yes | Standard cost (Indian rupees) | `NumberDecimal("2184.50")` |  |
-| 31 | erpMaterialNo | String | - | Yes | ERP material number | `"000000000051110100"` |  |
-| 32 | defaultStorageLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: default storage location | `"1112000000000008"` | Reference: u_mes_matl_storageLocation._id |
-| 33 | defaultStorageLocationName | String | - | No (null allowed) | Display value of defaultStorageLocationId, copied from u_mes_matl_storageLocation.name | `"Finished goods rack 01"` |  |
-| 34 | fefoRequired | Boolean | - | Yes | True when lots of the item must be issued first-expiry-first-out | `false` |  |
-| 35 | exposureControlled | Boolean | - | Yes | True when opened lots of the item run an exposure timer (pot life, open time) | `false` |  |
-| 36 | openLifeMinutes | Int32 | - | No (null allowed) | Allowed exposure after opening (minutes); null when not exposure-controlled | `null` |  |
-| 37 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Phase Out; Obsolete |
-| 38 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | description | String | - | Yes | Description of the item | `"Front Brake Caliper Assembly, LH"` |  |
+| 7 | itemType | String | - | Yes | Item type | `"Finished Good"` | Finished Good; Semi Finished; Purchased Component; Raw Material; Consumable; Packaging |
+| 8 | itemGroupId | String | - | Yes | Reference to u_mes_prod_itemGroup._id | `"1270000000000001"` | Reference: u_mes_prod_itemGroup._id |
+| 9 | itemGroupName | String | - | Yes | Display value of itemGroupId, copied from u_mes_prod_itemGroup.name | `"Brake Caliper Assembly"` |  |
+| 10 | baseUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: base unit of measure | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 11 | baseUnitOfMeasureName | String | - | Yes | Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 12 | drawingNo | String | - | Yes | Drawing number | `"5110-10-0100"` |  |
+| 13 | drawingRevision | String | - | Yes | Drawing revision | `"D"` |  |
+| 14 | revisionDate | Date | Date | Yes | Revision date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 15 | materialSpecification | String | - | No (null allowed) | Material specification | `null` |  |
+| 16 | materialGrade | String | - | No (null allowed) | Material grade | `null` |  |
+| 17 | netWeightKg | Decimal128 | - | Yes | Net weight (kg) | `NumberDecimal("3.420")` |  |
+| 18 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `NumberDecimal("3.480")` |  |
+| 19 | procurementType | String | - | Yes | Procurement type | `"In House"` | In House; Purchased; Subcontracted |
+| 20 | defaultSupplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id: default supplier | `null` | Reference: u_mes_mast_supplier._id |
+| 21 | defaultSupplierName | String | - | No (null allowed) | Display value of defaultSupplierId, copied from u_mes_mast_supplier.name | `null` |  |
+| 22 | isSerialised | Boolean | - | Yes | True when the record is serialised | `true` |  |
+| 23 | isLotControlled | Boolean | - | Yes | True when the record is lot controlled | `false` |  |
+| 24 | serialNumberRangeId | String | - | No (null allowed) | Reference to u_mes_syst_numberRange._id: serial number range | `"1248000000000001"` | Reference: u_mes_syst_numberRange._id |
+| 25 | serialNumberRangeName | String | - | No (null allowed) | Display value of serialNumberRangeId, copied from u_mes_syst_numberRange.name | `"Serial numbers, front caliper LH"` |  |
+| 26 | lotNumberRangeId | String | - | No (null allowed) | Reference to u_mes_syst_numberRange._id: lot number range | `null` | Reference: u_mes_syst_numberRange._id |
+| 27 | lotNumberRangeName | String | - | No (null allowed) | Display value of lotNumberRangeId, copied from u_mes_syst_numberRange.name | `null` |  |
+| 28 | shelfLifeDays | Int32 | - | No (null allowed) | Shelf life (days) | `null` |  |
+| 29 | safetyCharacteristic | Boolean | - | Yes | True when: safety characteristic | `true` |  |
+| 30 | hsnCode | String | - | Yes | Harmonised system of nomenclature code | `"87083000"` |  |
+| 31 | standardCostInr | Decimal128 | - | Yes | Standard cost (Indian rupees) | `NumberDecimal("2184.50")` |  |
+| 32 | erpMaterialNo | String | - | Yes | ERP material number | `"000000000051110100"` |  |
+| 33 | defaultStorageLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: default storage location | `"1112000000000008"` | Reference: u_mes_matl_storageLocation._id |
+| 34 | defaultStorageLocationName | String | - | No (null allowed) | Display value of defaultStorageLocationId, copied from u_mes_matl_storageLocation.name | `"Finished goods rack 01"` |  |
+| 35 | fefoRequired | Boolean | - | Yes | True when lots of the item must be issued first-expiry-first-out | `false` |  |
+| 36 | exposureControlled | Boolean | - | Yes | True when opened lots of the item run an exposure timer (pot life, open time) | `false` |  |
+| 37 | openLifeMinutes | Int32 | - | No (null allowed) | Allowed exposure after opening (minutes); null when not exposure-controlled | `null` |  |
+| 38 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Phase Out; Obsolete |
+| 39 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

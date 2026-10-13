@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 24 (19 required, 5 may be null) |
+| Keys | 25 (20 required, 5 may be null) |
 | Estimated volume per year | about 30,000 per year |
 | Storage | standard collection (continuous points stay in processReading) |
 
@@ -25,28 +25,29 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1358000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"EMR-20260915-0004"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | environmentalMonitoringPointId | String | - | Yes | Reference to u_mes_qual_environmentalMonitoringPoint._id | `"1357000000000001"` | Reference: u_mes_qual_environmentalMonitoringPoint._id |
-| 6 | environmentalMonitoringPointName | String | - | Yes | Display value of environmentalMonitoringPointId, copied from u_mes_qual_environmentalMonitoringPoint.name | `"Assembly clean area, airborne particles 0.5 um"` |  |
-| 7 | sampledAt | Date | Datetime | Yes | Sampling time | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
-| 8 | measuredValue | Decimal128 | - | Yes | Measured value | `NumberDecimal("1840000")` |  |
-| 9 | limitEvaluation | String | - | Yes | Evaluation against the limits | `"Within Limits"` | Within Limits; Alert Limit Exceeded; Action Limit Exceeded |
-| 10 | sampledById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'sampled' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 11 | sampledBy | String | - | Yes | Display name of the user in sampledById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 12 | gaugeId | String | - | No (null allowed) | Reference to u_mes_qual_gauge._id | `null` | Reference: u_mes_qual_gauge._id |
-| 13 | gaugeName | String | - | No (null allowed) | Display value of gaugeId, copied from u_mes_qual_gauge.name | `null` |  |
-| 14 | nonconformanceId | String | - | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
-| 15 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
-| 16 | productImpactText | String | - | No (null allowed) | Assessment of the impact on product made during the excursion | `null` |  |
-| 17 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Excursion Open; Excursion Closed; Invalidated |
-| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 19 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
-| 20 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 21 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 22 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
-| 23 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 24 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Gamp"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000011"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Ranjangaon OSD Plant, Pune"` |  |
+| 6 | environmentalMonitoringPointId | String | - | Yes | Reference to u_mes_qual_environmentalMonitoringPoint._id | `"1357000000000001"` | Reference: u_mes_qual_environmentalMonitoringPoint._id |
+| 7 | environmentalMonitoringPointName | String | - | Yes | Display value of environmentalMonitoringPointId, copied from u_mes_qual_environmentalMonitoringPoint.name | `"Dispensing booth, airborne particles 0.5 um"` |  |
+| 8 | sampledAt | Date | Datetime | Yes | Sampling time | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
+| 9 | measuredValue | Decimal128 | - | Yes | Measured value | `NumberDecimal("1840000")` |  |
+| 10 | limitEvaluation | String | - | Yes | Evaluation against the limits | `"Within Limits"` | Within Limits; Alert Limit Exceeded; Action Limit Exceeded |
+| 11 | sampledById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'sampled' | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 12 | sampledBy | String | - | Yes | Display name of the user in sampledById, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
+| 13 | gaugeId | String | - | No (null allowed) | Reference to u_mes_qual_gauge._id | `null` | Reference: u_mes_qual_gauge._id |
+| 14 | gaugeName | String | - | No (null allowed) | Display value of gaugeId, copied from u_mes_qual_gauge.name | `null` |  |
+| 15 | nonconformanceId | String | - | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
+| 16 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
+| 17 | productImpactText | String | - | No (null allowed) | Assessment of the impact on product made during the excursion | `null` |  |
+| 18 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Excursion Open; Excursion Closed; Invalidated |
+| 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 20 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
+| 21 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 22 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
+| 23 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
+| 24 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 25 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
 
 ## Status values
 

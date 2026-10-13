@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "name",
@@ -38,6 +39,15 @@
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
         },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
+        },
         "siteId": {
           "bsonType": "string",
           "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
@@ -68,7 +78,13 @@
             "Surface Treatment",
             "Assembly",
             "Inspection",
-            "Packing"
+            "Packing",
+            "Dispensing",
+            "Granulation",
+            "Compression",
+            "Coating",
+            "Primary Packing",
+            "Secondary Packing"
           ]
         },
         "itemFamilyId": {

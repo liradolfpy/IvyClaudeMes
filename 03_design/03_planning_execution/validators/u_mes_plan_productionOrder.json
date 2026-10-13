@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "erpOrderNo",
@@ -73,6 +74,15 @@
         "recordNo": {
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
         },
         "siteId": {
           "bsonType": "string",
@@ -157,7 +167,8 @@
             "Production",
             "Rework",
             "Trial",
-            "PPAP Run"
+            "PPAP Run",
+            "Validation Batch"
           ]
         },
         "priority": {

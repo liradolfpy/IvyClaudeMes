@@ -9,7 +9,7 @@
 | Parent collection | u_mes_qual_characteristic |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 16 (9 required, 7 may be null) |
+| Keys | 17 (10 required, 7 may be null) |
 
 ## Structure
 
@@ -24,20 +24,21 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1316000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"CH-OP050-01-P01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id: the parent document this one belongs to | `"1138000000000005"` | Reference: u_mes_qual_characteristic._id |
-| 6 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Anodic coating thickness"` |  |
-| 7 | positionNo | Int32 | - | Yes | Position number | `NumberInt(1)` |  |
-| 8 | positionName | String | - | Yes | Position name, e.g. Piston 1 inboard | `"Outer face, inboard"` |  |
-| 9 | nominal | Decimal128 | - | No (null allowed) | Nominal at this position | `NumberDecimal("12.0")` |  |
-| 10 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower limit at this position | `NumberDecimal("8.0")` |  |
-| 11 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper limit at this position | `NumberDecimal("16.0")` |  |
-| 12 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000004"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 13 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Micrometre"` |  |
-| 14 | curveEnvelopeId | String | - | No (null allowed) | Reference to u_mes_qual_curveEnvelope._id | `null` | Reference: u_mes_qual_curveEnvelope._id |
-| 15 | curveEnvelopeName | String | - | No (null allowed) | Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name | `null` |  |
-| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id: the parent document this one belongs to | `"1138000000000005"` | Reference: u_mes_qual_characteristic._id |
+| 7 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Anodic coating thickness"` |  |
+| 8 | positionNo | Int32 | - | Yes | Position number | `NumberInt(1)` |  |
+| 9 | positionName | String | - | Yes | Position name, e.g. Piston 1 inboard | `"Outer face, inboard"` |  |
+| 10 | nominal | Decimal128 | - | No (null allowed) | Nominal at this position | `NumberDecimal("12.0")` |  |
+| 11 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower limit at this position | `NumberDecimal("8.0")` |  |
+| 12 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper limit at this position | `NumberDecimal("16.0")` |  |
+| 13 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000004"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 14 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Micrometre"` |  |
+| 15 | curveEnvelopeId | String | - | No (null allowed) | Reference to u_mes_qual_curveEnvelope._id | `null` | Reference: u_mes_qual_curveEnvelope._id |
+| 16 | curveEnvelopeName | String | - | No (null allowed) | Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name | `null` |  |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

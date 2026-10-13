@@ -9,7 +9,7 @@
 | Parent collection | u_mes_prod_billOfProcess |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 18 (12 required, 6 may be null) |
+| Keys | 19 (13 required, 6 may be null) |
 
 ## Structure
 
@@ -24,22 +24,23 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1058000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"BOP-5110-10-0100-R01-S01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | billOfProcessId | String | - | Yes | Reference to u_mes_prod_billOfProcess._id: the parent document this one belongs to | `"1057000000000001"` | Reference: u_mes_prod_billOfProcess._id |
-| 6 | billOfProcessName | String | - | Yes | Display value of billOfProcessId, copied from u_mes_prod_billOfProcess.recordNo | `"BOP-5110-10-0100-R01"` |  |
-| 7 | stepNo | Int32 | - | Yes | Step number within the parent record | `NumberInt(10)` |  |
-| 8 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 9 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 10 | recipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
-| 11 | recipeName | String | - | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
-| 12 | workInstructionId | String | - | No (null allowed) | Reference to u_mes_prod_workInstruction._id | `"1065000000000001"` | Reference: u_mes_prod_workInstruction._id |
-| 13 | workInstructionName | String | - | No (null allowed) | Display value of workInstructionId, copied from u_mes_prod_workInstruction.title | `"Pouring and die cycle - Caliper body LH"` |  |
-| 14 | inspectionPlanId | String | - | No (null allowed) | Reference to u_mes_qual_inspectionPlan._id | `"1142000000000001"` | Reference: u_mes_qual_inspectionPlan._id |
-| 15 | inspectionPlanName | String | - | No (null allowed) | Display value of inspectionPlanId, copied from u_mes_qual_inspectionPlan.name | `"In-process inspection, gravity die casting"` |  |
-| 16 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
-| 17 | manning | Int32 | - | Yes | Manning of the bill of process step | `NumberInt(1)` |  |
-| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | billOfProcessId | String | - | Yes | Reference to u_mes_prod_billOfProcess._id: the parent document this one belongs to | `"1057000000000001"` | Reference: u_mes_prod_billOfProcess._id |
+| 7 | billOfProcessName | String | - | Yes | Display value of billOfProcessId, copied from u_mes_prod_billOfProcess.recordNo | `"BOP-5110-10-0100-R01"` |  |
+| 8 | stepNo | Int32 | - | Yes | Step number within the parent record | `NumberInt(10)` |  |
+| 9 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 10 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 11 | recipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id | `"1073000000000001"` | Reference: u_mes_prod_recipe._id |
+| 12 | recipeName | String | - | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `"Caliper body LH casting parameters"` |  |
+| 13 | workInstructionId | String | - | No (null allowed) | Reference to u_mes_prod_workInstruction._id | `"1065000000000001"` | Reference: u_mes_prod_workInstruction._id |
+| 14 | workInstructionName | String | - | No (null allowed) | Display value of workInstructionId, copied from u_mes_prod_workInstruction.title | `"Pouring and die cycle - Caliper body LH"` |  |
+| 15 | inspectionPlanId | String | - | No (null allowed) | Reference to u_mes_qual_inspectionPlan._id | `"1142000000000001"` | Reference: u_mes_qual_inspectionPlan._id |
+| 16 | inspectionPlanName | String | - | No (null allowed) | Display value of inspectionPlanId, copied from u_mes_qual_inspectionPlan.name | `"In-process inspection, gravity die casting"` |  |
+| 17 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 18 | manning | Int32 | - | Yes | Manning of the bill of process step | `NumberInt(1)` |  |
+| 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

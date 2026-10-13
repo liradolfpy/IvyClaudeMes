@@ -1,0 +1,250 @@
+{
+    "_id" : "u_mes_perf_downtimeEventIvy",
+    "code" : "perf",
+    "moduleName" : "Performance Management",
+    "collection" : "u_mes_perf_downtimeEvent",
+    "stableName" : "mes_perf_downtimeEventStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_perf_downtimeEventIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "productionDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeType",
+            "typ" : "string"
+        },
+        {
+            "din" : "isMicroStop",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "endedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "durationMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "downtimeType",
+            "typ" : "string"
+        },
+        {
+            "din" : "faultCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "faultText",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonPathText",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionText",
+            "typ" : "string"
+        },
+        {
+            "din" : "isPlanned",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isMicroStop",
+            "typ" : "bool"
+        },
+        {
+            "din" : "alarmId",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmName",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "classifiedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "classifiedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "classifiedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "responseMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "repairMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "unitsLost",
+            "typ" : "int"
+        },
+        {
+            "din" : "captureSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentStateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentStateName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 32 (23 required, 9 may be null) |
+| Keys | 33 (24 required, 9 may be null) |
 | Estimated volume per year | about 40,000 |
 | Storage | standard collection, TTL archive after the retention period |
 
@@ -25,36 +25,37 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1305000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"OSN-20260915-00041"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000002"` | Reference: u_mes_mast_user._id |
-| 6 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
-| 7 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
-| 8 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
-| 9 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000006"` | Reference: u_mes_mast_equipment._id |
-| 10 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Piston Assembly Press 1"` |  |
-| 11 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
-| 12 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
-| 13 | productionDate | Date | Date | Yes | Production date the session belongs to | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 14 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
-| 15 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
-| 16 | authenticationMethod | String | - | Yes | How the operator was authenticated | `"Badge"` | Badge; Biometric; Badge And PIN; Password |
-| 17 | loginAt | Date | Datetime | Yes | Login time | `ISODate("2026-09-15T05:36:27.000+0000")` |  |
-| 18 | logoutAt | Date | Datetime | No (null allowed) | Logout time; null while the session is active | `ISODate("2026-09-15T08:57:00.000+0000")` |  |
-| 19 | logoutReason | String | - | No (null allowed) | Why the session ended | `"Shift End"` | Operator Logout; Shift End; Timeout; Supervisor Logout; Skill Revoked |
-| 20 | skillVerified | Boolean | - | Yes | Required skills were valid at login | `true` |  |
-| 21 | trainingVerified | Boolean | - | Yes | Mandatory training for the station's current documents was valid at login | `true` |  |
-| 22 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
-| 23 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
-| 24 | clientWorkstation | String | - | No (null allowed) | Terminal or HMI name | `"PN1-ASY01-HMI-01"` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Closed"` | Active; Closed; Rejected |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T08:57:00.000+0000")` |  |
-| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000002"` | Reference: u_mes_mast_user._id |
+| 7 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
+| 8 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
+| 9 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
+| 10 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000006"` | Reference: u_mes_mast_equipment._id |
+| 11 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Piston Assembly Press 1"` |  |
+| 12 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
+| 13 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
+| 14 | productionDate | Date | Date | Yes | Production date the session belongs to | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 15 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
+| 16 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
+| 17 | authenticationMethod | String | - | Yes | How the operator was authenticated | `"Badge"` | Badge; Biometric; Badge And PIN; Password |
+| 18 | loginAt | Date | Datetime | Yes | Login time | `ISODate("2026-09-15T05:36:27.000+0000")` |  |
+| 19 | logoutAt | Date | Datetime | No (null allowed) | Logout time; null while the session is active | `ISODate("2026-09-15T08:57:00.000+0000")` |  |
+| 20 | logoutReason | String | - | No (null allowed) | Why the session ended | `"Shift End"` | Operator Logout; Shift End; Timeout; Supervisor Logout; Skill Revoked |
+| 21 | skillVerified | Boolean | - | Yes | Required skills were valid at login | `true` |  |
+| 22 | trainingVerified | Boolean | - | Yes | Mandatory training for the station's current documents was valid at login | `true` |  |
+| 23 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
+| 24 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
+| 25 | clientWorkstation | String | - | No (null allowed) | Terminal or HMI name | `"PN1-ASY01-HMI-01"` |  |
+| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Closed"` | Active; Closed; Rejected |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T08:57:00.000+0000")` |  |
+| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

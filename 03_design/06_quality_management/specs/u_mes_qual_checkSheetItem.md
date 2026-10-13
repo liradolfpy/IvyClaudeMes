@@ -9,7 +9,7 @@
 | Parent collection | u_mes_qual_checkSheet |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 16 (11 required, 5 may be null) |
+| Keys | 17 (12 required, 5 may be null) |
 
 ## Structure
 
@@ -24,20 +24,21 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1147000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SOS-GDC-01-I01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | checkSheetId | String | - | Yes | Reference to u_mes_qual_checkSheet._id: the parent document this one belongs to | `"1146000000000001"` | Reference: u_mes_qual_checkSheet._id |
-| 6 | checkSheetName | String | - | Yes | Display value of checkSheetId, copied from u_mes_qual_checkSheet.name | `"Start of shift check, Gravity Die Casting Cell 1"` |  |
-| 7 | itemNo | Int32 | - | Yes | Item number within the parent record | `NumberInt(1)` |  |
-| 8 | question | String | - | Yes | Question of the check sheet item | `"Is the die coating intact on both die halves?"` |  |
-| 9 | answerType | String | - | Yes | Answer type | `"Yes No"` | Yes No; Number; Text |
-| 10 | expectedAnswer | String | - | No (null allowed) | Expected answer | `"Yes"` |  |
-| 11 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `NumberDecimal("7.50")` |  |
-| 12 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `NumberDecimal("8.50")` |  |
-| 13 | unitText | String | - | No (null allowed) | Unit text | `"N.m"` |  |
-| 14 | isCritical | Boolean | - | Yes | True when the record is critical | `true` |  |
-| 15 | reactionOnFail | String | - | No (null allowed) | Reaction on fail | `"Stop the station and call the line leader"` |  |
-| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | checkSheetId | String | - | Yes | Reference to u_mes_qual_checkSheet._id: the parent document this one belongs to | `"1146000000000001"` | Reference: u_mes_qual_checkSheet._id |
+| 7 | checkSheetName | String | - | Yes | Display value of checkSheetId, copied from u_mes_qual_checkSheet.name | `"Start of shift check, Gravity Die Casting Cell 1"` |  |
+| 8 | itemNo | Int32 | - | Yes | Item number within the parent record | `NumberInt(1)` |  |
+| 9 | question | String | - | Yes | Question of the check sheet item | `"Is the die coating intact on both die halves?"` |  |
+| 10 | answerType | String | - | Yes | Answer type | `"Yes No"` | Yes No; Number; Text |
+| 11 | expectedAnswer | String | - | No (null allowed) | Expected answer | `"Yes"` |  |
+| 12 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `NumberDecimal("7.50")` |  |
+| 13 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `NumberDecimal("8.50")` |  |
+| 14 | unitText | String | - | No (null allowed) | Unit text | `"N.m"` |  |
+| 15 | isCritical | Boolean | - | Yes | True when the record is critical | `true` |  |
+| 16 | reactionOnFail | String | - | No (null allowed) | Reaction on fail | `"Stop the station and call the line leader"` |  |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

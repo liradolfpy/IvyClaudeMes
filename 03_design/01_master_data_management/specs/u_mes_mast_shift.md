@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 14 (14 required, 0 may be null) |
+| Keys | 15 (15 required, 0 may be null) |
 | Estimated volume per year | 3-10 per site |
 | Storage | standard |
 
@@ -32,18 +32,19 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1015000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"A"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the shift; used as its display value in other collections | `"Shift A"` |  |
-| 6 | startTimeLocal | String | - | Yes | Local start time, 24-hour HH:mm | `"06:00"` |  |
-| 7 | endTimeLocal | String | - | Yes | Local end time, 24-hour HH:mm | `"14:00"` |  |
-| 8 | crossesMidnight | Boolean | - | Yes | True when: crosses midnight | `false` |  |
-| 9 | durationMinutes | Int32 | - | Yes | Duration (minutes) | `NumberInt(480)` |  |
-| 10 | plannedProductionMinutes | Int32 | - | Yes | Shift duration less paid and unpaid breaks | `NumberInt(430)` |  |
-| 11 | shiftAllowancePerDay | Decimal128 | - | Yes | Shift allowance per day | `NumberDecimal("0.00")` |  |
-| 12 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 13 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 14 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the shift; used as its display value in other collections | `"Shift A"` |  |
+| 7 | startTimeLocal | String | - | Yes | Local start time, 24-hour HH:mm | `"06:00"` |  |
+| 8 | endTimeLocal | String | - | Yes | Local end time, 24-hour HH:mm | `"14:00"` |  |
+| 9 | crossesMidnight | Boolean | - | Yes | True when: crosses midnight | `false` |  |
+| 10 | durationMinutes | Int32 | - | Yes | Duration (minutes) | `NumberInt(480)` |  |
+| 11 | plannedProductionMinutes | Int32 | - | Yes | Shift duration less paid and unpaid breaks | `NumberInt(430)` |  |
+| 12 | shiftAllowancePerDay | Decimal128 | - | Yes | Shift allowance per day | `NumberDecimal("0.00")` |  |
+| 13 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 14 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

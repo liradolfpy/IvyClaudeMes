@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 17 (12 required, 5 may be null) |
+| Keys | 18 (13 required, 5 may be null) |
 | Estimated volume per year | about 40 rows in total |
 | Storage | standard collection |
 
@@ -31,21 +31,22 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1334000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ESC-BRKDN-CRIT"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Rule name | `"Critical breakdown, assembly line"` |  |
-| 6 | sourceType | String | - | Yes | Exception source | `"Breakdown"` | Interlock; Andon; Alarm; Alert Rule; Breakdown; Audit; Nonconformance; Customer Complaint |
-| 7 | severityClass | String | - | No (null allowed) | Severity the rule applies to (null = all) | `"Critical"` | Low; Medium; High; Critical |
-| 8 | lineId | String | - | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000006"` | Reference: u_mes_mast_line._id |
-| 9 | lineName | String | - | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Front Caliper Assembly Line 1"` |  |
-| 10 | firstResponderRoleId | String | - | Yes | Reference to u_mes_mast_role._id: first responder role | `"1026000000000007"` | Reference: u_mes_mast_role._id |
-| 11 | firstResponderRoleName | String | - | Yes | Display value of firstResponderRoleId, copied from u_mes_mast_role.name | `"Maintenance Technician"` |  |
-| 12 | requiredSkillId | String | - | No (null allowed) | Reference to u_mes_mast_skill._id: required skill | `null` | Reference: u_mes_mast_skill._id |
-| 13 | requiredSkillName | String | - | No (null allowed) | Display value of requiredSkillId, copied from u_mes_mast_skill.name | `null` |  |
-| 14 | responseTargetMinutes | Int32 | - | Yes | Target to acknowledge | `NumberInt(5)` |  |
-| 15 | resolutionTargetMinutes | Int32 | - | Yes | Target to resolve | `NumberInt(60)` |  |
-| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Rule name | `"Critical breakdown, assembly line"` |  |
+| 7 | sourceType | String | - | Yes | Exception source | `"Breakdown"` | Interlock; Andon; Alarm; Alert Rule; Breakdown; Audit; Nonconformance; Customer Complaint |
+| 8 | severityClass | String | - | No (null allowed) | Severity the rule applies to (null = all) | `"Critical"` | Low; Medium; High; Critical |
+| 9 | lineId | String | - | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000006"` | Reference: u_mes_mast_line._id |
+| 10 | lineName | String | - | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Front Caliper Assembly Line 1"` |  |
+| 11 | firstResponderRoleId | String | - | Yes | Reference to u_mes_mast_role._id: first responder role | `"1026000000000007"` | Reference: u_mes_mast_role._id |
+| 12 | firstResponderRoleName | String | - | Yes | Display value of firstResponderRoleId, copied from u_mes_mast_role.name | `"Maintenance Technician"` |  |
+| 13 | requiredSkillId | String | - | No (null allowed) | Reference to u_mes_mast_skill._id: required skill | `null` | Reference: u_mes_mast_skill._id |
+| 14 | requiredSkillName | String | - | No (null allowed) | Display value of requiredSkillId, copied from u_mes_mast_skill.name | `null` |  |
+| 15 | responseTargetMinutes | Int32 | - | Yes | Target to acknowledge | `NumberInt(5)` |  |
+| 16 | resolutionTargetMinutes | Int32 | - | Yes | Target to resolve | `NumberInt(60)` |  |
+| 17 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

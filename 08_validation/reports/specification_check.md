@@ -5,10 +5,10 @@ Run: 11 October 2026 | Tool: 05_generator/gen_specs.py
 | Item | Count |
 |---|---|
 | Collections specified | 369 |
-| Keys specified | 8245 |
-| Required (non-null) keys | 6416 |
-| Keys that may be null | 1829 |
-| Keys with allowed values | 504 |
+| Keys specified | 8614 |
+| Required (non-null) keys | 6772 |
+| Keys that may be null | 1842 |
+| Keys with allowed values | 873 |
 | Indexes defined | 1488 |
 | Files written (spec, validator, index script per collection, plus 10 module summaries) | 1117 |
 

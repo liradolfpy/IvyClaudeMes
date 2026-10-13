@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 42 (20 required, 22 may be null) |
+| Keys | 43 (21 required, 22 may be null) |
 | Estimated volume per year | ~400,000 |
 | Storage | standard, TTL |
 
@@ -31,46 +31,47 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1244000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"NTF-2026-000310"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | notificationTypeId | String | - | Yes | Reference to u_mes_syst_notificationType._id | `"1291000000000001"` | Reference: u_mes_syst_notificationType._id |
-| 6 | notificationTypeName | String | - | Yes | Display value of notificationTypeId, copied from u_mes_syst_notificationType.name | `"Andon Escalation"` |  |
-| 7 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
-| 8 | title | String | - | Yes | Title of the notification; used as its display value in other collections | `"Die temperature alarm not acknowledged"` |  |
-| 9 | bodyText | String | - | Yes | Body text | `"Quality andon at WC-TRQ-01 not acknowledged within 5 minutes"` |  |
-| 10 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_plan_andonEvent"` |  |
-| 11 | relatedEntityId | String | - | No (null allowed) | _id of the related document in the collection named by relatedCollectionName | `"1251000000000001"` | Reference: Any collection (see relatedCollectionName) |
-| 12 | relatedEntityName | String | - | No (null allowed) | Display value of the related document | `"Castings sticking in die 2, operator needs maintenance"` |  |
-| 13 | andonEventId | String | - | No (null allowed) | Reference to u_mes_plan_andonEvent._id | `null` | Reference: u_mes_plan_andonEvent._id |
-| 14 | andonEventName | String | - | No (null allowed) | Display value of andonEventId, copied from u_mes_plan_andonEvent.description | `null` |  |
-| 15 | alarmId | String | - | No (null allowed) | Reference to u_mes_perf_alarm._id | `"1212000000000001"` | Reference: u_mes_perf_alarm._id |
-| 16 | alarmName | String | - | No (null allowed) | Display value of alarmId, copied from u_mes_perf_alarm.recordNo | `"ALM-2026-000176"` |  |
-| 17 | nonconformanceId | String | - | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
-| 18 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
-| 19 | escalationLevel | Int32 | - | Yes | Escalation level | `NumberInt(1)` |  |
-| 20 | raisedAt | Date | Datetime | Yes | Date and time when the record was raised. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 21 | acknowledgedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'acknowledged' | `null` | Reference: u_mes_mast_user._id |
-| 22 | acknowledgedBy | String | - | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 23 | acknowledgedAt | Date | Datetime | No (null allowed) | Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 24 | expiresAt | Date | Datetime | No (null allowed) | Expires date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2027-03-31T23:59:00.000+0000")` |  |
-| 25 | alertRuleId | String | - | No (null allowed) | Reference to u_mes_syst_alertRule._id | `null` | Reference: u_mes_syst_alertRule._id |
-| 26 | alertRuleName | String | - | No (null allowed) | Display value of alertRuleId, copied from u_mes_syst_alertRule.name | `null` |  |
-| 27 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000002"` | Reference: u_mes_syst_escalationRule._id |
-| 28 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"Breakdown, all lines"` |  |
-| 29 | responseDueAt | Date | Datetime | No (null allowed) | Time by which the notification must be acknowledged | `ISODate("2026-09-15T06:05:00.000+0000")` |  |
-| 30 | resolvedAt | Date | Datetime | No (null allowed) | Time the underlying exception was resolved | `null` |  |
-| 31 | resolvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'resolved' | `null` | Reference: u_mes_mast_user._id |
-| 32 | resolvedBy | String | - | No (null allowed) | Display name of the user in resolvedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 33 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
-| 34 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
-| 35 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Sent; Acknowledged; Expired |
-| 36 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 37 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 38 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 39 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 40 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 41 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 42 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | notificationTypeId | String | - | Yes | Reference to u_mes_syst_notificationType._id | `"1291000000000001"` | Reference: u_mes_syst_notificationType._id |
+| 7 | notificationTypeName | String | - | Yes | Display value of notificationTypeId, copied from u_mes_syst_notificationType.name | `"Andon Escalation"` |  |
+| 8 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
+| 9 | title | String | - | Yes | Title of the notification; used as its display value in other collections | `"Die temperature alarm not acknowledged"` |  |
+| 10 | bodyText | String | - | Yes | Body text | `"Quality andon at WC-TRQ-01 not acknowledged within 5 minutes"` |  |
+| 11 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_plan_andonEvent"` |  |
+| 12 | relatedEntityId | String | - | No (null allowed) | _id of the related document in the collection named by relatedCollectionName | `"1251000000000001"` | Reference: Any collection (see relatedCollectionName) |
+| 13 | relatedEntityName | String | - | No (null allowed) | Display value of the related document | `"Castings sticking in die 2, operator needs maintenance"` |  |
+| 14 | andonEventId | String | - | No (null allowed) | Reference to u_mes_plan_andonEvent._id | `null` | Reference: u_mes_plan_andonEvent._id |
+| 15 | andonEventName | String | - | No (null allowed) | Display value of andonEventId, copied from u_mes_plan_andonEvent.description | `null` |  |
+| 16 | alarmId | String | - | No (null allowed) | Reference to u_mes_perf_alarm._id | `"1212000000000001"` | Reference: u_mes_perf_alarm._id |
+| 17 | alarmName | String | - | No (null allowed) | Display value of alarmId, copied from u_mes_perf_alarm.recordNo | `"ALM-2026-000176"` |  |
+| 18 | nonconformanceId | String | - | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
+| 19 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |
+| 20 | escalationLevel | Int32 | - | Yes | Escalation level | `NumberInt(1)` |  |
+| 21 | raisedAt | Date | Datetime | Yes | Date and time when the record was raised. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 22 | acknowledgedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'acknowledged' | `null` | Reference: u_mes_mast_user._id |
+| 23 | acknowledgedBy | String | - | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 24 | acknowledgedAt | Date | Datetime | No (null allowed) | Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 25 | expiresAt | Date | Datetime | No (null allowed) | Expires date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2027-03-31T23:59:00.000+0000")` |  |
+| 26 | alertRuleId | String | - | No (null allowed) | Reference to u_mes_syst_alertRule._id | `null` | Reference: u_mes_syst_alertRule._id |
+| 27 | alertRuleName | String | - | No (null allowed) | Display value of alertRuleId, copied from u_mes_syst_alertRule.name | `null` |  |
+| 28 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000002"` | Reference: u_mes_syst_escalationRule._id |
+| 29 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"Breakdown, all lines"` |  |
+| 30 | responseDueAt | Date | Datetime | No (null allowed) | Time by which the notification must be acknowledged | `ISODate("2026-09-15T06:05:00.000+0000")` |  |
+| 31 | resolvedAt | Date | Datetime | No (null allowed) | Time the underlying exception was resolved | `null` |  |
+| 32 | resolvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'resolved' | `null` | Reference: u_mes_mast_user._id |
+| 33 | resolvedBy | String | - | No (null allowed) | Display name of the user in resolvedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 34 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
+| 35 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
+| 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Sent; Acknowledged; Expired |
+| 37 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 38 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 39 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 40 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 41 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 42 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 43 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 

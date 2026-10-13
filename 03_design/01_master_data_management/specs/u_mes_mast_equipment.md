@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 53 (38 required, 15 may be null) |
+| Keys | 54 (39 required, 15 may be null) |
 | Estimated volume per year | 200-1,000 per site |
 | Storage | standard |
 
@@ -31,57 +31,58 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1013000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-01-M1"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the equipment; used as its display value in other collections | `"Gravity Die Casting Machine 1"` |  |
-| 6 | equipmentTypeId | String | - | Yes | Reference to u_mes_mast_equipmentType._id | `"1261000000000001"` | Reference: u_mes_mast_equipmentType._id |
-| 7 | equipmentTypeName | String | - | Yes | Display value of equipmentTypeId, copied from u_mes_mast_equipmentType.name | `"Gravity Die Casting Machine"` |  |
-| 8 | equipmentClass | String | - | Yes | Equipment class | `"Production Equipment"` | Production Equipment; Test Equipment; Measuring Equipment; Utility |
-| 9 | lineId | String | - | Yes | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
-| 10 | lineName | String | - | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
-| 11 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 12 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 13 | parentEquipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id: parent equipment | `null` | Reference: u_mes_mast_equipment._id |
-| 14 | parentEquipmentName | String | - | No (null allowed) | Display value of parentEquipmentId, copied from u_mes_mast_equipment.name | `null` |  |
-| 15 | manufacturerId | String | - | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000001"` | Reference: u_mes_mast_manufacturer._id |
-| 16 | manufacturerName | String | - | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"LK Machinery"` |  |
-| 17 | model | String | - | Yes | Model of the equipment | `"GDC-600T tilting"` |  |
-| 18 | serialNo | String | - | Yes | Serial number | `"LK-GDC-190457"` |  |
-| 19 | yearOfManufacture | Int32 | - | Yes | Year of manufacture | `NumberInt(2021)` |  |
-| 20 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
-| 21 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
-| 22 | assetNo | String | - | Yes | Asset number | `"FA-PN1-004512"` |  |
-| 23 | commissionedAt | Date | Datetime | Yes | Date and time when the record was commissioned. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
-| 24 | ratedCapacity | Decimal128 | - | Yes | Rated CAPAcity | `NumberDecimal("50.0")` |  |
-| 25 | ratedCapacityUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: rated CAPAcity unit of measure | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 26 | ratedCapacityUnitOfMeasureName | String | - | Yes | Display value of ratedCapacityUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
-| 27 | ratedPowerKw | Decimal128 | - | Yes | Rated power (kW) | `NumberDecimal("1.5")` |  |
-| 28 | controllerMake | String | - | Yes | Controller make | `"Siemens"` |  |
-| 29 | controllerModel | String | - | Yes | Controller model | `"S7-1500"` |  |
-| 30 | controllerIpAddress | String | - | Yes | Controller ip address | `"10.21.6.41"` |  |
-| 31 | controllerProtocol | String | - | Yes | Controller protocol | `"OPC UA"` | OPC UA; Open Protocol; Modbus TCP; Profinet; MQTT; Ethernet/IP |
-| 32 | criticality | String | - | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
-| 33 | currentState | String | - | Yes | Current state | `"Running"` | Running; Idle; Setup; Down; Starved; Blocked; Planned Stop |
-| 34 | currentStateSince | Date | Datetime | Yes | Current state since. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 35 | lifetimeCycles | Int64 | - | Yes | Lifetime cycles | `NumberLong("1284500")` |  |
-| 36 | lifetimeRunHours | Decimal128 | - | Yes | Lifetime run hours | `NumberDecimal("14820.5")` |  |
-| 37 | nextMaintenanceDueAt | Date | Date | Yes | Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
-| 38 | calibrationRequired | Boolean | - | Yes | True when: calibration required | `true` |  |
-| 39 | safetyCategory | String | - | Yes | Performance level of the safety function (ISO 13849-1) | `"PL d"` | PL a; PL b; PL c; PL d; PL e |
-| 40 | isProductionReady | Boolean | - | Yes | True when the equipment may receive work: not down, not in maintenance, PM and calibration not overdue | `true` |  |
-| 41 | readinessReasonText | String | - | No (null allowed) | Why the equipment is not production-ready; null when it is ready | `null` |  |
-| 42 | healthScore | Decimal128 | - | No (null allowed) | Rule-based health score from 0 (failed) to 100 (as new) | `NumberDecimal("84")` |  |
-| 43 | healthScoreAt | Date | Datetime | No (null allowed) | Time the health score was last calculated | `ISODate("2026-09-24T23:00:00.000+0000")` |  |
-| 44 | acquisitionCostInr | Decimal128 | - | No (null allowed) | Purchase and installation cost (Indian rupees) | `NumberDecimal("14500000.00")` |  |
-| 45 | plannedReplacementDate | Date | Date | No (null allowed) | Planned replacement date from the lifecycle review | `ISODate("2027-11-30T00:00:00.000+0000")` |  |
-| 46 | qualificationStatus | String | - | Yes | Qualification status of the equipment (GMP-33, GMP-35) | `"Qualified"` | Qualified; Not Qualified; Requalification Due |
-| 47 | requalificationDueDate | Date | Date | No (null allowed) | Date the next requalification is due; null when not qualification-relevant | `ISODate("2027-07-17T00:00:00.000+0000")` |  |
-| 48 | cleanStatus | String | - | Yes | Cleaning status shown on the equipment (GMP-34, GMP-35) | `"Dirty"` | Clean; Dirty; In Cleaning; Clean Hold Expired; Not Applicable |
-| 49 | cleanHoldExpiresAt | Date | Datetime | No (null allowed) | End of the clean hold time of the last cleaning | `null` |  |
-| 50 | lastCleaningRecordId | String | - | No (null allowed) | Reference to u_mes_maint_cleaningRecord._id: last cleaning record | `"1356000000000009"` | Reference: u_mes_maint_cleaningRecord._id |
-| 51 | lastCleaningRecordName | String | - | No (null allowed) | Display value of lastCleaningRecordId, copied from u_mes_maint_cleaningRecord.recordNo | `"CLN-20260921-002"` |  |
-| 52 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
-| 53 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the equipment; used as its display value in other collections | `"Gravity Die Casting Machine 1"` |  |
+| 7 | equipmentTypeId | String | - | Yes | Reference to u_mes_mast_equipmentType._id | `"1261000000000001"` | Reference: u_mes_mast_equipmentType._id |
+| 8 | equipmentTypeName | String | - | Yes | Display value of equipmentTypeId, copied from u_mes_mast_equipmentType.name | `"Gravity Die Casting Machine"` |  |
+| 9 | equipmentClass | String | - | Yes | Equipment class | `"Production Equipment"` | Production Equipment; Test Equipment; Measuring Equipment; Utility |
+| 10 | lineId | String | - | Yes | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 11 | lineName | String | - | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 12 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 13 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 14 | parentEquipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id: parent equipment | `null` | Reference: u_mes_mast_equipment._id |
+| 15 | parentEquipmentName | String | - | No (null allowed) | Display value of parentEquipmentId, copied from u_mes_mast_equipment.name | `null` |  |
+| 16 | manufacturerId | String | - | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000001"` | Reference: u_mes_mast_manufacturer._id |
+| 17 | manufacturerName | String | - | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"LK Machinery"` |  |
+| 18 | model | String | - | Yes | Model of the equipment | `"GDC-600T tilting"` |  |
+| 19 | serialNo | String | - | Yes | Serial number | `"LK-GDC-190457"` |  |
+| 20 | yearOfManufacture | Int32 | - | Yes | Year of manufacture | `NumberInt(2021)` |  |
+| 21 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
+| 22 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
+| 23 | assetNo | String | - | Yes | Asset number | `"FA-PN1-004512"` |  |
+| 24 | commissionedAt | Date | Datetime | Yes | Date and time when the record was commissioned. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
+| 25 | ratedCapacity | Decimal128 | - | Yes | Rated CAPAcity | `NumberDecimal("50.0")` |  |
+| 26 | ratedCapacityUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: rated CAPAcity unit of measure | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 27 | ratedCapacityUnitOfMeasureName | String | - | Yes | Display value of ratedCapacityUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
+| 28 | ratedPowerKw | Decimal128 | - | Yes | Rated power (kW) | `NumberDecimal("1.5")` |  |
+| 29 | controllerMake | String | - | Yes | Controller make | `"Siemens"` |  |
+| 30 | controllerModel | String | - | Yes | Controller model | `"S7-1500"` |  |
+| 31 | controllerIpAddress | String | - | Yes | Controller ip address | `"10.21.6.41"` |  |
+| 32 | controllerProtocol | String | - | Yes | Controller protocol | `"OPC UA"` | OPC UA; Open Protocol; Modbus TCP; Profinet; MQTT; Ethernet/IP |
+| 33 | criticality | String | - | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
+| 34 | currentState | String | - | Yes | Current state | `"Running"` | Running; Idle; Setup; Down; Starved; Blocked; Planned Stop |
+| 35 | currentStateSince | Date | Datetime | Yes | Current state since. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 36 | lifetimeCycles | Int64 | - | Yes | Lifetime cycles | `NumberLong("1284500")` |  |
+| 37 | lifetimeRunHours | Decimal128 | - | Yes | Lifetime run hours | `NumberDecimal("14820.5")` |  |
+| 38 | nextMaintenanceDueAt | Date | Date | Yes | Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
+| 39 | calibrationRequired | Boolean | - | Yes | True when: calibration required | `true` |  |
+| 40 | safetyCategory | String | - | Yes | Performance level of the safety function (ISO 13849-1) | `"PL d"` | PL a; PL b; PL c; PL d; PL e |
+| 41 | isProductionReady | Boolean | - | Yes | True when the equipment may receive work: not down, not in maintenance, PM and calibration not overdue | `true` |  |
+| 42 | readinessReasonText | String | - | No (null allowed) | Why the equipment is not production-ready; null when it is ready | `null` |  |
+| 43 | healthScore | Decimal128 | - | No (null allowed) | Rule-based health score from 0 (failed) to 100 (as new) | `NumberDecimal("84")` |  |
+| 44 | healthScoreAt | Date | Datetime | No (null allowed) | Time the health score was last calculated | `ISODate("2026-09-24T23:00:00.000+0000")` |  |
+| 45 | acquisitionCostInr | Decimal128 | - | No (null allowed) | Purchase and installation cost (Indian rupees) | `NumberDecimal("14500000.00")` |  |
+| 46 | plannedReplacementDate | Date | Date | No (null allowed) | Planned replacement date from the lifecycle review | `ISODate("2027-11-30T00:00:00.000+0000")` |  |
+| 47 | qualificationStatus | String | - | Yes | Qualification status of the equipment (GMP-33, GMP-35) | `"Qualified"` | Qualified; Not Qualified; Requalification Due |
+| 48 | requalificationDueDate | Date | Date | No (null allowed) | Date the next requalification is due; null when not qualification-relevant | `ISODate("2027-07-17T00:00:00.000+0000")` |  |
+| 49 | cleanStatus | String | - | Yes | Cleaning status shown on the equipment (GMP-34, GMP-35) | `"Dirty"` | Clean; Dirty; In Cleaning; Clean Hold Expired; Not Applicable |
+| 50 | cleanHoldExpiresAt | Date | Datetime | No (null allowed) | End of the clean hold time of the last cleaning | `null` |  |
+| 51 | lastCleaningRecordId | String | - | No (null allowed) | Reference to u_mes_maint_cleaningRecord._id: last cleaning record | `null` | Reference: u_mes_maint_cleaningRecord._id |
+| 52 | lastCleaningRecordName | String | - | No (null allowed) | Display value of lastCleaningRecordId, copied from u_mes_maint_cleaningRecord.recordNo | `null` |  |
+| 53 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
+| 54 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 32 (24 required, 8 may be null) |
+| Keys | 33 (25 required, 8 may be null) |
 | Estimated volume per year | about 3,000 |
 | Storage | standard collection |
 
@@ -31,36 +31,37 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1309000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SUV-20260915-00012"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
-| 6 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
-| 7 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000006"` | Reference: u_mes_mast_equipment._id |
-| 8 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Piston Assembly Press 1"` |  |
-| 9 | productionOrderId | String | - | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
-| 10 | productionOrderName | String | - | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
-| 11 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
-| 12 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
-| 13 | changeoverId | String | - | No (null allowed) | Reference to u_mes_plan_changeover._id | `null` | Reference: u_mes_plan_changeover._id |
-| 14 | changeoverName | String | - | No (null allowed) | Display value of changeoverId, copied from u_mes_plan_changeover.recordNo | `null` |  |
-| 15 | billOfProcessId | String | - | Yes | Reference to u_mes_prod_billOfProcess._id | `"1057000000000001"` | Reference: u_mes_prod_billOfProcess._id |
-| 16 | billOfProcessName | String | - | Yes | Display value of billOfProcessId, copied from u_mes_prod_billOfProcess.recordNo | `"BOP-5110-10-0100-R01"` |  |
-| 17 | trigger | String | - | Yes | Reason for the verification | `"Order Start"` | Order Start; Changeover; Shift Start; After Maintenance |
-| 18 | itemCount | Int32 | - | Yes | Number of checks | `NumberInt(3)` |  |
-| 19 | failedCount | Int32 | - | Yes | Number of failed checks | `NumberInt(0)` |  |
-| 20 | verifiedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'verified' | `"1029000000000002"` | Reference: u_mes_mast_user._id |
-| 21 | verifiedBy | String | - | Yes | Display name of the user in verifiedById, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
-| 22 | verifiedAt | Date | Datetime | Yes | Completion time | `ISODate("2026-09-15T05:48:00.000+0000")` |  |
-| 23 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
-| 24 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Passed"` | In Progress; Passed; Failed; Overridden |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:48:00.000+0000")` |  |
-| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:48:00.000+0000")` |  |
-| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
+| 7 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
+| 8 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000006"` | Reference: u_mes_mast_equipment._id |
+| 9 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Piston Assembly Press 1"` |  |
+| 10 | productionOrderId | String | - | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
+| 11 | productionOrderName | String | - | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
+| 12 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
+| 13 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
+| 14 | changeoverId | String | - | No (null allowed) | Reference to u_mes_plan_changeover._id | `null` | Reference: u_mes_plan_changeover._id |
+| 15 | changeoverName | String | - | No (null allowed) | Display value of changeoverId, copied from u_mes_plan_changeover.recordNo | `null` |  |
+| 16 | billOfProcessId | String | - | Yes | Reference to u_mes_prod_billOfProcess._id | `"1057000000000001"` | Reference: u_mes_prod_billOfProcess._id |
+| 17 | billOfProcessName | String | - | Yes | Display value of billOfProcessId, copied from u_mes_prod_billOfProcess.recordNo | `"BOP-5110-10-0100-R01"` |  |
+| 18 | trigger | String | - | Yes | Reason for the verification | `"Order Start"` | Order Start; Changeover; Shift Start; After Maintenance |
+| 19 | itemCount | Int32 | - | Yes | Number of checks | `NumberInt(3)` |  |
+| 20 | failedCount | Int32 | - | Yes | Number of failed checks | `NumberInt(0)` |  |
+| 21 | verifiedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'verified' | `"1029000000000002"` | Reference: u_mes_mast_user._id |
+| 22 | verifiedBy | String | - | Yes | Display name of the user in verifiedById, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
+| 23 | verifiedAt | Date | Datetime | Yes | Completion time | `ISODate("2026-09-15T05:48:00.000+0000")` |  |
+| 24 | interlockEventId | String | - | No (null allowed) | Reference to u_mes_plan_interlockEvent._id | `null` | Reference: u_mes_plan_interlockEvent._id |
+| 25 | interlockEventName | String | - | No (null allowed) | Display value of interlockEventId, copied from u_mes_plan_interlockEvent.recordNo | `null` |  |
+| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Passed"` | In Progress; Passed; Failed; Overridden |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:48:00.000+0000")` |  |
+| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:48:00.000+0000")` |  |
+| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

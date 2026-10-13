@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 33 (25 required, 8 may be null) |
+| Keys | 34 (26 required, 8 may be null) |
 | Estimated volume per year | about 15,000 |
 | Storage | standard collection |
 
@@ -25,37 +25,38 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1306000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ACK-20260915-00118"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_prod_workInstruction"` | u_mes_prod_workInstruction; u_mes_prod_recipe; u_mes_syst_controlledDocument |
-| 6 | relatedEntityId | String | - | Yes | _id of the related document in the collection named by relatedCollectionName | `"1065000000000006"` | Reference: Any collection (see relatedCollectionName) |
-| 7 | relatedEntityName | String | - | Yes | Display value of the related document | `"Seal, piston and dust boot assembly - Front caliper LH"` |  |
-| 8 | documentVersion | String | - | Yes | Version / revision acknowledged | `"1"` |  |
-| 9 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000002"` | Reference: u_mes_mast_user._id |
-| 10 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
-| 11 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
-| 12 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
-| 13 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
-| 14 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
-| 15 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
-| 16 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
-| 17 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
-| 18 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
-| 19 | operatorSessionId | String | - | No (null allowed) | Reference to u_mes_plan_operatorSession._id | `"1305000000000001"` | Reference: u_mes_plan_operatorSession._id |
-| 20 | operatorSessionName | String | - | No (null allowed) | Display value of operatorSessionId, copied from u_mes_plan_operatorSession.recordNo | `"OSN-20260915-00041"` |  |
-| 21 | acknowledgementType | String | - | Yes | Reason for the acknowledgement | `"Shift Start"` | First Read; Revision Re-acknowledgement; Shift Start; Periodic Refresh |
-| 22 | method | String | - | Yes | How it was given | `"Badge Scan"` | Touch Confirmation; Badge Scan; AR Confirmation; Electronic Signature |
-| 23 | electronicSignatureId | String | - | No (null allowed) | Reference to u_mes_syst_electronicSignature._id | `null` | Reference: u_mes_syst_electronicSignature._id |
-| 24 | electronicSignatureName | String | - | No (null allowed) | Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo | `null` |  |
-| 25 | acknowledgedAt | Date | Datetime | Yes | Time of acknowledgement | `ISODate("2026-09-15T05:39:27.000+0000")` |  |
-| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Acknowledged"` | Acknowledged; Superseded |
-| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:39:27.000+0000")` |  |
-| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:39:27.000+0000")` |  |
-| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_prod_workInstruction"` | u_mes_prod_workInstruction; u_mes_prod_recipe; u_mes_syst_controlledDocument |
+| 7 | relatedEntityId | String | - | Yes | _id of the related document in the collection named by relatedCollectionName | `"1065000000000006"` | Reference: Any collection (see relatedCollectionName) |
+| 8 | relatedEntityName | String | - | Yes | Display value of the related document | `"Seal, piston and dust boot assembly - Front caliper LH"` |  |
+| 9 | documentVersion | String | - | Yes | Version / revision acknowledged | `"1"` |  |
+| 10 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000002"` | Reference: u_mes_mast_user._id |
+| 11 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Kavita Bhosale"` |  |
+| 12 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
+| 13 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
+| 14 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
+| 15 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
+| 16 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
+| 17 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
+| 18 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
+| 19 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
+| 20 | operatorSessionId | String | - | No (null allowed) | Reference to u_mes_plan_operatorSession._id | `"1305000000000001"` | Reference: u_mes_plan_operatorSession._id |
+| 21 | operatorSessionName | String | - | No (null allowed) | Display value of operatorSessionId, copied from u_mes_plan_operatorSession.recordNo | `"OSN-20260915-00041"` |  |
+| 22 | acknowledgementType | String | - | Yes | Reason for the acknowledgement | `"Shift Start"` | First Read; Revision Re-acknowledgement; Shift Start; Periodic Refresh |
+| 23 | method | String | - | Yes | How it was given | `"Badge Scan"` | Touch Confirmation; Badge Scan; AR Confirmation; Electronic Signature |
+| 24 | electronicSignatureId | String | - | No (null allowed) | Reference to u_mes_syst_electronicSignature._id | `null` | Reference: u_mes_syst_electronicSignature._id |
+| 25 | electronicSignatureName | String | - | No (null allowed) | Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo | `null` |  |
+| 26 | acknowledgedAt | Date | Datetime | Yes | Time of acknowledgement | `ISODate("2026-09-15T05:39:27.000+0000")` |  |
+| 27 | status | String | - | Yes | Primary lifecycle state of the document | `"Acknowledged"` | Acknowledged; Superseded |
+| 28 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 29 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:39:27.000+0000")` |  |
+| 30 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 31 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 32 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T05:39:27.000+0000")` |  |
+| 33 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 34 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

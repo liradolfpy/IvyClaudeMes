@@ -9,7 +9,7 @@
 | Parent collection | u_mes_prod_billOfMaterialComponent |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 10 (10 required, 0 may be null) |
+| Keys | 11 (11 required, 0 may be null) |
 
 ## Structure
 
@@ -24,14 +24,15 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1049000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"BOM-5110-10-0100-01-C01-PV01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | billOfMaterialComponentId | String | - | Yes | Reference to u_mes_prod_billOfMaterialComponent._id: the parent document this one belongs to | `"1048000000000001"` | Reference: u_mes_prod_billOfMaterialComponent._id |
-| 6 | billOfMaterialComponentName | String | - | Yes | Display value of billOfMaterialComponentId, copied from u_mes_prod_billOfMaterialComponent.recordNo | `"BOM-5110-10-0100-01-C01"` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | productVariantId | String | - | Yes | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
-| 9 | productVariantName | String | - | Yes | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
-| 10 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | billOfMaterialComponentId | String | - | Yes | Reference to u_mes_prod_billOfMaterialComponent._id: the parent document this one belongs to | `"1048000000000001"` | Reference: u_mes_prod_billOfMaterialComponent._id |
+| 7 | billOfMaterialComponentName | String | - | Yes | Display value of billOfMaterialComponentId, copied from u_mes_prod_billOfMaterialComponent.recordNo | `"BOM-5110-10-0100-01-C01"` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | productVariantId | String | - | Yes | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
+| 10 | productVariantName | String | - | Yes | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
+| 11 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

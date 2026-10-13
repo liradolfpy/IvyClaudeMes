@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 33 (24 required, 9 may be null) |
+| Keys | 34 (25 required, 9 may be null) |
 | Estimated volume per year | ~20,000 live rows |
 | Storage | standard |
 
@@ -25,37 +25,38 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1113000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"INV-2026-000289"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000005"` | Reference: u_mes_prod_item._id |
-| 6 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
-| 7 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
-| 8 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
-| 9 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000002"` | Reference: u_mes_matl_storageLocation._id |
-| 10 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Warehouse A, rack 02, bin 14"` |  |
-| 11 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
-| 12 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
-| 13 | stockStatusId | String | - | Yes | Reference to u_mes_matl_stockStatus._id | `"1280000000000001"` | Reference: u_mes_matl_stockStatus._id |
-| 14 | stockStatusName | String | - | Yes | Display value of stockStatusId, copied from u_mes_matl_stockStatus.name | `"Unrestricted"` |  |
-| 15 | quantity | Decimal128 | - | Yes | Quantity of the inventory balance | `NumberDecimal("1")` |  |
-| 16 | reservedQuantity | Decimal128 | - | Yes | Reserved quantity | `NumberDecimal("0")` |  |
-| 17 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 18 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 19 | valueInr | Decimal128 | - | Yes | Value (Indian rupees) | `NumberDecimal("52428.00")` |  |
-| 20 | firstReceivedAt | Date | Datetime | Yes | First received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 21 | lastMovementAt | Date | Datetime | No (null allowed) | Last movement date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 22 | lastCountedAt | Date | Datetime | No (null allowed) | Last counted date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 23 | lastCountedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'last counted' | `null` | Reference: u_mes_mast_user._id |
-| 24 | lastCountedBy | String | - | No (null allowed) | Display name of the user in lastCountedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 25 | expiryAt | Date | Date | No (null allowed) | Expiry at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
-| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Closed |
-| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
-| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
-| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
-| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
-| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000005"` | Reference: u_mes_prod_item._id |
+| 7 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
+| 8 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
+| 9 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
+| 10 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000002"` | Reference: u_mes_matl_storageLocation._id |
+| 11 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Warehouse A, rack 02, bin 14"` |  |
+| 12 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
+| 13 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
+| 14 | stockStatusId | String | - | Yes | Reference to u_mes_matl_stockStatus._id | `"1280000000000001"` | Reference: u_mes_matl_stockStatus._id |
+| 15 | stockStatusName | String | - | Yes | Display value of stockStatusId, copied from u_mes_matl_stockStatus.name | `"Unrestricted"` |  |
+| 16 | quantity | Decimal128 | - | Yes | Quantity of the inventory balance | `NumberDecimal("1")` |  |
+| 17 | reservedQuantity | Decimal128 | - | Yes | Reserved quantity | `NumberDecimal("0")` |  |
+| 18 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 19 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 20 | valueInr | Decimal128 | - | Yes | Value (Indian rupees) | `NumberDecimal("52428.00")` |  |
+| 21 | firstReceivedAt | Date | Datetime | Yes | First received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 22 | lastMovementAt | Date | Datetime | No (null allowed) | Last movement date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 23 | lastCountedAt | Date | Datetime | No (null allowed) | Last counted date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 24 | lastCountedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'last counted' | `null` | Reference: u_mes_mast_user._id |
+| 25 | lastCountedBy | String | - | No (null allowed) | Display name of the user in lastCountedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 26 | expiryAt | Date | Date | No (null allowed) | Expiry at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
+| 27 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Closed |
+| 28 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 29 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
+| 30 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 31 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
+| 32 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:48.000+0000")` |  |
+| 33 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000008"` | Reference: u_mes_mast_user._id |
+| 34 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |
 
 ## Status values
 

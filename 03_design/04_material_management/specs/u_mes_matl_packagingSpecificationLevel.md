@@ -9,7 +9,7 @@
 | Parent collection | u_mes_matl_packagingSpecification |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 14 (14 required, 0 may be null) |
+| Keys | 15 (15 required, 0 may be null) |
 
 ## Structure
 
@@ -24,18 +24,19 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1123000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PKS-5110-10-0100-SML-01-L01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | packagingSpecificationId | String | - | Yes | Reference to u_mes_matl_packagingSpecification._id: the parent document this one belongs to | `"1122000000000001"` | Reference: u_mes_matl_packagingSpecification._id |
-| 6 | packagingSpecificationName | String | - | Yes | Display value of packagingSpecificationId, copied from u_mes_matl_packagingSpecification.recordNo | `"PKS-5110-10-0100-SML-01"` |  |
-| 7 | levelNo | Int32 | - | Yes | Level number | `NumberInt(1)` |  |
-| 8 | packTypeId | String | - | Yes | Reference to u_mes_matl_packType._id | `"1281000000000001"` | Reference: u_mes_matl_packType._id |
-| 9 | packTypeName | String | - | Yes | Display value of packTypeId, copied from u_mes_matl_packType.name | `"VCI Bag"` |  |
-| 10 | quantity | Int32 | - | Yes | Quantity of the packaging specification level | `NumberInt(1)` |  |
-| 11 | lengthMm | Decimal128 | - | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
-| 12 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
-| 13 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
-| 14 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | packagingSpecificationId | String | - | Yes | Reference to u_mes_matl_packagingSpecification._id: the parent document this one belongs to | `"1122000000000001"` | Reference: u_mes_matl_packagingSpecification._id |
+| 7 | packagingSpecificationName | String | - | Yes | Display value of packagingSpecificationId, copied from u_mes_matl_packagingSpecification.recordNo | `"PKS-5110-10-0100-SML-01"` |  |
+| 8 | levelNo | Int32 | - | Yes | Level number | `NumberInt(1)` |  |
+| 9 | packTypeId | String | - | Yes | Reference to u_mes_matl_packType._id | `"1281000000000001"` | Reference: u_mes_matl_packType._id |
+| 10 | packTypeName | String | - | Yes | Display value of packTypeId, copied from u_mes_matl_packType.name | `"VCI Bag"` |  |
+| 11 | quantity | Int32 | - | Yes | Quantity of the packaging specification level | `NumberInt(1)` |  |
+| 12 | lengthMm | Decimal128 | - | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
+| 13 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
+| 14 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
+| 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

@@ -9,7 +9,7 @@
 | Parent collection | u_mes_mast_enterprise |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 12 (10 required, 2 may be null) |
+| Keys | 13 (11 required, 2 may be null) |
 
 ## Structure
 
@@ -24,16 +24,17 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1002000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"VBS-C01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | enterpriseId | String | - | Yes | Reference to u_mes_mast_enterprise._id: the parent document this one belongs to | `"1001000000000001"` | Reference: u_mes_mast_enterprise._id |
-| 6 | enterpriseName | String | - | Yes | Display value of enterpriseId, copied from u_mes_mast_enterprise.name | `"Varuna Brake Systems Pvt. Ltd."` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | name | String | - | Yes | Name of the enterprise contact | `"Arvind Kelkar"` |  |
-| 9 | jobTitle | String | - | Yes | Job title of the contact person | `"Plant Head"` |  |
-| 10 | email | String | - | No (null allowed) | Email of the enterprise contact | `"sunil.jadhav@varunabrakes.example"` |  |
-| 11 | phone | String | - | No (null allowed) | Phone of the enterprise contact | `"+91-2135-555-0142"` |  |
-| 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | enterpriseId | String | - | Yes | Reference to u_mes_mast_enterprise._id: the parent document this one belongs to | `"1001000000000001"` | Reference: u_mes_mast_enterprise._id |
+| 7 | enterpriseName | String | - | Yes | Display value of enterpriseId, copied from u_mes_mast_enterprise.name | `"Varuna Brake Systems Pvt. Ltd."` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | name | String | - | Yes | Name of the enterprise contact | `"Arvind Kelkar"` |  |
+| 10 | jobTitle | String | - | Yes | Job title of the contact person | `"Plant Head"` |  |
+| 11 | email | String | - | No (null allowed) | Email of the enterprise contact | `"sunil.jadhav@varunabrakes.example"` |  |
+| 12 | phone | String | - | No (null allowed) | Phone of the enterprise contact | `"+91-2135-555-0142"` |  |
+| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

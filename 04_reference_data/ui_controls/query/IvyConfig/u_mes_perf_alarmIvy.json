@@ -1,0 +1,250 @@
+{
+    "_id" : "u_mes_perf_alarmIvy",
+    "code" : "perf",
+    "moduleName" : "Performance Management",
+    "collection" : "u_mes_perf_alarm",
+    "stableName" : "mes_perf_alarmStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_perf_alarmIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "raisedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmDefinitionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "causedStop",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "processTagId",
+            "typ" : "string"
+        },
+        {
+            "din" : "processTagName",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmText",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "severity",
+            "typ" : "int"
+        },
+        {
+            "din" : "raisedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "acknowledgedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "acknowledgedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "acknowledgedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "clearedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "durationSec",
+            "typ" : "int"
+        },
+        {
+            "din" : "triggerValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "limitValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "causedStop",
+            "typ" : "bool"
+        },
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionTaken",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmDefinitionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmDefinitionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "blocksRestart",
+            "typ" : "bool"
+        },
+        {
+            "din" : "restartAuthorizedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "restartAuthorizedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "restartAuthorizedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "closureReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "closureReasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationLevel",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

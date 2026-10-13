@@ -12,44 +12,45 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | integrationConnectorId | String | - | u_mes_syst_integrationConnector._id |
-| 6 | integrationConnectorName | String | - |  |
-| 7 | direction | String | - |  |
-| 8 | messageType | String | - |  |
-| 9 | idempotencyKey | String | - |  |
-| 10 | correlationNo | String | - |  |
-| 11 | relatedCollectionName | String | - |  |
-| 12 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 13 | relatedEntityName | String | - |  |
-| 14 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
-| 15 | productionOrderName | String | - |  |
-| 16 | goodsReceiptId | String | - | u_mes_matl_goodsReceipt._id |
-| 17 | goodsReceiptName | String | - |  |
-| 18 | shipmentId | String | - | u_mes_matl_shipment._id |
-| 19 | shipmentName | String | - |  |
-| 20 | payload | String | - |  |
-| 21 | payloadFormat | String | - |  |
-| 22 | payloadHash | String | - |  |
-| 23 | attempts | Int32 | - |  |
-| 24 | maxAttempts | Int32 | - |  |
-| 25 | createdInSourceAt | Date | Datetime |  |
-| 26 | receivedAt | Date | Datetime |  |
-| 27 | processedAt | Date | Datetime |  |
-| 28 | nextRetryAt | Date | Datetime |  |
-| 29 | errorCode | String | - |  |
-| 30 | errorText | String | - |  |
-| 31 | erpDocumentNo | String | - |  |
-| 32 | acknowledgedAt | Date | Datetime |  |
-| 33 | status | String | - |  |
-| 34 | schemaVersion | Int32 | - |  |
-| 35 | createdAt | Date | Datetime |  |
-| 36 | createdById | String | - | u_mes_mast_user._id |
-| 37 | createdBy | String | - |  |
-| 38 | updatedAt | Date | Datetime |  |
-| 39 | updatedById | String | - | u_mes_mast_user._id |
-| 40 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | integrationConnectorId | String | - | u_mes_syst_integrationConnector._id |
+| 7 | integrationConnectorName | String | - |  |
+| 8 | direction | String | - |  |
+| 9 | messageType | String | - |  |
+| 10 | idempotencyKey | String | - |  |
+| 11 | correlationNo | String | - |  |
+| 12 | relatedCollectionName | String | - |  |
+| 13 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 14 | relatedEntityName | String | - |  |
+| 15 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 16 | productionOrderName | String | - |  |
+| 17 | goodsReceiptId | String | - | u_mes_matl_goodsReceipt._id |
+| 18 | goodsReceiptName | String | - |  |
+| 19 | shipmentId | String | - | u_mes_matl_shipment._id |
+| 20 | shipmentName | String | - |  |
+| 21 | payload | String | - |  |
+| 22 | payloadFormat | String | - |  |
+| 23 | payloadHash | String | - |  |
+| 24 | attempts | Int32 | - |  |
+| 25 | maxAttempts | Int32 | - |  |
+| 26 | createdInSourceAt | Date | Datetime |  |
+| 27 | receivedAt | Date | Datetime |  |
+| 28 | processedAt | Date | Datetime |  |
+| 29 | nextRetryAt | Date | Datetime |  |
+| 30 | errorCode | String | - |  |
+| 31 | errorText | String | - |  |
+| 32 | erpDocumentNo | String | - |  |
+| 33 | acknowledgedAt | Date | Datetime |  |
+| 34 | status | String | - |  |
+| 35 | schemaVersion | Int32 | - |  |
+| 36 | createdAt | Date | Datetime |  |
+| 37 | createdById | String | - | u_mes_mast_user._id |
+| 38 | createdBy | String | - |  |
+| 39 | updatedAt | Date | Datetime |  |
+| 40 | updatedById | String | - | u_mes_mast_user._id |
+| 41 | updatedBy | String | - |  |
 
 ## u_mes_syst_integrationConnector
 
@@ -59,26 +60,27 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | connectorType | String | - |  |
-| 7 | targetSystem | String | - |  |
-| 8 | protocol | String | - |  |
-| 9 | endpoint | String | - |  |
-| 10 | environment | String | - |  |
-| 11 | authMethod | String | - |  |
-| 12 | credentialRef | String | - |  |
-| 13 | timeoutMs | Int32 | - |  |
-| 14 | retryPolicyMaxAttempts | Int32 | - |  |
-| 15 | retryPolicyBackoffSec | Int32 | - |  |
-| 16 | lastSuccessAt | Date | Datetime |  |
-| 17 | lastFailureAt | Date | Datetime |  |
-| 18 | healthStatus | String | - |  |
-| 19 | ownerUserId | String | - | u_mes_mast_user._id |
-| 20 | ownerUserName | String | - |  |
-| 21 | status | String | - |  |
-| 22 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | connectorType | String | - |  |
+| 8 | targetSystem | String | - |  |
+| 9 | protocol | String | - |  |
+| 10 | endpoint | String | - |  |
+| 11 | environment | String | - |  |
+| 12 | authMethod | String | - |  |
+| 13 | credentialRef | String | - |  |
+| 14 | timeoutMs | Int32 | - |  |
+| 15 | retryPolicyMaxAttempts | Int32 | - |  |
+| 16 | retryPolicyBackoffSec | Int32 | - |  |
+| 17 | lastSuccessAt | Date | Datetime |  |
+| 18 | lastFailureAt | Date | Datetime |  |
+| 19 | healthStatus | String | - |  |
+| 20 | ownerUserId | String | - | u_mes_mast_user._id |
+| 21 | ownerUserName | String | - |  |
+| 22 | status | String | - |  |
+| 23 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_integrationConnectorFunction
 
@@ -88,17 +90,18 @@ Kind: child | Data class: master | Parent: u_mes_syst_integrationConnector | _id
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | integrationConnectorId | String | - | u_mes_syst_integrationConnector._id |
-| 6 | integrationConnectorName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | functionName | String | - |  |
-| 9 | direction | String | - |  |
-| 10 | messageType | String | - |  |
-| 11 | endpointPath | String | - |  |
-| 12 | scheduleExpression | String | - |  |
-| 13 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | integrationConnectorId | String | - | u_mes_syst_integrationConnector._id |
+| 7 | integrationConnectorName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | functionName | String | - |  |
+| 10 | direction | String | - |  |
+| 11 | messageType | String | - |  |
+| 12 | endpointPath | String | - |  |
+| 13 | scheduleExpression | String | - |  |
+| 14 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_iotDevice
 
@@ -108,35 +111,36 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | deviceTypeId | String | - | u_mes_syst_deviceType._id |
-| 7 | deviceTypeName | String | - |  |
-| 8 | manufacturerId | String | - | u_mes_mast_manufacturer._id |
-| 9 | manufacturerName | String | - |  |
-| 10 | model | String | - |  |
-| 11 | serialNo | String | - |  |
-| 12 | firmwareVersion | String | - |  |
-| 13 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 14 | equipmentName | String | - |  |
-| 15 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 16 | workCenterName | String | - |  |
-| 17 | integrationConnectorId | String | - | u_mes_syst_integrationConnector._id |
-| 18 | integrationConnectorName | String | - |  |
-| 19 | ipAddress | String | - |  |
-| 20 | macAddress | String | - |  |
-| 21 | port | Int32 | - |  |
-| 22 | protocol | String | - |  |
-| 23 | vlan | Int32 | - |  |
-| 24 | opcNodeAddress | String | - |  |
-| 25 | pollIntervalMs | Int32 | - |  |
-| 26 | lastSeenAt | Date | Datetime |  |
-| 27 | connectionStatus | String | - |  |
-| 28 | certificateExpiresAt | Date | Date |  |
-| 29 | installedAt | Date | Datetime |  |
-| 30 | status | String | - |  |
-| 31 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | deviceTypeId | String | - | u_mes_syst_deviceType._id |
+| 8 | deviceTypeName | String | - |  |
+| 9 | manufacturerId | String | - | u_mes_mast_manufacturer._id |
+| 10 | manufacturerName | String | - |  |
+| 11 | model | String | - |  |
+| 12 | serialNo | String | - |  |
+| 13 | firmwareVersion | String | - |  |
+| 14 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 15 | equipmentName | String | - |  |
+| 16 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 17 | workCenterName | String | - |  |
+| 18 | integrationConnectorId | String | - | u_mes_syst_integrationConnector._id |
+| 19 | integrationConnectorName | String | - |  |
+| 20 | ipAddress | String | - |  |
+| 21 | macAddress | String | - |  |
+| 22 | port | Int32 | - |  |
+| 23 | protocol | String | - |  |
+| 24 | vlan | Int32 | - |  |
+| 25 | opcNodeAddress | String | - |  |
+| 26 | pollIntervalMs | Int32 | - |  |
+| 27 | lastSeenAt | Date | Datetime |  |
+| 28 | connectionStatus | String | - |  |
+| 29 | certificateExpiresAt | Date | Date |  |
+| 30 | installedAt | Date | Datetime |  |
+| 31 | status | String | - |  |
+| 32 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorApp
 
@@ -146,21 +150,22 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | appType | String | - |  |
-| 7 | version | Int32 | - |  |
-| 8 | publishedById | String | - | u_mes_mast_user._id |
-| 9 | publishedBy | String | - |  |
-| 10 | publishedAt | Date | Datetime |  |
-| 11 | approvedById | String | - | u_mes_mast_user._id |
-| 12 | approvedBy | String | - |  |
-| 13 | approvedAt | Date | Datetime |  |
-| 14 | previousVersionOperatorAppId | String | - | u_mes_syst_operatorApp._id |
-| 15 | previousVersionOperatorAppName | String | - |  |
-| 16 | status | String | - |  |
-| 17 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | appType | String | - |  |
+| 8 | version | Int32 | - |  |
+| 9 | publishedById | String | - | u_mes_mast_user._id |
+| 10 | publishedBy | String | - |  |
+| 11 | publishedAt | Date | Datetime |  |
+| 12 | approvedById | String | - | u_mes_mast_user._id |
+| 13 | approvedBy | String | - |  |
+| 14 | approvedAt | Date | Datetime |  |
+| 15 | previousVersionOperatorAppId | String | - | u_mes_syst_operatorApp._id |
+| 16 | previousVersionOperatorAppName | String | - |  |
+| 17 | status | String | - |  |
+| 18 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorAppWorkCenter
 
@@ -170,14 +175,15 @@ Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id p
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
-| 6 | operatorAppName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 9 | workCenterName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
+| 7 | operatorAppName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 10 | workCenterName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorAppOperation
 
@@ -187,14 +193,15 @@ Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id p
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
-| 6 | operatorAppName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | operationId | String | - | u_mes_prod_operation._id |
-| 9 | operationName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
+| 7 | operatorAppName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | operationId | String | - | u_mes_prod_operation._id |
+| 10 | operationName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorAppStep
 
@@ -204,19 +211,20 @@ Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
-| 6 | operatorAppName | String | - |  |
-| 7 | stepNo | Int32 | - |  |
-| 8 | name | String | - |  |
-| 9 | widgetType | String | - |  |
-| 10 | workInstructionId | String | - | u_mes_prod_workInstruction._id |
-| 11 | workInstructionName | String | - |  |
-| 12 | inspectionPlanId | String | - | u_mes_qual_inspectionPlan._id |
-| 13 | inspectionPlanName | String | - |  |
-| 14 | nextStepNo | Int32 | - |  |
-| 15 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
+| 7 | operatorAppName | String | - |  |
+| 8 | stepNo | Int32 | - |  |
+| 9 | name | String | - |  |
+| 10 | widgetType | String | - |  |
+| 11 | workInstructionId | String | - | u_mes_prod_workInstruction._id |
+| 12 | workInstructionName | String | - |  |
+| 13 | inspectionPlanId | String | - | u_mes_qual_inspectionPlan._id |
+| 14 | inspectionPlanName | String | - |  |
+| 15 | nextStepNo | Int32 | - |  |
+| 16 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorAppStepTrigger
 
@@ -226,15 +234,16 @@ Kind: child | Data class: master | Parent: u_mes_syst_operatorAppStep | _id patt
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | operatorAppStepId | String | - | u_mes_syst_operatorAppStep._id |
-| 6 | operatorAppStepName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | triggerEvent | String | - |  |
-| 9 | triggerAction | String | - |  |
-| 10 | triggerTarget | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | operatorAppStepId | String | - | u_mes_syst_operatorAppStep._id |
+| 7 | operatorAppStepName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | triggerEvent | String | - |  |
+| 10 | triggerAction | String | - |  |
+| 11 | triggerTarget | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorAppDeviceBinding
 
@@ -244,15 +253,16 @@ Kind: child | Data class: master | Parent: u_mes_syst_operatorApp | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
-| 6 | operatorAppName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
-| 9 | iotDeviceName | String | - |  |
-| 10 | purpose | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
+| 7 | operatorAppName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
+| 10 | iotDeviceName | String | - |  |
+| 11 | purpose | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorAppLanguage
 
@@ -262,14 +272,15 @@ Kind: relationship | Data class: master | Parent: u_mes_syst_operatorApp | _id p
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
-| 6 | operatorAppName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | languageId | String | - | u_mes_mast_language._id |
-| 9 | languageName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | operatorAppId | String | - | u_mes_syst_operatorApp._id |
+| 7 | operatorAppName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | languageId | String | - | u_mes_mast_language._id |
+| 10 | languageName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_businessEvent
 
@@ -279,36 +290,37 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | eventType | String | - |  |
-| 6 | eventCategory | String | - |  |
-| 7 | occurredAt | Date | Datetime |  |
-| 8 | relatedCollectionName | String | - |  |
-| 9 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 10 | relatedEntityName | String | - |  |
-| 11 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 12 | workCenterName | String | - |  |
-| 13 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 14 | equipmentName | String | - |  |
-| 15 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
-| 16 | productionOrderName | String | - |  |
-| 17 | userId | String | - | u_mes_mast_user._id |
-| 18 | userName | String | - |  |
-| 19 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
-| 20 | iotDeviceName | String | - |  |
-| 21 | severity | Int32 | - |  |
-| 22 | messageText | String | - |  |
-| 23 | eventPayloadText | String | - |  |
-| 24 | correlationNo | String | - |  |
-| 25 | source | String | - |  |
-| 26 | schemaVersion | Int32 | - |  |
-| 27 | createdAt | Date | Datetime |  |
-| 28 | createdById | String | - | u_mes_mast_user._id |
-| 29 | createdBy | String | - |  |
-| 30 | updatedAt | Date | Datetime |  |
-| 31 | updatedById | String | - | u_mes_mast_user._id |
-| 32 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | eventType | String | - |  |
+| 7 | eventCategory | String | - |  |
+| 8 | occurredAt | Date | Datetime |  |
+| 9 | relatedCollectionName | String | - |  |
+| 10 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 11 | relatedEntityName | String | - |  |
+| 12 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 13 | workCenterName | String | - |  |
+| 14 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 15 | equipmentName | String | - |  |
+| 16 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 17 | productionOrderName | String | - |  |
+| 18 | userId | String | - | u_mes_mast_user._id |
+| 19 | userName | String | - |  |
+| 20 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
+| 21 | iotDeviceName | String | - |  |
+| 22 | severity | Int32 | - |  |
+| 23 | messageText | String | - |  |
+| 24 | eventPayloadText | String | - |  |
+| 25 | correlationNo | String | - |  |
+| 26 | source | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
+| 28 | createdAt | Date | Datetime |  |
+| 29 | createdById | String | - | u_mes_mast_user._id |
+| 30 | createdBy | String | - |  |
+| 31 | updatedAt | Date | Datetime |  |
+| 32 | updatedById | String | - | u_mes_mast_user._id |
+| 33 | updatedBy | String | - |  |
 
 ## u_mes_syst_auditTrail
 
@@ -318,34 +330,35 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | relatedCollectionName | String | - |  |
-| 6 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 7 | relatedEntityName | String | - |  |
-| 8 | changeAction | String | - |  |
-| 9 | changedAt | Date | Datetime |  |
-| 10 | changedById | String | - | u_mes_mast_user._id |
-| 11 | changedBy | String | - |  |
-| 12 | reasonText | String | - |  |
-| 13 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
-| 14 | electronicSignatureName | String | - |  |
-| 15 | clientIp | String | - |  |
-| 16 | application | String | - |  |
-| 17 | documentVersionBefore | Int32 | - |  |
-| 18 | documentVersionAfter | Int32 | - |  |
-| 19 | previousHash | String | - |  |
-| 20 | entryHash | String | - |  |
-| 21 | gxpRelevant | Boolean | - |  |
-| 22 | auditTrailReviewId | String | - | u_mes_syst_auditTrailReview._id |
-| 23 | auditTrailReviewName | String | - |  |
-| 24 | schemaVersion | Int32 | - |  |
-| 25 | createdAt | Date | Datetime |  |
-| 26 | createdById | String | - | u_mes_mast_user._id |
-| 27 | createdBy | String | - |  |
-| 28 | updatedAt | Date | Datetime |  |
-| 29 | updatedById | String | - | u_mes_mast_user._id |
-| 30 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | relatedCollectionName | String | - |  |
+| 7 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 8 | relatedEntityName | String | - |  |
+| 9 | changeAction | String | - |  |
+| 10 | changedAt | Date | Datetime |  |
+| 11 | changedById | String | - | u_mes_mast_user._id |
+| 12 | changedBy | String | - |  |
+| 13 | reasonText | String | - |  |
+| 14 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 15 | electronicSignatureName | String | - |  |
+| 16 | clientIp | String | - |  |
+| 17 | application | String | - |  |
+| 18 | documentVersionBefore | Int32 | - |  |
+| 19 | documentVersionAfter | Int32 | - |  |
+| 20 | previousHash | String | - |  |
+| 21 | entryHash | String | - |  |
+| 22 | gxpRelevant | Boolean | - |  |
+| 23 | auditTrailReviewId | String | - | u_mes_syst_auditTrailReview._id |
+| 24 | auditTrailReviewName | String | - |  |
+| 25 | schemaVersion | Int32 | - |  |
+| 26 | createdAt | Date | Datetime |  |
+| 27 | createdById | String | - | u_mes_mast_user._id |
+| 28 | createdBy | String | - |  |
+| 29 | updatedAt | Date | Datetime |  |
+| 30 | updatedById | String | - | u_mes_mast_user._id |
+| 31 | updatedBy | String | - |  |
 
 ## u_mes_syst_auditTrailChange
 
@@ -355,21 +368,22 @@ Kind: child | Data class: transaction | Parent: u_mes_syst_auditTrail | _id patt
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | auditTrailId | String | - | u_mes_syst_auditTrail._id |
-| 6 | auditTrailName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | changedFieldName | String | - |  |
-| 9 | oldValue | String | - |  |
-| 10 | newValue | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
-| 12 | createdAt | Date | Datetime |  |
-| 13 | createdById | String | - | u_mes_mast_user._id |
-| 14 | createdBy | String | - |  |
-| 15 | updatedAt | Date | Datetime |  |
-| 16 | updatedById | String | - | u_mes_mast_user._id |
-| 17 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | auditTrailId | String | - | u_mes_syst_auditTrail._id |
+| 7 | auditTrailName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | changedFieldName | String | - |  |
+| 10 | oldValue | String | - |  |
+| 11 | newValue | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
+| 13 | createdAt | Date | Datetime |  |
+| 14 | createdById | String | - | u_mes_mast_user._id |
+| 15 | createdBy | String | - |  |
+| 16 | updatedAt | Date | Datetime |  |
+| 17 | updatedById | String | - | u_mes_mast_user._id |
+| 18 | updatedBy | String | - |  |
 
 ## u_mes_syst_electronicSignature
 
@@ -379,36 +393,37 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | relatedCollectionName | String | - |  |
-| 6 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 7 | relatedEntityName | String | - |  |
-| 8 | userId | String | - | u_mes_mast_user._id |
-| 9 | userName | String | - |  |
-| 10 | roleId | String | - | u_mes_mast_role._id |
-| 11 | roleName | String | - |  |
-| 12 | signatureMeaningId | String | - | u_mes_mast_signatureMeaning._id |
-| 13 | signatureMeaningName | String | - |  |
-| 14 | signedAt | Date | Datetime |  |
-| 15 | authenticationMethod | String | - |  |
-| 16 | contentHash | String | - |  |
-| 17 | comment | String | - |  |
-| 18 | clientIp | String | - |  |
-| 19 | workstation | String | - |  |
-| 20 | isSecondSignature | Boolean | - |  |
-| 21 | witnessUserId | String | - | u_mes_mast_user._id |
-| 22 | witnessUserName | String | - |  |
-| 23 | signatureManifestationText | String | - |  |
-| 24 | signedRecordVersion | Int32 | - |  |
-| 25 | isFirstSigningInSession | Boolean | - |  |
-| 26 | schemaVersion | Int32 | - |  |
-| 27 | createdAt | Date | Datetime |  |
-| 28 | createdById | String | - | u_mes_mast_user._id |
-| 29 | createdBy | String | - |  |
-| 30 | updatedAt | Date | Datetime |  |
-| 31 | updatedById | String | - | u_mes_mast_user._id |
-| 32 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | relatedCollectionName | String | - |  |
+| 7 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 8 | relatedEntityName | String | - |  |
+| 9 | userId | String | - | u_mes_mast_user._id |
+| 10 | userName | String | - |  |
+| 11 | roleId | String | - | u_mes_mast_role._id |
+| 12 | roleName | String | - |  |
+| 13 | signatureMeaningId | String | - | u_mes_mast_signatureMeaning._id |
+| 14 | signatureMeaningName | String | - |  |
+| 15 | signedAt | Date | Datetime |  |
+| 16 | authenticationMethod | String | - |  |
+| 17 | contentHash | String | - |  |
+| 18 | comment | String | - |  |
+| 19 | clientIp | String | - |  |
+| 20 | workstation | String | - |  |
+| 21 | isSecondSignature | Boolean | - |  |
+| 22 | witnessUserId | String | - | u_mes_mast_user._id |
+| 23 | witnessUserName | String | - |  |
+| 24 | signatureManifestationText | String | - |  |
+| 25 | signedRecordVersion | Int32 | - |  |
+| 26 | isFirstSigningInSession | Boolean | - |  |
+| 27 | schemaVersion | Int32 | - |  |
+| 28 | createdAt | Date | Datetime |  |
+| 29 | createdById | String | - | u_mes_mast_user._id |
+| 30 | createdBy | String | - |  |
+| 31 | updatedAt | Date | Datetime |  |
+| 32 | updatedById | String | - | u_mes_mast_user._id |
+| 33 | updatedBy | String | - |  |
 
 ## u_mes_syst_notification
 
@@ -418,46 +433,47 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | notificationTypeId | String | - | u_mes_syst_notificationType._id |
-| 6 | notificationTypeName | String | - |  |
-| 7 | severity | Int32 | - |  |
-| 8 | title | String | - |  |
-| 9 | bodyText | String | - |  |
-| 10 | relatedCollectionName | String | - |  |
-| 11 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 12 | relatedEntityName | String | - |  |
-| 13 | andonEventId | String | - | u_mes_plan_andonEvent._id |
-| 14 | andonEventName | String | - |  |
-| 15 | alarmId | String | - | u_mes_perf_alarm._id |
-| 16 | alarmName | String | - |  |
-| 17 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
-| 18 | nonconformanceName | String | - |  |
-| 19 | escalationLevel | Int32 | - |  |
-| 20 | raisedAt | Date | Datetime |  |
-| 21 | acknowledgedById | String | - | u_mes_mast_user._id |
-| 22 | acknowledgedBy | String | - |  |
-| 23 | acknowledgedAt | Date | Datetime |  |
-| 24 | expiresAt | Date | Datetime |  |
-| 25 | alertRuleId | String | - | u_mes_syst_alertRule._id |
-| 26 | alertRuleName | String | - |  |
-| 27 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
-| 28 | escalationRuleName | String | - |  |
-| 29 | responseDueAt | Date | Datetime |  |
-| 30 | resolvedAt | Date | Datetime |  |
-| 31 | resolvedById | String | - | u_mes_mast_user._id |
-| 32 | resolvedBy | String | - |  |
-| 33 | interlockEventId | String | - | u_mes_plan_interlockEvent._id |
-| 34 | interlockEventName | String | - |  |
-| 35 | status | String | - |  |
-| 36 | schemaVersion | Int32 | - |  |
-| 37 | createdAt | Date | Datetime |  |
-| 38 | createdById | String | - | u_mes_mast_user._id |
-| 39 | createdBy | String | - |  |
-| 40 | updatedAt | Date | Datetime |  |
-| 41 | updatedById | String | - | u_mes_mast_user._id |
-| 42 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | notificationTypeId | String | - | u_mes_syst_notificationType._id |
+| 7 | notificationTypeName | String | - |  |
+| 8 | severity | Int32 | - |  |
+| 9 | title | String | - |  |
+| 10 | bodyText | String | - |  |
+| 11 | relatedCollectionName | String | - |  |
+| 12 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 13 | relatedEntityName | String | - |  |
+| 14 | andonEventId | String | - | u_mes_plan_andonEvent._id |
+| 15 | andonEventName | String | - |  |
+| 16 | alarmId | String | - | u_mes_perf_alarm._id |
+| 17 | alarmName | String | - |  |
+| 18 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
+| 19 | nonconformanceName | String | - |  |
+| 20 | escalationLevel | Int32 | - |  |
+| 21 | raisedAt | Date | Datetime |  |
+| 22 | acknowledgedById | String | - | u_mes_mast_user._id |
+| 23 | acknowledgedBy | String | - |  |
+| 24 | acknowledgedAt | Date | Datetime |  |
+| 25 | expiresAt | Date | Datetime |  |
+| 26 | alertRuleId | String | - | u_mes_syst_alertRule._id |
+| 27 | alertRuleName | String | - |  |
+| 28 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
+| 29 | escalationRuleName | String | - |  |
+| 30 | responseDueAt | Date | Datetime |  |
+| 31 | resolvedAt | Date | Datetime |  |
+| 32 | resolvedById | String | - | u_mes_mast_user._id |
+| 33 | resolvedBy | String | - |  |
+| 34 | interlockEventId | String | - | u_mes_plan_interlockEvent._id |
+| 35 | interlockEventName | String | - |  |
+| 36 | status | String | - |  |
+| 37 | schemaVersion | Int32 | - |  |
+| 38 | createdAt | Date | Datetime |  |
+| 39 | createdById | String | - | u_mes_mast_user._id |
+| 40 | createdBy | String | - |  |
+| 41 | updatedAt | Date | Datetime |  |
+| 42 | updatedById | String | - | u_mes_mast_user._id |
+| 43 | updatedBy | String | - |  |
 
 ## u_mes_syst_notificationRecipient
 
@@ -467,26 +483,27 @@ Kind: child | Data class: transaction | Parent: u_mes_syst_notification | _id pa
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | notificationId | String | - | u_mes_syst_notification._id |
-| 6 | notificationName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | userId | String | - | u_mes_mast_user._id |
-| 9 | userName | String | - |  |
-| 10 | roleId | String | - | u_mes_mast_role._id |
-| 11 | roleName | String | - |  |
-| 12 | channel | String | - |  |
-| 13 | sentAt | Date | Datetime |  |
-| 14 | deliveredAt | Date | Datetime |  |
-| 15 | readAt | Date | Datetime |  |
-| 16 | schemaVersion | Int32 | - |  |
-| 17 | createdAt | Date | Datetime |  |
-| 18 | createdById | String | - | u_mes_mast_user._id |
-| 19 | createdBy | String | - |  |
-| 20 | updatedAt | Date | Datetime |  |
-| 21 | updatedById | String | - | u_mes_mast_user._id |
-| 22 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | notificationId | String | - | u_mes_syst_notification._id |
+| 7 | notificationName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | userId | String | - | u_mes_mast_user._id |
+| 10 | userName | String | - |  |
+| 11 | roleId | String | - | u_mes_mast_role._id |
+| 12 | roleName | String | - |  |
+| 13 | channel | String | - |  |
+| 14 | sentAt | Date | Datetime |  |
+| 15 | deliveredAt | Date | Datetime |  |
+| 16 | readAt | Date | Datetime |  |
+| 17 | schemaVersion | Int32 | - |  |
+| 18 | createdAt | Date | Datetime |  |
+| 19 | createdById | String | - | u_mes_mast_user._id |
+| 20 | createdBy | String | - |  |
+| 21 | updatedAt | Date | Datetime |  |
+| 22 | updatedById | String | - | u_mes_mast_user._id |
+| 23 | updatedBy | String | - |  |
 
 ## u_mes_syst_controlledDocument
 
@@ -496,435 +513,35 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | title | String | - |  |
-| 6 | documentTypeId | String | - | u_mes_syst_documentType._id |
-| 7 | documentTypeName | String | - |  |
-| 8 | revision | String | - |  |
-| 9 | itemId | String | - | u_mes_prod_item._id |
-| 10 | itemName | String | - |  |
-| 11 | relatedCollectionName | String | - |  |
-| 12 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 13 | relatedEntityName | String | - |  |
-| 14 | fileName | String | - |  |
-| 15 | mimeType | String | - |  |
-| 16 | sizeBytes | Int64 | - |  |
-| 17 | storageProvider | String | - |  |
-| 18 | storageKey | String | - |  |
-| 19 | checksumSha256 | String | - |  |
-| 20 | languageId | String | - | u_mes_mast_language._id |
-| 21 | languageName | String | - |  |
-| 22 | authorUserId | String | - | u_mes_mast_user._id |
-| 23 | authorUserName | String | - |  |
-| 24 | approvedById | String | - | u_mes_mast_user._id |
-| 25 | approvedBy | String | - |  |
-| 26 | approvedAt | Date | Datetime |  |
-| 27 | effectiveFrom | Date | Date |  |
-| 28 | expiresAt | Date | Datetime |  |
-| 29 | retentionYears | Int32 | - |  |
-| 30 | isControlled | Boolean | - |  |
-| 31 | status | String | - |  |
-| 32 | schemaVersion | Int32 | - |  |
-| 33 | createdAt | Date | Datetime |  |
-| 34 | createdById | String | - | u_mes_mast_user._id |
-| 35 | createdBy | String | - |  |
-| 36 | updatedAt | Date | Datetime |  |
-| 37 | updatedById | String | - | u_mes_mast_user._id |
-| 38 | updatedBy | String | - |  |
-
-## u_mes_syst_controlledDocumentTag
-
-Kind: valueList | Data class: transaction | Parent: u_mes_syst_controlledDocument | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | controlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 6 | controlledDocumentName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | tag | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
-| 10 | createdAt | Date | Datetime |  |
-| 11 | createdById | String | - | u_mes_mast_user._id |
-| 12 | createdBy | String | - |  |
-| 13 | updatedAt | Date | Datetime |  |
-| 14 | updatedById | String | - | u_mes_mast_user._id |
-| 15 | updatedBy | String | - |  |
-
-## u_mes_syst_numberRange
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | rangeType | String | - |  |
-| 7 | itemId | String | - | u_mes_prod_item._id |
-| 8 | itemName | String | - |  |
-| 9 | prefix | String | - |  |
-| 10 | formatMask | String | - |  |
-| 11 | currentValue | Int64 | - |  |
-| 12 | minValue | Int64 | - |  |
-| 13 | maxValue | Int64 | - |  |
-| 14 | incrementById | String | - | u_mes_mast_user._id |
-| 15 | incrementBy | String | - |  |
-| 16 | resetPolicy | String | - |  |
-| 17 | lastResetAt | Date | Datetime |  |
-| 18 | checkDigitMethod | String | - |  |
-| 19 | warnAtPct | Decimal128 | - |  |
-| 20 | lastIssuedValue | Int64 | - |  |
-| 21 | lastIssuedAt | Date | Datetime |  |
-| 22 | exampleValue | String | - |  |
-| 23 | status | String | - |  |
-| 24 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_systemConfiguration
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | module | String | - |  |
-| 6 | description | String | - |  |
-| 7 | valueType | String | - |  |
-| 8 | configValueText | String | - |  |
-| 9 | configValueNumber | Decimal128 | - |  |
-| 10 | configValueFlag | Boolean | - |  |
-| 11 | configValueJson | String | - |  |
-| 12 | scope | String | - |  |
-| 13 | isEditable | Boolean | - |  |
-| 14 | isSecret | Boolean | - |  |
-| 15 | validFrom | Date | Date |  |
-| 16 | lastChangedReason | String | - |  |
-| 17 | status | String | - |  |
-| 18 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_documentType
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | retentionYears | Int32 | - |  |
-| 8 | isControlled | Boolean | - |  |
-| 9 | sequenceNo | Int32 | - |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_deviceType
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_notificationType
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_statusDefinition
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | collectionName | String | - |  |
-| 6 | fieldName | String | - |  |
-| 7 | statusCode | String | - |  |
-| 8 | statusName | String | - |  |
-| 9 | description | String | - |  |
-| 10 | sequenceNo | Int32 | - |  |
-| 11 | isInitial | Boolean | - |  |
-| 12 | isFinal | Boolean | - |  |
-| 13 | colourCode | String | - |  |
-| 14 | status | String | - |  |
-| 15 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_enumerationValue
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | collectionName | String | - |  |
-| 6 | fieldName | String | - |  |
-| 7 | valueCode | String | - |  |
-| 8 | valueName | String | - |  |
-| 9 | description | String | - |  |
-| 10 | sequenceNo | Int32 | - |  |
-| 11 | isDefault | Boolean | - |  |
-| 12 | status | String | - |  |
-| 13 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_statusTransition
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | collectionName | String | - |  |
-| 6 | fromStatusDefinitionId | String | - | u_mes_syst_statusDefinition._id |
-| 7 | fromStatusDefinitionName | String | - |  |
-| 8 | toStatusDefinitionId | String | - | u_mes_syst_statusDefinition._id |
-| 9 | toStatusDefinitionName | String | - |  |
-| 10 | transitionName | String | - |  |
-| 11 | requiresSignature | Boolean | - |  |
-| 12 | requiresReason | Boolean | - |  |
-| 13 | sequenceNo | Int32 | - |  |
-| 14 | status | String | - |  |
-| 15 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_interlockRule
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | ruleType | String | - |  |
-| 7 | transactionPoint | String | - |  |
-| 8 | lineId | String | - | u_mes_mast_line._id |
-| 9 | lineName | String | - |  |
-| 10 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 11 | workCenterName | String | - |  |
-| 12 | operationId | String | - | u_mes_prod_operation._id |
-| 13 | operationName | String | - |  |
-| 14 | itemId | String | - | u_mes_prod_item._id |
-| 15 | itemName | String | - |  |
-| 16 | enforcementMode | String | - |  |
-| 17 | overrideAllowed | Boolean | - |  |
-| 18 | overrideRoleId | String | - | u_mes_mast_role._id |
-| 19 | overrideRoleName | String | - |  |
-| 20 | overrideRequiresSignature | Boolean | - |  |
-| 21 | overrideRequiresReasonCode | Boolean | - |  |
-| 22 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
-| 23 | escalationRuleName | String | - |  |
-| 24 | messageText | String | - |  |
-| 25 | validFrom | Date | Date |  |
-| 26 | validTo | Date | Date |  |
-| 27 | status | String | - |  |
-| 28 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_statusTransitionRole
-
-Kind: relationship | Data class: master | Parent: u_mes_syst_statusTransition | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | statusTransitionId | String | - | u_mes_syst_statusTransition._id |
-| 6 | statusTransitionName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | roleId | String | - | u_mes_mast_role._id |
-| 9 | roleName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_escalationRule
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | sourceType | String | - |  |
-| 7 | severityClass | String | - |  |
-| 8 | lineId | String | - | u_mes_mast_line._id |
-| 9 | lineName | String | - |  |
-| 10 | firstResponderRoleId | String | - | u_mes_mast_role._id |
-| 11 | firstResponderRoleName | String | - |  |
-| 12 | requiredSkillId | String | - | u_mes_mast_skill._id |
-| 13 | requiredSkillName | String | - |  |
-| 14 | responseTargetMinutes | Int32 | - |  |
-| 15 | resolutionTargetMinutes | Int32 | - |  |
-| 16 | status | String | - |  |
-| 17 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_escalationRuleLevel
-
-Kind: child | Data class: master | Parent: u_mes_syst_escalationRule | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
-| 6 | escalationRuleName | String | - |  |
-| 7 | level | Int32 | - |  |
-| 8 | delayMinutes | Int32 | - |  |
-| 9 | basis | String | - |  |
-| 10 | roleId | String | - | u_mes_mast_role._id |
-| 11 | roleName | String | - |  |
-| 12 | notificationTypeId | String | - | u_mes_syst_notificationType._id |
-| 13 | notificationTypeName | String | - |  |
-| 14 | channel | String | - |  |
-| 15 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_alertRule
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | metric | String | - |  |
-| 7 | lineId | String | - | u_mes_mast_line._id |
-| 8 | lineName | String | - |  |
-| 9 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 10 | workCenterName | String | - |  |
-| 11 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 12 | equipmentName | String | - |  |
-| 13 | processTagId | String | - | u_mes_perf_processTag._id |
-| 14 | processTagName | String | - |  |
-| 15 | itemId | String | - | u_mes_prod_item._id |
-| 16 | itemName | String | - |  |
-| 17 | comparison | String | - |  |
-| 18 | thresholdValue | Decimal128 | - |  |
-| 19 | thresholdUpperValue | Decimal128 | - |  |
-| 20 | evaluationWindowMinutes | Int32 | - |  |
-| 21 | severityClass | String | - |  |
-| 22 | actionType | String | - |  |
-| 23 | notificationTypeId | String | - | u_mes_syst_notificationType._id |
-| 24 | notificationTypeName | String | - |  |
-| 25 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
-| 26 | escalationRuleName | String | - |  |
-| 27 | falseAlertCount | Int32 | - |  |
-| 28 | status | String | - |  |
-| 29 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_analyticsModel
-
-Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | modelType | String | - |  |
-| 7 | modelVersion | String | - |  |
-| 8 | framework | String | - |  |
-| 9 | trainingDatasetRef | String | - |  |
-| 10 | validationMetricName | String | - |  |
-| 11 | validationMetricValue | Decimal128 | - |  |
-| 12 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 13 | equipmentName | String | - |  |
-| 14 | modelControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 15 | modelControlledDocumentName | String | - |  |
-| 16 | effectiveFrom | Date | Date |  |
-| 17 | effectiveTo | Date | Date |  |
-| 18 | approvedById | String | - | u_mes_mast_user._id |
-| 19 | approvedBy | String | - |  |
-| 20 | approvedAt | Date | Datetime |  |
-| 21 | status | String | - |  |
-| 22 | schemaVersion | Int32 | - |  |
-
-## u_mes_syst_modelPrediction
-
-Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
-
-| # | Key | BSON type | Date tag | References |
-|---|---|---|---|---|
-| 1 | _id | String | - |  |
-| 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | analyticsModelId | String | - | u_mes_syst_analyticsModel._id |
-| 6 | analyticsModelName | String | - |  |
-| 7 | modelVersion | String | - |  |
-| 8 | predictionType | String | - |  |
-| 9 | relatedCollectionName | String | - |  |
-| 10 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 11 | relatedEntityName | String | - |  |
-| 12 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 13 | workCenterName | String | - |  |
-| 14 | productVariantId | String | - | u_mes_prod_productVariant._id |
-| 15 | productVariantName | String | - |  |
-| 16 | shiftId | String | - | u_mes_mast_shift._id |
-| 17 | shiftName | String | - |  |
-| 18 | predictedAt | Date | Datetime |  |
-| 19 | horizonMinutes | Int32 | - |  |
-| 20 | predictedClass | String | - |  |
-| 21 | predictedValue | Decimal128 | - |  |
-| 22 | confidence | Decimal128 | - |  |
-| 23 | recommendedAction | String | - |  |
-| 24 | actionStatus | String | - |  |
-| 25 | actionTakenById | String | - | u_mes_mast_user._id |
-| 26 | actionTakenBy | String | - |  |
-| 27 | actionTakenAt | Date | Datetime |  |
-| 28 | actualValue | Decimal128 | - |  |
-| 29 | actualClass | String | - |  |
-| 30 | notificationId | String | - | u_mes_syst_notification._id |
-| 31 | notificationName | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | title | String | - |  |
+| 7 | documentTypeId | String | - | u_mes_syst_documentType._id |
+| 8 | documentTypeName | String | - |  |
+| 9 | revision | String | - |  |
+| 10 | itemId | String | - | u_mes_prod_item._id |
+| 11 | itemName | String | - |  |
+| 12 | relatedCollectionName | String | - |  |
+| 13 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 14 | relatedEntityName | String | - |  |
+| 15 | fileName | String | - |  |
+| 16 | mimeType | String | - |  |
+| 17 | sizeBytes | Int64 | - |  |
+| 18 | storageProvider | String | - |  |
+| 19 | storageKey | String | - |  |
+| 20 | checksumSha256 | String | - |  |
+| 21 | languageId | String | - | u_mes_mast_language._id |
+| 22 | languageName | String | - |  |
+| 23 | authorUserId | String | - | u_mes_mast_user._id |
+| 24 | authorUserName | String | - |  |
+| 25 | approvedById | String | - | u_mes_mast_user._id |
+| 26 | approvedBy | String | - |  |
+| 27 | approvedAt | Date | Datetime |  |
+| 28 | effectiveFrom | Date | Date |  |
+| 29 | expiresAt | Date | Datetime |  |
+| 30 | retentionYears | Int32 | - |  |
+| 31 | isControlled | Boolean | - |  |
 | 32 | status | String | - |  |
 | 33 | schemaVersion | Int32 | - |  |
 | 34 | createdAt | Date | Datetime |  |
@@ -934,6 +551,423 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 38 | updatedById | String | - | u_mes_mast_user._id |
 | 39 | updatedBy | String | - |  |
 
+## u_mes_syst_controlledDocumentTag
+
+Kind: valueList | Data class: transaction | Parent: u_mes_syst_controlledDocument | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | controlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 7 | controlledDocumentName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | tag | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
+| 11 | createdAt | Date | Datetime |  |
+| 12 | createdById | String | - | u_mes_mast_user._id |
+| 13 | createdBy | String | - |  |
+| 14 | updatedAt | Date | Datetime |  |
+| 15 | updatedById | String | - | u_mes_mast_user._id |
+| 16 | updatedBy | String | - |  |
+
+## u_mes_syst_numberRange
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | rangeType | String | - |  |
+| 8 | itemId | String | - | u_mes_prod_item._id |
+| 9 | itemName | String | - |  |
+| 10 | prefix | String | - |  |
+| 11 | formatMask | String | - |  |
+| 12 | currentValue | Int64 | - |  |
+| 13 | minValue | Int64 | - |  |
+| 14 | maxValue | Int64 | - |  |
+| 15 | incrementById | String | - | u_mes_mast_user._id |
+| 16 | incrementBy | String | - |  |
+| 17 | resetPolicy | String | - |  |
+| 18 | lastResetAt | Date | Datetime |  |
+| 19 | checkDigitMethod | String | - |  |
+| 20 | warnAtPct | Decimal128 | - |  |
+| 21 | lastIssuedValue | Int64 | - |  |
+| 22 | lastIssuedAt | Date | Datetime |  |
+| 23 | exampleValue | String | - |  |
+| 24 | status | String | - |  |
+| 25 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_systemConfiguration
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | module | String | - |  |
+| 7 | description | String | - |  |
+| 8 | valueType | String | - |  |
+| 9 | configValueText | String | - |  |
+| 10 | configValueNumber | Decimal128 | - |  |
+| 11 | configValueFlag | Boolean | - |  |
+| 12 | configValueJson | String | - |  |
+| 13 | scope | String | - |  |
+| 14 | isEditable | Boolean | - |  |
+| 15 | isSecret | Boolean | - |  |
+| 16 | validFrom | Date | Date |  |
+| 17 | lastChangedReason | String | - |  |
+| 18 | status | String | - |  |
+| 19 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_documentType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | retentionYears | Int32 | - |  |
+| 9 | isControlled | Boolean | - |  |
+| 10 | sequenceNo | Int32 | - |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_deviceType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_notificationType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_statusDefinition
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | collectionName | String | - |  |
+| 7 | fieldName | String | - |  |
+| 8 | statusCode | String | - |  |
+| 9 | statusName | String | - |  |
+| 10 | description | String | - |  |
+| 11 | sequenceNo | Int32 | - |  |
+| 12 | isInitial | Boolean | - |  |
+| 13 | isFinal | Boolean | - |  |
+| 14 | colourCode | String | - |  |
+| 15 | status | String | - |  |
+| 16 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_enumerationValue
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | collectionName | String | - |  |
+| 7 | fieldName | String | - |  |
+| 8 | valueCode | String | - |  |
+| 9 | valueName | String | - |  |
+| 10 | description | String | - |  |
+| 11 | sequenceNo | Int32 | - |  |
+| 12 | isDefault | Boolean | - |  |
+| 13 | status | String | - |  |
+| 14 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_statusTransition
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | collectionName | String | - |  |
+| 7 | fromStatusDefinitionId | String | - | u_mes_syst_statusDefinition._id |
+| 8 | fromStatusDefinitionName | String | - |  |
+| 9 | toStatusDefinitionId | String | - | u_mes_syst_statusDefinition._id |
+| 10 | toStatusDefinitionName | String | - |  |
+| 11 | transitionName | String | - |  |
+| 12 | requiresSignature | Boolean | - |  |
+| 13 | requiresReason | Boolean | - |  |
+| 14 | sequenceNo | Int32 | - |  |
+| 15 | status | String | - |  |
+| 16 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_interlockRule
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | ruleType | String | - |  |
+| 8 | transactionPoint | String | - |  |
+| 9 | lineId | String | - | u_mes_mast_line._id |
+| 10 | lineName | String | - |  |
+| 11 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 12 | workCenterName | String | - |  |
+| 13 | operationId | String | - | u_mes_prod_operation._id |
+| 14 | operationName | String | - |  |
+| 15 | itemId | String | - | u_mes_prod_item._id |
+| 16 | itemName | String | - |  |
+| 17 | enforcementMode | String | - |  |
+| 18 | overrideAllowed | Boolean | - |  |
+| 19 | overrideRoleId | String | - | u_mes_mast_role._id |
+| 20 | overrideRoleName | String | - |  |
+| 21 | overrideRequiresSignature | Boolean | - |  |
+| 22 | overrideRequiresReasonCode | Boolean | - |  |
+| 23 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
+| 24 | escalationRuleName | String | - |  |
+| 25 | messageText | String | - |  |
+| 26 | validFrom | Date | Date |  |
+| 27 | validTo | Date | Date |  |
+| 28 | status | String | - |  |
+| 29 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_statusTransitionRole
+
+Kind: relationship | Data class: master | Parent: u_mes_syst_statusTransition | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | statusTransitionId | String | - | u_mes_syst_statusTransition._id |
+| 7 | statusTransitionName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | roleId | String | - | u_mes_mast_role._id |
+| 10 | roleName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_escalationRule
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | sourceType | String | - |  |
+| 8 | severityClass | String | - |  |
+| 9 | lineId | String | - | u_mes_mast_line._id |
+| 10 | lineName | String | - |  |
+| 11 | firstResponderRoleId | String | - | u_mes_mast_role._id |
+| 12 | firstResponderRoleName | String | - |  |
+| 13 | requiredSkillId | String | - | u_mes_mast_skill._id |
+| 14 | requiredSkillName | String | - |  |
+| 15 | responseTargetMinutes | Int32 | - |  |
+| 16 | resolutionTargetMinutes | Int32 | - |  |
+| 17 | status | String | - |  |
+| 18 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_escalationRuleLevel
+
+Kind: child | Data class: master | Parent: u_mes_syst_escalationRule | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
+| 7 | escalationRuleName | String | - |  |
+| 8 | level | Int32 | - |  |
+| 9 | delayMinutes | Int32 | - |  |
+| 10 | basis | String | - |  |
+| 11 | roleId | String | - | u_mes_mast_role._id |
+| 12 | roleName | String | - |  |
+| 13 | notificationTypeId | String | - | u_mes_syst_notificationType._id |
+| 14 | notificationTypeName | String | - |  |
+| 15 | channel | String | - |  |
+| 16 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_alertRule
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | metric | String | - |  |
+| 8 | lineId | String | - | u_mes_mast_line._id |
+| 9 | lineName | String | - |  |
+| 10 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 11 | workCenterName | String | - |  |
+| 12 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 13 | equipmentName | String | - |  |
+| 14 | processTagId | String | - | u_mes_perf_processTag._id |
+| 15 | processTagName | String | - |  |
+| 16 | itemId | String | - | u_mes_prod_item._id |
+| 17 | itemName | String | - |  |
+| 18 | comparison | String | - |  |
+| 19 | thresholdValue | Decimal128 | - |  |
+| 20 | thresholdUpperValue | Decimal128 | - |  |
+| 21 | evaluationWindowMinutes | Int32 | - |  |
+| 22 | severityClass | String | - |  |
+| 23 | actionType | String | - |  |
+| 24 | notificationTypeId | String | - | u_mes_syst_notificationType._id |
+| 25 | notificationTypeName | String | - |  |
+| 26 | escalationRuleId | String | - | u_mes_syst_escalationRule._id |
+| 27 | escalationRuleName | String | - |  |
+| 28 | falseAlertCount | Int32 | - |  |
+| 29 | status | String | - |  |
+| 30 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_analyticsModel
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | modelType | String | - |  |
+| 8 | modelVersion | String | - |  |
+| 9 | framework | String | - |  |
+| 10 | trainingDatasetRef | String | - |  |
+| 11 | validationMetricName | String | - |  |
+| 12 | validationMetricValue | Decimal128 | - |  |
+| 13 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 14 | equipmentName | String | - |  |
+| 15 | modelControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 16 | modelControlledDocumentName | String | - |  |
+| 17 | effectiveFrom | Date | Date |  |
+| 18 | effectiveTo | Date | Date |  |
+| 19 | approvedById | String | - | u_mes_mast_user._id |
+| 20 | approvedBy | String | - |  |
+| 21 | approvedAt | Date | Datetime |  |
+| 22 | status | String | - |  |
+| 23 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_modelPrediction
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | analyticsModelId | String | - | u_mes_syst_analyticsModel._id |
+| 7 | analyticsModelName | String | - |  |
+| 8 | modelVersion | String | - |  |
+| 9 | predictionType | String | - |  |
+| 10 | relatedCollectionName | String | - |  |
+| 11 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 12 | relatedEntityName | String | - |  |
+| 13 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 14 | workCenterName | String | - |  |
+| 15 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 16 | productVariantName | String | - |  |
+| 17 | shiftId | String | - | u_mes_mast_shift._id |
+| 18 | shiftName | String | - |  |
+| 19 | predictedAt | Date | Datetime |  |
+| 20 | horizonMinutes | Int32 | - |  |
+| 21 | predictedClass | String | - |  |
+| 22 | predictedValue | Decimal128 | - |  |
+| 23 | confidence | Decimal128 | - |  |
+| 24 | recommendedAction | String | - |  |
+| 25 | actionStatus | String | - |  |
+| 26 | actionTakenById | String | - | u_mes_mast_user._id |
+| 27 | actionTakenBy | String | - |  |
+| 28 | actionTakenAt | Date | Datetime |  |
+| 29 | actualValue | Decimal128 | - |  |
+| 30 | actualClass | String | - |  |
+| 31 | notificationId | String | - | u_mes_syst_notification._id |
+| 32 | notificationName | String | - |  |
+| 33 | status | String | - |  |
+| 34 | schemaVersion | Int32 | - |  |
+| 35 | createdAt | Date | Datetime |  |
+| 36 | createdById | String | - | u_mes_mast_user._id |
+| 37 | createdBy | String | - |  |
+| 38 | updatedAt | Date | Datetime |  |
+| 39 | updatedById | String | - | u_mes_mast_user._id |
+| 40 | updatedBy | String | - |  |
+
 ## u_mes_syst_simulationStudy
 
 Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
@@ -942,37 +976,38 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | title | String | - |  |
-| 6 | studyType | String | - |  |
-| 7 | relatedCollectionName | String | - |  |
-| 8 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 9 | relatedEntityName | String | - |  |
-| 10 | scenarioText | String | - |  |
-| 11 | inputSnapshotAt | Date | Datetime |  |
-| 12 | resultText | String | - |  |
-| 13 | predictedValue | Decimal128 | - |  |
-| 14 | predictedKpi | String | - |  |
-| 15 | recommendedRecipeId | String | - | u_mes_prod_recipe._id |
-| 16 | recommendedRecipeName | String | - |  |
-| 17 | rolloutProductionOrderId | String | - | u_mes_plan_productionOrder._id |
-| 18 | rolloutProductionOrderName | String | - |  |
-| 19 | actualValue | Decimal128 | - |  |
-| 20 | comparisonResult | String | - |  |
-| 21 | resultControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 22 | resultControlledDocumentName | String | - |  |
-| 23 | approvedById | String | - | u_mes_mast_user._id |
-| 24 | approvedBy | String | - |  |
-| 25 | approvedAt | Date | Datetime |  |
-| 26 | status | String | - |  |
-| 27 | schemaVersion | Int32 | - |  |
-| 28 | createdAt | Date | Datetime |  |
-| 29 | createdById | String | - | u_mes_mast_user._id |
-| 30 | createdBy | String | - |  |
-| 31 | updatedAt | Date | Datetime |  |
-| 32 | updatedById | String | - | u_mes_mast_user._id |
-| 33 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | title | String | - |  |
+| 7 | studyType | String | - |  |
+| 8 | relatedCollectionName | String | - |  |
+| 9 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 10 | relatedEntityName | String | - |  |
+| 11 | scenarioText | String | - |  |
+| 12 | inputSnapshotAt | Date | Datetime |  |
+| 13 | resultText | String | - |  |
+| 14 | predictedValue | Decimal128 | - |  |
+| 15 | predictedKpi | String | - |  |
+| 16 | recommendedRecipeId | String | - | u_mes_prod_recipe._id |
+| 17 | recommendedRecipeName | String | - |  |
+| 18 | rolloutProductionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 19 | rolloutProductionOrderName | String | - |  |
+| 20 | actualValue | Decimal128 | - |  |
+| 21 | comparisonResult | String | - |  |
+| 22 | resultControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 23 | resultControlledDocumentName | String | - |  |
+| 24 | approvedById | String | - | u_mes_mast_user._id |
+| 25 | approvedBy | String | - |  |
+| 26 | approvedAt | Date | Datetime |  |
+| 27 | status | String | - |  |
+| 28 | schemaVersion | Int32 | - |  |
+| 29 | createdAt | Date | Datetime |  |
+| 30 | createdById | String | - | u_mes_mast_user._id |
+| 31 | createdBy | String | - |  |
+| 32 | updatedAt | Date | Datetime |  |
+| 33 | updatedById | String | - | u_mes_mast_user._id |
+| 34 | updatedBy | String | - |  |
 
 ## u_mes_syst_recordPolicy
 
@@ -982,22 +1017,23 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | collectionName | String | - |  |
-| 6 | editPolicy | String | - |  |
-| 7 | lockOnStatusDefinitionId | String | - | u_mes_syst_statusDefinition._id |
-| 8 | lockOnStatusDefinitionName | String | - |  |
-| 9 | requiresReasonForEdit | Boolean | - |  |
-| 10 | requiresSignatureForEdit | Boolean | - |  |
-| 11 | editRoleId | String | - | u_mes_mast_role._id |
-| 12 | editRoleName | String | - |  |
-| 13 | deleteAllowed | Boolean | - |  |
-| 14 | retentionYears | Int32 | - |  |
-| 15 | archiveAfterMonths | Int32 | - |  |
-| 16 | gxpRelevant | Boolean | - |  |
-| 17 | status | String | - |  |
-| 18 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | collectionName | String | - |  |
+| 7 | editPolicy | String | - |  |
+| 8 | lockOnStatusDefinitionId | String | - | u_mes_syst_statusDefinition._id |
+| 9 | lockOnStatusDefinitionName | String | - |  |
+| 10 | requiresReasonForEdit | Boolean | - |  |
+| 11 | requiresSignatureForEdit | Boolean | - |  |
+| 12 | editRoleId | String | - | u_mes_mast_role._id |
+| 13 | editRoleName | String | - |  |
+| 14 | deleteAllowed | Boolean | - |  |
+| 15 | retentionYears | Int32 | - |  |
+| 16 | archiveAfterMonths | Int32 | - |  |
+| 17 | gxpRelevant | Boolean | - |  |
+| 18 | status | String | - |  |
+| 19 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_savedView
 
@@ -1007,20 +1043,21 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | viewType | String | - |  |
-| 7 | collectionName | String | - |  |
-| 8 | filterJson | String | - |  |
-| 9 | sortJson | String | - |  |
-| 10 | ownerUserId | String | - | u_mes_mast_user._id |
-| 11 | ownerUserName | String | - |  |
-| 12 | roleId | String | - | u_mes_mast_role._id |
-| 13 | roleName | String | - |  |
-| 14 | isShared | Boolean | - |  |
-| 15 | status | String | - |  |
-| 16 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | viewType | String | - |  |
+| 8 | collectionName | String | - |  |
+| 9 | filterJson | String | - |  |
+| 10 | sortJson | String | - |  |
+| 11 | ownerUserId | String | - | u_mes_mast_user._id |
+| 12 | ownerUserName | String | - |  |
+| 13 | roleId | String | - | u_mes_mast_role._id |
+| 14 | roleName | String | - |  |
+| 15 | isShared | Boolean | - |  |
+| 16 | status | String | - |  |
+| 17 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_backupRun
 
@@ -1030,27 +1067,28 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | runType | String | - |  |
-| 6 | startedAt | Date | Datetime |  |
-| 7 | completedAt | Date | Datetime |  |
-| 8 | sizeBytes | Int64 | - |  |
-| 9 | storageTarget | String | - |  |
-| 10 | recoveryTimeMinutes | Int32 | - |  |
-| 11 | recoveryPointMinutes | Int32 | - |  |
-| 12 | evidenceControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 13 | evidenceControlledDocumentName | String | - |  |
-| 14 | performedById | String | - | u_mes_mast_user._id |
-| 15 | performedBy | String | - |  |
-| 16 | status | String | - |  |
-| 17 | schemaVersion | Int32 | - |  |
-| 18 | createdAt | Date | Datetime |  |
-| 19 | createdById | String | - | u_mes_mast_user._id |
-| 20 | createdBy | String | - |  |
-| 21 | updatedAt | Date | Datetime |  |
-| 22 | updatedById | String | - | u_mes_mast_user._id |
-| 23 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | runType | String | - |  |
+| 7 | startedAt | Date | Datetime |  |
+| 8 | completedAt | Date | Datetime |  |
+| 9 | sizeBytes | Int64 | - |  |
+| 10 | storageTarget | String | - |  |
+| 11 | recoveryTimeMinutes | Int32 | - |  |
+| 12 | recoveryPointMinutes | Int32 | - |  |
+| 13 | evidenceControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 14 | evidenceControlledDocumentName | String | - |  |
+| 15 | performedById | String | - | u_mes_mast_user._id |
+| 16 | performedBy | String | - |  |
+| 17 | status | String | - |  |
+| 18 | schemaVersion | Int32 | - |  |
+| 19 | createdAt | Date | Datetime |  |
+| 20 | createdById | String | - | u_mes_mast_user._id |
+| 21 | createdBy | String | - |  |
+| 22 | updatedAt | Date | Datetime |  |
+| 23 | updatedById | String | - | u_mes_mast_user._id |
+| 24 | updatedBy | String | - |  |
 
 ## u_mes_syst_computerisedSystem
 
@@ -1060,31 +1098,32 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | systemCategory | String | - |  |
-| 8 | gampCategory | String | - |  |
-| 9 | gxpImpact | String | - |  |
-| 10 | dataCriticality | String | - |  |
-| 11 | holdsElectronicRecords | Boolean | - |  |
-| 12 | usesElectronicSignatures | Boolean | - |  |
-| 13 | systemOwnerUserId | String | - | u_mes_mast_user._id |
-| 14 | systemOwnerUserName | String | - |  |
-| 15 | processOwnerUserId | String | - | u_mes_mast_user._id |
-| 16 | processOwnerUserName | String | - |  |
-| 17 | supplierId | String | - | u_mes_mast_supplier._id |
-| 18 | supplierName | String | - |  |
-| 19 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 20 | equipmentName | String | - |  |
-| 21 | softwareVersion | String | - |  |
-| 22 | hostingModel | String | - |  |
-| 23 | lastValidatedDate | Date | Date |  |
-| 24 | periodicReviewIntervalMonths | Int32 | - |  |
-| 25 | nextPeriodicReviewDate | Date | Date |  |
-| 26 | status | String | - |  |
-| 27 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | systemCategory | String | - |  |
+| 9 | gampCategory | String | - |  |
+| 10 | gxpImpact | String | - |  |
+| 11 | dataCriticality | String | - |  |
+| 12 | holdsElectronicRecords | Boolean | - |  |
+| 13 | usesElectronicSignatures | Boolean | - |  |
+| 14 | systemOwnerUserId | String | - | u_mes_mast_user._id |
+| 15 | systemOwnerUserName | String | - |  |
+| 16 | processOwnerUserId | String | - | u_mes_mast_user._id |
+| 17 | processOwnerUserName | String | - |  |
+| 18 | supplierId | String | - | u_mes_mast_supplier._id |
+| 19 | supplierName | String | - |  |
+| 20 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 21 | equipmentName | String | - |  |
+| 22 | softwareVersion | String | - |  |
+| 23 | hostingModel | String | - |  |
+| 24 | lastValidatedDate | Date | Date |  |
+| 25 | periodicReviewIntervalMonths | Int32 | - |  |
+| 26 | nextPeriodicReviewDate | Date | Date |  |
+| 27 | status | String | - |  |
+| 28 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_systemValidation
 
@@ -1094,42 +1133,43 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
-| 6 | computerisedSystemName | String | - |  |
-| 7 | title | String | - |  |
-| 8 | validationType | String | - |  |
-| 9 | assuranceApproach | String | - |  |
-| 10 | releaseVersion | String | - |  |
-| 11 | engineeringChangeId | String | - | u_mes_prod_engineeringChange._id |
-| 12 | engineeringChangeName | String | - |  |
-| 13 | riskAssessmentId | String | - | u_mes_qual_riskAssessment._id |
-| 14 | riskAssessmentName | String | - |  |
-| 15 | protocolControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 16 | protocolControlledDocumentName | String | - |  |
-| 17 | reportControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 18 | reportControlledDocumentName | String | - |  |
-| 19 | testCaseCount | Int32 | - |  |
-| 20 | testFailedCount | Int32 | - |  |
-| 21 | openDeviationCount | Int32 | - |  |
-| 22 | plannedStartDate | Date | Date |  |
-| 23 | startedAt | Date | Datetime |  |
-| 24 | completedAt | Date | Datetime |  |
-| 25 | approvedById | String | - | u_mes_mast_user._id |
-| 26 | approvedBy | String | - |  |
-| 27 | approvedAt | Date | Datetime |  |
-| 28 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
-| 29 | electronicSignatureName | String | - |  |
-| 30 | conclusionText | String | - |  |
-| 31 | status | String | - |  |
-| 32 | schemaVersion | Int32 | - |  |
-| 33 | createdAt | Date | Datetime |  |
-| 34 | createdById | String | - | u_mes_mast_user._id |
-| 35 | createdBy | String | - |  |
-| 36 | updatedAt | Date | Datetime |  |
-| 37 | updatedById | String | - | u_mes_mast_user._id |
-| 38 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
+| 7 | computerisedSystemName | String | - |  |
+| 8 | title | String | - |  |
+| 9 | validationType | String | - |  |
+| 10 | assuranceApproach | String | - |  |
+| 11 | releaseVersion | String | - |  |
+| 12 | engineeringChangeId | String | - | u_mes_prod_engineeringChange._id |
+| 13 | engineeringChangeName | String | - |  |
+| 14 | riskAssessmentId | String | - | u_mes_qual_riskAssessment._id |
+| 15 | riskAssessmentName | String | - |  |
+| 16 | protocolControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 17 | protocolControlledDocumentName | String | - |  |
+| 18 | reportControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 19 | reportControlledDocumentName | String | - |  |
+| 20 | testCaseCount | Int32 | - |  |
+| 21 | testFailedCount | Int32 | - |  |
+| 22 | openDeviationCount | Int32 | - |  |
+| 23 | plannedStartDate | Date | Date |  |
+| 24 | startedAt | Date | Datetime |  |
+| 25 | completedAt | Date | Datetime |  |
+| 26 | approvedById | String | - | u_mes_mast_user._id |
+| 27 | approvedBy | String | - |  |
+| 28 | approvedAt | Date | Datetime |  |
+| 29 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 30 | electronicSignatureName | String | - |  |
+| 31 | conclusionText | String | - |  |
+| 32 | status | String | - |  |
+| 33 | schemaVersion | Int32 | - |  |
+| 34 | createdAt | Date | Datetime |  |
+| 35 | createdById | String | - | u_mes_mast_user._id |
+| 36 | createdBy | String | - |  |
+| 37 | updatedAt | Date | Datetime |  |
+| 38 | updatedById | String | - | u_mes_mast_user._id |
+| 39 | updatedBy | String | - |  |
 
 ## u_mes_syst_systemPeriodicReview
 
@@ -1139,35 +1179,36 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
-| 6 | computerisedSystemName | String | - |  |
-| 7 | reviewPeriodFromDate | Date | Date |  |
-| 8 | reviewPeriodToDate | Date | Date |  |
-| 9 | changesReviewedCount | Int32 | - |  |
-| 10 | incidentsReviewedCount | Int32 | - |  |
-| 11 | deviationsReviewedCount | Int32 | - |  |
-| 12 | auditTrailReviewed | Boolean | - |  |
-| 13 | accessReviewed | Boolean | - |  |
-| 14 | backupRestoreVerified | Boolean | - |  |
-| 15 | validatedStateConfirmed | Boolean | - |  |
-| 16 | findingsText | String | - |  |
-| 17 | reviewedById | String | - | u_mes_mast_user._id |
-| 18 | reviewedBy | String | - |  |
-| 19 | reviewedAt | Date | Datetime |  |
-| 20 | approvedById | String | - | u_mes_mast_user._id |
-| 21 | approvedBy | String | - |  |
-| 22 | approvedAt | Date | Datetime |  |
-| 23 | nextReviewDate | Date | Date |  |
-| 24 | status | String | - |  |
-| 25 | schemaVersion | Int32 | - |  |
-| 26 | createdAt | Date | Datetime |  |
-| 27 | createdById | String | - | u_mes_mast_user._id |
-| 28 | createdBy | String | - |  |
-| 29 | updatedAt | Date | Datetime |  |
-| 30 | updatedById | String | - | u_mes_mast_user._id |
-| 31 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
+| 7 | computerisedSystemName | String | - |  |
+| 8 | reviewPeriodFromDate | Date | Date |  |
+| 9 | reviewPeriodToDate | Date | Date |  |
+| 10 | changesReviewedCount | Int32 | - |  |
+| 11 | incidentsReviewedCount | Int32 | - |  |
+| 12 | deviationsReviewedCount | Int32 | - |  |
+| 13 | auditTrailReviewed | Boolean | - |  |
+| 14 | accessReviewed | Boolean | - |  |
+| 15 | backupRestoreVerified | Boolean | - |  |
+| 16 | validatedStateConfirmed | Boolean | - |  |
+| 17 | findingsText | String | - |  |
+| 18 | reviewedById | String | - | u_mes_mast_user._id |
+| 19 | reviewedBy | String | - |  |
+| 20 | reviewedAt | Date | Datetime |  |
+| 21 | approvedById | String | - | u_mes_mast_user._id |
+| 22 | approvedBy | String | - |  |
+| 23 | approvedAt | Date | Datetime |  |
+| 24 | nextReviewDate | Date | Date |  |
+| 25 | status | String | - |  |
+| 26 | schemaVersion | Int32 | - |  |
+| 27 | createdAt | Date | Datetime |  |
+| 28 | createdById | String | - | u_mes_mast_user._id |
+| 29 | createdBy | String | - |  |
+| 30 | updatedAt | Date | Datetime |  |
+| 31 | updatedById | String | - | u_mes_mast_user._id |
+| 32 | updatedBy | String | - |  |
 
 ## u_mes_syst_auditTrailReview
 
@@ -1177,35 +1218,36 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | reviewType | String | - |  |
-| 6 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
-| 7 | computerisedSystemName | String | - |  |
-| 8 | relatedCollectionName | String | - |  |
-| 9 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
-| 10 | relatedEntityName | String | - |  |
-| 11 | reviewFromAt | Date | Datetime |  |
-| 12 | reviewToAt | Date | Datetime |  |
-| 13 | entriesReviewedCount | Int32 | - |  |
-| 14 | criticalEntriesCount | Int32 | - |  |
-| 15 | anomalyCount | Int32 | - |  |
-| 16 | findingsText | String | - |  |
-| 17 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
-| 18 | nonconformanceName | String | - |  |
-| 19 | reviewedById | String | - | u_mes_mast_user._id |
-| 20 | reviewedBy | String | - |  |
-| 21 | reviewedAt | Date | Datetime |  |
-| 22 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
-| 23 | electronicSignatureName | String | - |  |
-| 24 | status | String | - |  |
-| 25 | schemaVersion | Int32 | - |  |
-| 26 | createdAt | Date | Datetime |  |
-| 27 | createdById | String | - | u_mes_mast_user._id |
-| 28 | createdBy | String | - |  |
-| 29 | updatedAt | Date | Datetime |  |
-| 30 | updatedById | String | - | u_mes_mast_user._id |
-| 31 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | reviewType | String | - |  |
+| 7 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
+| 8 | computerisedSystemName | String | - |  |
+| 9 | relatedCollectionName | String | - |  |
+| 10 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 11 | relatedEntityName | String | - |  |
+| 12 | reviewFromAt | Date | Datetime |  |
+| 13 | reviewToAt | Date | Datetime |  |
+| 14 | entriesReviewedCount | Int32 | - |  |
+| 15 | criticalEntriesCount | Int32 | - |  |
+| 16 | anomalyCount | Int32 | - |  |
+| 17 | findingsText | String | - |  |
+| 18 | nonconformanceId | String | - | u_mes_qual_nonconformance._id |
+| 19 | nonconformanceName | String | - |  |
+| 20 | reviewedById | String | - | u_mes_mast_user._id |
+| 21 | reviewedBy | String | - |  |
+| 22 | reviewedAt | Date | Datetime |  |
+| 23 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 24 | electronicSignatureName | String | - |  |
+| 25 | status | String | - |  |
+| 26 | schemaVersion | Int32 | - |  |
+| 27 | createdAt | Date | Datetime |  |
+| 28 | createdById | String | - | u_mes_mast_user._id |
+| 29 | createdBy | String | - |  |
+| 30 | updatedAt | Date | Datetime |  |
+| 31 | updatedById | String | - | u_mes_mast_user._id |
+| 32 | updatedBy | String | - |  |
 
 ## u_mes_syst_userAccessReview
 
@@ -1215,29 +1257,30 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
-| 6 | computerisedSystemName | String | - |  |
-| 7 | reviewPeriodFromDate | Date | Date |  |
-| 8 | reviewPeriodToDate | Date | Date |  |
-| 9 | usersReviewedCount | Int32 | - |  |
-| 10 | accessRemovedCount | Int32 | - |  |
-| 11 | accessChangedCount | Int32 | - |  |
-| 12 | reviewedById | String | - | u_mes_mast_user._id |
-| 13 | reviewedBy | String | - |  |
-| 14 | reviewedAt | Date | Datetime |  |
-| 15 | approvedById | String | - | u_mes_mast_user._id |
-| 16 | approvedBy | String | - |  |
-| 17 | approvedAt | Date | Datetime |  |
-| 18 | status | String | - |  |
-| 19 | schemaVersion | Int32 | - |  |
-| 20 | createdAt | Date | Datetime |  |
-| 21 | createdById | String | - | u_mes_mast_user._id |
-| 22 | createdBy | String | - |  |
-| 23 | updatedAt | Date | Datetime |  |
-| 24 | updatedById | String | - | u_mes_mast_user._id |
-| 25 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | computerisedSystemId | String | - | u_mes_syst_computerisedSystem._id |
+| 7 | computerisedSystemName | String | - |  |
+| 8 | reviewPeriodFromDate | Date | Date |  |
+| 9 | reviewPeriodToDate | Date | Date |  |
+| 10 | usersReviewedCount | Int32 | - |  |
+| 11 | accessRemovedCount | Int32 | - |  |
+| 12 | accessChangedCount | Int32 | - |  |
+| 13 | reviewedById | String | - | u_mes_mast_user._id |
+| 14 | reviewedBy | String | - |  |
+| 15 | reviewedAt | Date | Datetime |  |
+| 16 | approvedById | String | - | u_mes_mast_user._id |
+| 17 | approvedBy | String | - |  |
+| 18 | approvedAt | Date | Datetime |  |
+| 19 | status | String | - |  |
+| 20 | schemaVersion | Int32 | - |  |
+| 21 | createdAt | Date | Datetime |  |
+| 22 | createdById | String | - | u_mes_mast_user._id |
+| 23 | createdBy | String | - |  |
+| 24 | updatedAt | Date | Datetime |  |
+| 25 | updatedById | String | - | u_mes_mast_user._id |
+| 26 | updatedBy | String | - |  |
 
 ## u_mes_syst_userAccessReviewLine
 
@@ -1247,23 +1290,24 @@ Kind: child | Data class: transaction | Parent: u_mes_syst_userAccessReview | _i
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | userAccessReviewId | String | - | u_mes_syst_userAccessReview._id |
-| 6 | userAccessReviewName | String | - |  |
-| 7 | lineNo | Int32 | - |  |
-| 8 | userId | String | - | u_mes_mast_user._id |
-| 9 | userName | String | - |  |
-| 10 | roleId | String | - | u_mes_mast_role._id |
-| 11 | roleName | String | - |  |
-| 12 | accessStillRequired | Boolean | - |  |
-| 13 | reviewAction | String | - |  |
-| 14 | actionCompletedAt | Date | Datetime |  |
-| 15 | comment | String | - |  |
-| 16 | schemaVersion | Int32 | - |  |
-| 17 | createdAt | Date | Datetime |  |
-| 18 | createdById | String | - | u_mes_mast_user._id |
-| 19 | createdBy | String | - |  |
-| 20 | updatedAt | Date | Datetime |  |
-| 21 | updatedById | String | - | u_mes_mast_user._id |
-| 22 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | userAccessReviewId | String | - | u_mes_syst_userAccessReview._id |
+| 7 | userAccessReviewName | String | - |  |
+| 8 | lineNo | Int32 | - |  |
+| 9 | userId | String | - | u_mes_mast_user._id |
+| 10 | userName | String | - |  |
+| 11 | roleId | String | - | u_mes_mast_role._id |
+| 12 | roleName | String | - |  |
+| 13 | accessStillRequired | Boolean | - |  |
+| 14 | reviewAction | String | - |  |
+| 15 | actionCompletedAt | Date | Datetime |  |
+| 16 | comment | String | - |  |
+| 17 | schemaVersion | Int32 | - |  |
+| 18 | createdAt | Date | Datetime |  |
+| 19 | createdById | String | - | u_mes_mast_user._id |
+| 20 | createdBy | String | - |  |
+| 21 | updatedAt | Date | Datetime |  |
+| 22 | updatedById | String | - | u_mes_mast_user._id |
+| 23 | updatedBy | String | - |  |

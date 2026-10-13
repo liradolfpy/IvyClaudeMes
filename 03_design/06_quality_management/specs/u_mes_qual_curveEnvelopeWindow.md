@@ -9,7 +9,7 @@
 | Parent collection | u_mes_qual_curveEnvelope |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 15 (11 required, 4 may be null) |
+| Keys | 16 (12 required, 4 may be null) |
 
 ## Structure
 
@@ -24,19 +24,20 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1318000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ENV-OP060-PST-PRESS-02-W01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | curveEnvelopeId | String | - | Yes | Reference to u_mes_qual_curveEnvelope._id: the parent document this one belongs to | `"1317000000000001"` | Reference: u_mes_qual_curveEnvelope._id |
-| 6 | curveEnvelopeName | String | - | Yes | Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name | `"Piston press-in force, front caliper LH"` |  |
-| 7 | windowNo | Int32 | - | Yes | Window number | `NumberInt(1)` |  |
-| 8 | windowType | String | - | Yes | Window type | `"Box"` | Box; Upper Band; Lower Band; Peak; Final Value |
-| 9 | xMin | Decimal128 | - | Yes | Window start on X | `NumberDecimal("0.0")` |  |
-| 10 | xMax | Decimal128 | - | Yes | Window end on X | `NumberDecimal("30.0")` |  |
-| 11 | yMin | Decimal128 | - | No (null allowed) | Lower Y limit | `NumberDecimal("0")` |  |
-| 12 | yMax | Decimal128 | - | No (null allowed) | Upper Y limit | `NumberDecimal("400")` |  |
-| 13 | entrySide | String | - | No (null allowed) | Side the curve must enter (box windows) | `"Left"` | Left; Right; Top; Bottom |
-| 14 | exitSide | String | - | No (null allowed) | Side the curve must leave (box windows) | `"Right"` | Left; Right; Top; Bottom |
-| 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | curveEnvelopeId | String | - | Yes | Reference to u_mes_qual_curveEnvelope._id: the parent document this one belongs to | `"1317000000000001"` | Reference: u_mes_qual_curveEnvelope._id |
+| 7 | curveEnvelopeName | String | - | Yes | Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name | `"Piston press-in force, front caliper LH"` |  |
+| 8 | windowNo | Int32 | - | Yes | Window number | `NumberInt(1)` |  |
+| 9 | windowType | String | - | Yes | Window type | `"Box"` | Box; Upper Band; Lower Band; Peak; Final Value |
+| 10 | xMin | Decimal128 | - | Yes | Window start on X | `NumberDecimal("0.0")` |  |
+| 11 | xMax | Decimal128 | - | Yes | Window end on X | `NumberDecimal("30.0")` |  |
+| 12 | yMin | Decimal128 | - | No (null allowed) | Lower Y limit | `NumberDecimal("0")` |  |
+| 13 | yMax | Decimal128 | - | No (null allowed) | Upper Y limit | `NumberDecimal("400")` |  |
+| 14 | entrySide | String | - | No (null allowed) | Side the curve must enter (box windows) | `"Left"` | Left; Right; Top; Bottom |
+| 15 | exitSide | String | - | No (null allowed) | Side the curve must leave (box windows) | `"Right"` | Left; Right; Top; Bottom |
+| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

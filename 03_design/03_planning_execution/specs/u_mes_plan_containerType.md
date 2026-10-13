@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 14 (14 required, 0 may be null) |
+| Keys | 15 (15 required, 0 may be null) |
 | Estimated volume per year | 10-50 |
 | Storage | standard |
 
@@ -25,18 +25,19 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1278000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"RB-6040"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the container type; used as its display value in other collections | `"Returnable Bin 600 x 400"` |  |
-| 6 | description | String | - | Yes | Description of the container type | `"Returnable Bin 600 x 400 (RB-6040)"` |  |
-| 7 | lengthMm | Decimal128 | - | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
-| 8 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
-| 9 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
-| 10 | tareWeightKg | Decimal128 | - | Yes | Tare weight (kg) | `NumberDecimal("2.100")` |  |
-| 11 | isReturnable | Boolean | - | Yes | True when the record is returnable | `false` |  |
-| 12 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 13 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 14 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the container type; used as its display value in other collections | `"Returnable Bin 600 x 400"` |  |
+| 7 | description | String | - | Yes | Description of the container type | `"Returnable Bin 600 x 400 (RB-6040)"` |  |
+| 8 | lengthMm | Decimal128 | - | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
+| 9 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
+| 10 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
+| 11 | tareWeightKg | Decimal128 | - | Yes | Tare weight (kg) | `NumberDecimal("2.100")` |  |
+| 12 | isReturnable | Boolean | - | Yes | True when the record is returnable | `false` |  |
+| 13 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 14 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

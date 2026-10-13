@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | statusName |
-| Keys | 15 (14 required, 1 may be null) |
+| Keys | 16 (15 required, 1 may be null) |
 
 ## Structure
 
@@ -23,19 +23,20 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1297000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"productionOrder.CREATED"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | collectionName | String | - | Yes | Collection name | `"u_mes_plan_productionOrder"` |  |
-| 6 | fieldName | String | - | Yes | Field name | `"status"` |  |
-| 7 | statusCode | String | - | Yes | Stable code for the status value, upper case with underscores | `"CREATED"` |  |
-| 8 | statusName | String | - | Yes | Status name | `"Created"` |  |
-| 9 | description | String | - | Yes | Description of the status definition | `"Order received from ERP and not yet released"` |  |
-| 10 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 11 | isInitial | Boolean | - | Yes | True when the record is initial | `true` |  |
-| 12 | isFinal | Boolean | - | Yes | True when the record is final | `false` |  |
-| 13 | colourCode | String | - | No (null allowed) | Colour code | `"#9E9E9E"` |  |
-| 14 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Common"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | collectionName | String | - | Yes | Collection name | `"u_mes_plan_productionOrder"` |  |
+| 7 | fieldName | String | - | Yes | Field name | `"status"` |  |
+| 8 | statusCode | String | - | Yes | Stable code for the status value, upper case with underscores | `"CREATED"` |  |
+| 9 | statusName | String | - | Yes | Status name | `"Created"` |  |
+| 10 | description | String | - | Yes | Description of the status definition | `"Order received from ERP and not yet released"` |  |
+| 11 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 12 | isInitial | Boolean | - | Yes | True when the record is initial | `true` |  |
+| 13 | isFinal | Boolean | - | Yes | True when the record is final | `false` |  |
+| 14 | colourCode | String | - | No (null allowed) | Colour code | `"#9E9E9E"` |  |
+| 15 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

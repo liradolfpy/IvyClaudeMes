@@ -12,48 +12,49 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | title | String | - |  |
-| 6 | incidentTypeId | String | - | u_mes_ehs_incidentType._id |
-| 7 | incidentTypeName | String | - |  |
-| 8 | severity | Int32 | - |  |
-| 9 | areaId | String | - | u_mes_mast_area._id |
-| 10 | areaName | String | - |  |
-| 11 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 12 | workCenterName | String | - |  |
-| 13 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 14 | equipmentName | String | - |  |
-| 15 | occurredAt | Date | Datetime |  |
-| 16 | reportedById | String | - | u_mes_mast_user._id |
-| 17 | reportedBy | String | - |  |
-| 18 | reportedAt | Date | Datetime |  |
-| 19 | description | String | - |  |
-| 20 | injuredUserId | String | - | u_mes_mast_user._id |
-| 21 | injuredUserName | String | - |  |
-| 22 | bodyPartId | String | - | u_mes_ehs_bodyPart._id |
-| 23 | bodyPartName | String | - |  |
-| 24 | injuryTypeId | String | - | u_mes_ehs_injuryType._id |
-| 25 | injuryTypeName | String | - |  |
-| 26 | firstAidGiven | Boolean | - |  |
-| 27 | lostTimeDays | Int32 | - |  |
-| 28 | immediateAction | String | - |  |
-| 29 | rootCause | String | - |  |
-| 30 | capaId | String | - | u_mes_qual_capa._id |
-| 31 | capaName | String | - |  |
-| 32 | investigatedById | String | - | u_mes_mast_user._id |
-| 33 | investigatedBy | String | - |  |
-| 34 | investigationCompletedAt | Date | Datetime |  |
-| 35 | reportableToAuthority | Boolean | - |  |
-| 36 | closedAt | Date | Datetime |  |
-| 37 | status | String | - |  |
-| 38 | schemaVersion | Int32 | - |  |
-| 39 | createdAt | Date | Datetime |  |
-| 40 | createdById | String | - | u_mes_mast_user._id |
-| 41 | createdBy | String | - |  |
-| 42 | updatedAt | Date | Datetime |  |
-| 43 | updatedById | String | - | u_mes_mast_user._id |
-| 44 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | title | String | - |  |
+| 7 | incidentTypeId | String | - | u_mes_ehs_incidentType._id |
+| 8 | incidentTypeName | String | - |  |
+| 9 | severity | Int32 | - |  |
+| 10 | areaId | String | - | u_mes_mast_area._id |
+| 11 | areaName | String | - |  |
+| 12 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 13 | workCenterName | String | - |  |
+| 14 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 15 | equipmentName | String | - |  |
+| 16 | occurredAt | Date | Datetime |  |
+| 17 | reportedById | String | - | u_mes_mast_user._id |
+| 18 | reportedBy | String | - |  |
+| 19 | reportedAt | Date | Datetime |  |
+| 20 | description | String | - |  |
+| 21 | injuredUserId | String | - | u_mes_mast_user._id |
+| 22 | injuredUserName | String | - |  |
+| 23 | bodyPartId | String | - | u_mes_ehs_bodyPart._id |
+| 24 | bodyPartName | String | - |  |
+| 25 | injuryTypeId | String | - | u_mes_ehs_injuryType._id |
+| 26 | injuryTypeName | String | - |  |
+| 27 | firstAidGiven | Boolean | - |  |
+| 28 | lostTimeDays | Int32 | - |  |
+| 29 | immediateAction | String | - |  |
+| 30 | rootCause | String | - |  |
+| 31 | capaId | String | - | u_mes_qual_capa._id |
+| 32 | capaName | String | - |  |
+| 33 | investigatedById | String | - | u_mes_mast_user._id |
+| 34 | investigatedBy | String | - |  |
+| 35 | investigationCompletedAt | Date | Datetime |  |
+| 36 | reportableToAuthority | Boolean | - |  |
+| 37 | closedAt | Date | Datetime |  |
+| 38 | status | String | - |  |
+| 39 | schemaVersion | Int32 | - |  |
+| 40 | createdAt | Date | Datetime |  |
+| 41 | createdById | String | - | u_mes_mast_user._id |
+| 42 | createdBy | String | - |  |
+| 43 | updatedAt | Date | Datetime |  |
+| 44 | updatedById | String | - | u_mes_mast_user._id |
+| 45 | updatedBy | String | - |  |
 
 ## u_mes_ehs_safetyIncidentWitnessUser
 
@@ -63,20 +64,21 @@ Kind: relationship | Data class: transaction | Parent: u_mes_ehs_safetyIncident 
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | safetyIncidentId | String | - | u_mes_ehs_safetyIncident._id |
-| 6 | safetyIncidentName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | witnessUserId | String | - | u_mes_mast_user._id |
-| 9 | witnessUserName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
-| 11 | createdAt | Date | Datetime |  |
-| 12 | createdById | String | - | u_mes_mast_user._id |
-| 13 | createdBy | String | - |  |
-| 14 | updatedAt | Date | Datetime |  |
-| 15 | updatedById | String | - | u_mes_mast_user._id |
-| 16 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | safetyIncidentId | String | - | u_mes_ehs_safetyIncident._id |
+| 7 | safetyIncidentName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | witnessUserId | String | - | u_mes_mast_user._id |
+| 10 | witnessUserName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
+| 12 | createdAt | Date | Datetime |  |
+| 13 | createdById | String | - | u_mes_mast_user._id |
+| 14 | createdBy | String | - |  |
+| 15 | updatedAt | Date | Datetime |  |
+| 16 | updatedById | String | - | u_mes_mast_user._id |
+| 17 | updatedBy | String | - |  |
 
 ## u_mes_ehs_safetyIncidentAction
 
@@ -86,23 +88,24 @@ Kind: child | Data class: transaction | Parent: u_mes_ehs_safetyIncident | _id p
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | safetyIncidentId | String | - | u_mes_ehs_safetyIncident._id |
-| 6 | safetyIncidentName | String | - |  |
-| 7 | actionNo | Int32 | - |  |
-| 8 | description | String | - |  |
-| 9 | ownerUserId | String | - | u_mes_mast_user._id |
-| 10 | ownerUserName | String | - |  |
-| 11 | dueAt | Date | Datetime |  |
-| 12 | completedAt | Date | Datetime |  |
-| 13 | schemaVersion | Int32 | - |  |
-| 14 | createdAt | Date | Datetime |  |
-| 15 | createdById | String | - | u_mes_mast_user._id |
-| 16 | createdBy | String | - |  |
-| 17 | updatedAt | Date | Datetime |  |
-| 18 | updatedById | String | - | u_mes_mast_user._id |
-| 19 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | safetyIncidentId | String | - | u_mes_ehs_safetyIncident._id |
+| 7 | safetyIncidentName | String | - |  |
+| 8 | actionNo | Int32 | - |  |
+| 9 | description | String | - |  |
+| 10 | ownerUserId | String | - | u_mes_mast_user._id |
+| 11 | ownerUserName | String | - |  |
+| 12 | dueAt | Date | Datetime |  |
+| 13 | completedAt | Date | Datetime |  |
+| 14 | schemaVersion | Int32 | - |  |
+| 15 | createdAt | Date | Datetime |  |
+| 16 | createdById | String | - | u_mes_mast_user._id |
+| 17 | createdBy | String | - |  |
+| 18 | updatedAt | Date | Datetime |  |
+| 19 | updatedById | String | - | u_mes_mast_user._id |
+| 20 | updatedBy | String | - |  |
 
 ## u_mes_ehs_incidentType
 
@@ -112,15 +115,16 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | isInjury | Boolean | - |  |
-| 8 | reportableToAuthority | Boolean | - |  |
-| 9 | sequenceNo | Int32 | - |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | isInjury | Boolean | - |  |
+| 9 | reportableToAuthority | Boolean | - |  |
+| 10 | sequenceNo | Int32 | - |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_ehs_bodyPart
 
@@ -130,13 +134,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_ehs_injuryType
 
@@ -146,10 +151,11 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |

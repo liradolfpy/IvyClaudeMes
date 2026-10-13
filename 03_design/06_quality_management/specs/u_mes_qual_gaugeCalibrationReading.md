@@ -9,7 +9,7 @@
 | Parent collection | u_mes_qual_gaugeCalibration |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 19 (19 required, 0 may be null) |
+| Keys | 20 (20 required, 0 may be null) |
 
 ## Structure
 
@@ -24,23 +24,24 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1191000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"GCAL-G-UT-001-2026-01-R01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | gaugeCalibrationId | String | - | Yes | Reference to u_mes_qual_gaugeCalibration._id: the parent document this one belongs to | `"1190000000000001"` | Reference: u_mes_qual_gaugeCalibration._id |
-| 6 | gaugeCalibrationName | String | - | Yes | Display value of gaugeCalibrationId, copied from u_mes_qual_gaugeCalibration.recordNo | `"GCAL-G-UT-001-2026-01"` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | nominal | Decimal128 | - | Yes | Nominal of the gauge calibration reading | `NumberDecimal("8.00")` |  |
-| 9 | asFound | Decimal128 | - | Yes | As found | `NumberDecimal("54.001")` |  |
-| 10 | asLeft | Decimal128 | - | Yes | As left | `NumberDecimal("54.000")` |  |
-| 11 | tolerance | Decimal128 | - | Yes | Tolerance of the gauge calibration reading | `NumberDecimal("0.002")` |  |
-| 12 | withinTolerance | Boolean | - | Yes | True when: within tolerance | `true` |  |
-| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 14 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
-| 15 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 16 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 17 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
-| 18 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 19 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | gaugeCalibrationId | String | - | Yes | Reference to u_mes_qual_gaugeCalibration._id: the parent document this one belongs to | `"1190000000000001"` | Reference: u_mes_qual_gaugeCalibration._id |
+| 7 | gaugeCalibrationName | String | - | Yes | Display value of gaugeCalibrationId, copied from u_mes_qual_gaugeCalibration.recordNo | `"GCAL-G-UT-001-2026-01"` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | nominal | Decimal128 | - | Yes | Nominal of the gauge calibration reading | `NumberDecimal("8.00")` |  |
+| 10 | asFound | Decimal128 | - | Yes | As found | `NumberDecimal("54.001")` |  |
+| 11 | asLeft | Decimal128 | - | Yes | As left | `NumberDecimal("54.000")` |  |
+| 12 | tolerance | Decimal128 | - | Yes | Tolerance of the gauge calibration reading | `NumberDecimal("0.002")` |  |
+| 13 | withinTolerance | Boolean | - | Yes | True when: within tolerance | `true` |  |
+| 14 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 15 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
+| 16 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 17 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 18 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
+| 19 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 20 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Indexes
 

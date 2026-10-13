@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "workCenterId",
@@ -49,6 +50,15 @@
         "recordNo": {
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
         },
         "siteId": {
           "bsonType": "string",

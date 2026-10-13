@@ -12,30 +12,31 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | legalName | String | - |  |
-| 7 | scope | String | - |  |
-| 8 | parentEnterpriseId | String | - | u_mes_mast_enterprise._id |
-| 9 | parentEnterpriseName | String | - |  |
-| 10 | cin | String | - |  |
-| 11 | gstin | String | - |  |
-| 12 | pan | String | - |  |
-| 13 | industryCode | String | - |  |
-| 14 | registeredAddressLine1 | String | - |  |
-| 15 | registeredAddressLine2 | String | - |  |
-| 16 | registeredAddressCity | String | - |  |
-| 17 | registeredAddressState | String | - |  |
-| 18 | registeredAddressPostalCode | String | - |  |
-| 19 | registeredAddressCountryId | String | - | u_mes_mast_country._id |
-| 20 | registeredAddressCountryName | String | - |  |
-| 21 | baseCurrencyId | String | - | u_mes_mast_currency._id |
-| 22 | baseCurrencyName | String | - |  |
-| 23 | fiscalYearStartMonth | Int32 | - |  |
-| 24 | website | String | - |  |
-| 25 | status | String | - |  |
-| 26 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | legalName | String | - |  |
+| 8 | scope | String | - |  |
+| 9 | parentEnterpriseId | String | - | u_mes_mast_enterprise._id |
+| 10 | parentEnterpriseName | String | - |  |
+| 11 | cin | String | - |  |
+| 12 | gstin | String | - |  |
+| 13 | pan | String | - |  |
+| 14 | industryCode | String | - |  |
+| 15 | registeredAddressLine1 | String | - |  |
+| 16 | registeredAddressLine2 | String | - |  |
+| 17 | registeredAddressCity | String | - |  |
+| 18 | registeredAddressState | String | - |  |
+| 19 | registeredAddressPostalCode | String | - |  |
+| 20 | registeredAddressCountryId | String | - | u_mes_mast_country._id |
+| 21 | registeredAddressCountryName | String | - |  |
+| 22 | baseCurrencyId | String | - | u_mes_mast_currency._id |
+| 23 | baseCurrencyName | String | - |  |
+| 24 | fiscalYearStartMonth | Int32 | - |  |
+| 25 | website | String | - |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_enterpriseContact
 
@@ -45,16 +46,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_enterprise | _id pattern: 
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | enterpriseId | String | - | u_mes_mast_enterprise._id |
-| 6 | enterpriseName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | name | String | - |  |
-| 9 | jobTitle | String | - |  |
-| 10 | email | String | - |  |
-| 11 | phone | String | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | enterpriseId | String | - | u_mes_mast_enterprise._id |
+| 7 | enterpriseName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | name | String | - |  |
+| 10 | jobTitle | String | - |  |
+| 11 | email | String | - |  |
+| 12 | phone | String | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_site
 
@@ -64,34 +66,35 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | name | String | - |  |
-| 4 | enterpriseId | String | - | u_mes_mast_enterprise._id |
-| 5 | enterpriseName | String | - |  |
-| 6 | siteType | String | - |  |
-| 7 | timezone | String | - |  |
-| 8 | utcOffsetMinutes | Int32 | - |  |
-| 9 | addressLine1 | String | - |  |
-| 10 | addressLine2 | String | - |  |
-| 11 | addressCity | String | - |  |
-| 12 | addressDistrict | String | - |  |
-| 13 | addressState | String | - |  |
-| 14 | addressPostalCode | String | - |  |
-| 15 | addressCountryId | String | - | u_mes_mast_country._id |
-| 16 | addressCountryName | String | - |  |
-| 17 | geoLatitude | Double | - |  |
-| 18 | geoLongitude | Double | - |  |
-| 19 | gstin | String | - |  |
-| 20 | factoryLicenceNo | String | - |  |
-| 21 | erpPlantCode | String | - |  |
-| 22 | defaultWorkCalendarId | String | - | u_mes_mast_workCalendar._id |
-| 23 | defaultWorkCalendarName | String | - |  |
-| 24 | currencyId | String | - | u_mes_mast_currency._id |
-| 25 | currencyName | String | - |  |
-| 26 | languageId | String | - | u_mes_mast_language._id |
-| 27 | languageName | String | - |  |
-| 28 | headcount | Int32 | - |  |
-| 29 | status | String | - |  |
-| 30 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | name | String | - |  |
+| 5 | enterpriseId | String | - | u_mes_mast_enterprise._id |
+| 6 | enterpriseName | String | - |  |
+| 7 | siteType | String | - |  |
+| 8 | timezone | String | - |  |
+| 9 | utcOffsetMinutes | Int32 | - |  |
+| 10 | addressLine1 | String | - |  |
+| 11 | addressLine2 | String | - |  |
+| 12 | addressCity | String | - |  |
+| 13 | addressDistrict | String | - |  |
+| 14 | addressState | String | - |  |
+| 15 | addressPostalCode | String | - |  |
+| 16 | addressCountryId | String | - | u_mes_mast_country._id |
+| 17 | addressCountryName | String | - |  |
+| 18 | geoLatitude | Double | - |  |
+| 19 | geoLongitude | Double | - |  |
+| 20 | gstin | String | - |  |
+| 21 | factoryLicenceNo | String | - |  |
+| 22 | erpPlantCode | String | - |  |
+| 23 | defaultWorkCalendarId | String | - | u_mes_mast_workCalendar._id |
+| 24 | defaultWorkCalendarName | String | - |  |
+| 25 | currencyId | String | - | u_mes_mast_currency._id |
+| 26 | currencyName | String | - |  |
+| 27 | languageId | String | - | u_mes_mast_language._id |
+| 28 | languageName | String | - |  |
+| 29 | headcount | Int32 | - |  |
+| 30 | status | String | - |  |
+| 31 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_siteCertificate
 
@@ -101,16 +104,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_site | _id pattern: 16-dig
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | sequenceNo | Int32 | - |  |
-| 6 | standard | String | - |  |
-| 7 | certificateNo | String | - |  |
-| 8 | issuedById | String | - | u_mes_mast_user._id |
-| 9 | issuedBy | String | - |  |
-| 10 | validFrom | Date | Date |  |
-| 11 | validTo | Date | Date |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | sequenceNo | Int32 | - |  |
+| 7 | standard | String | - |  |
+| 8 | certificateNo | String | - |  |
+| 9 | issuedById | String | - | u_mes_mast_user._id |
+| 10 | issuedBy | String | - |  |
+| 11 | validFrom | Date | Date |  |
+| 12 | validTo | Date | Date |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_area
 
@@ -120,24 +124,25 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | areaType | String | - |  |
-| 7 | parentAreaId | String | - | u_mes_mast_area._id |
-| 8 | parentAreaName | String | - |  |
-| 9 | costCenterId | String | - | u_mes_mast_costCenter._id |
-| 10 | costCenterName | String | - |  |
-| 11 | supervisorUserId | String | - | u_mes_mast_user._id |
-| 12 | supervisorUserName | String | - |  |
-| 13 | floorAreaSqm | Decimal128 | - |  |
-| 14 | isProductionArea | Boolean | - |  |
-| 15 | sequenceNo | Int32 | - |  |
-| 16 | cleanlinessClass | String | - |  |
-| 17 | environmentallyMonitored | Boolean | - |  |
-| 18 | gowningRequired | Boolean | - |  |
-| 19 | status | String | - |  |
-| 20 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | areaType | String | - |  |
+| 8 | parentAreaId | String | - | u_mes_mast_area._id |
+| 9 | parentAreaName | String | - |  |
+| 10 | costCenterId | String | - | u_mes_mast_costCenter._id |
+| 11 | costCenterName | String | - |  |
+| 12 | supervisorUserId | String | - | u_mes_mast_user._id |
+| 13 | supervisorUserName | String | - |  |
+| 14 | floorAreaSqm | Decimal128 | - |  |
+| 15 | isProductionArea | Boolean | - |  |
+| 16 | sequenceNo | Int32 | - |  |
+| 17 | cleanlinessClass | String | - |  |
+| 18 | environmentallyMonitored | Boolean | - |  |
+| 19 | gowningRequired | Boolean | - |  |
+| 20 | status | String | - |  |
+| 21 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_line
 
@@ -147,26 +152,27 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | areaId | String | - | u_mes_mast_area._id |
-| 7 | areaName | String | - |  |
-| 8 | lineType | String | - |  |
-| 9 | itemFamilyId | String | - | u_mes_prod_itemFamily._id |
-| 10 | itemFamilyName | String | - |  |
-| 11 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
-| 12 | workCalendarName | String | - |  |
-| 13 | taktTimeSec | Decimal128 | - |  |
-| 14 | manningStandard | Int32 | - |  |
-| 15 | bottleneckWorkCenterId | String | - | u_mes_mast_workCenter._id |
-| 16 | bottleneckWorkCenterName | String | - |  |
-| 17 | oeeTarget | Decimal128 | - |  |
-| 18 | costCenterId | String | - | u_mes_mast_costCenter._id |
-| 19 | costCenterName | String | - |  |
-| 20 | sequenceNo | Int32 | - |  |
-| 21 | status | String | - |  |
-| 22 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | areaId | String | - | u_mes_mast_area._id |
+| 8 | areaName | String | - |  |
+| 9 | lineType | String | - |  |
+| 10 | itemFamilyId | String | - | u_mes_prod_itemFamily._id |
+| 11 | itemFamilyName | String | - |  |
+| 12 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
+| 13 | workCalendarName | String | - |  |
+| 14 | taktTimeSec | Decimal128 | - |  |
+| 15 | manningStandard | Int32 | - |  |
+| 16 | bottleneckWorkCenterId | String | - | u_mes_mast_workCenter._id |
+| 17 | bottleneckWorkCenterName | String | - |  |
+| 18 | oeeTarget | Decimal128 | - |  |
+| 19 | costCenterId | String | - | u_mes_mast_costCenter._id |
+| 20 | costCenterName | String | - |  |
+| 21 | sequenceNo | Int32 | - |  |
+| 22 | status | String | - |  |
+| 23 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_lineDefaultShift
 
@@ -176,14 +182,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_line | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | lineId | String | - | u_mes_mast_line._id |
-| 6 | lineName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | defaultShiftId | String | - | u_mes_mast_shift._id |
-| 9 | defaultShiftName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | lineId | String | - | u_mes_mast_line._id |
+| 7 | lineName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | defaultShiftId | String | - | u_mes_mast_shift._id |
+| 10 | defaultShiftName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_lineIdealRate
 
@@ -193,16 +200,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_line | _id pattern: 16-dig
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | lineId | String | - | u_mes_mast_line._id |
-| 6 | lineName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | itemId | String | - | u_mes_prod_item._id |
-| 9 | itemName | String | - |  |
-| 10 | idealCycleTimeSec | Decimal128 | - |  |
-| 11 | targetPerHour | Int32 | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | lineId | String | - | u_mes_mast_line._id |
+| 7 | lineName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | itemId | String | - | u_mes_prod_item._id |
+| 10 | itemName | String | - |  |
+| 11 | idealCycleTimeSec | Decimal128 | - |  |
+| 12 | targetPerHour | Int32 | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCenter
 
@@ -212,28 +220,29 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | areaId | String | - | u_mes_mast_area._id |
-| 7 | areaName | String | - |  |
-| 8 | lineId | String | - | u_mes_mast_line._id |
-| 9 | lineName | String | - |  |
-| 10 | workCenterType | String | - |  |
-| 11 | erpWorkCenterCode | String | - |  |
-| 12 | costCenterId | String | - | u_mes_mast_costCenter._id |
-| 13 | costCenterName | String | - |  |
-| 14 | capacityPerShift | Int32 | - |  |
-| 15 | standardManning | Int32 | - |  |
-| 16 | trackingGrain | String | - |  |
-| 17 | inputLocationId | String | - | u_mes_matl_storageLocation._id |
-| 18 | inputLocationName | String | - |  |
-| 19 | outputLocationId | String | - | u_mes_matl_storageLocation._id |
-| 20 | outputLocationName | String | - |  |
-| 21 | andonEnabled | Boolean | - |  |
-| 22 | sequenceNo | Int32 | - |  |
-| 23 | status | String | - |  |
-| 24 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | areaId | String | - | u_mes_mast_area._id |
+| 8 | areaName | String | - |  |
+| 9 | lineId | String | - | u_mes_mast_line._id |
+| 10 | lineName | String | - |  |
+| 11 | workCenterType | String | - |  |
+| 12 | erpWorkCenterCode | String | - |  |
+| 13 | costCenterId | String | - | u_mes_mast_costCenter._id |
+| 14 | costCenterName | String | - |  |
+| 15 | capacityPerShift | Int32 | - |  |
+| 16 | standardManning | Int32 | - |  |
+| 17 | trackingGrain | String | - |  |
+| 18 | inputLocationId | String | - | u_mes_matl_storageLocation._id |
+| 19 | inputLocationName | String | - |  |
+| 20 | outputLocationId | String | - | u_mes_matl_storageLocation._id |
+| 21 | outputLocationName | String | - |  |
+| 22 | andonEnabled | Boolean | - |  |
+| 23 | sequenceNo | Int32 | - |  |
+| 24 | status | String | - |  |
+| 25 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCenterEquipment
 
@@ -243,14 +252,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pa
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 6 | workCenterName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 9 | equipmentName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 7 | workCenterName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 10 | equipmentName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCenterOperation
 
@@ -260,14 +270,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pa
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 6 | workCenterName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | operationId | String | - | u_mes_prod_operation._id |
-| 9 | operationName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 7 | workCenterName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | operationId | String | - | u_mes_prod_operation._id |
+| 10 | operationName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCenterRequiresSkill
 
@@ -277,14 +288,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCenter | _id pa
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 6 | workCenterName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | requiresSkillId | String | - | u_mes_mast_skill._id |
-| 9 | requiresSkillName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 7 | workCenterName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | requiresSkillId | String | - | u_mes_mast_skill._id |
+| 10 | requiresSkillName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_equipment
 
@@ -294,57 +306,58 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | equipmentTypeId | String | - | u_mes_mast_equipmentType._id |
-| 7 | equipmentTypeName | String | - |  |
-| 8 | equipmentClass | String | - |  |
-| 9 | lineId | String | - | u_mes_mast_line._id |
-| 10 | lineName | String | - |  |
-| 11 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 12 | workCenterName | String | - |  |
-| 13 | parentEquipmentId | String | - | u_mes_mast_equipment._id |
-| 14 | parentEquipmentName | String | - |  |
-| 15 | manufacturerId | String | - | u_mes_mast_manufacturer._id |
-| 16 | manufacturerName | String | - |  |
-| 17 | model | String | - |  |
-| 18 | serialNo | String | - |  |
-| 19 | yearOfManufacture | Int32 | - |  |
-| 20 | supplierId | String | - | u_mes_mast_supplier._id |
-| 21 | supplierName | String | - |  |
-| 22 | assetNo | String | - |  |
-| 23 | commissionedAt | Date | Datetime |  |
-| 24 | ratedCapacity | Decimal128 | - |  |
-| 25 | ratedCapacityUnitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
-| 26 | ratedCapacityUnitOfMeasureName | String | - |  |
-| 27 | ratedPowerKw | Decimal128 | - |  |
-| 28 | controllerMake | String | - |  |
-| 29 | controllerModel | String | - |  |
-| 30 | controllerIpAddress | String | - |  |
-| 31 | controllerProtocol | String | - |  |
-| 32 | criticality | String | - |  |
-| 33 | currentState | String | - |  |
-| 34 | currentStateSince | Date | Datetime |  |
-| 35 | lifetimeCycles | Int64 | - |  |
-| 36 | lifetimeRunHours | Decimal128 | - |  |
-| 37 | nextMaintenanceDueAt | Date | Date |  |
-| 38 | calibrationRequired | Boolean | - |  |
-| 39 | safetyCategory | String | - |  |
-| 40 | isProductionReady | Boolean | - |  |
-| 41 | readinessReasonText | String | - |  |
-| 42 | healthScore | Decimal128 | - |  |
-| 43 | healthScoreAt | Date | Datetime |  |
-| 44 | acquisitionCostInr | Decimal128 | - |  |
-| 45 | plannedReplacementDate | Date | Date |  |
-| 46 | qualificationStatus | String | - |  |
-| 47 | requalificationDueDate | Date | Date |  |
-| 48 | cleanStatus | String | - |  |
-| 49 | cleanHoldExpiresAt | Date | Datetime |  |
-| 50 | lastCleaningRecordId | String | - | u_mes_maint_cleaningRecord._id |
-| 51 | lastCleaningRecordName | String | - |  |
-| 52 | status | String | - |  |
-| 53 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | equipmentTypeId | String | - | u_mes_mast_equipmentType._id |
+| 8 | equipmentTypeName | String | - |  |
+| 9 | equipmentClass | String | - |  |
+| 10 | lineId | String | - | u_mes_mast_line._id |
+| 11 | lineName | String | - |  |
+| 12 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 13 | workCenterName | String | - |  |
+| 14 | parentEquipmentId | String | - | u_mes_mast_equipment._id |
+| 15 | parentEquipmentName | String | - |  |
+| 16 | manufacturerId | String | - | u_mes_mast_manufacturer._id |
+| 17 | manufacturerName | String | - |  |
+| 18 | model | String | - |  |
+| 19 | serialNo | String | - |  |
+| 20 | yearOfManufacture | Int32 | - |  |
+| 21 | supplierId | String | - | u_mes_mast_supplier._id |
+| 22 | supplierName | String | - |  |
+| 23 | assetNo | String | - |  |
+| 24 | commissionedAt | Date | Datetime |  |
+| 25 | ratedCapacity | Decimal128 | - |  |
+| 26 | ratedCapacityUnitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 27 | ratedCapacityUnitOfMeasureName | String | - |  |
+| 28 | ratedPowerKw | Decimal128 | - |  |
+| 29 | controllerMake | String | - |  |
+| 30 | controllerModel | String | - |  |
+| 31 | controllerIpAddress | String | - |  |
+| 32 | controllerProtocol | String | - |  |
+| 33 | criticality | String | - |  |
+| 34 | currentState | String | - |  |
+| 35 | currentStateSince | Date | Datetime |  |
+| 36 | lifetimeCycles | Int64 | - |  |
+| 37 | lifetimeRunHours | Decimal128 | - |  |
+| 38 | nextMaintenanceDueAt | Date | Date |  |
+| 39 | calibrationRequired | Boolean | - |  |
+| 40 | safetyCategory | String | - |  |
+| 41 | isProductionReady | Boolean | - |  |
+| 42 | readinessReasonText | String | - |  |
+| 43 | healthScore | Decimal128 | - |  |
+| 44 | healthScoreAt | Date | Datetime |  |
+| 45 | acquisitionCostInr | Decimal128 | - |  |
+| 46 | plannedReplacementDate | Date | Date |  |
+| 47 | qualificationStatus | String | - |  |
+| 48 | requalificationDueDate | Date | Date |  |
+| 49 | cleanStatus | String | - |  |
+| 50 | cleanHoldExpiresAt | Date | Datetime |  |
+| 51 | lastCleaningRecordId | String | - | u_mes_maint_cleaningRecord._id |
+| 52 | lastCleaningRecordName | String | - |  |
+| 53 | status | String | - |  |
+| 54 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_equipmentIotDevice
 
@@ -354,14 +367,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_equipment | _id pat
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | equipmentId | String | - | u_mes_mast_equipment._id |
-| 6 | equipmentName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
-| 9 | iotDeviceName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 7 | equipmentName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
+| 10 | iotDeviceName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_shift
 
@@ -371,18 +385,19 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | startTimeLocal | String | - |  |
-| 7 | endTimeLocal | String | - |  |
-| 8 | crossesMidnight | Boolean | - |  |
-| 9 | durationMinutes | Int32 | - |  |
-| 10 | plannedProductionMinutes | Int32 | - |  |
-| 11 | shiftAllowancePerDay | Decimal128 | - |  |
-| 12 | sequenceNo | Int32 | - |  |
-| 13 | status | String | - |  |
-| 14 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | startTimeLocal | String | - |  |
+| 8 | endTimeLocal | String | - |  |
+| 9 | crossesMidnight | Boolean | - |  |
+| 10 | durationMinutes | Int32 | - |  |
+| 11 | plannedProductionMinutes | Int32 | - |  |
+| 12 | shiftAllowancePerDay | Decimal128 | - |  |
+| 13 | sequenceNo | Int32 | - |  |
+| 14 | status | String | - |  |
+| 15 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_shiftBreak
 
@@ -392,16 +407,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_shift | _id pattern: 16-di
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | shiftId | String | - | u_mes_mast_shift._id |
-| 6 | shiftName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | name | String | - |  |
-| 9 | startTimeLocal | String | - |  |
-| 10 | durationMinutes | Int32 | - |  |
-| 11 | paid | Boolean | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | shiftId | String | - | u_mes_mast_shift._id |
+| 7 | shiftName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | name | String | - |  |
+| 10 | startTimeLocal | String | - |  |
+| 11 | durationMinutes | Int32 | - |  |
+| 12 | paid | Boolean | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_shiftWorkingDay
 
@@ -411,13 +427,14 @@ Kind: valueList | Data class: master | Parent: u_mes_mast_shift | _id pattern: 1
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | shiftId | String | - | u_mes_mast_shift._id |
-| 6 | shiftName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | workingDay | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | shiftId | String | - | u_mes_mast_shift._id |
+| 7 | shiftName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | workingDay | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCalendar
 
@@ -427,15 +444,16 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | year | Int32 | - |  |
-| 7 | workingDaysCount | Int32 | - |  |
-| 8 | validFrom | Date | Date |  |
-| 9 | validTo | Date | Date |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | year | Int32 | - |  |
+| 8 | workingDaysCount | Int32 | - |  |
+| 9 | validFrom | Date | Date |  |
+| 10 | validTo | Date | Date |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCalendarLine
 
@@ -445,14 +463,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id 
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
-| 6 | workCalendarName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | lineId | String | - | u_mes_mast_line._id |
-| 9 | lineName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
+| 7 | workCalendarName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | lineId | String | - | u_mes_mast_line._id |
+| 10 | lineName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCalendarShift
 
@@ -462,14 +481,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendar | _id 
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
-| 6 | workCalendarName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | shiftId | String | - | u_mes_mast_shift._id |
-| 9 | shiftName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
+| 7 | workCalendarName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | shiftId | String | - | u_mes_mast_shift._id |
+| 10 | shiftName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCalendarWeeklyOffDay
 
@@ -479,13 +499,14 @@ Kind: valueList | Data class: master | Parent: u_mes_mast_workCalendar | _id pat
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
-| 6 | workCalendarName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | weeklyOffDay | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
+| 7 | workCalendarName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | weeklyOffDay | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCalendarException
 
@@ -495,16 +516,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_workCalendar | _id pattern
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
-| 6 | workCalendarName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | exceptionDate | Date | Date |  |
-| 9 | exceptionType | String | - |  |
-| 10 | description | String | - |  |
-| 11 | isWorking | Boolean | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCalendarId | String | - | u_mes_mast_workCalendar._id |
+| 7 | workCalendarName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | exceptionDate | Date | Date |  |
+| 10 | exceptionType | String | - |  |
+| 11 | description | String | - |  |
+| 12 | isWorking | Boolean | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_workCalendarExceptionShift
 
@@ -514,14 +536,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_workCalendarExcepti
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | workCalendarExceptionId | String | - | u_mes_mast_workCalendarException._id |
-| 6 | workCalendarExceptionName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | shiftId | String | - | u_mes_mast_shift._id |
-| 9 | shiftName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | workCalendarExceptionId | String | - | u_mes_mast_workCalendarException._id |
+| 7 | workCalendarExceptionName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | shiftId | String | - | u_mes_mast_shift._id |
+| 10 | shiftName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_shiftRoster
 
@@ -531,29 +554,30 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | productionDate | Date | Date |  |
-| 6 | shiftId | String | - | u_mes_mast_shift._id |
-| 7 | shiftName | String | - |  |
-| 8 | lineId | String | - | u_mes_mast_line._id |
-| 9 | lineName | String | - |  |
-| 10 | supervisorUserId | String | - | u_mes_mast_user._id |
-| 11 | supervisorUserName | String | - |  |
-| 12 | plannedHeadcount | Int32 | - |  |
-| 13 | actualHeadcount | Int32 | - |  |
-| 14 | absentCount | Int32 | - |  |
-| 15 | overtimeMinutes | Int32 | - |  |
-| 16 | remarks | String | - |  |
-| 17 | publishedAt | Date | Datetime |  |
-| 18 | status | String | - |  |
-| 19 | schemaVersion | Int32 | - |  |
-| 20 | createdAt | Date | Datetime |  |
-| 21 | createdById | String | - | u_mes_mast_user._id |
-| 22 | createdBy | String | - |  |
-| 23 | updatedAt | Date | Datetime |  |
-| 24 | updatedById | String | - | u_mes_mast_user._id |
-| 25 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | productionDate | Date | Date |  |
+| 7 | shiftId | String | - | u_mes_mast_shift._id |
+| 8 | shiftName | String | - |  |
+| 9 | lineId | String | - | u_mes_mast_line._id |
+| 10 | lineName | String | - |  |
+| 11 | supervisorUserId | String | - | u_mes_mast_user._id |
+| 12 | supervisorUserName | String | - |  |
+| 13 | plannedHeadcount | Int32 | - |  |
+| 14 | actualHeadcount | Int32 | - |  |
+| 15 | absentCount | Int32 | - |  |
+| 16 | overtimeMinutes | Int32 | - |  |
+| 17 | remarks | String | - |  |
+| 18 | publishedAt | Date | Datetime |  |
+| 19 | status | String | - |  |
+| 20 | schemaVersion | Int32 | - |  |
+| 21 | createdAt | Date | Datetime |  |
+| 22 | createdById | String | - | u_mes_mast_user._id |
+| 23 | createdBy | String | - |  |
+| 24 | updatedAt | Date | Datetime |  |
+| 25 | updatedById | String | - | u_mes_mast_user._id |
+| 26 | updatedBy | String | - |  |
 
 ## u_mes_mast_shiftRosterAssignment
 
@@ -563,30 +587,31 @@ Kind: child | Data class: transaction | Parent: u_mes_mast_shiftRoster | _id pat
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | shiftRosterId | String | - | u_mes_mast_shiftRoster._id |
-| 6 | shiftRosterName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | userId | String | - | u_mes_mast_user._id |
-| 9 | userName | String | - |  |
-| 10 | workCenterId | String | - | u_mes_mast_workCenter._id |
-| 11 | workCenterName | String | - |  |
-| 12 | roleInCrew | String | - |  |
-| 13 | attendance | String | - |  |
-| 14 | replacedUserId | String | - | u_mes_mast_user._id |
-| 15 | replacedUserName | String | - |  |
-| 16 | assignedFromAt | Date | Datetime |  |
-| 17 | assignedToAt | Date | Datetime |  |
-| 18 | assignmentSource | String | - |  |
-| 19 | suggestionScore | Decimal128 | - |  |
-| 20 | schemaVersion | Int32 | - |  |
-| 21 | createdAt | Date | Datetime |  |
-| 22 | createdById | String | - | u_mes_mast_user._id |
-| 23 | createdBy | String | - |  |
-| 24 | updatedAt | Date | Datetime |  |
-| 25 | updatedById | String | - | u_mes_mast_user._id |
-| 26 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | shiftRosterId | String | - | u_mes_mast_shiftRoster._id |
+| 7 | shiftRosterName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | userId | String | - | u_mes_mast_user._id |
+| 10 | userName | String | - |  |
+| 11 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 12 | workCenterName | String | - |  |
+| 13 | roleInCrew | String | - |  |
+| 14 | attendance | String | - |  |
+| 15 | replacedUserId | String | - | u_mes_mast_user._id |
+| 16 | replacedUserName | String | - |  |
+| 17 | assignedFromAt | Date | Datetime |  |
+| 18 | assignedToAt | Date | Datetime |  |
+| 19 | assignmentSource | String | - |  |
+| 20 | suggestionScore | Decimal128 | - |  |
+| 21 | schemaVersion | Int32 | - |  |
+| 22 | createdAt | Date | Datetime |  |
+| 23 | createdById | String | - | u_mes_mast_user._id |
+| 24 | createdBy | String | - |  |
+| 25 | updatedAt | Date | Datetime |  |
+| 26 | updatedById | String | - | u_mes_mast_user._id |
+| 27 | updatedBy | String | - |  |
 
 ## u_mes_mast_role
 
@@ -596,16 +621,17 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | scope | String | - |  |
-| 7 | description | String | - |  |
-| 8 | canSign | Boolean | - |  |
-| 9 | approvalLimitInr | Decimal128 | - |  |
-| 10 | isSystemRole | Boolean | - |  |
-| 11 | status | String | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | scope | String | - |  |
+| 8 | description | String | - |  |
+| 9 | canSign | Boolean | - |  |
+| 10 | approvalLimitInr | Decimal128 | - |  |
+| 11 | isSystemRole | Boolean | - |  |
+| 12 | status | String | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_rolePermission
 
@@ -615,14 +641,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | roleId | String | - | u_mes_mast_role._id |
-| 6 | roleName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | permissionId | String | - | u_mes_mast_permission._id |
-| 9 | permissionName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | roleId | String | - | u_mes_mast_role._id |
+| 7 | roleName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | permissionId | String | - | u_mes_mast_permission._id |
+| 10 | permissionName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_roleSignatureMeaning
 
@@ -632,14 +659,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | roleId | String | - | u_mes_mast_role._id |
-| 6 | roleName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | signatureMeaningId | String | - | u_mes_mast_signatureMeaning._id |
-| 9 | signatureMeaningName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | roleId | String | - | u_mes_mast_role._id |
+| 7 | roleName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | signatureMeaningId | String | - | u_mes_mast_signatureMeaning._id |
+| 10 | signatureMeaningName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_user
 
@@ -649,39 +677,40 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | userName | String | - |  |
-| 6 | fullName | String | - |  |
-| 7 | userType | String | - |  |
-| 8 | departmentId | String | - | u_mes_mast_department._id |
-| 9 | departmentName | String | - |  |
-| 10 | designationId | String | - | u_mes_mast_designation._id |
-| 11 | designationName | String | - |  |
-| 12 | badgeNo | String | - |  |
-| 13 | email | String | - |  |
-| 14 | mobile | String | - |  |
-| 15 | defaultShiftId | String | - | u_mes_mast_shift._id |
-| 16 | defaultShiftName | String | - |  |
-| 17 | homeWorkCenterId | String | - | u_mes_mast_workCenter._id |
-| 18 | homeWorkCenterName | String | - |  |
-| 19 | reportsToUserId | String | - | u_mes_mast_user._id |
-| 20 | reportsToUserName | String | - |  |
-| 21 | dateOfJoining | Date | Date |  |
-| 22 | employmentTypeId | String | - | u_mes_mast_employmentType._id |
-| 23 | employmentTypeName | String | - |  |
-| 24 | contractorSupplierId | String | - | u_mes_mast_supplier._id |
-| 25 | contractorSupplierName | String | - |  |
-| 26 | languageId | String | - | u_mes_mast_language._id |
-| 27 | languageName | String | - |  |
-| 28 | lastLoginAt | Date | Datetime |  |
-| 29 | failedLoginCount | Int32 | - |  |
-| 30 | passwordChangedAt | Date | Datetime |  |
-| 31 | isLocked | Boolean | - |  |
-| 32 | lastAccessReviewDate | Date | Date |  |
-| 33 | passwordExpiryDate | Date | Date |  |
-| 34 | status | String | - |  |
-| 35 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | userName | String | - |  |
+| 7 | fullName | String | - |  |
+| 8 | userType | String | - |  |
+| 9 | departmentId | String | - | u_mes_mast_department._id |
+| 10 | departmentName | String | - |  |
+| 11 | designationId | String | - | u_mes_mast_designation._id |
+| 12 | designationName | String | - |  |
+| 13 | badgeNo | String | - |  |
+| 14 | email | String | - |  |
+| 15 | mobile | String | - |  |
+| 16 | defaultShiftId | String | - | u_mes_mast_shift._id |
+| 17 | defaultShiftName | String | - |  |
+| 18 | homeWorkCenterId | String | - | u_mes_mast_workCenter._id |
+| 19 | homeWorkCenterName | String | - |  |
+| 20 | reportsToUserId | String | - | u_mes_mast_user._id |
+| 21 | reportsToUserName | String | - |  |
+| 22 | dateOfJoining | Date | Date |  |
+| 23 | employmentTypeId | String | - | u_mes_mast_employmentType._id |
+| 24 | employmentTypeName | String | - |  |
+| 25 | contractorSupplierId | String | - | u_mes_mast_supplier._id |
+| 26 | contractorSupplierName | String | - |  |
+| 27 | languageId | String | - | u_mes_mast_language._id |
+| 28 | languageName | String | - |  |
+| 29 | lastLoginAt | Date | Datetime |  |
+| 30 | failedLoginCount | Int32 | - |  |
+| 31 | passwordChangedAt | Date | Datetime |  |
+| 32 | isLocked | Boolean | - |  |
+| 33 | lastAccessReviewDate | Date | Date |  |
+| 34 | passwordExpiryDate | Date | Date |  |
+| 35 | status | String | - |  |
+| 36 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_userRole
 
@@ -691,14 +720,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_user | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | userId | String | - | u_mes_mast_user._id |
-| 6 | userName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | roleId | String | - | u_mes_mast_role._id |
-| 9 | roleName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | userId | String | - | u_mes_mast_user._id |
+| 7 | userName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | roleId | String | - | u_mes_mast_role._id |
+| 10 | roleName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_skill
 
@@ -708,20 +738,21 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | skillCategoryId | String | - | u_mes_mast_skillCategory._id |
-| 7 | skillCategoryName | String | - |  |
-| 8 | description | String | - |  |
-| 9 | minimumLevelRequired | Int32 | - |  |
-| 10 | validityMonths | Int32 | - |  |
-| 11 | trainingControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 12 | trainingControlledDocumentName | String | - |  |
-| 13 | assessmentMethod | String | - |  |
-| 14 | isSafetyCritical | Boolean | - |  |
-| 15 | status | String | - |  |
-| 16 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | skillCategoryId | String | - | u_mes_mast_skillCategory._id |
+| 8 | skillCategoryName | String | - |  |
+| 9 | description | String | - |  |
+| 10 | minimumLevelRequired | Int32 | - |  |
+| 11 | validityMonths | Int32 | - |  |
+| 12 | trainingControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 13 | trainingControlledDocumentName | String | - |  |
+| 14 | assessmentMethod | String | - |  |
+| 15 | isSafetyCritical | Boolean | - |  |
+| 16 | status | String | - |  |
+| 17 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_skillOperation
 
@@ -731,14 +762,15 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_skill | _id pattern
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | skillId | String | - | u_mes_mast_skill._id |
-| 6 | skillName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | operationId | String | - | u_mes_prod_operation._id |
-| 9 | operationName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | skillId | String | - | u_mes_mast_skill._id |
+| 7 | skillName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | operationId | String | - | u_mes_prod_operation._id |
+| 10 | operationName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_skillLevelScale
 
@@ -748,14 +780,15 @@ Kind: child | Data class: master | Parent: u_mes_mast_skill | _id pattern: 16-di
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | skillId | String | - | u_mes_mast_skill._id |
-| 6 | skillName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | level | Int32 | - |  |
-| 9 | description | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | skillId | String | - | u_mes_mast_skill._id |
+| 7 | skillName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | level | Int32 | - |  |
+| 10 | description | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_skillCertification
 
@@ -765,38 +798,39 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | userId | String | - | u_mes_mast_user._id |
-| 6 | userName | String | - |  |
-| 7 | skillId | String | - | u_mes_mast_skill._id |
-| 8 | skillName | String | - |  |
-| 9 | level | Int32 | - |  |
-| 10 | awardedAt | Date | Datetime |  |
-| 11 | validFrom | Date | Date |  |
-| 12 | validTo | Date | Date |  |
-| 13 | assessorUserId | String | - | u_mes_mast_user._id |
-| 14 | assessorUserName | String | - |  |
-| 15 | assessmentScore | Decimal128 | - |  |
-| 16 | assessmentMethod | String | - |  |
-| 17 | trainingHours | Decimal128 | - |  |
-| 18 | evidenceControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 19 | evidenceControlledDocumentName | String | - |  |
-| 20 | restrictions | String | - |  |
-| 21 | revokedAt | Date | Datetime |  |
-| 22 | revokedReason | String | - |  |
-| 23 | nextReviewAt | Date | Date |  |
-| 24 | trainedDocumentRevision | String | - |  |
-| 25 | requalificationRequired | Boolean | - |  |
-| 26 | revocationSource | String | - |  |
-| 27 | status | String | - |  |
-| 28 | schemaVersion | Int32 | - |  |
-| 29 | createdAt | Date | Datetime |  |
-| 30 | createdById | String | - | u_mes_mast_user._id |
-| 31 | createdBy | String | - |  |
-| 32 | updatedAt | Date | Datetime |  |
-| 33 | updatedById | String | - | u_mes_mast_user._id |
-| 34 | updatedBy | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | userId | String | - | u_mes_mast_user._id |
+| 7 | userName | String | - |  |
+| 8 | skillId | String | - | u_mes_mast_skill._id |
+| 9 | skillName | String | - |  |
+| 10 | level | Int32 | - |  |
+| 11 | awardedAt | Date | Datetime |  |
+| 12 | validFrom | Date | Date |  |
+| 13 | validTo | Date | Date |  |
+| 14 | assessorUserId | String | - | u_mes_mast_user._id |
+| 15 | assessorUserName | String | - |  |
+| 16 | assessmentScore | Decimal128 | - |  |
+| 17 | assessmentMethod | String | - |  |
+| 18 | trainingHours | Decimal128 | - |  |
+| 19 | evidenceControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 20 | evidenceControlledDocumentName | String | - |  |
+| 21 | restrictions | String | - |  |
+| 22 | revokedAt | Date | Datetime |  |
+| 23 | revokedReason | String | - |  |
+| 24 | nextReviewAt | Date | Date |  |
+| 25 | trainedDocumentRevision | String | - |  |
+| 26 | requalificationRequired | Boolean | - |  |
+| 27 | revocationSource | String | - |  |
+| 28 | status | String | - |  |
+| 29 | schemaVersion | Int32 | - |  |
+| 30 | createdAt | Date | Datetime |  |
+| 31 | createdById | String | - | u_mes_mast_user._id |
+| 32 | createdBy | String | - |  |
+| 33 | updatedAt | Date | Datetime |  |
+| 34 | updatedById | String | - | u_mes_mast_user._id |
+| 35 | updatedBy | String | - |  |
 
 ## u_mes_mast_customer
 
@@ -806,30 +840,31 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | customerType | String | - |  |
-| 7 | parentCustomerCode | String | - |  |
-| 8 | gstin | String | - |  |
-| 9 | billingAddressLine1 | String | - |  |
-| 10 | billingAddressCity | String | - |  |
-| 11 | billingAddressState | String | - |  |
-| 12 | billingAddressPostalCode | String | - |  |
-| 13 | billingAddressCountryId | String | - | u_mes_mast_country._id |
-| 14 | billingAddressCountryName | String | - |  |
-| 15 | supplierCodeAtCustomer | String | - |  |
-| 16 | labelTemplateId | String | - | u_mes_matl_labelTemplate._id |
-| 17 | labelTemplateName | String | - |  |
-| 18 | asnRequired | Boolean | - |  |
-| 19 | ppapLevelDefault | Int32 | - |  |
-| 20 | ppmTarget | Int32 | - |  |
-| 21 | paymentTermsDays | Int32 | - |  |
-| 22 | currencyId | String | - | u_mes_mast_currency._id |
-| 23 | currencyName | String | - |  |
-| 24 | portalUrl | String | - |  |
-| 25 | status | String | - |  |
-| 26 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | customerType | String | - |  |
+| 8 | parentCustomerCode | String | - |  |
+| 9 | gstin | String | - |  |
+| 10 | billingAddressLine1 | String | - |  |
+| 11 | billingAddressCity | String | - |  |
+| 12 | billingAddressState | String | - |  |
+| 13 | billingAddressPostalCode | String | - |  |
+| 14 | billingAddressCountryId | String | - | u_mes_mast_country._id |
+| 15 | billingAddressCountryName | String | - |  |
+| 16 | supplierCodeAtCustomer | String | - |  |
+| 17 | labelTemplateId | String | - | u_mes_matl_labelTemplate._id |
+| 18 | labelTemplateName | String | - |  |
+| 19 | asnRequired | Boolean | - |  |
+| 20 | ppapLevelDefault | Int32 | - |  |
+| 21 | ppmTarget | Int32 | - |  |
+| 22 | paymentTermsDays | Int32 | - |  |
+| 23 | currencyId | String | - | u_mes_mast_currency._id |
+| 24 | currencyName | String | - |  |
+| 25 | portalUrl | String | - |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_customerShipTo
 
@@ -839,20 +874,21 @@ Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: 16
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | customerId | String | - | u_mes_mast_customer._id |
-| 6 | customerName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | shipToCode | String | - |  |
-| 9 | name | String | - |  |
-| 10 | line1 | String | - |  |
-| 11 | city | String | - |  |
-| 12 | state | String | - |  |
-| 13 | postalCode | String | - |  |
-| 14 | dockCode | String | - |  |
-| 15 | transitDays | Int32 | - |  |
-| 16 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | customerId | String | - | u_mes_mast_customer._id |
+| 7 | customerName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | shipToCode | String | - |  |
+| 10 | name | String | - |  |
+| 11 | line1 | String | - |  |
+| 12 | city | String | - |  |
+| 13 | state | String | - |  |
+| 14 | postalCode | String | - |  |
+| 15 | dockCode | String | - |  |
+| 16 | transitDays | Int32 | - |  |
+| 17 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_customerContact
 
@@ -862,16 +898,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_customer | _id pattern: 16
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | customerId | String | - | u_mes_mast_customer._id |
-| 6 | customerName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | name | String | - |  |
-| 9 | businessFunction | String | - |  |
-| 10 | email | String | - |  |
-| 11 | phone | String | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | customerId | String | - | u_mes_mast_customer._id |
+| 7 | customerName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | name | String | - |  |
+| 10 | businessFunction | String | - |  |
+| 11 | email | String | - |  |
+| 12 | phone | String | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_supplier
 
@@ -881,30 +918,31 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | supplierType | String | - |  |
-| 7 | commodityId | String | - | u_mes_mast_commodity._id |
-| 8 | commodityName | String | - |  |
-| 9 | gstin | String | - |  |
-| 10 | addressLine1 | String | - |  |
-| 11 | addressCity | String | - |  |
-| 12 | addressState | String | - |  |
-| 13 | addressPostalCode | String | - |  |
-| 14 | addressCountryId | String | - | u_mes_mast_country._id |
-| 15 | addressCountryName | String | - |  |
-| 16 | approvedAt | Date | Datetime |  |
-| 17 | ppmLast12Months | Int32 | - |  |
-| 18 | deliveryRatingPct | Decimal128 | - |  |
-| 19 | qualityRatingPct | Decimal128 | - |  |
-| 20 | leadTimeDays | Int32 | - |  |
-| 21 | paymentTermsDays | Int32 | - |  |
-| 22 | currencyId | String | - | u_mes_mast_currency._id |
-| 23 | currencyName | String | - |  |
-| 24 | isDirectedSource | Boolean | - |  |
-| 25 | status | String | - |  |
-| 26 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | supplierType | String | - |  |
+| 8 | commodityId | String | - | u_mes_mast_commodity._id |
+| 9 | commodityName | String | - |  |
+| 10 | gstin | String | - |  |
+| 11 | addressLine1 | String | - |  |
+| 12 | addressCity | String | - |  |
+| 13 | addressState | String | - |  |
+| 14 | addressPostalCode | String | - |  |
+| 15 | addressCountryId | String | - | u_mes_mast_country._id |
+| 16 | addressCountryName | String | - |  |
+| 17 | approvedAt | Date | Datetime |  |
+| 18 | ppmLast12Months | Int32 | - |  |
+| 19 | deliveryRatingPct | Decimal128 | - |  |
+| 20 | qualityRatingPct | Decimal128 | - |  |
+| 21 | leadTimeDays | Int32 | - |  |
+| 22 | paymentTermsDays | Int32 | - |  |
+| 23 | currencyId | String | - | u_mes_mast_currency._id |
+| 24 | currencyName | String | - |  |
+| 25 | isDirectedSource | Boolean | - |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_supplierContact
 
@@ -914,16 +952,17 @@ Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: 16
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | supplierId | String | - | u_mes_mast_supplier._id |
-| 6 | supplierName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | name | String | - |  |
-| 9 | businessFunction | String | - |  |
-| 10 | email | String | - |  |
-| 11 | phone | String | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | supplierId | String | - | u_mes_mast_supplier._id |
+| 7 | supplierName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | name | String | - |  |
+| 10 | businessFunction | String | - |  |
+| 11 | email | String | - |  |
+| 12 | phone | String | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_supplierCertificate
 
@@ -933,15 +972,16 @@ Kind: child | Data class: master | Parent: u_mes_mast_supplier | _id pattern: 16
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | supplierId | String | - | u_mes_mast_supplier._id |
-| 6 | supplierName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | standard | String | - |  |
-| 9 | certificateNo | String | - |  |
-| 10 | validTo | Date | Date |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | supplierId | String | - | u_mes_mast_supplier._id |
+| 7 | supplierName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | standard | String | - |  |
+| 10 | certificateNo | String | - |  |
+| 11 | validTo | Date | Date |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_supplierSuppliedItem
 
@@ -951,16 +991,17 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_supplier | _id patt
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | supplierId | String | - | u_mes_mast_supplier._id |
-| 6 | supplierName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | suppliedItemId | String | - | u_mes_prod_item._id |
-| 9 | suppliedItemName | String | - |  |
-| 10 | qualificationStatus | String | - |  |
-| 11 | qualifiedUntilDate | Date | Date |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | supplierId | String | - | u_mes_mast_supplier._id |
+| 7 | supplierName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | suppliedItemId | String | - | u_mes_prod_item._id |
+| 10 | suppliedItemName | String | - |  |
+| 11 | qualificationStatus | String | - |  |
+| 12 | qualifiedUntilDate | Date | Date |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_unitOfMeasure
 
@@ -970,21 +1011,22 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | scope | String | - |  |
-| 7 | symbol | String | - |  |
-| 8 | dimension | String | - |  |
-| 9 | baseUnitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
-| 10 | baseUnitOfMeasureName | String | - |  |
-| 11 | factorToBase | Decimal128 | - |  |
-| 12 | offsetToBase | Decimal128 | - |  |
-| 13 | decimalPlaces | Int32 | - |  |
-| 14 | isoCode | String | - |  |
-| 15 | isBaseUnit | Boolean | - |  |
-| 16 | status | String | - |  |
-| 17 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | scope | String | - |  |
+| 8 | symbol | String | - |  |
+| 9 | dimension | String | - |  |
+| 10 | baseUnitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 11 | baseUnitOfMeasureName | String | - |  |
+| 12 | factorToBase | Decimal128 | - |  |
+| 13 | offsetToBase | Decimal128 | - |  |
+| 14 | decimalPlaces | Int32 | - |  |
+| 15 | isoCode | String | - |  |
+| 16 | isBaseUnit | Boolean | - |  |
+| 17 | status | String | - |  |
+| 18 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_department
 
@@ -994,19 +1036,20 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | parentDepartmentId | String | - | u_mes_mast_department._id |
-| 8 | parentDepartmentName | String | - |  |
-| 9 | headUserId | String | - | u_mes_mast_user._id |
-| 10 | headUserName | String | - |  |
-| 11 | costCenterId | String | - | u_mes_mast_costCenter._id |
-| 12 | costCenterName | String | - |  |
-| 13 | sequenceNo | Int32 | - |  |
-| 14 | status | String | - |  |
-| 15 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | parentDepartmentId | String | - | u_mes_mast_department._id |
+| 9 | parentDepartmentName | String | - |  |
+| 10 | headUserId | String | - | u_mes_mast_user._id |
+| 11 | headUserName | String | - |  |
+| 12 | costCenterId | String | - | u_mes_mast_costCenter._id |
+| 13 | costCenterName | String | - |  |
+| 14 | sequenceNo | Int32 | - |  |
+| 15 | status | String | - |  |
+| 16 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_designation
 
@@ -1016,17 +1059,18 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | departmentId | String | - | u_mes_mast_department._id |
-| 8 | departmentName | String | - |  |
-| 9 | gradeLevel | Int32 | - |  |
-| 10 | isSupervisory | Boolean | - |  |
-| 11 | sequenceNo | Int32 | - |  |
-| 12 | status | String | - |  |
-| 13 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | departmentId | String | - | u_mes_mast_department._id |
+| 9 | departmentName | String | - |  |
+| 10 | gradeLevel | Int32 | - |  |
+| 11 | isSupervisory | Boolean | - |  |
+| 12 | sequenceNo | Int32 | - |  |
+| 13 | status | String | - |  |
+| 14 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_employmentType
 
@@ -1036,14 +1080,15 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | isContract | Boolean | - |  |
-| 8 | sequenceNo | Int32 | - |  |
-| 9 | status | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | isContract | Boolean | - |  |
+| 9 | sequenceNo | Int32 | - |  |
+| 10 | status | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_costCenter
 
@@ -1053,15 +1098,16 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | erpCostCenterCode | String | - |  |
-| 8 | validFrom | Date | Date |  |
-| 9 | validTo | Date | Date |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | erpCostCenterCode | String | - |  |
+| 9 | validFrom | Date | Date |  |
+| 10 | validTo | Date | Date |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_manufacturer
 
@@ -1071,16 +1117,17 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | countryId | String | - | u_mes_mast_country._id |
-| 8 | countryName | String | - |  |
-| 9 | website | String | - |  |
-| 10 | supportPhone | String | - |  |
-| 11 | status | String | - |  |
-| 12 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | countryId | String | - | u_mes_mast_country._id |
+| 9 | countryName | String | - |  |
+| 10 | website | String | - |  |
+| 11 | supportPhone | String | - |  |
+| 12 | status | String | - |  |
+| 13 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_equipmentType
 
@@ -1090,13 +1137,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_skillCategory
 
@@ -1106,13 +1154,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_permission
 
@@ -1122,15 +1171,16 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | resourceName | String | - |  |
-| 8 | actionName | String | - |  |
-| 9 | sequenceNo | Int32 | - |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | resourceName | String | - |  |
+| 9 | actionName | String | - |  |
+| 10 | sequenceNo | Int32 | - |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_signatureMeaning
 
@@ -1140,13 +1190,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_currency
 
@@ -1156,15 +1207,16 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | symbol | String | - |  |
-| 7 | decimalPlaces | Int32 | - |  |
-| 8 | isoNumericCode | String | - |  |
-| 9 | sequenceNo | Int32 | - |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | symbol | String | - |  |
+| 8 | decimalPlaces | Int32 | - |  |
+| 9 | isoNumericCode | String | - |  |
+| 10 | sequenceNo | Int32 | - |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_country
 
@@ -1174,14 +1226,15 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | isoAlpha3Code | String | - |  |
-| 7 | dialCode | String | - |  |
-| 8 | sequenceNo | Int32 | - |  |
-| 9 | status | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | isoAlpha3Code | String | - |  |
+| 8 | dialCode | String | - |  |
+| 9 | sequenceNo | Int32 | - |  |
+| 10 | status | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_language
 
@@ -1191,13 +1244,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | nativeName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | nativeName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_transporter
 
@@ -1207,15 +1261,16 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | gstin | String | - |  |
-| 7 | phone | String | - |  |
-| 8 | email | String | - |  |
-| 9 | sequenceNo | Int32 | - |  |
-| 10 | status | String | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | gstin | String | - |  |
+| 8 | phone | String | - |  |
+| 9 | email | String | - |  |
+| 10 | sequenceNo | Int32 | - |  |
+| 11 | status | String | - |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_commodity
 
@@ -1225,13 +1280,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | name | String | - |  |
-| 6 | description | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | status | String | - |  |
-| 9 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | status | String | - |  |
+| 10 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_roleRequiredSkill
 
@@ -1241,12 +1297,13 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_role | _id pattern:
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | roleId | String | - | u_mes_mast_role._id |
-| 6 | roleName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | requiredSkillId | String | - | u_mes_mast_skill._id |
-| 9 | requiredSkillName | String | - |  |
-| 10 | minimumLevel | Int32 | - |  |
-| 11 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | roleId | String | - | u_mes_mast_role._id |
+| 7 | roleName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | requiredSkillId | String | - | u_mes_mast_skill._id |
+| 10 | requiredSkillName | String | - |  |
+| 11 | minimumLevel | Int32 | - |  |
+| 12 | schemaVersion | Int32 | - |  |

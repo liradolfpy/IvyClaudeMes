@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 36 (26 required, 10 may be null) |
+| Keys | 37 (27 required, 10 may be null) |
 | Estimated volume per year | 200-1,000 |
 | Storage | standard |
 
@@ -34,40 +34,41 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1076000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ECN-2026-0027"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | title | String | - | Yes | Title of the engineering change; used as its display value in other collections | `"Bleed screw torque window revised to 14 +/- 2 N.m"` |  |
-| 6 | description | String | - | Yes | Description of the engineering change | `"Change request: bleed screw torque window revised to 14 +/- 2 n.m. Affected process step: gravity die casting"` |  |
-| 7 | changeType | String | - | Yes | Change type | `"Process Change"` | Design Change; Process Change; Material Change; Supplier Change; Tooling Change; Document Change |
-| 8 | reasonCodeText | String | - | Yes | Reason code text | `"Customer request after field study of bleed screw seepage"` |  |
-| 9 | originator | String | - | Yes | Originator of the engineering change | `"Customer"` | Customer; Internal; Supplier |
-| 10 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
-| 11 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
-| 12 | customerChangeRef | String | - | No (null allowed) | Customer change ref | `"SML-ECR-2026-118"` |  |
-| 13 | raisedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'raised' | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 14 | raisedBy | String | - | Yes | Display name of the user in raisedById, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 15 | raisedAt | Date | Datetime | Yes | Date and time when the record was raised. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 16 | effectivityType | String | - | Yes | Effectivity type | `"Date"` | Date; Serial Number; Lot; Stock Run Out |
-| 17 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 18 | cutInSerialNo | String | - | No (null allowed) | Cut in serial number | `"VB26272A00001"` |  |
-| 19 | stockDispositionTypeId | String | - | No (null allowed) | Reference to u_mes_qual_dispositionType._id: stock disposition type | `"1284000000000001"` | Reference: u_mes_qual_dispositionType._id |
-| 20 | stockDispositionTypeName | String | - | No (null allowed) | Display value of stockDispositionTypeId, copied from u_mes_qual_dispositionType.name | `"Use As Is"` |  |
-| 21 | ppapRequired | Boolean | - | Yes | True when: PPAP required | `false` |  |
-| 22 | implementedAt | Date | Datetime | No (null allowed) | Date and time when the record was implemented. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 23 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 24 | gmpImpact | Boolean | - | Yes | True when the change affects GMP-relevant product, process, equipment or systems (GMP-44) | `true` |  |
-| 25 | validationRequired | Boolean | - | Yes | True when process, equipment or system validation is required | `true` |  |
-| 26 | regulatoryImpact | String | - | Yes | Regulatory or customer approval needed before implementation | `"Customer Notification"` | None; Customer Notification; Prior Approval |
-| 27 | riskAssessmentId | String | - | No (null allowed) | Reference to u_mes_qual_riskAssessment._id | `"1361000000000003"` | Reference: u_mes_qual_riskAssessment._id |
-| 28 | riskAssessmentName | String | - | No (null allowed) | Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title | `"Nutrunner angle monitoring and torque window 14 +/- 2 N.m"` |  |
-| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Under Evaluation; Approved; Implemented; Closed; Rejected |
-| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 31 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 32 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 33 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 34 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 35 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 36 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | title | String | - | Yes | Title of the engineering change; used as its display value in other collections | `"Bleed screw torque window revised to 14 +/- 2 N.m"` |  |
+| 7 | description | String | - | Yes | Description of the engineering change | `"Change request: bleed screw torque window revised to 14 +/- 2 n.m. Affected process step: gravity die casting"` |  |
+| 8 | changeType | String | - | Yes | Change type | `"Process Change"` | Design Change; Process Change; Material Change; Supplier Change; Tooling Change; Document Change |
+| 9 | reasonCodeText | String | - | Yes | Reason code text | `"Customer request after field study of bleed screw seepage"` |  |
+| 10 | originator | String | - | Yes | Originator of the engineering change | `"Customer"` | Customer; Internal; Supplier |
+| 11 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
+| 12 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
+| 13 | customerChangeRef | String | - | No (null allowed) | Customer change ref | `"SML-ECR-2026-118"` |  |
+| 14 | raisedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'raised' | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 15 | raisedBy | String | - | Yes | Display name of the user in raisedById, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 16 | raisedAt | Date | Datetime | Yes | Date and time when the record was raised. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 17 | effectivityType | String | - | Yes | Effectivity type | `"Date"` | Date; Serial Number; Lot; Stock Run Out |
+| 18 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 19 | cutInSerialNo | String | - | No (null allowed) | Cut in serial number | `"VB26272A00001"` |  |
+| 20 | stockDispositionTypeId | String | - | No (null allowed) | Reference to u_mes_qual_dispositionType._id: stock disposition type | `"1284000000000001"` | Reference: u_mes_qual_dispositionType._id |
+| 21 | stockDispositionTypeName | String | - | No (null allowed) | Display value of stockDispositionTypeId, copied from u_mes_qual_dispositionType.name | `"Use As Is"` |  |
+| 22 | ppapRequired | Boolean | - | Yes | True when: PPAP required | `false` |  |
+| 23 | implementedAt | Date | Datetime | No (null allowed) | Date and time when the record was implemented. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 24 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 25 | gmpImpact | Boolean | - | Yes | True when the change affects GMP-relevant product, process, equipment or systems (GMP-44) | `true` |  |
+| 26 | validationRequired | Boolean | - | Yes | True when process, equipment or system validation is required | `true` |  |
+| 27 | regulatoryImpact | String | - | Yes | Regulatory or customer approval needed before implementation | `"Customer Notification"` | None; Customer Notification; Prior Approval |
+| 28 | riskAssessmentId | String | - | No (null allowed) | Reference to u_mes_qual_riskAssessment._id | `null` | Reference: u_mes_qual_riskAssessment._id |
+| 29 | riskAssessmentName | String | - | No (null allowed) | Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title | `null` |  |
+| 30 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Under Evaluation; Approved; Implemented; Closed; Rejected |
+| 31 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 32 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 33 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 34 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 35 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 36 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 37 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

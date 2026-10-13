@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 47 (30 required, 17 may be null) |
+| Keys | 48 (29 required, 19 may be null) |
 | Estimated volume per year | ~720,000 |
 | Storage | standard |
 
@@ -31,51 +31,52 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1094000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"U260915A0184"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | productionOrderId | String | - | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
-| 6 | productionOrderName | String | - | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
-| 7 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
-| 8 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
-| 9 | itemRevision | String | - | Yes | Item revision | `"D"` |  |
-| 10 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
-| 11 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
-| 12 | serialNumberId | String | - | No (null allowed) | Reference to u_mes_trac_serialNumber._id | `"1131000000000001"` | Reference: u_mes_trac_serialNumber._id |
-| 13 | serialNumberName | String | - | No (null allowed) | Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo | `"VB26258A00184"` |  |
-| 14 | bodyLotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id: body lot | `"1096000000000004"` | Reference: u_mes_plan_lot._id |
-| 15 | bodyLotName | String | - | No (null allowed) | Display value of bodyLotId, copied from u_mes_plan_lot.recordNo | `"L260917-ANO-001"` |  |
-| 16 | routingId | String | - | Yes | Reference to u_mes_prod_routing._id | `"1053000000000001"` | Reference: u_mes_prod_routing._id |
-| 17 | routingName | String | - | Yes | Display value of routingId, copied from u_mes_prod_routing.description | `"Front caliper LH, full process routing"` |  |
-| 18 | currentStepNo | Int32 | - | Yes | Current step number | `NumberInt(60)` |  |
-| 19 | currentOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: current operation | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
-| 20 | currentOperationName | String | - | Yes | Display value of currentOperationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
-| 21 | currentWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: current work center | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
-| 22 | currentWorkCenterName | String | - | Yes | Display value of currentWorkCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
-| 23 | qualityStatus | String | - | Yes | Quality status | `"On Hold"` | Released; Under Inspection; On Hold; Rejected |
-| 24 | onHold | Boolean | - | Yes | True when: on hold | `true` |  |
-| 25 | qualityHoldId | String | - | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `"1172000000000001"` | Reference: u_mes_qual_qualityHold._id |
-| 26 | qualityHoldName | String | - | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `"HLD-2026-000021"` |  |
-| 27 | reworkCount | Int32 | - | Yes | Rework count | `NumberInt(0)` |  |
-| 28 | createdAtOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: created at operation | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
-| 29 | createdAtOperationName | String | - | No (null allowed) | Display value of createdAtOperationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
-| 30 | startedAt | Date | Datetime | Yes | Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:40.000+0000")` |  |
-| 31 | completedAt | Date | Datetime | No (null allowed) | Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 32 | lastOperationExecutionId | String | - | No (null allowed) | Reference to u_mes_plan_operationExecution._id: last operation execution | `"1090000000000002"` | Reference: u_mes_plan_operationExecution._id |
-| 33 | lastOperationExecutionName | String | - | No (null allowed) | Display value of lastOperationExecutionId, copied from u_mes_plan_operationExecution.recordNo | `"OPX-2026-000379"` |  |
-| 34 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
-| 35 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
-| 36 | bodyCavityNo | Int32 | - | Yes | Body cavity number | `NumberInt(1)` |  |
-| 37 | castDateCode | String | - | Yes | Date, shift and cavity code cast into the body | `"26258A1"` |  |
-| 38 | scrappedAt | Date | Datetime | No (null allowed) | Date and time when the record was scrapped. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 39 | shippedAt | Date | Datetime | No (null allowed) | Date and time when the record was shipped. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 40 | status | String | - | Yes | Primary lifecycle state of the document | `"On Hold"` | Created; In Process; On Hold; In Rework; Completed; Packed; Shipped; Scrapped |
-| 41 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 42 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:40.000+0000")` |  |
-| 43 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 44 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 45 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:40.000+0000")` |  |
-| 46 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 47 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | productionOrderId | String | - | Yes | Reference to u_mes_plan_productionOrder._id | `"1083000000000001"` | Reference: u_mes_plan_productionOrder._id |
+| 7 | productionOrderName | String | - | Yes | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000412"` |  |
+| 8 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
+| 9 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 10 | itemRevision | String | - | Yes | Item revision | `"D"` |  |
+| 11 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
+| 12 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
+| 13 | serialNumberId | String | - | No (null allowed) | Reference to u_mes_trac_serialNumber._id | `"1131000000000001"` | Reference: u_mes_trac_serialNumber._id |
+| 14 | serialNumberName | String | - | No (null allowed) | Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo | `"VB26258A00184"` |  |
+| 15 | bodyLotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id: body lot | `"1096000000000004"` | Reference: u_mes_plan_lot._id |
+| 16 | bodyLotName | String | - | No (null allowed) | Display value of bodyLotId, copied from u_mes_plan_lot.recordNo | `"L260917-ANO-001"` |  |
+| 17 | routingId | String | - | Yes | Reference to u_mes_prod_routing._id | `"1053000000000001"` | Reference: u_mes_prod_routing._id |
+| 18 | routingName | String | - | Yes | Display value of routingId, copied from u_mes_prod_routing.description | `"Front caliper LH, full process routing"` |  |
+| 19 | currentStepNo | Int32 | - | Yes | Current step number | `NumberInt(60)` |  |
+| 20 | currentOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: current operation | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
+| 21 | currentOperationName | String | - | Yes | Display value of currentOperationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
+| 22 | currentWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: current work center | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
+| 23 | currentWorkCenterName | String | - | Yes | Display value of currentWorkCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
+| 24 | qualityStatus | String | - | Yes | Quality status | `"On Hold"` | Released; Under Inspection; On Hold; Rejected |
+| 25 | onHold | Boolean | - | Yes | True when: on hold | `true` |  |
+| 26 | qualityHoldId | String | - | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `"1172000000000001"` | Reference: u_mes_qual_qualityHold._id |
+| 27 | qualityHoldName | String | - | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `"HLD-2026-000021"` |  |
+| 28 | reworkCount | Int32 | - | Yes | Rework count | `NumberInt(0)` |  |
+| 29 | createdAtOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: created at operation | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
+| 30 | createdAtOperationName | String | - | No (null allowed) | Display value of createdAtOperationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
+| 31 | startedAt | Date | Datetime | Yes | Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:40.000+0000")` |  |
+| 32 | completedAt | Date | Datetime | No (null allowed) | Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 33 | lastOperationExecutionId | String | - | No (null allowed) | Reference to u_mes_plan_operationExecution._id: last operation execution | `"1090000000000002"` | Reference: u_mes_plan_operationExecution._id |
+| 34 | lastOperationExecutionName | String | - | No (null allowed) | Display value of lastOperationExecutionId, copied from u_mes_plan_operationExecution.recordNo | `"OPX-2026-000379"` |  |
+| 35 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
+| 36 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
+| 37 | bodyCavityNo | Int32 | - | No (null allowed) | Body cavity number | `NumberInt(1)` |  |
+| 38 | castDateCode | String | - | No (null allowed) | Date, shift and cavity code cast into the body | `"26258A1"` |  |
+| 39 | scrappedAt | Date | Datetime | No (null allowed) | Date and time when the record was scrapped. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 40 | shippedAt | Date | Datetime | No (null allowed) | Date and time when the record was shipped. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 41 | status | String | - | Yes | Primary lifecycle state of the document | `"On Hold"` | Created; In Process; On Hold; In Rework; Completed; Packed; Shipped; Scrapped |
+| 42 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 43 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:40.000+0000")` |  |
+| 44 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 45 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 46 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:40.000+0000")` |  |
+| 47 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 48 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

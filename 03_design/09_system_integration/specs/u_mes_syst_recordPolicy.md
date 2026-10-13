@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 18 (13 required, 5 may be null) |
+| Keys | 19 (14 required, 5 may be null) |
 | Estimated volume per year | one row per collection (343) |
 | Storage | standard collection |
 
@@ -25,22 +25,23 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1340000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"RPO-u_mes_plan_operationExecution"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | collectionName | String | - | Yes | Collection governed | `"u_mes_plan_operationExecution"` |  |
-| 6 | editPolicy | String | - | Yes | Edit policy | `"No Edit After Lock"` | Free Edit; Controlled Edit; No Edit After Lock; Append Only |
-| 7 | lockOnStatusDefinitionId | String | - | No (null allowed) | Reference to u_mes_syst_statusDefinition._id: lock on status definition | `null` | Reference: u_mes_syst_statusDefinition._id |
-| 8 | lockOnStatusDefinitionName | String | - | No (null allowed) | Display value of lockOnStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName | `null` |  |
-| 9 | requiresReasonForEdit | Boolean | - | Yes | Edit needs a reason | `true` |  |
-| 10 | requiresSignatureForEdit | Boolean | - | Yes | Edit needs an electronic signature | `true` |  |
-| 11 | editRoleId | String | - | No (null allowed) | Reference to u_mes_mast_role._id: edit role | `null` | Reference: u_mes_mast_role._id |
-| 12 | editRoleName | String | - | No (null allowed) | Display value of editRoleId, copied from u_mes_mast_role.name | `null` |  |
-| 13 | deleteAllowed | Boolean | - | Yes | Physical delete allowed (false for all transaction data) | `false` |  |
-| 14 | retentionYears | Int32 | - | Yes | Retention period | `NumberInt(15)` |  |
-| 15 | archiveAfterMonths | Int32 | - | No (null allowed) | Move to archive storage after | `NumberInt(24)` |  |
-| 16 | gxpRelevant | Boolean | - | Yes | True when the collection holds GMP records (GMP-10) | `true` |  |
-| 17 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | collectionName | String | - | Yes | Collection governed | `"u_mes_plan_operationExecution"` |  |
+| 7 | editPolicy | String | - | Yes | Edit policy | `"No Edit After Lock"` | Free Edit; Controlled Edit; No Edit After Lock; Append Only |
+| 8 | lockOnStatusDefinitionId | String | - | No (null allowed) | Reference to u_mes_syst_statusDefinition._id: lock on status definition | `null` | Reference: u_mes_syst_statusDefinition._id |
+| 9 | lockOnStatusDefinitionName | String | - | No (null allowed) | Display value of lockOnStatusDefinitionId, copied from u_mes_syst_statusDefinition.statusName | `null` |  |
+| 10 | requiresReasonForEdit | Boolean | - | Yes | Edit needs a reason | `true` |  |
+| 11 | requiresSignatureForEdit | Boolean | - | Yes | Edit needs an electronic signature | `true` |  |
+| 12 | editRoleId | String | - | No (null allowed) | Reference to u_mes_mast_role._id: edit role | `null` | Reference: u_mes_mast_role._id |
+| 13 | editRoleName | String | - | No (null allowed) | Display value of editRoleId, copied from u_mes_mast_role.name | `null` |  |
+| 14 | deleteAllowed | Boolean | - | Yes | Physical delete allowed (false for all transaction data) | `false` |  |
+| 15 | retentionYears | Int32 | - | Yes | Retention period | `NumberInt(15)` |  |
+| 16 | archiveAfterMonths | Int32 | - | No (null allowed) | Move to archive storage after | `NumberInt(24)` |  |
+| 17 | gxpRelevant | Boolean | - | Yes | True when the collection holds GMP records (GMP-10) | `true` |  |
+| 18 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

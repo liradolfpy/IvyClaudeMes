@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 32 (28 required, 4 may be null) |
+| Keys | 33 (29 required, 4 may be null) |
 | Estimated volume per year | ~200,000 |
 | Storage | standard, immutable |
 
@@ -25,36 +25,37 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1243000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SIG-2026-000171"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_prod_recipe"` |  |
-| 6 | relatedEntityId | String | - | Yes | _id of the related document in the collection named by relatedCollectionName | `"1073000000000001"` | Reference: Any collection (see relatedCollectionName) |
-| 7 | relatedEntityName | String | - | Yes | Display value of the related document | `"Caliper body LH casting parameters"` |  |
-| 8 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 9 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 10 | roleId | String | - | Yes | Reference to u_mes_mast_role._id | `"1026000000000001"` | Reference: u_mes_mast_role._id |
-| 11 | roleName | String | - | Yes | Display value of roleId, copied from u_mes_mast_role.name | `"Production Operator"` |  |
-| 12 | signatureMeaningId | String | - | Yes | Reference to u_mes_mast_signatureMeaning._id | `"1264000000000001"` | Reference: u_mes_mast_signatureMeaning._id |
-| 13 | signatureMeaningName | String | - | Yes | Display value of signatureMeaningId, copied from u_mes_mast_signatureMeaning.name | `"Approved"` |  |
-| 14 | signedAt | Date | Datetime | Yes | Date and time when the record was signed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
-| 15 | authenticationMethod | String | - | Yes | Authentication method | `"Password"` | Password; Password And Badge; Single Sign On |
-| 16 | contentHash | String | - | Yes | Content hash | `"d0c1b2a3948576e5f4d3c2b1a0f9e8d7c6b5a4938271605f4e3d2c1b0a9f8e7d"` |  |
-| 17 | comment | String | - | No (null allowed) | Comment of the electronic signature | `"Verified against customer drawing revision D"` |  |
-| 18 | clientIp | String | - | Yes | Client ip | `"10.21.6.118"` |  |
-| 19 | workstation | String | - | Yes | Workstation of the electronic signature | `"PN1-ASY-HMI-07"` |  |
-| 20 | isSecondSignature | Boolean | - | Yes | True when the record is second signature | `false` |  |
-| 21 | witnessUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: witness user | `null` | Reference: u_mes_mast_user._id |
-| 22 | witnessUserName | String | - | No (null allowed) | Display value of witnessUserId, copied from u_mes_mast_user.fullName | `null` |  |
-| 23 | signatureManifestationText | String | - | Yes | Printed name, date and time and meaning shown with the signed record (GMP-06) | `"Sunil Jadhav, 15 Sep 2026 06:00 IST, Approved"` |  |
-| 24 | signedRecordVersion | Int32 | - | No (null allowed) | Version of the record that was signed | `NumberInt(3)` |  |
-| 25 | isFirstSigningInSession | Boolean | - | Yes | True when both signature components were entered (first signing of a session) | `true` |  |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
-| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_prod_recipe"` |  |
+| 7 | relatedEntityId | String | - | Yes | _id of the related document in the collection named by relatedCollectionName | `"1073000000000001"` | Reference: Any collection (see relatedCollectionName) |
+| 8 | relatedEntityName | String | - | Yes | Display value of the related document | `"Caliper body LH casting parameters"` |  |
+| 9 | userId | String | - | Yes | Reference to u_mes_mast_user._id | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 10 | userName | String | - | Yes | Display value of userId, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 11 | roleId | String | - | Yes | Reference to u_mes_mast_role._id | `"1026000000000001"` | Reference: u_mes_mast_role._id |
+| 12 | roleName | String | - | Yes | Display value of roleId, copied from u_mes_mast_role.name | `"Production Operator"` |  |
+| 13 | signatureMeaningId | String | - | Yes | Reference to u_mes_mast_signatureMeaning._id | `"1264000000000001"` | Reference: u_mes_mast_signatureMeaning._id |
+| 14 | signatureMeaningName | String | - | Yes | Display value of signatureMeaningId, copied from u_mes_mast_signatureMeaning.name | `"Approved"` |  |
+| 15 | signedAt | Date | Datetime | Yes | Date and time when the record was signed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 16 | authenticationMethod | String | - | Yes | Authentication method | `"Password"` | Password; Password And Badge; Single Sign On |
+| 17 | contentHash | String | - | Yes | Content hash | `"d0c1b2a3948576e5f4d3c2b1a0f9e8d7c6b5a4938271605f4e3d2c1b0a9f8e7d"` |  |
+| 18 | comment | String | - | No (null allowed) | Comment of the electronic signature | `"Verified against customer drawing revision D"` |  |
+| 19 | clientIp | String | - | Yes | Client ip | `"10.21.6.118"` |  |
+| 20 | workstation | String | - | Yes | Workstation of the electronic signature | `"PN1-ASY-HMI-07"` |  |
+| 21 | isSecondSignature | Boolean | - | Yes | True when the record is second signature | `false` |  |
+| 22 | witnessUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: witness user | `null` | Reference: u_mes_mast_user._id |
+| 23 | witnessUserName | String | - | No (null allowed) | Display value of witnessUserId, copied from u_mes_mast_user.fullName | `null` |  |
+| 24 | signatureManifestationText | String | - | Yes | Printed name, date and time and meaning shown with the signed record (GMP-06) | `"Sunil Jadhav, 15 Sep 2026 06:00 IST, Approved"` |  |
+| 25 | signedRecordVersion | Int32 | - | No (null allowed) | Version of the record that was signed | `NumberInt(3)` |  |
+| 26 | isFirstSigningInSession | Boolean | - | Yes | True when both signature components were entered (first signing of a session) | `true` |  |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Indexes
 

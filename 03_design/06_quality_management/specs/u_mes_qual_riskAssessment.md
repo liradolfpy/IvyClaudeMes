@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 28 (19 required, 9 may be null) |
+| Keys | 29 (20 required, 9 may be null) |
 | Estimated volume per year | about 200 per year |
 | Storage | standard collection |
 
@@ -25,32 +25,33 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1361000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"QRA-2026-021"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | title | String | - | Yes | Title | `"MES release 2.7.0, validation risk assessment of GMP functions"` |  |
-| 6 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_syst_computerisedSystem"` | u_mes_prod_engineeringChange; u_mes_syst_computerisedSystem; u_mes_qual_nonconformance; u_mes_mast_equipment; u_mes_prod_item |
-| 7 | relatedEntityId | String | - | Yes | _id of the related document in the collection named by relatedCollectionName | `"1344000000000001"` | Reference: Any collection (see relatedCollectionName) |
-| 8 | relatedEntityName | String | - | Yes | Display value of the related document | `"Manufacturing execution system, Chakan plant"` |  |
-| 9 | assessmentMethod | String | - | Yes | Risk method | `"Risk Ranking And Filtering"` | FMEA; Risk Ranking And Filtering; Fault Tree Analysis; HACCP; Preliminary Hazard Analysis |
-| 10 | scopeText | String | - | Yes | Scope of the assessment | `"New and changed functions of release 2.7.0: signatures, batch record review, release, reconciliation, reports"` |  |
-| 11 | initialRiskLevel | String | - | Yes | Risk before controls | `"High"` | Low; Medium; High |
-| 12 | residualRiskLevel | String | - | No (null allowed) | Risk after controls; null until assessed | `"Low"` | Low; Medium; High |
-| 13 | riskControlsText | String | - | No (null allowed) | Controls decided | `"Scripted testing of signature, release and reconciliation functions; unscripted testing of reports"` |  |
-| 14 | pfmeaId | String | - | No (null allowed) | Reference to u_mes_qual_pfmea._id | `null` | Reference: u_mes_qual_pfmea._id |
-| 15 | pfmeaName | String | - | No (null allowed) | Display value of pfmeaId, copied from u_mes_qual_pfmea.title | `null` |  |
-| 16 | acceptanceDecision | String | - | No (null allowed) | Risk acceptance decision | `"Accepted With Controls"` | Accepted; Accepted With Controls; Not Accepted |
-| 17 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 18 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 19 | approvedAt | Date | Datetime | No (null allowed) | Approval time | `ISODate("2026-08-14T10:00:00.000+0000")` |  |
-| 20 | nextReviewDate | Date | Date | No (null allowed) | Date of the next review | `ISODate("2027-08-14T00:00:00.000+0000")` |  |
-| 21 | status | String | - | Yes | Primary lifecycle state of the document | `"Approved"` | In Preparation; In Review; Approved; Superseded |
-| 22 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 23 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-08-14T10:00:00.000+0000")` |  |
-| 24 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 25 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 26 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-08-14T10:00:00.000+0000")` |  |
-| 27 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 28 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Gamp"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000011"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Ranjangaon OSD Plant, Pune"` |  |
+| 6 | title | String | - | Yes | Title | `"MES release 2.7.0, validation risk assessment of GMP functions"` |  |
+| 7 | relatedCollectionName | String | - | Yes | Name of the collection the related document is in | `"u_mes_syst_computerisedSystem"` | u_mes_prod_engineeringChange; u_mes_syst_computerisedSystem; u_mes_qual_nonconformance; u_mes_mast_equipment; u_mes_prod_item |
+| 8 | relatedEntityId | String | - | Yes | _id of the related document in the collection named by relatedCollectionName | `"1344000000000001"` | Reference: Any collection (see relatedCollectionName) |
+| 9 | relatedEntityName | String | - | Yes | Display value of the related document | `"Manufacturing execution system, Ranjangaon OSD plant"` |  |
+| 10 | assessmentMethod | String | - | Yes | Risk method | `"Risk Ranking And Filtering"` | FMEA; Risk Ranking And Filtering; Fault Tree Analysis; HACCP; Preliminary Hazard Analysis |
+| 11 | scopeText | String | - | Yes | Scope of the assessment | `"New and changed functions of release 2.7.0: signatures, batch record review by exception, release, reconciliation, reports"` |  |
+| 12 | initialRiskLevel | String | - | Yes | Risk before controls | `"High"` | Low; Medium; High |
+| 13 | residualRiskLevel | String | - | No (null allowed) | Risk after controls; null until assessed | `"Low"` | Low; Medium; High |
+| 14 | riskControlsText | String | - | No (null allowed) | Controls decided | `"Scripted testing of signature, release and reconciliation functions; unscripted testing of reports"` |  |
+| 15 | pfmeaId | String | - | No (null allowed) | Reference to u_mes_qual_pfmea._id | `null` | Reference: u_mes_qual_pfmea._id |
+| 16 | pfmeaName | String | - | No (null allowed) | Display value of pfmeaId, copied from u_mes_qual_pfmea.title | `null` |  |
+| 17 | acceptanceDecision | String | - | No (null allowed) | Risk acceptance decision | `"Accepted With Controls"` | Accepted; Accepted With Controls; Not Accepted |
+| 18 | approvedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 19 | approvedBy | String | - | No (null allowed) | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
+| 20 | approvedAt | Date | Datetime | No (null allowed) | Approval time | `ISODate("2026-08-14T10:00:00.000+0000")` |  |
+| 21 | nextReviewDate | Date | Date | No (null allowed) | Date of the next review | `ISODate("2027-08-14T00:00:00.000+0000")` |  |
+| 22 | status | String | - | Yes | Primary lifecycle state of the document | `"Approved"` | In Preparation; In Review; Approved; Superseded |
+| 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 24 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-08-14T10:00:00.000+0000")` |  |
+| 25 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 26 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
+| 27 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-08-14T10:00:00.000+0000")` |  |
+| 28 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000014"` | Reference: u_mes_mast_user._id |
+| 29 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |
 
 ## Status values
 

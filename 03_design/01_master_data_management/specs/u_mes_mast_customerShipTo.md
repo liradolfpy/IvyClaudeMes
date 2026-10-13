@@ -9,7 +9,7 @@
 | Parent collection | u_mes_mast_customer |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 16 (16 required, 0 may be null) |
+| Keys | 17 (17 required, 0 may be null) |
 
 ## Structure
 
@@ -24,20 +24,21 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1036000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SML-ST01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | customerId | String | - | Yes | Reference to u_mes_mast_customer._id: the parent document this one belongs to | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
-| 6 | customerName | String | - | Yes | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | shipToCode | String | - | Yes | Ship to code | `"SML-TLG-D4"` |  |
-| 9 | name | String | - | Yes | Name of the customer ship to | `"Sahyadri Motors Ltd., Dock 3"` |  |
-| 10 | line1 | String | - | Yes | Line1 of the customer ship to | `"Gate 3, Chassis Assembly Shop"` |  |
-| 11 | city | String | - | Yes | City of the customer ship to | `"Pune"` |  |
-| 12 | state | String | - | Yes | State of the customer ship to | `"Maharashtra"` |  |
-| 13 | postalCode | String | - | Yes | Postal code | `"410507"` |  |
-| 14 | dockCode | String | - | Yes | Dock code | `"D4"` |  |
-| 15 | transitDays | Int32 | - | Yes | Transit (days) | `NumberInt(1)` |  |
-| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | customerId | String | - | Yes | Reference to u_mes_mast_customer._id: the parent document this one belongs to | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
+| 7 | customerName | String | - | Yes | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | shipToCode | String | - | Yes | Ship to code | `"SML-TLG-D4"` |  |
+| 10 | name | String | - | Yes | Name of the customer ship to | `"Sahyadri Motors Ltd., Dock 3"` |  |
+| 11 | line1 | String | - | Yes | Line1 of the customer ship to | `"Gate 3, Chassis Assembly Shop"` |  |
+| 12 | city | String | - | Yes | City of the customer ship to | `"Pune"` |  |
+| 13 | state | String | - | Yes | State of the customer ship to | `"Maharashtra"` |  |
+| 14 | postalCode | String | - | Yes | Postal code | `"410507"` |  |
+| 15 | dockCode | String | - | Yes | Dock code | `"D4"` |  |
+| 16 | transitDays | Int32 | - | Yes | Transit (days) | `NumberInt(1)` |  |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

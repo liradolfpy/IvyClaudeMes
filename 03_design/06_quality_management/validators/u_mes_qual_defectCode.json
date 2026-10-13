@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "name",
@@ -36,6 +37,15 @@
         "recordNo": {
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
         },
         "siteId": {
           "bsonType": "string",
@@ -100,7 +110,9 @@
             "Casting Scrap",
             "Machining Scrap",
             "Assembly Scrap",
-            "Supplier Chargeable"
+            "Supplier Chargeable",
+            "Manufacturing Scrap",
+            "Packing Scrap"
           ]
         },
         "customerDefectCode": {

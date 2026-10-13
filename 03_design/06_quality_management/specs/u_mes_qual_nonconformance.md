@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 53 (31 required, 22 may be null) |
+| Keys | 54 (32 required, 22 may be null) |
 | Estimated volume per year | ~9,000 |
 | Storage | standard |
 
@@ -37,57 +37,58 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1160000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"NCR-2026-000118"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | title | String | - | Yes | Title of the nonconformance; used as its display value in other collections | `"Shrinkage porosity found on casting lot from die 2"` |  |
-| 6 | description | String | - | Yes | Description of the nonconformance | `"Porosity visible on machined face or found by X-ray sampling. Ejector pin sticks on cavity 2 and the casting does not release"` |  |
-| 7 | ncType | String | - | Yes | Nc type | `"Internal"` | Internal; Supplier; Customer |
-| 8 | source | String | - | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
-| 9 | detectedAt | Date | Datetime | Yes | Date and time when the record was detected. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 10 | detectedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'detected' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 11 | detectedBy | String | - | Yes | Display name of the user in detectedById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 12 | detectedAtOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: detected at operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 13 | detectedAtOperationName | String | - | Yes | Display value of detectedAtOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 14 | detectedAtWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: detected at work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 15 | detectedAtWorkCenterName | String | - | Yes | Display value of detectedAtWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 16 | originOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: origin operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 17 | originOperationName | String | - | No (null allowed) | Display value of originOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 18 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
-| 19 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 20 | defectCodeId | String | - | Yes | Reference to u_mes_qual_defectCode._id | `"1158000000000001"` | Reference: u_mes_qual_defectCode._id |
-| 21 | defectCodeName | String | - | Yes | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Shrinkage porosity"` |  |
-| 22 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
-| 23 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
-| 24 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `null` | Reference: u_mes_mast_customer._id |
-| 25 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `null` |  |
-| 26 | quantityAffected | Int32 | - | Yes | Quantity affected | `NumberInt(480)` |  |
-| 27 | quantityRejected | Int32 | - | Yes | Quantity rejected | `NumberInt(6)` |  |
-| 28 | qualityHoldId | String | - | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `"1172000000000005"` | Reference: u_mes_qual_qualityHold._id |
-| 29 | qualityHoldName | String | - | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `"HLD-2026-000029"` |  |
-| 30 | capaId | String | - | No (null allowed) | Reference to u_mes_qual_capa._id | `"1176000000000001"` | Reference: u_mes_qual_capa._id |
-| 31 | capaName | String | - | No (null allowed) | Display value of capaId, copied from u_mes_qual_capa.title | `"8D - Shrinkage porosity in bridge section"` |  |
-| 32 | rootCauseSummary | String | - | No (null allowed) | Root cause summary | `"Ejector pin galled after die coating build-up"` |  |
-| 33 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
-| 34 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
-| 35 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 36 | closedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'closed' | `null` | Reference: u_mes_mast_user._id |
-| 37 | closedBy | String | - | No (null allowed) | Display name of the user in closedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 38 | deviationClass | String | - | No (null allowed) | GMP deviation classification; null when the nonconformance is not a GMP deviation (GMP-30) | `"Major"` | Minor; Major; Critical |
-| 39 | productImpactText | String | - | No (null allowed) | Impact assessment on the product and on other batches | `"Castings of die 2 from the lot quarantined; other dies not affected"` |  |
-| 40 | investigationDueDate | Date | Date | No (null allowed) | Due date of the investigation | `ISODate("2026-10-15T00:00:00.000+0000")` |  |
-| 41 | qaApprovedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'qa approved' | `null` | Reference: u_mes_mast_user._id |
-| 42 | qaApprovedBy | String | - | No (null allowed) | Display name of the user in qaApprovedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 43 | qaApprovedAt | Date | Datetime | No (null allowed) | Time of the quality approval | `null` |  |
-| 44 | riskAssessmentId | String | - | No (null allowed) | Reference to u_mes_qual_riskAssessment._id | `null` | Reference: u_mes_qual_riskAssessment._id |
-| 45 | riskAssessmentName | String | - | No (null allowed) | Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title | `null` |  |
-| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Contained; Dispositioned; Closed; Cancelled |
-| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 48 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 49 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 50 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 51 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 52 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 53 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | title | String | - | Yes | Title of the nonconformance; used as its display value in other collections | `"Shrinkage porosity found on casting lot from die 2"` |  |
+| 7 | description | String | - | Yes | Description of the nonconformance | `"Porosity visible on machined face or found by X-ray sampling. Ejector pin sticks on cavity 2 and the casting does not release"` |  |
+| 8 | ncType | String | - | Yes | Nc type | `"Internal"` | Internal; Supplier; Customer |
+| 9 | source | String | - | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
+| 10 | detectedAt | Date | Datetime | Yes | Date and time when the record was detected. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 11 | detectedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'detected' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 12 | detectedBy | String | - | Yes | Display name of the user in detectedById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 13 | detectedAtOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: detected at operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 14 | detectedAtOperationName | String | - | Yes | Display value of detectedAtOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 15 | detectedAtWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: detected at work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 16 | detectedAtWorkCenterName | String | - | Yes | Display value of detectedAtWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 17 | originOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: origin operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 18 | originOperationName | String | - | No (null allowed) | Display value of originOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 19 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 20 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 21 | defectCodeId | String | - | Yes | Reference to u_mes_qual_defectCode._id | `"1158000000000001"` | Reference: u_mes_qual_defectCode._id |
+| 22 | defectCodeName | String | - | Yes | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Shrinkage porosity"` |  |
+| 23 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `null` | Reference: u_mes_mast_supplier._id |
+| 24 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
+| 25 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `null` | Reference: u_mes_mast_customer._id |
+| 26 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `null` |  |
+| 27 | quantityAffected | Int32 | - | Yes | Quantity affected | `NumberInt(480)` |  |
+| 28 | quantityRejected | Int32 | - | Yes | Quantity rejected | `NumberInt(6)` |  |
+| 29 | qualityHoldId | String | - | No (null allowed) | Reference to u_mes_qual_qualityHold._id | `"1172000000000005"` | Reference: u_mes_qual_qualityHold._id |
+| 30 | qualityHoldName | String | - | No (null allowed) | Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo | `"HLD-2026-000029"` |  |
+| 31 | capaId | String | - | No (null allowed) | Reference to u_mes_qual_capa._id | `"1176000000000001"` | Reference: u_mes_qual_capa._id |
+| 32 | capaName | String | - | No (null allowed) | Display value of capaId, copied from u_mes_qual_capa.title | `"8D - Shrinkage porosity in bridge section"` |  |
+| 33 | rootCauseSummary | String | - | No (null allowed) | Root cause summary | `"Ejector pin galled after die coating build-up"` |  |
+| 34 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
+| 35 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
+| 36 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 37 | closedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'closed' | `null` | Reference: u_mes_mast_user._id |
+| 38 | closedBy | String | - | No (null allowed) | Display name of the user in closedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 39 | deviationClass | String | - | No (null allowed) | GMP deviation classification; null when the nonconformance is not a GMP deviation (GMP-30) | `"Major"` | Minor; Major; Critical |
+| 40 | productImpactText | String | - | No (null allowed) | Impact assessment on the product and on other batches | `"Castings of die 2 from the lot quarantined; other dies not affected"` |  |
+| 41 | investigationDueDate | Date | Date | No (null allowed) | Due date of the investigation | `ISODate("2026-10-15T00:00:00.000+0000")` |  |
+| 42 | qaApprovedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'qa approved' | `null` | Reference: u_mes_mast_user._id |
+| 43 | qaApprovedBy | String | - | No (null allowed) | Display name of the user in qaApprovedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 44 | qaApprovedAt | Date | Datetime | No (null allowed) | Time of the quality approval | `null` |  |
+| 45 | riskAssessmentId | String | - | No (null allowed) | Reference to u_mes_qual_riskAssessment._id | `null` | Reference: u_mes_qual_riskAssessment._id |
+| 46 | riskAssessmentName | String | - | No (null allowed) | Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title | `null` |  |
+| 47 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Contained; Dispositioned; Closed; Cancelled |
+| 48 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 49 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 50 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 51 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 52 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 53 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 54 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 

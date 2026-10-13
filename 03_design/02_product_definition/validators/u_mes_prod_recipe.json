@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "name",
@@ -51,6 +52,15 @@
         "recordNo": {
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
         },
         "siteId": {
           "bsonType": "string",
@@ -112,7 +122,16 @@
             "Laser Marking Program",
             "Press Program",
             "Dispensing Program",
-            "Vision Job"
+            "Vision Job",
+            "Granulation Program",
+            "Drying Program",
+            "Blending Program",
+            "Compression Program",
+            "Coating Program",
+            "Capping Program",
+            "Blister Program",
+            "Serialisation Program",
+            "Cartoning Program"
           ]
         },
         "programNo": {

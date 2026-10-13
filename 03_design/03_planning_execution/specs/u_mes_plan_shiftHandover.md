@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 32 (26 required, 6 may be null) |
+| Keys | 33 (27 required, 6 may be null) |
 | Estimated volume per year | ~10,000 |
 | Storage | standard |
 
@@ -34,36 +34,37 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1107000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SHO-2026-000456"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | productionDate | Date | Date | Yes | Production date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 6 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
-| 7 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 8 | lineId | String | - | Yes | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
-| 9 | lineName | String | - | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
-| 10 | outgoingSupervisorUserId | String | - | Yes | Reference to u_mes_mast_user._id: outgoing supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
-| 11 | outgoingSupervisorUserName | String | - | Yes | Display value of outgoingSupervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 12 | incomingSupervisorUserId | String | - | Yes | Reference to u_mes_mast_user._id: incoming supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
-| 13 | incomingSupervisorUserName | String | - | Yes | Display value of incomingSupervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 14 | outputPlanned | Int32 | - | Yes | Output planned | `NumberInt(800)` |  |
-| 15 | outputActual | Int32 | - | Yes | Output actual | `NumberInt(762)` |  |
-| 16 | outputScrap | Int32 | - | Yes | Output scrap | `NumberInt(3)` |  |
-| 17 | outputRework | Int32 | - | Yes | Output rework | `NumberInt(6)` |  |
-| 18 | oeePct | Decimal128 | - | Yes | OEE (percent) | `NumberDecimal("80.7")` |  |
-| 19 | safetyNotes | String | - | No (null allowed) | Safety notes | `"Keep hands clear of the nutrunner socket during rundown"` |  |
-| 20 | qualityNotes | String | - | No (null allowed) | Quality notes | `"Two leak test rejects on unit serials ending 0171 and 0178, NCR raised"` |  |
-| 21 | maintenanceNotes | String | - | No (null allowed) | Maintenance notes | `"Nutrunner socket replaced at 09:40"` |  |
-| 22 | materialNotes | String | - | No (null allowed) | Material notes | `"Piston seal lot changeover at 11:15"` |  |
-| 23 | handedOverAt | Date | Datetime | No (null allowed) | Handed over date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 24 | acknowledgedAt | Date | Datetime | No (null allowed) | Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Handed Over; Acknowledged |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | productionDate | Date | Date | Yes | Production date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 7 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
+| 8 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
+| 9 | lineId | String | - | Yes | Reference to u_mes_mast_line._id | `"1006000000000001"` | Reference: u_mes_mast_line._id |
+| 10 | lineName | String | - | Yes | Display value of lineId, copied from u_mes_mast_line.name | `"Gravity Die Casting Line 1"` |  |
+| 11 | outgoingSupervisorUserId | String | - | Yes | Reference to u_mes_mast_user._id: outgoing supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
+| 12 | outgoingSupervisorUserName | String | - | Yes | Display value of outgoingSupervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
+| 13 | incomingSupervisorUserId | String | - | Yes | Reference to u_mes_mast_user._id: incoming supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
+| 14 | incomingSupervisorUserName | String | - | Yes | Display value of incomingSupervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
+| 15 | outputPlanned | Int32 | - | Yes | Output planned | `NumberInt(800)` |  |
+| 16 | outputActual | Int32 | - | Yes | Output actual | `NumberInt(762)` |  |
+| 17 | outputScrap | Int32 | - | Yes | Output scrap | `NumberInt(3)` |  |
+| 18 | outputRework | Int32 | - | Yes | Output rework | `NumberInt(6)` |  |
+| 19 | oeePct | Decimal128 | - | Yes | OEE (percent) | `NumberDecimal("80.7")` |  |
+| 20 | safetyNotes | String | - | No (null allowed) | Safety notes | `"Keep hands clear of the nutrunner socket during rundown"` |  |
+| 21 | qualityNotes | String | - | No (null allowed) | Quality notes | `"Two leak test rejects on unit serials ending 0171 and 0178, NCR raised"` |  |
+| 22 | maintenanceNotes | String | - | No (null allowed) | Maintenance notes | `"Nutrunner socket replaced at 09:40"` |  |
+| 23 | materialNotes | String | - | No (null allowed) | Material notes | `"Piston seal lot changeover at 11:15"` |  |
+| 24 | handedOverAt | Date | Datetime | No (null allowed) | Handed over date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 25 | acknowledgedAt | Date | Datetime | No (null allowed) | Date and time when the record was acknowledged. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Handed Over; Acknowledged |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 29 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 30 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 31 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
+| 32 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 33 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | description |
-| Keys | 18 (14 required, 4 may be null) |
+| Keys | 19 (15 required, 4 may be null) |
 | Estimated volume per year | 100-500 |
 | Storage | standard |
 
@@ -25,22 +25,23 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1249000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"oee.plannedTimeBasis"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | module | String | - | Yes | Module of the system configuration | `"Master Data"` | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
-| 6 | description | String | - | Yes | Description of the system configuration | `"Time basis used as the denominator of availability (oee.plannedTimeBasis)"` |  |
-| 7 | valueType | String | - | Yes | Value type | `"Text"` | Text; Number; Flag; JSON |
-| 8 | configValueText | String | - | No (null allowed) | Config value text | `"Planned Production Time"` |  |
-| 9 | configValueNumber | Decimal128 | - | No (null allowed) | Config value number | `null` |  |
-| 10 | configValueFlag | Boolean | - | Yes | True when: config value flag | `false` |  |
-| 11 | configValueJson | String | - | No (null allowed) | Config value json | `null` |  |
-| 12 | scope | String | - | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
-| 13 | isEditable | Boolean | - | Yes | True when the record is editable | `true` |  |
-| 14 | isSecret | Boolean | - | Yes | True when the record is secret | `false` |  |
-| 15 | validFrom | Date | Date | Yes | Valid from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 16 | lastChangedReason | String | - | No (null allowed) | Last changed reason | `null` |  |
-| 17 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | module | String | - | Yes | Module of the system configuration | `"Master Data"` | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
+| 7 | description | String | - | Yes | Description of the system configuration | `"Time basis used as the denominator of availability (oee.plannedTimeBasis)"` |  |
+| 8 | valueType | String | - | Yes | Value type | `"Text"` | Text; Number; Flag; JSON |
+| 9 | configValueText | String | - | No (null allowed) | Config value text | `"Planned Production Time"` |  |
+| 10 | configValueNumber | Decimal128 | - | No (null allowed) | Config value number | `null` |  |
+| 11 | configValueFlag | Boolean | - | Yes | True when: config value flag | `false` |  |
+| 12 | configValueJson | String | - | No (null allowed) | Config value json | `null` |  |
+| 13 | scope | String | - | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
+| 14 | isEditable | Boolean | - | Yes | True when the record is editable | `true` |  |
+| 15 | isSecret | Boolean | - | Yes | True when the record is secret | `false` |  |
+| 16 | validFrom | Date | Date | Yes | Valid from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 17 | lastChangedReason | String | - | No (null allowed) | Last changed reason | `null` |  |
+| 18 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

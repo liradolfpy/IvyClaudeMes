@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 12 (11 required, 1 may be null) |
+| Keys | 13 (12 required, 1 may be null) |
 | Estimated volume per year | 10-40 |
 | Storage | standard |
 
@@ -33,16 +33,17 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1026000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"OPERATOR"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the role; used as its display value in other collections | `"Production Operator"` |  |
-| 6 | scope | String | - | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
-| 7 | description | String | - | Yes | Description of the role | `"Runs operations at an assigned station and records results"` |  |
-| 8 | canSign | Boolean | - | Yes | True when the holder can sign | `true` |  |
-| 9 | approvalLimitInr | Decimal128 | - | No (null allowed) | Approval limit (Indian rupees) | `NumberDecimal("0.00")` |  |
-| 10 | isSystemRole | Boolean | - | Yes | True when the record is system role | `false` |  |
-| 11 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the role; used as its display value in other collections | `"Production Operator"` |  |
+| 7 | scope | String | - | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
+| 8 | description | String | - | Yes | Description of the role | `"Runs operations at an assigned station and records results"` |  |
+| 9 | canSign | Boolean | - | Yes | True when the holder can sign | `true` |  |
+| 10 | approvalLimitInr | Decimal128 | - | No (null allowed) | Approval limit (Indian rupees) | `NumberDecimal("0.00")` |  |
+| 11 | isSystemRole | Boolean | - | Yes | True when the record is system role | `false` |  |
+| 12 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

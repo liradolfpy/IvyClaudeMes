@@ -12,57 +12,58 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | title | String | - |  |
-| 6 | itemId | String | - | u_mes_prod_item._id |
-| 7 | itemName | String | - |  |
-| 8 | itemRevisionId | String | - | u_mes_prod_itemRevision._id |
-| 9 | itemRevisionName | String | - |  |
-| 10 | productVariantId | String | - | u_mes_prod_productVariant._id |
-| 11 | productVariantName | String | - |  |
-| 12 | version | Int32 | - |  |
-| 13 | previousMasterManufacturingRecordId | String | - | u_mes_mmr_masterManufacturingRecord._id |
-| 14 | previousMasterManufacturingRecordName | String | - |  |
-| 15 | billOfMaterialId | String | - | u_mes_prod_billOfMaterial._id |
-| 16 | billOfMaterialName | String | - |  |
-| 17 | routingId | String | - | u_mes_prod_routing._id |
-| 18 | routingName | String | - |  |
-| 19 | billOfProcessId | String | - | u_mes_prod_billOfProcess._id |
-| 20 | billOfProcessName | String | - |  |
-| 21 | controlPlanId | String | - | u_mes_qual_controlPlan._id |
-| 22 | controlPlanName | String | - |  |
-| 23 | inspectionPlanId | String | - | u_mes_qual_inspectionPlan._id |
-| 24 | inspectionPlanName | String | - |  |
-| 25 | packagingSpecificationId | String | - | u_mes_matl_packagingSpecification._id |
-| 26 | packagingSpecificationName | String | - |  |
-| 27 | labelTemplateId | String | - | u_mes_matl_labelTemplate._id |
-| 28 | labelTemplateName | String | - |  |
-| 29 | processValidationId | String | - | u_mes_qual_processValidation._id |
-| 30 | processValidationName | String | - |  |
-| 31 | controlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
-| 32 | controlledDocumentName | String | - |  |
-| 33 | engineeringChangeId | String | - | u_mes_prod_engineeringChange._id |
-| 34 | engineeringChangeName | String | - |  |
-| 35 | changeReasonText | String | - |  |
-| 36 | standardBatchSize | Int32 | - |  |
-| 37 | unitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
-| 38 | unitOfMeasureName | String | - |  |
-| 39 | theoreticalQuantity | Decimal128 | - |  |
-| 40 | lowerLimitPct | Decimal128 | - |  |
-| 41 | upperLimitPct | Decimal128 | - |  |
-| 42 | effectiveFrom | Date | Date |  |
-| 43 | effectiveTo | Date | Date |  |
-| 44 | authoredById | String | - | u_mes_mast_user._id |
-| 45 | authoredBy | String | - |  |
-| 46 | reviewedById | String | - | u_mes_mast_user._id |
-| 47 | reviewedBy | String | - |  |
-| 48 | reviewedAt | Date | Datetime |  |
-| 49 | approvedById | String | - | u_mes_mast_user._id |
-| 50 | approvedBy | String | - |  |
-| 51 | approvedAt | Date | Datetime |  |
-| 52 | status | String | - |  |
-| 53 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | title | String | - |  |
+| 7 | itemId | String | - | u_mes_prod_item._id |
+| 8 | itemName | String | - |  |
+| 9 | itemRevisionId | String | - | u_mes_prod_itemRevision._id |
+| 10 | itemRevisionName | String | - |  |
+| 11 | productVariantId | String | - | u_mes_prod_productVariant._id |
+| 12 | productVariantName | String | - |  |
+| 13 | version | Int32 | - |  |
+| 14 | previousMasterManufacturingRecordId | String | - | u_mes_mmr_masterManufacturingRecord._id |
+| 15 | previousMasterManufacturingRecordName | String | - |  |
+| 16 | billOfMaterialId | String | - | u_mes_prod_billOfMaterial._id |
+| 17 | billOfMaterialName | String | - |  |
+| 18 | routingId | String | - | u_mes_prod_routing._id |
+| 19 | routingName | String | - |  |
+| 20 | billOfProcessId | String | - | u_mes_prod_billOfProcess._id |
+| 21 | billOfProcessName | String | - |  |
+| 22 | controlPlanId | String | - | u_mes_qual_controlPlan._id |
+| 23 | controlPlanName | String | - |  |
+| 24 | inspectionPlanId | String | - | u_mes_qual_inspectionPlan._id |
+| 25 | inspectionPlanName | String | - |  |
+| 26 | packagingSpecificationId | String | - | u_mes_matl_packagingSpecification._id |
+| 27 | packagingSpecificationName | String | - |  |
+| 28 | labelTemplateId | String | - | u_mes_matl_labelTemplate._id |
+| 29 | labelTemplateName | String | - |  |
+| 30 | processValidationId | String | - | u_mes_qual_processValidation._id |
+| 31 | processValidationName | String | - |  |
+| 32 | controlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 33 | controlledDocumentName | String | - |  |
+| 34 | engineeringChangeId | String | - | u_mes_prod_engineeringChange._id |
+| 35 | engineeringChangeName | String | - |  |
+| 36 | changeReasonText | String | - |  |
+| 37 | standardBatchSize | Int32 | - |  |
+| 38 | unitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 39 | unitOfMeasureName | String | - |  |
+| 40 | theoreticalQuantity | Decimal128 | - |  |
+| 41 | lowerLimitPct | Decimal128 | - |  |
+| 42 | upperLimitPct | Decimal128 | - |  |
+| 43 | effectiveFrom | Date | Date |  |
+| 44 | effectiveTo | Date | Date |  |
+| 45 | authoredById | String | - | u_mes_mast_user._id |
+| 46 | authoredBy | String | - |  |
+| 47 | reviewedById | String | - | u_mes_mast_user._id |
+| 48 | reviewedBy | String | - |  |
+| 49 | reviewedAt | Date | Datetime |  |
+| 50 | approvedById | String | - | u_mes_mast_user._id |
+| 51 | approvedBy | String | - |  |
+| 52 | approvedAt | Date | Datetime |  |
+| 53 | status | String | - |  |
+| 54 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mmr_masterManufacturingRecordRecipe
 
@@ -72,11 +73,12 @@ Kind: relationship | Data class: master | Parent: u_mes_mmr_masterManufacturingR
 |---|---|---|---|---|
 | 1 | _id | String | - |  |
 | 2 | recordNo | String | - |  |
-| 3 | siteId | String | - | u_mes_mast_site._id |
-| 4 | siteName | String | - |  |
-| 5 | masterManufacturingRecordId | String | - | u_mes_mmr_masterManufacturingRecord._id |
-| 6 | masterManufacturingRecordName | String | - |  |
-| 7 | sequenceNo | Int32 | - |  |
-| 8 | recipeId | String | - | u_mes_prod_recipe._id |
-| 9 | recipeName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | masterManufacturingRecordId | String | - | u_mes_mmr_masterManufacturingRecord._id |
+| 7 | masterManufacturingRecordName | String | - |  |
+| 8 | sequenceNo | Int32 | - |  |
+| 9 | recipeId | String | - | u_mes_prod_recipe._id |
+| 10 | recipeName | String | - |  |
+| 11 | schemaVersion | Int32 | - |  |

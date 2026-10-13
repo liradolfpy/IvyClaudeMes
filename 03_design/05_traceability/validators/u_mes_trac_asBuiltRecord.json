@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "wipUnitId",
@@ -68,6 +69,15 @@
         "recordNo": {
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
         },
         "siteId": {
           "bsonType": "string",
@@ -140,39 +150,64 @@
           "description": "Date and time when the record was built. Datetime field: local plant time (IST) stored with the +0000 suffix"
         },
         "torqueTorqueResultId": {
-          "bsonType": "string",
+          "bsonType": [
+            "string",
+            "null"
+          ],
           "description": "Reference to u_mes_perf_torqueResult._id: torque torque result"
         },
         "torqueTorqueResultName": {
-          "bsonType": "string",
+          "bsonType": [
+            "string",
+            "null"
+          ],
           "description": "Display value of torqueTorqueResultId, copied from u_mes_perf_torqueResult.recordNo"
         },
         "torqueFinalTorqueNm": {
-          "bsonType": "decimal",
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
           "description": "Torque final torque (N.m)"
         },
         "torqueFinalAngleDeg": {
-          "bsonType": "decimal",
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
           "description": "Torque final angle (degrees)"
         },
         "leakTestLeakTestResultId": {
-          "bsonType": "string",
+          "bsonType": [
+            "string",
+            "null"
+          ],
           "description": "Reference to u_mes_perf_leakTestResult._id: leak test leak test result"
         },
         "leakTestLeakTestResultName": {
-          "bsonType": "string",
+          "bsonType": [
+            "string",
+            "null"
+          ],
           "description": "Display value of leakTestLeakTestResultId, copied from u_mes_perf_leakTestResult.recordNo"
         },
         "leakTestVerdict": {
-          "bsonType": "string",
+          "bsonType": [
+            "string",
+            "null"
+          ],
           "description": "Leak test verdict",
           "enum": [
             "Pass",
-            "Fail"
+            "Fail",
+            null
           ]
         },
         "leakTestLeakRate": {
-          "bsonType": "decimal",
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
           "description": "Measured leak rate at the high-pressure stage (sccm)"
         },
         "bodyLotId": {

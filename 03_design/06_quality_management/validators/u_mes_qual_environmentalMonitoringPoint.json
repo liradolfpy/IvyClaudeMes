@@ -7,6 +7,7 @@
       "required": [
         "_id",
         "recordNo",
+        "app",
         "siteId",
         "siteName",
         "name",
@@ -35,6 +36,15 @@
         "recordNo": {
           "bsonType": "string",
           "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
         },
         "siteId": {
           "bsonType": "string",
@@ -80,7 +90,8 @@
             "Airborne Particles 0.5 um",
             "Airborne Particles 5.0 um",
             "Surface Particle Count",
-            "Illuminance"
+            "Illuminance",
+            "Surface Microbial Count"
           ]
         },
         "parameterUnitText": {

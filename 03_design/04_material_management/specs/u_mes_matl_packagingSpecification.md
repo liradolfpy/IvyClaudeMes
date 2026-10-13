@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 28 (23 required, 5 may be null) |
+| Keys | 29 (24 required, 5 may be null) |
 | Estimated volume per year | 100-500 |
 | Storage | standard |
 
@@ -31,32 +31,33 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1122000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"PKS-5110-10-0100-SML-01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
-| 6 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
-| 7 | customerId | String | - | Yes | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
-| 8 | customerName | String | - | Yes | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
-| 9 | version | Int32 | - | Yes | Version of the packaging specification | `NumberInt(1)` |  |
-| 10 | containerTypeId | String | - | Yes | Reference to u_mes_plan_containerType._id | `"1278000000000001"` | Reference: u_mes_plan_containerType._id |
-| 11 | containerTypeName | String | - | Yes | Display value of containerTypeId, copied from u_mes_plan_containerType.name | `"Returnable Bin 600 x 400"` |  |
-| 12 | quantityPerContainer | Int32 | - | Yes | Quantity per container | `NumberInt(24)` |  |
-| 13 | dunnage | String | - | No (null allowed) | Dunnage of the packaging specification | `"Moulded tray, 8 pockets per layer"` |  |
-| 14 | vciRequired | Boolean | - | Yes | True when: vci required | `false` |  |
-| 15 | layersPerContainer | Int32 | - | Yes | Layers per container | `NumberInt(3)` |  |
-| 16 | unitsPerLayer | Int32 | - | Yes | Units per layer | `NumberInt(8)` |  |
-| 17 | containersPerPallet | Int32 | - | Yes | Containers per pallet | `NumberInt(12)` |  |
-| 18 | maxGrossWeightKg | Decimal128 | - | Yes | Maximum gross weight (kg) | `NumberDecimal("95.0")` |  |
-| 19 | unitLabelTemplateId | String | - | Yes | Reference to u_mes_matl_labelTemplate._id: unit label template | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
-| 20 | unitLabelTemplateName | String | - | Yes | Display value of unitLabelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
-| 21 | containerLabelTemplateId | String | - | No (null allowed) | Reference to u_mes_matl_labelTemplate._id: container label template | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
-| 22 | containerLabelTemplateName | String | - | No (null allowed) | Display value of containerLabelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
-| 23 | instructionControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: instruction controlled document | `"1246000000000010"` | Reference: u_mes_syst_controlledDocument._id |
-| 24 | instructionControlledDocumentName | String | - | No (null allowed) | Display value of instructionControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-10-0100 revision D, Front Brake Caliper Assembly LH"` |  |
-| 25 | approvedByCustomer | Boolean | - | Yes | True when: approved by customer | `true` |  |
-| 26 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 27 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
-| 28 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
+| 7 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 8 | customerId | String | - | Yes | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
+| 9 | customerName | String | - | Yes | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
+| 10 | version | Int32 | - | Yes | Version of the packaging specification | `NumberInt(1)` |  |
+| 11 | containerTypeId | String | - | Yes | Reference to u_mes_plan_containerType._id | `"1278000000000001"` | Reference: u_mes_plan_containerType._id |
+| 12 | containerTypeName | String | - | Yes | Display value of containerTypeId, copied from u_mes_plan_containerType.name | `"Returnable Bin 600 x 400"` |  |
+| 13 | quantityPerContainer | Int32 | - | Yes | Quantity per container | `NumberInt(24)` |  |
+| 14 | dunnage | String | - | No (null allowed) | Dunnage of the packaging specification | `"Moulded tray, 8 pockets per layer"` |  |
+| 15 | vciRequired | Boolean | - | Yes | True when: vci required | `false` |  |
+| 16 | layersPerContainer | Int32 | - | Yes | Layers per container | `NumberInt(3)` |  |
+| 17 | unitsPerLayer | Int32 | - | Yes | Units per layer | `NumberInt(8)` |  |
+| 18 | containersPerPallet | Int32 | - | Yes | Containers per pallet | `NumberInt(12)` |  |
+| 19 | maxGrossWeightKg | Decimal128 | - | Yes | Maximum gross weight (kg) | `NumberDecimal("95.0")` |  |
+| 20 | unitLabelTemplateId | String | - | Yes | Reference to u_mes_matl_labelTemplate._id: unit label template | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
+| 21 | unitLabelTemplateName | String | - | Yes | Display value of unitLabelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
+| 22 | containerLabelTemplateId | String | - | No (null allowed) | Reference to u_mes_matl_labelTemplate._id: container label template | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
+| 23 | containerLabelTemplateName | String | - | No (null allowed) | Display value of containerLabelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
+| 24 | instructionControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: instruction controlled document | `"1246000000000010"` | Reference: u_mes_syst_controlledDocument._id |
+| 25 | instructionControlledDocumentName | String | - | No (null allowed) | Display value of instructionControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-10-0100 revision D, Front Brake Caliper Assembly LH"` |  |
+| 26 | approvedByCustomer | Boolean | - | Yes | True when: approved by customer | `true` |  |
+| 27 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 28 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 29 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

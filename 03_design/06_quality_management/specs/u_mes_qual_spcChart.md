@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 29 (20 required, 9 may be null) |
+| Keys | 30 (21 required, 9 may be null) |
 | Estimated volume per year | 500-2,000 |
 | Storage | standard |
 
@@ -32,33 +32,34 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1151000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SPC-OP010-01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the SPC chart; used as its display value in other collections | `"Casting wall thickness at bridge, X-bar R chart"` |  |
-| 6 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000001"` | Reference: u_mes_qual_characteristic._id |
-| 7 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Casting wall thickness at bridge"` |  |
-| 8 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
-| 9 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 10 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 11 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 12 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
-| 13 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
-| 14 | chartType | String | - | Yes | Chart type | `"X-bar R"` | X-bar R; X-bar S; I-MR; p; np; c; u |
-| 15 | subgroupSize | Int32 | - | Yes | Subgroup size | `NumberInt(5)` |  |
-| 16 | subgroupFrequency | String | - | Yes | Subgroup frequency | `"Every 2 hours"` |  |
-| 17 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `NumberDecimal("7.50")` |  |
-| 18 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `NumberDecimal("8.50")` |  |
-| 19 | capabilityCp | Decimal128 | - | No (null allowed) | CAPAbility cp | `NumberDecimal("1.92")` |  |
-| 20 | capabilityCpk | Decimal128 | - | No (null allowed) | CAPAbility cpk | `NumberDecimal("1.71")` |  |
-| 21 | capabilityPp | Decimal128 | - | No (null allowed) | CAPAbility pp | `NumberDecimal("1.84")` |  |
-| 22 | capabilityPpk | Decimal128 | - | No (null allowed) | CAPAbility ppk | `NumberDecimal("1.66")` |  |
-| 23 | capabilityCalculatedAt | Date | Datetime | No (null allowed) | Capability calculated date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 24 | capabilitySampleCount | Int32 | - | Yes | CAPAbility sample count | `NumberInt(125)` |  |
-| 25 | ownerUserId | String | - | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 26 | ownerUserName | String | - | Yes | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 27 | reactionPlan | String | - | Yes | Reaction plan | `"Stop, segregate parts since last good check, inform line leader, raise NCR"` |  |
-| 28 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Suspended; Inactive |
-| 29 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the SPC chart; used as its display value in other collections | `"Casting wall thickness at bridge, X-bar R chart"` |  |
+| 7 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000001"` | Reference: u_mes_qual_characteristic._id |
+| 8 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Casting wall thickness at bridge"` |  |
+| 9 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
+| 10 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
+| 11 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 12 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 13 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000001"` | Reference: u_mes_mast_equipment._id |
+| 14 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Gravity Die Casting Machine 1"` |  |
+| 15 | chartType | String | - | Yes | Chart type | `"X-bar R"` | X-bar R; X-bar S; I-MR; p; np; c; u |
+| 16 | subgroupSize | Int32 | - | Yes | Subgroup size | `NumberInt(5)` |  |
+| 17 | subgroupFrequency | String | - | Yes | Subgroup frequency | `"Every 2 hours"` |  |
+| 18 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `NumberDecimal("7.50")` |  |
+| 19 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `NumberDecimal("8.50")` |  |
+| 20 | capabilityCp | Decimal128 | - | No (null allowed) | CAPAbility cp | `NumberDecimal("1.92")` |  |
+| 21 | capabilityCpk | Decimal128 | - | No (null allowed) | CAPAbility cpk | `NumberDecimal("1.71")` |  |
+| 22 | capabilityPp | Decimal128 | - | No (null allowed) | CAPAbility pp | `NumberDecimal("1.84")` |  |
+| 23 | capabilityPpk | Decimal128 | - | No (null allowed) | CAPAbility ppk | `NumberDecimal("1.66")` |  |
+| 24 | capabilityCalculatedAt | Date | Datetime | No (null allowed) | Capability calculated date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 25 | capabilitySampleCount | Int32 | - | Yes | CAPAbility sample count | `NumberInt(125)` |  |
+| 26 | ownerUserId | String | - | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 27 | ownerUserName | String | - | Yes | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 28 | reactionPlan | String | - | Yes | Reaction plan | `"Stop, segregate parts since last good check, inform line leader, raise NCR"` |  |
+| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Suspended; Inactive |
+| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

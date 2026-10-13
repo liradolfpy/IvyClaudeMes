@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 16 (13 required, 3 may be null) |
+| Keys | 17 (14 required, 3 may be null) |
 | Estimated volume per year | about 500 rows in total |
 | Storage | standard collection |
 
@@ -25,20 +25,21 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1341000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"VIEW-10045-001"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | View name | `"OEE by shift, assembly line 1, last 7 days"` |  |
-| 6 | viewType | String | - | Yes | View type | `"Comparison"` | Dashboard; Comparison; Pareto; Trend; List |
-| 7 | collectionName | String | - | Yes | Main collection queried | `"u_mes_perf_oeeRecord"` |  |
-| 8 | filterJson | String | - | Yes | Filter as JSON text | `"{\"lineName\":\"Front Caliper Assembly Line 1\",\"periodStartAt\":{\"$gte\":\"-7d\"}}"` |  |
-| 9 | sortJson | String | - | No (null allowed) | Sort as JSON text | `"{\"oeePct\":-1}"` |  |
-| 10 | ownerUserId | String | - | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
-| 11 | ownerUserName | String | - | Yes | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 12 | roleId | String | - | No (null allowed) | Reference to u_mes_mast_role._id | `"1026000000000004"` | Reference: u_mes_mast_role._id |
-| 13 | roleName | String | - | No (null allowed) | Display value of roleId, copied from u_mes_mast_role.name | `"Production Supervisor"` |  |
-| 14 | isShared | Boolean | - | Yes | Visible to the role | `true` |  |
-| 15 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | View name | `"OEE by shift, assembly line 1, last 7 days"` |  |
+| 7 | viewType | String | - | Yes | View type | `"Comparison"` | Dashboard; Comparison; Pareto; Trend; List |
+| 8 | collectionName | String | - | Yes | Main collection queried | `"u_mes_perf_oeeRecord"` |  |
+| 9 | filterJson | String | - | Yes | Filter as JSON text | `"{\"lineName\":\"Front Caliper Assembly Line 1\",\"periodStartAt\":{\"$gte\":\"-7d\"}}"` |  |
+| 10 | sortJson | String | - | No (null allowed) | Sort as JSON text | `"{\"oeePct\":-1}"` |  |
+| 11 | ownerUserId | String | - | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
+| 12 | ownerUserName | String | - | Yes | Display value of ownerUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
+| 13 | roleId | String | - | No (null allowed) | Reference to u_mes_mast_role._id | `"1026000000000004"` | Reference: u_mes_mast_role._id |
+| 14 | roleName | String | - | No (null allowed) | Display value of roleId, copied from u_mes_mast_role.name | `"Production Supervisor"` |  |
+| 15 | isShared | Boolean | - | Yes | Visible to the role | `true` |  |
+| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

@@ -9,7 +9,7 @@
 | Parent collection | u_mes_mast_workCenter |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 10 (10 required, 0 may be null) |
+| Keys | 11 (11 required, 0 may be null) |
 
 ## Structure
 
@@ -24,14 +24,15 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1012000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"GDC-01-RS01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: the parent document this one belongs to | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 6 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | requiresSkillId | String | - | Yes | Reference to u_mes_mast_skill._id: requires skill | `"1031000000000001"` | Reference: u_mes_mast_skill._id |
-| 9 | requiresSkillName | String | - | Yes | Display value of requiresSkillId, copied from u_mes_mast_skill.name | `"Gravity die casting operation"` |  |
-| 10 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: the parent document this one belongs to | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 7 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | requiresSkillId | String | - | Yes | Reference to u_mes_mast_skill._id: requires skill | `"1031000000000001"` | Reference: u_mes_mast_skill._id |
+| 10 | requiresSkillName | String | - | Yes | Display value of requiresSkillId, copied from u_mes_mast_skill.name | `"Gravity die casting operation"` |  |
+| 11 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

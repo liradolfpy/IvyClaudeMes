@@ -9,7 +9,7 @@
 | Parent collection | u_mes_qual_defectCode |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 10 (10 required, 0 may be null) |
+| Keys | 11 (11 required, 0 may be null) |
 
 ## Structure
 
@@ -24,14 +24,15 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1159000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"CS01-AO01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | defectCodeId | String | - | Yes | Reference to u_mes_qual_defectCode._id: the parent document this one belongs to | `"1158000000000001"` | Reference: u_mes_qual_defectCode._id |
-| 6 | defectCodeName | String | - | Yes | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Shrinkage porosity"` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | applicableOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: applicable operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
-| 9 | applicableOperationName | String | - | Yes | Display value of applicableOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
-| 10 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | defectCodeId | String | - | Yes | Reference to u_mes_qual_defectCode._id: the parent document this one belongs to | `"1158000000000001"` | Reference: u_mes_qual_defectCode._id |
+| 7 | defectCodeName | String | - | Yes | Display value of defectCodeId, copied from u_mes_qual_defectCode.name | `"Shrinkage porosity"` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | applicableOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: applicable operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
+| 10 | applicableOperationName | String | - | Yes | Display value of applicableOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
+| 11 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

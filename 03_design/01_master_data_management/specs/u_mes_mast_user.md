@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | fullName |
-| Keys | 35 (24 required, 11 may be null) |
+| Keys | 36 (25 required, 11 may be null) |
 | Estimated volume per year | 300-1,500 per site |
 | Storage | standard |
 
@@ -31,39 +31,40 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1029000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"10231"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | userName | String | - | Yes | User name | `"sunil.jadhav"` |  |
-| 6 | fullName | String | - | Yes | Full name | `"Sunil Jadhav"` |  |
-| 7 | userType | String | - | Yes | User type | `"Employee"` | Employee; Contractor; System |
-| 8 | departmentId | String | - | Yes | Reference to u_mes_mast_department._id | `"1256000000000001"` | Reference: u_mes_mast_department._id |
-| 9 | departmentName | String | - | Yes | Display value of departmentId, copied from u_mes_mast_department.name | `"Production"` |  |
-| 10 | designationId | String | - | Yes | Reference to u_mes_mast_designation._id | `"1257000000000001"` | Reference: u_mes_mast_designation._id |
-| 11 | designationName | String | - | Yes | Display value of designationId, copied from u_mes_mast_designation.name | `"Assembly Operator"` |  |
-| 12 | badgeNo | String | - | Yes | Number encoded on the operator badge used for station login | `"B-0010231"` |  |
-| 13 | email | String | - | No (null allowed) | Email of the user | `"sunil.jadhav@varunabrakes.example"` |  |
-| 14 | mobile | String | - | No (null allowed) | Mobile of the user | `"+91-98220-55142"` |  |
-| 15 | defaultShiftId | String | - | Yes | Reference to u_mes_mast_shift._id: default shift | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
-| 16 | defaultShiftName | String | - | Yes | Display value of defaultShiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 17 | homeWorkCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id: home work center | `"1009000000000007"` | Reference: u_mes_mast_workCenter._id |
-| 18 | homeWorkCenterName | String | - | No (null allowed) | Display value of homeWorkCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
-| 19 | reportsToUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: reports to user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
-| 20 | reportsToUserName | String | - | No (null allowed) | Display value of reportsToUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 21 | dateOfJoining | Date | Date | Yes | Date of joining. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
-| 22 | employmentTypeId | String | - | Yes | Reference to u_mes_mast_employmentType._id | `"1258000000000001"` | Reference: u_mes_mast_employmentType._id |
-| 23 | employmentTypeName | String | - | Yes | Display value of employmentTypeId, copied from u_mes_mast_employmentType.name | `"Permanent"` |  |
-| 24 | contractorSupplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id: contractor supplier | `null` | Reference: u_mes_mast_supplier._id |
-| 25 | contractorSupplierName | String | - | No (null allowed) | Display value of contractorSupplierId, copied from u_mes_mast_supplier.name | `null` |  |
-| 26 | languageId | String | - | Yes | Reference to u_mes_mast_language._id | `"1267000000000002"` | Reference: u_mes_mast_language._id |
-| 27 | languageName | String | - | Yes | Display value of languageId, copied from u_mes_mast_language.name | `"Marathi"` |  |
-| 28 | lastLoginAt | Date | Datetime | No (null allowed) | Last login date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 29 | failedLoginCount | Int32 | - | Yes | Failed login count | `NumberInt(0)` |  |
-| 30 | passwordChangedAt | Date | Datetime | Yes | Password changed date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 31 | isLocked | Boolean | - | Yes | True when the record is locked | `false` |  |
-| 32 | lastAccessReviewDate | Date | Date | No (null allowed) | Date of the last access review of the account (GMP-07) | `ISODate("2026-09-16T00:00:00.000+0000")` |  |
-| 33 | passwordExpiryDate | Date | Date | No (null allowed) | Date the password expires | `ISODate("2026-06-30T00:00:00.000+0000")` |  |
-| 34 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Suspended; Left |
-| 35 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | userName | String | - | Yes | User name | `"sunil.jadhav"` |  |
+| 7 | fullName | String | - | Yes | Full name | `"Sunil Jadhav"` |  |
+| 8 | userType | String | - | Yes | User type | `"Employee"` | Employee; Contractor; System |
+| 9 | departmentId | String | - | Yes | Reference to u_mes_mast_department._id | `"1256000000000001"` | Reference: u_mes_mast_department._id |
+| 10 | departmentName | String | - | Yes | Display value of departmentId, copied from u_mes_mast_department.name | `"Production"` |  |
+| 11 | designationId | String | - | Yes | Reference to u_mes_mast_designation._id | `"1257000000000001"` | Reference: u_mes_mast_designation._id |
+| 12 | designationName | String | - | Yes | Display value of designationId, copied from u_mes_mast_designation.name | `"Assembly Operator"` |  |
+| 13 | badgeNo | String | - | Yes | Number encoded on the operator badge used for station login | `"B-0010231"` |  |
+| 14 | email | String | - | No (null allowed) | Email of the user | `"sunil.jadhav@varunabrakes.example"` |  |
+| 15 | mobile | String | - | No (null allowed) | Mobile of the user | `"+91-98220-55142"` |  |
+| 16 | defaultShiftId | String | - | Yes | Reference to u_mes_mast_shift._id: default shift | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
+| 17 | defaultShiftName | String | - | Yes | Display value of defaultShiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
+| 18 | homeWorkCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id: home work center | `"1009000000000007"` | Reference: u_mes_mast_workCenter._id |
+| 19 | homeWorkCenterName | String | - | No (null allowed) | Display value of homeWorkCenterId, copied from u_mes_mast_workCenter.name | `"Bleed Screw Torque Station"` |  |
+| 20 | reportsToUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: reports to user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
+| 21 | reportsToUserName | String | - | No (null allowed) | Display value of reportsToUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
+| 22 | dateOfJoining | Date | Date | Yes | Date of joining. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
+| 23 | employmentTypeId | String | - | Yes | Reference to u_mes_mast_employmentType._id | `"1258000000000001"` | Reference: u_mes_mast_employmentType._id |
+| 24 | employmentTypeName | String | - | Yes | Display value of employmentTypeId, copied from u_mes_mast_employmentType.name | `"Permanent"` |  |
+| 25 | contractorSupplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id: contractor supplier | `null` | Reference: u_mes_mast_supplier._id |
+| 26 | contractorSupplierName | String | - | No (null allowed) | Display value of contractorSupplierId, copied from u_mes_mast_supplier.name | `null` |  |
+| 27 | languageId | String | - | Yes | Reference to u_mes_mast_language._id | `"1267000000000002"` | Reference: u_mes_mast_language._id |
+| 28 | languageName | String | - | Yes | Display value of languageId, copied from u_mes_mast_language.name | `"Marathi"` |  |
+| 29 | lastLoginAt | Date | Datetime | No (null allowed) | Last login date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 30 | failedLoginCount | Int32 | - | Yes | Failed login count | `NumberInt(0)` |  |
+| 31 | passwordChangedAt | Date | Datetime | Yes | Password changed date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
+| 32 | isLocked | Boolean | - | Yes | True when the record is locked | `false` |  |
+| 33 | lastAccessReviewDate | Date | Date | No (null allowed) | Date of the last access review of the account (GMP-07) | `ISODate("2026-09-16T00:00:00.000+0000")` |  |
+| 34 | passwordExpiryDate | Date | Date | No (null allowed) | Date the password expires | `ISODate("2026-06-30T00:00:00.000+0000")` |  |
+| 35 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Suspended; Left |
+| 36 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

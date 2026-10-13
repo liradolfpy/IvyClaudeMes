@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 31 (23 required, 8 may be null) |
+| Keys | 32 (24 required, 8 may be null) |
 | Estimated volume per year | about 100 rows in total |
 | Storage | standard collection |
 
@@ -31,35 +31,36 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1317000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ENV-OP060-PST-PRESS-02"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Envelope name | `"Piston press-in force, front caliper LH"` |  |
-| 6 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000006"` | Reference: u_mes_qual_characteristic._id |
-| 7 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Dust boot seating height"` |  |
-| 8 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
-| 9 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
-| 10 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
-| 11 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
-| 12 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
-| 13 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
-| 14 | recipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id | `null` | Reference: u_mes_prod_recipe._id |
-| 15 | recipeName | String | - | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `null` |  |
-| 16 | curveType | String | - | Yes | Curve type | `"Force Displacement"` | Force Displacement; Torque Angle; Pressure Time; Sound Spectrum; Vibration Acceleration |
-| 17 | xQuantity | String | - | Yes | X-axis quantity, e.g. Displacement | `"Displacement"` |  |
-| 18 | xUnitText | String | - | Yes | X-axis unit as delivered by the controller, e.g. mm, deg, ms | `"mm"` |  |
-| 19 | yQuantity | String | - | Yes | Y-axis quantity, e.g. Force | `"Force"` |  |
-| 20 | yUnitText | String | - | Yes | Y-axis unit as delivered by the controller, e.g. N, N.m, bar | `"N"` |  |
-| 21 | version | Int32 | - | Yes | Envelope version number | `NumberInt(2)` |  |
-| 22 | goldenSampleSerialNo | String | - | No (null allowed) | Serial of the golden sample used | `"VB26240A00012"` |  |
-| 23 | referenceControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: reference controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
-| 24 | referenceControlledDocumentName | String | - | No (null allowed) | Display value of referenceControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
-| 25 | effectiveFrom | Date | Date | Yes | Effective from | `ISODate("2026-08-28T00:00:00.000+0000")` |  |
-| 26 | effectiveTo | Date | Date | No (null allowed) | Effective to | `null` |  |
-| 27 | approvedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"1029000000000007"` | Reference: u_mes_mast_user._id |
-| 28 | approvedBy | String | - | Yes | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
-| 29 | approvedAt | Date | Datetime | Yes | Approval time | `ISODate("2026-08-27T11:10:00.000+0000")` |  |
-| 30 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
-| 31 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Envelope name | `"Piston press-in force, front caliper LH"` |  |
+| 7 | characteristicId | String | - | Yes | Reference to u_mes_qual_characteristic._id | `"1138000000000006"` | Reference: u_mes_qual_characteristic._id |
+| 8 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Dust boot seating height"` |  |
+| 9 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000001"` | Reference: u_mes_prod_item._id |
+| 10 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Front Brake Caliper Assembly, LH"` |  |
+| 11 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
+| 12 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
+| 13 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
+| 14 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
+| 15 | recipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id | `null` | Reference: u_mes_prod_recipe._id |
+| 16 | recipeName | String | - | No (null allowed) | Display value of recipeId, copied from u_mes_prod_recipe.name | `null` |  |
+| 17 | curveType | String | - | Yes | Curve type | `"Force Displacement"` | Force Displacement; Torque Angle; Pressure Time; Sound Spectrum; Vibration Acceleration |
+| 18 | xQuantity | String | - | Yes | X-axis quantity, e.g. Displacement | `"Displacement"` |  |
+| 19 | xUnitText | String | - | Yes | X-axis unit as delivered by the controller, e.g. mm, deg, ms | `"mm"` |  |
+| 20 | yQuantity | String | - | Yes | Y-axis quantity, e.g. Force | `"Force"` |  |
+| 21 | yUnitText | String | - | Yes | Y-axis unit as delivered by the controller, e.g. N, N.m, bar | `"N"` |  |
+| 22 | version | Int32 | - | Yes | Envelope version number | `NumberInt(2)` |  |
+| 23 | goldenSampleSerialNo | String | - | No (null allowed) | Serial of the golden sample used | `"VB26240A00012"` |  |
+| 24 | referenceControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: reference controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
+| 25 | referenceControlledDocumentName | String | - | No (null allowed) | Display value of referenceControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
+| 26 | effectiveFrom | Date | Date | Yes | Effective from | `ISODate("2026-08-28T00:00:00.000+0000")` |  |
+| 27 | effectiveTo | Date | Date | No (null allowed) | Effective to | `null` |  |
+| 28 | approvedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'approved' | `"1029000000000007"` | Reference: u_mes_mast_user._id |
+| 29 | approvedBy | String | - | Yes | Display name of the user in approvedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
+| 30 | approvedAt | Date | Datetime | Yes | Approval time | `ISODate("2026-08-27T11:10:00.000+0000")` |  |
+| 31 | status | String | - | Yes | Primary lifecycle state of the document | `"Released"` | In Preparation; Released; Obsolete |
+| 32 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 21 (20 required, 1 may be null) |
+| Keys | 22 (21 required, 1 may be null) |
 | Estimated volume per year | 50-500 |
 | Storage | standard |
 
@@ -31,25 +31,26 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1051000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"OP010"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the operation; used as its display value in other collections | `"Gravity die casting"` |  |
-| 6 | operationType | String | - | Yes | Operation type | `"Casting"` | Casting; Heat Treatment; Machining; Cleaning; Surface Treatment; Assembly; Test; Marking; Inspection; Packing |
-| 7 | description | String | - | Yes | Description of the operation | `"Fill the die cavity completely with sound metal"` |  |
-| 8 | defaultWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: default work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
-| 9 | defaultWorkCenterName | String | - | Yes | Display value of defaultWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 10 | trackingGrain | String | - | Yes | Level at which material is tracked at this point | `"Lot"` | Lot; Unit; Container |
-| 11 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `NumberDecimal("95.0")` |  |
-| 12 | standardSetupTimeMin | Int32 | - | Yes | Standard setup time (minutes) | `NumberInt(45)` |  |
-| 13 | standardManning | Int32 | - | Yes | Standard manning | `NumberInt(1)` |  |
-| 14 | isInspection | Boolean | - | Yes | True when the record is inspection | `false` |  |
-| 15 | isSpecialProcess | Boolean | - | Yes | True when the record is special process | `true` |  |
-| 16 | specialProcessStandard | String | - | No (null allowed) | AIAG special process assessment that applies | `"CQI-27"` |  |
-| 17 | requiresFirstOffApproval | Boolean | - | Yes | True when first off approval is required | `true` |  |
-| 18 | erpControlKey | String | - | Yes | ERP control key | `"PP01"` |  |
-| 19 | sequenceHint | Int32 | - | Yes | Default position of the operation in a routing | `NumberInt(10)` |  |
-| 20 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 21 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the operation; used as its display value in other collections | `"Gravity die casting"` |  |
+| 7 | operationType | String | - | Yes | Operation type | `"Casting"` | Casting; Heat Treatment; Machining; Cleaning; Surface Treatment; Assembly; Test; Marking; Inspection; Packing; Dispensing; Granulation; Drying; Blending; Compression; Coating |
+| 8 | description | String | - | Yes | Description of the operation | `"Fill the die cavity completely with sound metal"` |  |
+| 9 | defaultWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: default work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
+| 10 | defaultWorkCenterName | String | - | Yes | Display value of defaultWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
+| 11 | trackingGrain | String | - | Yes | Level at which material is tracked at this point | `"Lot"` | Lot; Unit; Container |
+| 12 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 13 | standardSetupTimeMin | Int32 | - | Yes | Standard setup time (minutes) | `NumberInt(45)` |  |
+| 14 | standardManning | Int32 | - | Yes | Standard manning | `NumberInt(1)` |  |
+| 15 | isInspection | Boolean | - | Yes | True when the record is inspection | `false` |  |
+| 16 | isSpecialProcess | Boolean | - | Yes | True when the record is special process | `true` |  |
+| 17 | specialProcessStandard | String | - | No (null allowed) | AIAG special process assessment that applies | `"CQI-27"` |  |
+| 18 | requiresFirstOffApproval | Boolean | - | Yes | True when first off approval is required | `true` |  |
+| 19 | erpControlKey | String | - | Yes | ERP control key | `"PP01"` |  |
+| 20 | sequenceHint | Int32 | - | Yes | Default position of the operation in a routing | `NumberInt(10)` |  |
+| 21 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 22 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

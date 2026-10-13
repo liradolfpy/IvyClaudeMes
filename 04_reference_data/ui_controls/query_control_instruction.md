@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.10 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
+Instruction version: 0.12 | 13 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -201,7 +201,57 @@ Wrap the `modalElements` array in this frame. Values in angle brackets are fille
 }
 ```
 
-File name of a generated configuration: `04_reference_data/ui_controls/query/PageConfig_<collection>.json` (for example `PageConfig_u_mes_perf_downtimeEvent.json`).
+File name of a generated configuration: `04_reference_data/ui_controls/query/PageConfigs/PageConfig_<collection>.json` (for example `PageConfigs/PageConfig_u_mes_perf_downtimeEvent.json`).
+
+### Step 9: Build or update the IvyConfig
+
+Every time a query configuration is generated or changed, the IvyConfig of the same collection is generated or updated in the same step. IvyConfig is the configuration of the REST API: a generic backend code reads the payload from the UI, parses every value by its `din` and `typ`, and runs the query (`get`) or the write (`post`).
+
+File: `04_reference_data/ui_controls/query/IvyConfig/<collection>Ivy.json` (for example `IvyConfig/u_mes_perf_downtimeEventIvy.json`).
+
+Document frame:
+
+| Field | Value | Rule |
+|---|---|---|
+| `_id` | `"<collection>Ivy"` | `u_mes_perf_downtimeEventIvy` |
+| `code` | Module code | The module code in the collection name (`u_mes_perf_downtimeEvent` gives `perf`) |
+| `moduleName` | Module name | From the module code in the collection name, using the module table of `collection_inventory.md` (`perf` gives `Performance Management`) |
+| `collection` | Collection name | `u_mes_perf_downtimeEvent` |
+| `stableName` | `"<collection without the leading u_>Stable"` | `mes_perf_downtimeEventStable` |
+| `typ` | `"IvyConfig"` | Fixed |
+| `label` | `"EnterpriseIvy"` | Fixed |
+| `dn` | Same as `_id` | `u_mes_perf_downtimeEventIvy` |
+| `proj` | `[]` | Empty for now |
+| `get` | One entry per query control | See below |
+| `post` | One entry per document key | See below |
+| `staticPost` | `{ "act" : true }` | Fixed |
+| `patch` | `[]` | Empty for now |
+
+`get` list: every control of the page configuration's `modalElements`, in the same order, and nothing else. Only the filter key (`data_index`) is listed; `p_din` display keys are not.
+
+| Control | Entry |
+|---|---|
+| Range picker | `{ "dinFrom" : "from", "dinTo" : "to", "din" : "<data_index>", "typ" : "range", "format" : "YYYY-MM-DD" }` |
+| Any other control | `{ "din" : "<data_index>", "typ" : "<type of the key>" }` |
+
+`post` list: every key of the collection in field-list order (`app` included) (`02_architecture/field_lists`), as `{ "din" : "<key>", "typ" : "<type>" }`, with these rules:
+
+- `_id` is left out (created by the server);
+- the audit keys `createdAt`, `createdById`, `createdBy`, `updatedAt`, `updatedById`, `updatedBy` are left out;
+- `app` (application context: `Auto`, `Gamp` or `Common`) is a model key placed directly after `recordNo` in every collection, so it comes from the field list like any other key;
+- `...Name` display keys and `siteId` / `siteName` are included like any other key.
+
+Type names (`typ`):
+
+| BSON type | `typ` |
+|---|---|
+| String | `string` |
+| Boolean | `bool` |
+| Int32, Int64 | `int` |
+| Decimal128 | `decimal` |
+| Double | `double` |
+| Date (both [Date] and [Datetime] keys) | `Date` |
+| Range picker control | `range` |
 
 ## 6. Attribute reference
 
@@ -588,6 +638,8 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | 15 | Every control has `required: true` unless it is specifically required to be optional |
 | 16 | The document frame follows step 8: `_id` = `dictName` = `<collectionSuffix>Query`, `typ` = `PageConfigQuery`, `dictData.pageTitle` and `dictData.api` set, fixed fields copied exactly, `ver` = `rel` = generation time |
 | 17 | Shift controls use cropdown `Shift`, not mdict |
+| 18 | The IvyConfig `<collection>Ivy.json` exists and was updated in the same step; its `get` list has exactly one entry per query control (same `din` and order, range entry with `from` / `to` and `YYYY-MM-DD`) |
+| 19 | The IvyConfig `post` list has every collection key except `_id` and the six audit keys, including `app` after `recordNo`, each with the type of section 5, step 9; `code` is the module code |
 
 ## 14. Open questions
 
@@ -640,6 +692,8 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | – | Attribute name, Shift source, multi-select (13 Oct 2026) | All controls use `"isRequired": true` unless specifically required otherwise; Shift uses cropdown `name: "Shift"`, not mdict; `multiSelect: true` only with a compelling reason | Sections 5, 6, 10, 11.3, 12, checklist 7, 15, 17; new question Q23 |
 | – | Attribute name (13 Oct 2026, later the same day) | Keep the key name `required`, not `isRequired`; the value stays `true` on every control unless specifically optional | Sections 2, 5, 6, 10, checklist 1 and 15; supersedes the `isRequired` name of version 0.8 |
 | Q23 | Shift code versus `shiftId` | All `shiftId` values in the documents are the shift code (`A`, `B`, `C`); the cropdown `Shift` keys match directly | Step 4 placement table; sample documents regenerated; follow-up F2 |
+| – | IvyConfig (13 Oct 2026) | Generated with every query: `_id` / `dn` = `<collection>Ivy`; `code` `mast`; `moduleName` = module name; `typ` `IvyConfig`; `label` `EnterpriseIvy`; `stableName` = collection without `u_` + `Stable`; `get` = every query control (filter keys only, range format `YYYY-MM-DD`); `post` = every key except `_id` and audit keys, plus `app`; types `string`, `bool`, `int` (Int32 and Int64), `decimal`, `double`, `Date`, `range`; `proj` and `patch` empty, `staticPost` `{ act: true }`; page configurations in `query/PageConfigs/`, IvyConfigs in `query/IvyConfig/` | Step 9; step 8 file location; checklist 18 and 19; follow-up F3 |
+| – | IvyConfig `code`; key `app` (13 Oct 2026) | `code` is the module code. `app` is part of the data model with the standard values Auto / Gamp / Common (D060 rule in `flatten_model.py`); the field lists, collection keys, specifications, validators, register and reports were regenerated with `gen_docs.py` and `gen_specs.py` (8,614 keys) | Step 9; checklist 19; F3 closed |
 
 ## 16. Observations on the sample files (not changed)
 
@@ -664,3 +718,5 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | 0.8 | 13 Oct 2026 | Attribute renamed to `isRequired`, `true` on every control unless specifically optional; Shift source changed to cropdown `Shift`; `multiSelect` false by default, true only with a written compelling reason; Status template made single-select; Andon Events example updated; checklist 7 and 15 revised, 17 added; Q23 opened on shift code versus `shiftId` | Claude |
 | 0.9 | 13 Oct 2026 | Attribute name reverted from `isRequired` to `required` (rules, templates, checklist); value rule of 0.8 unchanged: `required: true` on every control unless specifically optional | Claude |
 | 0.10 | 13 Oct 2026 | Q23 resolved: `shiftId` stores the shift code, matching the cropdown `Shift` (sample documents regenerated through `gen_samples.py`); follow-up F2 on model and specifications; second sample configuration `PageConfig_u_mes_perf_alarm.json` produced with this instruction | Claude |
+| 0.11 | 13 Oct 2026 | Step 9 added: IvyConfig generated or updated with every query (frame, `get` and `post` rules, type names, file location); page configurations moved to `query/PageConfigs/`; checklist 18 and 19; follow-up F3 on the key `app`; IvyConfigs produced for Downtime Events, Alarms and Station Performance | Claude |
+| 0.12 | 13 Oct 2026 | IvyConfig `code` = module code; `app` now listed in the data model (field lists, specifications, validators regenerated), so the `post` list takes it from the field list; follow-up F3 closed; three IvyConfigs regenerated | Claude |

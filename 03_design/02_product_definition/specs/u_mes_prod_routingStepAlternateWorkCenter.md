@@ -9,7 +9,7 @@
 | Parent collection | u_mes_prod_routingStep |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 10 (10 required, 0 may be null) |
+| Keys | 11 (11 required, 0 may be null) |
 
 ## Structure
 
@@ -24,14 +24,15 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1055000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"5110-10-0100-R01-S01-AWC01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | routingStepId | String | - | Yes | Reference to u_mes_prod_routingStep._id: the parent document this one belongs to | `"1054000000000001"` | Reference: u_mes_prod_routingStep._id |
-| 6 | routingStepName | String | - | Yes | Display value of routingStepId, copied from u_mes_prod_routingStep.recordNo | `"5110-10-0100-R01-S01"` |  |
-| 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 8 | alternateWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: alternate work center | `"1009000000000010"` | Reference: u_mes_mast_workCenter._id |
-| 9 | alternateWorkCenterName | String | - | Yes | Display value of alternateWorkCenterId, copied from u_mes_mast_workCenter.name | `"Final Inspection and Packing Cell"` |  |
-| 10 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | routingStepId | String | - | Yes | Reference to u_mes_prod_routingStep._id: the parent document this one belongs to | `"1054000000000001"` | Reference: u_mes_prod_routingStep._id |
+| 7 | routingStepName | String | - | Yes | Display value of routingStepId, copied from u_mes_prod_routingStep.recordNo | `"5110-10-0100-R01-S01"` |  |
+| 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
+| 9 | alternateWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: alternate work center | `"1009000000000010"` | Reference: u_mes_mast_workCenter._id |
+| 10 | alternateWorkCenterName | String | - | Yes | Display value of alternateWorkCenterId, copied from u_mes_mast_workCenter.name | `"Final Inspection and Packing Cell"` |  |
+| 11 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

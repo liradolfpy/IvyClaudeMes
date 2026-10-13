@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | description |
-| Keys | 26 (20 required, 6 may be null) |
+| Keys | 27 (21 required, 6 may be null) |
 | Estimated volume per year | 2,000-8,000 |
 | Storage | standard |
 
@@ -31,30 +31,31 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1224000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"SP-004417"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | description | String | - | Yes | Description of the spare part | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
-| 6 | category | String | - | Yes | Category of the spare part | `"Electrical"` | Mechanical; Electrical; Process; Material; Quality; Organisation; Planned |
-| 7 | manufacturerId | String | - | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000007"` | Reference: u_mes_mast_manufacturer._id |
-| 8 | manufacturerName | String | - | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"Atlas Copco"` |  |
-| 9 | manufacturerPartNo | String | - | Yes | Manufacturer part number | `"4220 3311 10"` |  |
-| 10 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `"1038000000000003"` | Reference: u_mes_mast_supplier._id |
-| 11 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Bharat Fasteners and Fittings Ltd."` |  |
-| 12 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
-| 13 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 14 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |
-| 15 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, assembly 1"` |  |
-| 16 | stockQuantity | Decimal128 | - | Yes | Stock quantity | `NumberDecimal("6")` |  |
-| 17 | minimumQuantity | Decimal128 | - | Yes | Minimum quantity | `NumberDecimal("2")` |  |
-| 18 | reorderQuantity | Decimal128 | - | Yes | Reorder quantity | `NumberDecimal("4")` |  |
-| 19 | leadTimeDays | Int32 | - | Yes | Lead time (days) | `NumberInt(21)` |  |
-| 20 | unitCostInr | Decimal128 | - | Yes | Unit cost (Indian rupees) | `NumberDecimal("4320.00")` |  |
-| 21 | criticality | String | - | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
-| 22 | lastIssuedAt | Date | Datetime | No (null allowed) | Last issued date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 23 | lastReceivedAt | Date | Datetime | No (null allowed) | Last received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 24 | isInsuranceSpare | Boolean | - | Yes | True when the record is insurance spare | `false` |  |
-| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Obsolete |
-| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | description | String | - | Yes | Description of the spare part | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
+| 7 | category | String | - | Yes | Category of the spare part | `"Electrical"` | Mechanical; Electrical; Process; Material; Quality; Organisation; Planned |
+| 8 | manufacturerId | String | - | No (null allowed) | Reference to u_mes_mast_manufacturer._id | `"1260000000000007"` | Reference: u_mes_mast_manufacturer._id |
+| 9 | manufacturerName | String | - | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `"Atlas Copco"` |  |
+| 10 | manufacturerPartNo | String | - | Yes | Manufacturer part number | `"4220 3311 10"` |  |
+| 11 | supplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id | `"1038000000000003"` | Reference: u_mes_mast_supplier._id |
+| 12 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `"Bharat Fasteners and Fittings Ltd."` |  |
+| 13 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
+| 14 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
+| 15 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |
+| 16 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, assembly 1"` |  |
+| 17 | stockQuantity | Decimal128 | - | Yes | Stock quantity | `NumberDecimal("6")` |  |
+| 18 | minimumQuantity | Decimal128 | - | Yes | Minimum quantity | `NumberDecimal("2")` |  |
+| 19 | reorderQuantity | Decimal128 | - | Yes | Reorder quantity | `NumberDecimal("4")` |  |
+| 20 | leadTimeDays | Int32 | - | Yes | Lead time (days) | `NumberInt(21)` |  |
+| 21 | unitCostInr | Decimal128 | - | Yes | Unit cost (Indian rupees) | `NumberDecimal("4320.00")` |  |
+| 22 | criticality | String | - | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
+| 23 | lastIssuedAt | Date | Datetime | No (null allowed) | Last issued date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 24 | lastReceivedAt | Date | Datetime | No (null allowed) | Last received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
+| 25 | isInsuranceSpare | Boolean | - | Yes | True when the record is insurance spare | `false` |  |
+| 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Obsolete |
+| 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

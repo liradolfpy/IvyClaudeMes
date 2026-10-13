@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 29 (16 required, 13 may be null) |
+| Keys | 30 (17 required, 13 may be null) |
 | Estimated volume per year | about 150 rows in total |
 | Storage | standard collection |
 
@@ -25,33 +25,34 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1336000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"ALR-OEE-ASY01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Rule name | `"OEE below 75 percent on assembly line 1"` |  |
-| 6 | metric | String | - | Yes | Metric watched | `"OEE"` | OEE; Availability; Downtime Minutes; Reject Rate; Output Gap; Process Deviation; SPC Rule Violation; Line-side Stock Cover; Environment Limit; Model Anomaly Score |
-| 7 | lineId | String | - | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000006"` | Reference: u_mes_mast_line._id |
-| 8 | lineName | String | - | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Front Caliper Assembly Line 1"` |  |
-| 9 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `null` | Reference: u_mes_mast_workCenter._id |
-| 10 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `null` |  |
-| 11 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `null` | Reference: u_mes_mast_equipment._id |
-| 12 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `null` |  |
-| 13 | processTagId | String | - | No (null allowed) | Reference to u_mes_perf_processTag._id | `null` | Reference: u_mes_perf_processTag._id |
-| 14 | processTagName | String | - | No (null allowed) | Display value of processTagId, copied from u_mes_perf_processTag.description | `null` |  |
-| 15 | itemId | String | - | No (null allowed) | Reference to u_mes_prod_item._id | `null` | Reference: u_mes_prod_item._id |
-| 16 | itemName | String | - | No (null allowed) | Display value of itemId, copied from u_mes_prod_item.description | `null` |  |
-| 17 | comparison | String | - | Yes | Comparison | `"Less Than"` | Less Than; Greater Than; Outside Band |
-| 18 | thresholdValue | Decimal128 | - | Yes | Threshold | `NumberDecimal("75.0")` |  |
-| 19 | thresholdUpperValue | Decimal128 | - | No (null allowed) | Upper value for Outside Band | `null` |  |
-| 20 | evaluationWindowMinutes | Int32 | - | Yes | Window evaluated | `NumberInt(60)` |  |
-| 21 | severityClass | String | - | Yes | Severity | `"Medium"` | Low; Medium; High; Critical |
-| 22 | actionType | String | - | Yes | Action | `"Notify"` | Notify; Hold; Stop Equipment; Block Process; Create Work Order; Create Nonconformance |
-| 23 | notificationTypeId | String | - | Yes | Reference to u_mes_syst_notificationType._id | `"1291000000000005"` | Reference: u_mes_syst_notificationType._id |
-| 24 | notificationTypeName | String | - | Yes | Display value of notificationTypeId, copied from u_mes_syst_notificationType.name | `"Order Late"` |  |
-| 25 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000008"` | Reference: u_mes_syst_escalationRule._id |
-| 26 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"KPI alert on OEE and rejects"` |  |
-| 27 | falseAlertCount | Int32 | - | Yes | Alerts closed as false (tuning, Level 4) | `NumberInt(3)` |  |
-| 28 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 29 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Rule name | `"OEE below 75 percent on assembly line 1"` |  |
+| 7 | metric | String | - | Yes | Metric watched | `"OEE"` | OEE; Availability; Downtime Minutes; Reject Rate; Output Gap; Process Deviation; SPC Rule Violation; Line-side Stock Cover; Environment Limit; Model Anomaly Score |
+| 8 | lineId | String | - | No (null allowed) | Reference to u_mes_mast_line._id | `"1006000000000006"` | Reference: u_mes_mast_line._id |
+| 9 | lineName | String | - | No (null allowed) | Display value of lineId, copied from u_mes_mast_line.name | `"Front Caliper Assembly Line 1"` |  |
+| 10 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `null` | Reference: u_mes_mast_workCenter._id |
+| 11 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `null` |  |
+| 12 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `null` | Reference: u_mes_mast_equipment._id |
+| 13 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `null` |  |
+| 14 | processTagId | String | - | No (null allowed) | Reference to u_mes_perf_processTag._id | `null` | Reference: u_mes_perf_processTag._id |
+| 15 | processTagName | String | - | No (null allowed) | Display value of processTagId, copied from u_mes_perf_processTag.description | `null` |  |
+| 16 | itemId | String | - | No (null allowed) | Reference to u_mes_prod_item._id | `null` | Reference: u_mes_prod_item._id |
+| 17 | itemName | String | - | No (null allowed) | Display value of itemId, copied from u_mes_prod_item.description | `null` |  |
+| 18 | comparison | String | - | Yes | Comparison | `"Less Than"` | Less Than; Greater Than; Outside Band |
+| 19 | thresholdValue | Decimal128 | - | Yes | Threshold | `NumberDecimal("75.0")` |  |
+| 20 | thresholdUpperValue | Decimal128 | - | No (null allowed) | Upper value for Outside Band | `null` |  |
+| 21 | evaluationWindowMinutes | Int32 | - | Yes | Window evaluated | `NumberInt(60)` |  |
+| 22 | severityClass | String | - | Yes | Severity | `"Medium"` | Low; Medium; High; Critical |
+| 23 | actionType | String | - | Yes | Action | `"Notify"` | Notify; Hold; Stop Equipment; Block Process; Create Work Order; Create Nonconformance |
+| 24 | notificationTypeId | String | - | Yes | Reference to u_mes_syst_notificationType._id | `"1291000000000005"` | Reference: u_mes_syst_notificationType._id |
+| 25 | notificationTypeName | String | - | Yes | Display value of notificationTypeId, copied from u_mes_syst_notificationType.name | `"Order Late"` |  |
+| 26 | escalationRuleId | String | - | No (null allowed) | Reference to u_mes_syst_escalationRule._id | `"1334000000000008"` | Reference: u_mes_syst_escalationRule._id |
+| 27 | escalationRuleName | String | - | No (null allowed) | Display value of escalationRuleId, copied from u_mes_syst_escalationRule.name | `"KPI alert on OEE and rejects"` |  |
+| 28 | falseAlertCount | Int32 | - | Yes | Alerts closed as false (tuning, Level 4) | `NumberInt(3)` |  |
+| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

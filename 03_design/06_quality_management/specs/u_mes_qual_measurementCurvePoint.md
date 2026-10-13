@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 17 (17 required, 0 may be null) |
+| Keys | 18 (18 required, 0 may be null) |
 | Estimated volume per year | about 300 million |
 | Storage | time-series collection (timeField sampledAt, metaField measurementCurveId, granularity seconds) |
 
@@ -27,21 +27,22 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1320000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"CRV-20260915-01840-0001"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | measurementCurveId | String | - | Yes | Reference to u_mes_qual_measurementCurve._id | `"1319000000000001"` | Reference: u_mes_qual_measurementCurve._id |
-| 6 | measurementCurveName | String | - | Yes | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260915-01840"` |  |
-| 7 | pointNo | Int32 | - | Yes | Point number | `NumberInt(1)` |  |
-| 8 | sampledAt | Date | Datetime | Yes | Sample time | `ISODate("2026-09-15T06:01:30.000+0000")` |  |
-| 9 | xValue | Decimal128 | - | Yes | X value | `NumberDecimal("0.0")` |  |
-| 10 | yValue | Decimal128 | - | Yes | Y value | `NumberDecimal("0")` |  |
-| 11 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 12 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 13 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 14 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 15 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:30.000+0000")` |  |
-| 16 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 17 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | measurementCurveId | String | - | Yes | Reference to u_mes_qual_measurementCurve._id | `"1319000000000001"` | Reference: u_mes_qual_measurementCurve._id |
+| 7 | measurementCurveName | String | - | Yes | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260915-01840"` |  |
+| 8 | pointNo | Int32 | - | Yes | Point number | `NumberInt(1)` |  |
+| 9 | sampledAt | Date | Datetime | Yes | Sample time | `ISODate("2026-09-15T06:01:30.000+0000")` |  |
+| 10 | xValue | Decimal128 | - | Yes | X value | `NumberDecimal("0.0")` |  |
+| 11 | yValue | Decimal128 | - | Yes | Y value | `NumberDecimal("0")` |  |
+| 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 13 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 14 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 15 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 16 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:30.000+0000")` |  |
+| 17 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 18 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Indexes
 

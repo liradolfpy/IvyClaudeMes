@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 21 (19 required, 2 may be null) |
+| Keys | 22 (20 required, 2 may be null) |
 | Estimated volume per year | 100-400 |
 | Storage | standard |
 
@@ -31,25 +31,26 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|---|---|---|---|
 | 1 | _id | String | - | Yes | Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database | `"1158000000000001"` |  |
 | 2 | recordNo | String | - | Yes | Business identifier of the document, readable by people and unique within the site | `"CS01"` |  |
-| 3 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
-| 4 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 5 | name | String | - | Yes | Name of the defect code; used as its display value in other collections | `"Shrinkage porosity"` |  |
-| 6 | defectGroupId | String | - | Yes | Reference to u_mes_qual_defectGroup._id | `"1282000000000001"` | Reference: u_mes_qual_defectGroup._id |
-| 7 | defectGroupName | String | - | Yes | Display value of defectGroupId, copied from u_mes_qual_defectGroup.name | `"Casting"` |  |
-| 8 | description | String | - | Yes | Description of the defect code | `"Porosity visible on machined face or found by X-ray sampling"` |  |
-| 9 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
-| 10 | defaultDispositionTypeId | String | - | Yes | Reference to u_mes_qual_dispositionType._id: default disposition type | `"1284000000000001"` | Reference: u_mes_qual_dispositionType._id |
-| 11 | defaultDispositionTypeName | String | - | Yes | Display value of defaultDispositionTypeId, copied from u_mes_qual_dispositionType.name | `"Use As Is"` |  |
-| 12 | dispositionRoutingId | String | - | Yes | Reference to u_mes_prod_routing._id: disposition routing | `"1053000000000001"` | Reference: u_mes_prod_routing._id |
-| 13 | dispositionRoutingName | String | - | Yes | Display value of dispositionRoutingId, copied from u_mes_prod_routing.description | `"Front caliper LH, full process routing"` |  |
-| 14 | isSafetyRelated | Boolean | - | Yes | True when the record is safety related | `false` |  |
-| 15 | requiresPhoto | Boolean | - | Yes | True when photo is required | `false` |  |
-| 16 | requiresHold | Boolean | - | Yes | True when hold is required | `false` |  |
-| 17 | scrapCostCategory | String | - | Yes | Scrap cost category | `"Machining Scrap"` | Casting Scrap; Machining Scrap; Assembly Scrap; Supplier Chargeable |
-| 18 | customerDefectCode | String | - | No (null allowed) | Customer defect code | `"SM-Q-0417"` |  |
-| 19 | pfmeaFailureMode | String | - | No (null allowed) | PFMEA failure mode | `"Shrinkage porosity in the bridge section"` |  |
-| 20 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 21 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
+| 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
+| 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
+| 6 | name | String | - | Yes | Name of the defect code; used as its display value in other collections | `"Shrinkage porosity"` |  |
+| 7 | defectGroupId | String | - | Yes | Reference to u_mes_qual_defectGroup._id | `"1282000000000001"` | Reference: u_mes_qual_defectGroup._id |
+| 8 | defectGroupName | String | - | Yes | Display value of defectGroupId, copied from u_mes_qual_defectGroup.name | `"Casting"` |  |
+| 9 | description | String | - | Yes | Description of the defect code | `"Porosity visible on machined face or found by X-ray sampling"` |  |
+| 10 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
+| 11 | defaultDispositionTypeId | String | - | Yes | Reference to u_mes_qual_dispositionType._id: default disposition type | `"1284000000000001"` | Reference: u_mes_qual_dispositionType._id |
+| 12 | defaultDispositionTypeName | String | - | Yes | Display value of defaultDispositionTypeId, copied from u_mes_qual_dispositionType.name | `"Use As Is"` |  |
+| 13 | dispositionRoutingId | String | - | Yes | Reference to u_mes_prod_routing._id: disposition routing | `"1053000000000001"` | Reference: u_mes_prod_routing._id |
+| 14 | dispositionRoutingName | String | - | Yes | Display value of dispositionRoutingId, copied from u_mes_prod_routing.description | `"Front caliper LH, full process routing"` |  |
+| 15 | isSafetyRelated | Boolean | - | Yes | True when the record is safety related | `false` |  |
+| 16 | requiresPhoto | Boolean | - | Yes | True when photo is required | `false` |  |
+| 17 | requiresHold | Boolean | - | Yes | True when hold is required | `false` |  |
+| 18 | scrapCostCategory | String | - | Yes | Scrap cost category | `"Packing Scrap"` | Casting Scrap; Machining Scrap; Assembly Scrap; Supplier Chargeable; Manufacturing Scrap; Packing Scrap |
+| 19 | customerDefectCode | String | - | No (null allowed) | Customer defect code | `"SM-Q-0417"` |  |
+| 20 | pfmeaFailureMode | String | - | No (null allowed) | PFMEA failure mode | `"Shrinkage porosity in the bridge section"` |  |
+| 21 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 22 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
