@@ -374,7 +374,9 @@ def validate(docs):
                 if t in("Int32","Int64","Decimal128") and re.search(r"(Quantity|Count|Minutes)$",k) and float(v[1])<0: F(CHECKS[18],"%s doc %d"%(k,x))
                 if k.endswith("Id") and k!="_id":
                     pair=k[:-2] if k.endswith("ById") else k[:-2]+"Name"
-                    if k=="relatedEntityId":
+                    if k=="shiftId" and c["parent"]!="u_mes_mast_shift":
+                        tc=byent["shift"]; hit=[y for y in docs["u_mes_mast_shift"] if y["recordNo"]==v and y["siteId"]==d.get("siteId")]
+                    elif k=="relatedEntityId":
                         tc=bycol.get(d.get("relatedCollectionName")); hit=[y for cc,y in byid.get(v,[]) if tc and cc["collection"]==tc["collection"]]
                     else:
                         tc=byent[f["ref"]]; hit=[y for cc,y in byid.get(v,[]) if cc["collection"]==tc["collection"]]
@@ -389,8 +391,31 @@ def validate(docs):
             if c["dataClass"]=="master" and "createdAt" in d: F(CHECKS[15],"audit keys on a master collection")
     return fails
 R_LINEKEYS=["lineNo","stepNo","itemNo","taskNo","actionNo","findingNo","elementNo","levelNo","stageNo","releaseNo","revisionNo","rank","level","lotSizeFrom","subgroupNo","positionNo","windowNo"]
+SHIFTCODED=False
+def shift_codes(docs):
+    """Owner instruction 13 Oct 2026: every shiftId holds the shift code (A, B, C or G, from u_mes_mast_shift.recordNo,
+    first part before '-') instead of the shift _id, so that it matches the cropdown "Shift" of the query controls.
+    shiftName is set to the name of the base shift with that code at the same site. Child collections of the shift
+    master (shiftBreak, shiftWorkingDay) keep shiftId as the parent _id."""
+    global SHIFTCODED
+    if SHIFTCODED: return
+    sh=docs["u_mes_mast_shift"]
+    base={(d["siteId"],d["recordNo"]):d for d in sh}
+    m={}
+    for d in sh:
+        code=d["recordNo"].split("-")[0]
+        b=base.get((d["siteId"],code),d)
+        m[d["_id"]]=(code,b["name"])
+    keep={c["collection"] for c in cols if c["parent"]=="u_mes_mast_shift"}  # children of the shift master keep the parent _id
+    for n,ds in docs.items():
+        if n in keep: continue
+        for d in ds:
+            if d.get("shiftId") in m:
+                d["shiftId"],nm=m[d["shiftId"]]
+                if "shiftName" in d: d["shiftName"]=nm
+    SHIFTCODED=True
 def write(root):
-    docs=build(); fails=validate(docs)
+    docs=build(); shift_codes(docs); fails=validate(docs)
     def w(p,t):
         p=os.path.join(root,p); os.makedirs(os.path.dirname(p),exist_ok=True); open(p,"w",encoding="utf-8").write(t)
     for c in cols:

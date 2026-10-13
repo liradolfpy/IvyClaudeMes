@@ -10,7 +10,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000001",
     workCalendarExceptionName: "PN1-2026-E01",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   },
@@ -23,7 +23,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000002",
     workCalendarExceptionName: "PN1-2026-E02",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000002",
+    shiftId: "B",
     shiftName: "Shift B",
     schemaVersion: NumberInt(1)
   },
@@ -36,7 +36,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000003",
     workCalendarExceptionName: "PN1-2026-FDY-E01",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000003",
+    shiftId: "C",
     shiftName: "Shift C",
     schemaVersion: NumberInt(1)
   },
@@ -49,7 +49,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000004",
     workCalendarExceptionName: "PN1-2026-FDY-E02",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   },
@@ -62,7 +62,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000005",
     workCalendarExceptionName: "PN1-2026-HT-E01",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000002",
+    shiftId: "B",
     shiftName: "Shift B",
     schemaVersion: NumberInt(1)
   },
@@ -75,7 +75,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000006",
     workCalendarExceptionName: "PN1-2026-HT-E02",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000003",
+    shiftId: "C",
     shiftName: "Shift C",
     schemaVersion: NumberInt(1)
   },
@@ -88,7 +88,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000007",
     workCalendarExceptionName: "PN1-2026-MC-E01",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   },
@@ -101,7 +101,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000008",
     workCalendarExceptionName: "PN1-2026-MC-E02",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000002",
+    shiftId: "B",
     shiftName: "Shift B",
     schemaVersion: NumberInt(1)
   },
@@ -114,7 +114,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000009",
     workCalendarExceptionName: "PN1-2026-SF-E01",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000003",
+    shiftId: "C",
     shiftName: "Shift C",
     schemaVersion: NumberInt(1)
   },
@@ -127,7 +127,7 @@ db.getCollection("u_mes_mast_workCalendarExceptionShift").insertMany([
     workCalendarExceptionId: "1022000000000010",
     workCalendarExceptionName: "PN1-2026-SF-E02",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   }

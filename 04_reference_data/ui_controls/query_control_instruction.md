@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.9 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
+Instruction version: 0.10 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -130,7 +130,7 @@ Placement of model collections used in query controls:
 | `u_mes_maint_sparePart`, `u_mes_perf_processTag` | more than 500 | `/dd` search | `{ dn: "<collection>" }` |
 | `u_mes_prod_recipe`, `u_mes_syst_iotDevice`, `u_mes_prod_routing`, `u_mes_qual_controlPlan`, `u_mes_qual_inspectionPlan`, `u_mes_qual_checkSheet`, `u_mes_maint_maintenancePlan` | 500 or fewer, not frequently used as a filter | `/dd` | `{ dn: "<collection>" }` |
 | Status of any collection | 3 to 8 values | `data` | values from `status_values.md` |
-| Shift | 4 values (A, B, C, G) | `/cropdown` | `{ name: "Shift" }`. The cropdown keys are the shift codes, which equal `u_mes_mast_shift.recordNo`; the page code resolves the code to `shiftId` (see Q23). The mdict `Shift` dictionary is not used in query controls. |
+| Shift | 4 values (A, B, C, G) | `/cropdown` | `{ name: "Shift" }`. The cropdown keys are the shift codes (`A`, `B`, `C`, `G`), and `shiftId` in transaction, report and telemetry collections stores the same code, so the filter is a direct match. The mdict `Shift` dictionary is not used in query controls. |
 
 ### Step 5: Set the attributes
 
@@ -213,7 +213,7 @@ File name of a generated configuration: `04_reference_data/ui_controls/query/Pag
 | `errorMessage` | all with `required: true` | Message when a mandatory control is empty at submit | `Please select <label>` |
 | `required` | all | `true`: the control is mandatory; `false`: optional | `true` on every control unless the control is specifically required to be optional. A dropdown with `includeAll` and default `"all"` is always filled, so `required: true` on it only stops the user from clearing it. |
 | `default` | dropDown, radio, datePicker | Value selected when the form opens | Dropdown: `"all"` (an array such as `["all"]` only when `multiSelect` is true); radio: one of its `data` keys; datePicker: day offset from today as `NumberInt` (`0` = today, `-1` = yesterday) |
-| `defaultFrom`, `defaultTo` | rangePicker | Initial range | Day offsets from today as `NumberInt` (`0` = today, `-30` = 30 days ago). Standard: live screens `0` / `0`; operational lists `-7` / `0`; history and reports `-30` / `0` |
+| `defaultFrom`, `defaultTo` | rangePicker | Initial range | Day offsets from today as `NumberInt` (`0` = today, `-30` = 30 days ago). Standard: live screens `0` / `0`; operational lists `-7` / `0`; history and reports `-10` / `0` |
 | `format` | datePicker, rangePicker | Display and payload date format | `YYYY-MM-DD` |
 | `din_from`, `din_to` | rangePicker | Names of the two top-level payload keys that receive the from-date and to-date as strings | Always exactly `"din_from" : "from"` and `"din_to" : "to"`. A query form has only one range picker, so the names never collide. `data_index` is the time key, so the page code knows which key the range applies to. |
 | `includeAll` | dropDown | The app adds `{ "all": "ALL" }` as the first value; `all` tells the backend not to filter on this key | `true` on every optional filter; `false` only when one value must always be chosen. Not available on radio. |
@@ -591,9 +591,7 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 
 ## 14. Open questions
 
-| No. | Question | Why it matters |
-|---|---|---|
-| Q23 | The cropdown `Shift` sends the shift code (`A`, `B`, `C`, `G`) and the text (`Shift A`), but transaction collections store `shiftId` (for example `1015000000000001`). Should the page code resolve the code to `shiftId` through `u_mes_mast_shift.recordNo` (assumed here), or should the cropdown keys be changed to the shift `_id` values? | The shift filter must match stored data |
+None at version 0.10. New questions are added here with the next free number (Q24 onwards).
 
 ### 14.1 Deferred items (to be worked later)
 
@@ -603,6 +601,7 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | Q21 | Registering the `u_int_` prefix (`u_int_mdict`; page configurations stay in the application collection `PageConfig`) in the data model register and generator | Deferred by the owner on 13 Oct 2026 |
 | Q22 | Whether `/mdict` reads the extra keys of `u_int_mdict` (`siteId`, `recordNo`, audit keys), and how it treats the per-site dictionaries now that site is not used in queries | Deferred by the owner on 13 Oct 2026 |
 | F1 | Index alignment: the query key strategy (`02_architecture/QueryKeySelectionStrategy.md`) and the generated index scripts put `siteId` first in several indexes (`{ siteId, recordNo }`, `{ siteId, status }`, `{ siteId, <date> }`). UI queries never carry `siteId`, so those indexes need `siteId` removed from the front, or a version without it, for list screens. Not changed by this instruction. | Follow-up on the query key strategy |
+| F2 | `shiftId` now stores the shift code (`A`, `B`, `C`) in the sample documents (owner instruction, 13 Oct 2026; applied in `05_generator/gen_samples.py`). The model (`05_generator/model/flat_model.json`), `02_architecture/field_lists`, the collection specifications and their examples still describe `shiftId` as a reference to `u_mes_mast_shift._id`. They need the reference changed to the shift code (`u_mes_mast_shift.recordNo`) and a decision log entry. Child collections of the shift master (`shiftBreak`, `shiftWorkingDay`) keep the parent `_id`. | Follow-up on the model and specifications |
 
 ## 15. Resolved questions
 
@@ -640,6 +639,7 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | – | Page configuration frame and `required` on "all" dropdowns (review of the Downtime Events config, 13 Oct 2026) | `_id` and `dictName` = `<collectionSuffix>Query`; `typ` = `PageConfigQuery`; fixed `ver`, `rel` (`YYYYMMDD-HHmm`), `unq`, `subTyp`, `act`, `approve`, `delete`, `dynamicModal`, `edit`, `mint`, `view`, `projid`; `dictData.pageTitle` and `dictData.api` = `/ivy/mes`; every dropdown with default `all` has `required: true` | Step 8 added; sections 1, 5, 6, 10 and checklist 15 and 16; supersedes the Q18 answer "ignore the other fields" for the fields listed |
 | – | Attribute name, Shift source, multi-select (13 Oct 2026) | All controls use `"isRequired": true` unless specifically required otherwise; Shift uses cropdown `name: "Shift"`, not mdict; `multiSelect: true` only with a compelling reason | Sections 5, 6, 10, 11.3, 12, checklist 7, 15, 17; new question Q23 |
 | – | Attribute name (13 Oct 2026, later the same day) | Keep the key name `required`, not `isRequired`; the value stays `true` on every control unless specifically optional | Sections 2, 5, 6, 10, checklist 1 and 15; supersedes the `isRequired` name of version 0.8 |
+| Q23 | Shift code versus `shiftId` | All `shiftId` values in the documents are the shift code (`A`, `B`, `C`); the cropdown `Shift` keys match directly | Step 4 placement table; sample documents regenerated; follow-up F2 |
 
 ## 16. Observations on the sample files (not changed)
 
@@ -663,3 +663,4 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | 0.7 | 13 Oct 2026 | Owner review of the Downtime Events config: new step 8 (page configuration frame: `_id` / `dictName` = `<collectionSuffix>Query`, `typ` = `PageConfigQuery`, `dictData.pageTitle`, `dictData.api` = `/ivy/mes`, fixed fields, `ver` / `rel` = `YYYYMMDD-HHmm`, file naming); `required: true` on every dropdown with default `all` (rules, templates, checklist 15); checklist 16 added; step 7 reference corrected to section 13 | Claude |
 | 0.8 | 13 Oct 2026 | Attribute renamed to `isRequired`, `true` on every control unless specifically optional; Shift source changed to cropdown `Shift`; `multiSelect` false by default, true only with a written compelling reason; Status template made single-select; Andon Events example updated; checklist 7 and 15 revised, 17 added; Q23 opened on shift code versus `shiftId` | Claude |
 | 0.9 | 13 Oct 2026 | Attribute name reverted from `isRequired` to `required` (rules, templates, checklist); value rule of 0.8 unchanged: `required: true` on every control unless specifically optional | Claude |
+| 0.10 | 13 Oct 2026 | Q23 resolved: `shiftId` stores the shift code, matching the cropdown `Shift` (sample documents regenerated through `gen_samples.py`); follow-up F2 on model and specifications; second sample configuration `PageConfig_u_mes_perf_alarm.json` produced with this instruction | Claude |

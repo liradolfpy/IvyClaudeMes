@@ -10,7 +10,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000001",
     workCalendarName: "Chakan Plant Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   },
@@ -23,7 +23,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000002",
     workCalendarName: "Foundry Continuous Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000002",
+    shiftId: "B",
     shiftName: "Shift B",
     schemaVersion: NumberInt(1)
   },
@@ -36,7 +36,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000003",
     workCalendarName: "Heat Treatment Continuous Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000003",
+    shiftId: "C",
     shiftName: "Shift C",
     schemaVersion: NumberInt(1)
   },
@@ -49,7 +49,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000004",
     workCalendarName: "Machining Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   },
@@ -62,7 +62,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000005",
     workCalendarName: "Surface Treatment Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000002",
+    shiftId: "B",
     shiftName: "Shift B",
     schemaVersion: NumberInt(1)
   },
@@ -75,7 +75,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000006",
     workCalendarName: "Assembly Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000003",
+    shiftId: "C",
     shiftName: "Shift C",
     schemaVersion: NumberInt(1)
   },
@@ -88,7 +88,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000007",
     workCalendarName: "Final Inspection and Packing Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   },
@@ -101,7 +101,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000008",
     workCalendarName: "Stores and Dispatch Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000002",
+    shiftId: "B",
     shiftName: "Shift B",
     schemaVersion: NumberInt(1)
   },
@@ -114,7 +114,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000009",
     workCalendarName: "Maintenance Calendar 2026",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000003",
+    shiftId: "C",
     shiftName: "Shift C",
     schemaVersion: NumberInt(1)
   },
@@ -127,7 +127,7 @@ db.getCollection("u_mes_mast_workCalendarShift").insertMany([
     workCalendarId: "1018000000000010",
     workCalendarName: "Chakan Plant Calendar 2027",
     sequenceNo: NumberInt(1),
-    shiftId: "1015000000000001",
+    shiftId: "A",
     shiftName: "Shift A",
     schemaVersion: NumberInt(1)
   }
