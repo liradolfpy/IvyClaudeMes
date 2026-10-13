@@ -1,0 +1,195 @@
+{
+  "collMod": "u_mes_syst_systemPeriodicReview",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_systemPeriodicReview",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "computerisedSystemId",
+        "computerisedSystemName",
+        "reviewPeriodFromDate",
+        "reviewPeriodToDate",
+        "changesReviewedCount",
+        "incidentsReviewedCount",
+        "deviationsReviewedCount",
+        "auditTrailReviewed",
+        "accessReviewed",
+        "backupRestoreVerified",
+        "validatedStateConfirmed",
+        "findingsText",
+        "reviewedById",
+        "reviewedBy",
+        "reviewedAt",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "nextReviewDate",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "computerisedSystemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_computerisedSystem._id"
+        },
+        "computerisedSystemName": {
+          "bsonType": "string",
+          "description": "Display value of computerisedSystemId, copied from u_mes_syst_computerisedSystem.name"
+        },
+        "reviewPeriodFromDate": {
+          "bsonType": "date",
+          "description": "First day of the review period"
+        },
+        "reviewPeriodToDate": {
+          "bsonType": "date",
+          "description": "Last day of the review period"
+        },
+        "changesReviewedCount": {
+          "bsonType": "int",
+          "description": "Changes made in the period"
+        },
+        "incidentsReviewedCount": {
+          "bsonType": "int",
+          "description": "Incidents in the period"
+        },
+        "deviationsReviewedCount": {
+          "bsonType": "int",
+          "description": "Deviations related to the system in the period"
+        },
+        "auditTrailReviewed": {
+          "bsonType": "bool",
+          "description": "Audit trail review done for the period"
+        },
+        "accessReviewed": {
+          "bsonType": "bool",
+          "description": "User access review done for the period"
+        },
+        "backupRestoreVerified": {
+          "bsonType": "bool",
+          "description": "A restore test succeeded in the period"
+        },
+        "validatedStateConfirmed": {
+          "bsonType": [
+            "bool",
+            "null"
+          ],
+          "description": "Conclusion: the system remains validated; null until the review is completed"
+        },
+        "findingsText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Findings and actions"
+        },
+        "reviewedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'reviewed'"
+        },
+        "reviewedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in reviewedById, copied from u_mes_mast_user.fullName"
+        },
+        "reviewedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the review was completed"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Approval time"
+        },
+        "nextReviewDate": {
+          "bsonType": "date",
+          "description": "Due date of the next periodic review"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Planned",
+            "In Review",
+            "Completed",
+            "Approved"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

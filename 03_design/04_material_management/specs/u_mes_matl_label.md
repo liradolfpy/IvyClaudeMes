@@ -85,7 +85,7 @@ Printed, Verified, Reprinted, Voided. Initial state: Printed. The values are mai
 
 ## Referenced by
 
-u_mes_plan_container, u_mes_trac_serialNumber.
+u_mes_plan_container, u_mes_trac_serialNumber, u_mes_matl_dispenseRecord.
 
 ## Files
 

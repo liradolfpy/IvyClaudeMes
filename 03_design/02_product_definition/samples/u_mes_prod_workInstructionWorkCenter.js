@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000001",
     recordNo: "WI-OP010-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000002",
     recordNo: "WI-OP020-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000003",
     recordNo: "WI-OP030-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000004",
     recordNo: "WI-OP040-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000005",
     recordNo: "WI-OP050-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000006",
     recordNo: "WI-OP060-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000007",
     recordNo: "WI-OP070-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000008",
     recordNo: "WI-OP080-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000009",
     recordNo: "WI-OP090-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
   {
     _id: "1303000000000010",
     recordNo: "WI-OP100-001-WC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_prod_workInstructionWorkCenter").insertMany([
     sequenceNo: NumberInt(1),
     workCenterId: "1009000000000010",
     workCenterName: "Final Inspection and Packing Cell",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000011",
+    recordNo: "WI-OP010-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000011",
+    workInstructionName: "Dispensing of API and excipients - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000011",
+    workCenterName: "Dispensing Booth 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000012",
+    recordNo: "WI-OP020-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000012",
+    workInstructionName: "Dry mixing, binder addition and wet massing - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000012",
+    workCenterName: "Rapid Mixer Granulator Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000013",
+    recordNo: "WI-OP030-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000013",
+    workInstructionName: "Drying of wet granules - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000013",
+    workCenterName: "Fluid Bed Dryer Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000014",
+    recordNo: "WI-OP040-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000014",
+    workInstructionName: "Sizing and lubrication - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000014",
+    workCenterName: "Blending Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000015",
+    recordNo: "WI-OP050-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000015",
+    workInstructionName: "Compression of core tablets - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000015",
+    workCenterName: "Compression Cubicle 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000016",
+    recordNo: "WI-OP060-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000016",
+    workInstructionName: "Film coating of core tablets - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000016",
+    workCenterName: "Coating Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000017",
+    recordNo: "WI-OP070-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000017",
+    workInstructionName: "Counting, filling and capping - Paracetamol 500 mg, bottle of 100",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000017",
+    workCenterName: "Bottle Packing Line 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000018",
+    recordNo: "WI-OP080-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000018",
+    workInstructionName: "Blister packing and leak test - Paracetamol 500 mg 10 x 10",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000018",
+    workCenterName: "Blister Packing Line 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000019",
+    recordNo: "WI-OP090-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000019",
+    workInstructionName: "Carton coding and code verification - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000019",
+    workCenterName: "Serialisation Station, Blister Line 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1303000000000020",
+    recordNo: "WI-OP100-001-WC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000020",
+    workInstructionName: "Cartoning, checkweighing and shipper packing - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    workCenterId: "1009000000000020",
+    workCenterName: "Cartoning and Checkweighing Station",
     schemaVersion: NumberInt(1)
   }
 ]);

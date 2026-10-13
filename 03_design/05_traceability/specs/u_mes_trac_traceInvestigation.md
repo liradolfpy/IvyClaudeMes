@@ -81,7 +81,7 @@ Running, Completed, Closed. Initial state: Running. The values are maintained in
 
 ## Referenced by
 
-u_mes_trac_traceInvestigationResult.
+u_mes_trac_traceInvestigationResult, u_mes_qual_productRecall.
 
 ## Files
 

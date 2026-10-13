@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000001",
     recordNo: "S1042-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000001",
@@ -18,6 +19,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000002",
     recordNo: "S1042-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000001",
@@ -32,6 +34,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000003",
     recordNo: "S1077-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000002",
@@ -46,6 +49,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000004",
     recordNo: "S1077-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000002",
@@ -60,6 +64,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000005",
     recordNo: "S1103-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000003",
@@ -74,6 +79,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000006",
     recordNo: "S1103-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000003",
@@ -88,6 +94,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000007",
     recordNo: "S1018-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000004",
@@ -102,6 +109,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000008",
     recordNo: "S1018-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000004",
@@ -116,6 +124,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000009",
     recordNo: "S1156-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000005",
@@ -130,6 +139,7 @@ db.getCollection("u_mes_mast_supplierContact").insertMany([
   {
     _id: "1039000000000010",
     recordNo: "S1156-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     supplierId: "1038000000000005",

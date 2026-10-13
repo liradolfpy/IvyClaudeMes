@@ -2,13 +2,14 @@
 
 Keys whose values are fixed by the application logic stay coded text (data_modeling_standard.md section 11, rule B). Their allowed values are listed here, enforced by the validators, and stored as data in `u_mes_syst_enumerationValue` (one document per collection, key and value). Status values are in status_values.md.
 
-Keys: 265 | Values: 1184
+Keys: 308 | Values: 1357
 
 | Module | Collection | Key | Allowed values |
 |---|---|---|---|
 | Master Data Management | u_mes_mast_enterprise | scope | Enterprise; Site |
 | Master Data Management | u_mes_mast_site | siteType | Manufacturing Plant; Warehouse; Technical Center; Head Office |
 | Master Data Management | u_mes_mast_area | areaType | Production; Storage; Quality; Maintenance; Utility |
+| Master Data Management | u_mes_mast_area | cleanlinessClass | ISO 7; ISO 8; Controlled Not Classified; Unclassified |
 | Master Data Management | u_mes_mast_line | lineType | Casting; Heat Treatment; Machining; Surface Treatment; Assembly; Inspection; Packing |
 | Master Data Management | u_mes_mast_workCenter | workCenterType | Machine Station; Manual Station; Test Station; Inspection Station; Batch Process |
 | Master Data Management | u_mes_mast_workCenter | trackingGrain | Lot; Unit; Container |
@@ -17,6 +18,8 @@ Keys: 265 | Values: 1184
 | Master Data Management | u_mes_mast_equipment | criticality | A; B; C |
 | Master Data Management | u_mes_mast_equipment | currentState | Running; Idle; Setup; Down; Starved; Blocked; Planned Stop |
 | Master Data Management | u_mes_mast_equipment | safetyCategory | PL a; PL b; PL c; PL d; PL e |
+| Master Data Management | u_mes_mast_equipment | qualificationStatus | Qualified; Not Qualified; Requalification Due |
+| Master Data Management | u_mes_mast_equipment | cleanStatus | Clean; Dirty; In Cleaning; Clean Hold Expired; Not Applicable |
 | Master Data Management | u_mes_mast_shiftWorkingDay | workingDay | Monday; Tuesday; Wednesday; Thursday; Friday; Saturday; Sunday |
 | Master Data Management | u_mes_mast_workCalendarWeeklyOffDay | weeklyOffDay | Monday; Tuesday; Wednesday; Thursday; Friday; Saturday; Sunday |
 | Master Data Management | u_mes_mast_workCalendarException | exceptionType | Public Holiday; Plant Shutdown; Extra Working Day; Reduced Shift |
@@ -32,6 +35,7 @@ Keys: 265 | Values: 1184
 | Master Data Management | u_mes_mast_customerContact | businessFunction | Quality; Purchasing; Logistics; Engineering; Production; Finance |
 | Master Data Management | u_mes_mast_supplier | supplierType | Direct Material; Indirect Material; Tooling; Service; Calibration Laboratory |
 | Master Data Management | u_mes_mast_supplierContact | businessFunction | Quality; Purchasing; Logistics; Engineering; Production; Finance |
+| Master Data Management | u_mes_mast_supplierSuppliedItem | qualificationStatus | Qualified; Conditionally Approved; Disqualified |
 | Master Data Management | u_mes_mast_unitOfMeasure | scope | Enterprise; Site |
 | Master Data Management | u_mes_mast_unitOfMeasure | dimension | Count; Mass; Length; Torque; Pressure; Temperature; Time; Energy; Volume; Hardness; Leak Rate |
 | Product Definition | u_mes_prod_item | itemType | Finished Good; Semi Finished; Purchased Component; Raw Material; Consumable; Packaging |
@@ -51,6 +55,7 @@ Keys: 265 | Values: 1184
 | Product Definition | u_mes_prod_engineeringChange | changeType | Design Change; Process Change; Material Change; Supplier Change; Tooling Change; Document Change |
 | Product Definition | u_mes_prod_engineeringChange | originator | Customer; Internal; Supplier |
 | Product Definition | u_mes_prod_engineeringChange | effectivityType | Date; Serial Number; Lot; Stock Run Out |
+| Product Definition | u_mes_prod_engineeringChange | regulatoryImpact | None; Customer Notification; Prior Approval |
 | Product Definition | u_mes_prod_engineeringChangeAffectedObject | changeAction | Create; Update; Obsolete |
 | Product Definition | u_mes_prod_engineeringChangeApproval | businessFunction | Quality; Purchasing; Logistics; Engineering; Production; Finance |
 | Product Definition | u_mes_prod_engineeringChangeApproval | decision | Approved; Rejected; Approved With Conditions |
@@ -84,6 +89,7 @@ Keys: 265 | Values: 1184
 | Planning and Execution | u_mes_plan_recipeDownload | verificationResult | Match; Mismatch; No Response; Version Not Released |
 | Planning and Execution | u_mes_plan_setupVerification | trigger | Order Start; Changeover; Shift Start; After Maintenance |
 | Planning and Execution | u_mes_plan_setupVerificationItem | checkType | Variant; Fixture; Tool; Program; Parameter; Component; Gauge |
+| Planning and Execution | u_mes_plan_lineClearance | clearanceType | Before Order Start; Order Changeover; After Order Completion; After Maintenance |
 | Material Management | u_mes_matl_storageLocation | locationType | Warehouse Rack; Line Side; Quarantine; Dispatch Bay; Receiving Bay; Tool Crib; Scrap Yard |
 | Material Management | u_mes_matl_materialMovement | scanSource | Handheld Scanner; Fixed Scanner; Manual Entry |
 | Material Management | u_mes_matl_goodsReceiptLine | inspectionStatus | Pending; Accepted; Rejected; Accepted Under Deviation |
@@ -100,9 +106,11 @@ Keys: 265 | Values: 1184
 | Material Management | u_mes_matl_label | labelType | Unit Mark; Container Label; Shipping Label; Hold Tag; Location Label |
 | Material Management | u_mes_matl_label | verificationGrade | A; B; C; D; F |
 | Material Management | u_mes_matl_movementType | stockEffect | Increase; Decrease; Transfer; None |
-| Material Management | u_mes_matl_exposureTimer | timerType | Floor Life; Pot Life; Open Time; Bake |
+| Material Management | u_mes_matl_exposureTimer | timerType | Floor Life; Pot Life; Open Time; Bake; Dirty Equipment Hold; Clean Equipment Hold; Process Hold Time |
 | Material Management | u_mes_matl_replenishmentRule | triggerType | Consumption; Kanban Scan; Min-Max; Order Demand |
 | Material Management | u_mes_matl_materialDemandForecast | method | Schedule; Consumption Rate; Model |
+| Material Management | u_mes_matl_dispenseRecord | dispenseMethod | Gravimetric Weighing; Count By Weight |
+| Material Management | u_mes_matl_dispenseRecord | verificationMethod | Second Person; System Check |
 | Traceability | u_mes_trac_serialNumber | markGrade | A; B; C; D; F |
 | Traceability | u_mes_trac_genealogyLink | childType | Lot; Serial |
 | Traceability | u_mes_trac_genealogyLink | linkType | Assembled; Replaced; Split; Merge; Transformed |
@@ -141,6 +149,7 @@ Keys: 265 | Values: 1184
 | Quality Management | u_mes_qual_defectCode | scrapCostCategory | Casting Scrap; Machining Scrap; Assembly Scrap; Supplier Chargeable |
 | Quality Management | u_mes_qual_nonconformance | ncType | Internal; Supplier; Customer |
 | Quality Management | u_mes_qual_nonconformance | source | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
+| Quality Management | u_mes_qual_nonconformance | deviationClass | Minor; Major; Critical |
 | Quality Management | u_mes_qual_reworkOrder | reworkType | Replace Component; Retighten; Re-machine; Re-anodise; Re-mark; Clean |
 | Quality Management | u_mes_qual_reworkOrder | reinspectionResult | Pass; Fail |
 | Quality Management | u_mes_qual_scrapRecord | scrapType | Process Scrap; Setup Scrap; Material Defect; Destructive Test |
@@ -163,7 +172,7 @@ Keys: 265 | Values: 1184
 | Quality Management | u_mes_qual_ppapSubmission | submissionReason | Initial Submission; Engineering Change; Tooling Transfer; Correction Of Discrepancy; Tooling Inactive Over One Year; Sub Supplier Change |
 | Quality Management | u_mes_qual_ppapSubmission | customerDecision | Approved; Interim Approved; Rejected |
 | Quality Management | u_mes_qual_gauge | calibrationSource | Internal; External |
-| Quality Management | u_mes_qual_gaugeCalibration | calibrationType | Initial; Periodic; After Repair; After Shock Or Damage; Automatic Closed Loop |
+| Quality Management | u_mes_qual_gaugeCalibration | calibrationType | Initial; Periodic; After Repair; After Shock Or Damage; Automatic Closed Loop; Daily Performance Check |
 | Quality Management | u_mes_qual_gaugeCalibration | asFoundResult | Within Tolerance; Out Of Tolerance |
 | Quality Management | u_mes_qual_gaugeCalibration | asLeftResult | Within Tolerance; Out Of Tolerance |
 | Quality Management | u_mes_qual_gaugeCalibration | overallResult | Pass; Fail |
@@ -182,6 +191,19 @@ Keys: 265 | Values: 1184
 | Quality Management | u_mes_qual_defectRecord | fourMCategory | Man; Machine; Material; Method |
 | Quality Management | u_mes_qual_auditSchedule | auditType | Layered Process Audit; Product Audit; Process Audit; 5S Audit |
 | Quality Management | u_mes_qual_auditSchedule | frequencyType | Shift; Daily; Weekly; Monthly |
+| Quality Management | u_mes_qual_environmentalMonitoringPoint | monitoredParameter | Temperature; Relative Humidity; Differential Pressure; Airborne Particles 0.5 um; Airborne Particles 5.0 um; Surface Particle Count; Illuminance |
+| Quality Management | u_mes_qual_environmentalMonitoringPoint | limitDirection | Upper; Lower; Range |
+| Quality Management | u_mes_qual_environmentalMonitoringPoint | samplingFrequency | Continuous; Every Shift; Daily; Weekly |
+| Quality Management | u_mes_qual_environmentalMonitoringResult | limitEvaluation | Within Limits; Alert Limit Exceeded; Action Limit Exceeded |
+| Quality Management | u_mes_qual_retentionSample | sampleType | Reserve Sample; Retention Sample; Master Sample; Boundary Sample |
+| Quality Management | u_mes_qual_riskAssessment | relatedCollectionName | u_mes_prod_engineeringChange; u_mes_syst_computerisedSystem; u_mes_qual_nonconformance; u_mes_mast_equipment; u_mes_prod_item |
+| Quality Management | u_mes_qual_riskAssessment | assessmentMethod | FMEA; Risk Ranking And Filtering; Fault Tree Analysis; HACCP; Preliminary Hazard Analysis |
+| Quality Management | u_mes_qual_riskAssessment | initialRiskLevel | Low; Medium; High |
+| Quality Management | u_mes_qual_riskAssessment | residualRiskLevel | Low; Medium; High |
+| Quality Management | u_mes_qual_riskAssessment | acceptanceDecision | Accepted; Accepted With Controls; Not Accepted |
+| Quality Management | u_mes_qual_productRecall | recallClass | Class I; Class II; Class III |
+| Quality Management | u_mes_qual_productRecall | recallScope | Customer Plant; Distributor; Field |
+| Quality Management | u_mes_qual_processValidation | validationStage | Stage 1 Process Design; Stage 2 Process Qualification; Stage 3 Continued Process Verification |
 | Performance Management | u_mes_perf_reasonCode | reasonType | Downtime; Scrap; Hold; Andon; Changeover Loss; Hold Release; Interlock Override; Rework; Root Cause; Alarm Closure; Exposure Reset |
 | Performance Management | u_mes_perf_reasonCode | oeeImpact | Availability; Performance; Quality; None |
 | Performance Management | u_mes_perf_equipmentState | stateCode | Running; Idle; Setup; Down; Starved; Blocked; Planned Stop |
@@ -222,6 +244,12 @@ Keys: 265 | Values: 1184
 | Tooling & Maintenance | u_mes_maint_sparePartTransaction | transactionType | Issue; Return; Receipt; Adjustment; Scrap |
 | Tooling & Maintenance | u_mes_maint_reliabilitySummary | periodType | Shift; Day; Week; Month |
 | Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | eventType | Commissioning; Relocation; Overhaul; Refurbishment; Upgrade; Health Assessment; Replacement Recommendation; Decommissioning |
+| Tooling & Maintenance | u_mes_maint_logbookEntry | relatedCollectionName | u_mes_mast_equipment; u_mes_mast_area |
+| Tooling & Maintenance | u_mes_maint_logbookEntry | activityType | Production; Cleaning; Maintenance; Calibration; Line Clearance; Qualification; Idle |
+| Tooling & Maintenance | u_mes_maint_cleaningRecord | cleaningType | Minor Cleaning; Major Cleaning; Product Changeover Cleaning; Bath Change |
+| Tooling & Maintenance | u_mes_maint_cleaningRecord | verificationMethod | Visual Inspection; Cleanliness Test; Rinse Sample; Swab Sample |
+| Tooling & Maintenance | u_mes_maint_cleaningRecord | verificationResult | Pass; Fail |
+| Tooling & Maintenance | u_mes_maint_equipmentQualification | qualificationPhase | Design Qualification; Installation Qualification; Operational Qualification; Performance Qualification; Periodic Requalification |
 | System and Integration | u_mes_syst_erpMessage | direction | Inbound; Outbound; Publish |
 | System and Integration | u_mes_syst_erpMessage | messageType | Production Order Download; Operation Confirmation; Goods Movement; Goods Receipt; Shipment Advice; Material Master; Quality Notification |
 | System and Integration | u_mes_syst_erpMessage | payloadFormat | JSON; XML; IDoc |
@@ -252,7 +280,7 @@ Keys: 265 | Values: 1184
 | System and Integration | u_mes_syst_systemConfiguration | module | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
 | System and Integration | u_mes_syst_systemConfiguration | valueType | Text; Number; Flag; JSON |
 | System and Integration | u_mes_syst_systemConfiguration | scope | Enterprise; Site |
-| System and Integration | u_mes_syst_interlockRule | ruleType | Hold Check; Sequence Check; Mandatory Scan; Duplicate Serial; Wrong Order; Wrong Station; Variant Check; Component Lot Capture; Lot Release Check; Expiry Check; Kit Completeness; Genealogy Completeness; Recipe Release Check; Program Version Check; Work Instruction Release Check; Acknowledgement Check; Mandatory Inspection; NOK Result; Skill Check; Login Check; Equipment Readiness; Tool Life; Calibration Check; Environment Check; Setup Check; Alarm Restart |
+| System and Integration | u_mes_syst_interlockRule | ruleType | Hold Check; Sequence Check; Mandatory Scan; Duplicate Serial; Wrong Order; Wrong Station; Variant Check; Component Lot Capture; Lot Release Check; Expiry Check; Kit Completeness; Genealogy Completeness; Recipe Release Check; Program Version Check; Work Instruction Release Check; Acknowledgement Check; Mandatory Inspection; NOK Result; Skill Check; Login Check; Equipment Readiness; Tool Life; Calibration Check; Environment Check; Setup Check; Alarm Restart; Line Clearance Check; Batch Release Check; Equipment Clean Status Check; Qualification Status Check; Dispense Tolerance Check |
 | System and Integration | u_mes_syst_interlockRule | transactionPoint | Operation Start; Operation Complete; Material Issue; Kit Release; Pack Out; Dispatch; Order Close; Login; Inspection Accept |
 | System and Integration | u_mes_syst_interlockRule | enforcementMode | Warning; Block |
 | System and Integration | u_mes_syst_escalationRule | sourceType | Interlock; Andon; Alarm; Alert Rule; Breakdown; Audit; Nonconformance; Customer Complaint |
@@ -271,3 +299,18 @@ Keys: 265 | Values: 1184
 | System and Integration | u_mes_syst_recordPolicy | editPolicy | Free Edit; Controlled Edit; No Edit After Lock; Append Only |
 | System and Integration | u_mes_syst_savedView | viewType | Dashboard; Comparison; Pareto; Trend; List |
 | System and Integration | u_mes_syst_backupRun | runType | Full Backup; Incremental Backup; Restore Test; Failover Test |
+| System and Integration | u_mes_syst_computerisedSystem | systemCategory | Manufacturing Execution System; Equipment Controller; Laboratory System; ERP Interface; Label Printing; Data Historian; Infrastructure |
+| System and Integration | u_mes_syst_computerisedSystem | gampCategory | Category 1; Category 3; Category 4; Category 5 |
+| System and Integration | u_mes_syst_computerisedSystem | gxpImpact | Direct; Indirect; None |
+| System and Integration | u_mes_syst_computerisedSystem | dataCriticality | High; Medium; Low |
+| System and Integration | u_mes_syst_computerisedSystem | hostingModel | On Premise; Private Cloud; Supplier Hosted; Embedded |
+| System and Integration | u_mes_syst_systemValidation | validationType | Initial Validation; Change Revalidation; Retrospective Validation; Decommissioning |
+| System and Integration | u_mes_syst_systemValidation | assuranceApproach | Scripted Testing; Unscripted Testing; Ad Hoc Testing; Supplier Assurance |
+| System and Integration | u_mes_syst_auditTrailReview | reviewType | Batch Record Review; Periodic System Review; For Cause |
+| System and Integration | u_mes_syst_auditTrailReview | relatedCollectionName | u_mes_plan_productionOrder; u_mes_syst_systemPeriodicReview; u_mes_qual_nonconformance |
+| System and Integration | u_mes_syst_userAccessReviewLine | reviewAction | Retain; Remove Role; Change Role; Lock Account |
+| Batch Manufacturing Record | u_mes_bmr_batchRecordReview | reviewScope | Review By Exception; Full Review |
+| Batch Manufacturing Record | u_mes_bmr_batchRecordReviewException | exceptionType | Interlock Override; Out Of Specification Result; Manual Data Entry; Data Correction; Missing Signature; Deviation; Late Entry; Hold |
+| Batch Manufacturing Record | u_mes_bmr_batchRecordReviewException | relatedCollectionName | u_mes_plan_interlockEvent; u_mes_qual_inspectionResult; u_mes_syst_auditTrail; u_mes_qual_nonconformance; u_mes_qual_qualityHold; u_mes_plan_operationExecution |
+| Batch Manufacturing Record | u_mes_bmr_batchRecordReviewException | assessment | No Impact; Impact Assessed Acceptable; Requires Deviation; Requires Correction |
+| Batch Manufacturing Record | u_mes_bmr_yieldReconciliation | reconciliationType | Product Yield; Component Reconciliation; Label Reconciliation |

@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000001",
     recordNo: "GDC-OP-LS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000002",
     recordNo: "GDC-OP-LS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000001",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000003",
     recordNo: "HT-OP-LS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000002",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000004",
     recordNo: "HT-OP-LS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000002",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000005",
     recordNo: "CNC-OP-LS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000003",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000006",
     recordNo: "CNC-OP-LS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000003",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000007",
     recordNo: "WSH-OP-LS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000004",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000008",
     recordNo: "WSH-OP-LS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000004",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000009",
     recordNo: "ANO-OP-LS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000005",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_mast_skillLevelScale").insertMany([
   {
     _id: "1033000000000010",
     recordNo: "ANO-OP-LS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     skillId: "1031000000000005",

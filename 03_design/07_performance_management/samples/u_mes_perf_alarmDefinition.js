@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000001",
     recordNo: "ALD-GDC-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000001",
@@ -27,6 +28,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000002",
     recordNo: "ALD-HTF-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000002",
@@ -50,6 +52,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000003",
     recordNo: "ALD-HMC-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000003",
@@ -73,6 +76,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000004",
     recordNo: "ALD-WSH-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000004",
@@ -96,6 +100,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000005",
     recordNo: "ALD-ANO-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000005",
@@ -119,6 +124,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000006",
     recordNo: "ALD-PRS-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000006",
@@ -142,6 +148,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000007",
     recordNo: "ALD-NR-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000007",
@@ -165,6 +172,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000008",
     recordNo: "ALD-LKT-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000008",
@@ -188,6 +196,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000009",
     recordNo: "ALD-LSR-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000009",
@@ -211,6 +220,7 @@ db.getCollection("u_mes_perf_alarmDefinition").insertMany([
   {
     _id: "1324000000000010",
     recordNo: "ALD-VIS-A2031",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentTypeId: "1261000000000010",

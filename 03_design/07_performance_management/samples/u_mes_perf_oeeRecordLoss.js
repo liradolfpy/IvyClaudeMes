@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000001",
     recordNo: "OEE-2026-000141-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000001",
@@ -26,6 +27,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000002",
     recordNo: "OEE-2026-000141-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000001",
@@ -48,6 +50,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000003",
     recordNo: "OEE-2026-000144-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000002",
@@ -70,6 +73,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000004",
     recordNo: "OEE-2026-000144-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000002",
@@ -92,6 +96,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000005",
     recordNo: "OEE-2026-000147-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000003",
@@ -114,6 +119,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000006",
     recordNo: "OEE-2026-000147-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000003",
@@ -136,6 +142,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000007",
     recordNo: "OEE-2026-000150-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000004",
@@ -158,6 +165,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000008",
     recordNo: "OEE-2026-000150-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000004",
@@ -180,6 +188,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000009",
     recordNo: "OEE-2026-000153-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000005",
@@ -202,6 +211,7 @@ db.getCollection("u_mes_perf_oeeRecordLoss").insertMany([
   {
     _id: "1209000000000010",
     recordNo: "OEE-2026-000153-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     oeeRecordId: "1208000000000005",

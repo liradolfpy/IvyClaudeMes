@@ -35,7 +35,7 @@
 | 31 | u_mes_prod_recipe | Entity | master | 36 | 18 | 3 | 7 |
 | 32 | u_mes_prod_recipeParameter | Child | master | 18 | 14 | 0 | 3 |
 | 33 | u_mes_prod_recipeStage | Child | master | 11 | 11 | 0 | 1 |
-| 34 | u_mes_prod_engineeringChange | Entity | transaction | 31 | 23 | 4 | 5 |
+| 34 | u_mes_prod_engineeringChange | Entity | transaction | 36 | 26 | 5 | 6 |
 | 35 | u_mes_prod_engineeringChangeAffectedItem | Child | transaction | 18 | 18 | 0 | 2 |
 | 36 | u_mes_prod_engineeringChangeAffectedObject | Child | transaction | 18 | 18 | 1 | 1 |
 | 37 | u_mes_prod_engineeringChangeApproval | Child | transaction | 20 | 18 | 2 | 2 |

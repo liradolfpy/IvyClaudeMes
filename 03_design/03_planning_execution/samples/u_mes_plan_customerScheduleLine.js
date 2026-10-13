@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000001",
     recordNo: "CSR-SML-DS-2026-36-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000001",
@@ -29,6 +30,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000002",
     recordNo: "CSR-SML-DS-2026-36-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000001",
@@ -54,6 +56,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000003",
     recordNo: "CSR-SML-DS-2026-37-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000002",
@@ -79,6 +82,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000004",
     recordNo: "CSR-SML-DS-2026-37-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000002",
@@ -104,6 +108,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000005",
     recordNo: "CSR-SML-DS-2026-38-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000003",
@@ -129,6 +134,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000006",
     recordNo: "CSR-SML-DS-2026-38-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000003",
@@ -154,6 +160,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000007",
     recordNo: "CSR-KAL-DS-2026-39-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000004",
@@ -179,6 +186,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000008",
     recordNo: "CSR-KAL-DS-2026-39-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000004",
@@ -204,6 +212,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000009",
     recordNo: "CSR-SML-DS-2026-40-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000005",
@@ -229,6 +238,7 @@ db.getCollection("u_mes_plan_customerScheduleLine").insertMany([
   {
     _id: "1082000000000010",
     recordNo: "CSR-SML-DS-2026-40-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerScheduleId: "1081000000000005",

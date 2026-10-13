@@ -10,7 +10,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 3. `99_Archive` and `100_Self_Notes` are reference-only. Nothing in them is project authority. Material taken from them into current documentation is reviewed first and the adoption is recorded in `00_governance/decision_log.md`.
 4. Generated folders (`06_seed_data`, `08_validation/reports`, `09_deliverables`, and the generated files listed in section 3) are never edited by hand. Change the source in `05_generator` and regenerate.
 5. Optional folders are created only when the first file for them exists. The empty folders already present are placeholders for planned files and may stay empty.
-6. The same ten domain sub-folders are used wherever files are grouped by module (section 4).
+6. The same module sub-folders (section 4) are used wherever files are grouped by module.
 
 ## 2. Folder map
 
@@ -62,6 +62,8 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | decision_log.md, assumptions_log.md | 00_governance |
 | phase1_research_feature_matrix_catalogue.md | 01_research (copy in 09_deliverables/phase1) |
 | MES_ExternalRequirement_01.xlsx (owner's requirement workbook), MES_ExternalRequirement_01_impact_analysis.md | 01_research |
+| GMP_Pharma_01_impact_analysis.md (pharmaceutical GMP requirements GMP-01 to GMP-55) | 01_research |
+| BMR_MMR_module_designation.md (collections designated to bmr and mmr, common collections for decision) | 01_research |
 | collection_inventory.md, collection_keys.md | 02_architecture |
 | <module folder>_field_list.md (10 files) | 02_architecture/field_lists |
 | status_values.md | 04_reference_data/code_lists |
@@ -69,6 +71,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | keydict_text.py, keydict_num.py, entity_samples.py (dictionaries behind the specifications) | 05_generator |
 | master_refs.py (master collections and key conversions under DATA-003) | 05_generator |
 | ext_req01.py (44 collections and 212 keys of MES_ExternalRequirement_01), ext_req01_samples.py (their sample rules) | 05_generator |
+| gmp01.py (23 collections and 33 keys of GMP_Pharma_01, merged through ext_req01.py), gmp01_samples.py (their sample rules) | 05_generator |
 | spec_rules.py (rules shared by the specification and sample generators) | 05_generator |
 | gen_samples.py, sample_rules.py, sample_universe.py (sample documents) | 05_generator |
 | sample_data_registry.md (every sample _id, business number and display value) | 04_reference_data |
@@ -76,7 +79,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | enumeration_values.md | 04_reference_data/code_lists |
 | master_data_review.md | 08_validation/reports |
 | module_summary.md (one per module) | 03_design/<module folder> |
-| <collection name>.md / .json / .js / .js (343 each) | 03_design/<module folder>/specs, validators, indexes, samples |
+| <collection name>.md / .json / .js / .js (369 each) | 03_design/<module folder>/specs, validators, indexes, samples |
 | specification_check.md | 08_validation/reports |
 | flat_model.json | 05_generator/model |
 | model_consistency_check.md | 08_validation/reports |
@@ -96,8 +99,10 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | 08_tooling_maintenance | maint | Tooling & Maintenance |
 | 09_system_integration | syst | System and Integration |
 | 10_environment_health_safety | ehs | Environment Health and Safety |
+| 11_batch_manufacturing_record | bmr | Batch Manufacturing Record |
+| 12_master_manufacturing_record | mmr | Master Manufacturing Record |
 
-Andon collections belong to Planning and Execution; energy collections belong to Performance Management.
+Andon collections belong to Planning and Execution; energy collections belong to Performance Management. The batch manufacturing record header, batch record review, its exceptions, batch release and yield reconciliation belong to Batch Manufacturing Record; the master manufacturing record and its recipe links belong to Master Manufacturing Record; collections shared by the batch or master record and other MES functions stay in their functional module (01_research/BMR_MMR_module_designation.md).
 
 ## 5. File naming
 

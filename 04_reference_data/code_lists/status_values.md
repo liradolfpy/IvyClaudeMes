@@ -1,6 +1,6 @@
 # Status values per collection
 
-Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
+Model version 2.9 | 12 October 2026 | 369 collections (200 entity, 85 child, 76 relationship, 8 value-list), 8245 keys
 
 Each collection with a lifecycle defines its own `status` values. The first value is the initial state. The values are stored as master data in `u_mes_syst_statusDefinition` (one document per collection and value) and the allowed moves in `u_mes_syst_statusTransition`. Collections not listed have no `status` key.
 
@@ -74,6 +74,7 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Planning and Execution | u_mes_plan_interlockEvent | Blocked, Overridden, Cleared, Cancelled |
 | Planning and Execution | u_mes_plan_recipeDownload | Requested, Verified, Rejected |
 | Planning and Execution | u_mes_plan_setupVerification | In Progress, Passed, Failed, Overridden |
+| Planning and Execution | u_mes_plan_lineClearance | In Progress, Passed, Failed, Verified |
 | Material Management | u_mes_matl_storageLocation | Active, Inactive |
 | Material Management | u_mes_matl_inventoryBalance | Active, Closed |
 | Material Management | u_mes_matl_materialMovement | Posted, Reversed |
@@ -91,6 +92,7 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Material Management | u_mes_matl_exposureTimer | Running, Paused, Expired, Reset, Consumed |
 | Material Management | u_mes_matl_replenishmentRule | Active, Inactive |
 | Material Management | u_mes_matl_materialDemandForecast | Calculated, Superseded |
+| Material Management | u_mes_matl_dispenseRecord | Dispensed, Verified, Issued, Returned, Rejected |
 | Traceability | u_mes_trac_serialNumber | Reserved, Issued, Marked, Shipped, Voided, Scrapped |
 | Traceability | u_mes_trac_genealogyLink | Active, Removed |
 | Traceability | u_mes_trac_componentLotLink | Active, Removed |
@@ -128,6 +130,13 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Quality Management | u_mes_qual_measurementCurve | Recorded, Voided |
 | Quality Management | u_mes_qual_defectRecord | Open, Reworked, Scrapped, Accepted, Closed |
 | Quality Management | u_mes_qual_auditSchedule | Active, Inactive |
+| Quality Management | u_mes_qual_environmentalMonitoringPoint | Active, Inactive |
+| Quality Management | u_mes_qual_environmentalMonitoringResult | Recorded, Excursion Open, Excursion Closed, Invalidated |
+| Quality Management | u_mes_qual_retentionSample | Stored, Withdrawn, Destroyed |
+| Quality Management | u_mes_qual_riskAssessment | In Preparation, In Review, Approved, Superseded |
+| Quality Management | u_mes_qual_productQualityReview | In Preparation, In Review, Approved |
+| Quality Management | u_mes_qual_productRecall | Initiated, In Progress, Completed, Closed, Cancelled |
+| Quality Management | u_mes_qual_processValidation | Planned, In Execution, Completed, Approved, Rejected |
 | Performance Management | u_mes_perf_reasonCode | Active, Inactive |
 | Performance Management | u_mes_perf_equipmentState | Open, Closed |
 | Performance Management | u_mes_perf_downtimeEvent | Open, Classified, Closed |
@@ -153,6 +162,9 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Tooling & Maintenance | u_mes_maint_sparePartTransaction | Posted, Reversed |
 | Tooling & Maintenance | u_mes_maint_reliabilitySummary | Calculated, Recalculated |
 | Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | Recorded, Approved, Cancelled |
+| Tooling & Maintenance | u_mes_maint_logbookEntry | Recorded, Reviewed |
+| Tooling & Maintenance | u_mes_maint_cleaningRecord | In Progress, Completed, Verified, Expired, Rejected |
+| Tooling & Maintenance | u_mes_maint_equipmentQualification | Planned, In Execution, Passed, Failed, Approved |
 | System and Integration | u_mes_syst_erpMessage | Queued, Sent, Acknowledged, Failed, Dead Letter |
 | System and Integration | u_mes_syst_integrationConnector | Active, Disabled |
 | System and Integration | u_mes_syst_iotDevice | Active, Inactive, Retired |
@@ -176,9 +188,19 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | System and Integration | u_mes_syst_recordPolicy | Active, Inactive |
 | System and Integration | u_mes_syst_savedView | Active, Inactive |
 | System and Integration | u_mes_syst_backupRun | Running, Succeeded, Failed |
+| System and Integration | u_mes_syst_computerisedSystem | In Validation, Validated, Retired |
+| System and Integration | u_mes_syst_systemValidation | Planned, In Execution, Executed, Approved, Rejected |
+| System and Integration | u_mes_syst_systemPeriodicReview | Planned, In Review, Completed, Approved |
+| System and Integration | u_mes_syst_auditTrailReview | Open, In Review, Completed, Escalated |
+| System and Integration | u_mes_syst_userAccessReview | Open, In Review, Completed |
 | Environment Health and Safety | u_mes_ehs_safetyIncident | Reported, Under Investigation, Actions Open, Closed |
 | Environment Health and Safety | u_mes_ehs_incidentType | Active, Inactive |
 | Environment Health and Safety | u_mes_ehs_bodyPart | Active, Inactive |
 | Environment Health and Safety | u_mes_ehs_injuryType | Active, Inactive |
+| Batch Manufacturing Record | u_mes_bmr_batchRecordReview | Open, Under Review, Returned For Correction, Approved, Rejected |
+| Batch Manufacturing Record | u_mes_bmr_batchRelease | Pending, Released, Conditionally Released, Rejected |
+| Batch Manufacturing Record | u_mes_bmr_yieldReconciliation | Calculated, Under Investigation, Approved |
+| Batch Manufacturing Record | u_mes_bmr_batchManufacturingRecord | Open, In Execution, Compiled, Under Review, Approved, Archived |
+| Master Manufacturing Record | u_mes_mmr_masterManufacturingRecord | In Preparation, In Review, Approved, Effective, Superseded |
 
 Entity collections without a status key (append-only records): u_mes_perf_processReading, u_mes_syst_businessEvent, u_mes_syst_auditTrail, u_mes_syst_electronicSignature, u_mes_perf_energyReading, u_mes_qual_measurementCurvePoint.

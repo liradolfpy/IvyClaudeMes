@@ -1,0 +1,122 @@
+{
+  "collMod": "u_mes_qual_productRecallLot",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_productRecallLot",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productRecallId",
+        "productRecallName",
+        "lineNo",
+        "lotId",
+        "lotName",
+        "shipmentId",
+        "shipmentName",
+        "quantityShipped",
+        "quantityRecovered",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "productRecallId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_productRecall._id: the parent document this one belongs to"
+        },
+        "productRecallName": {
+          "bsonType": "string",
+          "description": "Display value of productRecallId, copied from u_mes_qual_productRecall.title"
+        },
+        "lineNo": {
+          "bsonType": "int",
+          "description": "Line number"
+        },
+        "lotId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": "string",
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "shipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_shipment._id"
+        },
+        "shipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of shipmentId, copied from u_mes_matl_shipment.recordNo"
+        },
+        "quantityShipped": {
+          "bsonType": "int",
+          "description": "Quantity of the lot shipped"
+        },
+        "quantityRecovered": {
+          "bsonType": "int",
+          "description": "Quantity of the lot recovered"
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

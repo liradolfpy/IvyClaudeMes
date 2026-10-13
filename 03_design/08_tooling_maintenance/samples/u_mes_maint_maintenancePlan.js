@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000001",
     recordNo: "PM-GDC-01-M1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Gravity Die Casting Machine 1",
@@ -30,6 +31,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000002",
     recordNo: "PM-HT-01-F1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, T6 Solution and Ageing Furnace",
@@ -56,6 +58,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000003",
     recordNo: "PM-CNC-01-H1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Horizontal Machining Center 1",
@@ -82,6 +85,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000004",
     recordNo: "PM-WSH-01-W1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Aqueous Spray Washer 1",
@@ -108,6 +112,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000005",
     recordNo: "PM-ANO-01-L1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Sulphuric Acid Anodising Line",
@@ -134,6 +139,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000006",
     recordNo: "PM-ASY-01-P1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Piston Assembly Press 1",
@@ -160,6 +166,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000007",
     recordNo: "PM-TRQ-01-N1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, DC Nutrunner Station 1",
@@ -186,6 +193,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000008",
     recordNo: "PM-LKT-01-T1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Pressure Leak Tester 1",
@@ -212,6 +220,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000009",
     recordNo: "PM-LSR-01-L1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Fibre Laser Marker 1",
@@ -238,6 +247,7 @@ db.getCollection("u_mes_maint_maintenancePlan").insertMany([
   {
     _id: "1216000000000010",
     recordNo: "PM-FIN-01-V1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Preventive maintenance, Final Inspection Vision Station",

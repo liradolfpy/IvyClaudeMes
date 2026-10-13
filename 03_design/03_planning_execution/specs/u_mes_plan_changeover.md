@@ -92,7 +92,7 @@ Planned, In Progress, Awaiting First Off Approval, Completed. Initial state: Pla
 
 ## Referenced by
 
-u_mes_plan_changeoverStep, u_mes_plan_changeoverRemovedTool, u_mes_plan_changeoverInstalledTool, u_mes_plan_changeoverPerformedByUser, u_mes_plan_setupVerification.
+u_mes_plan_changeoverStep, u_mes_plan_changeoverRemovedTool, u_mes_plan_changeoverInstalledTool, u_mes_plan_changeoverPerformedByUser, u_mes_plan_setupVerification, u_mes_plan_lineClearance.
 
 ## Files
 

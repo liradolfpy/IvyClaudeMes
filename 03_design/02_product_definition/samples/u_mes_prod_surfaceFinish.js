@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000001",
     recordNo: "ANOD-NAT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Anodised Natural",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000002",
     recordNo: "ANOD-BLK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Anodised Black",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000003",
     recordNo: "ANOD-GRY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Anodised Grey",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000004",
     recordNo: "PAINT-RED",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Painted Red",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000005",
     recordNo: "PAINT-BLK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Painted Black",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000006",
     recordNo: "PAINT-SIL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Painted Silver",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000007",
     recordNo: "ZN-NI",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Zinc-Nickel Plated",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000008",
     recordNo: "E-COAT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Cathodic E-Coat",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000009",
     recordNo: "AS-MACH",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "As Machined",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_prod_surfaceFinish").insertMany([
   {
     _id: "1275000000000010",
     recordNo: "POWDER-YEL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Powder Coated Yellow",

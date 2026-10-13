@@ -50,6 +50,11 @@
         "holdReasonCodeId",
         "holdReasonCodeName",
         "genealogyComplete",
+        "batchRecordReviewId",
+        "batchRecordReviewName",
+        "lineClearanceId",
+        "lineClearanceName",
+        "yieldWithinLimits",
         "status",
         "schemaVersion",
         "createdAt",
@@ -300,6 +305,41 @@
         "genealogyComplete": {
           "bsonType": "bool",
           "description": "True when every unit of the order has complete component genealogy (closure check)"
+        },
+        "batchRecordReviewId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_batchRecordReview._id"
+        },
+        "batchRecordReviewName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of batchRecordReviewId, copied from u_mes_bmr_batchRecordReview.recordNo"
+        },
+        "lineClearanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lineClearance._id"
+        },
+        "lineClearanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineClearanceId, copied from u_mes_plan_lineClearance.recordNo"
+        },
+        "yieldWithinLimits": {
+          "bsonType": [
+            "bool",
+            "null"
+          ],
+          "description": "Result of the product yield calculation; null until calculated (GMP-24)"
         },
         "status": {
           "bsonType": "string",

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 47 (36 required, 11 may be null) |
+| Keys | 53 (38 required, 15 may be null) |
 | Estimated volume per year | 200-1,000 per site |
 | Storage | standard |
 
@@ -74,8 +74,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 43 | healthScoreAt | Date | Datetime | No (null allowed) | Time the health score was last calculated | `ISODate("2026-09-24T23:00:00.000+0000")` |  |
 | 44 | acquisitionCostInr | Decimal128 | - | No (null allowed) | Purchase and installation cost (Indian rupees) | `NumberDecimal("14500000.00")` |  |
 | 45 | plannedReplacementDate | Date | Date | No (null allowed) | Planned replacement date from the lifecycle review | `ISODate("2027-11-30T00:00:00.000+0000")` |  |
-| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
-| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 46 | qualificationStatus | String | - | Yes | Qualification status of the equipment (GMP-33, GMP-35) | `"Qualified"` | Qualified; Not Qualified; Requalification Due |
+| 47 | requalificationDueDate | Date | Date | No (null allowed) | Date the next requalification is due; null when not qualification-relevant | `ISODate("2027-07-17T00:00:00.000+0000")` |  |
+| 48 | cleanStatus | String | - | Yes | Cleaning status shown on the equipment (GMP-34, GMP-35) | `"Dirty"` | Clean; Dirty; In Cleaning; Clean Hold Expired; Not Applicable |
+| 49 | cleanHoldExpiresAt | Date | Datetime | No (null allowed) | End of the clean hold time of the last cleaning | `null` |  |
+| 50 | lastCleaningRecordId | String | - | No (null allowed) | Reference to u_mes_maint_cleaningRecord._id: last cleaning record | `"1356000000000009"` | Reference: u_mes_maint_cleaningRecord._id |
+| 51 | lastCleaningRecordName | String | - | No (null allowed) | Display value of lastCleaningRecordId, copied from u_mes_maint_cleaningRecord.recordNo | `"CLN-20260921-002"` |  |
+| 52 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Under Maintenance; Decommissioned |
+| 53 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -95,7 +101,7 @@ Active, Under Maintenance, Decommissioned. Initial state: Active. The values are
 
 ## Referenced by
 
-u_mes_mast_workCenterEquipment, u_mes_mast_equipment, u_mes_mast_equipmentIotDevice, u_mes_prod_billOfProcessStepEquipment, u_mes_prod_recipe, u_mes_plan_operationExecution, u_mes_plan_changeover, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecordOperation, u_mes_qual_checkSheet, u_mes_qual_checkSheetResult, u_mes_qual_spcChart, u_mes_qual_gauge, u_mes_perf_equipmentState, u_mes_perf_downtimeEvent, u_mes_perf_oeeRecord, u_mes_perf_processTag, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_maint_maintenancePlan, u_mes_maint_maintenanceWorkOrder, u_mes_maint_sparePartUsedOnEquipment, u_mes_maint_tool, u_mes_maint_toolLifeRecord, u_mes_syst_iotDevice, u_mes_syst_businessEvent, u_mes_perf_energyReading, u_mes_plan_andonEvent, u_mes_ehs_safetyIncident, u_mes_plan_operatorSession, u_mes_plan_interlockEvent, u_mes_plan_recipeDownload, u_mes_plan_setupVerification, u_mes_qual_measurementCurve, u_mes_qual_defectRecord, u_mes_maint_sparePartTransaction, u_mes_maint_reliabilitySummary, u_mes_maint_equipmentLifecycleEvent, u_mes_syst_alertRule, u_mes_syst_analyticsModel.
+u_mes_mast_workCenterEquipment, u_mes_mast_equipment, u_mes_mast_equipmentIotDevice, u_mes_prod_billOfProcessStepEquipment, u_mes_prod_recipe, u_mes_plan_operationExecution, u_mes_plan_changeover, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecordOperation, u_mes_qual_checkSheet, u_mes_qual_checkSheetResult, u_mes_qual_spcChart, u_mes_qual_gauge, u_mes_perf_equipmentState, u_mes_perf_downtimeEvent, u_mes_perf_oeeRecord, u_mes_perf_processTag, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_maint_maintenancePlan, u_mes_maint_maintenanceWorkOrder, u_mes_maint_sparePartUsedOnEquipment, u_mes_maint_tool, u_mes_maint_toolLifeRecord, u_mes_syst_iotDevice, u_mes_syst_businessEvent, u_mes_perf_energyReading, u_mes_plan_andonEvent, u_mes_ehs_safetyIncident, u_mes_plan_operatorSession, u_mes_plan_interlockEvent, u_mes_plan_recipeDownload, u_mes_plan_setupVerification, u_mes_qual_measurementCurve, u_mes_qual_defectRecord, u_mes_maint_sparePartTransaction, u_mes_maint_reliabilitySummary, u_mes_maint_equipmentLifecycleEvent, u_mes_syst_alertRule, u_mes_syst_analyticsModel, u_mes_syst_computerisedSystem, u_mes_maint_cleaningRecord, u_mes_maint_equipmentQualification.
 
 ## Files
 

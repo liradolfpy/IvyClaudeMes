@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000001",
     recordNo: "AUD-2026-0931",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Layered process audit, foundry, week 38",
@@ -50,6 +51,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000002",
     recordNo: "AUD-2026-0932",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Special process audit CQI-9, heat treatment",
@@ -96,6 +98,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000003",
     recordNo: "AUD-2026-0933",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Process audit VDA 6.3, machining line 1",
@@ -142,6 +145,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000004",
     recordNo: "AUD-2026-0934",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Layered process audit, washing, week 38",
@@ -188,6 +192,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000005",
     recordNo: "AUD-2026-0935",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Special process audit CQI-11, anodising",
@@ -234,6 +239,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000006",
     recordNo: "AUD-2026-0936",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Layered process audit, assembly line 1, week 39",
@@ -280,6 +286,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000007",
     recordNo: "AUD-2026-0937",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Product audit, front caliper LH, September",
@@ -326,6 +333,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000008",
     recordNo: "AUD-2026-0938",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Layered process audit, leak test station, week 39",
@@ -372,6 +380,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000009",
     recordNo: "AUD-2026-0939",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Customer process audit, Sahyadri Motors",
@@ -418,6 +427,7 @@ db.getCollection("u_mes_qual_audit").insertMany([
   {
     _id: "1195000000000010",
     recordNo: "AUD-2026-0940",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "IATF 16949 internal system audit, quality management",

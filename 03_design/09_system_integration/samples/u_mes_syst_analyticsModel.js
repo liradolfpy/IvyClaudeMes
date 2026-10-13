@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000001",
     recordNo: "AIM-VIS-BOOT-1.3",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Dust boot seating and cap presence classifier",
@@ -28,6 +29,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000002",
     recordNo: "AIM-VIS-BOOT-1.2",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Dust boot seating and cap presence classifier",
@@ -52,6 +54,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000003",
     recordNo: "AIM-LKT-PRED-0.9",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak test failure predictor",
@@ -76,6 +79,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000004",
     recordNo: "AIM-OEE-FC-2.1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Assembly line OEE forecast",
@@ -100,6 +104,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000005",
     recordNo: "AIM-NR-ANOM-1.0",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Nutrunner rundown anomaly detector",
@@ -124,6 +129,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000006",
     recordNo: "AIM-MNT-RUL-1.4",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak tester test seal remaining life",
@@ -148,6 +154,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000007",
     recordNo: "AIM-DEM-FC-1.1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Line-side component demand forecast",
@@ -172,6 +179,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000008",
     recordNo: "AIM-RCP-OPT-0.7",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Anodising current density optimiser",
@@ -196,6 +204,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000009",
     recordNo: "AIM-OPR-RISK-0.5",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator error risk indicator",
@@ -220,6 +229,7 @@ db.getCollection("u_mes_syst_analyticsModel").insertMany([
   {
     _id: "1337000000000010",
     recordNo: "AIM-ASG-REC-0.6",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Station assignment recommender",

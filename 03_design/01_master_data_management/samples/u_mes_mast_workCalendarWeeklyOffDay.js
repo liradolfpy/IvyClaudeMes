@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000001",
     recordNo: "PN1-2026-WOD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000001",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000002",
     recordNo: "PN1-2026-WOD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000001",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000003",
     recordNo: "PN1-2026-FDY-WOD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000002",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000004",
     recordNo: "PN1-2026-FDY-WOD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000002",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000005",
     recordNo: "PN1-2026-HT-WOD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000003",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000006",
     recordNo: "PN1-2026-HT-WOD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000003",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000007",
     recordNo: "PN1-2026-MC-WOD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000004",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000008",
     recordNo: "PN1-2026-MC-WOD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000004",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000009",
     recordNo: "PN1-2026-SF-WOD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000005",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_mast_workCalendarWeeklyOffDay").insertMany([
   {
     _id: "1021000000000010",
     recordNo: "PN1-2026-SF-WOD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000005",

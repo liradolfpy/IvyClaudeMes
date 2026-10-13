@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000001",
     recordNo: "PERM",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Permanent",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000002",
     recordNo: "CONTRACT",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Contract",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000003",
     recordNo: "TRAINEE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Trainee",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000004",
     recordNo: "APPRENTICE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Apprentice",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000005",
     recordNo: "PROBATION",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "On Probation",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000006",
     recordNo: "FIXED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Fixed Term",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000007",
     recordNo: "CONSULT",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Consultant",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000008",
     recordNo: "INTERN",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Intern",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000009",
     recordNo: "DEPUTED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Deputed From Group Company",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_mast_employmentType").insertMany([
   {
     _id: "1258000000000010",
     recordNo: "SYSTEM",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "System Account",

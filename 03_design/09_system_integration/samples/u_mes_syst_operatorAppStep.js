@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000001",
     recordNo: "APP-GDC-01-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000001",
@@ -21,6 +22,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000002",
     recordNo: "APP-GDC-01-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000001",
@@ -38,6 +40,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000003",
     recordNo: "APP-HT-01-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000002",
@@ -55,6 +58,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000004",
     recordNo: "APP-HT-01-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000002",
@@ -72,6 +76,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000005",
     recordNo: "APP-CNC-01-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000003",
@@ -89,6 +94,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000006",
     recordNo: "APP-CNC-01-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000003",
@@ -106,6 +112,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000007",
     recordNo: "APP-WSH-01-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000004",
@@ -123,6 +130,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000008",
     recordNo: "APP-WSH-01-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000004",
@@ -140,6 +148,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000009",
     recordNo: "APP-ANO-01-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000005",
@@ -157,6 +166,7 @@ db.getCollection("u_mes_syst_operatorAppStep").insertMany([
   {
     _id: "1236000000000010",
     recordNo: "APP-ANO-01-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppId: "1233000000000005",

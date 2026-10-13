@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000001",
     recordNo: "DOM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Domestic",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000002",
     recordNo: "EXP-EU",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export Europe",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000003",
     recordNo: "EXP-ASEAN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export ASEAN",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000004",
     recordNo: "EXP-MEA",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export Middle East and Africa",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000005",
     recordNo: "EXP-LATAM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export Latin America",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000006",
     recordNo: "AM-DOM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Aftermarket Domestic",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000007",
     recordNo: "AM-EXP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Aftermarket Export",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000008",
     recordNo: "EXP-JP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export Japan",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000009",
     recordNo: "EXP-UK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export United Kingdom",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_prod_market").insertMany([
   {
     _id: "1273000000000010",
     recordNo: "EXP-SAARC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Export SAARC",

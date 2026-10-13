@@ -4,6 +4,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000001",
     recordNo: "NEAR-MISS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Near Miss",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000002",
     recordNo: "UNSAFE-COND",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Unsafe Condition",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000003",
     recordNo: "UNSAFE-ACT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Unsafe Act",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000004",
     recordNo: "FIRST-AID",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "First Aid Case",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000005",
     recordNo: "MED-TREAT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Medical Treatment Case",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000006",
     recordNo: "LTI",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Lost Time Injury",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000007",
     recordNo: "PROPERTY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Property Damage",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000008",
     recordNo: "FIRE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Fire Incident",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000009",
     recordNo: "SPILL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Chemical Spill",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_ehs_incidentType").insertMany([
   {
     _id: "1293000000000010",
     recordNo: "ENVIRON",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Environmental Release",

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 27 (24 required, 3 may be null) |
+| Keys | 30 (25 required, 5 may be null) |
 | Estimated volume per year | ~3 million |
 | Storage | standard, immutable |
 
@@ -49,13 +49,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 18 | documentVersionAfter | Int32 | - | Yes | Document version after | `NumberInt(5)` |  |
 | 19 | previousHash | String | - | Yes | Hash of the previous audit entry, forming a tamper-evident chain | `"a3f19c0e55d2b7a48c61e0f3d92b7c4a1e6f08d5b3c2a1908f7e6d5c4b3a2f10"` |  |
 | 20 | entryHash | String | - | Yes | Entry hash | `"7b2e41d09c8f3a65e1d4c7b0a9f8e2d3c6b5a4f1e0d9c8b7a6f5e4d3c2b1a0f9"` |  |
-| 21 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 22 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 23 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 24 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 25 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
-| 26 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 27 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 21 | gxpRelevant | Boolean | - | Yes | True when the entry concerns GMP-relevant data (GMP-04, GMP-05) | `true` |  |
+| 22 | auditTrailReviewId | String | - | No (null allowed) | Reference to u_mes_syst_auditTrailReview._id | `"1347000000000001"` | Reference: u_mes_syst_auditTrailReview._id |
+| 23 | auditTrailReviewName | String | - | No (null allowed) | Display value of auditTrailReviewId, copied from u_mes_syst_auditTrailReview.recordNo | `"ATR-20260916-001"` |  |
+| 24 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 25 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 26 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 27 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 28 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 29 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 30 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Indexes
 
@@ -63,9 +66,10 @@ Every key is present in every document. "Required" means the value may not be nu
 |---|---|---|---|
 | 1 | `{ siteId: 1, recordNo: 1 }` | Yes | Business identifier is unique within the site |
 | 2 | `{ electronicSignatureId: 1 }` | No | Look-up of documents by electronic signature |
-| 3 | `{ relatedCollectionName: 1, relatedEntityId: 1 }` | No | Look-up by the related document |
-| 4 | `{ siteId: 1, changedAt: -1 }` | No | Time-ordered lists and reports by changed at |
-| 5 | `{ relatedCollectionName: 1, relatedEntityId: 1, changedAt: -1 }` | No | Change history of one document |
+| 3 | `{ auditTrailReviewId: 1 }` | No | Look-up of documents by audit trail review |
+| 4 | `{ relatedCollectionName: 1, relatedEntityId: 1 }` | No | Look-up by the related document |
+| 5 | `{ siteId: 1, changedAt: -1 }` | No | Time-ordered lists and reports by changed at |
+| 6 | `{ relatedCollectionName: 1, relatedEntityId: 1, changedAt: -1 }` | No | Change history of one document |
 
 ## Referenced by
 

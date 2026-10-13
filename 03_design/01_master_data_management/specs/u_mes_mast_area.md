@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 17 (11 required, 6 may be null) |
+| Keys | 20 (14 required, 6 may be null) |
 | Estimated volume per year | 10-30 per site |
 | Storage | standard |
 
@@ -38,8 +38,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | floorAreaSqm | Decimal128 | - | Yes | Floor area (square metres) | `NumberDecimal("1850.0")` |  |
 | 14 | isProductionArea | Boolean | - | Yes | True when the record is production area | `true` |  |
 | 15 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 16 | cleanlinessClass | String | - | Yes | Cleanliness class of the area (GMP-37) | `"Unclassified"` | ISO 7; ISO 8; Controlled Not Classified; Unclassified |
+| 17 | environmentallyMonitored | Boolean | - | Yes | True when the area has environmental monitoring points | `false` |  |
+| 18 | gowningRequired | Boolean | - | Yes | True when entry requires gowning | `false` |  |
+| 19 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 20 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -57,7 +60,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_mast_area, u_mes_mast_line, u_mes_mast_workCenter, u_mes_matl_storageLocation, u_mes_qual_audit, u_mes_perf_processTag, u_mes_perf_processReading, u_mes_ehs_safetyIncident, u_mes_qual_auditSchedule.
+u_mes_mast_area, u_mes_mast_line, u_mes_mast_workCenter, u_mes_matl_storageLocation, u_mes_qual_audit, u_mes_perf_processTag, u_mes_perf_processReading, u_mes_ehs_safetyIncident, u_mes_qual_auditSchedule, u_mes_qual_environmentalMonitoringPoint.
 
 ## Files
 

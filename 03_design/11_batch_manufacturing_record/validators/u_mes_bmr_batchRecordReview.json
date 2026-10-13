@@ -1,0 +1,252 @@
+{
+  "collMod": "u_mes_bmr_batchRecordReview",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_bmr_batchRecordReview",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionOrderId",
+        "productionOrderName",
+        "itemId",
+        "itemName",
+        "lotId",
+        "lotName",
+        "reviewScope",
+        "operationsCount",
+        "exceptionCount",
+        "openExceptionCount",
+        "genealogyComplete",
+        "yieldReconciliationId",
+        "yieldReconciliationName",
+        "auditTrailReviewId",
+        "auditTrailReviewName",
+        "productionReviewedById",
+        "productionReviewedBy",
+        "productionReviewedAt",
+        "qaReviewedById",
+        "qaReviewedBy",
+        "qaReviewedAt",
+        "electronicSignatureId",
+        "electronicSignatureName",
+        "returnReasonText",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "reviewScope": {
+          "bsonType": "string",
+          "description": "Review method",
+          "enum": [
+            "Review By Exception",
+            "Full Review"
+          ]
+        },
+        "operationsCount": {
+          "bsonType": "int",
+          "description": "Operation executions in the record"
+        },
+        "exceptionCount": {
+          "bsonType": "int",
+          "description": "Exceptions found"
+        },
+        "openExceptionCount": {
+          "bsonType": "int",
+          "description": "Exceptions not yet assessed"
+        },
+        "genealogyComplete": {
+          "bsonType": "bool",
+          "description": "Component genealogy of the order is complete"
+        },
+        "yieldReconciliationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_yieldReconciliation._id"
+        },
+        "yieldReconciliationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of yieldReconciliationId, copied from u_mes_bmr_yieldReconciliation.recordNo"
+        },
+        "auditTrailReviewId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_auditTrailReview._id"
+        },
+        "auditTrailReviewName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of auditTrailReviewId, copied from u_mes_syst_auditTrailReview.recordNo"
+        },
+        "productionReviewedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'production reviewed'"
+        },
+        "productionReviewedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in productionReviewedById, copied from u_mes_mast_user.fullName"
+        },
+        "productionReviewedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the production review"
+        },
+        "qaReviewedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'qa reviewed'"
+        },
+        "qaReviewedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in qaReviewedById, copied from u_mes_mast_user.fullName"
+        },
+        "qaReviewedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the quality review"
+        },
+        "electronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id"
+        },
+        "electronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
+        },
+        "returnReasonText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Why the record was returned for correction"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "Under Review",
+            "Returned For Correction",
+            "Approved",
+            "Rejected"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

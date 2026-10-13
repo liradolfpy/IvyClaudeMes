@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000001",
     recordNo: "SIM-2026-014",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Leak test stabilisation time 5.0 s to 4.0 s, what-if on cycle time and escape risk",
@@ -39,6 +40,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000002",
     recordNo: "SIM-2026-015",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Anodising current density by rack count, recipe A12 optimisation",
@@ -74,6 +76,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000003",
     recordNo: "SIM-2026-016",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Bleed screw torque window 14 +/- 2 N.m, angle monitoring study",
@@ -109,6 +112,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000004",
     recordNo: "SIM-2026-017",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Line-side supermarket size for piston seals after e-Kanban",
@@ -144,6 +148,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000005",
     recordNo: "SIM-2026-018",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Assembly line 1 balancing with second leak tester",
@@ -179,6 +184,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000006",
     recordNo: "SIM-2026-019",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Casting die temperature setpoint 400 to 395 degC, porosity risk",
@@ -214,6 +220,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000007",
     recordNo: "SIM-2026-020",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Finished goods buffer for Sahyadri Motors weekly schedule",
@@ -249,6 +256,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000008",
     recordNo: "SIM-2026-021",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Laser marking speed increase for grade A codes",
@@ -284,6 +292,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000009",
     recordNo: "SIM-2026-022",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Leak tester auto-calibration baseline propagation to tester 2",
@@ -319,6 +328,7 @@ db.getCollection("u_mes_syst_simulationStudy").insertMany([
   {
     _id: "1339000000000010",
     recordNo: "SIM-2026-023",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     title: "Press force window review after seal supplier change",

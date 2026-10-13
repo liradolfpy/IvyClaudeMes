@@ -7,7 +7,11 @@ from sample_rules import *
 cols=R.cols; byent=R.byent; bycol=R.bycol; cat=R.cat
 N=10
 COLNO={c["collection"]:1001+i for i,c in enumerate(cols)}
-def oid(c,i): return "%04d%012d"%(COLNO[c["collection"]],i+1)
+# ---- application context (D060-D064): two sample universes, Auto (caliper) and Gamp (pharma); Common reference data shared
+PROFILE=["Auto"]; RUNOFF={}; AVAIL=[None]; APPCOMMON=set()
+def avail(entity):
+    return AVAIL[0] is None or byent[entity]["collection"] in AVAIL[0]
+def oid(c,i): return "%04d%012d"%(COLNO[c["collection"]],i+1+RUNOFF.get(c["collection"],0))
 def D(dt): return ("date",dt)
 def code(s): return s.split("|")[0]
 def name(s): return s.split("|")[1]
@@ -47,7 +51,7 @@ def trans_rec(c,i):
     e=c["entity"]
     if e in RECFMT: return RECFMT[e](i,ctx_of(c,i))
     pre=c["prefix"]; b=basetime(i)+IST
-    return "%s-2026-%06d"%(pre,101+((sum(map(ord,e))*7)%400)+i*3)
+    return "%s-2026-%06d"%(pre,101+((sum(map(ord,e))*7)%400)+i*3+(500 if PROFILE[0]=="Gamp" else 0))
 def derived_identity(e,i):
     p=PROC[i]
     return {"workInstruction":("WI-%s-001"%code(p["op"]),p["wi"]),"characteristic":("CH-%s-01"%code(p["op"]),p["char"]),
@@ -74,6 +78,7 @@ ANCHORS=["operationExecution","wipUnit","productionOrder","lot","goodsReceipt","
 NOCOPY={"siteId","createdById","updatedById","unitOfMeasureId","storageLocationId","supplierId","customerId","qualityHoldId","capaId","defectCodeId"}
 def docs_of(entity):
     c=byent[entity]
+    if not avail(entity) and c["collection"] not in DOCS: return None
     if c["collection"] not in DOCS and c["collection"] not in BUILDING: build_collection(c)
     return DOCS.get(c["collection"])
 def role_user(key,c,i):
@@ -170,6 +175,7 @@ def build_collection(c):
             assert status in sv,(e,status)
         # anchors
         def setref(k,target,idx):
+            if idx is not None and not avail(target): idx=None
             if idx is None: doc[k]=None; pair=k[:-2]+"Name" if not k.endswith("ById") else k[:-2]
             else:
                 tid=identity(byent[target],idx); doc[k]=tid[0]; pair=k[:-2]+"Name" if not k.endswith("ById") else k[:-2]
@@ -204,6 +210,7 @@ def build_collection(c):
             nul=R.nullable(c,f); v=UNSET
             if k=="_id": v=_id
             elif k=="recordNo": v=rec
+            elif k=="app": v="Common" if name_ in APPCOMMON else PROFILE[0]
             elif k=="siteId": v=identity(byent["site"],0)[0]
             elif k=="siteName": v=identity(byent["site"],0)[2]
             elif k=="schemaVersion": v=("int",1)
@@ -298,14 +305,37 @@ def build_collection(c):
         if e in POST: POST[e](env)
         out.append(doc); metas.append(meta)
     DOCS[name_]=out; META[name_]=metas; BUILDING.discard(name_)
+EXPECTED={}
 def build():
+    """Two passes (D060-D064): Auto universe (caliper) for every collection except the GMP-only ones, then the Gamp universe (pharma)
+    for the dual and GMP-only collections, with Common reference documents shared. Dual collections get 20 documents."""
+    import pharma_profile as PP
+    if DOCS.get("__built__"): return DOCS["__built__"]
+    PP.activate("Auto",sys.modules[__name__])
     for c in cols:
-        if c["collection"] not in DOCS: build_collection(c)
-    return DOCS
+        if c["collection"] not in DOCS and avail(c["entity"]): build_collection(c)
+    auto=dict(DOCS); autometa=dict(META); autoident=dict(IDENT)
+    PP.activate("Gamp",sys.modules[__name__])
+    DOCS.clear(); META.clear(); IDENT.clear()
+    for n in APPCOMMON:
+        DOCS[n]=auto[n]; META[n]=autometa[n]
+    for (e,i),v in autoident.items():
+        if byent[e]["collection"] in APPCOMMON: IDENT[(e,i)]=v
+    for c in cols:
+        if c["collection"] not in DOCS and avail(c["entity"]): build_collection(c)
+    gamp={n:v for n,v in DOCS.items() if n not in APPCOMMON}
+    PP.activate("Auto",sys.modules[__name__])
+    merged={}
+    for c in cols:
+        n=c["collection"]; merged[n]=auto.get(n,[])+gamp.get(n,[]); EXPECTED[n]=len(merged[n])
+    DOCS.clear(); DOCS.update(merged); DOCS["__built__"]=merged
+    return merged
 # ------------------------------------------------------------------ validation and output
 ORDERPAIRS=[("startedAt","completedAt"),("startedAt","endedAt"),("plannedStartAt","plannedEndAt"),("actualStartAt","actualEndAt"),("raisedAt","acknowledgedAt"),("acknowledgedAt","resolvedAt"),("raisedAt","clearedAt"),("clockOnAt","clockOffAt"),("validFrom","validTo"),("effectiveFrom","effectiveTo"),("periodStartAt","periodEndAt"),("hourStartAt","hourEndAt"),("intervalStartAt","intervalEndAt"),("horizonFrom","horizonTo"),("createdAt","updatedAt"),("lastCalibratedAt","nextCalibrationDueAt"),("pickStartedAt","pickCompletedAt"),("issuedAt","markedAt"),("reportedAt","startedAt"),("detectedAt","closedAt"),("openedAt","d8ClosureClosedAt"),("placedAt","releasedAt")]
 TYPETAG={"Date":"date","Int32":"int","Int64":"long","Decimal128":"dec","Double":"dbl"}
-CHECKS=["Exactly 10 documents","Every document has a unique _id","_id is a 16-digit numeric string","No ObjectId","No nested documents or arrays","All schema keys present, no extra keys, same order","Data types match the schema","Required keys are not null","Values are in the allowed list","Status values are approved","ID and display pairs are complete","Every reference points to an existing document","Display value equals the referenced document's display value","Business numbers (recordNo) unique in the collection","Parent and line number unique in child collections","Audit keys valid (transaction collections only)","Dates in logical order","Dates inside 2018-2027","Quantities not negative"]
+CHECKS=["10 documents per collection, 20 in dual Auto / Gamp collections","Every document has a unique _id","_id is a 16-digit numeric string","No ObjectId","No nested documents or arrays","All schema keys present, no extra keys, same order","Data types match the schema","Required keys are not null","Values are in the allowed list","Status values are approved","ID and display pairs are complete","Every reference points to an existing document","Display value equals the referenced document's display value","Business numbers (recordNo) unique per site in the collection","Parent and line number unique in child collections","Audit keys valid (transaction collections only)","Dates in logical order","Dates inside 2018-2027","Quantities not negative"]
+import pharma_universe as _PU
+PPDUAL=set(_PU.DUAL)
 def validate(docs):
     fails=collections.defaultdict(list); byid={}
     for c in cols:
@@ -313,9 +343,9 @@ def validate(docs):
     for c in cols:
         n=c["collection"]; ds=docs[n]; keys=[f["key"] for f in c["fields"]]; fmap={f["key"]:f for f in c["fields"]}
         def F(chk,msg): fails[chk].append((n,msg))
-        if len(ds)!=10: F(CHECKS[0],"count %d"%len(ds))
+        if len(ds)!=(20 if n in PPDUAL else 10): F(CHECKS[0],"count %d"%len(ds))
         if len({d["_id"] for d in ds})!=len(ds): F(CHECKS[1],"duplicate _id inside collection")
-        if len({d["recordNo"] for d in ds})!=len(ds): F(CHECKS[13],"duplicate recordNo")
+        if len({(d.get("siteId"),d["recordNo"]) for d in ds})!=len(ds): F(CHECKS[13],"duplicate recordNo")
         if c["parent"]:
             pe=bycol[c["parent"]]["entity"]; pk=pe+"Id" if pe!="site" else "siteId"
             lk=next((x for x in R_LINEKEYS if x in keys),None) or ("sequenceNo" if "sequenceNo" in keys else None)

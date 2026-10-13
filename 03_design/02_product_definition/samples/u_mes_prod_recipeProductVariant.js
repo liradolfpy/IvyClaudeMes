@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000001",
     recordNo: "TRQ-PSET-07-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000007",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000002",
     recordNo: "TRQ-PSET-07-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000007",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000003",
     recordNo: "TRQ-PSET-07-PV03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000007",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000004",
     recordNo: "LKT-PRG-03-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000008",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000005",
     recordNo: "LKT-PRG-03-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000008",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000006",
     recordNo: "LSR-DM-5110-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000009",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000007",
     recordNo: "LSR-DM-5110-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000009",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000008",
     recordNo: "LSR-DM-5110-PV03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000009",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000009",
     recordNo: "LSR-DM-5110-RH-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000010",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
   {
     _id: "1301000000000010",
     recordNo: "LSR-DM-5110-RH-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     recipeId: "1073000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_prod_recipeProductVariant").insertMany([
     sequenceNo: NumberInt(2),
     productVariantId: "1046000000000004",
     productVariantName: "Front Caliper RH, Export",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000011",
+    recordNo: "BTL-PCM500-07-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000017",
+    recipeName: "Bottle fill 100 and cap torque, Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000012",
+    recordNo: "BTL-PCM500-07-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000017",
+    recipeName: "Bottle fill 100 and cap torque, Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000012",
+    productVariantName: "Paracetamol 500 mg bottle of 100, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000013",
+    recordNo: "BTL-PCM500-07-PV03",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000017",
+    recipeName: "Bottle fill 100 and cap torque, Paracetamol 500 mg",
+    sequenceNo: NumberInt(3),
+    productVariantId: "1046000000000013",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, Kenya",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000014",
+    recordNo: "BLS-PCM500-08-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000018",
+    recipeName: "Blister 10 x 10 and vacuum leak test, Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000015",
+    recordNo: "BLS-PCM500-08-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000018",
+    recipeName: "Blister 10 x 10 and vacuum leak test, Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000012",
+    productVariantName: "Paracetamol 500 mg bottle of 100, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000016",
+    recordNo: "SER-PCM500-09-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000019",
+    recipeName: "Carton code layout: batch, expiry, 2D code",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000017",
+    recordNo: "SER-PCM500-09-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000019",
+    recipeName: "Carton code layout: batch, expiry, 2D code",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000013",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, Kenya",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000018",
+    recordNo: "SER-PCM500-09-PV03",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000019",
+    recipeName: "Carton code layout: batch, expiry, 2D code",
+    sequenceNo: NumberInt(3),
+    productVariantId: "1046000000000015",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, institutional",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000019",
+    recordNo: "CTN-PCM500-10-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000020",
+    recipeName: "Cartoning and checkweighing, 10 x 10 carton",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000012",
+    productVariantName: "Paracetamol 500 mg bottle of 100, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1301000000000020",
+    recordNo: "CTN-PCM500-10-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    recipeId: "1073000000000020",
+    recipeName: "Cartoning and checkweighing, 10 x 10 carton",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000014",
+    productVariantName: "Paracetamol 500 mg bottle of 100, Kenya",
     schemaVersion: NumberInt(1)
   }
 ]);

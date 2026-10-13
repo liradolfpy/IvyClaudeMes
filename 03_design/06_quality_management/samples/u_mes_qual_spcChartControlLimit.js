@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000001",
     recordNo: "SPC-OP010-01-CL01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000002",
     recordNo: "SPC-OP010-01-CL02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000001",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000003",
     recordNo: "SPC-OP020-01-CL01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000002",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000004",
     recordNo: "SPC-OP020-01-CL02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000002",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000005",
     recordNo: "SPC-OP030-01-CL01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000003",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000006",
     recordNo: "SPC-OP030-01-CL02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000003",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000007",
     recordNo: "SPC-OP040-01-CL01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000004",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000008",
     recordNo: "SPC-OP040-01-CL02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000004",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000009",
     recordNo: "SPC-OP050-01-CL01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000005",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_qual_spcChartControlLimit").insertMany([
   {
     _id: "1152000000000010",
     recordNo: "SPC-OP050-01-CL02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcChartId: "1151000000000005",

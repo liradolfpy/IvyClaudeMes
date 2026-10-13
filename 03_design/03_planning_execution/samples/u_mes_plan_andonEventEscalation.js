@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000001",
     recordNo: "AND-2026-000195-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000001",
@@ -25,6 +26,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000002",
     recordNo: "AND-2026-000195-E02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000001",
@@ -46,6 +48,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000003",
     recordNo: "AND-2026-000198-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000002",
@@ -67,6 +70,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000004",
     recordNo: "AND-2026-000198-E02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000002",
@@ -88,6 +92,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000005",
     recordNo: "AND-2026-000201-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000003",
@@ -109,6 +114,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000006",
     recordNo: "AND-2026-000201-E02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000003",
@@ -130,6 +136,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000007",
     recordNo: "AND-2026-000204-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000004",
@@ -151,6 +158,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000008",
     recordNo: "AND-2026-000204-E02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000004",
@@ -172,6 +180,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000009",
     recordNo: "AND-2026-000207-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000005",
@@ -193,6 +202,7 @@ db.getCollection("u_mes_plan_andonEventEscalation").insertMany([
   {
     _id: "1252000000000010",
     recordNo: "AND-2026-000207-E02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     andonEventId: "1251000000000005",

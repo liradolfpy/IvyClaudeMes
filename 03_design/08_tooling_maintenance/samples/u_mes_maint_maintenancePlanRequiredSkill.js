@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000001",
     recordNo: "PM-GDC-01-M1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000002",
     recordNo: "PM-HT-01-F1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000003",
     recordNo: "PM-CNC-01-H1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000004",
     recordNo: "PM-WSH-01-W1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000005",
     recordNo: "PM-ANO-01-L1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000006",
     recordNo: "PM-ASY-01-P1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000007",
     recordNo: "PM-TRQ-01-N1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000008",
     recordNo: "PM-LKT-01-T1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000009",
     recordNo: "PM-LSR-01-L1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSkill").insertMany([
   {
     _id: "1218000000000010",
     recordNo: "PM-FIN-01-V1-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000010",

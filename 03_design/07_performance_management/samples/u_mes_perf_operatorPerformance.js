@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000001",
     recordNo: "OPF-20260915-10344-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000002",
@@ -35,6 +36,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000002",
     recordNo: "OPF-20260915-10402-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000003",
@@ -66,6 +68,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000003",
     recordNo: "OPF-20260915-10231-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",
@@ -97,6 +100,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000004",
     recordNo: "OPF-20260915-10344-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000002",
@@ -128,6 +132,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000005",
     recordNo: "OPF-20260918-10402-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000003",
@@ -159,6 +164,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000006",
     recordNo: "OPF-20260918-10231-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",
@@ -190,6 +196,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000007",
     recordNo: "OPF-20260922-10344-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000002",
@@ -221,6 +228,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000008",
     recordNo: "OPF-20260922-10402-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000003",
@@ -252,6 +260,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000009",
     recordNo: "OPF-20260924-10231-FIN-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",
@@ -283,6 +292,7 @@ db.getCollection("u_mes_perf_operatorPerformance").insertMany([
   {
     _id: "1327000000000010",
     recordNo: "OPF-20260917-10231-GDC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",

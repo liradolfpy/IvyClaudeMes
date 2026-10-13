@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000001",
     recordNo: "INR",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Indian Rupee",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000002",
     recordNo: "USD",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "US Dollar",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000003",
     recordNo: "EUR",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Euro",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000004",
     recordNo: "JPY",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Japanese Yen",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000005",
     recordNo: "GBP",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Pound Sterling",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000006",
     recordNo: "CNY",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Chinese Yuan",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000007",
     recordNo: "KRW",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "South Korean Won",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000008",
     recordNo: "THB",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Thai Baht",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000009",
     recordNo: "AED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "UAE Dirham",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_mast_currency").insertMany([
   {
     _id: "1265000000000010",
     recordNo: "SGD",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Singapore Dollar",

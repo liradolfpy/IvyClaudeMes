@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000001",
     recordNo: "BOM-5110-10-0100-01-C01-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000002",
     recordNo: "BOM-5110-10-0100-01-C02-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000003",
     recordNo: "BOM-5110-10-0100-01-C03-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000004",
     recordNo: "BOM-5110-10-0100-01-C04-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000005",
     recordNo: "BOM-5110-10-0100-01-C05-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000006",
     recordNo: "BOM-5110-10-0100-01-C06-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000007",
     recordNo: "BOM-5110-20-0110-01-C01-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000008",
     recordNo: "BOM-5110-20-0105-01-C01-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000009",
     recordNo: "BOM-5110-10-0200-01-C01-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
   {
     _id: "1049000000000010",
     recordNo: "BOM-5110-10-0200-01-C02-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfMaterialComponentId: "1048000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_prod_billOfMaterialComponentProductVariant").insertMany(
     sequenceNo: NumberInt(1),
     productVariantId: "1046000000000001",
     productVariantName: "Front Caliper LH, Standard",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000011",
+    recordNo: "BOM-BLK-PCM500-GRN-01-C01-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000011",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-GRN-01-C01",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000012",
+    recordNo: "BOM-BLK-PCM500-GRN-01-C02-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000012",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-GRN-01-C02",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000013",
+    recordNo: "BOM-BLK-PCM500-GRN-01-C03-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000013",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-GRN-01-C03",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000014",
+    recordNo: "BOM-BLK-PCM500-GRN-01-C04-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000014",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-GRN-01-C04",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000015",
+    recordNo: "BOM-BLK-PCM500-GRN-01-C05-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000015",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-GRN-01-C05",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000016",
+    recordNo: "BOM-BLK-PCM500-FCT-01-C01-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000016",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-FCT-01-C01",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000017",
+    recordNo: "BOM-BLK-PCM500-FCT-01-C02-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000017",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-FCT-01-C02",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000018",
+    recordNo: "BOM-FG-PCM500-B10-01-C01-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000018",
+    billOfMaterialComponentName: "BOM-FG-PCM500-B10-01-C01",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000019",
+    recordNo: "BOM-FG-PCM500-H100-01-C01-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000019",
+    billOfMaterialComponentName: "BOM-FG-PCM500-H100-01-C01",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1049000000000020",
+    recordNo: "BOM-BLK-PCM500-GRN-02-C01-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfMaterialComponentId: "1048000000000020",
+    billOfMaterialComponentName: "BOM-BLK-PCM500-GRN-02-C01",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
     schemaVersion: NumberInt(1)
   }
 ]);

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 45 (31 required, 14 may be null) |
+| Keys | 53 (31 required, 22 may be null) |
 | Estimated volume per year | ~9,000 |
 | Storage | standard |
 
@@ -72,14 +72,22 @@ Every key is present in every document. "Required" means the value may not be nu
 | 35 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 36 | closedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'closed' | `null` | Reference: u_mes_mast_user._id |
 | 37 | closedBy | String | - | No (null allowed) | Display name of the user in closedById, copied from u_mes_mast_user.fullName | `null` |  |
-| 38 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Contained; Dispositioned; Closed; Cancelled |
-| 39 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 40 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 41 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 42 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
-| 43 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 44 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
-| 45 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 38 | deviationClass | String | - | No (null allowed) | GMP deviation classification; null when the nonconformance is not a GMP deviation (GMP-30) | `"Major"` | Minor; Major; Critical |
+| 39 | productImpactText | String | - | No (null allowed) | Impact assessment on the product and on other batches | `"Castings of die 2 from the lot quarantined; other dies not affected"` |  |
+| 40 | investigationDueDate | Date | Date | No (null allowed) | Due date of the investigation | `ISODate("2026-10-15T00:00:00.000+0000")` |  |
+| 41 | qaApprovedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'qa approved' | `null` | Reference: u_mes_mast_user._id |
+| 42 | qaApprovedBy | String | - | No (null allowed) | Display name of the user in qaApprovedById, copied from u_mes_mast_user.fullName | `null` |  |
+| 43 | qaApprovedAt | Date | Datetime | No (null allowed) | Time of the quality approval | `null` |  |
+| 44 | riskAssessmentId | String | - | No (null allowed) | Reference to u_mes_qual_riskAssessment._id | `null` | Reference: u_mes_qual_riskAssessment._id |
+| 45 | riskAssessmentName | String | - | No (null allowed) | Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title | `null` |  |
+| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Contained; Dispositioned; Closed; Cancelled |
+| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 48 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 49 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 50 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
+| 51 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 52 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |
+| 53 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 
 ## Status values
 
@@ -100,7 +108,7 @@ Open, Contained, Dispositioned, Closed, Cancelled. Initial state: Open. The valu
 
 ## Referenced by
 
-u_mes_plan_shiftHandoverNonconformance, u_mes_qual_checkSheetResult, u_mes_qual_inspectionResult, u_mes_qual_spcSample, u_mes_qual_nonconformanceAffectedObject, u_mes_qual_nonconformanceContainmentAction, u_mes_qual_nonconformanceInspectionResult, u_mes_qual_nonconformanceReworkOrder, u_mes_qual_nonconformanceScrapRecord, u_mes_qual_nonconformancePhotoControlledDocument, u_mes_qual_nonconformanceMrbUser, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_qualityHold, u_mes_qual_deviationPermit, u_mes_qual_capaNonconformance, u_mes_qual_customerComplaint, u_mes_syst_notification, u_mes_trac_traceInvestigation, u_mes_qual_defectRecord.
+u_mes_plan_shiftHandoverNonconformance, u_mes_qual_checkSheetResult, u_mes_qual_inspectionResult, u_mes_qual_spcSample, u_mes_qual_nonconformanceAffectedObject, u_mes_qual_nonconformanceContainmentAction, u_mes_qual_nonconformanceInspectionResult, u_mes_qual_nonconformanceReworkOrder, u_mes_qual_nonconformanceScrapRecord, u_mes_qual_nonconformancePhotoControlledDocument, u_mes_qual_nonconformanceMrbUser, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_qualityHold, u_mes_qual_deviationPermit, u_mes_qual_capaNonconformance, u_mes_qual_customerComplaint, u_mes_syst_notification, u_mes_trac_traceInvestigation, u_mes_qual_defectRecord, u_mes_syst_auditTrailReview, u_mes_bmr_yieldReconciliation, u_mes_qual_environmentalMonitoringResult, u_mes_qual_productRecall.
 
 ## Files
 

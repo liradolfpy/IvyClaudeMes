@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000001",
     recordNo: "BAG",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "VCI Bag",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000002",
     recordNo: "TRAY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Tray",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000003",
     recordNo: "BIN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Bin",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000004",
     recordNo: "PALLET",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Pallet",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000005",
     recordNo: "LAYER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Layer Pad",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000006",
     recordNo: "BOX",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Box",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000007",
     recordNo: "CRATE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Crate",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000008",
     recordNo: "SLEEVE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sleeve",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000009",
     recordNo: "LID",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Lid",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_matl_packType").insertMany([
   {
     _id: "1281000000000010",
     recordNo: "STRAP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Strapped Load",
     description: "Strapped Load (STRAP)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000011",
+    recordNo: "BLISTER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Blister",
+    description: "Blister (BLISTER)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000012",
+    recordNo: "CARTON",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Carton",
+    description: "Carton (CARTON)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000013",
+    recordNo: "BOTTLE",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Bottle",
+    description: "Bottle (BOTTLE)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000014",
+    recordNo: "SHIPPER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Shipper",
+    description: "Shipper (SHIPPER)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000015",
+    recordNo: "PALLET",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Pallet",
+    description: "Pallet (PALLET)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000016",
+    recordNo: "LEAFLET",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Leaflet",
+    description: "Leaflet (LEAFLET)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000017",
+    recordNo: "SHRINK",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Shrink Wrap",
+    description: "Shrink Wrap (SHRINK)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000018",
+    recordNo: "DRUM",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Drum",
+    description: "Drum (DRUM)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000019",
+    recordNo: "BAG",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Polybag",
+    description: "Polybag (BAG)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1281000000000020",
+    recordNo: "IBC",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Intermediate Bulk Container",
+    description: "Intermediate Bulk Container (IBC)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

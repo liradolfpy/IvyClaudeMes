@@ -4,6 +4,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000001",
     recordNo: "SAF-2026-0003-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000001",
@@ -25,6 +26,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000002",
     recordNo: "SAF-2026-0003-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000001",
@@ -46,6 +48,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000003",
     recordNo: "SAF-2026-0004-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000002",
@@ -67,6 +70,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000004",
     recordNo: "SAF-2026-0004-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000002",
@@ -88,6 +92,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000005",
     recordNo: "SAF-2026-0005-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000003",
@@ -109,6 +114,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000006",
     recordNo: "SAF-2026-0005-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000003",
@@ -130,6 +136,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000007",
     recordNo: "SAF-2026-0006-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000004",
@@ -151,6 +158,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000008",
     recordNo: "SAF-2026-0006-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000004",
@@ -172,6 +180,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000009",
     recordNo: "SAF-2026-0007-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000005",
@@ -193,6 +202,7 @@ db.getCollection("u_mes_ehs_safetyIncidentAction").insertMany([
   {
     _id: "1255000000000010",
     recordNo: "SAF-2026-0007-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     safetyIncidentId: "1253000000000005",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000001",
     recordNo: "ELEC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Electricity",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000002",
     recordNo: "AIR",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Compressed Air",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000003",
     recordNo: "GAS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Natural Gas",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000004",
     recordNo: "WATER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Process Water",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000005",
     recordNo: "DM-WATER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Demineralised Water",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000006",
     recordNo: "LPG",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPG",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000007",
     recordNo: "STEAM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Steam",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000008",
     recordNo: "CHILLED",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Chilled Water",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000009",
     recordNo: "N2",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Nitrogen",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_perf_energyType").insertMany([
   {
     _id: "1294000000000010",
     recordNo: "DIESEL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Diesel For Generator",

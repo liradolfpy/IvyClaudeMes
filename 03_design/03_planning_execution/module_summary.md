@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | u_mes_plan_customerSchedule | Entity | transaction | 23 | 20 | 2 | 5 |
 | 2 | u_mes_plan_customerScheduleLine | Child | transaction | 23 | 23 | 1 | 2 |
-| 3 | u_mes_plan_productionOrder | Entity | transaction | 53 | 37 | 3 | 8 |
+| 3 | u_mes_plan_productionOrder | Entity | transaction | 58 | 37 | 3 | 8 |
 | 4 | u_mes_plan_productionOrderRelease | Child | transaction | 18 | 15 | 0 | 1 |
 | 5 | u_mes_plan_productionOrderLot | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 6 | u_mes_plan_productionSchedule | Entity | transaction | 27 | 24 | 1 | 6 |
@@ -17,7 +17,7 @@
 | 13 | u_mes_plan_stepCompletion | Entity | transaction | 43 | 28 | 3 | 8 |
 | 14 | u_mes_plan_wipUnit | Entity | transaction | 47 | 30 | 2 | 8 |
 | 15 | u_mes_plan_wipUnitCompletedStep | Value list | transaction | 15 | 15 | 0 | 1 |
-| 16 | u_mes_plan_lot | Entity | transaction | 47 | 24 | 3 | 8 |
+| 16 | u_mes_plan_lot | Entity | transaction | 50 | 24 | 3 | 8 |
 | 17 | u_mes_plan_lotParentLot | Relationship | transaction | 16 | 16 | 0 | 2 |
 | 18 | u_mes_plan_lotAttributesCavityNo | Value list | transaction | 15 | 15 | 0 | 1 |
 | 19 | u_mes_plan_container | Entity | transaction | 39 | 27 | 1 | 8 |
@@ -44,3 +44,4 @@
 | 40 | u_mes_plan_recipeDownload | Entity | transaction | 33 | 25 | 3 | 8 |
 | 41 | u_mes_plan_setupVerification | Entity | transaction | 32 | 24 | 2 | 8 |
 | 42 | u_mes_plan_setupVerificationItem | Child | transaction | 25 | 17 | 1 | 2 |
+| 43 | u_mes_plan_lineClearance | Entity | transaction | 39 | 24 | 2 | 8 |

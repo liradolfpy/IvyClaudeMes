@@ -1161,7 +1161,14 @@ ENUM_ADD = {
  ("tool","toolClass"):["Fixture"],
 }
 
-MOD_NAMES={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling & Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety'}
+# ---- requirement set GMP_Pharma_01 (D047-D053): appended after this set, numbered 1344-1366
+import gmp01 as _GMP
+NEW += _GMP.NEW
+ADD += _GMP.ADD
+for _k, _v in _GMP.ENUM_ADD.items():
+    ENUM_ADD[_k] = ENUM_ADD.get(_k, []) + [x for x in _v if x not in ENUM_ADD.get(_k, [])]
+
+MOD_NAMES={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling & Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety', 'bmr': 'Batch Manufacturing Record', 'mmr': 'Master Manufacturing Record'}
 BYENT={c["entity"]:c for c in NEW}
 ROOTS={c["entity"] for c in NEW if c["kind"]=="entity"}
 
@@ -1172,13 +1179,14 @@ def src_name(c,byent=None):
         pe=[f for f in r["fields"] if f[0]=="PARENT"][0][2]
         if pe not in BYENT: return byent[pe]["sourceConcept"]
         r=BYENT[pe]
-    return "ext01:"+r["entity"]
+    return r.get("tag","ext01")+":"+r["entity"]
 
 # catalogue-shaped tuples, so that every generator that looks up cat[sourceConcept] works unchanged
 CAT={}
 for c in NEW:
     if c["kind"]=="entity":
-        CAT["ext01:"+c["entity"]]=("ext01:"+c["entity"],"%s (MES_ExternalRequirement_01)"%MOD_NAMES[c["module"]],c["prefix"],c["bk"],c["purpose"],"MES_ExternalRequirement_01 "+c["q"],[],c["volume"],c["storage"],c["why"])
+        _t=c.get("tag","ext01"); _s=c.get("src","MES_ExternalRequirement_01")
+        CAT[_t+":"+c["entity"]]=(_t+":"+c["entity"],"%s (%s)"%(MOD_NAMES[c["module"]],_s),c["prefix"],c["bk"],c["purpose"],_s+" "+c["q"],[],c["volume"],c["storage"],c["why"])
 
 def _expand(k,t,nul,ref):
     if ref=="(polymorphic)": return [(k,"String","(polymorphic)",nul),(k[:-2]+"Name","String",None,nul)]
@@ -1206,6 +1214,7 @@ for e,k,t,nul,ref,en,d in ADD:
     for x in _expand(k,t,nul,ref): NULLABLE[(e,x[0])]=nul
     if not ref: DESC[(e,k)]=d
     if en: ENUMS[(e,k)]=en
+NULLABLE.update(getattr(_GMP, "NULLABLE_SET", {}))   # D065: caliper-only keys optional for the second product family
 
 def collection_name(c): return "u_mes_%s_%s"%(c["module"],c["entity"])
 def parent_entity(c):

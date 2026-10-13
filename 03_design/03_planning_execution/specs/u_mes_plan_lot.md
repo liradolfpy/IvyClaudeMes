@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 47 (24 required, 23 may be null) |
+| Keys | 50 (24 required, 26 may be null) |
 | Estimated volume per year | ~40,000 |
 | Storage | standard |
 
@@ -69,14 +69,17 @@ Every key is present in every document. "Required" means the value may not be nu
 | 37 | currentOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: current operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
 | 38 | currentOperationName | String | - | No (null allowed) | Display value of currentOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
 | 39 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 40 | status | String | - | Yes | Primary lifecycle state of the document | `"Consumed"` | Created; Available; In Process; On Hold; Consumed; Closed; Rejected |
-| 41 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 42 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
-| 43 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 44 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 45 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 46 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 47 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 40 | retestDate | Date | Date | No (null allowed) | Date the lot must be re-tested before further use (GMP-41) | `null` |  |
+| 41 | batchReleaseId | String | - | No (null allowed) | Reference to u_mes_bmr_batchRelease._id | `"1352000000000002"` | Reference: u_mes_bmr_batchRelease._id |
+| 42 | batchReleaseName | String | - | No (null allowed) | Display value of batchReleaseId, copied from u_mes_bmr_batchRelease.recordNo | `"BRL-L260915-GDC-014"` |  |
+| 43 | status | String | - | Yes | Primary lifecycle state of the document | `"Consumed"` | Created; Available; In Process; On Hold; Consumed; Closed; Rejected |
+| 44 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 45 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
+| 46 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 47 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 48 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 49 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 50 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 
@@ -97,7 +100,7 @@ Created, Available, In Process, On Hold, Consumed, Closed, Rejected. Initial sta
 
 ## Referenced by
 
-u_mes_plan_productionOrderLot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lotParentLot, u_mes_plan_lotAttributesCavityNo, u_mes_plan_containerLot, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_label, u_mes_matl_shipmentLineLot, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_trac_asBuiltRecord, u_mes_trac_asBuiltRecordComponent, u_mes_qual_inspectionResult, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_customerComplaintSuspectLot, u_mes_perf_processReading, u_mes_plan_interlockEvent, u_mes_matl_exposureTimer, u_mes_qual_defectRecord.
+u_mes_plan_productionOrderLot, u_mes_plan_dispatchListEntry, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_plan_lotParentLot, u_mes_plan_lotAttributesCavityNo, u_mes_plan_containerLot, u_mes_matl_inventoryBalance, u_mes_matl_materialMovement, u_mes_matl_goodsReceiptLine, u_mes_matl_kitLine, u_mes_matl_materialRequest, u_mes_matl_materialConsumption, u_mes_matl_label, u_mes_matl_shipmentLineLot, u_mes_trac_genealogyLink, u_mes_trac_componentLotLink, u_mes_trac_asBuiltRecord, u_mes_trac_asBuiltRecordComponent, u_mes_qual_inspectionResult, u_mes_qual_reworkOrder, u_mes_qual_scrapRecord, u_mes_qual_customerComplaintSuspectLot, u_mes_perf_processReading, u_mes_plan_interlockEvent, u_mes_matl_exposureTimer, u_mes_qual_defectRecord, u_mes_bmr_batchRecordReview, u_mes_bmr_batchRelease, u_mes_maint_logbookEntry, u_mes_matl_dispenseRecord, u_mes_qual_retentionSample, u_mes_qual_productRecallLot, u_mes_bmr_batchManufacturingRecord.
 
 ## Files
 

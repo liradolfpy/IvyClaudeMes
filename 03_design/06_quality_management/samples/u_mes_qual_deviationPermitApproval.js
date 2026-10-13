@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000001",
     recordNo: "DEV-2026-0006-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000001",
@@ -25,6 +26,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000002",
     recordNo: "DEV-2026-0006-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000001",
@@ -46,6 +48,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000003",
     recordNo: "DEV-2026-0007-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000002",
@@ -67,6 +70,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000004",
     recordNo: "DEV-2026-0007-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000002",
@@ -88,6 +92,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000005",
     recordNo: "DEV-2026-0008-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000003",
@@ -109,6 +114,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000006",
     recordNo: "DEV-2026-0008-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000003",
@@ -130,6 +136,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000007",
     recordNo: "DEV-2026-0009-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000004",
@@ -151,6 +158,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000008",
     recordNo: "DEV-2026-0009-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000004",
@@ -172,6 +180,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000009",
     recordNo: "DEV-2026-0010-A01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000005",
@@ -193,6 +202,7 @@ db.getCollection("u_mes_qual_deviationPermitApproval").insertMany([
   {
     _id: "1175000000000010",
     recordNo: "DEV-2026-0010-A02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     deviationPermitId: "1174000000000005",

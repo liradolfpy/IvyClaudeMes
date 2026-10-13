@@ -20,6 +20,9 @@
         "floorAreaSqm",
         "isProductionArea",
         "sequenceNo",
+        "cleanlinessClass",
+        "environmentallyMonitored",
+        "gowningRequired",
         "status",
         "schemaVersion"
       ],
@@ -109,6 +112,24 @@
         "sequenceNo": {
           "bsonType": "int",
           "description": "Position of this document in its list (within the same parent for child collections), starting at 1"
+        },
+        "cleanlinessClass": {
+          "bsonType": "string",
+          "description": "Cleanliness class of the area (GMP-37)",
+          "enum": [
+            "ISO 7",
+            "ISO 8",
+            "Controlled Not Classified",
+            "Unclassified"
+          ]
+        },
+        "environmentallyMonitored": {
+          "bsonType": "bool",
+          "description": "True when the area has environmental monitoring points"
+        },
+        "gowningRequired": {
+          "bsonType": "bool",
+          "description": "True when entry requires gowning"
         },
         "status": {
           "bsonType": "string",

@@ -71,7 +71,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_prod_billOfProcessStep, u_mes_prod_workInstruction, u_mes_plan_setupVerification.
+u_mes_prod_billOfProcessStep, u_mes_prod_workInstruction, u_mes_plan_setupVerification, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

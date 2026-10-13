@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000001",
     recordNo: "EVT-2026-000231",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "User Logged In",
@@ -38,6 +39,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000002",
     recordNo: "EVT-2026-000234",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Order Released",
@@ -72,6 +74,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000003",
     recordNo: "EVT-2026-000237",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Operation Started",
@@ -106,6 +109,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000004",
     recordNo: "EVT-2026-000240",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Operation Completed",
@@ -140,6 +144,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000005",
     recordNo: "EVT-2026-000243",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Recipe Downloaded",
@@ -174,6 +179,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000006",
     recordNo: "EVT-2026-000246",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Hold Placed",
@@ -208,6 +214,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000007",
     recordNo: "EVT-2026-000249",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Hold Released",
@@ -242,6 +249,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000008",
     recordNo: "EVT-2026-000252",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Label Printed",
@@ -276,6 +284,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000009",
     recordNo: "EVT-2026-000255",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Unit Scrapped",
@@ -310,6 +319,7 @@ db.getCollection("u_mes_syst_businessEvent").insertMany([
   {
     _id: "1240000000000010",
     recordNo: "EVT-2026-000258",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     eventType: "Shipment Dispatched",

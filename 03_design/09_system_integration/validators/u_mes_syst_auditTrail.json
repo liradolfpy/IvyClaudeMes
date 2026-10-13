@@ -25,6 +25,9 @@
         "documentVersionAfter",
         "previousHash",
         "entryHash",
+        "gxpRelevant",
+        "auditTrailReviewId",
+        "auditTrailReviewName",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -128,6 +131,24 @@
         "entryHash": {
           "bsonType": "string",
           "description": "Entry hash"
+        },
+        "gxpRelevant": {
+          "bsonType": "bool",
+          "description": "True when the entry concerns GMP-relevant data (GMP-04, GMP-05)"
+        },
+        "auditTrailReviewId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_auditTrailReview._id"
+        },
+        "auditTrailReviewName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of auditTrailReviewId, copied from u_mes_syst_auditTrailReview.recordNo"
         },
         "schemaVersion": {
           "bsonType": "int",

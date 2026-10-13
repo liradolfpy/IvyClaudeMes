@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000001",
     recordNo: "REL-202609-GDC-01-M1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000001",
@@ -34,6 +35,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000002",
     recordNo: "REL-202609-HT-01-F1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000002",
@@ -64,6 +66,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000003",
     recordNo: "REL-202609-CNC-01-H1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000003",
@@ -94,6 +97,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000004",
     recordNo: "REL-202609-WSH-01-W1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000004",
@@ -124,6 +128,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000005",
     recordNo: "REL-202609-ANO-01-L1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000005",
@@ -154,6 +159,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000006",
     recordNo: "REL-202609-ASY-01-P1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000006",
@@ -184,6 +190,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000007",
     recordNo: "REL-202609-TRQ-01-N1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000007",
@@ -214,6 +221,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000008",
     recordNo: "REL-202609-LKT-01-T1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000008",
@@ -244,6 +252,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000009",
     recordNo: "REL-202609-LSR-01-L1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000009",
@@ -274,6 +283,7 @@ db.getCollection("u_mes_maint_reliabilitySummary").insertMany([
   {
     _id: "1330000000000010",
     recordNo: "REL-202609-FIN-01-V1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000010",

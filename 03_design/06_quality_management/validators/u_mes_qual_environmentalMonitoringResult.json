@@ -1,0 +1,162 @@
+{
+  "collMod": "u_mes_qual_environmentalMonitoringResult",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_environmentalMonitoringResult",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "environmentalMonitoringPointId",
+        "environmentalMonitoringPointName",
+        "sampledAt",
+        "measuredValue",
+        "limitEvaluation",
+        "sampledById",
+        "sampledBy",
+        "gaugeId",
+        "gaugeName",
+        "nonconformanceId",
+        "nonconformanceName",
+        "productImpactText",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "environmentalMonitoringPointId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_environmentalMonitoringPoint._id"
+        },
+        "environmentalMonitoringPointName": {
+          "bsonType": "string",
+          "description": "Display value of environmentalMonitoringPointId, copied from u_mes_qual_environmentalMonitoringPoint.name"
+        },
+        "sampledAt": {
+          "bsonType": "date",
+          "description": "Sampling time"
+        },
+        "measuredValue": {
+          "bsonType": "decimal",
+          "description": "Measured value"
+        },
+        "limitEvaluation": {
+          "bsonType": "string",
+          "description": "Evaluation against the limits",
+          "enum": [
+            "Within Limits",
+            "Alert Limit Exceeded",
+            "Action Limit Exceeded"
+          ]
+        },
+        "sampledById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'sampled'"
+        },
+        "sampledBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in sampledById, copied from u_mes_mast_user.fullName"
+        },
+        "gaugeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_gauge._id"
+        },
+        "gaugeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of gaugeId, copied from u_mes_qual_gauge.name"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "productImpactText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Assessment of the impact on product made during the excursion"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Recorded",
+            "Excursion Open",
+            "Excursion Closed",
+            "Invalidated"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

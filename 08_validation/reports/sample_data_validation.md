@@ -1,10 +1,10 @@
 # Sample data validation
 
-Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 343 | Documents: 3430
+Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 369 | Documents: 5390
 
 | # | Check | Scope | Result | Findings |
 |---|---|---|---|---|
-| 1 | Exactly 10 documents | all collections | Pass | 0 |
+| 1 | 10 documents per collection, 20 in dual Auto / Gamp collections | all collections | Pass | 0 |
 | 2 | Every document has a unique _id | all collections | Pass | 0 |
 | 3 | _id is a 16-digit numeric string | all collections | Pass | 0 |
 | 4 | No ObjectId | all collections | Pass | 0 |
@@ -17,7 +17,7 @@ Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 343 | Do
 | 11 | ID and display pairs are complete | all collections | Pass | 0 |
 | 12 | Every reference points to an existing document | all collections | Pass | 0 |
 | 13 | Display value equals the referenced document's display value | all collections | Pass | 0 |
-| 14 | Business numbers (recordNo) unique in the collection | all collections | Pass | 0 |
+| 14 | Business numbers (recordNo) unique per site in the collection | all collections | Pass | 0 |
 | 15 | Parent and line number unique in child collections | all collections | Pass | 0 |
 | 16 | Audit keys valid (transaction collections only) | all collections | Pass | 0 |
 | 17 | Dates in logical order | all collections | Pass | 0 |
@@ -43,10 +43,17 @@ These points were noticed while filling the documents and are reported only. On 
 | 9 | u_mes_mast_unitOfMeasure | The ten sample units have no newton, degree or millisecond | Curve envelope axis units are held as text (xUnitText, yUnitText), as delivered by the controller |
 | 10 | u_mes_qual_measurementCurvePoint | A time-series collection; ten points of one press-in curve are shown, one second apart because the shell format carries whole seconds | Real curves carry 250 to 620 points each |
 | 11 | u_mes_trac_genealogyLink | childSerialNumberId and childWipUnitId are empty, because all sample components are bought-in lots | Sub-assemblies serialised by the MES would use them |
+| 12 | GMP_Pharma_01 collections | The ten sample electronic signatures all sign recipes, and no validation protocol, certificate of conformance or review report is among the ten controlled documents | electronicSignatureId and the protocol, report and certificate references of the GMP collections are null in the samples |
+| 13 | u_mes_matl_dispenseRecord | No balance or scale is among the ten sample gauges | balanceGaugeId is null in the samples |
+| 14 | u_mes_syst_computerisedSystem | No software supplier is among the ten sample suppliers | supplierId is null in the samples |
+| 15 | u_mes_bmr_batchRelease, u_mes_qual_retentionSample | Assembly orders produce serialised units without a lot; release and retention of those units refer to the order or the serial number | lotId is null for assembly orders |
+| 16 | u_mes_bmr_batchManufacturingRecord | No exported batch record is among the ten sample controlled documents | exportControlledDocumentId is null; the checksum, page count and export time of the four exported records are filled |
+| 17 | u_mes_mmr_masterManufacturingRecord | Packaging specifications in the samples all carry the LH assembly as item | RH and body records reference the nearest specification or none |
 
 ## How realistic the documents are
 
 - Read through and corrected by hand: production orders, WIP units, operation executions, torque and leak results, lots, goods receipt lines, stock movements, inspection results, nonconformances, gauges, equipment, users, items, BOM components, routing steps, downtime events, serial numbers.
 - Written collection by collection for MES_ExternalRequirement_01: the 44 new collections and the 212 added keys (05_generator/ext_req01_samples.py).
+- Written collection by collection for GMP_Pharma_01: the 23 new collections and the 33 added keys (05_generator/gmp01_samples.py).
 - Built by the same rules but not read line by line: the remaining collections. Their keys, types, references, allowed values and dates are checked by the table above; individual text or number combinations in them can still read oddly.
 - Each collection has exactly ten documents, so stories are short: for example, ten leak tests are spread over four units.

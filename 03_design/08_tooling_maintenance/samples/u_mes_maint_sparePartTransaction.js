@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000001",
     recordNo: "SPT-20260915-00088",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000001",
@@ -36,6 +37,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000002",
     recordNo: "SPT-20260915-00095",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000001",
@@ -68,6 +70,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000003",
     recordNo: "SPT-20260916-00102",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000003",
@@ -100,6 +103,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000004",
     recordNo: "SPT-20260917-00109",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000004",
@@ -132,6 +136,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000005",
     recordNo: "SPT-20260918-00116",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000005",
@@ -164,6 +169,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000006",
     recordNo: "SPT-20260919-00123",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000006",
@@ -196,6 +202,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000007",
     recordNo: "SPT-20260921-00130",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000001",
@@ -228,6 +235,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000008",
     recordNo: "SPT-20260922-00137",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000006",
@@ -260,6 +268,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000009",
     recordNo: "SPT-20260923-00144",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000006",
@@ -292,6 +301,7 @@ db.getCollection("u_mes_maint_sparePartTransaction").insertMany([
   {
     _id: "1329000000000010",
     recordNo: "SPT-20260924-00151",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000008",

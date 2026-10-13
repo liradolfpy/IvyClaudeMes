@@ -92,7 +92,10 @@
             "Floor Life",
             "Pot Life",
             "Open Time",
-            "Bake"
+            "Bake",
+            "Dirty Equipment Hold",
+            "Clean Equipment Hold",
+            "Process Hold Time"
           ]
         },
         "limitMinutes": {

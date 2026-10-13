@@ -1,6 +1,6 @@
 # Collection inventory
 
-Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
+Model version 2.9 | 12 October 2026 | 369 collections (200 entity, 85 child, 76 relationship, 8 value-list), 8245 keys
 
 Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.
 
@@ -10,14 +10,16 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 |---|---|---|
 | mast | Master Data Management | 57 |
 | prod | Product Definition | 49 |
-| plan | Planning and Execution | 42 |
-| matl | Material Management | 26 |
+| plan | Planning and Execution | 43 |
+| matl | Material Management | 27 |
 | trac | Traceability | 9 |
-| qual | Quality Management | 77 |
+| qual | Quality Management | 85 |
 | perf | Performance Management | 21 |
-| maint | Tooling & Maintenance | 18 |
-| syst | System and Integration | 38 |
+| maint | Tooling & Maintenance | 21 |
+| syst | System and Integration | 44 |
 | ehs | Environment Health and Safety | 6 |
+| bmr | Batch Manufacturing Record | 5 |
+| mmr | Master Manufacturing Record | 2 |
 
 ## mast - Master Data Management
 
@@ -181,6 +183,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 40 | u_mes_plan_recipeDownload | entity | transaction | - | Each download or selection of a program / recipe on a machine with the checksum verification result. | recordNo |
 | 41 | u_mes_plan_setupVerification | entity | transaction | - | Pre-start verification of the set-up of a station or machine against the order, variant and bill of process. | recordNo |
 | 42 | u_mes_plan_setupVerificationItem | child | transaction | u_mes_plan_setupVerification | One document per item of a setupVerification | recordNo |
+| 43 | u_mes_plan_lineClearance | entity | transaction | - | Check that a line or station is free of materials, labels, documents and product of the previous order before the next order starts, with a second-person verification. | recordNo |
 
 ## matl - Material Management
 
@@ -212,6 +215,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 24 | u_mes_matl_replenishmentRule | entity | master | - | Min-max or e-Kanban rule for replenishing an item at a line-side location. | recordNo |
 | 25 | u_mes_matl_materialDemandForecast | entity | transaction | - | Short-term component demand and projected line-side shortage per item, line and time bucket. | recordNo |
 | 26 | u_mes_matl_storageLocationAllowedItem | relationship | master | u_mes_matl_storageLocation | Links one storageLocation to one allowed item (one document per link) | recordNo |
+| 27 | u_mes_matl_dispenseRecord | entity | transaction | - | Weighing or counting of a material lot for an order, with target, tolerance, tare, gross and net weight and the second-person or system verification. | recordNo |
 
 ## trac - Traceability
 
@@ -308,6 +312,14 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 75 | u_mes_qual_defectRecord | entity | transaction | - | One logged defect on one unit (or lot sample) with first-fail station, origin, 4M category and follow-up links. | recordNo |
 | 76 | u_mes_qual_auditSchedule | entity | master | - | Plan for layered process audits (and other recurring audits): layer, area or line, check sheet, frequency and auditor. | name |
 | 77 | u_mes_qual_inspectionPlanProductVariant | relationship | master | u_mes_qual_inspectionPlan | Links one inspectionPlan to one product variant (one document per link) | recordNo |
+| 78 | u_mes_qual_environmentalMonitoringPoint | entity | master | - | A monitored location and parameter in a controlled area, with its alert and action limits and sampling frequency. | name |
+| 79 | u_mes_qual_environmentalMonitoringResult | entity | transaction | - | One environmental monitoring result with its evaluation against alert and action limits and the excursion handling. | recordNo |
+| 80 | u_mes_qual_retentionSample | entity | transaction | - | Reserve or retention sample taken from a lot, with quantity, storage location, retention date and withdrawals. | recordNo |
+| 81 | u_mes_qual_riskAssessment | entity | transaction | - | Documented quality risk assessment of a change, system, deviation, equipment or product: method, initial and residual risk, controls and acceptance. | title |
+| 82 | u_mes_qual_productQualityReview | entity | transaction | - | Periodic product quality review of an item: lots made, released and rejected, deviations, complaints, CAPA, changes, recalls and capability over the review period, with conclusion and actions. | recordNo |
+| 83 | u_mes_qual_productRecall | entity | transaction | - | Recall or field action for product already shipped: class, scope, reason, linked complaint, investigation and trace, quantities shipped and recovered, authority notification and effectiveness check. | title |
+| 84 | u_mes_qual_productRecallLot | child | transaction | u_mes_qual_productRecall | One document per lot of a productRecall | recordNo |
+| 85 | u_mes_qual_processValidation | entity | transaction | - | Process validation study of an item on a line by lifecycle stage (process design, process qualification, continued process verification), with protocol, lots, acceptance criteria and result. | title |
 
 ## perf - Performance Management
 
@@ -357,6 +369,9 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 16 | u_mes_maint_sparePartTransaction | entity | transaction | - | Spare-part issue, return, receipt, adjustment and scrap with work order and equipment. | recordNo |
 | 17 | u_mes_maint_reliabilitySummary | entity | transaction | - | MTBF and MTTR per equipment, line and period. | recordNo |
 | 18 | u_mes_maint_equipmentLifecycleEvent | entity | transaction | - | Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning. | description |
+| 19 | u_mes_maint_logbookEntry | entity | transaction | - | Chronological use log of a piece of equipment or an area: production, cleaning, maintenance, calibration, line clearance, qualification and idle periods, with the order and lot concerned. | recordNo |
+| 20 | u_mes_maint_cleaningRecord | entity | transaction | - | Cleaning of a piece of equipment after use or before a product change: procedure, dirty hold time, cleaning, verification and the clean hold time it opens. | recordNo |
+| 21 | u_mes_maint_equipmentQualification | entity | transaction | - | Qualification of a piece of equipment by phase (design, installation, operational, performance, periodic requalification), with protocol, tests, deviations, approval and the next requalification date. | recordNo |
 
 ## syst - System and Integration
 
@@ -400,6 +415,12 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 36 | u_mes_syst_recordPolicy | entity | master | - | Edit, lock and retention policy per collection. | recordNo |
 | 37 | u_mes_syst_savedView | entity | master | - | Saved dashboard and comparison filters per user or role. | name |
 | 38 | u_mes_syst_backupRun | entity | transaction | - | Evidence of database backups and restore tests with measured recovery time (optional). | recordNo |
+| 39 | u_mes_syst_computerisedSystem | entity | master | - | Inventory of the computerised systems that create, hold or process GMP records, with their GxP impact, GAMP category, owners and periodic review cycle. | name |
+| 40 | u_mes_syst_systemValidation | entity | transaction | - | One validation or computer software assurance activity on a computerised system: initial validation, revalidation after a change, or decommissioning, with its test evidence and approval. | title |
+| 41 | u_mes_syst_systemPeriodicReview | entity | transaction | - | Periodic evaluation that a computerised system remains in a validated state: changes, incidents, deviations, audit trails, access and backup over the review period. | recordNo |
+| 42 | u_mes_syst_auditTrailReview | entity | transaction | - | Documented review of the audit-trail entries of a production record, a system or an investigation: period, number of entries, critical entries, anomalies and outcome. | recordNo |
+| 43 | u_mes_syst_userAccessReview | entity | transaction | - | Periodic review of the user accounts and roles of a computerised system, confirming that every account is still needed and has the right authority. | recordNo |
+| 44 | u_mes_syst_userAccessReviewLine | child | transaction | u_mes_syst_userAccessReview | One document per line of a userAccessReview | recordNo |
 
 ## ehs - Environment Health and Safety
 
@@ -411,3 +432,20 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 4 | u_mes_ehs_incidentType | entity | master | - | Types of safety incident | name |
 | 5 | u_mes_ehs_bodyPart | entity | master | - | Body parts for injury records | name |
 | 6 | u_mes_ehs_injuryType | entity | master | - | Types of injury | name |
+
+## bmr - Batch Manufacturing Record
+
+| # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
+|---|---|---|---|---|---|---|
+| 1 | u_mes_bmr_batchRecordReview | entity | transaction | - | Review of the electronic production record of an order before release: production review, quality review by exception, exceptions found and their closure. | recordNo |
+| 2 | u_mes_bmr_batchRecordReviewException | child | transaction | u_mes_bmr_batchRecordReview | One document per exception of a batchRecordReview | recordNo |
+| 3 | u_mes_bmr_batchRelease | entity | transaction | - | Release decision of the quality unit for a lot after review of its production record: released, conditionally released under a deviation, or rejected. | recordNo |
+| 4 | u_mes_bmr_yieldReconciliation | entity | transaction | - | Calculated yield of an order, and reconciliation of issued components and labels against use, return and destruction, with the limits and the outcome. | recordNo |
+| 5 | u_mes_bmr_batchManufacturingRecord | entity | transaction | - | Header of the executed batch record of one production order: the master record version frozen at opening, links to line clearance, yield reconciliation, review and release, and the exported true copy of the compiled record with its checksum. | recordNo |
+
+## mmr - Master Manufacturing Record
+
+| # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
+|---|---|---|---|---|---|---|
+| 1 | u_mes_mmr_masterManufacturingRecord | entity | master | - | One approved, versioned master manufacturing record per item revision: the bill of material, routing, bill of process, recipes, control plan, inspection plan, packaging specification and label template that together define how a batch is made, with standard batch size, theoretical yield, yield limits, effective dates and approvals. | title |
+| 2 | u_mes_mmr_masterManufacturingRecordRecipe | relationship | master | u_mes_mmr_masterManufacturingRecord | Links one masterManufacturingRecord to one recipe (one document per link) | recordNo |

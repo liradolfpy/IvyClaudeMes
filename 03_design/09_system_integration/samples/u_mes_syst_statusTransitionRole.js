@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000001",
     recordNo: "productionOrder.CREATED-RELEASED-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000002",
     recordNo: "productionOrder.RELEASED-IN_PROGRESS-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000003",
     recordNo: "productionOrder.IN_PROGRESS-ON_HOLD-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000004",
     recordNo: "productionOrder.ON_HOLD-IN_PROGRESS-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000005",
     recordNo: "productionOrder.ON_HOLD-IN_PROGRESS-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000004",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000006",
     recordNo: "productionOrder.IN_PROGRESS-COMPLETED-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000005",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000007",
     recordNo: "productionOrder.COMPLETED-CLOSED-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000006",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000008",
     recordNo: "productionOrder.COMPLETED-CLOSED-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000006",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000009",
     recordNo: "productionOrder.CREATED-CANCELLED-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000007",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_syst_statusTransitionRole").insertMany([
   {
     _id: "1333000000000010",
     recordNo: "wipUnit.IN_PROCESS-ON_HOLD-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     statusTransitionId: "1299000000000010",

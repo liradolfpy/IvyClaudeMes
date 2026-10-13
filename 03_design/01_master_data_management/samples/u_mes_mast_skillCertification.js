@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000001",
     recordNo: "CERT-10231-ASY-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",
@@ -40,6 +41,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000002",
     recordNo: "CERT-10231-TRQ-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",
@@ -76,6 +78,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000003",
     recordNo: "CERT-10344-GDC-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000002",
@@ -112,6 +115,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000004",
     recordNo: "CERT-10402-CNC-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000003",
@@ -148,6 +152,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000005",
     recordNo: "CERT-10231-LEAK-TEST-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000001",
@@ -184,6 +189,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000006",
     recordNo: "CERT-10402-LSR-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000003",
@@ -220,6 +226,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000007",
     recordNo: "CERT-10344-HT-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000002",
@@ -256,6 +263,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000008",
     recordNo: "CERT-10087-FIN-INSP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000004",
@@ -292,6 +300,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000009",
     recordNo: "CERT-10112-LEAK-TEST-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000006",
@@ -328,6 +337,7 @@ db.getCollection("u_mes_mast_skillCertification").insertMany([
   {
     _id: "1034000000000010",
     recordNo: "CERT-10066-CNC-OP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     userId: "1029000000000009",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000001",
     recordNo: "PROCESS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Process",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000002",
     recordNo: "QUALITY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Quality",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000003",
     recordNo: "MAINT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Maintenance",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000004",
     recordNo: "SAFETY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Safety",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000005",
     recordNo: "MATL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Material Handling",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000006",
     recordNo: "SETUP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Setting and Changeover",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000007",
     recordNo: "TEST",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Testing",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000008",
     recordNo: "SPECIAL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Special Process",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000009",
     recordNo: "SUPERV",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Supervision",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_mast_skillCategory").insertMany([
   {
     _id: "1262000000000010",
     recordNo: "SYSTEM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "System Use",
     description: "System Use (SYSTEM)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000011",
+    recordNo: "PH-PROCESS",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Pharma Process",
+    description: "Pharma Process (PH-PROCESS)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000012",
+    recordNo: "PH-QUALITY",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Quality and GMP",
+    description: "Quality and GMP (PH-QUALITY)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000013",
+    recordNo: "PH-ENGG",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Engineering",
+    description: "Engineering (PH-ENGG)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000014",
+    recordNo: "PH-SAFETY",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Safety and Containment",
+    description: "Safety and Containment (PH-SAFETY)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000015",
+    recordNo: "PH-WH",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Warehouse and Dispensing",
+    description: "Warehouse and Dispensing (PH-WH)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000016",
+    recordNo: "PH-CLEAN",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Cleaning and Line Clearance",
+    description: "Cleaning and Line Clearance (PH-CLEAN)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000017",
+    recordNo: "PH-TEST",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "In-process Testing",
+    description: "In-process Testing (PH-TEST)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000018",
+    recordNo: "PH-ASEPTIC",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Hygiene and Gowning",
+    description: "Hygiene and Gowning (PH-ASEPTIC)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000019",
+    recordNo: "PH-SUPERV",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Supervision",
+    description: "Supervision (PH-SUPERV)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1262000000000020",
+    recordNo: "PH-SYSTEM",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "System Use and Data Integrity",
+    description: "System Use and Data Integrity (PH-SYSTEM)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

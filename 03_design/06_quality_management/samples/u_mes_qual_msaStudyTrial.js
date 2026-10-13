@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000001",
     recordNo: "MSA-2026-0009-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -24,6 +25,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000002",
     recordNo: "MSA-2026-0009-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -44,6 +46,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000003",
     recordNo: "MSA-2026-0009-T03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -64,6 +67,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000004",
     recordNo: "MSA-2026-0009-T04",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -84,6 +88,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000005",
     recordNo: "MSA-2026-0009-T05",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -104,6 +109,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000006",
     recordNo: "MSA-2026-0009-T06",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -124,6 +130,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000007",
     recordNo: "MSA-2026-0009-T07",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -144,6 +151,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000008",
     recordNo: "MSA-2026-0009-T08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -164,6 +172,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000009",
     recordNo: "MSA-2026-0009-T09",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",
@@ -184,6 +193,7 @@ db.getCollection("u_mes_qual_msaStudyTrial").insertMany([
   {
     _id: "1194000000000010",
     recordNo: "MSA-2026-0009-T10",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     msaStudyId: "1192000000000001",

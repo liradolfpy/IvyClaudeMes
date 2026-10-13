@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000001",
     recordNo: "CAST",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Casting",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000002",
     recordNo: "HEAT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Heat Treatment",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000003",
     recordNo: "MACH",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Machining",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000004",
     recordNo: "CLEAN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Cleaning",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000005",
     recordNo: "SURF",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Surface Treatment",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000006",
     recordNo: "ASSY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Assembly",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000007",
     recordNo: "TORQ",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Torque",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000008",
     recordNo: "LEAK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000009",
     recordNo: "MARK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Marking",
@@ -103,8 +112,129 @@ db.getCollection("u_mes_qual_defectGroup").insertMany([
   {
     _id: "1282000000000010",
     recordNo: "FINAL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
+    name: "Final Inspection",
+    description: "Final Inspection (FINAL)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000011",
+    recordNo: "DISP",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Dispensing",
+    description: "Dispensing (DISP)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000012",
+    recordNo: "GRAN",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Granulation",
+    description: "Granulation (GRAN)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000013",
+    recordNo: "DRY",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Drying",
+    description: "Drying (DRY)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000014",
+    recordNo: "BLEND",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Blending",
+    description: "Blending (BLEND)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000015",
+    recordNo: "COMP",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Compression",
+    description: "Compression (COMP)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000016",
+    recordNo: "COAT",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Coating",
+    description: "Coating (COAT)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000017",
+    recordNo: "BTL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Bottle Packing",
+    description: "Bottle Packing (BTL)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000018",
+    recordNo: "BLIST",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Blister Packing",
+    description: "Blister Packing (BLIST)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000019",
+    recordNo: "SER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Serialisation",
+    description: "Serialisation (SER)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1282000000000020",
+    recordNo: "FINAL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
     name: "Final Inspection",
     description: "Final Inspection (FINAL)",
     sequenceNo: NumberInt(10),

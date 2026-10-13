@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000001",
     recordNo: "L260915-GDC-014-ACN01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000001",
@@ -21,6 +22,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000002",
     recordNo: "L260915-GDC-014-ACN02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000001",
@@ -38,6 +40,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000003",
     recordNo: "L260915-HT-002-ACN01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000002",
@@ -55,6 +58,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000004",
     recordNo: "L260915-HT-002-ACN02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000002",
@@ -72,6 +76,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000005",
     recordNo: "L260916-CNC-007-ACN01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000003",
@@ -89,6 +94,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000006",
     recordNo: "L260916-CNC-007-ACN02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000003",
@@ -106,6 +112,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000007",
     recordNo: "L260917-ANO-001-ACN01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000004",
@@ -123,6 +130,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000008",
     recordNo: "L260917-ANO-001-ACN02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000004",
@@ -140,6 +148,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000009",
     recordNo: "L260905-PST-007-ACN01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000005",
@@ -157,6 +166,7 @@ db.getCollection("u_mes_plan_lotAttributesCavityNo").insertMany([
   {
     _id: "1098000000000010",
     recordNo: "L260905-PST-007-ACN02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lotId: "1096000000000005",

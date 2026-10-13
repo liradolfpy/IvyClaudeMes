@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000001",
     recordNo: "QUALITY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Quality",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000002",
     recordNo: "MATERIAL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Material",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000003",
     recordNo: "MAINT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Maintenance",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000004",
     recordNo: "SAFETY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Safety",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000005",
     recordNo: "SUPERV",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Supervisor",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000006",
     recordNo: "TOOLING",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Tooling",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000007",
     recordNo: "PROCESS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Process Engineering",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000008",
     recordNo: "IT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "IT Support",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000009",
     recordNo: "FIRST-OFF",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "First-Off Approval",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_plan_andonType").insertMany([
   {
     _id: "1292000000000010",
     recordNo: "LOGISTICS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Logistics",

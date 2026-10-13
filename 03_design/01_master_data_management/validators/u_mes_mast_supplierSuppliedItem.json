@@ -14,6 +14,8 @@
         "sequenceNo",
         "suppliedItemId",
         "suppliedItemName",
+        "qualificationStatus",
+        "qualifiedUntilDate",
         "schemaVersion"
       ],
       "additionalProperties": false,
@@ -53,6 +55,22 @@
         "suppliedItemName": {
           "bsonType": "string",
           "description": "Display value of suppliedItemId, copied from u_mes_prod_item.description"
+        },
+        "qualificationStatus": {
+          "bsonType": "string",
+          "description": "Approval of the supplier for this item (GMP-40)",
+          "enum": [
+            "Qualified",
+            "Conditionally Approved",
+            "Disqualified"
+          ]
+        },
+        "qualifiedUntilDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last day of the supplier approval for the item"
         },
         "schemaVersion": {
           "bsonType": "int",

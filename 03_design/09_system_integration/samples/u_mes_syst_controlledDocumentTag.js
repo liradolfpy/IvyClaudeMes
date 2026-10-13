@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000001",
     recordNo: "DRW-5110-20-0105-B-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000001",
@@ -21,6 +22,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000002",
     recordNo: "DRW-5110-20-0105-B-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000001",
@@ -38,6 +40,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000003",
     recordNo: "SPC-VBS-HT-002-3-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000002",
@@ -55,6 +58,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000004",
     recordNo: "SPC-VBS-HT-002-3-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000002",
@@ -72,6 +76,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000005",
     recordNo: "DRW-5110-20-0110-C-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000003",
@@ -89,6 +94,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000006",
     recordNo: "DRW-5110-20-0110-C-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000003",
@@ -106,6 +112,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000007",
     recordNo: "INS-VBS-CL-001-2-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000004",
@@ -123,6 +130,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000008",
     recordNo: "INS-VBS-CL-001-2-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000004",
@@ -140,6 +148,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000009",
     recordNo: "SPC-VBS-AN-004-5-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000005",
@@ -157,6 +166,7 @@ db.getCollection("u_mes_syst_controlledDocumentTag").insertMany([
   {
     _id: "1247000000000010",
     recordNo: "SPC-VBS-AN-004-5-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlledDocumentId: "1246000000000005",

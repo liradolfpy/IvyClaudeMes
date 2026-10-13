@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 29 (26 required, 3 may be null) |
+| Keys | 32 (28 required, 4 may be null) |
 | Estimated volume per year | ~200,000 |
 | Storage | standard, immutable |
 
@@ -45,13 +45,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 20 | isSecondSignature | Boolean | - | Yes | True when the record is second signature | `false` |  |
 | 21 | witnessUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: witness user | `null` | Reference: u_mes_mast_user._id |
 | 22 | witnessUserName | String | - | No (null allowed) | Display value of witnessUserId, copied from u_mes_mast_user.fullName | `null` |  |
-| 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 24 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 25 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 26 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 27 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
-| 28 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 29 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 23 | signatureManifestationText | String | - | Yes | Printed name, date and time and meaning shown with the signed record (GMP-06) | `"Sunil Jadhav, 15 Sep 2026 06:00 IST, Approved"` |  |
+| 24 | signedRecordVersion | Int32 | - | No (null allowed) | Version of the record that was signed | `NumberInt(3)` |  |
+| 25 | isFirstSigningInSession | Boolean | - | Yes | True when both signature components were entered (first signing of a session) | `true` |  |
+| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
+| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Indexes
 
@@ -67,7 +70,7 @@ Every key is present in every document. "Required" means the value may not be nu
 
 ## Referenced by
 
-u_mes_qual_qualityHold, u_mes_syst_auditTrail, u_mes_plan_documentAcknowledgement, u_mes_plan_interlockEvent.
+u_mes_qual_qualityHold, u_mes_syst_auditTrail, u_mes_plan_documentAcknowledgement, u_mes_plan_interlockEvent, u_mes_syst_systemValidation, u_mes_syst_auditTrailReview, u_mes_bmr_batchRecordReview, u_mes_bmr_batchRelease, u_mes_plan_lineClearance, u_mes_maint_cleaningRecord, u_mes_maint_equipmentQualification.
 
 ## Files
 

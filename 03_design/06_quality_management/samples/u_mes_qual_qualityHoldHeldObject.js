@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000001",
     recordNo: "HLD-2026-000021-HO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000001",
@@ -26,6 +27,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000002",
     recordNo: "HLD-2026-000021-HO02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000001",
@@ -48,6 +50,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000003",
     recordNo: "HLD-2026-000023-HO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000002",
@@ -70,6 +73,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000004",
     recordNo: "HLD-2026-000023-HO02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000002",
@@ -92,6 +96,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000005",
     recordNo: "HLD-2026-000025-HO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000003",
@@ -114,6 +119,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000006",
     recordNo: "HLD-2026-000025-HO02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000003",
@@ -136,6 +142,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000007",
     recordNo: "HLD-2026-000027-HO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000004",
@@ -158,6 +165,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000008",
     recordNo: "HLD-2026-000027-HO02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000004",
@@ -180,6 +188,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000009",
     recordNo: "HLD-2026-000029-HO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000005",
@@ -202,6 +211,7 @@ db.getCollection("u_mes_qual_qualityHoldHeldObject").insertMany([
   {
     _id: "1173000000000010",
     recordNo: "HLD-2026-000029-HO02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     qualityHoldId: "1172000000000005",

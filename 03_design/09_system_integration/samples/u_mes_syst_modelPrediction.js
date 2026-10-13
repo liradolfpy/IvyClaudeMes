@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000001",
     recordNo: "PRD-20260915-05112",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000001",
@@ -45,6 +46,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000002",
     recordNo: "PRD-20260915-05119",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000005",
@@ -86,6 +88,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000003",
     recordNo: "PRD-20260918-05126",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000003",
@@ -127,6 +130,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000004",
     recordNo: "PRD-20260918-05133",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000004",
@@ -168,6 +172,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000005",
     recordNo: "PRD-20260921-05140",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000005",
@@ -209,6 +214,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000006",
     recordNo: "PRD-20260922-05147",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000006",
@@ -250,6 +256,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000007",
     recordNo: "PRD-20260922-05154",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000005",
@@ -291,6 +298,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000008",
     recordNo: "PRD-20260924-05161",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000007",
@@ -332,6 +340,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000009",
     recordNo: "PRD-20260924-05168",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000001",
@@ -373,6 +382,7 @@ db.getCollection("u_mes_syst_modelPrediction").insertMany([
   {
     _id: "1338000000000010",
     recordNo: "PRD-20260924-05175",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     analyticsModelId: "1337000000000004",

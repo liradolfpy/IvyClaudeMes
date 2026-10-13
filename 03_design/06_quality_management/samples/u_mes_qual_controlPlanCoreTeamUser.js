@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000001",
     recordNo: "CP-5110-10-0100-PROD-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000002",
     recordNo: "CP-5110-10-0200-PROD-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000003",
     recordNo: "CP-5110-20-0110-PROD-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000004",
     recordNo: "CP-5110-20-0105-PROD-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000005",
     recordNo: "CP-5110-10-0100-PRELAUNCH-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000006",
     recordNo: "CP-5110-10-0200-PRELAUNCH-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000007",
     recordNo: "CP-5110-20-0110-PRELAUNCH-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000008",
     recordNo: "CP-5110-20-0105-PRELAUNCH-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000009",
     recordNo: "CP-5110-10-0100-PROTO-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
   {
     _id: "1140000000000010",
     recordNo: "CP-5110-10-0100-SAFE-LAUNCH-CTU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     controlPlanId: "1139000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_qual_controlPlanCoreTeamUser").insertMany([
     sequenceNo: NumberInt(1),
     coreTeamUserId: "1029000000000004",
     coreTeamUserName: "Anita Kulkarni",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000011",
+    recordNo: "CP-FG-PCM500-B10-PROD-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000011",
+    controlPlanName: "CP-FG-PCM500-B10-PROD",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000012",
+    recordNo: "CP-FG-PCM500-H100-PROD-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000012",
+    controlPlanName: "CP-FG-PCM500-H100-PROD",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000013",
+    recordNo: "CP-BLK-PCM500-FCT-PROD-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000013",
+    controlPlanName: "CP-BLK-PCM500-FCT-PROD",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000014",
+    recordNo: "CP-BLK-PCM500-GRN-PROD-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000014",
+    controlPlanName: "CP-BLK-PCM500-GRN-PROD",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000015",
+    recordNo: "CP-FG-PCM500-B10-PRELAUNCH-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000015",
+    controlPlanName: "CP-FG-PCM500-B10-PRELAUNCH",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000016",
+    recordNo: "CP-FG-PCM500-H100-PRELAUNCH-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000016",
+    controlPlanName: "CP-FG-PCM500-H100-PRELAUNCH",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000017",
+    recordNo: "CP-BLK-PCM500-FCT-PRELAUNCH-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000017",
+    controlPlanName: "CP-BLK-PCM500-FCT-PRELAUNCH",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000018",
+    recordNo: "CP-BLK-PCM500-GRN-PRELAUNCH-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000018",
+    controlPlanName: "CP-BLK-PCM500-GRN-PRELAUNCH",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000019",
+    recordNo: "CP-FG-PCM500-B10-PROTO-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000019",
+    controlPlanName: "CP-FG-PCM500-B10-PROTO",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1140000000000020",
+    recordNo: "CP-FG-PCM500-B10-SAFE-LAUNCH-CTU01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    controlPlanId: "1139000000000020",
+    controlPlanName: "CP-FG-PCM500-B10-SAFE-LAUNCH",
+    sequenceNo: NumberInt(1),
+    coreTeamUserId: "1029000000000014",
+    coreTeamUserName: "Shalini Rao",
     schemaVersion: NumberInt(1)
   }
 ]);

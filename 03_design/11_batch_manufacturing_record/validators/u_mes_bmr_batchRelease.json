@@ -1,0 +1,245 @@
+{
+  "collMod": "u_mes_bmr_batchRelease",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_bmr_batchRelease",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "lotId",
+        "lotName",
+        "productionOrderId",
+        "productionOrderName",
+        "itemId",
+        "itemName",
+        "batchRecordReviewId",
+        "batchRecordReviewName",
+        "releaseQuantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "deviationPermitId",
+        "deviationPermitName",
+        "qualityHoldId",
+        "qualityHoldName",
+        "certificateControlledDocumentId",
+        "certificateControlledDocumentName",
+        "releasedById",
+        "releasedBy",
+        "releasedAt",
+        "electronicSignatureId",
+        "electronicSignatureName",
+        "decisionText",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "batchRecordReviewId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_batchRecordReview._id"
+        },
+        "batchRecordReviewName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of batchRecordReviewId, copied from u_mes_bmr_batchRecordReview.recordNo"
+        },
+        "releaseQuantity": {
+          "bsonType": "int",
+          "description": "Quantity covered by the decision"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "deviationPermitId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_deviationPermit._id"
+        },
+        "deviationPermitName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of deviationPermitId, copied from u_mes_qual_deviationPermit.title"
+        },
+        "qualityHoldId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_qualityHold._id"
+        },
+        "qualityHoldName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of qualityHoldId, copied from u_mes_qual_qualityHold.recordNo"
+        },
+        "certificateControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: certificate controlled document"
+        },
+        "certificateControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of certificateControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "releasedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'released'"
+        },
+        "releasedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in releasedById, copied from u_mes_mast_user.fullName"
+        },
+        "releasedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the decision"
+        },
+        "electronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id"
+        },
+        "electronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
+        },
+        "decisionText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Justification of the decision"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Pending",
+            "Released",
+            "Conditionally Released",
+            "Rejected"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

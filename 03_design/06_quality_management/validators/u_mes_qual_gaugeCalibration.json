@@ -75,7 +75,8 @@
             "Periodic",
             "After Repair",
             "After Shock Or Damage",
-            "Automatic Closed Loop"
+            "Automatic Closed Loop",
+            "Daily Performance Check"
           ]
         },
         "calibratedAt": {

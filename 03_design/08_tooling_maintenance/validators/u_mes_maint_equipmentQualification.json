@@ -1,0 +1,242 @@
+{
+  "collMod": "u_mes_maint_equipmentQualification",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_equipmentQualification",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "equipmentId",
+        "equipmentName",
+        "qualificationPhase",
+        "engineeringChangeId",
+        "engineeringChangeName",
+        "protocolControlledDocumentId",
+        "protocolControlledDocumentName",
+        "reportControlledDocumentId",
+        "reportControlledDocumentName",
+        "testCaseCount",
+        "testFailedCount",
+        "openDeviationCount",
+        "executedById",
+        "executedBy",
+        "startedAt",
+        "completedAt",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "electronicSignatureId",
+        "electronicSignatureName",
+        "requalificationDueDate",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "qualificationPhase": {
+          "bsonType": "string",
+          "description": "Phase",
+          "enum": [
+            "Design Qualification",
+            "Installation Qualification",
+            "Operational Qualification",
+            "Performance Qualification",
+            "Periodic Requalification"
+          ]
+        },
+        "engineeringChangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_engineeringChange._id"
+        },
+        "engineeringChangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title"
+        },
+        "protocolControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: protocol controlled document"
+        },
+        "protocolControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of protocolControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "reportControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: report controlled document"
+        },
+        "reportControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of reportControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "testCaseCount": {
+          "bsonType": "int",
+          "description": "Tests executed"
+        },
+        "testFailedCount": {
+          "bsonType": "int",
+          "description": "Tests failed"
+        },
+        "openDeviationCount": {
+          "bsonType": "int",
+          "description": "Deviations still open"
+        },
+        "executedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'executed'"
+        },
+        "executedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in executedById, copied from u_mes_mast_user.fullName"
+        },
+        "startedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Start of execution"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of execution"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Approval time"
+        },
+        "electronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id"
+        },
+        "electronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
+        },
+        "requalificationDueDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date the next requalification is due"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Planned",
+            "In Execution",
+            "Passed",
+            "Failed",
+            "Approved"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

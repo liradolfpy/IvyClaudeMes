@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000001",
     recordNo: "SP-004417",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner",
@@ -32,6 +33,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000002",
     recordNo: "SP-002108",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Heater element 6 kW, solution furnace",
@@ -60,6 +62,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000003",
     recordNo: "SP-003355",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Boring insert CCGT 09T304, PCD",
@@ -88,6 +91,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000004",
     recordNo: "SP-001920",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Bag filter 50 micrometre, washer",
@@ -116,6 +120,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000005",
     recordNo: "SP-005012",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Cooling fan 230 V, rectifier cabinet",
@@ -144,6 +149,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000006",
     recordNo: "SP-004630",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Test seal set, 54 mm bore, leak tester",
@@ -172,6 +178,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000007",
     recordNo: "SP-006201",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Protective lens, laser marker",
@@ -200,6 +207,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000008",
     recordNo: "SP-006744",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Camera cable 5 m, vision station",
@@ -228,6 +236,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000009",
     recordNo: "SP-001033",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Ejector pin dia 8 x 200 mm, die 2",
@@ -256,6 +265,7 @@ db.getCollection("u_mes_maint_sparePart").insertMany([
   {
     _id: "1224000000000010",
     recordNo: "SP-003901",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     description: "Servo drive, assembly press",

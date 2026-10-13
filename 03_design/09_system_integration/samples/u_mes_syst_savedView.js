@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000001",
     recordNo: "VIEW-10045-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "OEE by shift, assembly line 1, last 7 days",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000002",
     recordNo: "VIEW-10045-002",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Downtime Pareto, assembly line 1, this week",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000003",
     recordNo: "VIEW-10019-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Best and worst lines by OEE, this month",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000004",
     recordNo: "VIEW-10087-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak test rejects by variant",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000005",
     recordNo: "VIEW-10087-002",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Open nonconformances older than 24 hours",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000006",
     recordNo: "VIEW-10112-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "MTBF and MTTR by equipment, this quarter",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000007",
     recordNo: "VIEW-10150-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Line-side stock cover, assembly line 1",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000008",
     recordNo: "VIEW-QUAL-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Defects by first-fail station and 4M category",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000009",
     recordNo: "VIEW-PROD-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Hourly output against plan, all lines",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_syst_savedView").insertMany([
   {
     _id: "1341000000000010",
     recordNo: "VIEW-MAINT-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Overdue preventive maintenance",

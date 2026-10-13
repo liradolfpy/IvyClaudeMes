@@ -6,7 +6,7 @@
 | 2 | u_mes_mast_enterpriseContact | Child | master | 12 | 10 | 0 | 1 |
 | 3 | u_mes_mast_site | Entity | master | 30 | 27 | 2 | 7 |
 | 4 | u_mes_mast_siteCertificate | Child | master | 12 | 11 | 0 | 1 |
-| 5 | u_mes_mast_area | Entity | master | 17 | 11 | 2 | 5 |
+| 5 | u_mes_mast_area | Entity | master | 20 | 14 | 3 | 5 |
 | 6 | u_mes_mast_line | Entity | master | 22 | 16 | 2 | 7 |
 | 7 | u_mes_mast_lineDefaultShift | Relationship | master | 10 | 10 | 0 | 2 |
 | 8 | u_mes_mast_lineIdealRate | Child | master | 12 | 12 | 0 | 2 |
@@ -14,7 +14,7 @@
 | 10 | u_mes_mast_workCenterEquipment | Relationship | master | 10 | 10 | 0 | 2 |
 | 11 | u_mes_mast_workCenterOperation | Relationship | master | 10 | 10 | 0 | 2 |
 | 12 | u_mes_mast_workCenterRequiresSkill | Relationship | master | 10 | 10 | 0 | 2 |
-| 13 | u_mes_mast_equipment | Entity | master | 47 | 36 | 6 | 7 |
+| 13 | u_mes_mast_equipment | Entity | master | 53 | 38 | 8 | 7 |
 | 14 | u_mes_mast_equipmentIotDevice | Relationship | master | 10 | 10 | 0 | 2 |
 | 15 | u_mes_mast_shift | Entity | master | 14 | 14 | 1 | 2 |
 | 16 | u_mes_mast_shiftBreak | Child | master | 12 | 12 | 0 | 1 |
@@ -30,7 +30,7 @@
 | 26 | u_mes_mast_role | Entity | master | 12 | 11 | 2 | 2 |
 | 27 | u_mes_mast_rolePermission | Relationship | master | 10 | 10 | 0 | 2 |
 | 28 | u_mes_mast_roleSignatureMeaning | Relationship | master | 10 | 10 | 0 | 2 |
-| 29 | u_mes_mast_user | Entity | master | 33 | 24 | 2 | 9 |
+| 29 | u_mes_mast_user | Entity | master | 35 | 24 | 2 | 9 |
 | 30 | u_mes_mast_userRole | Relationship | master | 10 | 10 | 0 | 2 |
 | 31 | u_mes_mast_skill | Entity | master | 16 | 14 | 2 | 4 |
 | 32 | u_mes_mast_skillOperation | Relationship | master | 10 | 10 | 0 | 2 |
@@ -42,7 +42,7 @@
 | 38 | u_mes_mast_supplier | Entity | master | 26 | 25 | 2 | 5 |
 | 39 | u_mes_mast_supplierContact | Child | master | 12 | 10 | 1 | 1 |
 | 40 | u_mes_mast_supplierCertificate | Child | master | 11 | 10 | 0 | 1 |
-| 41 | u_mes_mast_supplierSuppliedItem | Relationship | master | 10 | 10 | 0 | 2 |
+| 41 | u_mes_mast_supplierSuppliedItem | Relationship | master | 12 | 11 | 1 | 2 |
 | 42 | u_mes_mast_unitOfMeasure | Entity | master | 17 | 14 | 3 | 3 |
 | 43 | u_mes_mast_department | Entity | master | 15 | 11 | 1 | 5 |
 | 44 | u_mes_mast_designation | Entity | master | 13 | 13 | 1 | 3 |

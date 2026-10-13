@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000001",
     recordNo: "UT-GAUGE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Ultrasonic Thickness Gauge",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000002",
     recordNo: "HARDNESS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Hardness Tester",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000003",
     recordNo: "BORE-GAUGE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Bore Gauge",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000004",
     recordNo: "MICROSCOPE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Microscope",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000005",
     recordNo: "COATING",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Coating Thickness Tester",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000006",
     recordNo: "HEIGHT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Height Gauge",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000007",
     recordNo: "TORQUE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Torque Analyser",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000008",
     recordNo: "PRESSURE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Pressure Calibrator",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000009",
     recordNo: "DEPTH",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Depth Gauge",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_qual_gaugeType").insertMany([
   {
     _id: "1283000000000010",
     recordNo: "CMM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Coordinate Measuring Machine",
     description: "Coordinate Measuring Machine (CMM)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000011",
+    recordNo: "PLATFORM-BAL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Platform Balance",
+    description: "Platform Balance (PLATFORM-BAL)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000012",
+    recordNo: "TIMER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Timer",
+    description: "Timer (TIMER)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000013",
+    recordNo: "MOISTURE",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Moisture Analyser",
+    description: "Moisture Analyser (MOISTURE)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000014",
+    recordNo: "HPLC",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "HPLC System",
+    description: "HPLC System (HPLC)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000015",
+    recordNo: "ANALYTICAL-BAL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Analytical Balance",
+    description: "Analytical Balance (ANALYTICAL-BAL)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000016",
+    recordNo: "TOPPAN-BAL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Top-pan Balance",
+    description: "Top-pan Balance (TOPPAN-BAL)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000017",
+    recordNo: "TORQUE",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Torque Tester",
+    description: "Torque Tester (TORQUE)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000018",
+    recordNo: "LEAK-TESTER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Leak Tester",
+    description: "Leak Tester (LEAK-TESTER)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000019",
+    recordNo: "CODE-VERIFIER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Code Verifier",
+    description: "Code Verifier (CODE-VERIFIER)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1283000000000020",
+    recordNo: "HARDNESS",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Hardness Tester",
+    description: "Hardness Tester (HARDNESS)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

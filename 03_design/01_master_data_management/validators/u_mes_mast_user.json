@@ -36,6 +36,8 @@
         "failedLoginCount",
         "passwordChangedAt",
         "isLocked",
+        "lastAccessReviewDate",
+        "passwordExpiryDate",
         "status",
         "schemaVersion"
       ],
@@ -196,6 +198,20 @@
         "isLocked": {
           "bsonType": "bool",
           "description": "True when the record is locked"
+        },
+        "lastAccessReviewDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date of the last access review of the account (GMP-07)"
+        },
+        "passwordExpiryDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date the password expires"
         },
         "status": {
           "bsonType": "string",

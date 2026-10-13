@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000001",
     recordNo: "U260915A0184-CS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000001",
@@ -21,6 +22,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000002",
     recordNo: "U260915A0184-CS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000001",
@@ -38,6 +40,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000003",
     recordNo: "U260915A0197-CS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000002",
@@ -55,6 +58,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000004",
     recordNo: "U260915A0197-CS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000002",
@@ -72,6 +76,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000005",
     recordNo: "U260915B0210-CS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000003",
@@ -89,6 +94,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000006",
     recordNo: "U260915B0210-CS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000003",
@@ -106,6 +112,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000007",
     recordNo: "U260915B0223-CS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000004",
@@ -123,6 +130,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000008",
     recordNo: "U260915B0223-CS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000004",
@@ -140,6 +148,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000009",
     recordNo: "U260918B0236-CS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000005",
@@ -157,6 +166,7 @@ db.getCollection("u_mes_plan_wipUnitCompletedStep").insertMany([
   {
     _id: "1095000000000010",
     recordNo: "U260918B0236-CS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     wipUnitId: "1094000000000005",

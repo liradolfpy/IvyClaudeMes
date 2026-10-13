@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000001",
     recordNo: "CAPA-2026-0014-TM01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000001",
@@ -23,6 +24,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000002",
     recordNo: "CAPA-2026-0014-TM02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000001",
@@ -42,6 +44,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000003",
     recordNo: "CAPA-2026-0015-TM01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000002",
@@ -61,6 +64,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000004",
     recordNo: "CAPA-2026-0015-TM02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000002",
@@ -80,6 +84,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000005",
     recordNo: "CAPA-2026-0016-TM01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000003",
@@ -99,6 +104,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000006",
     recordNo: "CAPA-2026-0016-TM02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000003",
@@ -118,6 +124,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000007",
     recordNo: "CAPA-2026-0017-TM01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000004",
@@ -137,6 +144,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000008",
     recordNo: "CAPA-2026-0017-TM02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000004",
@@ -156,6 +164,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000009",
     recordNo: "CAPA-2026-0018-TM01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000005",
@@ -175,6 +184,7 @@ db.getCollection("u_mes_qual_capaTeamMember").insertMany([
   {
     _id: "1178000000000010",
     recordNo: "CAPA-2026-0018-TM02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     capaId: "1176000000000005",

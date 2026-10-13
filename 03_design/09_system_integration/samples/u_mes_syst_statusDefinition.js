@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000001",
     recordNo: "productionOrder.CREATED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -21,6 +22,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000002",
     recordNo: "productionOrder.RELEASED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -38,6 +40,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000003",
     recordNo: "productionOrder.IN_PROGRESS",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -55,6 +58,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000004",
     recordNo: "productionOrder.ON_HOLD",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -72,6 +76,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000005",
     recordNo: "productionOrder.COMPLETED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -89,6 +94,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000006",
     recordNo: "productionOrder.CLOSED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -106,6 +112,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000007",
     recordNo: "productionOrder.CANCELLED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_productionOrder",
@@ -123,6 +130,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000008",
     recordNo: "wipUnit.CREATED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_wipUnit",
@@ -140,6 +148,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000009",
     recordNo: "wipUnit.IN_PROCESS",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_wipUnit",
@@ -157,6 +166,7 @@ db.getCollection("u_mes_syst_statusDefinition").insertMany([
   {
     _id: "1297000000000010",
     recordNo: "wipUnit.ON_HOLD",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     collectionName: "u_mes_plan_wipUnit",

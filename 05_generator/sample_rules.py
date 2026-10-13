@@ -416,3 +416,7 @@ Nothing was added to or removed from any collection. These points were noticed w
 # ---- external requirement set 01 (D036-D042): sample rules for the new collections and keys
 import ext_req01_samples as _EXT01
 _EXT01.apply(globals())
+
+# ---- requirement set GMP_Pharma_01 (D047-D053): sample rules for the new collections and keys
+import gmp01_samples as _GMP01
+_GMP01.apply(globals())

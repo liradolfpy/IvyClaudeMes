@@ -76,7 +76,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_prod_billOfProcessStep, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_syst_operatorAppStep, u_mes_qual_inspectionPlanProductVariant.
+u_mes_prod_billOfProcessStep, u_mes_qual_inspectionPlanLine, u_mes_qual_inspectionResult, u_mes_syst_operatorAppStep, u_mes_qual_inspectionPlanProductVariant, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

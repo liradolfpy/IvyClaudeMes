@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000001",
     recordNo: "BKP-20260915-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -29,6 +30,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000002",
     recordNo: "BKP-20260916-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -54,6 +56,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000003",
     recordNo: "BKP-20260917-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -79,6 +82,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000004",
     recordNo: "BKP-20260918-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -104,6 +108,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000005",
     recordNo: "BKP-20260919-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -129,6 +134,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000006",
     recordNo: "BKP-20260920-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Full Backup",
@@ -154,6 +160,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000007",
     recordNo: "BKP-20260920-02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Restore Test",
@@ -179,6 +186,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000008",
     recordNo: "BKP-20260921-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -204,6 +212,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000009",
     recordNo: "BKP-20260922-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Incremental Backup",
@@ -229,6 +238,7 @@ db.getCollection("u_mes_syst_backupRun").insertMany([
   {
     _id: "1342000000000010",
     recordNo: "BKP-20260927-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     runType: "Failover Test",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000001",
     recordNo: "AUD-2026-0931-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000001",
@@ -29,6 +30,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000002",
     recordNo: "AUD-2026-0931-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000001",
@@ -54,6 +56,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000003",
     recordNo: "AUD-2026-0932-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000002",
@@ -79,6 +82,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000004",
     recordNo: "AUD-2026-0932-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000002",
@@ -104,6 +108,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000005",
     recordNo: "AUD-2026-0933-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000003",
@@ -129,6 +134,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000006",
     recordNo: "AUD-2026-0933-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000003",
@@ -154,6 +160,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000007",
     recordNo: "AUD-2026-0934-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000004",
@@ -179,6 +186,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000008",
     recordNo: "AUD-2026-0934-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000004",
@@ -204,6 +212,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000009",
     recordNo: "AUD-2026-0935-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000005",
@@ -229,6 +238,7 @@ db.getCollection("u_mes_qual_auditFinding").insertMany([
   {
     _id: "1197000000000010",
     recordNo: "AUD-2026-0935-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     auditId: "1195000000000005",

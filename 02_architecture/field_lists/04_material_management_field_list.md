@@ -838,3 +838,51 @@ Kind: relationship | Data class: master | Parent: u_mes_matl_storageLocation | _
 | 10 | itemGroupId | String | - | u_mes_prod_itemGroup._id |
 | 11 | itemGroupName | String | - |  |
 | 12 | schemaVersion | Int32 | - |  |
+
+## u_mes_matl_dispenseRecord
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 6 | productionOrderName | String | - |  |
+| 7 | itemId | String | - | u_mes_prod_item._id |
+| 8 | itemName | String | - |  |
+| 9 | lotId | String | - | u_mes_plan_lot._id |
+| 10 | lotName | String | - |  |
+| 11 | dispenseMethod | String | - |  |
+| 12 | targetWeight | Decimal128 | - |  |
+| 13 | tolerancePct | Decimal128 | - |  |
+| 14 | tareWeight | Decimal128 | - |  |
+| 15 | grossWeight | Decimal128 | - |  |
+| 16 | netWeight | Decimal128 | - |  |
+| 17 | unitOfMeasureId | String | - | u_mes_mast_unitOfMeasure._id |
+| 18 | unitOfMeasureName | String | - |  |
+| 19 | pieceCount | Int32 | - |  |
+| 20 | withinTolerance | Boolean | - |  |
+| 21 | balanceGaugeId | String | - | u_mes_qual_gauge._id |
+| 22 | balanceGaugeName | String | - |  |
+| 23 | storageLocationId | String | - | u_mes_matl_storageLocation._id |
+| 24 | storageLocationName | String | - |  |
+| 25 | dispensedById | String | - | u_mes_mast_user._id |
+| 26 | dispensedBy | String | - |  |
+| 27 | dispensedAt | Date | Datetime |  |
+| 28 | verificationMethod | String | - |  |
+| 29 | verifiedById | String | - | u_mes_mast_user._id |
+| 30 | verifiedBy | String | - |  |
+| 31 | verifiedAt | Date | Datetime |  |
+| 32 | labelId | String | - | u_mes_matl_label._id |
+| 33 | labelName | String | - |  |
+| 34 | status | String | - |  |
+| 35 | schemaVersion | Int32 | - |  |
+| 36 | createdAt | Date | Datetime |  |
+| 37 | createdById | String | - | u_mes_mast_user._id |
+| 38 | createdBy | String | - |  |
+| 39 | updatedAt | Date | Datetime |  |
+| 40 | updatedById | String | - | u_mes_mast_user._id |
+| 41 | updatedBy | String | - |  |

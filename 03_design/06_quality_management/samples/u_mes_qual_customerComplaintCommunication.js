@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000001",
     recordNo: "CMP-2026-0004-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000001",
@@ -25,6 +26,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000002",
     recordNo: "CMP-2026-0004-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000001",
@@ -46,6 +48,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000003",
     recordNo: "CMP-2026-0005-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000002",
@@ -67,6 +70,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000004",
     recordNo: "CMP-2026-0005-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000002",
@@ -88,6 +92,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000005",
     recordNo: "CMP-2026-0006-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000003",
@@ -109,6 +114,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000006",
     recordNo: "CMP-2026-0006-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000003",
@@ -130,6 +136,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000007",
     recordNo: "CMP-2026-0007-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000004",
@@ -151,6 +158,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000008",
     recordNo: "CMP-2026-0007-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000004",
@@ -172,6 +180,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000009",
     recordNo: "CMP-2026-0008-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000005",
@@ -193,6 +202,7 @@ db.getCollection("u_mes_qual_customerComplaintCommunication").insertMany([
   {
     _id: "1202000000000010",
     recordNo: "CMP-2026-0008-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     customerComplaintId: "1198000000000005",

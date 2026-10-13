@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000001",
     recordNo: "SP-004417-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000002",
     recordNo: "SP-002108-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000003",
     recordNo: "SP-003355-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000004",
     recordNo: "SP-001920-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000005",
     recordNo: "SP-005012-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000006",
     recordNo: "SP-004630-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000007",
     recordNo: "SP-006201-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000008",
     recordNo: "SP-006744-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000009",
     recordNo: "SP-001033-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_maint_sparePartUsedOnEquipment").insertMany([
   {
     _id: "1225000000000010",
     recordNo: "SP-003901-UOE01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sparePartId: "1224000000000010",

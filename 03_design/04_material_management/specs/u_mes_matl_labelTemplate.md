@@ -63,7 +63,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_mast_customer, u_mes_matl_packagingSpecification, u_mes_matl_labelTemplateField, u_mes_matl_label.
+u_mes_mast_customer, u_mes_matl_packagingSpecification, u_mes_matl_labelTemplateField, u_mes_matl_label, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

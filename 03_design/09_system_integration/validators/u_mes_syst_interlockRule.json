@@ -85,7 +85,12 @@
             "Calibration Check",
             "Environment Check",
             "Setup Check",
-            "Alarm Restart"
+            "Alarm Restart",
+            "Line Clearance Check",
+            "Batch Release Check",
+            "Equipment Clean Status Check",
+            "Qualification Status Check",
+            "Dispense Tolerance Check"
           ]
         },
         "transactionPoint": {

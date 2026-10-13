@@ -1,13 +1,13 @@
 # Collection type matrix
 
-Model version 2.6 | 12 October 2026 | 343 collections (178 entity, 82 child, 75 relationship, 8 value-list), 7383 keys
+Model version 2.9 | 12 October 2026 | 369 collections (200 entity, 85 child, 76 relationship, 8 value-list), 8245 keys
 
 Type of each collection and the label used for it in the UI menu. A child, relationship or value-list collection has the type of the entity it belongs to; its label starts with the parent's name, because it is opened from the parent's screen.
 
 | Type | Meaning | Collections |
 |---|---|---|
-| Master | Reference data that changes rarely and is maintained by the plant | 183 |
-| Transaction | Business records created by daily operations | 139 |
+| Master | Reference data that changes rarely and is maintained by the plant | 187 |
+| Transaction | Business records created by daily operations | 161 |
 | Reports | Pre-aggregated or assembled records built from transactions for reporting | 12 |
 | Telemetry | Machine-generated, time-ordered signals and states | 5 |
 | Audit Trail | Append-only records of who did or changed what | 4 |
@@ -18,14 +18,16 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 |---|---|---|---|---|---|---|---|
 | mast | Master Data Management | 54 | 3 | 0 | 0 | 0 | 57 |
 | prod | Product Definition | 44 | 5 | 0 | 0 | 0 | 49 |
-| plan | Planning and Execution | 3 | 39 | 0 | 0 | 0 | 42 |
-| matl | Material Management | 10 | 15 | 1 | 0 | 0 | 26 |
+| plan | Planning and Execution | 3 | 40 | 0 | 0 | 0 | 43 |
+| matl | Material Management | 10 | 16 | 1 | 0 | 0 | 27 |
 | trac | Traceability | 0 | 5 | 4 | 0 | 0 | 9 |
-| qual | Quality Management | 28 | 48 | 0 | 1 | 0 | 77 |
+| qual | Quality Management | 29 | 55 | 0 | 1 | 0 | 85 |
 | perf | Performance Management | 6 | 5 | 6 | 4 | 0 | 21 |
-| maint | Tooling & Maintenance | 9 | 8 | 1 | 0 | 0 | 18 |
-| syst | System and Integration | 26 | 8 | 0 | 0 | 4 | 38 |
+| maint | Tooling & Maintenance | 9 | 11 | 1 | 0 | 0 | 21 |
+| syst | System and Integration | 27 | 13 | 0 | 0 | 4 | 44 |
 | ehs | Environment Health and Safety | 3 | 3 | 0 | 0 | 0 | 6 |
+| bmr | Batch Manufacturing Record | 0 | 5 | 0 | 0 | 0 | 5 |
+| mmr | Master Manufacturing Record | 2 | 0 | 0 | 0 | 0 | 2 |
 
 ## Matrix
 
@@ -179,6 +181,7 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | plan | Planning and Execution | u_mes_plan_recipeDownload | Transaction | Recipe Downloads |
 | plan | Planning and Execution | u_mes_plan_setupVerification | Transaction | Setup Verifications |
 | plan | Planning and Execution | u_mes_plan_setupVerificationItem | Transaction | Setup Verification Items |
+| plan | Planning and Execution | u_mes_plan_lineClearance | Transaction | Line Clearances |
 | matl | Material Management | u_mes_matl_storageLocation | Master | Storage Locations |
 | matl | Material Management | u_mes_matl_inventoryBalance | Transaction | Inventory Balances |
 | matl | Material Management | u_mes_matl_materialMovement | Transaction | Material Movements |
@@ -205,6 +208,7 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | matl | Material Management | u_mes_matl_replenishmentRule | Master | Replenishment Rules |
 | matl | Material Management | u_mes_matl_materialDemandForecast | Reports | Material Demand Forecast |
 | matl | Material Management | u_mes_matl_storageLocationAllowedItem | Master | Storage Allowed Items |
+| matl | Material Management | u_mes_matl_dispenseRecord | Transaction | Dispense Records |
 | trac | Traceability | u_mes_trac_serialNumber | Transaction | Serial Numbers |
 | trac | Traceability | u_mes_trac_genealogyLink | Transaction | Genealogy Links |
 | trac | Traceability | u_mes_trac_componentLotLink | Transaction | Component Lot Links |
@@ -291,6 +295,14 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | qual | Quality Management | u_mes_qual_defectRecord | Transaction | Defect Records |
 | qual | Quality Management | u_mes_qual_auditSchedule | Master | Audit Schedules |
 | qual | Quality Management | u_mes_qual_inspectionPlanProductVariant | Master | Inspection Plan Variants |
+| qual | Quality Management | u_mes_qual_environmentalMonitoringPoint | Master | Environmental Monitoring Points |
+| qual | Quality Management | u_mes_qual_environmentalMonitoringResult | Transaction | Environmental Monitoring Results |
+| qual | Quality Management | u_mes_qual_retentionSample | Transaction | Retention Samples |
+| qual | Quality Management | u_mes_qual_riskAssessment | Transaction | Quality Risk Assessments |
+| qual | Quality Management | u_mes_qual_productQualityReview | Transaction | Product Quality Reviews |
+| qual | Quality Management | u_mes_qual_productRecall | Transaction | Product Recalls |
+| qual | Quality Management | u_mes_qual_productRecallLot | Transaction | Recall Lots |
+| qual | Quality Management | u_mes_qual_processValidation | Transaction | Process Validations |
 | perf | Performance Management | u_mes_perf_reasonCode | Master | Reason Codes |
 | perf | Performance Management | u_mes_perf_equipmentState | Telemetry | Equipment States |
 | perf | Performance Management | u_mes_perf_downtimeEvent | Transaction | Downtime Events |
@@ -330,6 +342,9 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | maint | Tooling & Maintenance | u_mes_maint_sparePartTransaction | Transaction | Spare Part Transactions |
 | maint | Tooling & Maintenance | u_mes_maint_reliabilitySummary | Reports | Reliability Summary |
 | maint | Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | Transaction | Equipment Lifecycle |
+| maint | Tooling & Maintenance | u_mes_maint_logbookEntry | Transaction | Equipment and Area Logbook |
+| maint | Tooling & Maintenance | u_mes_maint_cleaningRecord | Transaction | Cleaning Records |
+| maint | Tooling & Maintenance | u_mes_maint_equipmentQualification | Transaction | Equipment Qualifications |
 | syst | System and Integration | u_mes_syst_erpMessage | Transaction | ERP Messages |
 | syst | System and Integration | u_mes_syst_integrationConnector | Master | Integration Connectors |
 | syst | System and Integration | u_mes_syst_integrationConnectorFunction | Master | Integration Connector Functions |
@@ -368,9 +383,22 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | syst | System and Integration | u_mes_syst_recordPolicy | Master | Record Policies |
 | syst | System and Integration | u_mes_syst_savedView | Master | Saved Views |
 | syst | System and Integration | u_mes_syst_backupRun | Transaction | Backup and Restore Runs |
+| syst | System and Integration | u_mes_syst_computerisedSystem | Master | Computerised Systems |
+| syst | System and Integration | u_mes_syst_systemValidation | Transaction | System Validations |
+| syst | System and Integration | u_mes_syst_systemPeriodicReview | Transaction | System Periodic Reviews |
+| syst | System and Integration | u_mes_syst_auditTrailReview | Transaction | Audit Trail Reviews |
+| syst | System and Integration | u_mes_syst_userAccessReview | Transaction | User Access Reviews |
+| syst | System and Integration | u_mes_syst_userAccessReviewLine | Transaction | User Access Review Lines |
 | ehs | Environment Health and Safety | u_mes_ehs_safetyIncident | Transaction | Safety Incidents |
 | ehs | Environment Health and Safety | u_mes_ehs_safetyIncidentWitnessUser | Transaction | Safety Incident Witnesses |
 | ehs | Environment Health and Safety | u_mes_ehs_safetyIncidentAction | Transaction | Safety Incident Actions |
 | ehs | Environment Health and Safety | u_mes_ehs_incidentType | Master | Incident Types |
 | ehs | Environment Health and Safety | u_mes_ehs_bodyPart | Master | Body Parts |
 | ehs | Environment Health and Safety | u_mes_ehs_injuryType | Master | Injury Types |
+| bmr | Batch Manufacturing Record | u_mes_bmr_batchRecordReview | Transaction | Batch Record Reviews |
+| bmr | Batch Manufacturing Record | u_mes_bmr_batchRecordReviewException | Transaction | Batch Record Review Exceptions |
+| bmr | Batch Manufacturing Record | u_mes_bmr_batchRelease | Transaction | Batch Releases |
+| bmr | Batch Manufacturing Record | u_mes_bmr_yieldReconciliation | Transaction | Yield and Reconciliation |
+| bmr | Batch Manufacturing Record | u_mes_bmr_batchManufacturingRecord | Transaction | Batch Manufacturing Records |
+| mmr | Master Manufacturing Record | u_mes_mmr_masterManufacturingRecord | Master | Master Manufacturing Records |
+| mmr | Master Manufacturing Record | u_mes_mmr_masterManufacturingRecordRecipe | Master | Master Record Recipes |

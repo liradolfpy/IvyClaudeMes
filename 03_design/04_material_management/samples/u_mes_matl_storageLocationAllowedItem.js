@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000001",
     recordNo: "LS-ASY-01-AI01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000006",
@@ -18,6 +19,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000002",
     recordNo: "LS-ASY-01-AI02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000006",
@@ -32,6 +34,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000003",
     recordNo: "LS-ASY-01-AI03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000006",
@@ -46,6 +49,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000004",
     recordNo: "LS-ASY-01-AI04",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000006",
@@ -60,6 +64,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000005",
     recordNo: "LS-ASY-01-AI05",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000006",
@@ -74,6 +79,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000006",
     recordNo: "LS-MC-01-AI01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000005",
@@ -88,6 +94,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000007",
     recordNo: "LS-FDY-01-AI01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000004",
@@ -102,6 +109,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000008",
     recordNo: "WH-RM-01-AI01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000001",
@@ -116,6 +124,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000009",
     recordNo: "FG-R01-AI01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000008",
@@ -130,6 +139,7 @@ db.getCollection("u_mes_matl_storageLocationAllowedItem").insertMany([
   {
     _id: "1343000000000010",
     recordNo: "QA-CAGE-01-AI01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     storageLocationId: "1112000000000007",

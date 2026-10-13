@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000001",
     recordNo: "PPAP-5110-10-0100-D-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",
@@ -41,6 +42,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000002",
     recordNo: "PPAP-5110-10-0200-D-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000002",
@@ -78,6 +80,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000003",
     recordNo: "PPAP-5110-20-0110-C-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000003",
@@ -115,6 +118,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000004",
     recordNo: "PPAP-5110-20-0105-B-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000004",
@@ -152,6 +156,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000005",
     recordNo: "PPAP-5110-10-0100-D-02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",
@@ -189,6 +194,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000006",
     recordNo: "PPAP-5110-10-0200-D-02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000002",
@@ -226,6 +232,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000007",
     recordNo: "PPAP-5110-20-0110-C-02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000003",
@@ -263,6 +270,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000008",
     recordNo: "PPAP-5110-20-0105-B-02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000004",
@@ -300,6 +308,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000009",
     recordNo: "PPAP-5110-10-0100-D-03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",
@@ -337,6 +346,7 @@ db.getCollection("u_mes_qual_ppapSubmission").insertMany([
   {
     _id: "1186000000000010",
     recordNo: "PPAP-5110-10-0100-D-04",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",

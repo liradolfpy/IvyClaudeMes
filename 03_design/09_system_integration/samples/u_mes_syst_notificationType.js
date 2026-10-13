@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000001",
     recordNo: "ANDON-ESC",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Andon Escalation",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000002",
     recordNo: "QUAL-ALERT",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Quality Alert",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000003",
     recordNo: "MNT-DUE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Maintenance Due",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000004",
     recordNo: "CAL-DUE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Calibration Due",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000005",
     recordNo: "ORDER-LATE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Order Late",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000006",
     recordNo: "IF-FAIL",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Interface Failure",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000007",
     recordNo: "CERT-EXP",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Certification Expiring",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000008",
     recordNo: "TOOL-LIFE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Tool Life Warning",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000009",
     recordNo: "HOLD-PLACED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Quality Hold Placed",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_syst_notificationType").insertMany([
   {
     _id: "1291000000000010",
     recordNo: "SPC-VIOL",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "SPC Rule Violation",

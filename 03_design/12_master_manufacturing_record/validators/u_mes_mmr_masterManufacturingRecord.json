@@ -1,0 +1,363 @@
+{
+  "collMod": "u_mes_mmr_masterManufacturingRecord",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_mmr_masterManufacturingRecord",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "itemId",
+        "itemName",
+        "itemRevisionId",
+        "itemRevisionName",
+        "productVariantId",
+        "productVariantName",
+        "version",
+        "previousMasterManufacturingRecordId",
+        "previousMasterManufacturingRecordName",
+        "billOfMaterialId",
+        "billOfMaterialName",
+        "routingId",
+        "routingName",
+        "billOfProcessId",
+        "billOfProcessName",
+        "controlPlanId",
+        "controlPlanName",
+        "inspectionPlanId",
+        "inspectionPlanName",
+        "packagingSpecificationId",
+        "packagingSpecificationName",
+        "labelTemplateId",
+        "labelTemplateName",
+        "processValidationId",
+        "processValidationName",
+        "controlledDocumentId",
+        "controlledDocumentName",
+        "engineeringChangeId",
+        "engineeringChangeName",
+        "changeReasonText",
+        "standardBatchSize",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "theoreticalQuantity",
+        "lowerLimitPct",
+        "upperLimitPct",
+        "effectiveFrom",
+        "effectiveTo",
+        "authoredById",
+        "authoredBy",
+        "reviewedById",
+        "reviewedBy",
+        "reviewedAt",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title of the master record"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "itemRevisionId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_itemRevision._id"
+        },
+        "itemRevisionName": {
+          "bsonType": "string",
+          "description": "Display value of itemRevisionId, copied from u_mes_prod_itemRevision.recordNo"
+        },
+        "productVariantId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_productVariant._id"
+        },
+        "productVariantName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productVariantId, copied from u_mes_prod_productVariant.name"
+        },
+        "version": {
+          "bsonType": "int",
+          "description": "Version of the master record"
+        },
+        "previousMasterManufacturingRecordId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mmr_masterManufacturingRecord._id: previous master manufacturing record"
+        },
+        "previousMasterManufacturingRecordName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of previousMasterManufacturingRecordId, copied from u_mes_mmr_masterManufacturingRecord.title"
+        },
+        "billOfMaterialId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_billOfMaterial._id"
+        },
+        "billOfMaterialName": {
+          "bsonType": "string",
+          "description": "Display value of billOfMaterialId, copied from u_mes_prod_billOfMaterial.recordNo"
+        },
+        "routingId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_routing._id"
+        },
+        "routingName": {
+          "bsonType": "string",
+          "description": "Display value of routingId, copied from u_mes_prod_routing.description"
+        },
+        "billOfProcessId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_billOfProcess._id"
+        },
+        "billOfProcessName": {
+          "bsonType": "string",
+          "description": "Display value of billOfProcessId, copied from u_mes_prod_billOfProcess.recordNo"
+        },
+        "controlPlanId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_qual_controlPlan._id"
+        },
+        "controlPlanName": {
+          "bsonType": "string",
+          "description": "Display value of controlPlanId, copied from u_mes_qual_controlPlan.recordNo"
+        },
+        "inspectionPlanId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_inspectionPlan._id"
+        },
+        "inspectionPlanName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of inspectionPlanId, copied from u_mes_qual_inspectionPlan.name"
+        },
+        "packagingSpecificationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_packagingSpecification._id"
+        },
+        "packagingSpecificationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of packagingSpecificationId, copied from u_mes_matl_packagingSpecification.recordNo"
+        },
+        "labelTemplateId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_matl_labelTemplate._id"
+        },
+        "labelTemplateName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of labelTemplateId, copied from u_mes_matl_labelTemplate.name"
+        },
+        "processValidationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_processValidation._id"
+        },
+        "processValidationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of processValidationId, copied from u_mes_qual_processValidation.title"
+        },
+        "controlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id"
+        },
+        "controlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of controlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "engineeringChangeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_engineeringChange._id"
+        },
+        "engineeringChangeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of engineeringChangeId, copied from u_mes_prod_engineeringChange.title"
+        },
+        "changeReasonText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reason for the change from the previous version"
+        },
+        "standardBatchSize": {
+          "bsonType": "int",
+          "description": "Standard batch size in pieces"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "theoreticalQuantity": {
+          "bsonType": "decimal",
+          "description": "Theoretical output of a standard batch"
+        },
+        "lowerLimitPct": {
+          "bsonType": "decimal",
+          "description": "Lower yield limit (percent)"
+        },
+        "upperLimitPct": {
+          "bsonType": "decimal",
+          "description": "Upper yield limit (percent)"
+        },
+        "effectiveFrom": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "First day the version may be used; null while in preparation"
+        },
+        "effectiveTo": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last day the version may be used; null while effective"
+        },
+        "authoredById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'authored'"
+        },
+        "authoredBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in authoredById, copied from u_mes_mast_user.fullName"
+        },
+        "reviewedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'reviewed'"
+        },
+        "reviewedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in reviewedById, copied from u_mes_mast_user.fullName"
+        },
+        "reviewedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Review time"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Approval time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "In Review",
+            "Approved",
+            "Effective",
+            "Superseded"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

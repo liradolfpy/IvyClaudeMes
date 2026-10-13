@@ -1,0 +1,254 @@
+{
+  "collMod": "u_mes_qual_productRecall",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_productRecall",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "recallClass",
+        "recallScope",
+        "reasonText",
+        "customerId",
+        "customerName",
+        "customerComplaintId",
+        "customerComplaintName",
+        "nonconformanceId",
+        "nonconformanceName",
+        "traceInvestigationId",
+        "traceInvestigationName",
+        "capaId",
+        "capaName",
+        "initiatedById",
+        "initiatedBy",
+        "initiatedAt",
+        "authorityNotified",
+        "authorityNotifiedAt",
+        "quantityShipped",
+        "quantityRecovered",
+        "effectivenessCheckCompleted",
+        "closedById",
+        "closedBy",
+        "closedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title"
+        },
+        "recallClass": {
+          "bsonType": "string",
+          "description": "Recall class by health or safety risk",
+          "enum": [
+            "Class I",
+            "Class II",
+            "Class III"
+          ]
+        },
+        "recallScope": {
+          "bsonType": "string",
+          "description": "How far the product has gone",
+          "enum": [
+            "Customer Plant",
+            "Distributor",
+            "Field"
+          ]
+        },
+        "reasonText": {
+          "bsonType": "string",
+          "description": "Reason for the recall"
+        },
+        "customerId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_customer._id"
+        },
+        "customerName": {
+          "bsonType": "string",
+          "description": "Display value of customerId, copied from u_mes_mast_customer.name"
+        },
+        "customerComplaintId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_customerComplaint._id"
+        },
+        "customerComplaintName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerComplaintId, copied from u_mes_qual_customerComplaint.description"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "traceInvestigationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_trac_traceInvestigation._id"
+        },
+        "traceInvestigationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of traceInvestigationId, copied from u_mes_trac_traceInvestigation.title"
+        },
+        "capaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_capa._id"
+        },
+        "capaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of capaId, copied from u_mes_qual_capa.title"
+        },
+        "initiatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'initiated'"
+        },
+        "initiatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in initiatedById, copied from u_mes_mast_user.fullName"
+        },
+        "initiatedAt": {
+          "bsonType": "date",
+          "description": "Time the recall was initiated"
+        },
+        "authorityNotified": {
+          "bsonType": "bool",
+          "description": "True when the regulator was notified"
+        },
+        "authorityNotifiedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the notification"
+        },
+        "quantityShipped": {
+          "bsonType": "int",
+          "description": "Quantity shipped in the recalled lots"
+        },
+        "quantityRecovered": {
+          "bsonType": "int",
+          "description": "Quantity recovered so far"
+        },
+        "effectivenessCheckCompleted": {
+          "bsonType": "bool",
+          "description": "Recall effectiveness check completed"
+        },
+        "closedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'closed'"
+        },
+        "closedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in closedById, copied from u_mes_mast_user.fullName"
+        },
+        "closedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Closing time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Initiated",
+            "In Progress",
+            "Completed",
+            "Closed",
+            "Cancelled"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

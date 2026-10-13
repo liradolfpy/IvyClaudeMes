@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000001",
     recordNo: "SHP-2026-000377-L01-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000002",
     recordNo: "SHP-2026-000377-L02-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000002",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000003",
     recordNo: "SHP-2026-000381-L01-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000003",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000004",
     recordNo: "SHP-2026-000381-L02-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000004",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000005",
     recordNo: "SHP-2026-000385-L01-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000005",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000006",
     recordNo: "SHP-2026-000385-L02-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000006",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000007",
     recordNo: "SHP-2026-000389-L01-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000007",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000008",
     recordNo: "SHP-2026-000389-L02-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000008",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000009",
     recordNo: "SHP-2026-000393-L01-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000009",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_matl_shipmentLineContainer").insertMany([
   {
     _id: "1129000000000010",
     recordNo: "SHP-2026-000393-L02-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shipmentLineId: "1128000000000010",

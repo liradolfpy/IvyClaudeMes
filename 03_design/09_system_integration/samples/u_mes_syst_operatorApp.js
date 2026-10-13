@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000001",
     recordNo: "APP-GDC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Gravity Die Casting Cell 1",
@@ -23,6 +24,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000002",
     recordNo: "APP-HT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, T6 Heat Treatment Line",
@@ -42,6 +44,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000003",
     recordNo: "APP-CNC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, CNC Machining Cell 1",
@@ -61,6 +64,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000004",
     recordNo: "APP-WSH-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Component Washing Station",
@@ -80,6 +84,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000005",
     recordNo: "APP-ANO-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Anodising Line",
@@ -99,6 +104,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000006",
     recordNo: "APP-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Piston and Seal Assembly Station",
@@ -118,6 +124,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000007",
     recordNo: "APP-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Bleed Screw Torque Station",
@@ -137,6 +144,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000008",
     recordNo: "APP-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Pressure Leak Test Station",
@@ -156,6 +164,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000009",
     recordNo: "APP-LSR-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Laser Marking Station",
@@ -175,6 +184,7 @@ db.getCollection("u_mes_syst_operatorApp").insertMany([
   {
     _id: "1233000000000010",
     recordNo: "APP-FIN-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Operator app, Final Inspection and Packing Cell",

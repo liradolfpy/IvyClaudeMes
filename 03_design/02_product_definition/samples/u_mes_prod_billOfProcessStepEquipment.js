@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000001",
     recordNo: "BOP-5110-10-0100-R01-S01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000002",
     recordNo: "BOP-5110-10-0100-R01-S02-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000003",
     recordNo: "BOP-5110-10-0100-R01-S03-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000004",
     recordNo: "BOP-5110-10-0100-R01-S04-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000005",
     recordNo: "BOP-5110-10-0100-R01-S05-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000006",
     recordNo: "BOP-5110-10-0100-R01-S06-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000007",
     recordNo: "BOP-5110-10-0100-R01-S07-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000008",
     recordNo: "BOP-5110-10-0100-R01-S08-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000009",
     recordNo: "BOP-5110-10-0100-R01-S09-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
   {
     _id: "1059000000000010",
     recordNo: "BOP-5110-10-0100-R01-S10-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     billOfProcessStepId: "1058000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_prod_billOfProcessStepEquipment").insertMany([
     sequenceNo: NumberInt(1),
     equipmentId: "1013000000000010",
     equipmentName: "Final Inspection Vision Station",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000011",
+    recordNo: "BOP-FG-PCM500-B10-R01-S01-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000011",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S01",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000011",
+    equipmentName: "Downflow Dispensing Booth with 150 kg Platform Balance",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000012",
+    recordNo: "BOP-FG-PCM500-B10-R01-S02-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000012",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S02",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000012",
+    equipmentName: "Rapid Mixer Granulator 600 L",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000013",
+    recordNo: "BOP-FG-PCM500-B10-R01-S03-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000013",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S03",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000013",
+    equipmentName: "Fluid Bed Dryer 300 kg",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000014",
+    recordNo: "BOP-FG-PCM500-B10-R01-S04-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000014",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S04",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000014",
+    equipmentName: "Octagonal Blender 1200 L",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000015",
+    recordNo: "BOP-FG-PCM500-B10-R01-S05-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000015",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S05",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000015",
+    equipmentName: "Rotary Tablet Press 45 Station",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000016",
+    recordNo: "BOP-FG-PCM500-B10-R01-S06-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000016",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S06",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000016",
+    equipmentName: "Automatic Coating Pan 48 inch",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000017",
+    recordNo: "BOP-FG-PCM500-B10-R01-S07-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000017",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S07",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000017",
+    equipmentName: "Inline Capper with Torque Control",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000018",
+    recordNo: "BOP-FG-PCM500-B10-R01-S08-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000018",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S08",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000018",
+    equipmentName: "Alu-PVC Blister Packing Machine",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000019",
+    recordNo: "BOP-FG-PCM500-B10-R01-S09-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000019",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S09",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000019",
+    equipmentName: "Carton Coding and Serialisation Unit",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1059000000000020",
+    recordNo: "BOP-FG-PCM500-B10-R01-S10-E01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    billOfProcessStepId: "1058000000000020",
+    billOfProcessStepName: "BOP-FG-PCM500-B10-R01-S10",
+    sequenceNo: NumberInt(1),
+    equipmentId: "1013000000000020",
+    equipmentName: "Cartoner with Checkweigher",
     schemaVersion: NumberInt(1)
   }
 ]);

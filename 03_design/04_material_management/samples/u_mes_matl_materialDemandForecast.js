@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000001",
     recordNo: "MDF-20260924-ASY-01-5110-30-0020-08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000006",
@@ -36,6 +37,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000002",
     recordNo: "MDF-20260924-ASY-01-5110-30-0020-09",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000006",
@@ -68,6 +70,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000003",
     recordNo: "MDF-20260924-ASY-01-5110-30-0010-08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000005",
@@ -100,6 +103,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000004",
     recordNo: "MDF-20260924-ASY-01-5110-30-0030-08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000007",
@@ -132,6 +136,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000005",
     recordNo: "MDF-20260924-ASY-01-5110-30-0040-08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000008",
@@ -164,6 +169,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000006",
     recordNo: "MDF-20260924-ASY-01-5110-30-0050-08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000009",
@@ -196,6 +202,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000007",
     recordNo: "MDF-20260924-ASY-01-5110-20-0110-08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000003",
@@ -228,6 +235,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000008",
     recordNo: "MDF-20260922-ASY-01-5110-30-0020-16",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000006",
@@ -260,6 +268,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000009",
     recordNo: "MDF-20260922-ASY-01-5110-30-0030-16",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000007",
@@ -292,6 +301,7 @@ db.getCollection("u_mes_matl_materialDemandForecast").insertMany([
   {
     _id: "1313000000000010",
     recordNo: "MDF-20260922-ASY-01-5110-30-0010-16",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000005",

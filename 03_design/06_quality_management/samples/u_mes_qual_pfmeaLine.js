@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000001",
     recordNo: "PF-5110-10-0100-R01-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -38,6 +39,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000002",
     recordNo: "PF-5110-10-0100-R01-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -72,6 +74,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000003",
     recordNo: "PF-5110-10-0100-R01-L03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -106,6 +109,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000004",
     recordNo: "PF-5110-10-0100-R01-L04",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -140,6 +144,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000005",
     recordNo: "PF-5110-10-0100-R01-L05",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -174,6 +179,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000006",
     recordNo: "PF-5110-10-0100-R01-L06",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -208,6 +214,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000007",
     recordNo: "PF-5110-10-0100-R01-L07",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -242,6 +249,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000008",
     recordNo: "PF-5110-10-0100-R01-L08",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -276,6 +284,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000009",
     recordNo: "PF-5110-10-0100-R01-L09",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",
@@ -310,6 +319,7 @@ db.getCollection("u_mes_qual_pfmeaLine").insertMany([
   {
     _id: "1185000000000010",
     recordNo: "PF-5110-10-0100-R01-L10",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     pfmeaId: "1183000000000001",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000001",
     recordNo: "en",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "English",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000002",
     recordNo: "mr",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Marathi",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000003",
     recordNo: "hi",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Hindi",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000004",
     recordNo: "ta",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Tamil",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000005",
     recordNo: "gu",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Gujarati",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000006",
     recordNo: "kn",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Kannada",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000007",
     recordNo: "de",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "German",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000008",
     recordNo: "ja",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Japanese",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000009",
     recordNo: "te",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Telugu",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_mast_language").insertMany([
   {
     _id: "1267000000000010",
     recordNo: "bn",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Bengali",

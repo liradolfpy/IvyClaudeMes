@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000001",
     recordNo: "RWK-2026-000052-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000002",
     recordNo: "RWK-2026-000055-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000002",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000003",
     recordNo: "RWK-2026-000058-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000003",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000004",
     recordNo: "RWK-2026-000061-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000004",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000005",
     recordNo: "RWK-2026-000064-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000005",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000006",
     recordNo: "RWK-2026-000067-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000006",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000007",
     recordNo: "RWK-2026-000070-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000007",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000008",
     recordNo: "RWK-2026-000073-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000008",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000009",
     recordNo: "RWK-2026-000076-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000009",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_qual_reworkOrderWipUnit").insertMany([
   {
     _id: "1169000000000010",
     recordNo: "RWK-2026-000079-WU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     reworkOrderId: "1168000000000010",

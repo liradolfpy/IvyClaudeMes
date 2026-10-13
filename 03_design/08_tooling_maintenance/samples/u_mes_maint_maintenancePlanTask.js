@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000001",
     recordNo: "PM-GDC-01-M1-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000001",
@@ -18,6 +19,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000002",
     recordNo: "PM-GDC-01-M1-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000001",
@@ -32,6 +34,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000003",
     recordNo: "PM-HT-01-F1-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000002",
@@ -46,6 +49,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000004",
     recordNo: "PM-HT-01-F1-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000002",
@@ -60,6 +64,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000005",
     recordNo: "PM-CNC-01-H1-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000003",
@@ -74,6 +79,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000006",
     recordNo: "PM-CNC-01-H1-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000003",
@@ -88,6 +94,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000007",
     recordNo: "PM-WSH-01-W1-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000004",
@@ -102,6 +109,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000008",
     recordNo: "PM-WSH-01-W1-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000004",
@@ -116,6 +124,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000009",
     recordNo: "PM-ANO-01-L1-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000005",
@@ -130,6 +139,7 @@ db.getCollection("u_mes_maint_maintenancePlanTask").insertMany([
   {
     _id: "1217000000000010",
     recordNo: "PM-ANO-01-L1-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000005",

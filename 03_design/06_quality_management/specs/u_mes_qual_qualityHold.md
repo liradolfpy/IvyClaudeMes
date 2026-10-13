@@ -86,7 +86,7 @@ Active, Partially Released, Released. Initial state: Active. The values are main
 
 ## Referenced by
 
-u_mes_plan_productionOrder, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_qual_spcSample, u_mes_qual_nonconformance, u_mes_qual_qualityHoldHeldObject, u_mes_trac_traceInvestigation.
+u_mes_plan_productionOrder, u_mes_plan_wipUnit, u_mes_plan_lot, u_mes_qual_spcSample, u_mes_qual_nonconformance, u_mes_qual_qualityHoldHeldObject, u_mes_trac_traceInvestigation, u_mes_bmr_batchRelease.
 
 ## Files
 

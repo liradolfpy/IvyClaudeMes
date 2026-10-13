@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000001",
     recordNo: "oee.plannedTimeBasis",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -24,6 +25,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000002",
     recordNo: "spc.rules",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -44,6 +46,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000003",
     recordNo: "label.defaultPrinter",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -64,6 +67,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000004",
     recordNo: "leakTest.maxRetests",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -84,6 +88,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000005",
     recordNo: "torque.maxAttempts",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -104,6 +109,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000006",
     recordNo: "andon.escalationMinutes",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -124,6 +130,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000007",
     recordNo: "session.timeoutMinutes",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -144,6 +151,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000008",
     recordNo: "trace.retentionYears",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -164,6 +172,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000009",
     recordNo: "calibration.blockOverdue",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",
@@ -184,6 +193,7 @@ db.getCollection("u_mes_syst_systemConfiguration").insertMany([
   {
     _id: "1249000000000010",
     recordNo: "erp.retryIntervalSeconds",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     module: "Master Data",

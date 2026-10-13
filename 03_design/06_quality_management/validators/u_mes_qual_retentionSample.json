@@ -1,0 +1,227 @@
+{
+  "collMod": "u_mes_qual_retentionSample",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_retentionSample",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "itemId",
+        "itemName",
+        "lotId",
+        "lotName",
+        "productionOrderId",
+        "productionOrderName",
+        "serialNumberId",
+        "serialNumberName",
+        "sampleType",
+        "sampleQuantity",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "storageLocationId",
+        "storageLocationName",
+        "collectedById",
+        "collectedBy",
+        "collectedAt",
+        "retainUntilDate",
+        "withdrawnAt",
+        "withdrawalReason",
+        "customerComplaintId",
+        "customerComplaintName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "productionOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "serialNumberId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_trac_serialNumber._id"
+        },
+        "serialNumberName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of serialNumberId, copied from u_mes_trac_serialNumber.recordNo"
+        },
+        "sampleType": {
+          "bsonType": "string",
+          "description": "Kind of sample",
+          "enum": [
+            "Reserve Sample",
+            "Retention Sample",
+            "Master Sample",
+            "Boundary Sample"
+          ]
+        },
+        "sampleQuantity": {
+          "bsonType": "int",
+          "description": "Quantity retained"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "storageLocationId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_matl_storageLocation._id"
+        },
+        "storageLocationName": {
+          "bsonType": "string",
+          "description": "Display value of storageLocationId, copied from u_mes_matl_storageLocation.name"
+        },
+        "collectedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'collected'"
+        },
+        "collectedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in collectedById, copied from u_mes_mast_user.fullName"
+        },
+        "collectedAt": {
+          "bsonType": "date",
+          "description": "Time the sample was taken"
+        },
+        "retainUntilDate": {
+          "bsonType": "date",
+          "description": "Last day the sample must be kept"
+        },
+        "withdrawnAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the sample was withdrawn"
+        },
+        "withdrawalReason": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Why the sample was withdrawn"
+        },
+        "customerComplaintId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_customerComplaint._id"
+        },
+        "customerComplaintName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of customerComplaintId, copied from u_mes_qual_customerComplaint.description"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Stored",
+            "Withdrawn",
+            "Destroyed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

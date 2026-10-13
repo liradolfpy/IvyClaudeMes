@@ -1,0 +1,158 @@
+{
+  "collMod": "u_mes_qual_environmentalMonitoringPoint",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_environmentalMonitoringPoint",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "areaId",
+        "areaName",
+        "workCenterId",
+        "workCenterName",
+        "monitoredParameter",
+        "parameterUnitText",
+        "limitDirection",
+        "alertLimit",
+        "actionLimit",
+        "lowerActionLimit",
+        "samplingFrequency",
+        "processTagId",
+        "processTagName",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Monitoring point name"
+        },
+        "areaId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_area._id"
+        },
+        "areaName": {
+          "bsonType": "string",
+          "description": "Display value of areaId, copied from u_mes_mast_area.name"
+        },
+        "workCenterId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "monitoredParameter": {
+          "bsonType": "string",
+          "description": "Parameter monitored",
+          "enum": [
+            "Temperature",
+            "Relative Humidity",
+            "Differential Pressure",
+            "Airborne Particles 0.5 um",
+            "Airborne Particles 5.0 um",
+            "Surface Particle Count",
+            "Illuminance"
+          ]
+        },
+        "parameterUnitText": {
+          "bsonType": "string",
+          "description": "Unit of the parameter as shown on the instrument"
+        },
+        "limitDirection": {
+          "bsonType": "string",
+          "description": "Which side of the limits is an excursion",
+          "enum": [
+            "Upper",
+            "Lower",
+            "Range"
+          ]
+        },
+        "alertLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Alert limit (upper, or lower for a Lower direction)"
+        },
+        "actionLimit": {
+          "bsonType": "decimal",
+          "description": "Action limit (upper, or lower for a Lower direction)"
+        },
+        "lowerActionLimit": {
+          "bsonType": [
+            "decimal",
+            "null"
+          ],
+          "description": "Lower action limit for a Range direction"
+        },
+        "samplingFrequency": {
+          "bsonType": "string",
+          "description": "How often the point is sampled",
+          "enum": [
+            "Continuous",
+            "Every Shift",
+            "Daily",
+            "Weekly"
+          ]
+        },
+        "processTagId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_perf_processTag._id"
+        },
+        "processTagName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of processTagId, copied from u_mes_perf_processTag.description"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

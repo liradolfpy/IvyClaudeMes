@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000001",
     recordNo: "MRQ-2026-000445",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000001",
@@ -47,6 +48,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000002",
     recordNo: "MRQ-2026-000448",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000002",
@@ -90,6 +92,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000003",
     recordNo: "MRQ-2026-000451",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000003",
@@ -133,6 +136,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000004",
     recordNo: "MRQ-2026-000454",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000004",
@@ -176,6 +180,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000005",
     recordNo: "MRQ-2026-000457",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000005",
@@ -219,6 +224,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000006",
     recordNo: "MRQ-2026-000460",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000006",
@@ -262,6 +268,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000007",
     recordNo: "MRQ-2026-000463",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -305,6 +312,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000008",
     recordNo: "MRQ-2026-000466",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -348,6 +356,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000009",
     recordNo: "MRQ-2026-000469",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000009",
@@ -391,6 +400,7 @@ db.getCollection("u_mes_matl_materialRequest").insertMany([
   {
     _id: "1120000000000010",
     recordNo: "MRQ-2026-000472",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000010",

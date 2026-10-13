@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000001",
     recordNo: "INP-OP060-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000006",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000002",
     recordNo: "INP-OP060-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000006",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000003",
     recordNo: "INP-OP070-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000007",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000004",
     recordNo: "INP-OP070-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000007",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000005",
     recordNo: "INP-OP080-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000008",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000006",
     recordNo: "INP-OP080-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000008",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000007",
     recordNo: "INP-OP090-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000009",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000008",
     recordNo: "INP-OP090-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000009",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000009",
     recordNo: "INP-OP100-PV01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000010",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
   {
     _id: "1323000000000010",
     recordNo: "INP-OP100-PV02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     inspectionPlanId: "1142000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_qual_inspectionPlanProductVariant").insertMany([
     sequenceNo: NumberInt(2),
     productVariantId: "1046000000000005",
     productVariantName: "Front Caliper LH, Black Anodised",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000011",
+    recordNo: "INP-OP060-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000016",
+    inspectionPlanName: "In-process inspection, film coating",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000012",
+    recordNo: "INP-OP060-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000016",
+    inspectionPlanName: "In-process inspection, film coating",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000013",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, Kenya",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000013",
+    recordNo: "INP-OP070-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000017",
+    inspectionPlanName: "In-process inspection, bottle filling and capping",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000014",
+    recordNo: "INP-OP070-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000017",
+    inspectionPlanName: "In-process inspection, bottle filling and capping",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000012",
+    productVariantName: "Paracetamol 500 mg bottle of 100, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000015",
+    recordNo: "INP-OP080-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000018",
+    inspectionPlanName: "In-process inspection, blister packing and leak test",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000016",
+    recordNo: "INP-OP080-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000018",
+    inspectionPlanName: "In-process inspection, blister packing and leak test",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000013",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, Kenya",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000017",
+    recordNo: "INP-OP090-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000019",
+    inspectionPlanName: "In-process inspection, serialisation and printing",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000018",
+    recordNo: "INP-OP090-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000019",
+    inspectionPlanName: "In-process inspection, serialisation and printing",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000013",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, Kenya",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000019",
+    recordNo: "INP-OP100-PV01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000020",
+    inspectionPlanName: "In-process inspection, cartoning and final inspection",
+    sequenceNo: NumberInt(1),
+    productVariantId: "1046000000000011",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, domestic",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1323000000000020",
+    recordNo: "INP-OP100-PV02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    inspectionPlanId: "1142000000000020",
+    inspectionPlanName: "In-process inspection, cartoning and final inspection",
+    sequenceNo: NumberInt(2),
+    productVariantId: "1046000000000015",
+    productVariantName: "Paracetamol 500 mg 10 x 10 blister, institutional",
     schemaVersion: NumberInt(1)
   }
 ]);

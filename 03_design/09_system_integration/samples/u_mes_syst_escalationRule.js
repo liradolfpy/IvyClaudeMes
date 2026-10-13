@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000001",
     recordNo: "ESC-BRKDN-CRIT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Critical breakdown, assembly line",
@@ -23,6 +24,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000002",
     recordNo: "ESC-BRKDN-STD",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Breakdown, all lines",
@@ -42,6 +44,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000003",
     recordNo: "ESC-QUAL-ANDON",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Quality andon not acknowledged",
@@ -61,6 +64,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000004",
     recordNo: "ESC-INTERLOCK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Interlock block not cleared",
@@ -80,6 +84,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000005",
     recordNo: "ESC-ALARM-SAFE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Safety alarm restart authorisation",
@@ -99,6 +104,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000006",
     recordNo: "ESC-LPA-MISSED",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Missed layered process audit",
@@ -118,6 +124,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000007",
     recordNo: "ESC-OUTPUT-GAP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Output behind plan",
@@ -137,6 +144,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000008",
     recordNo: "ESC-KPI-ALERT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "KPI alert on OEE and rejects",
@@ -156,6 +164,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000009",
     recordNo: "ESC-MAT-SHORT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Line-side material shortage",
@@ -175,6 +184,7 @@ db.getCollection("u_mes_syst_escalationRule").insertMany([
   {
     _id: "1334000000000010",
     recordNo: "ESC-NCR-OPEN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Nonconformance open beyond 24 hours",

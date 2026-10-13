@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000001",
     recordNo: "ALR-OEE-ASY01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "OEE below 75 percent on assembly line 1",
@@ -35,6 +36,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000002",
     recordNo: "ALR-GAP-ASY01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Output more than 30 units behind plan",
@@ -66,6 +68,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000003",
     recordNo: "ALR-REJ-LKT01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak test reject rate above 1.5 percent",
@@ -97,6 +100,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000004",
     recordNo: "ALR-DT-GDC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Downtime above 20 minutes in one hour, casting",
@@ -128,6 +132,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000005",
     recordNo: "ALR-PRESS-LKT01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "High-pressure stage test pressure drift",
@@ -159,6 +164,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000006",
     recordNo: "ALR-TORQ-TRQ01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Final torque mean drifting towards lower limit",
@@ -190,6 +196,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000007",
     recordNo: "ALR-SPC-CNC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "SPC rule violation, piston bore diameter",
@@ -221,6 +228,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000008",
     recordNo: "ALR-STOCK-SEAL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Piston seal line-side cover below 45 minutes",
@@ -252,6 +260,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000009",
     recordNo: "ALR-LUX-FIN01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Ambient light outside 800-1200 lux at final inspection",
@@ -283,6 +292,7 @@ db.getCollection("u_mes_syst_alertRule").insertMany([
   {
     _id: "1336000000000010",
     recordNo: "ALR-ANOM-NR1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Nutrunner anomaly score above 0.8",

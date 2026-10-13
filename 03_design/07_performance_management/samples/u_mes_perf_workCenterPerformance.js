@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000001",
     recordNo: "WCP-2026091506-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000006",
@@ -40,6 +41,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000002",
     recordNo: "WCP-2026091506-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -76,6 +78,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000003",
     recordNo: "WCP-2026091506-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -112,6 +115,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000004",
     recordNo: "WCP-2026091514-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -148,6 +152,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000005",
     recordNo: "WCP-2026091514-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -184,6 +189,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000006",
     recordNo: "WCP-2026091815-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -220,6 +226,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000007",
     recordNo: "WCP-2026092216-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -256,6 +263,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000008",
     recordNo: "WCP-2026092216-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -292,6 +300,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000009",
     recordNo: "WCP-2026092408-FIN-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000010",
@@ -328,6 +337,7 @@ db.getCollection("u_mes_perf_workCenterPerformance").insertMany([
   {
     _id: "1326000000000010",
     recordNo: "WCP-2026092408-LSR-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000009",

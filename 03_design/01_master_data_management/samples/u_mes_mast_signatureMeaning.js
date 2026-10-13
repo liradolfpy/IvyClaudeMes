@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000001",
     recordNo: "APPROVED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Approved",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000002",
     recordNo: "REVIEWED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Reviewed",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000003",
     recordNo: "RELEASED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Released",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000004",
     recordNo: "VERIFIED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Verified",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000005",
     recordNo: "REJECTED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Rejected",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000006",
     recordNo: "AUTHORED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Authored",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000007",
     recordNo: "WITNESSED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Witnessed",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000008",
     recordNo: "ACKNOWLEDGED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Acknowledged",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000009",
     recordNo: "DISPOSITIONED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Dispositioned",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_mast_signatureMeaning").insertMany([
   {
     _id: "1264000000000010",
     recordNo: "CLOSED",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Closed",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000001",
     recordNo: "operationExecution.start",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Start an operation",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000002",
     recordNo: "operationExecution.complete",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Complete an operation",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000003",
     recordNo: "nonconformance.create",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Raise a nonconformance",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000004",
     recordNo: "nonconformance.disposition",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Disposition nonconforming material",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000005",
     recordNo: "qualityHold.release",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Release a quality hold",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000006",
     recordNo: "recipe.approve",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Approve a recipe",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000007",
     recordNo: "productionOrder.release",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Release a production order",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000008",
     recordNo: "maintenanceWorkOrder.close",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Close a maintenance work order",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000009",
     recordNo: "materialMovement.post",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Post a stock movement",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_mast_permission").insertMany([
   {
     _id: "1263000000000010",
     recordNo: "user.administer",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Administer users and roles",

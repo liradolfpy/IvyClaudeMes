@@ -71,7 +71,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_prod_routing, u_mes_prod_routingStep, u_mes_prod_billOfProcess, u_mes_plan_productionOrder, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_qual_controlPlan, u_mes_qual_defectCode, u_mes_qual_reworkOrder.
+u_mes_prod_routing, u_mes_prod_routingStep, u_mes_prod_billOfProcess, u_mes_plan_productionOrder, u_mes_plan_operationExecution, u_mes_plan_wipUnit, u_mes_qual_controlPlan, u_mes_qual_defectCode, u_mes_qual_reworkOrder, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

@@ -28,6 +28,11 @@
         "ppapRequired",
         "implementedAt",
         "closedAt",
+        "gmpImpact",
+        "validationRequired",
+        "regulatoryImpact",
+        "riskAssessmentId",
+        "riskAssessmentName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -173,6 +178,37 @@
             "null"
           ],
           "description": "Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "gmpImpact": {
+          "bsonType": "bool",
+          "description": "True when the change affects GMP-relevant product, process, equipment or systems (GMP-44)"
+        },
+        "validationRequired": {
+          "bsonType": "bool",
+          "description": "True when process, equipment or system validation is required"
+        },
+        "regulatoryImpact": {
+          "bsonType": "string",
+          "description": "Regulatory or customer approval needed before implementation",
+          "enum": [
+            "None",
+            "Customer Notification",
+            "Prior Approval"
+          ]
+        },
+        "riskAssessmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_riskAssessment._id"
+        },
+        "riskAssessmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title"
         },
         "status": {
           "bsonType": "string",

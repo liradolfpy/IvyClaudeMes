@@ -95,7 +95,7 @@ Received, Containment Sent, Under Analysis, Closed, Rejected. Initial state: Rec
 
 ## Referenced by
 
-u_mes_qual_capa, u_mes_qual_customerComplaintSerialNumber, u_mes_qual_customerComplaintShipment, u_mes_qual_customerComplaintSuspectLot, u_mes_qual_customerComplaintCommunication, u_mes_trac_traceInvestigation.
+u_mes_qual_capa, u_mes_qual_customerComplaintSerialNumber, u_mes_qual_customerComplaintShipment, u_mes_qual_customerComplaintSuspectLot, u_mes_qual_customerComplaintCommunication, u_mes_trac_traceInvestigation, u_mes_qual_retentionSample, u_mes_qual_productRecall.
 
 ## Files
 

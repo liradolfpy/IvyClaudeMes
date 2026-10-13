@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000001",
     recordNo: "MWO-2026-000341-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000002",
     recordNo: "MWO-2026-000347-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000002",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000003",
     recordNo: "MWO-2026-000353-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000003",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000004",
     recordNo: "MWO-2026-000359-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000004",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000005",
     recordNo: "MWO-2026-000365-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000005",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000006",
     recordNo: "MWO-2026-000371-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000006",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000007",
     recordNo: "MWO-2026-000377-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000007",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000008",
     recordNo: "MWO-2026-000383-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000008",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000009",
     recordNo: "MWO-2026-000389-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000009",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_maint_maintenanceWorkOrderAssignedToUser").insertMany([
   {
     _id: "1221000000000010",
     recordNo: "MWO-2026-000395-ATU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenanceWorkOrderId: "1220000000000010",

@@ -11,8 +11,9 @@ from entity_samples import ES_TEXT,ALT_TEXT,USERS,CHILD_TEXT,ENUM_OVERRIDE,REF_O
 ROOT=sys.argv[1]
 M=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"model","flat_model.json")))
 cols=M["collections"]; MODN=M["modules"]
-order=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs"]
-DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety'}
+ORDER_ALL=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs","bmr","mmr"]
+order=[m for m in ORDER_ALL if any(c["module"]==m for c in cols)]  # modules without collections get no files (Folder_Guide rule 5)
+DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety', 'bmr': '11_batch_manufacturing_record', 'mmr': '12_master_manufacturing_record'}
 cat={c[0]:c for c in C}
 bycol={c["collection"]:c for c in cols}; byent={c["entity"]:c for c in cols}
 def parse(t,n):

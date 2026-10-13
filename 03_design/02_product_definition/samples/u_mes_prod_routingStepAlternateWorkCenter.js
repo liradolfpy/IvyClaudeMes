@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000001",
     recordNo: "5110-10-0100-R01-S01-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000002",
     recordNo: "5110-10-0100-R01-S02-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000003",
     recordNo: "5110-10-0100-R01-S03-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000004",
     recordNo: "5110-10-0100-R01-S04-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000005",
     recordNo: "5110-10-0100-R01-S05-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000006",
     recordNo: "5110-10-0100-R01-S06-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000007",
     recordNo: "5110-10-0100-R01-S07-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000008",
     recordNo: "5110-10-0100-R01-S08-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000009",
     recordNo: "5110-10-0100-R01-S09-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
   {
     _id: "1055000000000010",
     recordNo: "5110-10-0100-R01-S10-AWC01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_prod_routingStepAlternateWorkCenter").insertMany([
     sequenceNo: NumberInt(1),
     alternateWorkCenterId: "1009000000000009",
     alternateWorkCenterName: "Laser Marking Station",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000011",
+    recordNo: "FG-PCM500-B10-R01-S01-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000011",
+    routingStepName: "FG-PCM500-B10-R01-S01",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000020",
+    alternateWorkCenterName: "Cartoning and Checkweighing Station",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000012",
+    recordNo: "FG-PCM500-B10-R01-S02-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000012",
+    routingStepName: "FG-PCM500-B10-R01-S02",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000011",
+    alternateWorkCenterName: "Dispensing Booth 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000013",
+    recordNo: "FG-PCM500-B10-R01-S03-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000013",
+    routingStepName: "FG-PCM500-B10-R01-S03",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000012",
+    alternateWorkCenterName: "Rapid Mixer Granulator Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000014",
+    recordNo: "FG-PCM500-B10-R01-S04-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000014",
+    routingStepName: "FG-PCM500-B10-R01-S04",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000013",
+    alternateWorkCenterName: "Fluid Bed Dryer Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000015",
+    recordNo: "FG-PCM500-B10-R01-S05-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000015",
+    routingStepName: "FG-PCM500-B10-R01-S05",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000014",
+    alternateWorkCenterName: "Blending Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000016",
+    recordNo: "FG-PCM500-B10-R01-S06-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000016",
+    routingStepName: "FG-PCM500-B10-R01-S06",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000015",
+    alternateWorkCenterName: "Compression Cubicle 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000017",
+    recordNo: "FG-PCM500-B10-R01-S07-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000017",
+    routingStepName: "FG-PCM500-B10-R01-S07",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000016",
+    alternateWorkCenterName: "Coating Suite 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000018",
+    recordNo: "FG-PCM500-B10-R01-S08-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000018",
+    routingStepName: "FG-PCM500-B10-R01-S08",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000017",
+    alternateWorkCenterName: "Bottle Packing Line 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000019",
+    recordNo: "FG-PCM500-B10-R01-S09-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000019",
+    routingStepName: "FG-PCM500-B10-R01-S09",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000018",
+    alternateWorkCenterName: "Blister Packing Line 1",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1055000000000020",
+    recordNo: "FG-PCM500-B10-R01-S10-AWC01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000020",
+    routingStepName: "FG-PCM500-B10-R01-S10",
+    sequenceNo: NumberInt(1),
+    alternateWorkCenterId: "1009000000000019",
+    alternateWorkCenterName: "Serialisation Station, Blister Line 1",
     schemaVersion: NumberInt(1)
   }
 ]);

@@ -74,7 +74,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_qual_controlPlanCoreTeamUser, u_mes_qual_controlPlanLine, u_mes_qual_inspectionPlan, u_mes_qual_capa, u_mes_qual_pfmea, u_mes_qual_ppapSubmission.
+u_mes_qual_controlPlanCoreTeamUser, u_mes_qual_controlPlanLine, u_mes_qual_inspectionPlan, u_mes_qual_capa, u_mes_qual_pfmea, u_mes_qual_ppapSubmission, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

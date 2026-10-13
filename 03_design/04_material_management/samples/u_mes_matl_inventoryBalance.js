@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000001",
     recordNo: "INV-2026-000289",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000005",
@@ -39,6 +40,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000002",
     recordNo: "INV-2026-000292",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000006",
@@ -74,6 +76,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000003",
     recordNo: "INV-2026-000295",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000007",
@@ -109,6 +112,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000004",
     recordNo: "INV-2026-000298",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000008",
@@ -144,6 +148,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000005",
     recordNo: "INV-2026-000301",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000009",
@@ -179,6 +184,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000006",
     recordNo: "INV-2026-000304",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000010",
@@ -214,6 +220,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000007",
     recordNo: "INV-2026-000307",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000004",
@@ -249,6 +256,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000008",
     recordNo: "INV-2026-000310",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000003",
@@ -284,6 +292,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000009",
     recordNo: "INV-2026-000313",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",
@@ -319,6 +328,7 @@ db.getCollection("u_mes_matl_inventoryBalance").insertMany([
   {
     _id: "1113000000000010",
     recordNo: "INV-2026-000316",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000006",

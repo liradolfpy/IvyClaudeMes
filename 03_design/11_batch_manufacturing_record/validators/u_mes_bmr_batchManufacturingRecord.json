@@ -1,0 +1,281 @@
+{
+  "collMod": "u_mes_bmr_batchManufacturingRecord",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_bmr_batchManufacturingRecord",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionOrderId",
+        "productionOrderName",
+        "itemId",
+        "itemName",
+        "lotId",
+        "lotName",
+        "masterManufacturingRecordId",
+        "masterManufacturingRecordName",
+        "masterRecordVersion",
+        "plannedQuantity",
+        "lineClearanceId",
+        "lineClearanceName",
+        "yieldReconciliationId",
+        "yieldReconciliationName",
+        "batchRecordReviewId",
+        "batchRecordReviewName",
+        "batchReleaseId",
+        "batchReleaseName",
+        "openedAt",
+        "compiledAt",
+        "exportControlledDocumentId",
+        "exportControlledDocumentName",
+        "checksumSha256",
+        "pageCount",
+        "exportedById",
+        "exportedBy",
+        "exportedAt",
+        "archivedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "masterManufacturingRecordId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mmr_masterManufacturingRecord._id"
+        },
+        "masterManufacturingRecordName": {
+          "bsonType": "string",
+          "description": "Display value of masterManufacturingRecordId, copied from u_mes_mmr_masterManufacturingRecord.title"
+        },
+        "masterRecordVersion": {
+          "bsonType": "int",
+          "description": "Version number of the frozen master record"
+        },
+        "plannedQuantity": {
+          "bsonType": "int",
+          "description": "Batch size of the order"
+        },
+        "lineClearanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lineClearance._id"
+        },
+        "lineClearanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineClearanceId, copied from u_mes_plan_lineClearance.recordNo"
+        },
+        "yieldReconciliationId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_yieldReconciliation._id"
+        },
+        "yieldReconciliationName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of yieldReconciliationId, copied from u_mes_bmr_yieldReconciliation.recordNo"
+        },
+        "batchRecordReviewId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_batchRecordReview._id"
+        },
+        "batchRecordReviewName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of batchRecordReviewId, copied from u_mes_bmr_batchRecordReview.recordNo"
+        },
+        "batchReleaseId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_batchRelease._id"
+        },
+        "batchReleaseName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of batchReleaseId, copied from u_mes_bmr_batchRelease.recordNo"
+        },
+        "openedAt": {
+          "bsonType": "date",
+          "description": "Time the record was opened and the master record frozen"
+        },
+        "compiledAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the record was compiled after the last operation"
+        },
+        "exportControlledDocumentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_controlledDocument._id: export controlled document"
+        },
+        "exportControlledDocumentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of exportControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "checksumSha256": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "SHA-256 checksum of the exported copy"
+        },
+        "pageCount": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Pages of the exported copy"
+        },
+        "exportedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'exported'"
+        },
+        "exportedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in exportedById, copied from u_mes_mast_user.fullName"
+        },
+        "exportedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Export time"
+        },
+        "archivedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the record was archived"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "In Execution",
+            "Compiled",
+            "Under Review",
+            "Approved",
+            "Archived"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

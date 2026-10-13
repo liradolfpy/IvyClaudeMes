@@ -33,7 +33,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | lotName | String | - | Yes | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260912-SEL-002"` |  |
 | 9 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
 | 10 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
-| 11 | timerType | String | - | Yes | Timer type | `"Open Time"` | Floor Life; Pot Life; Open Time; Bake |
+| 11 | timerType | String | - | Yes | Timer type | `"Open Time"` | Floor Life; Pot Life; Open Time; Bake; Dirty Equipment Hold; Clean Equipment Hold; Process Hold Time |
 | 12 | limitMinutes | Int32 | - | Yes | Allowed exposure in minutes | `NumberInt(480)` |  |
 | 13 | startedAt | Date | Datetime | Yes | Clock start (container opened) | `ISODate("2026-09-15T05:40:00.000+0000")` |  |
 | 14 | pausedAt | Date | Datetime | No (null allowed) | Last pause (container resealed / dry storage) | `null` |  |

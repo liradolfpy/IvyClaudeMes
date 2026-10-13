@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000001",
     recordNo: "OPERATOR-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000001",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000002",
     recordNo: "OPERATOR-RS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000001",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000003",
     recordNo: "OPERATOR-RS03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000001",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000004",
     recordNo: "SETTER-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000002",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000005",
     recordNo: "SETTER-RS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000002",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000006",
     recordNo: "LINE-LEADER-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000003",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000007",
     recordNo: "LINE-LEADER-RS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000003",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000008",
     recordNo: "QUALITY-INSP-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000005",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000009",
     recordNo: "MAINT-TECH-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000007",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_mast_roleRequiredSkill").insertMany([
   {
     _id: "1300000000000010",
     recordNo: "PROCESS-ENG-RS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     roleId: "1026000000000009",

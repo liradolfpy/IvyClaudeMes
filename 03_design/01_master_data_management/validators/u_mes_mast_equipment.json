@@ -50,6 +50,12 @@
         "healthScoreAt",
         "acquisitionCostInr",
         "plannedReplacementDate",
+        "qualificationStatus",
+        "requalificationDueDate",
+        "cleanStatus",
+        "cleanHoldExpiresAt",
+        "lastCleaningRecordId",
+        "lastCleaningRecordName",
         "status",
         "schemaVersion"
       ],
@@ -302,6 +308,54 @@
             "null"
           ],
           "description": "Planned replacement date from the lifecycle review"
+        },
+        "qualificationStatus": {
+          "bsonType": "string",
+          "description": "Qualification status of the equipment (GMP-33, GMP-35)",
+          "enum": [
+            "Qualified",
+            "Not Qualified",
+            "Requalification Due"
+          ]
+        },
+        "requalificationDueDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date the next requalification is due; null when not qualification-relevant"
+        },
+        "cleanStatus": {
+          "bsonType": "string",
+          "description": "Cleaning status shown on the equipment (GMP-34, GMP-35)",
+          "enum": [
+            "Clean",
+            "Dirty",
+            "In Cleaning",
+            "Clean Hold Expired",
+            "Not Applicable"
+          ]
+        },
+        "cleanHoldExpiresAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of the clean hold time of the last cleaning"
+        },
+        "lastCleaningRecordId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_cleaningRecord._id: last cleaning record"
+        },
+        "lastCleaningRecordName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lastCleaningRecordId, copied from u_mes_maint_cleaningRecord.recordNo"
         },
         "status": {
           "bsonType": "string",

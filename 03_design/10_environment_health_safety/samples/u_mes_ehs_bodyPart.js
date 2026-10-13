@@ -4,6 +4,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000001",
     recordNo: "HAND",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Hand",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000002",
     recordNo: "FINGER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Finger",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000003",
     recordNo: "EYE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Eye",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000004",
     recordNo: "FOOT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Foot",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000005",
     recordNo: "BACK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Back",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000006",
     recordNo: "ARM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Arm",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000007",
     recordNo: "LEG",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leg",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000008",
     recordNo: "HEAD",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Head",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000009",
     recordNo: "SHOULDER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Shoulder",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_ehs_bodyPart").insertMany([
   {
     _id: "1295000000000010",
     recordNo: "KNEE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Knee",

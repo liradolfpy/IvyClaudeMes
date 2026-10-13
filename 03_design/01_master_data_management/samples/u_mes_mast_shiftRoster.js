@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000001",
     recordNo: "ROS-2026-000368",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-15T00:00:00.000+0000"),
@@ -31,6 +32,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000002",
     recordNo: "ROS-2026-000371",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-15T00:00:00.000+0000"),
@@ -58,6 +60,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000003",
     recordNo: "ROS-2026-000374",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-16T00:00:00.000+0000"),
@@ -85,6 +88,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000004",
     recordNo: "ROS-2026-000377",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-17T00:00:00.000+0000"),
@@ -112,6 +116,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000005",
     recordNo: "ROS-2026-000380",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-18T00:00:00.000+0000"),
@@ -139,6 +144,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000006",
     recordNo: "ROS-2026-000383",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-19T00:00:00.000+0000"),
@@ -166,6 +172,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000007",
     recordNo: "ROS-2026-000386",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-21T00:00:00.000+0000"),
@@ -193,6 +200,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000008",
     recordNo: "ROS-2026-000389",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-22T00:00:00.000+0000"),
@@ -220,6 +228,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000009",
     recordNo: "ROS-2026-000392",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-24T00:00:00.000+0000"),
@@ -247,6 +256,7 @@ db.getCollection("u_mes_mast_shiftRoster").insertMany([
   {
     _id: "1024000000000010",
     recordNo: "ROS-2026-000395",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-24T00:00:00.000+0000"),

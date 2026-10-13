@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000001",
     recordNo: "LINE-REJ",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Line Rejection",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000002",
     recordNo: "ZERO-KM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Zero Kilometre",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000003",
     recordNo: "WARRANTY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Warranty",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000004",
     recordNo: "LOGISTICS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Logistics",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000005",
     recordNo: "LABEL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Labelling Error",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000006",
     recordNo: "MIXED",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Mixed Parts",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000007",
     recordNo: "SHORT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Short Supply",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000008",
     recordNo: "PACK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Packaging Damage",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000009",
     recordNo: "DOC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Documentation Error",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_qual_complaintType").insertMany([
   {
     _id: "1285000000000010",
     recordNo: "AUDIT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Customer Audit Finding",
     description: "Customer Audit Finding (AUDIT)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000011",
+    recordNo: "PROD-QUAL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Product Quality",
+    description: "Product Quality (PROD-QUAL)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000012",
+    recordNo: "ADR",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Adverse Drug Reaction Report",
+    description: "Adverse Drug Reaction Report (ADR)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000013",
+    recordNo: "PACK-DEF",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Packaging Defect",
+    description: "Packaging Defect (PACK-DEF)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000014",
+    recordNo: "FOREIGN",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Foreign Particle",
+    description: "Foreign Particle (FOREIGN)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000015",
+    recordNo: "LABEL-PH",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Labelling Error",
+    description: "Labelling Error (LABEL-PH)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000016",
+    recordNo: "MIX-UP",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Product Mix-up",
+    description: "Product Mix-up (MIX-UP)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000017",
+    recordNo: "SHORT-PH",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Short Supply",
+    description: "Short Supply (SHORT-PH)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000018",
+    recordNo: "DAMAGE",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Transit Damage",
+    description: "Transit Damage (DAMAGE)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000019",
+    recordNo: "DOC-PH",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Documentation Error",
+    description: "Documentation Error (DOC-PH)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1285000000000020",
+    recordNo: "REG-AUDIT",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Regulatory Inspection Observation",
+    description: "Regulatory Inspection Observation (REG-AUDIT)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

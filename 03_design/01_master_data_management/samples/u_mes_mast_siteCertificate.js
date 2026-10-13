@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000001",
     recordNo: "PN1-C01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sequenceNo: NumberInt(1),
@@ -18,6 +19,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000002",
     recordNo: "PN1-C02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     sequenceNo: NumberInt(2),
@@ -32,6 +34,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000003",
     recordNo: "PN2-C01",
+    app: "Auto",
     siteId: "1003000000000002",
     siteName: "Ranjangaon Machining Plant, Pune",
     sequenceNo: NumberInt(1),
@@ -46,6 +49,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000004",
     recordNo: "PN2-C02",
+    app: "Auto",
     siteId: "1003000000000002",
     siteName: "Ranjangaon Machining Plant, Pune",
     sequenceNo: NumberInt(2),
@@ -60,6 +64,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000005",
     recordNo: "TN1-C01",
+    app: "Auto",
     siteId: "1003000000000003",
     siteName: "Oragadam Plant, Chennai",
     sequenceNo: NumberInt(1),
@@ -74,6 +79,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000006",
     recordNo: "TN1-C02",
+    app: "Auto",
     siteId: "1003000000000003",
     siteName: "Oragadam Plant, Chennai",
     sequenceNo: NumberInt(2),
@@ -88,6 +94,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000007",
     recordNo: "GJ1-C01",
+    app: "Auto",
     siteId: "1003000000000004",
     siteName: "Sanand Plant, Ahmedabad",
     sequenceNo: NumberInt(1),
@@ -102,6 +109,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000008",
     recordNo: "GJ1-C02",
+    app: "Auto",
     siteId: "1003000000000004",
     siteName: "Sanand Plant, Ahmedabad",
     sequenceNo: NumberInt(2),
@@ -116,6 +124,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000009",
     recordNo: "HR1-C01",
+    app: "Auto",
     siteId: "1003000000000005",
     siteName: "Manesar Plant, Gurugram",
     sequenceNo: NumberInt(1),
@@ -130,6 +139,7 @@ db.getCollection("u_mes_mast_siteCertificate").insertMany([
   {
     _id: "1004000000000010",
     recordNo: "HR1-C02",
+    app: "Auto",
     siteId: "1003000000000005",
     siteName: "Manesar Plant, Gurugram",
     sequenceNo: NumberInt(2),

@@ -4,6 +4,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000001",
     recordNo: "GRN-2026-000918-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000001",
@@ -35,6 +36,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000002",
     recordNo: "GRN-2026-000929-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000002",
@@ -66,6 +68,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000003",
     recordNo: "GRN-2026-000940-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000003",
@@ -97,6 +100,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000004",
     recordNo: "GRN-2026-000951-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000004",
@@ -128,6 +132,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000005",
     recordNo: "GRN-2026-000962-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000005",
@@ -159,6 +164,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000006",
     recordNo: "GRN-2026-000973-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000006",
@@ -190,6 +196,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000007",
     recordNo: "GRN-2026-000984-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000007",
@@ -221,6 +228,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000008",
     recordNo: "GRN-2026-000995-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000008",
@@ -252,6 +260,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000009",
     recordNo: "GRN-2026-001006-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000009",
@@ -283,6 +292,7 @@ db.getCollection("u_mes_matl_goodsReceiptLine").insertMany([
   {
     _id: "1116000000000010",
     recordNo: "GRN-2026-001017-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     goodsReceiptId: "1115000000000010",

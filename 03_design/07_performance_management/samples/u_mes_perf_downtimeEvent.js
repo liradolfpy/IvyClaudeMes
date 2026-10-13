@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000001",
     recordNo: "DT-2026-000196",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000001",
@@ -60,6 +61,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000002",
     recordNo: "DT-2026-000199",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000002",
@@ -116,6 +118,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000003",
     recordNo: "DT-2026-000202",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000003",
@@ -172,6 +175,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000004",
     recordNo: "DT-2026-000205",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000004",
@@ -228,6 +232,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000005",
     recordNo: "DT-2026-000208",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000005",
@@ -284,6 +289,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000006",
     recordNo: "DT-2026-000211",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000006",
@@ -340,6 +346,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000007",
     recordNo: "DT-2026-000214",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000007",
@@ -396,6 +403,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000008",
     recordNo: "DT-2026-000217",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000008",
@@ -452,6 +460,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000009",
     recordNo: "DT-2026-000220",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000009",
@@ -508,6 +517,7 @@ db.getCollection("u_mes_perf_downtimeEvent").insertMany([
   {
     _id: "1205000000000010",
     recordNo: "DT-2026-000223",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000010",

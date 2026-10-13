@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000001",
     recordNo: "PN1-2026-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000002",
     recordNo: "PN1-2026-FDY-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000003",
     recordNo: "PN1-2026-HT-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000004",
     recordNo: "PN1-2026-MC-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000005",
     recordNo: "PN1-2026-SF-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000006",
     recordNo: "PN1-2026-ASY-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000007",
     recordNo: "PN1-2026-FIP-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000008",
     recordNo: "PN1-2026-WH-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000009",
     recordNo: "PN1-2026-MNT-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_mast_workCalendarLine").insertMany([
   {
     _id: "1019000000000010",
     recordNo: "PN1-2027-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCalendarId: "1018000000000010",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000001",
     recordNo: "TRL-00031-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000002",
     recordNo: "TRL-00048-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000002",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000003",
     recordNo: "RCK-00065-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000003",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000004",
     recordNo: "BIN-000082-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000004",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000005",
     recordNo: "BIN-000099-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000005",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000006",
     recordNo: "BIN-000116-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000006",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000007",
     recordNo: "BIN-000133-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000007",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000008",
     recordNo: "BIN-000150-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000008",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000009",
     recordNo: "BIN-000167-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000009",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_plan_containerLot").insertMany([
   {
     _id: "1100000000000010",
     recordNo: "BIN-000184-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     containerId: "1099000000000010",

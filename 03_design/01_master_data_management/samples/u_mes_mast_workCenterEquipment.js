@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000001",
     recordNo: "GDC-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000002",
     recordNo: "HT-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000003",
     recordNo: "CNC-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000004",
     recordNo: "WSH-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000005",
     recordNo: "ANO-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000006",
     recordNo: "ASY-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000007",
     recordNo: "TRQ-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000008",
     recordNo: "LKT-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000009",
     recordNo: "LSR-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_mast_workCenterEquipment").insertMany([
   {
     _id: "1010000000000010",
     recordNo: "FIN-01-E01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000010",

@@ -1,0 +1,259 @@
+{
+  "collMod": "u_mes_maint_cleaningRecord",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_cleaningRecord",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "equipmentId",
+        "equipmentName",
+        "workCenterId",
+        "workCenterName",
+        "cleaningType",
+        "procedureControlledDocumentId",
+        "procedureControlledDocumentName",
+        "previousProductionOrderId",
+        "previousProductionOrderName",
+        "previousItemId",
+        "previousItemName",
+        "dirtyHoldStartAt",
+        "startedAt",
+        "completedAt",
+        "cleanedById",
+        "cleanedBy",
+        "verificationMethod",
+        "verificationResult",
+        "verifiedById",
+        "verifiedBy",
+        "verifiedAt",
+        "cleanHoldExpiresAt",
+        "electronicSignatureId",
+        "electronicSignatureName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "equipmentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": "string",
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "workCenterId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_workCenter._id"
+        },
+        "workCenterName": {
+          "bsonType": "string",
+          "description": "Display value of workCenterId, copied from u_mes_mast_workCenter.name"
+        },
+        "cleaningType": {
+          "bsonType": "string",
+          "description": "Kind of cleaning",
+          "enum": [
+            "Minor Cleaning",
+            "Major Cleaning",
+            "Product Changeover Cleaning",
+            "Bath Change"
+          ]
+        },
+        "procedureControlledDocumentId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_controlledDocument._id: procedure controlled document"
+        },
+        "procedureControlledDocumentName": {
+          "bsonType": "string",
+          "description": "Display value of procedureControlledDocumentId, copied from u_mes_syst_controlledDocument.title"
+        },
+        "previousProductionOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_productionOrder._id: previous production order"
+        },
+        "previousProductionOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of previousProductionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "previousItemId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_prod_item._id: previous item"
+        },
+        "previousItemName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of previousItemId, copied from u_mes_prod_item.description"
+        },
+        "dirtyHoldStartAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of use: start of the dirty hold time"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Start of cleaning"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of cleaning"
+        },
+        "cleanedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'cleaned'"
+        },
+        "cleanedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in cleanedById, copied from u_mes_mast_user.fullName"
+        },
+        "verificationMethod": {
+          "bsonType": "string",
+          "description": "How cleanliness is verified",
+          "enum": [
+            "Visual Inspection",
+            "Cleanliness Test",
+            "Rinse Sample",
+            "Swab Sample"
+          ]
+        },
+        "verificationResult": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Verification result; null until verified",
+          "enum": [
+            "Pass",
+            "Fail",
+            null
+          ]
+        },
+        "verifiedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'verified'"
+        },
+        "verifiedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in verifiedById, copied from u_mes_mast_user.fullName"
+        },
+        "verifiedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of verification"
+        },
+        "cleanHoldExpiresAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of the validated clean hold time"
+        },
+        "electronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id"
+        },
+        "electronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Progress",
+            "Completed",
+            "Verified",
+            "Expired",
+            "Rejected"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

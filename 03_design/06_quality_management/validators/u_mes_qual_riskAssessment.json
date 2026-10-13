@@ -1,0 +1,220 @@
+{
+  "collMod": "u_mes_qual_riskAssessment",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_qual_riskAssessment",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "title",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "assessmentMethod",
+        "scopeText",
+        "initialRiskLevel",
+        "residualRiskLevel",
+        "riskControlsText",
+        "pfmeaId",
+        "pfmeaName",
+        "acceptanceDecision",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "nextReviewDate",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "title": {
+          "bsonType": "string",
+          "description": "Title"
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in",
+          "enum": [
+            "u_mes_prod_engineeringChange",
+            "u_mes_syst_computerisedSystem",
+            "u_mes_qual_nonconformance",
+            "u_mes_mast_equipment",
+            "u_mes_prod_item"
+          ]
+        },
+        "relatedEntityId": {
+          "bsonType": "string",
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": "string",
+          "description": "Display value of the related document"
+        },
+        "assessmentMethod": {
+          "bsonType": "string",
+          "description": "Risk method",
+          "enum": [
+            "FMEA",
+            "Risk Ranking And Filtering",
+            "Fault Tree Analysis",
+            "HACCP",
+            "Preliminary Hazard Analysis"
+          ]
+        },
+        "scopeText": {
+          "bsonType": "string",
+          "description": "Scope of the assessment"
+        },
+        "initialRiskLevel": {
+          "bsonType": "string",
+          "description": "Risk before controls",
+          "enum": [
+            "Low",
+            "Medium",
+            "High"
+          ]
+        },
+        "residualRiskLevel": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Risk after controls; null until assessed",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            null
+          ]
+        },
+        "riskControlsText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Controls decided"
+        },
+        "pfmeaId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_pfmea._id"
+        },
+        "pfmeaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of pfmeaId, copied from u_mes_qual_pfmea.title"
+        },
+        "acceptanceDecision": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Risk acceptance decision",
+          "enum": [
+            "Accepted",
+            "Accepted With Controls",
+            "Not Accepted",
+            null
+          ]
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Approval time"
+        },
+        "nextReviewDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date of the next review"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Preparation",
+            "In Review",
+            "Approved",
+            "Superseded"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -539,3 +539,128 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 28 | updatedAt | Date | Datetime |  |
 | 29 | updatedById | String | - | u_mes_mast_user._id |
 | 30 | updatedBy | String | - |  |
+
+## u_mes_maint_logbookEntry
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | relatedCollectionName | String | - |  |
+| 6 | relatedEntityId | String | - | any collection, named in relatedCollectionName |
+| 7 | relatedEntityName | String | - |  |
+| 8 | activityType | String | - |  |
+| 9 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 10 | productionOrderName | String | - |  |
+| 11 | lotId | String | - | u_mes_plan_lot._id |
+| 12 | lotName | String | - |  |
+| 13 | cleaningRecordId | String | - | u_mes_maint_cleaningRecord._id |
+| 14 | cleaningRecordName | String | - |  |
+| 15 | maintenanceWorkOrderId | String | - | u_mes_maint_maintenanceWorkOrder._id |
+| 16 | maintenanceWorkOrderName | String | - |  |
+| 17 | lineClearanceId | String | - | u_mes_plan_lineClearance._id |
+| 18 | lineClearanceName | String | - |  |
+| 19 | entryText | String | - |  |
+| 20 | performedById | String | - | u_mes_mast_user._id |
+| 21 | performedBy | String | - |  |
+| 22 | startedAt | Date | Datetime |  |
+| 23 | completedAt | Date | Datetime |  |
+| 24 | reviewedById | String | - | u_mes_mast_user._id |
+| 25 | reviewedBy | String | - |  |
+| 26 | reviewedAt | Date | Datetime |  |
+| 27 | status | String | - |  |
+| 28 | schemaVersion | Int32 | - |  |
+| 29 | createdAt | Date | Datetime |  |
+| 30 | createdById | String | - | u_mes_mast_user._id |
+| 31 | createdBy | String | - |  |
+| 32 | updatedAt | Date | Datetime |  |
+| 33 | updatedById | String | - | u_mes_mast_user._id |
+| 34 | updatedBy | String | - |  |
+
+## u_mes_maint_cleaningRecord
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 6 | equipmentName | String | - |  |
+| 7 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 8 | workCenterName | String | - |  |
+| 9 | cleaningType | String | - |  |
+| 10 | procedureControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 11 | procedureControlledDocumentName | String | - |  |
+| 12 | previousProductionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 13 | previousProductionOrderName | String | - |  |
+| 14 | previousItemId | String | - | u_mes_prod_item._id |
+| 15 | previousItemName | String | - |  |
+| 16 | dirtyHoldStartAt | Date | Datetime |  |
+| 17 | startedAt | Date | Datetime |  |
+| 18 | completedAt | Date | Datetime |  |
+| 19 | cleanedById | String | - | u_mes_mast_user._id |
+| 20 | cleanedBy | String | - |  |
+| 21 | verificationMethod | String | - |  |
+| 22 | verificationResult | String | - |  |
+| 23 | verifiedById | String | - | u_mes_mast_user._id |
+| 24 | verifiedBy | String | - |  |
+| 25 | verifiedAt | Date | Datetime |  |
+| 26 | cleanHoldExpiresAt | Date | Datetime |  |
+| 27 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 28 | electronicSignatureName | String | - |  |
+| 29 | status | String | - |  |
+| 30 | schemaVersion | Int32 | - |  |
+| 31 | createdAt | Date | Datetime |  |
+| 32 | createdById | String | - | u_mes_mast_user._id |
+| 33 | createdBy | String | - |  |
+| 34 | updatedAt | Date | Datetime |  |
+| 35 | updatedById | String | - | u_mes_mast_user._id |
+| 36 | updatedBy | String | - |  |
+
+## u_mes_maint_equipmentQualification
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 6 | equipmentName | String | - |  |
+| 7 | qualificationPhase | String | - |  |
+| 8 | engineeringChangeId | String | - | u_mes_prod_engineeringChange._id |
+| 9 | engineeringChangeName | String | - |  |
+| 10 | protocolControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 11 | protocolControlledDocumentName | String | - |  |
+| 12 | reportControlledDocumentId | String | - | u_mes_syst_controlledDocument._id |
+| 13 | reportControlledDocumentName | String | - |  |
+| 14 | testCaseCount | Int32 | - |  |
+| 15 | testFailedCount | Int32 | - |  |
+| 16 | openDeviationCount | Int32 | - |  |
+| 17 | executedById | String | - | u_mes_mast_user._id |
+| 18 | executedBy | String | - |  |
+| 19 | startedAt | Date | Datetime |  |
+| 20 | completedAt | Date | Datetime |  |
+| 21 | approvedById | String | - | u_mes_mast_user._id |
+| 22 | approvedBy | String | - |  |
+| 23 | approvedAt | Date | Datetime |  |
+| 24 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 25 | electronicSignatureName | String | - |  |
+| 26 | requalificationDueDate | Date | Date |  |
+| 27 | status | String | - |  |
+| 28 | schemaVersion | Int32 | - |  |
+| 29 | createdAt | Date | Datetime |  |
+| 30 | createdById | String | - | u_mes_mast_user._id |
+| 31 | createdBy | String | - |  |
+| 32 | updatedAt | Date | Datetime |  |
+| 33 | updatedById | String | - | u_mes_mast_user._id |
+| 34 | updatedBy | String | - |  |

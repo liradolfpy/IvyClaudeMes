@@ -1,0 +1,233 @@
+{
+    "_id" : "F_1019",
+    "lid" : "lid_999",
+    "dictName" : "FormatQuery",
+    "typ" : "PageConfig",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+               
+             
+                {
+                    "typ" : "datePicker",
+                    "default" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select  Date",
+                    "errorMessage" : "Please select  Date",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "label" : "Date",
+                    "format" : "YYYY-MM-DD",
+                    "data_index" : "dt"
+                },
+                
+                {
+                    "typ" : "rangePicker",
+                    "defaultFrom" : NumberInt(-30),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "placeHolder" : "Select Range ",
+                    "errorMessage" : "Please select  Range",
+                    "readOnly" : false,
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "label" : "Range",
+                    "format" : "YYYY-MM-DD",
+                    "data_index" : "range"
+                },
+              
+                {
+                    "typ" : "dropDown",
+                    "default" : [
+                        "all"
+                    ],
+                    "required" : true,
+                    "placeHolder" : "Select Item ",
+                    "errorMessage" : "Please select  Item",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "p_din" : "status",
+                    "includeAll" : true,
+                    "label" : "CropDown",
+                    "multiSelect" : true,
+                    "data_index" : "st",
+                    "api" : "/cropdown",
+                    "params" : {
+                        "name" : "ProjectStatus"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "required" : true,
+                    "placeHolder" : "Select Employee",
+                    "errorMessage" : "Please select  Employee",
+                    "readOnly" : false,
+                    "multiSelect" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "p_din" : "eame",
+                    "label" : "Mdict Without Multiselect",
+                    "data_index" : "eid",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Employee",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "default" : [
+                        "all"
+                    ],
+                    "includeAll" : true,
+                    "required" : true,
+                    "placeHolder" : "Select Employee ",
+                    "errorMessage" : "Please select  Employee",
+                    "readOnly" : false,
+                    "multiSelect" : true,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "p_din" : "eame",
+                    "label" : "Mdict With MultiSelect",
+                    "data_index" : "eid",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Employee",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "default" : "all",
+                    "required" : false,
+                    "includeAll" : true,
+                    "placeHolder" : "Select Dynamic ",
+                    "errorMessage" : "Please select Dynamic",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "p_din" : "dame",
+                    "label" : "DynamicDropDown",
+                    "data_index" : "did",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_wrs_kpiDetailkpikpiAll"
+                    },
+                    "sourceParams_dynamic" : "u_wrs_kpiDetailkpikpiAll",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "default" : "all",
+                    "required" : false,
+                    "includeAll" : true,
+                    "placeHolder" : "Select Dynamic ",
+                    "errorMessage" : "Please select Dynamic",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "minSearchLength" : NumberInt(4),
+                    "p_din" : "p_dyn_dame",
+                    "label" : "Dynamic Search DropDown",
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "did_dyn",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_wrs_kpiDetailkpikpiAll"
+                    },
+                    "sourceParams_dynamic" : "u_wrs_kpiDetailkpikpiAll",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "default" : [
+                        "H"
+                    ],
+                    "required" : true,
+                    "placeHolder" : "Select Item",
+                    "errorMessage" : "Please select  Item",
+                    "readOnly" : false,
+                    "p_din" : "status",
+                    "label" : "HardCode",
+                    "multiSelect" : true,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(10),
+                    "data" : {
+                        "N" : "Not Started",
+                        "I" : "In Progress",
+                        "C" : "Completed",
+                        "H" : "Hold"
+                    },
+                    "data_index" : "st",
+                    "src" : "data"
+                },
+               
+                {
+                    "label" : "Radio",
+                    "visible" : true,
+                    "labelColSpan" : NumberInt(10),
+                    "typ" : "radio",
+                    "default" : "A",
+                    "readOnly" : false,
+                    "colSize" : NumberInt(12),
+                    "required" : true,
+                    "data" : {
+                        "A" : "Alpha",
+                        "B" : "Beta",
+                        "C" : "Charlie",
+                        "D" : "Delta"
+                    },
+                    "data_index" : "bool",
+                    "src" : "data"
+                },
+               
+    },
+    "ver" : "61226ab9",
+    "unq" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "view" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "countList" : 0.0,
+    "q" : 1.0,
+    "projid" : "NPD148",
+    "rel" : "BK20260827",
+    "resp" : "BK20260827",
+    "origId" : "F_021",
+    "mint" : "1"
+}

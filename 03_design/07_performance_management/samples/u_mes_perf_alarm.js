@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000001",
     recordNo: "ALM-2026-000176",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000001",
@@ -60,6 +61,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000002",
     recordNo: "ALM-2026-000179",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000002",
@@ -116,6 +118,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000003",
     recordNo: "ALM-2026-000182",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000003",
@@ -172,6 +175,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000004",
     recordNo: "ALM-2026-000185",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000004",
@@ -228,6 +232,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000005",
     recordNo: "ALM-2026-000188",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000005",
@@ -284,6 +289,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000006",
     recordNo: "ALM-2026-000191",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000006",
@@ -340,6 +346,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000007",
     recordNo: "ALM-2026-000194",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000007",
@@ -396,6 +403,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000008",
     recordNo: "ALM-2026-000197",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000008",
@@ -452,6 +460,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000009",
     recordNo: "ALM-2026-000200",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000009",
@@ -508,6 +517,7 @@ db.getCollection("u_mes_perf_alarm").insertMany([
   {
     _id: "1212000000000010",
     recordNo: "ALM-2026-000203",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000010",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000001",
     recordNo: "PLC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "PLC",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000002",
     recordNo: "TEMP-CTRL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Temperature Controller",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000003",
     recordNo: "CNC-CTRL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "CNC Controller",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000004",
     recordNo: "ENERGY-METER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Energy Meter",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000005",
     recordNo: "RECTIFIER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Rectifier Controller",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000006",
     recordNo: "PRESS-CTRL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Press Controller",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000007",
     recordNo: "NR-CTRL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Nutrunner Controller",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000008",
     recordNo: "LEAK-CTRL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak Tester",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000009",
     recordNo: "LASER-CTRL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Laser Marker Controller",
@@ -103,8 +112,129 @@ db.getCollection("u_mes_syst_deviceType").insertMany([
   {
     _id: "1290000000000010",
     recordNo: "PRINTER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
+    name: "Label Printer",
+    description: "Label Printer (PRINTER)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000011",
+    recordNo: "BALANCE",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Weighing Terminal",
+    description: "Weighing Terminal (BALANCE)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000012",
+    recordNo: "PLC",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "PLC",
+    description: "PLC (PLC)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000013",
+    recordNo: "SCADA",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "SCADA Node",
+    description: "SCADA Node (SCADA)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000014",
+    recordNo: "DRIVE-CTRL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Drive Controller",
+    description: "Drive Controller (DRIVE-CTRL)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000015",
+    recordNo: "PRESS-CTRL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Press Controller",
+    description: "Press Controller (PRESS-CTRL)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000016",
+    recordNo: "TEMP-TX",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Temperature Transmitter",
+    description: "Temperature Transmitter (TEMP-TX)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000017",
+    recordNo: "CAP-CTRL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Capper Controller",
+    description: "Capper Controller (CAP-CTRL)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000018",
+    recordNo: "LEAK-CTRL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Leak Tester",
+    description: "Leak Tester (LEAK-CTRL)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000019",
+    recordNo: "SER-CTRL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Serialisation Controller",
+    description: "Serialisation Controller (SER-CTRL)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1290000000000020",
+    recordNo: "PRINTER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
     name: "Label Printer",
     description: "Label Printer (PRINTER)",
     sequenceNo: NumberInt(10),

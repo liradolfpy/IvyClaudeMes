@@ -8,7 +8,7 @@ K=dict(K); K.update(NEWK)
 
 APP="u_mes"
 MOD={"1":"mast","2":"prod","3":"plan","4":"matl","5":"trac","6":"qual","7":"perf","8":"maint","9":"syst","10":"ehs"}
-MODNAME={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling & Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety'}
+MODNAME={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling & Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety', 'bmr': 'Batch Manufacturing Record', 'mmr': 'Master Manufacturing Record'}
 ENT={**NEWENT,"enterprises":"enterprise","work_centres":"workCenter","equipment":"equipment","calendars":"workCalendar","units_of_measure":"unitOfMeasure","certifications":"skillCertification","variants":"productVariant","boms":"billOfMaterial","bills_of_process":"billOfProcess","process_data":"processReading","event_logs":"businessEvent","documents":"controlledDocument","pfmeas":"pfmea","capas":"capa","alarms":"alarm","audits":"audit","labels":"label","kits":"kit","lots":"lot","audit_trails":"auditTrail","inventory_balances":"inventoryBalance","as_built_records":"asBuiltRecord","spc_charts":"spcChart","spc_samples":"spcSample","msa_studies":"msaStudy","erp_messages":"erpMessage","iot_devices":"iotDevice","oee_records":"oeeRecord","wip_units":"wipUnit"}
 def camel(n):
     p=n.split("_"); return p[0]+"".join(x.title() for x in p[1:])
@@ -207,6 +207,10 @@ sysc("statusTransition",[("collectionName","String",None),("fromStatusDefinition
 # ---- external requirement set 01: 44 new collections and 212 added keys (D036-D042)
 import ext_req01
 ext_req01.apply(COLS)
+# ---- application context key (D060): every collection carries app = Auto (caliper), Gamp (pharma) or Common (shared reference data)
+for col in COLS.values():
+    ks=[f["key"] for f in col["fields"]]
+    col["fields"].insert(ks.index("recordNo")+1,dict(key="app",type="String",ref=None))
 # ---- Date / Datetime tag of every date key (D035)
 DATEONLY={"validFrom","validTo","effectiveFrom","effectiveTo","horizonFrom","horizonTo","interimApprovalValidTo","dateOfJoining","expiryAt","nextDueAt","nextCalibrationDueAt","nextReviewAt","nextAuditDueAt","nextStudyDueAt","nextMaintenanceDueAt","certificateExpiresAt"}
 for col in COLS.values():

@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000001",
     recordNo: "SM-X42",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sahyadri X42 Hatchback",
@@ -19,6 +20,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000002",
     recordNo: "SM-X45",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sahyadri X45 Sedan",
@@ -34,6 +36,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000003",
     recordNo: "SM-U60",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sahyadri U60 Utility",
@@ -49,6 +52,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000004",
     recordNo: "KA-K21",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Konkan K21 Compact",
@@ -64,6 +68,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000005",
     recordNo: "KA-K33",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Konkan K33 Crossover",
@@ -79,6 +84,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000006",
     recordNo: "DM-D7",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Deccan D7 Sedan",
@@ -94,6 +100,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000007",
     recordNo: "NE-E1",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Narmada E1 Electric",
@@ -109,6 +116,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000008",
     recordNo: "GU-G9",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Godavari G9 Pickup",
@@ -124,6 +132,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000009",
     recordNo: "KC-L5",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Kaveri L5 Light Truck",
@@ -139,6 +148,7 @@ db.getCollection("u_mes_prod_vehicleModel").insertMany([
   {
     _id: "1276000000000010",
     recordNo: "TM-T2",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Tapti T2 City Car",

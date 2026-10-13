@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000001",
     recordNo: "LPA-L1-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 1, piston and seal assembly, every shift",
@@ -35,6 +36,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000002",
     recordNo: "LPA-L1-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 1, bleed screw torque, every shift",
@@ -66,6 +68,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000003",
     recordNo: "LPA-L1-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 1, leak test, every shift",
@@ -97,6 +100,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000004",
     recordNo: "LPA-L2-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 2, front caliper assembly line, daily",
@@ -128,6 +132,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000005",
     recordNo: "LPA-L2-MC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 2, machining line, daily",
@@ -159,6 +164,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000006",
     recordNo: "LPA-L2-GDC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 2, casting line, daily",
@@ -190,6 +196,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000007",
     recordNo: "LPA-L3-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 3, front caliper assembly line, weekly",
@@ -221,6 +228,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000008",
     recordNo: "LPA-L3-FDY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 3, foundry, weekly",
@@ -252,6 +260,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000009",
     recordNo: "LPA-L3-SF",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "LPA layer 3, surface treatment, weekly",
@@ -283,6 +292,7 @@ db.getCollection("u_mes_qual_auditSchedule").insertMany([
   {
     _id: "1322000000000010",
     recordNo: "PRD-AUD-FBC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Product audit, front caliper LH, monthly",

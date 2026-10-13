@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000001",
     recordNo: "CHG-2026-000307-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000001",
@@ -25,6 +26,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000002",
     recordNo: "CHG-2026-000307-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000001",
@@ -46,6 +48,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000003",
     recordNo: "CHG-2026-000310-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000002",
@@ -67,6 +70,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000004",
     recordNo: "CHG-2026-000310-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000002",
@@ -88,6 +92,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000005",
     recordNo: "CHG-2026-000313-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000003",
@@ -109,6 +114,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000006",
     recordNo: "CHG-2026-000313-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000003",
@@ -130,6 +136,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000007",
     recordNo: "CHG-2026-000316-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000004",
@@ -151,6 +158,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000008",
     recordNo: "CHG-2026-000316-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000004",
@@ -172,6 +180,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000009",
     recordNo: "CHG-2026-000319-S01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000005",
@@ -193,6 +202,7 @@ db.getCollection("u_mes_plan_changeoverStep").insertMany([
   {
     _id: "1103000000000010",
     recordNo: "CHG-2026-000319-S02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     changeoverId: "1102000000000005",

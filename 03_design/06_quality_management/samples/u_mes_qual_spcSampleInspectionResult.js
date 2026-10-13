@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000001",
     recordNo: "SPS-2026-000253-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000002",
     recordNo: "SPS-2026-000256-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000002",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000003",
     recordNo: "SPS-2026-000259-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000003",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000004",
     recordNo: "SPS-2026-000262-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000004",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000005",
     recordNo: "SPS-2026-000265-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000005",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000006",
     recordNo: "SPS-2026-000268-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000006",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000007",
     recordNo: "SPS-2026-000271-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000007",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000008",
     recordNo: "SPS-2026-000274-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000008",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000009",
     recordNo: "SPS-2026-000277-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000009",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_qual_spcSampleInspectionResult").insertMany([
   {
     _id: "1156000000000010",
     recordNo: "SPS-2026-000280-IR01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     spcSampleId: "1154000000000010",

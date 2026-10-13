@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000001",
     recordNo: "AND-2026-000195",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000001",
@@ -51,6 +52,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000002",
     recordNo: "AND-2026-000198",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000002",
@@ -98,6 +100,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000003",
     recordNo: "AND-2026-000201",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000003",
@@ -145,6 +148,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000004",
     recordNo: "AND-2026-000204",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000004",
@@ -192,6 +196,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000005",
     recordNo: "AND-2026-000207",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000005",
@@ -239,6 +244,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000006",
     recordNo: "AND-2026-000210",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000006",
@@ -286,6 +292,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000007",
     recordNo: "AND-2026-000213",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -333,6 +340,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000008",
     recordNo: "AND-2026-000216",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -380,6 +388,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000009",
     recordNo: "AND-2026-000219",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000009",
@@ -427,6 +436,7 @@ db.getCollection("u_mes_plan_andonEvent").insertMany([
   {
     _id: "1251000000000010",
     recordNo: "AND-2026-000222",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000010",

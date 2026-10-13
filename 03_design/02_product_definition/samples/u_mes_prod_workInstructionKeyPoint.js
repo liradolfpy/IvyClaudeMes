@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000001",
     recordNo: "WI-OP010-001-KP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000001",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000002",
     recordNo: "WI-OP010-001-KP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000001",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000003",
     recordNo: "WI-OP020-001-KP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000002",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000004",
     recordNo: "WI-OP020-001-KP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000002",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000005",
     recordNo: "WI-OP030-001-KP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000003",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000006",
     recordNo: "WI-OP030-001-KP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000003",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000007",
     recordNo: "WI-OP040-001-KP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000004",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000008",
     recordNo: "WI-OP040-001-KP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000004",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000009",
     recordNo: "WI-OP050-001-KP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000005",
@@ -103,12 +112,133 @@ db.getCollection("u_mes_prod_workInstructionKeyPoint").insertMany([
   {
     _id: "1072000000000010",
     recordNo: "WI-OP050-001-KP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionId: "1065000000000005",
     workInstructionName: "Racking and anodising - Caliper body LH",
     sequenceNo: NumberInt(2),
     keyPoint: "A loose contact burns the part; tug each body after racking",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000011",
+    recordNo: "WI-OP010-001-KP01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000011",
+    workInstructionName: "Dispensing of API and excipients - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    keyPoint: "Only one material may be open in the booth at a time",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000012",
+    recordNo: "WI-OP010-001-KP02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000011",
+    workInstructionName: "Dispensing of API and excipients - Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    keyPoint: "Only one material may be open in the booth at a time",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000013",
+    recordNo: "WI-OP020-001-KP01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000012",
+    workInstructionName: "Dry mixing, binder addition and wet massing - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    keyPoint: "Stop wet massing at the impeller power end-point, not by time alone",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000014",
+    recordNo: "WI-OP020-001-KP02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000012",
+    workInstructionName: "Dry mixing, binder addition and wet massing - Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    keyPoint: "Stop wet massing at the impeller power end-point, not by time alone",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000015",
+    recordNo: "WI-OP030-001-KP01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000013",
+    workInstructionName: "Drying of wet granules - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    keyPoint: "Release the granules only when loss on drying is between 1.0 and 2.5 percent",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000016",
+    recordNo: "WI-OP030-001-KP02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000013",
+    workInstructionName: "Drying of wet granules - Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    keyPoint: "Release the granules only when loss on drying is between 1.0 and 2.5 percent",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000017",
+    recordNo: "WI-OP040-001-KP01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000014",
+    workInstructionName: "Sizing and lubrication - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    keyPoint: "Do not exceed 3 minutes lubrication; over-blending softens the tablets",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000018",
+    recordNo: "WI-OP040-001-KP02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000014",
+    workInstructionName: "Sizing and lubrication - Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    keyPoint: "Do not exceed 3 minutes lubrication; over-blending softens the tablets",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000019",
+    recordNo: "WI-OP050-001-KP01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000015",
+    workInstructionName: "Compression of core tablets - Paracetamol 500 mg",
+    sequenceNo: NumberInt(1),
+    keyPoint: "Check weight, hardness and thickness every 30 minutes",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1072000000000020",
+    recordNo: "WI-OP050-001-KP02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionId: "1065000000000015",
+    workInstructionName: "Compression of core tablets - Paracetamol 500 mg",
+    sequenceNo: NumberInt(2),
+    keyPoint: "Check weight, hardness and thickness every 30 minutes",
     schemaVersion: NumberInt(1)
   }
 ]);

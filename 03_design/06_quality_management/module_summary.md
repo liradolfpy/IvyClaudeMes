@@ -24,7 +24,7 @@
 | 20 | u_mes_qual_spcSampleViolation | Child | transaction | 16 | 16 | 1 | 1 |
 | 21 | u_mes_qual_defectCode | Entity | master | 21 | 19 | 2 | 5 |
 | 22 | u_mes_qual_defectCodeApplicableOperation | Relationship | master | 10 | 10 | 0 | 2 |
-| 23 | u_mes_qual_nonconformance | Entity | transaction | 45 | 31 | 3 | 8 |
+| 23 | u_mes_qual_nonconformance | Entity | transaction | 53 | 31 | 4 | 8 |
 | 24 | u_mes_qual_nonconformanceAffectedObject | Child | transaction | 23 | 18 | 0 | 2 |
 | 25 | u_mes_qual_nonconformanceContainmentAction | Child | transaction | 18 | 17 | 0 | 2 |
 | 26 | u_mes_qual_nonconformanceInspectionResult | Relationship | transaction | 16 | 16 | 0 | 2 |
@@ -79,3 +79,11 @@
 | 75 | u_mes_qual_defectRecord | Entity | transaction | 61 | 29 | 2 | 8 |
 | 76 | u_mes_qual_auditSchedule | Entity | master | 29 | 17 | 3 | 7 |
 | 77 | u_mes_qual_inspectionPlanProductVariant | Relationship | master | 10 | 10 | 0 | 2 |
+| 78 | u_mes_qual_environmentalMonitoringPoint | Entity | master | 20 | 14 | 4 | 5 |
+| 79 | u_mes_qual_environmentalMonitoringResult | Entity | transaction | 24 | 19 | 2 | 6 |
+| 80 | u_mes_qual_retentionSample | Entity | transaction | 34 | 24 | 2 | 8 |
+| 81 | u_mes_qual_riskAssessment | Entity | transaction | 28 | 19 | 6 | 5 |
+| 82 | u_mes_qual_productQualityReview | Entity | transaction | 33 | 25 | 1 | 5 |
+| 83 | u_mes_qual_productRecall | Entity | transaction | 37 | 25 | 3 | 8 |
+| 84 | u_mes_qual_productRecallLot | Child | transaction | 20 | 18 | 0 | 3 |
+| 85 | u_mes_qual_processValidation | Entity | transaction | 34 | 22 | 2 | 8 |

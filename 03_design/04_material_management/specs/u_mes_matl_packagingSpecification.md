@@ -76,7 +76,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_plan_container, u_mes_matl_packagingSpecificationLevel.
+u_mes_plan_container, u_mes_matl_packagingSpecificationLevel, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

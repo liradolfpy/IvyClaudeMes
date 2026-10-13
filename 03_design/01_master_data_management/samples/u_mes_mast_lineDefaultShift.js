@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000001",
     recordNo: "GDC-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000002",
     recordNo: "HT-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000003",
     recordNo: "MC-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000004",
     recordNo: "WSH-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000005",
     recordNo: "ANO-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000006",
     recordNo: "ASY-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000007",
     recordNo: "FIP-01-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000008",
     recordNo: "GDC-02-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000009",
     recordNo: "MC-02-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_mast_lineDefaultShift").insertMany([
   {
     _id: "1007000000000010",
     recordNo: "ASY-02-DS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000010",

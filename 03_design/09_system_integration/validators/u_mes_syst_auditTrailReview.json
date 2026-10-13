@@ -1,0 +1,215 @@
+{
+  "collMod": "u_mes_syst_auditTrailReview",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_auditTrailReview",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "reviewType",
+        "computerisedSystemId",
+        "computerisedSystemName",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "reviewFromAt",
+        "reviewToAt",
+        "entriesReviewedCount",
+        "criticalEntriesCount",
+        "anomalyCount",
+        "findingsText",
+        "nonconformanceId",
+        "nonconformanceName",
+        "reviewedById",
+        "reviewedBy",
+        "reviewedAt",
+        "electronicSignatureId",
+        "electronicSignatureName",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "reviewType": {
+          "bsonType": "string",
+          "description": "Why the review is done",
+          "enum": [
+            "Batch Record Review",
+            "Periodic System Review",
+            "For Cause"
+          ]
+        },
+        "computerisedSystemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_computerisedSystem._id"
+        },
+        "computerisedSystemName": {
+          "bsonType": "string",
+          "description": "Display value of computerisedSystemId, copied from u_mes_syst_computerisedSystem.name"
+        },
+        "relatedCollectionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Name of the collection the related document is in",
+          "enum": [
+            "u_mes_plan_productionOrder",
+            "u_mes_syst_systemPeriodicReview",
+            "u_mes_qual_nonconformance",
+            null
+          ]
+        },
+        "relatedEntityId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of the related document"
+        },
+        "reviewFromAt": {
+          "bsonType": "date",
+          "description": "Start of the reviewed period"
+        },
+        "reviewToAt": {
+          "bsonType": "date",
+          "description": "End of the reviewed period"
+        },
+        "entriesReviewedCount": {
+          "bsonType": "int",
+          "description": "Audit-trail entries in scope"
+        },
+        "criticalEntriesCount": {
+          "bsonType": "int",
+          "description": "Entries on critical data (results, limits, status, recipes)"
+        },
+        "anomalyCount": {
+          "bsonType": "int",
+          "description": "Entries that needed justification"
+        },
+        "findingsText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Findings"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "reviewedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'reviewed'"
+        },
+        "reviewedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in reviewedById, copied from u_mes_mast_user.fullName"
+        },
+        "reviewedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time the review was completed"
+        },
+        "electronicSignatureId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_electronicSignature._id"
+        },
+        "electronicSignatureName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of electronicSignatureId, copied from u_mes_syst_electronicSignature.recordNo"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "In Review",
+            "Completed",
+            "Escalated"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

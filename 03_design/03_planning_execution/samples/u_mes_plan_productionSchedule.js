@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000001",
     recordNo: "SCH-2026-000257",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-15T00:00:00.000+0000"),
@@ -33,6 +34,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000002",
     recordNo: "SCH-2026-000260",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-15T00:00:00.000+0000"),
@@ -62,6 +64,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000003",
     recordNo: "SCH-2026-000263",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-16T00:00:00.000+0000"),
@@ -91,6 +94,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000004",
     recordNo: "SCH-2026-000266",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-17T00:00:00.000+0000"),
@@ -120,6 +124,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000005",
     recordNo: "SCH-2026-000269",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-18T00:00:00.000+0000"),
@@ -149,6 +154,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000006",
     recordNo: "SCH-2026-000272",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-19T00:00:00.000+0000"),
@@ -178,6 +184,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000007",
     recordNo: "SCH-2026-000275",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-21T00:00:00.000+0000"),
@@ -207,6 +214,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000008",
     recordNo: "SCH-2026-000278",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-22T00:00:00.000+0000"),
@@ -236,6 +244,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000009",
     recordNo: "SCH-2026-000281",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-24T00:00:00.000+0000"),
@@ -265,6 +274,7 @@ db.getCollection("u_mes_plan_productionSchedule").insertMany([
   {
     _id: "1086000000000010",
     recordNo: "SCH-2026-000284",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     productionDate: ISODate("2026-09-24T00:00:00.000+0000"),

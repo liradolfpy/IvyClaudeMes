@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000001",
     recordNo: "CRV-20260915-01840-0001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -23,6 +24,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000002",
     recordNo: "CRV-20260915-01840-0002",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -42,6 +44,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000003",
     recordNo: "CRV-20260915-01840-0003",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -61,6 +64,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000004",
     recordNo: "CRV-20260915-01840-0004",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -80,6 +84,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000005",
     recordNo: "CRV-20260915-01840-0005",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -99,6 +104,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000006",
     recordNo: "CRV-20260915-01840-0006",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -118,6 +124,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000007",
     recordNo: "CRV-20260915-01840-0007",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -137,6 +144,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000008",
     recordNo: "CRV-20260915-01840-0008",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -156,6 +164,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000009",
     recordNo: "CRV-20260915-01840-0009",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",
@@ -175,6 +184,7 @@ db.getCollection("u_mes_qual_measurementCurvePoint").insertMany([
   {
     _id: "1320000000000010",
     recordNo: "CRV-20260915-01840-0010",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     measurementCurveId: "1319000000000001",

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 17 (12 required, 5 may be null) |
+| Keys | 18 (13 required, 5 may be null) |
 | Estimated volume per year | one row per collection (343) |
 | Storage | standard collection |
 
@@ -38,8 +38,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | deleteAllowed | Boolean | - | Yes | Physical delete allowed (false for all transaction data) | `false` |  |
 | 14 | retentionYears | Int32 | - | Yes | Retention period | `NumberInt(15)` |  |
 | 15 | archiveAfterMonths | Int32 | - | No (null allowed) | Move to archive storage after | `NumberInt(24)` |  |
-| 16 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
-| 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 16 | gxpRelevant | Boolean | - | Yes | True when the collection holds GMP records (GMP-10) | `true` |  |
+| 17 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
+| 18 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 

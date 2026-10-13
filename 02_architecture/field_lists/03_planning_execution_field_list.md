@@ -115,14 +115,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 43 | holdReasonCodeId | String | - | u_mes_perf_reasonCode._id |
 | 44 | holdReasonCodeName | String | - |  |
 | 45 | genealogyComplete | Boolean | - |  |
-| 46 | status | String | - |  |
-| 47 | schemaVersion | Int32 | - |  |
-| 48 | createdAt | Date | Datetime |  |
-| 49 | createdById | String | - | u_mes_mast_user._id |
-| 50 | createdBy | String | - |  |
-| 51 | updatedAt | Date | Datetime |  |
-| 52 | updatedById | String | - | u_mes_mast_user._id |
-| 53 | updatedBy | String | - |  |
+| 46 | batchRecordReviewId | String | - | u_mes_bmr_batchRecordReview._id |
+| 47 | batchRecordReviewName | String | - |  |
+| 48 | lineClearanceId | String | - | u_mes_plan_lineClearance._id |
+| 49 | lineClearanceName | String | - |  |
+| 50 | yieldWithinLimits | Boolean | - |  |
+| 51 | status | String | - |  |
+| 52 | schemaVersion | Int32 | - |  |
+| 53 | createdAt | Date | Datetime |  |
+| 54 | createdById | String | - | u_mes_mast_user._id |
+| 55 | createdBy | String | - |  |
+| 56 | updatedAt | Date | Datetime |  |
+| 57 | updatedById | String | - | u_mes_mast_user._id |
+| 58 | updatedBy | String | - |  |
 
 ## u_mes_plan_productionOrderRelease
 
@@ -594,14 +599,17 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 37 | currentOperationId | String | - | u_mes_prod_operation._id |
 | 38 | currentOperationName | String | - |  |
 | 39 | closedAt | Date | Datetime |  |
-| 40 | status | String | - |  |
-| 41 | schemaVersion | Int32 | - |  |
-| 42 | createdAt | Date | Datetime |  |
-| 43 | createdById | String | - | u_mes_mast_user._id |
-| 44 | createdBy | String | - |  |
-| 45 | updatedAt | Date | Datetime |  |
-| 46 | updatedById | String | - | u_mes_mast_user._id |
-| 47 | updatedBy | String | - |  |
+| 40 | retestDate | Date | Date |  |
+| 41 | batchReleaseId | String | - | u_mes_bmr_batchRelease._id |
+| 42 | batchReleaseName | String | - |  |
+| 43 | status | String | - |  |
+| 44 | schemaVersion | Int32 | - |  |
+| 45 | createdAt | Date | Datetime |  |
+| 46 | createdById | String | - | u_mes_mast_user._id |
+| 47 | createdBy | String | - |  |
+| 48 | updatedAt | Date | Datetime |  |
+| 49 | updatedById | String | - | u_mes_mast_user._id |
+| 50 | updatedBy | String | - |  |
 
 ## u_mes_plan_lotParentLot
 
@@ -1429,3 +1437,49 @@ Kind: child | Data class: transaction | Parent: u_mes_plan_setupVerification | _
 | 23 | updatedAt | Date | Datetime |  |
 | 24 | updatedById | String | - | u_mes_mast_user._id |
 | 25 | updatedBy | String | - |  |
+
+## u_mes_plan_lineClearance
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | siteId | String | - | u_mes_mast_site._id |
+| 4 | siteName | String | - |  |
+| 5 | lineId | String | - | u_mes_mast_line._id |
+| 6 | lineName | String | - |  |
+| 7 | workCenterId | String | - | u_mes_mast_workCenter._id |
+| 8 | workCenterName | String | - |  |
+| 9 | clearanceType | String | - |  |
+| 10 | previousProductionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 11 | previousProductionOrderName | String | - |  |
+| 12 | productionOrderId | String | - | u_mes_plan_productionOrder._id |
+| 13 | productionOrderName | String | - |  |
+| 14 | changeoverId | String | - | u_mes_plan_changeover._id |
+| 15 | changeoverName | String | - |  |
+| 16 | checkSheetResultId | String | - | u_mes_qual_checkSheetResult._id |
+| 17 | checkSheetResultName | String | - |  |
+| 18 | materialsRemoved | Boolean | - |  |
+| 19 | labelsRemoved | Boolean | - |  |
+| 20 | documentsRemoved | Boolean | - |  |
+| 21 | equipmentClean | Boolean | - |  |
+| 22 | performedById | String | - | u_mes_mast_user._id |
+| 23 | performedBy | String | - |  |
+| 24 | startedAt | Date | Datetime |  |
+| 25 | completedAt | Date | Datetime |  |
+| 26 | verifiedById | String | - | u_mes_mast_user._id |
+| 27 | verifiedBy | String | - |  |
+| 28 | verifiedAt | Date | Datetime |  |
+| 29 | electronicSignatureId | String | - | u_mes_syst_electronicSignature._id |
+| 30 | electronicSignatureName | String | - |  |
+| 31 | failureText | String | - |  |
+| 32 | status | String | - |  |
+| 33 | schemaVersion | Int32 | - |  |
+| 34 | createdAt | Date | Datetime |  |
+| 35 | createdById | String | - | u_mes_mast_user._id |
+| 36 | createdBy | String | - |  |
+| 37 | updatedAt | Date | Datetime |  |
+| 38 | updatedById | String | - | u_mes_mast_user._id |
+| 39 | updatedBy | String | - |  |

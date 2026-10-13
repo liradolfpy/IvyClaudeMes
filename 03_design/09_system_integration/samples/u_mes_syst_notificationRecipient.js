@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000001",
     recordNo: "NTF-2026-000310-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000001",
@@ -28,6 +29,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000002",
     recordNo: "NTF-2026-000310-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000001",
@@ -52,6 +54,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000003",
     recordNo: "NTF-2026-000313-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000002",
@@ -76,6 +79,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000004",
     recordNo: "NTF-2026-000313-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000002",
@@ -100,6 +104,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000005",
     recordNo: "NTF-2026-000316-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000003",
@@ -124,6 +129,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000006",
     recordNo: "NTF-2026-000316-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000003",
@@ -148,6 +154,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000007",
     recordNo: "NTF-2026-000319-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000004",
@@ -172,6 +179,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000008",
     recordNo: "NTF-2026-000319-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000004",
@@ -196,6 +204,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000009",
     recordNo: "NTF-2026-000322-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000005",
@@ -220,6 +229,7 @@ db.getCollection("u_mes_syst_notificationRecipient").insertMany([
   {
     _id: "1245000000000010",
     recordNo: "NTF-2026-000322-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     notificationId: "1244000000000005",

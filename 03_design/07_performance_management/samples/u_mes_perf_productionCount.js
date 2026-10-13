@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000001",
     recordNo: "PC-2026-000213",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000001",
@@ -40,6 +41,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000002",
     recordNo: "PC-2026-000216",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000002",
@@ -76,6 +78,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000003",
     recordNo: "PC-2026-000219",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000003",
@@ -112,6 +115,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000004",
     recordNo: "PC-2026-000222",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000004",
@@ -148,6 +152,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000005",
     recordNo: "PC-2026-000225",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000005",
@@ -184,6 +189,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000006",
     recordNo: "PC-2026-000228",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000006",
@@ -220,6 +226,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000007",
     recordNo: "PC-2026-000231",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000007",
@@ -256,6 +263,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000008",
     recordNo: "PC-2026-000234",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000008",
@@ -292,6 +300,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000009",
     recordNo: "PC-2026-000237",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000009",
@@ -328,6 +337,7 @@ db.getCollection("u_mes_perf_productionCount").insertMany([
   {
     _id: "1207000000000010",
     recordNo: "PC-2026-000240",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workCenterId: "1009000000000010",

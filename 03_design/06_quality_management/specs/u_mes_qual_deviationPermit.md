@@ -87,7 +87,7 @@ Requested, Approved, Expired, Closed, Rejected. Initial state: Requested. The va
 
 ## Referenced by
 
-u_mes_trac_asBuiltRecord, u_mes_qual_deviationPermitApproval.
+u_mes_trac_asBuiltRecord, u_mes_qual_deviationPermitApproval, u_mes_bmr_batchRelease.
 
 ## Files
 

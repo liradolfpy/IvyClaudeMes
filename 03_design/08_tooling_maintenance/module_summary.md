@@ -20,3 +20,6 @@
 | 16 | u_mes_maint_sparePartTransaction | Entity | transaction | 30 | 25 | 2 | 8 |
 | 17 | u_mes_maint_reliabilitySummary | Entity | transaction | 28 | 24 | 2 | 6 |
 | 18 | u_mes_maint_equipmentLifecycleEvent | Entity | transaction | 30 | 17 | 2 | 7 |
+| 19 | u_mes_maint_logbookEntry | Entity | transaction | 34 | 20 | 3 | 9 |
+| 20 | u_mes_maint_cleaningRecord | Entity | transaction | 36 | 23 | 4 | 8 |
+| 21 | u_mes_maint_equipmentQualification | Entity | transaction | 34 | 20 | 2 | 8 |

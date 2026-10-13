@@ -70,7 +70,7 @@ In Preparation, Released, Obsolete. Initial state: In Preparation. The values ar
 
 ## Referenced by
 
-u_mes_prod_billOfMaterialComponent, u_mes_prod_billOfProcess, u_mes_plan_productionOrder, u_mes_matl_materialConsumption.
+u_mes_prod_billOfMaterialComponent, u_mes_prod_billOfProcess, u_mes_plan_productionOrder, u_mes_matl_materialConsumption, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000001",
     recordNo: "LSS-20260915-ASY-01-A-MATL-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -39,6 +40,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000002",
     recordNo: "LSS-20260915-ASY-01-B-TOOL-TRQ-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -74,6 +76,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000003",
     recordNo: "LSS-20260915-ASY-01-B-MATL-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -109,6 +112,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000004",
     recordNo: "LSS-20260917-GDC-01-A-MECH-GDC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000001",
@@ -144,6 +148,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000005",
     recordNo: "LSS-20260917-GDC-01-A-ELEC-HT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000001",
@@ -179,6 +184,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000006",
     recordNo: "LSS-20260918-ASY-01-B-TOOL-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -214,6 +220,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000007",
     recordNo: "LSS-20260922-ASY-01-B-TOOL-LKT-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -249,6 +256,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000008",
     recordNo: "LSS-20260922-ASY-01-B-MATL-ASY-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000006",
@@ -284,6 +292,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000009",
     recordNo: "LSS-20260924-MC-01-C-TOOL-CNC-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000003",
@@ -319,6 +328,7 @@ db.getCollection("u_mes_perf_lossSummary").insertMany([
   {
     _id: "1325000000000010",
     recordNo: "LSS-20260924-FIP-01-A-ELEC-FIN-01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     lineId: "1006000000000007",

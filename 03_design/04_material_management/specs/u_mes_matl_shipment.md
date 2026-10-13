@@ -89,7 +89,7 @@ Planned, Loading, Dispatched, Delivered, Cancelled. Initial state: Planned. The 
 
 ## Referenced by
 
-u_mes_plan_container, u_mes_matl_materialMovement, u_mes_matl_label, u_mes_matl_shipmentLine, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecord, u_mes_qual_customerComplaintShipment, u_mes_syst_erpMessage, u_mes_trac_traceInvestigationResult.
+u_mes_plan_container, u_mes_matl_materialMovement, u_mes_matl_label, u_mes_matl_shipmentLine, u_mes_trac_serialNumber, u_mes_trac_asBuiltRecord, u_mes_qual_customerComplaintShipment, u_mes_syst_erpMessage, u_mes_trac_traceInvestigationResult, u_mes_qual_productRecallLot.
 
 ## Files
 

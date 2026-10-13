@@ -44,6 +44,9 @@
         "currentOperationId",
         "currentOperationName",
         "closedAt",
+        "retestDate",
+        "batchReleaseId",
+        "batchReleaseName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -294,6 +297,27 @@
             "null"
           ],
           "description": "Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "retestDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date the lot must be re-tested before further use (GMP-41)"
+        },
+        "batchReleaseId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_bmr_batchRelease._id"
+        },
+        "batchReleaseName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of batchReleaseId, copied from u_mes_bmr_batchRelease.recordNo"
         },
         "status": {
           "bsonType": "string",

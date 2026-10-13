@@ -2,6 +2,7 @@
 # A key followed by ? may be null. Used by gen_specs.py.
 TEXT = r'''
 name|(entity)
+app|Auto|Auto;Gamp;Common|Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both
 legalName|Varuna Brake Systems Private Limited
 scope|Enterprise|Enterprise;Site|Whether the record applies to the whole enterprise or to one site
 cin|U34300PN2009PTC134567||Corporate identification number

@@ -76,7 +76,7 @@ Active, Inactive. Initial state: Active. The values are maintained in u_mes_syst
 
 ## Referenced by
 
-u_mes_prod_recipeParameter, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_syst_alertRule.
+u_mes_prod_recipeParameter, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_syst_alertRule, u_mes_qual_environmentalMonitoringPoint.
 
 ## Files
 

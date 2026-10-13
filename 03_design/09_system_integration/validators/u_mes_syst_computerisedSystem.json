@@ -1,0 +1,205 @@
+{
+  "collMod": "u_mes_syst_computerisedSystem",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_computerisedSystem",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "name",
+        "description",
+        "systemCategory",
+        "gampCategory",
+        "gxpImpact",
+        "dataCriticality",
+        "holdsElectronicRecords",
+        "usesElectronicSignatures",
+        "systemOwnerUserId",
+        "systemOwnerUserName",
+        "processOwnerUserId",
+        "processOwnerUserName",
+        "supplierId",
+        "supplierName",
+        "equipmentId",
+        "equipmentName",
+        "softwareVersion",
+        "hostingModel",
+        "lastValidatedDate",
+        "periodicReviewIntervalMonths",
+        "nextPeriodicReviewDate",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "System name"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "What the system does and which GMP records it holds"
+        },
+        "systemCategory": {
+          "bsonType": "string",
+          "description": "Kind of system",
+          "enum": [
+            "Manufacturing Execution System",
+            "Equipment Controller",
+            "Laboratory System",
+            "ERP Interface",
+            "Label Printing",
+            "Data Historian",
+            "Infrastructure"
+          ]
+        },
+        "gampCategory": {
+          "bsonType": "string",
+          "description": "GAMP 5 software category",
+          "enum": [
+            "Category 1",
+            "Category 3",
+            "Category 4",
+            "Category 5"
+          ]
+        },
+        "gxpImpact": {
+          "bsonType": "string",
+          "description": "Impact of the system on product quality and GMP records",
+          "enum": [
+            "Direct",
+            "Indirect",
+            "None"
+          ]
+        },
+        "dataCriticality": {
+          "bsonType": "string",
+          "description": "Criticality of the data the system holds",
+          "enum": [
+            "High",
+            "Medium",
+            "Low"
+          ]
+        },
+        "holdsElectronicRecords": {
+          "bsonType": "bool",
+          "description": "True when GMP records are kept in electronic form (21 CFR Part 11 scope)"
+        },
+        "usesElectronicSignatures": {
+          "bsonType": "bool",
+          "description": "True when electronic signatures are applied in the system"
+        },
+        "systemOwnerUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: system owner user"
+        },
+        "systemOwnerUserName": {
+          "bsonType": "string",
+          "description": "Display value of systemOwnerUserId, copied from u_mes_mast_user.fullName"
+        },
+        "processOwnerUserId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: process owner user"
+        },
+        "processOwnerUserName": {
+          "bsonType": "string",
+          "description": "Display value of processOwnerUserId, copied from u_mes_mast_user.fullName"
+        },
+        "supplierId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_supplier._id"
+        },
+        "supplierName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of supplierId, copied from u_mes_mast_supplier.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "softwareVersion": {
+          "bsonType": "string",
+          "description": "Installed software version"
+        },
+        "hostingModel": {
+          "bsonType": "string",
+          "description": "Where the system runs",
+          "enum": [
+            "On Premise",
+            "Private Cloud",
+            "Supplier Hosted",
+            "Embedded"
+          ]
+        },
+        "lastValidatedDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date of the last approved validation; null before the first one"
+        },
+        "periodicReviewIntervalMonths": {
+          "bsonType": "int",
+          "description": "Interval between periodic reviews (months)"
+        },
+        "nextPeriodicReviewDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Date the next periodic review is due"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "In Validation",
+            "Validated",
+            "Retired"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

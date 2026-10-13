@@ -27,6 +27,9 @@
         "isSecondSignature",
         "witnessUserId",
         "witnessUserName",
+        "signatureManifestationText",
+        "signedRecordVersion",
+        "isFirstSigningInSession",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -138,6 +141,21 @@
             "null"
           ],
           "description": "Display value of witnessUserId, copied from u_mes_mast_user.fullName"
+        },
+        "signatureManifestationText": {
+          "bsonType": "string",
+          "description": "Printed name, date and time and meaning shown with the signed record (GMP-06)"
+        },
+        "signedRecordVersion": {
+          "bsonType": [
+            "int",
+            "null"
+          ],
+          "description": "Version of the record that was signed"
+        },
+        "isFirstSigningInSession": {
+          "bsonType": "bool",
+          "description": "True when both signature components were entered (first signing of a session)"
         },
         "schemaVersion": {
           "bsonType": "int",

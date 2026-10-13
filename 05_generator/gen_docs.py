@@ -2,8 +2,9 @@ import json,collections,os,re,sys
 from catalogue import C
 ROOT=sys.argv[1]
 M=json.load(open("model/flat_model.json")); cols=M["collections"]; MODN=M["modules"]
-order=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs"]
-DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety'}
+ORDER_ALL=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs","bmr","mmr"]
+order=[m for m in ORDER_ALL if any(c["module"]==m for c in cols)]  # modules without collections get no files (Folder_Guide rule 5)
+DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety', 'bmr': '11_batch_manufacturing_record', 'mmr': '12_master_manufacturing_record'}
 cat={c[0]:c for c in C}
 import ext_req01 as EXT
 cat.update(EXT.CAT)
@@ -26,11 +27,11 @@ for c in cols:
         c["idPattern"]="16-digit numeric string"; c["recordNoMeaning"]="parent recordNo + -%s<nnn>"%tag
 NK=len(cols); NF=sum(len(c["fields"]) for c in cols)
 kinds=collections.Counter(c["kind"] for c in cols)
-HEAD="Model version 2.6 | 12 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
+HEAD="Model version 2.9 | 12 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
 KIND={"entity":"Entity","child":"Child (was an embedded array of objects)","relationship":"Relationship (was an array of IDs)","valueList":"Value list (was an array of values)"}
 # inventory
 s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\n| Module code | Module | Collections |\n|---|---|---|\n"
-for m in order: s+="| %s | %s | %d |\n"%(m,MODN[m],sum(1 for c in cols if c["module"]==m))
+for m in ORDER_ALL: s+="| %s | %s | %d |\n"%(m,MODN[m],sum(1 for c in cols if c["module"]==m))
 for m in order:
     s+="\n## %s - %s\n\n| # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |\n|---|---|---|---|---|---|---|\n"%(m,MODN[m])
     n=0
@@ -76,7 +77,7 @@ no=[c["collection"] for c in cols if c["kind"]=="entity" and not c["statusValues
 s+="\nEntity collections without a status key (append-only records): "+", ".join(no)+".\n"
 w("04_reference_data/code_lists/status_values.md",s)
 # register
-s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.6 | Date: 12 October 2026 | Database: mes | "+HEAD
+s="# data_model_register.md\n\nMES on MongoDB - Front Brake Caliper Assembly LH - Pune\nRegister version: 2.9 | Date: 12 October 2026 | Database: mes | "+HEAD
 s+='''This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
 ## 1. Conventions in force
@@ -127,6 +128,9 @@ s+='''
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became %d collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.9 | 12 Oct 2026 | Owner decisions on the BMR / MMR designation (D057-D059): u_mes_mmr_masterManufacturingRecord (1367) with the relationship u_mes_mmr_masterManufacturingRecordRecipe (1368), and u_mes_bmr_batchManufacturingRecord (1369) added; line clearance and dispensing stay in plan and matl, audit-trail review stays in syst |
+| 2.8 | 12 Oct 2026 | Modules bmr (Batch Manufacturing Record) and mmr (Master Manufacturing Record) added on the owner's instruction (D054-D056). Collections unique to the batch manufacturing record moved to bmr with their numbers and _id values unchanged: u_mes_qual_batchRecordReview, u_mes_qual_batchRecordReviewException and u_mes_qual_batchRelease to u_mes_bmr_*, u_mes_plan_yieldReconciliation to u_mes_bmr_yieldReconciliation. No collection is unique to the master manufacturing record, so mmr has no collections yet. Collections shared by BMR / MMR and the rest of the MES are listed in 01_research/BMR_MMR_module_designation.md and were not moved |
+| 2.7 | 12 Oct 2026 | GMP_Pharma_01 implemented (D047-D053): 23 collections added (numbers 1344-1366, existing numbers unchanged), 33 keys added to 11 existing collections (41 keys with display pairs), allowed values extended; computerised system inventory, system validation, periodic review, audit-trail review, user access review, batch record review by exception, batch release, yield and label reconciliation, line clearance, equipment and area logbook, cleaning records, environmental monitoring, dispensing, retention samples, quality risk assessment, product quality review, recalls, process validation, equipment qualification. Analysis: 01_research/GMP_Pharma_01_impact_analysis.md |
 | 2.6 | 12 Oct 2026 | MES_ExternalRequirement_01 implemented (D036-D042): 44 collections added (numbers 1300-1343, existing numbers unchanged), 212 keys added to 38 existing collections, allowed values extended; interlock rules and events, escalation and alert rules, operator sessions, document acknowledgements, recipe downloads, set-up verification, exposure timers, replenishment rules, trace investigations, per-position results and measurement curves, defect records, LPA schedules, alarm definitions, loss and performance reports, maintenance checklists, spare-part transactions, lifecycle events, analytics models and predictions, simulation studies, record policies, saved views, backup runs. Analysis: 01_research/MES_ExternalRequirement_01_impact_analysis.md |
 | 2.5 | 12 Oct 2026 | DATA-004: dates and times stored as local plant time (IST) with the +0000 suffix; every date key tagged Date or Datetime; sample data regenerated |
 | 2.4 | 12 Oct 2026 | Sample documents: exactly 10 per collection in 03_design/<module>/samples; system IDs changed to 16-digit numeric strings; sample period moved to April-September 2026; master ID registry replaced by the generated 04_reference_data/sample_data_registry.md; child, relationship and value-list collections use recordNo as display value |

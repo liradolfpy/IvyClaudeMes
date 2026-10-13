@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000001",
     recordNo: "A-WD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000001",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000002",
     recordNo: "A-WD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000001",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000003",
     recordNo: "B-WD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000002",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000004",
     recordNo: "B-WD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000002",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000005",
     recordNo: "C-WD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000003",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000006",
     recordNo: "C-WD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000003",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000007",
     recordNo: "G-WD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000004",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000008",
     recordNo: "G-WD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000004",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000009",
     recordNo: "A-SAT-WD01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000005",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_mast_shiftWorkingDay").insertMany([
   {
     _id: "1017000000000010",
     recordNo: "A-SAT-WD02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000005",

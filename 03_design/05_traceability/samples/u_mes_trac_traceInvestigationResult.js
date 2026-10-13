@@ -4,6 +4,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000001",
     recordNo: "TRC-20260919-011-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000001",
@@ -34,6 +35,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000002",
     recordNo: "TRC-20260919-011-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000001",
@@ -64,6 +66,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000003",
     recordNo: "TRC-20260919-011-R03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000001",
@@ -94,6 +97,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000004",
     recordNo: "TRC-20260924-012-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000002",
@@ -124,6 +128,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000005",
     recordNo: "TRC-20260924-012-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000002",
@@ -154,6 +159,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000006",
     recordNo: "TRC-20260921-013-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000003",
@@ -184,6 +190,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000007",
     recordNo: "TRC-20260921-013-R02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000003",
@@ -214,6 +221,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000008",
     recordNo: "TRC-20260922-014-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000004",
@@ -244,6 +252,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000009",
     recordNo: "TRC-20260917-015-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000005",
@@ -274,6 +283,7 @@ db.getCollection("u_mes_trac_traceInvestigationResult").insertMany([
   {
     _id: "1315000000000010",
     recordNo: "TRC-20260918-020-R01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     traceInvestigationId: "1314000000000010",

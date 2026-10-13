@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000001",
     recordNo: "MECH",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Mechanical",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000002",
     recordNo: "ELEC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Electrical",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000003",
     recordNo: "TOOL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Tooling",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000004",
     recordNo: "PROC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Process",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000005",
     recordNo: "MATL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Material",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000006",
     recordNo: "QUAL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Quality",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000007",
     recordNo: "UTIL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Utilities",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000008",
     recordNo: "ORG",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Organisation",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000009",
     recordNo: "CHG",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Changeover",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_perf_reasonCategory").insertMany([
   {
     _id: "1287000000000010",
     recordNo: "PLAN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Planned",
     description: "Planned (PLAN)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000011",
+    recordNo: "EQP",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Equipment",
+    description: "Equipment (EQP)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000012",
+    recordNo: "UTL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Utilities",
+    description: "Utilities (UTL)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000013",
+    recordNo: "TLG",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Change Parts and Tooling",
+    description: "Change Parts and Tooling (TLG)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000014",
+    recordNo: "PRC",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Process",
+    description: "Process (PRC)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000015",
+    recordNo: "MAT",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Material",
+    description: "Material (MAT)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000016",
+    recordNo: "QCA",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Quality Clearance",
+    description: "Quality Clearance (QCA)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000017",
+    recordNo: "CLN",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Cleaning",
+    description: "Cleaning (CLN)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000018",
+    recordNo: "DOC",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Documentation",
+    description: "Documentation (DOC)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000019",
+    recordNo: "CHG",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Product Changeover",
+    description: "Product Changeover (CHG)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1287000000000020",
+    recordNo: "PLN",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Planned",
+    description: "Planned (PLN)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000001",
     recordNo: "MSG-2026-000153",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000001",
@@ -46,6 +47,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000002",
     recordNo: "MSG-2026-000156",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000002",
@@ -88,6 +90,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000003",
     recordNo: "MSG-2026-000159",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000003",
@@ -130,6 +133,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000004",
     recordNo: "MSG-2026-000162",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000004",
@@ -172,6 +176,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000005",
     recordNo: "MSG-2026-000165",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000005",
@@ -214,6 +219,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000006",
     recordNo: "MSG-2026-000168",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000006",
@@ -256,6 +262,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000007",
     recordNo: "MSG-2026-000171",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000007",
@@ -298,6 +305,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000008",
     recordNo: "MSG-2026-000174",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000008",
@@ -340,6 +348,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000009",
     recordNo: "MSG-2026-000177",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000009",
@@ -382,6 +391,7 @@ db.getCollection("u_mes_syst_erpMessage").insertMany([
   {
     _id: "1229000000000010",
     recordNo: "MSG-2026-000180",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000010",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000001",
     recordNo: "SAFETY-GLASSES",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Safety Glasses",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000002",
     recordNo: "SAFETY-SHOES",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Safety Shoes",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000003",
     recordNo: "CUT-GLOVES",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Cut Resistant Gloves",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000004",
     recordNo: "EAR-PLUGS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Ear Plugs",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000005",
     recordNo: "HEAT-GLOVES",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Heat Resistant Gloves",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000006",
     recordNo: "FACE-SHIELD",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Face Shield",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000007",
     recordNo: "APRON",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Aluminised Apron",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000008",
     recordNo: "ACID-GLOVES",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Acid Resistant Gloves",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000009",
     recordNo: "RESPIRATOR",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Half Mask Respirator",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_prod_ppeItem").insertMany([
   {
     _id: "1272000000000010",
     recordNo: "LASER-GLASSES",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Laser Safety Glasses",
     description: "Laser Safety Glasses (LASER-GLASSES)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000011",
+    recordNo: "GOWN-CR",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Cleanroom Gown",
+    description: "Cleanroom Gown (GOWN-CR)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000012",
+    recordNo: "HAIR-COVER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Hair Cover",
+    description: "Hair Cover (HAIR-COVER)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000013",
+    recordNo: "SHOE-COVER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Shoe Cover",
+    description: "Shoe Cover (SHOE-COVER)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000014",
+    recordNo: "NITRILE-GLV",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Nitrile Gloves",
+    description: "Nitrile Gloves (NITRILE-GLV)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000015",
+    recordNo: "FACE-MASK",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Face Mask",
+    description: "Face Mask (FACE-MASK)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000016",
+    recordNo: "GOGGLES-PH",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Safety Goggles",
+    description: "Safety Goggles (GOGGLES-PH)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000017",
+    recordNo: "PAPR",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Powered Air-Purifying Respirator",
+    description: "Powered Air-Purifying Respirator (PAPR)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000018",
+    recordNo: "EAR-MUFF",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Ear Muffs",
+    description: "Ear Muffs (EAR-MUFF)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000019",
+    recordNo: "ANTISTATIC-SHOES",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Antistatic Shoes",
+    description: "Antistatic Shoes (ANTISTATIC-SHOES)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1272000000000020",
+    recordNo: "BEARD-COVER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Beard Cover",
+    description: "Beard Cover (BEARD-COVER)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

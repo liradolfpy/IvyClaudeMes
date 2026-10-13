@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000001",
     recordNo: "TLR-2026-000160",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000001",
@@ -45,6 +46,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000002",
     recordNo: "TLR-2026-000163",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000002",
@@ -86,6 +88,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000003",
     recordNo: "TLR-2026-000166",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000003",
@@ -127,6 +130,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000004",
     recordNo: "TLR-2026-000169",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000004",
@@ -168,6 +172,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000005",
     recordNo: "TLR-2026-000172",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000005",
@@ -209,6 +214,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000006",
     recordNo: "TLR-2026-000175",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000006",
@@ -250,6 +256,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000007",
     recordNo: "TLR-2026-000178",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000007",
@@ -291,6 +298,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000008",
     recordNo: "TLR-2026-000181",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000008",
@@ -332,6 +340,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000009",
     recordNo: "TLR-2026-000184",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000009",
@@ -373,6 +382,7 @@ db.getCollection("u_mes_maint_toolLifeRecord").insertMany([
   {
     _id: "1228000000000010",
     recordNo: "TLR-2026-000187",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     toolId: "1226000000000010",

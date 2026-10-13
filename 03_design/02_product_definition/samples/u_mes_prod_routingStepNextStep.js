@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000001",
     recordNo: "5110-10-0100-R01-S01-NS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000001",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000002",
     recordNo: "5110-10-0100-R01-S01-NS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000001",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000003",
     recordNo: "5110-10-0100-R01-S02-NS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000002",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000004",
     recordNo: "5110-10-0100-R01-S02-NS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000002",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000005",
     recordNo: "5110-10-0100-R01-S03-NS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000003",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000006",
     recordNo: "5110-10-0100-R01-S03-NS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000003",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000007",
     recordNo: "5110-10-0100-R01-S04-NS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000004",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000008",
     recordNo: "5110-10-0100-R01-S04-NS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000004",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000009",
     recordNo: "5110-10-0100-R01-S05-NS01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000005",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_prod_routingStepNextStep").insertMany([
   {
     _id: "1056000000000010",
     recordNo: "5110-10-0100-R01-S05-NS02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     routingStepId: "1054000000000005",
     routingStepName: "5110-10-0100-R01-S05",
+    stepNo: NumberInt(20),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000011",
+    recordNo: "FG-PCM500-B10-R01-S01-NS01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000011",
+    routingStepName: "FG-PCM500-B10-R01-S01",
+    stepNo: NumberInt(10),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000012",
+    recordNo: "FG-PCM500-B10-R01-S01-NS02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000011",
+    routingStepName: "FG-PCM500-B10-R01-S01",
+    stepNo: NumberInt(20),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000013",
+    recordNo: "FG-PCM500-B10-R01-S02-NS01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000012",
+    routingStepName: "FG-PCM500-B10-R01-S02",
+    stepNo: NumberInt(10),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000014",
+    recordNo: "FG-PCM500-B10-R01-S02-NS02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000012",
+    routingStepName: "FG-PCM500-B10-R01-S02",
+    stepNo: NumberInt(20),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000015",
+    recordNo: "FG-PCM500-B10-R01-S03-NS01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000013",
+    routingStepName: "FG-PCM500-B10-R01-S03",
+    stepNo: NumberInt(10),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000016",
+    recordNo: "FG-PCM500-B10-R01-S03-NS02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000013",
+    routingStepName: "FG-PCM500-B10-R01-S03",
+    stepNo: NumberInt(20),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000017",
+    recordNo: "FG-PCM500-B10-R01-S04-NS01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000014",
+    routingStepName: "FG-PCM500-B10-R01-S04",
+    stepNo: NumberInt(10),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000018",
+    recordNo: "FG-PCM500-B10-R01-S04-NS02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000014",
+    routingStepName: "FG-PCM500-B10-R01-S04",
+    stepNo: NumberInt(20),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000019",
+    recordNo: "FG-PCM500-B10-R01-S05-NS01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000015",
+    routingStepName: "FG-PCM500-B10-R01-S05",
+    stepNo: NumberInt(10),
+    nextStepCondition: "Result OK",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1056000000000020",
+    recordNo: "FG-PCM500-B10-R01-S05-NS02",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    routingStepId: "1054000000000015",
+    routingStepName: "FG-PCM500-B10-R01-S05",
     stepNo: NumberInt(20),
     nextStepCondition: "Result OK",
     schemaVersion: NumberInt(1)

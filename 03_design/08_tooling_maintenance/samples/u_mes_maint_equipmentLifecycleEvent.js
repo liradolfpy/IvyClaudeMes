@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000001",
     recordNo: "ELE-TRQ-01-N1-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000007",
@@ -36,6 +37,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000002",
     recordNo: "ELE-GDC-01-M1-004",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000001",
@@ -68,6 +70,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000003",
     recordNo: "ELE-HT-01-F1-006",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000002",
@@ -100,6 +103,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000004",
     recordNo: "ELE-CNC-01-H1-003",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000003",
@@ -132,6 +136,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000005",
     recordNo: "ELE-LKT-01-T1-002",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000008",
@@ -164,6 +169,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000006",
     recordNo: "ELE-LKT-01-T1-003",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000008",
@@ -196,6 +202,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000007",
     recordNo: "ELE-WSH-01-W1-005",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000004",
@@ -228,6 +235,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000008",
     recordNo: "ELE-LSR-01-L1-002",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000009",
@@ -260,6 +268,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000009",
     recordNo: "ELE-FIN-01-V1-001",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000010",
@@ -292,6 +301,7 @@ db.getCollection("u_mes_maint_equipmentLifecycleEvent").insertMany([
   {
     _id: "1331000000000010",
     recordNo: "ELE-ANO-01-L1-007",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     equipmentId: "1013000000000005",

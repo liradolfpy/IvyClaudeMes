@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000001",
     recordNo: "MACH-STEEL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Machined Steel Parts",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000002",
     recordNo: "RUBBER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Rubber Mouldings",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000003",
     recordNo: "FASTENER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Fasteners and Fittings",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000004",
     recordNo: "AL-ALLOY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Aluminium Alloys",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000005",
     recordNo: "GUIDE-PIN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Guide Pins and Bushes",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000006",
     recordNo: "TOOLING",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Dies and Tooling",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000007",
     recordNo: "CALIB",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Calibration Services",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000008",
     recordNo: "CUT-TOOL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Cutting Tools",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000009",
     recordNo: "PACKAGING",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Returnable Packaging",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_mast_commodity").insertMany([
   {
     _id: "1269000000000010",
     recordNo: "MANPOWER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Contract Manpower",
     description: "Contract Manpower (MANPOWER)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000011",
+    recordNo: "API",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Active Pharmaceutical Ingredients",
+    description: "Active Pharmaceutical Ingredients (API)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000012",
+    recordNo: "EXCIP",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Excipients",
+    description: "Excipients (EXCIP)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000013",
+    recordNo: "BINDER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Binders",
+    description: "Binders (BINDER)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000014",
+    recordNo: "DISINT",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Disintegrants",
+    description: "Disintegrants (DISINT)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000015",
+    recordNo: "LUBR",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Lubricants",
+    description: "Lubricants (LUBR)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000016",
+    recordNo: "COAT",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Film Coating Systems",
+    description: "Film Coating Systems (COAT)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000017",
+    recordNo: "CALIB",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Calibration and Validation Services",
+    description: "Calibration and Validation Services (CALIB)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000018",
+    recordNo: "FOIL",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Foils and Laminates",
+    description: "Foils and Laminates (FOIL)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000019",
+    recordNo: "CARTON",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Printed Cartons and Leaflets",
+    description: "Printed Cartons and Leaflets (CARTON)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1269000000000020",
+    recordNo: "SERVICES",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Facility Services",
+    description: "Facility Services (SERVICES)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

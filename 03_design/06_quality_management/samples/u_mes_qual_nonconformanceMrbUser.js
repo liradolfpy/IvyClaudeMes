@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000001",
     recordNo: "NCR-2026-000118-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000001",
@@ -22,6 +23,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000002",
     recordNo: "NCR-2026-000121-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000002",
@@ -40,6 +42,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000003",
     recordNo: "NCR-2026-000124-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000003",
@@ -58,6 +61,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000004",
     recordNo: "NCR-2026-000127-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000004",
@@ -76,6 +80,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000005",
     recordNo: "NCR-2026-000130-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000005",
@@ -94,6 +99,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000006",
     recordNo: "NCR-2026-000133-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000006",
@@ -112,6 +118,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000007",
     recordNo: "NCR-2026-000136-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000007",
@@ -130,6 +137,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000008",
     recordNo: "NCR-2026-000139-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000008",
@@ -148,6 +156,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000009",
     recordNo: "NCR-2026-000142-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000009",
@@ -166,6 +175,7 @@ db.getCollection("u_mes_qual_nonconformanceMrbUser").insertMany([
   {
     _id: "1167000000000010",
     recordNo: "NCR-2026-000145-MU01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     nonconformanceId: "1160000000000010",

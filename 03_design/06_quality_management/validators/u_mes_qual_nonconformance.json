@@ -42,6 +42,14 @@
         "closedAt",
         "closedById",
         "closedBy",
+        "deviationClass",
+        "productImpactText",
+        "investigationDueDate",
+        "qaApprovedById",
+        "qaApprovedBy",
+        "qaApprovedAt",
+        "riskAssessmentId",
+        "riskAssessmentName",
         "status",
         "schemaVersion",
         "createdAt",
@@ -255,6 +263,68 @@
             "null"
           ],
           "description": "Display name of the user in closedById, copied from u_mes_mast_user.fullName"
+        },
+        "deviationClass": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "GMP deviation classification; null when the nonconformance is not a GMP deviation (GMP-30)",
+          "enum": [
+            "Minor",
+            "Major",
+            "Critical",
+            null
+          ]
+        },
+        "productImpactText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Impact assessment on the product and on other batches"
+        },
+        "investigationDueDate": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Due date of the investigation"
+        },
+        "qaApprovedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'qa approved'"
+        },
+        "qaApprovedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in qaApprovedById, copied from u_mes_mast_user.fullName"
+        },
+        "qaApprovedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the quality approval"
+        },
+        "riskAssessmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_riskAssessment._id"
+        },
+        "riskAssessmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title"
         },
         "status": {
           "bsonType": "string",

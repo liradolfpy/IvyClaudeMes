@@ -787,14 +787,19 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 21 | ppapRequired | Boolean | - |  |
 | 22 | implementedAt | Date | Datetime |  |
 | 23 | closedAt | Date | Datetime |  |
-| 24 | status | String | - |  |
-| 25 | schemaVersion | Int32 | - |  |
-| 26 | createdAt | Date | Datetime |  |
-| 27 | createdById | String | - | u_mes_mast_user._id |
-| 28 | createdBy | String | - |  |
-| 29 | updatedAt | Date | Datetime |  |
-| 30 | updatedById | String | - | u_mes_mast_user._id |
-| 31 | updatedBy | String | - |  |
+| 24 | gmpImpact | Boolean | - |  |
+| 25 | validationRequired | Boolean | - |  |
+| 26 | regulatoryImpact | String | - |  |
+| 27 | riskAssessmentId | String | - | u_mes_qual_riskAssessment._id |
+| 28 | riskAssessmentName | String | - |  |
+| 29 | status | String | - |  |
+| 30 | schemaVersion | Int32 | - |  |
+| 31 | createdAt | Date | Datetime |  |
+| 32 | createdById | String | - | u_mes_mast_user._id |
+| 33 | createdBy | String | - |  |
+| 34 | updatedAt | Date | Datetime |  |
+| 35 | updatedById | String | - | u_mes_mast_user._id |
+| 36 | updatedBy | String | - |  |
 
 ## u_mes_prod_engineeringChangeAffectedItem
 

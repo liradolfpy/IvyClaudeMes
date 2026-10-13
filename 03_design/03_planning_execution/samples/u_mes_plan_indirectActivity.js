@@ -4,6 +4,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000001",
     recordNo: "WAIT-MAT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Waiting For Material",
@@ -18,6 +19,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000002",
     recordNo: "WAIT-MNT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Waiting For Maintenance",
@@ -32,6 +34,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000003",
     recordNo: "CLEAN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Cleaning and 5S",
@@ -46,6 +49,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000004",
     recordNo: "TRAIN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Training",
@@ -60,6 +64,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000005",
     recordNo: "MEET",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Shift Meeting",
@@ -74,6 +79,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000006",
     recordNo: "CHG-OVER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Changeover Support",
@@ -88,6 +94,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000007",
     recordNo: "REWORK-SUP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Rework Support",
@@ -102,6 +109,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000008",
     recordNo: "QC-SORT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sorting For Quality",
@@ -116,6 +124,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000009",
     recordNo: "KAIZEN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Kaizen Activity",
@@ -130,6 +139,7 @@ db.getCollection("u_mes_plan_indirectActivity").insertMany([
   {
     _id: "1277000000000010",
     recordNo: "STOCK-COUNT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Stock Count",

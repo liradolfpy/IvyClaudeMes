@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000001",
     recordNo: "APP-GDC-01-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000001",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000002",
     recordNo: "APP-GDC-01-S01-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000001",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000003",
     recordNo: "APP-GDC-01-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000002",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000004",
     recordNo: "APP-GDC-01-S02-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000002",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000005",
     recordNo: "APP-HT-01-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000003",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000006",
     recordNo: "APP-HT-01-S01-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000003",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000007",
     recordNo: "APP-HT-01-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000004",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000008",
     recordNo: "APP-HT-01-S02-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000004",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000009",
     recordNo: "APP-CNC-01-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000005",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_syst_operatorAppStepTrigger").insertMany([
   {
     _id: "1237000000000010",
     recordNo: "APP-CNC-01-S01-T02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     operatorAppStepId: "1236000000000005",

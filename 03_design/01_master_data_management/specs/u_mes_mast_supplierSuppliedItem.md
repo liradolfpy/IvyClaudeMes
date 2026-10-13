@@ -9,7 +9,7 @@
 | Parent collection | u_mes_mast_supplier |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 10 (10 required, 0 may be null) |
+| Keys | 12 (11 required, 1 may be null) |
 
 ## Structure
 
@@ -31,7 +31,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 8 | suppliedItemId | String | - | Yes | Reference to u_mes_prod_item._id: supplied item | `"1043000000000010"` | Reference: u_mes_prod_item._id |
 | 9 | suppliedItemName | String | - | Yes | Display value of suppliedItemId, copied from u_mes_prod_item.description | `"Aluminium alloy ingot AlSi7Mg0.3 (A356)"` |  |
-| 10 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 10 | qualificationStatus | String | - | Yes | Approval of the supplier for this item (GMP-40) | `"Qualified"` | Qualified; Conditionally Approved; Disqualified |
+| 11 | qualifiedUntilDate | Date | Date | No (null allowed) | Last day of the supplier approval for the item | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
+| 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes
 

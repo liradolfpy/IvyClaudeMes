@@ -87,7 +87,7 @@ Reserved, Issued, Marked, Shipped, Voided, Scrapped. Initial state: Reserved. Th
 
 ## Referenced by
 
-u_mes_plan_wipUnit, u_mes_trac_genealogyLink, u_mes_trac_asBuiltRecord, u_mes_qual_scrapRecord, u_mes_qual_customerComplaintSerialNumber, u_mes_qual_measurementCurve, u_mes_qual_defectRecord.
+u_mes_plan_wipUnit, u_mes_trac_genealogyLink, u_mes_trac_asBuiltRecord, u_mes_qual_scrapRecord, u_mes_qual_customerComplaintSerialNumber, u_mes_qual_measurementCurve, u_mes_qual_defectRecord, u_mes_qual_retentionSample.
 
 ## Files
 

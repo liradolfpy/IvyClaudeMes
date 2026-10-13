@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000001",
     recordNo: "IN",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "India",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000002",
     recordNo: "DE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Germany",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000003",
     recordNo: "JP",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Japan",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000004",
     recordNo: "US",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "United States",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000005",
     recordNo: "CN",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "China",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000006",
     recordNo: "KR",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "South Korea",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000007",
     recordNo: "TH",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Thailand",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000008",
     recordNo: "IT",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Italy",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000009",
     recordNo: "SE",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sweden",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_mast_country").insertMany([
   {
     _id: "1266000000000010",
     recordNo: "GB",
+    app: "Common",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "United Kingdom",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000001",
     recordNo: "NAO-CER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "NAO Ceramic",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000002",
     recordNo: "LOW-MET",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Low-Metallic",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000003",
     recordNo: "SEMI-MET",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Semi-Metallic",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000004",
     recordNo: "NAO-ORG",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "NAO Organic",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000005",
     recordNo: "CER-PREM",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Premium Ceramic",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000006",
     recordNo: "LOW-MET-EU",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Low-Metallic ECE R90",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000007",
     recordNo: "CU-FREE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Copper-Free NAO",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000008",
     recordNo: "HD-SEMI",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Heavy Duty Semi-Metallic",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000009",
     recordNo: "EV-LOWDUST",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "EV Low-Dust",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_prod_padCompound").insertMany([
   {
     _id: "1274000000000010",
     recordNo: "AM-STD",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Aftermarket Standard",

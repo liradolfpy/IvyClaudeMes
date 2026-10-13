@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000001",
     recordNo: "FRONT-CALIPER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Front Caliper",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000002",
     recordNo: "REAR-CALIPER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Rear Caliper",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000003",
     recordNo: "CALIPER-BODY",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Caliper Body",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000004",
     recordNo: "BODY-CASTING",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Caliper Body Casting",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000005",
     recordNo: "BRACKET",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Caliper Bracket",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000006",
     recordNo: "EPB-CALIPER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Electric Parking Brake Caliper",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000007",
     recordNo: "MASTER-CYL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Master Cylinder",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000008",
     recordNo: "WHEEL-CYL",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Wheel Cylinder",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000009",
     recordNo: "KNUCKLE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Steering Knuckle",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_prod_itemFamily").insertMany([
   {
     _id: "1271000000000010",
     recordNo: "SERVICE-KIT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Service Kit",
     description: "Service Kit (SERVICE-KIT)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000011",
+    recordNo: "ANALGESIC-TAB",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Analgesic Tablets",
+    description: "Analgesic Tablets (ANALGESIC-TAB)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000012",
+    recordNo: "ANALGESIC-SUSP",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Analgesic Suspensions",
+    description: "Analgesic Suspensions (ANALGESIC-SUSP)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000013",
+    recordNo: "BULK-TAB",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Bulk Tablets",
+    description: "Bulk Tablets (BULK-TAB)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000014",
+    recordNo: "GRANULES",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Granules",
+    description: "Granules (GRANULES)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000015",
+    recordNo: "API",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Active Ingredients",
+    description: "Active Ingredients (API)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000016",
+    recordNo: "EXCIPIENT",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Excipients",
+    description: "Excipients (EXCIPIENT)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000017",
+    recordNo: "COATING",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Coating Materials",
+    description: "Coating Materials (COATING)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000018",
+    recordNo: "PRIMARY-PACK",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Primary Packaging Materials",
+    description: "Primary Packaging Materials (PRIMARY-PACK)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000019",
+    recordNo: "SECONDARY-PACK",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Secondary Packaging Materials",
+    description: "Secondary Packaging Materials (SECONDARY-PACK)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1271000000000020",
+    recordNo: "SAMPLE-PACK",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Physician Sample Packs",
+    description: "Physician Sample Packs (SAMPLE-PACK)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

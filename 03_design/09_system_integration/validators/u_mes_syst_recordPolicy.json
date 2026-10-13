@@ -20,6 +20,7 @@
         "deleteAllowed",
         "retentionYears",
         "archiveAfterMonths",
+        "gxpRelevant",
         "status",
         "schemaVersion"
       ],
@@ -105,6 +106,10 @@
             "null"
           ],
           "description": "Move to archive storage after"
+        },
+        "gxpRelevant": {
+          "bsonType": "bool",
+          "description": "True when the collection holds GMP records (GMP-10)"
         },
         "status": {
           "bsonType": "string",

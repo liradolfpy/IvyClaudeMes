@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000001",
     recordNo: "ESC-BRKDN-CRIT-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000001",
@@ -21,6 +22,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000002",
     recordNo: "ESC-BRKDN-CRIT-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000001",
@@ -38,6 +40,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000003",
     recordNo: "ESC-BRKDN-CRIT-L03",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000001",
@@ -55,6 +58,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000004",
     recordNo: "ESC-BRKDN-STD-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000002",
@@ -72,6 +76,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000005",
     recordNo: "ESC-BRKDN-STD-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000002",
@@ -89,6 +94,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000006",
     recordNo: "ESC-QUAL-ANDON-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000003",
@@ -106,6 +112,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000007",
     recordNo: "ESC-QUAL-ANDON-L02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000003",
@@ -123,6 +130,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000008",
     recordNo: "ESC-INTERLOCK-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000004",
@@ -140,6 +148,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000009",
     recordNo: "ESC-LPA-MISSED-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000006",
@@ -157,6 +166,7 @@ db.getCollection("u_mes_syst_escalationRuleLevel").insertMany([
   {
     _id: "1335000000000010",
     recordNo: "ESC-OUTPUT-GAP-L01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     escalationRuleId: "1334000000000007",

@@ -4,6 +4,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000001",
     recordNo: "PM-GDC-01-M1-RSP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000001",
@@ -17,6 +18,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000002",
     recordNo: "PM-GDC-01-M1-RSP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000001",
@@ -30,6 +32,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000003",
     recordNo: "PM-HT-01-F1-RSP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000002",
@@ -43,6 +46,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000004",
     recordNo: "PM-HT-01-F1-RSP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000002",
@@ -56,6 +60,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000005",
     recordNo: "PM-CNC-01-H1-RSP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000003",
@@ -69,6 +74,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000006",
     recordNo: "PM-CNC-01-H1-RSP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000003",
@@ -82,6 +88,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000007",
     recordNo: "PM-WSH-01-W1-RSP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000004",
@@ -95,6 +102,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000008",
     recordNo: "PM-WSH-01-W1-RSP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000004",
@@ -108,6 +116,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000009",
     recordNo: "PM-ANO-01-L1-RSP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000005",
@@ -121,6 +130,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
   {
     _id: "1219000000000010",
     recordNo: "PM-ANO-01-L1-RSP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     maintenancePlanId: "1216000000000005",

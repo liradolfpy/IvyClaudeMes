@@ -133,8 +133,11 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 13 | floorAreaSqm | Decimal128 | - |  |
 | 14 | isProductionArea | Boolean | - |  |
 | 15 | sequenceNo | Int32 | - |  |
-| 16 | status | String | - |  |
-| 17 | schemaVersion | Int32 | - |  |
+| 16 | cleanlinessClass | String | - |  |
+| 17 | environmentallyMonitored | Boolean | - |  |
+| 18 | gowningRequired | Boolean | - |  |
+| 19 | status | String | - |  |
+| 20 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_line
 
@@ -334,8 +337,14 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 43 | healthScoreAt | Date | Datetime |  |
 | 44 | acquisitionCostInr | Decimal128 | - |  |
 | 45 | plannedReplacementDate | Date | Date |  |
-| 46 | status | String | - |  |
-| 47 | schemaVersion | Int32 | - |  |
+| 46 | qualificationStatus | String | - |  |
+| 47 | requalificationDueDate | Date | Date |  |
+| 48 | cleanStatus | String | - |  |
+| 49 | cleanHoldExpiresAt | Date | Datetime |  |
+| 50 | lastCleaningRecordId | String | - | u_mes_maint_cleaningRecord._id |
+| 51 | lastCleaningRecordName | String | - |  |
+| 52 | status | String | - |  |
+| 53 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_equipmentIotDevice
 
@@ -669,8 +678,10 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 29 | failedLoginCount | Int32 | - |  |
 | 30 | passwordChangedAt | Date | Datetime |  |
 | 31 | isLocked | Boolean | - |  |
-| 32 | status | String | - |  |
-| 33 | schemaVersion | Int32 | - |  |
+| 32 | lastAccessReviewDate | Date | Date |  |
+| 33 | passwordExpiryDate | Date | Date |  |
+| 34 | status | String | - |  |
+| 35 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_userRole
 
@@ -947,7 +958,9 @@ Kind: relationship | Data class: master | Parent: u_mes_mast_supplier | _id patt
 | 7 | sequenceNo | Int32 | - |  |
 | 8 | suppliedItemId | String | - | u_mes_prod_item._id |
 | 9 | suppliedItemName | String | - |  |
-| 10 | schemaVersion | Int32 | - |  |
+| 10 | qualificationStatus | String | - |  |
+| 11 | qualifiedUntilDate | Date | Date |  |
+| 12 | schemaVersion | Int32 | - |  |
 
 ## u_mes_mast_unitOfMeasure
 

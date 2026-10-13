@@ -4,6 +4,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000001",
     recordNo: "ERP-PRD-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000001",
@@ -19,6 +20,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000002",
     recordNo: "ERP-PRD-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000001",
@@ -34,6 +36,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000003",
     recordNo: "PLM-PRD-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000002",
@@ -49,6 +52,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000004",
     recordNo: "PLM-PRD-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000002",
@@ -64,6 +68,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000005",
     recordNo: "OPC-FDY-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000003",
@@ -79,6 +84,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000006",
     recordNo: "OPC-FDY-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000003",
@@ -94,6 +100,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000007",
     recordNo: "OPC-MC-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000004",
@@ -109,6 +116,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000008",
     recordNo: "OPC-MC-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000004",
@@ -124,6 +132,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000009",
     recordNo: "OP-TRQ-F01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000005",
@@ -139,6 +148,7 @@ db.getCollection("u_mes_syst_integrationConnectorFunction").insertMany([
   {
     _id: "1231000000000010",
     recordNo: "OP-TRQ-F02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     integrationConnectorId: "1230000000000005",

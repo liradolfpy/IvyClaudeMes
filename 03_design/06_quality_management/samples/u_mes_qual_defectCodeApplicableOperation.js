@@ -4,6 +4,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000001",
     recordNo: "CS01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000002",
     recordNo: "HT01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000003",
     recordNo: "MC01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000004",
     recordNo: "WS01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000005",
     recordNo: "AN01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000006",
     recordNo: "AS01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000007",
     recordNo: "TQ01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000008",
     recordNo: "LK01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000009",
     recordNo: "LM01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_qual_defectCodeApplicableOperation").insertMany([
   {
     _id: "1159000000000010",
     recordNo: "FI01-AO01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     defectCodeId: "1158000000000010",

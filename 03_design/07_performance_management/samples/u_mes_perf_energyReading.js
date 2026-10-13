@@ -4,6 +4,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000001",
     recordNo: "ENR-2026-000337",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -40,6 +41,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000002",
     recordNo: "ENR-2026-000340",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -76,6 +78,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000003",
     recordNo: "ENR-2026-000343",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -112,6 +115,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000004",
     recordNo: "ENR-2026-000346",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -148,6 +152,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000005",
     recordNo: "ENR-2026-000349",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -184,6 +189,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000006",
     recordNo: "ENR-2026-000352",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -220,6 +226,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000007",
     recordNo: "ENR-2026-000355",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -256,6 +263,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000008",
     recordNo: "ENR-2026-000358",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -292,6 +300,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000009",
     recordNo: "ENR-2026-000361",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",
@@ -328,6 +337,7 @@ db.getCollection("u_mes_perf_energyReading").insertMany([
   {
     _id: "1250000000000010",
     recordNo: "ENR-2026-000364",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     meterIotDeviceId: "1232000000000004",

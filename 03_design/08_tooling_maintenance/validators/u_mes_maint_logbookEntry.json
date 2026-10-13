@@ -1,0 +1,245 @@
+{
+  "collMod": "u_mes_maint_logbookEntry",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_maint_logbookEntry",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "relatedCollectionName",
+        "relatedEntityId",
+        "relatedEntityName",
+        "activityType",
+        "productionOrderId",
+        "productionOrderName",
+        "lotId",
+        "lotName",
+        "cleaningRecordId",
+        "cleaningRecordName",
+        "maintenanceWorkOrderId",
+        "maintenanceWorkOrderName",
+        "lineClearanceId",
+        "lineClearanceName",
+        "entryText",
+        "performedById",
+        "performedBy",
+        "startedAt",
+        "completedAt",
+        "reviewedById",
+        "reviewedBy",
+        "reviewedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "relatedCollectionName": {
+          "bsonType": "string",
+          "description": "Name of the collection the related document is in",
+          "enum": [
+            "u_mes_mast_equipment",
+            "u_mes_mast_area"
+          ]
+        },
+        "relatedEntityId": {
+          "bsonType": "string",
+          "description": "_id of the related document in the collection named by relatedCollectionName"
+        },
+        "relatedEntityName": {
+          "bsonType": "string",
+          "description": "Display value of the related document"
+        },
+        "activityType": {
+          "bsonType": "string",
+          "description": "Activity logged",
+          "enum": [
+            "Production",
+            "Cleaning",
+            "Maintenance",
+            "Calibration",
+            "Line Clearance",
+            "Qualification",
+            "Idle"
+          ]
+        },
+        "productionOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "lotId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lot._id"
+        },
+        "lotName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lotId, copied from u_mes_plan_lot.recordNo"
+        },
+        "cleaningRecordId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_cleaningRecord._id"
+        },
+        "cleaningRecordName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of cleaningRecordId, copied from u_mes_maint_cleaningRecord.recordNo"
+        },
+        "maintenanceWorkOrderId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_maint_maintenanceWorkOrder._id"
+        },
+        "maintenanceWorkOrderName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of maintenanceWorkOrderId, copied from u_mes_maint_maintenanceWorkOrder.title"
+        },
+        "lineClearanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_plan_lineClearance._id"
+        },
+        "lineClearanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of lineClearanceId, copied from u_mes_plan_lineClearance.recordNo"
+        },
+        "entryText": {
+          "bsonType": "string",
+          "description": "Logbook text"
+        },
+        "performedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'performed'"
+        },
+        "performedBy": {
+          "bsonType": "string",
+          "description": "Display name of the user in performedById, copied from u_mes_mast_user.fullName"
+        },
+        "startedAt": {
+          "bsonType": "date",
+          "description": "Start of the activity"
+        },
+        "completedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "End of the activity"
+        },
+        "reviewedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'reviewed'"
+        },
+        "reviewedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in reviewedById, copied from u_mes_mast_user.fullName"
+        },
+        "reviewedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the review"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Recorded",
+            "Reviewed"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

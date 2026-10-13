@@ -4,6 +4,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000001",
     recordNo: "CUT",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Cut",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000002",
     recordNo: "BURN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Burn",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000003",
     recordNo: "BRUISE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Bruise",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000004",
     recordNo: "SPRAIN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Sprain",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000005",
     recordNo: "FRACTURE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Fracture",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000006",
     recordNo: "EYE-IRR",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Eye Irritation",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000007",
     recordNo: "CHEM-BURN",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Chemical Burn",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000008",
     recordNo: "CRUSH",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Crush Injury",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000009",
     recordNo: "SLIP",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Slip Or Fall Injury",
@@ -103,6 +112,7 @@ db.getCollection("u_mes_ehs_injuryType").insertMany([
   {
     _id: "1296000000000010",
     recordNo: "ELEC-SHOCK",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Electric Shock",

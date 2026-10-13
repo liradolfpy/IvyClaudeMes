@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000001",
     recordNo: "GDC-MACHINE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Gravity Die Casting Machine",
@@ -15,6 +16,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000002",
     recordNo: "HT-FURNACE",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Heat Treatment Furnace",
@@ -26,6 +28,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000003",
     recordNo: "HMC",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "CNC Machining Center",
@@ -37,6 +40,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000004",
     recordNo: "WASHER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Washing Machine",
@@ -48,6 +52,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000005",
     recordNo: "ANODISING",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Anodising Line",
@@ -59,6 +64,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000006",
     recordNo: "PRESS",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Assembly Press",
@@ -70,6 +76,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000007",
     recordNo: "NUTRUNNER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "DC Nutrunner",
@@ -81,6 +88,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000008",
     recordNo: "LEAK-TESTER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Leak Tester",
@@ -92,6 +100,7 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000009",
     recordNo: "LASER",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Laser Marker",
@@ -103,10 +112,131 @@ db.getCollection("u_mes_mast_equipmentType").insertMany([
   {
     _id: "1261000000000010",
     recordNo: "VISION",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     name: "Vision Inspection Station",
     description: "Vision Inspection Station (VISION)",
+    sequenceNo: NumberInt(10),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000011",
+    recordNo: "DISP-BOOTH",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Dispensing Booth",
+    description: "Dispensing Booth (DISP-BOOTH)",
+    sequenceNo: NumberInt(1),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000012",
+    recordNo: "RMG",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Rapid Mixer Granulator",
+    description: "Rapid Mixer Granulator (RMG)",
+    sequenceNo: NumberInt(2),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000013",
+    recordNo: "FBD",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Fluid Bed Dryer",
+    description: "Fluid Bed Dryer (FBD)",
+    sequenceNo: NumberInt(3),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000014",
+    recordNo: "BLENDER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Blender",
+    description: "Blender (BLENDER)",
+    sequenceNo: NumberInt(4),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000015",
+    recordNo: "TAB-PRESS",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Rotary Tablet Press",
+    description: "Rotary Tablet Press (TAB-PRESS)",
+    sequenceNo: NumberInt(5),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000016",
+    recordNo: "COATER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Coating Pan",
+    description: "Coating Pan (COATER)",
+    sequenceNo: NumberInt(6),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000017",
+    recordNo: "CAPPER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Bottle Capper",
+    description: "Bottle Capper (CAPPER)",
+    sequenceNo: NumberInt(7),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000018",
+    recordNo: "BLISTER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Blister Packing Machine",
+    description: "Blister Packing Machine (BLISTER)",
+    sequenceNo: NumberInt(8),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000019",
+    recordNo: "SERIALISER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Serialisation Unit",
+    description: "Serialisation Unit (SERIALISER)",
+    sequenceNo: NumberInt(9),
+    status: "Active",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1261000000000020",
+    recordNo: "CHECKWEIGHER",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    name: "Checkweigher",
+    description: "Checkweigher (CHECKWEIGHER)",
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

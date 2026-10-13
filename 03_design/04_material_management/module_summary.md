@@ -28,3 +28,4 @@
 | 24 | u_mes_matl_replenishmentRule | Entity | master | 27 | 20 | 2 | 7 |
 | 25 | u_mes_matl_materialDemandForecast | Entity | transaction | 30 | 27 | 2 | 7 |
 | 26 | u_mes_matl_storageLocationAllowedItem | Relationship | master | 12 | 8 | 0 | 2 |
+| 27 | u_mes_matl_dispenseRecord | Entity | transaction | 41 | 33 | 3 | 8 |

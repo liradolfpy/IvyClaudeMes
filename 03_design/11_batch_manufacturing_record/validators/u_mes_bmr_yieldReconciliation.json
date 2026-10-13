@@ -1,0 +1,221 @@
+{
+  "collMod": "u_mes_bmr_yieldReconciliation",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_bmr_yieldReconciliation",
+      "required": [
+        "_id",
+        "recordNo",
+        "siteId",
+        "siteName",
+        "productionOrderId",
+        "productionOrderName",
+        "reconciliationType",
+        "itemId",
+        "itemName",
+        "unitOfMeasureId",
+        "unitOfMeasureName",
+        "theoreticalQuantity",
+        "issuedQuantity",
+        "outputQuantity",
+        "rejectedQuantity",
+        "destroyedQuantity",
+        "returnedQuantity",
+        "unaccountedQuantity",
+        "yieldPct",
+        "lowerLimitPct",
+        "upperLimitPct",
+        "withinLimits",
+        "nonconformanceId",
+        "nonconformanceName",
+        "calculatedAt",
+        "approvedById",
+        "approvedBy",
+        "approvedAt",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "productionOrderId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_plan_productionOrder._id"
+        },
+        "productionOrderName": {
+          "bsonType": "string",
+          "description": "Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo"
+        },
+        "reconciliationType": {
+          "bsonType": "string",
+          "description": "What is reconciled",
+          "enum": [
+            "Product Yield",
+            "Component Reconciliation",
+            "Label Reconciliation"
+          ]
+        },
+        "itemId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_prod_item._id"
+        },
+        "itemName": {
+          "bsonType": "string",
+          "description": "Display value of itemId, copied from u_mes_prod_item.description"
+        },
+        "unitOfMeasureId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_unitOfMeasure._id"
+        },
+        "unitOfMeasureName": {
+          "bsonType": "string",
+          "description": "Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name"
+        },
+        "theoreticalQuantity": {
+          "bsonType": "decimal",
+          "description": "Quantity expected from the order quantity"
+        },
+        "issuedQuantity": {
+          "bsonType": "decimal",
+          "description": "Quantity issued or started"
+        },
+        "outputQuantity": {
+          "bsonType": "decimal",
+          "description": "Good output, or quantity used"
+        },
+        "rejectedQuantity": {
+          "bsonType": "decimal",
+          "description": "Rejected or scrapped"
+        },
+        "destroyedQuantity": {
+          "bsonType": "decimal",
+          "description": "Destroyed (damaged labels, test pieces)"
+        },
+        "returnedQuantity": {
+          "bsonType": "decimal",
+          "description": "Returned to stores"
+        },
+        "unaccountedQuantity": {
+          "bsonType": "decimal",
+          "description": "Issued minus output, rejected, destroyed and returned"
+        },
+        "yieldPct": {
+          "bsonType": "decimal",
+          "description": "Yield (percent)"
+        },
+        "lowerLimitPct": {
+          "bsonType": "decimal",
+          "description": "Lower acceptance limit (percent)"
+        },
+        "upperLimitPct": {
+          "bsonType": "decimal",
+          "description": "Upper acceptance limit (percent)"
+        },
+        "withinLimits": {
+          "bsonType": "bool",
+          "description": "True when the yield is within limits and nothing is unaccounted"
+        },
+        "nonconformanceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_qual_nonconformance._id"
+        },
+        "nonconformanceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title"
+        },
+        "calculatedAt": {
+          "bsonType": "date",
+          "description": "Time of the calculation"
+        },
+        "approvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'approved'"
+        },
+        "approvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in approvedById, copied from u_mes_mast_user.fullName"
+        },
+        "approvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Approval time"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Calculated",
+            "Under Investigation",
+            "Approved"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

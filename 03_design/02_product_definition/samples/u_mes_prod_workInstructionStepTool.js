@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000001",
     recordNo: "WI-OP010-001-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000001",
@@ -16,6 +17,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000002",
     recordNo: "WI-OP010-001-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000002",
@@ -28,6 +30,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000003",
     recordNo: "WI-OP020-001-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000003",
@@ -40,6 +43,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000004",
     recordNo: "WI-OP020-001-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000004",
@@ -52,6 +56,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000005",
     recordNo: "WI-OP030-001-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000005",
@@ -64,6 +69,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000006",
     recordNo: "WI-OP030-001-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000006",
@@ -76,6 +82,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000007",
     recordNo: "WI-OP040-001-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000007",
@@ -88,6 +95,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000008",
     recordNo: "WI-OP040-001-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000008",
@@ -100,6 +108,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000009",
     recordNo: "WI-OP050-001-S01-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000009",
@@ -112,6 +121,7 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
   {
     _id: "1069000000000010",
     recordNo: "WI-OP050-001-S02-T01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     workInstructionStepId: "1066000000000010",
@@ -119,6 +129,136 @@ db.getCollection("u_mes_prod_workInstructionStepTool").insertMany([
     sequenceNo: NumberInt(1),
     toolId: "1226000000000005",
     toolName: "Titanium anodising rack 21",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000011",
+    recordNo: "WI-OP010-001-S01-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000011",
+    workInstructionStepName: "WI-OP010-001-S01",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000011",
+    toolName: "Stainless steel scoop set 12",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000012",
+    recordNo: "WI-OP010-001-S02-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000012",
+    workInstructionStepName: "WI-OP010-001-S02",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000011",
+    toolName: "Stainless steel scoop set 12",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000013",
+    recordNo: "WI-OP020-001-S01-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000013",
+    workInstructionStepName: "WI-OP020-001-S01",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000012",
+    toolName: "Binder spray nozzle set 4",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000014",
+    recordNo: "WI-OP020-001-S02-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000014",
+    workInstructionStepName: "WI-OP020-001-S02",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000012",
+    toolName: "Binder spray nozzle set 4",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000015",
+    recordNo: "WI-OP030-001-S01-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000015",
+    workInstructionStepName: "WI-OP030-001-S01",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000013",
+    toolName: "Finger bag set 2, fluid bed dryer",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000016",
+    recordNo: "WI-OP030-001-S02-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000016",
+    workInstructionStepName: "WI-OP030-001-S02",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000013",
+    toolName: "Finger bag set 2, fluid bed dryer",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000017",
+    recordNo: "WI-OP040-001-S01-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000017",
+    workInstructionStepName: "WI-OP040-001-S01",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000014",
+    toolName: "Multimill screen 1.5 mm",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000018",
+    recordNo: "WI-OP040-001-S02-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000018",
+    workInstructionStepName: "WI-OP040-001-S02",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000014",
+    toolName: "Multimill screen 1.5 mm",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000019",
+    recordNo: "WI-OP050-001-S01-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000019",
+    workInstructionStepName: "WI-OP050-001-S01",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000015",
+    toolName: "Punch and die set, capsule shaped 19 x 9 mm",
+    schemaVersion: NumberInt(1)
+  },
+  {
+    _id: "1069000000000020",
+    recordNo: "WI-OP050-001-S02-T01",
+    app: "Gamp",
+    siteId: "1003000000000011",
+    siteName: "Ranjangaon OSD Plant, Pune",
+    workInstructionStepId: "1066000000000020",
+    workInstructionStepName: "WI-OP050-001-S02",
+    sequenceNo: NumberInt(1),
+    toolId: "1226000000000015",
+    toolName: "Punch and die set, capsule shaped 19 x 9 mm",
     schemaVersion: NumberInt(1)
   }
 ]);

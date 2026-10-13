@@ -4,6 +4,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000001",
     recordNo: "A-B01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000001",
@@ -18,6 +19,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000002",
     recordNo: "A-B02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000001",
@@ -32,6 +34,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000003",
     recordNo: "B-B01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000002",
@@ -46,6 +49,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000004",
     recordNo: "B-B02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000002",
@@ -60,6 +64,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000005",
     recordNo: "C-B01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000003",
@@ -74,6 +79,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000006",
     recordNo: "C-B02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000003",
@@ -88,6 +94,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000007",
     recordNo: "G-B01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000004",
@@ -102,6 +109,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000008",
     recordNo: "G-B02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000004",
@@ -116,6 +124,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000009",
     recordNo: "A-SAT-B01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000005",
@@ -130,6 +139,7 @@ db.getCollection("u_mes_mast_shiftBreak").insertMany([
   {
     _id: "1016000000000010",
     recordNo: "A-SAT-B02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     shiftId: "1015000000000005",

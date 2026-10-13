@@ -4,6 +4,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000001",
     recordNo: "5110-10-0100-CP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",
@@ -18,6 +19,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000002",
     recordNo: "5110-10-0100-CP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000001",
@@ -32,6 +34,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000003",
     recordNo: "5110-10-0200-CP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000002",
@@ -46,6 +49,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000004",
     recordNo: "5110-10-0200-CP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000002",
@@ -60,6 +64,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000005",
     recordNo: "5110-20-0110-CP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000003",
@@ -74,6 +79,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000006",
     recordNo: "5110-20-0110-CP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000003",
@@ -88,6 +94,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000007",
     recordNo: "5110-20-0105-CP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000004",
@@ -102,6 +109,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000008",
     recordNo: "5110-20-0105-CP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000004",
@@ -116,6 +124,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000009",
     recordNo: "5110-30-0010-CP01",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000005",
@@ -130,6 +139,7 @@ db.getCollection("u_mes_prod_itemCustomerPart").insertMany([
   {
     _id: "1045000000000010",
     recordNo: "5110-30-0010-CP02",
+    app: "Auto",
     siteId: "1003000000000001",
     siteName: "Chakan Plant, Pune",
     itemId: "1043000000000005",

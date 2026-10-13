@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | title |
-| Keys | 31 (23 required, 8 may be null) |
+| Keys | 36 (26 required, 10 may be null) |
 | Estimated volume per year | 200-1,000 |
 | Storage | standard |
 
@@ -55,14 +55,19 @@ Every key is present in every document. "Required" means the value may not be nu
 | 21 | ppapRequired | Boolean | - | Yes | True when: PPAP required | `false` |  |
 | 22 | implementedAt | Date | Datetime | No (null allowed) | Date and time when the record was implemented. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 23 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
-| 24 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Under Evaluation; Approved; Implemented; Closed; Rejected |
-| 25 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 26 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 27 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 28 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 29 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 30 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 31 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 24 | gmpImpact | Boolean | - | Yes | True when the change affects GMP-relevant product, process, equipment or systems (GMP-44) | `true` |  |
+| 25 | validationRequired | Boolean | - | Yes | True when process, equipment or system validation is required | `true` |  |
+| 26 | regulatoryImpact | String | - | Yes | Regulatory or customer approval needed before implementation | `"Customer Notification"` | None; Customer Notification; Prior Approval |
+| 27 | riskAssessmentId | String | - | No (null allowed) | Reference to u_mes_qual_riskAssessment._id | `"1361000000000003"` | Reference: u_mes_qual_riskAssessment._id |
+| 28 | riskAssessmentName | String | - | No (null allowed) | Display value of riskAssessmentId, copied from u_mes_qual_riskAssessment.title | `"Nutrunner angle monitoring and torque window 14 +/- 2 N.m"` |  |
+| 29 | status | String | - | Yes | Primary lifecycle state of the document | `"Raised"` | Raised; Under Evaluation; Approved; Implemented; Closed; Rejected |
+| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 31 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 32 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 33 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 34 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 35 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 36 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 
@@ -76,11 +81,12 @@ Raised, Under Evaluation, Approved, Implemented, Closed, Rejected. Initial state
 | 2 | `{ siteId: 1, status: 1 }` | No | Work lists filtered by lifecycle state |
 | 3 | `{ customerId: 1 }` | No | Look-up of documents by customer |
 | 4 | `{ stockDispositionTypeId: 1 }` | No | Look-up of documents by stock disposition type |
-| 5 | `{ siteId: 1, raisedAt: -1 }` | No | Time-ordered lists and reports by raised at |
+| 5 | `{ riskAssessmentId: 1 }` | No | Look-up of documents by risk assessment |
+| 6 | `{ siteId: 1, raisedAt: -1 }` | No | Time-ordered lists and reports by raised at |
 
 ## Referenced by
 
-u_mes_prod_itemRevision, u_mes_prod_billOfMaterial, u_mes_prod_routing, u_mes_prod_workInstruction, u_mes_prod_recipe, u_mes_prod_engineeringChangeAffectedItem, u_mes_prod_engineeringChangeAffectedObject, u_mes_prod_engineeringChangeApproval, u_mes_prod_engineeringChangeControlledDocument, u_mes_qual_controlPlan, u_mes_qual_deviationPermit, u_mes_qual_ppapSubmission, u_mes_maint_equipmentLifecycleEvent.
+u_mes_prod_itemRevision, u_mes_prod_billOfMaterial, u_mes_prod_routing, u_mes_prod_workInstruction, u_mes_prod_recipe, u_mes_prod_engineeringChangeAffectedItem, u_mes_prod_engineeringChangeAffectedObject, u_mes_prod_engineeringChangeApproval, u_mes_prod_engineeringChangeControlledDocument, u_mes_qual_controlPlan, u_mes_qual_deviationPermit, u_mes_qual_ppapSubmission, u_mes_maint_equipmentLifecycleEvent, u_mes_syst_systemValidation, u_mes_qual_processValidation, u_mes_maint_equipmentQualification, u_mes_mmr_masterManufacturingRecord.
 
 ## Files
 

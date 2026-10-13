@@ -85,7 +85,7 @@ In Progress, Completed, Verified. Initial state: In Progress. The values are mai
 
 ## Referenced by
 
-u_mes_plan_changeover, u_mes_qual_checkSheetResultAnswer.
+u_mes_plan_changeover, u_mes_qual_checkSheetResultAnswer, u_mes_plan_lineClearance.
 
 ## Files
 
