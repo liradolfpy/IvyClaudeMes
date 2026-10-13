@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.2 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
+Instruction version: 0.6 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -8,7 +8,7 @@ Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to 
 
 This instruction gives one repeatable method for deciding the **query controls** of every list screen in the MES React application: which controls appear, which type each one is, where its values come from, how each attribute is set, and what the page's backend code receives.
 
-Apply it to every collection that has a list screen. The result for each collection is one `modalElements` array inside the page configuration document served by `/miscellaneous/pageconfig`.
+Apply it to every collection that has a list screen. The result for each collection is one `modalElements` array inside the page configuration document served by `/miscellaneous/pageconfig`. Page configuration documents are stored in the collection `PageConfig`; only `dictData.config.modalElements` is governed by this instruction, and the other fields of the document are outside its scope.
 
 It builds on two earlier project documents:
 
@@ -23,8 +23,8 @@ It builds on two earlier project documents:
 | 2 | The response is a page configuration document (sample: `query/FormatQuery.json`). Its `dictData.config.modalElements` array lists the query controls in display order. |
 | 3 | The React app renders each element by its `typ`, loads its values from the source given by `src` (`api` or `data`), adds `ALL` as the first value when `includeAll` is true, and applies the default. |
 | 4 | The user changes the selections and submits. The app checks the controls with `required: true` and shows `errorMessage` for any that is empty. |
-| 5 | The app builds the payload: every control writes its selected value under its `data_index`; dropdowns also write the display text under `p_din`; range pickers write the two dates under `din_from` and `din_to`. Controls hidden by RBAC (`visible: false`) still send their default value. |
-| 6 | The page's own backend code (each page has its own code) turns the payload into a MongoDB filter, following section 9. A value of `all` means "do not filter on this key". |
+| 5 | The app builds the payload: every control writes its selected value under its `data_index`; dropdowns and radios also write the display text under `p_din`; range pickers write the two dates as strings at the top level of the payload, under the key names given in `din_from` and `din_to`. Controls hidden by RBAC (`visible: false`) still send their default value. |
+| 6 | The page's own backend code (each page has its own code) turns the payload into a MongoDB filter, following section 9. A value of `all` means "do not filter on this key". The site is the application default and is never part of the query. |
 
 ## 3. Inputs
 
@@ -51,7 +51,7 @@ It builds on two earlier project documents:
 | Range picker | `rangePicker` | – | Calendar | A period is needed. **Preferred over the date picker** and present on every transaction list screen. |
 | Hard-coded dropdown | `dropDown` | `data` | The `data` object in the control | The values never change without a software release and there are 10 or fewer. Also used for an optional Boolean filter (section 5, step 3). |
 | Cropdown (custom dropdown) | `dropDown` | `api`, `api: "/cropdown"` | One document of the `cropdown` collection, chosen by `params.name` | A small custom list that is not a collection of the data model, is shared by several pages and may be changed by an administrator without a release. **10 values or fewer per cropdown document**; a longer list becomes a proper collection. |
-| Mdict (MasterDict) | `dropDown` | `api`, `api: "/mdict"` | The cache, filled from `u_int_mdict`, chosen by `params.typ` (the `dictName`) and `params.subTyp` (`idame`) | Master data listed in section 11: at most 200 documents in the source collection and frequently used. Only master data. |
+| Mdict (MasterDict) | `dropDown` | `api`, `api: "/mdict"` | The cache, filled from `u_int_mdict`, chosen by `params.typ` (the `dictName`) and `params.subTyp`, which is always the fixed value `idame` (a map combining id and name) | Master data listed in section 11: at most 200 documents in the source collection and frequently used. Only master data. |
 | Dynamic dropdown | `dropDown` | `api`, `api: "/dd"` | The collection named in `params.dn`, which must be registered in the Flask code | Master data that is not in mdict and has 500 documents or fewer. |
 | Dynamic search dropdown | `dropDown` | `api`, `api: "/dd"`, with `minSearchLength` and `maxSearchLength` | Same as dynamic dropdown, queried with `$regex` on the typed text | Data that exceeds 500 documents or is expected to grow past 500. |
 | Radio | `radio` | `data` | The `data` object in the control | A mandatory choice between two to four exclusive options shown side by side, including a mandatory true / false choice. **Radio has no "All" option.** |
@@ -83,12 +83,12 @@ Take the profile items in this order and stop at **8 controls** (aim for 6):
 | 4 | Status | When the collection has a lifecycle status. |
 | 5 | Category | One or two category keys that users group by. |
 | 6 | Boolean | Only flags that users filter on regularly. |
-| – | Never a control | `siteId` (taken from the login session, see Q13), `_id`, `recordNo` (records are opened from the list), any `...Name` key, measured values, free text, audit stamps (`createdAt`, `updatedBy` and the like). |
+| – | Never a control | `siteId` (site is not used in any query), `_id`, `recordNo` as a typed value (a business number is searched with the search dropdown, see the rule below), any `...Name` key, measured values, free text, audit stamps (`createdAt`, `updatedBy` and the like). |
 
 Rules:
 
 - A key becomes a control only if it is a query key under the query key strategy (it is in an index or is applied on top of an indexed filter).
-- Do not add a control to select one transaction document (one production order, one lot, one serial number). Group filters are used instead. Searching by business number is open (Q15, Q16).
+- Group filters come first. A control that finds one transaction document by its business number (production order, lot, serial number, nonconformance) is allowed only as a **dynamic search dropdown** on that transaction collection: `params.dn` and `sourceParams_dynamic` = the transaction collection, `data_index` = the reference key held by the listed collection (for example `productionOrderId`), `p_din` = its name key (`productionOrderName`). The user types part of the number (`recordNo`) and picks it. At most one such control per screen, placed after the period control.
 
 ### Step 3: Choose the control type
 
@@ -114,7 +114,7 @@ Answer the questions in order; the first "yes" decides.
 | 2 | Is it a small custom list (10 or fewer values) that is not a collection of the data model, is shared by several pages, and may be changed by an administrator without a release? | `/cropdown` |
 | 3 | Does the key reference a master collection that has a dictionary in `u_int_mdict` (section 11)? | `/mdict` |
 | 4 | Does the key reference a collection that holds 500 documents or fewer? | `/dd` (register the collection in the Flask code if it is not registered) |
-| 5 | Does it hold more than 500 documents, or is it expected to grow past 500? | `/dd` with `minSearchLength` and `maxSearchLength` (search dropdown) |
+| 5 | Does it hold more than 500 documents, or is it expected to grow past 500, or is it a transaction collection searched by business number? | `/dd` with `minSearchLength` and `maxSearchLength` (search dropdown) |
 | 6 | None of the above | Do not create the control; raise it as a question (section 14) |
 
 Placement of model collections used in query controls:
@@ -154,47 +154,48 @@ Section 12.
 | Attribute | Applies to | Meaning | Rule in this project |
 |---|---|---|---|
 | `typ` | all | Control type | One of `datePicker`, `rangePicker`, `dropDown`, `radio` |
-| `label` | all | Text shown next to the control | Title Case, the business name of the key as used in the screen label of `collection_type_matrix.md`, singular, 25 characters or fewer (for example `Work Center`, `Andon Type`, `Raised Between`) |
+| `label` | all | Text shown next to the control | Title Case, the business name of the key as used in the screen label of `collection_type_matrix.md`, singular, 25 characters or fewer (for example `Work Center`, `Andon Type`, `Raised Date Range`) |
 | `placeHolder` | all except radio | Hint text inside the control | `Select <label>` for dropdowns and pickers; for the search dropdown `Type <maxSearchLength> characters of <label>` |
 | `errorMessage` | all with `required: true` | Message when a mandatory control is empty at submit | `Please select <label>` |
 | `required` | all | `true`: the control is mandatory; `false`: optional | `true` on the period control and on radios; `false` on optional dropdowns. A dropdown with `includeAll` and default `all` is always filled, so `required: true` on it only stops the user from clearing it. |
 | `default` | dropDown, radio, datePicker | Value selected when the form opens | Dropdown single: `"all"`; multi: `["all"]`; status on work-list screens: the open statuses as an array; radio: one of its `data` keys; datePicker: day offset from today as `NumberInt` (`0` = today, `-1` = yesterday) |
 | `defaultFrom`, `defaultTo` | rangePicker | Initial range | Day offsets from today as `NumberInt` (`0` = today, `-30` = 30 days ago). Standard: live screens `0` / `0`; operational lists `-7` / `0`; history and reports `-30` / `0` |
 | `format` | datePicker, rangePicker | Display and payload date format | `YYYY-MM-DD` |
-| `din_from`, `din_to` | rangePicker | Payload keys of the two dates | `from` and `to` (as in the sample); payload shape open (Q4) |
+| `din_from`, `din_to` | rangePicker | Names of the two top-level payload keys that receive the from-date and to-date as strings | Always exactly `"din_from" : "from"` and `"din_to" : "to"`. A query form has only one range picker, so the names never collide. `data_index` is the time key, so the page code knows which key the range applies to. |
 | `includeAll` | dropDown | The app adds `{ "all": "ALL" }` as the first value; `all` tells the backend not to filter on this key | `true` on every optional filter; `false` only when one value must always be chosen. Not available on radio. |
 | `multiSelect` | dropDown | Several values can be selected | Exceptional. Allowed for status and for one scope or category key per screen. `default` must then be an array. |
 | `readOnly` | all | Shown but not editable | Exceptional: a value fixed by the page or role, for example the line of a line-supervisor screen |
 | `visible` | all | Whether the control is shown | `true` by default; `false` when RBAC must stop a role from changing the filter. A hidden control still sends its default value, so its default must be the value that role is allowed to see. |
 | `colSize` | all | Width of the control on a 24-column grid | Standard `8` (three controls per row). Never above `8` except a single wide control on its own row. The sample's `12` (two per row) is not used for MES pages. |
-| `labelColSpan` | all | Width of the label of the control | Standard `8`; never above `8` (meaning of the base open, Q2b) |
+| `labelColSpan` | all | Column span of the label, on a 24-column scale (maximum `24`) | Standard `8`; never above `24` |
 | `data_index` | all | Payload key that receives the selected value | Exact key name of the collection (`raisedAt`, `lineId`, `status`, `lineStopped`) |
-| `p_din` | dropDown | Payload key that receives the display text of the selected value | Display key of the model (`lineName`); `<key>Text` for keys without a name key |
+| `p_din` | dropDown, radio | Payload key that receives the display text of the selected value | Display key of the model (`lineName`); `<key>Text` for keys without a name key (for example `periodTypeText`) |
 | `api` | dropDown with `src: "api"` | Endpoint | `/cropdown`, `/mdict` or `/dd` |
 | `params` | dropDown with `src: "api"` | Selector of the list | `/cropdown`: `{ name }`; `/mdict`: `{ typ, subTyp }`; `/dd`: `{ dn }` where `dn` is the collection name |
 | `sourceParams_dynamic` | `/dd` | Collection name (same value as `params.dn`) | The full collection name, for example `u_mes_maint_tool` |
 | `maxSearchLength` | search dropdown | Number of characters typed after which the frontend calls the search API | `3` |
-| `minSearchLength` | search dropdown | See Q6b | Same value as `maxSearchLength` (as in the sample) until clarified |
+| `minSearchLength` | search dropdown | Minimum number of characters the user must type before the `$regex` search API is called | `3`; set `maxSearchLength` to the same value |
 | `src` | dropDown, radio | Where the values come from | `api` or `data` |
 | `data` | `src: "data"` | Value map: key = stored value, value = display text | Keys exactly as stored in the collection (Booleans as `"true"` / `"false"`); 10 entries or fewer |
 
 ## 7. Layout rules
 
-1. Control order in `modalElements`: Period, Scope (higher level first), Shift, Status, Category, Boolean.
+1. Control order in `modalElements`: Period, Search by business number (if any), Scope (higher level first), Shift, Status, Category, Boolean.
 2. Standard `colSize: 8`, `labelColSpan: 8` on the 24-column grid: three controls per row, so eight controls fill three rows.
 3. Labels never repeat the page name (on the Andon Events page, `Status`, not `Andon Status`).
-4. Range picker label: `<Verb> Between` from the time key (`raisedAt` gives `Raised Between`, `measuredAt` gives `Measured Between`).
+4. Range picker label: `<business name of the time key> Range`; for a datetime key ending in `At`, the `At` becomes `Date` (`productionDate` gives `Production Date Range`, `raisedAt` gives `Raised Date Range`, `measuredAt` gives `Measured Date Range`).
+5. Exactly one range picker per query form.
 
 ## 8. Payload contract
 
 | Control | Payload written |
 |---|---|
-| rangePicker | `"<din_from>": "YYYY-MM-DD"`, `"<din_to>": "YYYY-MM-DD"`; whether they are nested under `data_index` is open (Q4). The examples in this instruction show them nested. |
+| rangePicker | `"from": "YYYY-MM-DD", "to": "YYYY-MM-DD"` at the top level of the payload, both as strings |
 | datePicker | `"<data_index>": "YYYY-MM-DD"` |
 | dropDown, single | `"<data_index>": "<value>", "<p_din>": "<display text>"` |
 | dropDown, multi | `"<data_index>": ["<value>", ...], "<p_din>": ["<display text>", ...]` |
 | dropDown with ALL | `"<data_index>": "all"` (or `["all"]`), `"<p_din>": "ALL"` |
-| radio | `"<data_index>": "<value>"`; Booleans as `"true"` / `"false"` |
+| radio | `"<data_index>": "<value>", "<p_din>": "<display text>"`; Booleans as `"true"` / `"false"` |
 | Hidden control (`visible: false`) | Its `default` value, as for a visible control |
 
 ## 9. Backend translation (rules for each page's code)
@@ -205,9 +206,9 @@ Section 12.
 | Single value | `{ <data_index>: <value> }` |
 | Several values | `{ <data_index>: { $in: [ ... ] } }` |
 | `"true"` / `"false"` | `{ <data_index>: true }` / `false` (converted to BSON Boolean) |
-| Range on a [Datetime] key | `{ <key>: { $gte: <from 00:00 IST as UTC>, $lt: <day after to, 00:00 IST as UTC> } }`; whether the day starts at midnight or at the first shift is open (Q3b) |
+| Range on a [Datetime] key | `{ <key>: { $gte: <start of from-date>, $lt: <start of the day after to-date> } }`. Where a day starts (calendar midnight or production day) is decided in the backend code of the page; this instruction does not fix it. |
 | Range on a [Date] key (`productionDate`) | `{ <key>: { $gte: <from>, $lte: <to> } }` |
-| Always added | `siteId` from the user's session (Q13) |
+| Never added | `siteId`: the site is the application default and is not used in any query |
 | Never used for filtering | Any `p_din` value; it is kept for display (report header, export file name) |
 
 ## 10. Standard control templates
@@ -219,19 +220,19 @@ Period:
 ```js
 {
     "typ" : "rangePicker",
-    "label" : "Raised Between",                // <Verb> Between from the time key
+    "label" : "Raised Date Range",             // <business name of the time key> Range
     "defaultFrom" : NumberInt(-7),
     "defaultTo" : NumberInt(0),
     "required" : true,
-    "placeHolder" : "Select Raised Between",
-    "errorMessage" : "Please select Raised Between",
+    "placeHolder" : "Select Raised Date Range",
+    "errorMessage" : "Please select Raised Date Range",
     "readOnly" : false,
     "visible" : true,
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "format" : "YYYY-MM-DD",
-    "din_from" : "from",
-    "din_to" : "to",
+    "din_from" : "from",                       // always "from"
+    "din_to" : "to",                           // always "to"
     "data_index" : "raisedAt"                  // time key of the collection
 }
 ```
@@ -324,6 +325,7 @@ Mandatory choice (radio):
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "data_index" : "periodType",
+    "p_din" : "periodTypeText",
     "data" : { "Shift" : "Shift", "Day" : "Day", "Week" : "Week", "Month" : "Month" },
     "src" : "data"
 }
@@ -358,11 +360,38 @@ Search dropdown (more than 500 documents, or users):
 }
 ```
 
+Search by business number (transaction collection):
+
+```js
+{
+    "typ" : "dropDown",
+    "label" : "Production Order",
+    "default" : "all",
+    "includeAll" : true,
+    "multiSelect" : false,
+    "required" : false,
+    "placeHolder" : "Type 3 characters of Production Order",
+    "errorMessage" : "Please select Production Order",
+    "readOnly" : false,
+    "visible" : true,
+    "colSize" : NumberInt(8),
+    "labelColSpan" : NumberInt(8),
+    "minSearchLength" : NumberInt(3),
+    "maxSearchLength" : NumberInt(3),
+    "data_index" : "productionOrderId",
+    "p_din" : "productionOrderName",
+    "api" : "/dd",
+    "params" : { "dn" : "u_mes_plan_productionOrder" },
+    "sourceParams_dynamic" : "u_mes_plan_productionOrder",
+    "src" : "api"
+}
+```
+
 ## 11. MES MasterDict: collection `u_int_mdict`
 
 ### 11.1 Purpose
 
-`u_int_mdict` holds one dictionary per frequently used small master collection and per site. The `/mdict` API serves the dictionaries from the cache; `u_int_mdict` is the reference copy and the stage between the master collections and the cache. When a master document is created or changed, its dictionary in `u_int_mdict` and the cache are refreshed. It replaces the legacy `mdict.json` content, which belongs to another application.
+`u_int_mdict` holds one dictionary per frequently used small master collection and per site. Because the site is the application default and is not used in queries, `/mdict` serves the dictionaries of the default site; how `/mdict` handles MES dictionaries is deferred (section 14.1). The `/mdict` API serves the dictionaries from the cache; `u_int_mdict` is the reference copy and the stage between the master collections and the cache. When a master document is created or changed, its dictionary in `u_int_mdict` and the cache are refreshed. It replaces the legacy `mdict.json` content, which belongs to another application.
 
 ### 11.2 Document structure
 
@@ -440,7 +469,7 @@ Profile: time key `raisedAt`; scope `lineId`, `workCenterId`; shift `shiftId`; s
 
 | # | Control | Type and source | `data_index` / `p_din` | Default |
 |---|---|---|---|---|
-| 1 | Raised Between | rangePicker | `raisedAt` | `-7` to `0` |
+| 1 | Raised Date Range | rangePicker | `raisedAt` | `-7` to `0` |
 | 2 | Line | dropDown, mdict `Line` | `lineId` / `lineName` | `all` |
 | 3 | Work Center | dropDown, mdict `WorkCenter`, multiSelect | `workCenterId` / `workCenterName` | `["all"]` |
 | 4 | Shift | dropDown, mdict `Shift` | `shiftId` / `shiftName` | `all` |
@@ -448,13 +477,14 @@ Profile: time key `raisedAt`; scope `lineId`, `workCenterId`; shift `shiftId`; s
 | 6 | Andon Type | dropDown, mdict `AndonType` | `andonTypeId` / `andonTypeName` | `all` |
 | 7 | Line Stopped | dropDown, data (optional Boolean) | `lineStopped` / `lineStoppedText` | `all` |
 
-Not controls: `reasonCodeId`, `severityClass` (grid columns), `equipmentId` (third scope level), `siteId` (session).
+Not controls: `reasonCodeId`, `severityClass` (grid columns), `equipmentId` (third scope level), `siteId` (not used in queries).
 
 Example payload when the user selects Front Caliper Assembly Line 1, the last 7 days and the open statuses:
 
 ```js
 {
-    "raisedAt" : { "from" : "2026-10-06", "to" : "2026-10-12" },
+    "from" : "2026-10-06",
+    "to" : "2026-10-12",
     "lineId" : "1006000000000006",
     "lineName" : "Front Caliper Assembly Line 1",
     "workCenterId" : [ "all" ],
@@ -470,11 +500,10 @@ Example payload when the user selects Front Caliper Assembly Line 1, the last 7 
 }
 ```
 
-Resulting filter (IST midnight is 18:30 UTC of the previous day):
+Resulting filter, with calendar-day boundaries as one possible backend choice (IST midnight is 18:30 UTC of the previous day):
 
 ```js
 {
-    "siteId" : "1003000000000001",
     "raisedAt" : { "$gte" : ISODate("2026-10-05T18:30:00.000Z"), "$lt" : ISODate("2026-10-12T18:30:00.000Z") },
     "lineId" : "1006000000000006",
     "status" : { "$in" : [ "Raised", "Acknowledged" ] },
@@ -482,22 +511,22 @@ Resulting filter (IST midnight is 18:30 UTC of the previous day):
 }
 ```
 
-The filter is served by the open-calls partial index `{ siteId, status, raisedAt }` and the line history index `{ lineId, raisedAt }` described for this collection on 12 October 2026.
+The filter is served by the line history index `{ lineId, raisedAt }` described for this collection on 12 October 2026. Because queries never carry `siteId`, indexes that start with `siteId` (for example the open-calls index `{ siteId, status, raisedAt }` and the D020 defaults) cannot serve these screens; they must start with the first query key instead (open calls: `{ status, raisedAt }`). See section 14.1.
 
 ## 13. Checklist per screen
 
 | # | Check |
 |---|---|
-| 1 | Transaction, Reports, Telemetry and Audit Trail screens have a range picker on the time key with `required: true` |
+| 1 | Transaction, Reports, Telemetry and Audit Trail screens have exactly one range picker, on the time key, with `required: true`, `din_from: "from"`, `din_to: "to"` and the label `<time key> Range` |
 | 2 | 8 controls or fewer, in the order of section 7 |
 | 3 | Every `data_index` is an existing key of the collection in `collection_keys.md` |
-| 4 | Every `p_din` is the matching display key, or `<key>Text` |
+| 4 | Every dropdown and radio has a `p_din`, and it is the matching display key or `<key>Text` |
 | 5 | Every dropdown source follows the decision table of step 4; master data never comes from `data` or cropdown; `/mdict` only for dictionaries of section 11.3 |
 | 6 | `data` maps and cropdown documents have 10 values or fewer, and `data` keys equal the stored values |
 | 7 | Every optional dropdown has `includeAll: true` and default `all` or `["all"]`; `default` is an array exactly when `multiSelect` is true |
 | 8 | Radios are mandatory choices with two to four options and a default; optional Boolean filters are dropdowns |
-| 9 | No control selects a single transaction document, `siteId`, `_id`, `recordNo` or a `...Name` key |
-| 10 | `colSize` and `labelColSpan` are 8 or below |
+| 9 | No control on `siteId`, `_id` or a `...Name` key; a single transaction document is selected only through one search dropdown on its business number; the filter never contains `siteId` |
+| 10 | `colSize` is 8 or below (a single wide control on its own row excepted); `labelColSpan` is 24 or below, standard 8 |
 | 11 | Label, placeholder and error message follow section 6 |
 | 12 | Hidden controls have a default the role is allowed to see |
 | 13 | The resulting filter is served by an index of the query key strategy |
@@ -505,22 +534,16 @@ The filter is served by the open-calls partial index `{ siteId, status, raisedAt
 
 ## 14. Open questions
 
-| No. | Question | Why it matters |
+None at version 0.5. New questions raised by later refinements are added here with the next free number (Q23 onwards).
+
+### 14.1 Deferred items (to be worked later)
+
+| No. | Item | Note |
 |---|---|---|
-| Q2b | Is `labelColSpan` measured on the same 24-column grid as the whole row, or as a share of the control's own width (the sample uses `colSize` 12 with `labelColSpan` 10)? | Label width standard |
-| Q3b | Should a date range follow the plant production day, starting with the first shift (for example 06:00 IST), rather than calendar midnight? If yes, a night-shift record raised at 02:00 on 13 October belongs to production day 12 October. | Correct period filter for night shifts |
-| Q4 | For a range picker, is the payload `{ "raisedAt": { "from": "...", "to": "..." } }` (nested under `data_index`) or `{ "from": "...", "to": "..." }` at the top level? (The answer received repeated the day-offset answer.) | Payload contract |
-| Q6b | `maxSearchLength` is the number of characters after which the search API is called. What does `minSearchLength` control? | Search dropdown standard |
-| Q10 | Does `/mdict` support `subTyp` values other than `idame` (for example a map of active entries only)? `u_int_mdict` uses only `idame`. | Mdict parameters |
-| Q13 | The sample universe has two sites. Is the site always taken from the login session, or can one user query several sites (Site control needed)? | Site handling and the cache key of `u_int_mdict` |
-| Q15 | The updated `FormatQuery.json` has no text input control. How should a user find records by a business number (production order, lot, serial number, NC number): a new text control type, a `/dd` search on the transaction collection, or only through the list after group filters? | Search by number |
-| Q16 | May `/dd` serve transaction collections (open production orders, lots), or only master data? | Production order and lot filters |
-| Q17 | The cropdown `ShiftZone` (Current Shift, Today, Yesterday) suggests a period preset. Should live screens use a preset dropdown instead of the range picker? | Period control on live boards |
-| Q18 | What do the page configuration fields `lid`, `page`, `subTyp`, `ver`, `unq`, `act`, `countList`, `q`, `projid`, `rel`, `resp`, `origId`, `mint` and `footerButtons` mean, and must any of them follow a rule for MES pages? | A complete page configuration standard |
-| Q19 | Is the page configuration document stored in a MongoDB collection of the MES database? If so, under which collection name (for example `u_int_pageConfig`) and `_id` format? | Consistency with the data model |
-| Q20 | How does `/dd` know which keys of a registered collection are the value and the display text? MES collections use `_id` with `name`, `description` or `fullName`. Is this set per collection in the Flask registration? | Registering MES collections in `/dd` |
-| Q21 | `u_int_mdict` introduces the prefix `u_int_` outside the `u_mes_<module>_` naming of `collection_inventory.md`. Should `int` be registered as a module (with `u_int_mdict` and later `u_int_pageConfig`) in the data model register and the generator? This task did not change those files. | Model register completeness |
-| Q22 | Is the `/mdict` API able to read the extra keys of `u_int_mdict` (`siteId`, `recordNo`, audit keys) while selecting by `dictName`, or does it expect only `_id`, `dictName` and `idame` as in the legacy sample? | Compatibility with the existing API |
+| Q20 | How `/dd` identifies the value and display keys of a registered MES collection | Deferred by the owner on 13 Oct 2026 |
+| Q21 | Registering the `u_int_` prefix (`u_int_mdict`; page configurations stay in the application collection `PageConfig`) in the data model register and generator | Deferred by the owner on 13 Oct 2026 |
+| Q22 | Whether `/mdict` reads the extra keys of `u_int_mdict` (`siteId`, `recordNo`, audit keys), and how it treats the per-site dictionaries now that site is not used in queries | Deferred by the owner on 13 Oct 2026 |
+| F1 | Index alignment: the query key strategy (`02_architecture/QueryKeySelectionStrategy.md`) and the generated index scripts put `siteId` first in several indexes (`{ siteId, recordNo }`, `{ siteId, status }`, `{ siteId, <date> }`). UI queries never carry `siteId`, so those indexes need `siteId` removed from the front, or a version without it, for list screens. Not changed by this instruction. | Follow-up on the query key strategy |
 
 ## 15. Resolved questions
 
@@ -540,15 +563,29 @@ The filter is served by the open-calls partial index `{ siteId, status, raisedAt
 | – | `FormatQuery.json` | Corrected by the owner | Cropdown example now writes `st` / `status` |
 | – | Cropdown `Shift` | Corrected by the owner | `B` is now "Shift B" |
 | – | Mdict file name | `mdict.json` | Section 3 |
+| – | Does `p_din` apply to radio? | Yes | Sections 2, 6, 8, 10 and checklist item 4 |
+| – | `config.api` / `config.params` in the page configuration | Hard-coded per page as needed; ignore | Out of scope (section 16) |
 | – | Mdict content from another application | Create `u_int_mdict` | Section 11, sample file `u_int_mdict.json` |
+| Q4 | How is the range sent in the payload? | `din_from` and `din_to` name two top-level payload keys holding the from-date and to-date as strings | Sections 2, 6, 8, 10, 12; key names `<timeKey>From` / `<timeKey>To` |
+| Q3b | Production day or calendar midnight? | Depends on the page; handled in the backend; ignore here | Section 9 leaves the day boundary to the page code |
+| Q13 | How is the site chosen? | Default; site is not used in any query | No site control; `siteId` never in the filter (sections 2, 5, 9, 12, checklist 9); index follow-up F1 |
+| Q15 / Q16 | Searching by production order, lot or serial number | With the dynamic search dropdown | Rule in step 2, step 4 row 5, template in section 10 |
+| Q20 to Q22 | `/dd` and `/mdict` handling of MES collections | Ignore for now; to be worked later | Moved to section 14.1 |
+| Q2b | What is `labelColSpan` measured against? | Column span on a 24-column scale, maximum 24 | Section 6, checklist 10 |
+| Q6b | What does `minSearchLength` control? | Minimum number of characters typed before the `$regex` search API is called | Section 6 |
+| Q10 | Other `subTyp` values for `/mdict`? | None: `subTyp` is always the hard-coded `idame` (id and name) | Sections 4 and 5 |
+| Q17 | Preset period control for live screens? | No; the cropdown `ShiftZone` was deleted | Range picker stays the period control on every screen |
+| Q18 | Meaning of the other page configuration fields | Ignore them | Section 1: only `modalElements` is in scope |
+| Q19 | Where are page configurations stored? | In the collection `PageConfig` | Section 1; Q21 note in section 14.1 |
+| – | Range picker label and payload keys (review of the Downtime Events config, 13 Oct 2026) | Label `Production Date Range`, not `Production Date Between`; only one range picker per query, so `din_from` / `din_to` stay permanently `from` / `to` | Sections 6, 7, 8, 10, 12, checklist 1; supersedes the `<timeKey>From` / `<timeKey>To` rule of version 0.4 |
 
 ## 16. Observations on the sample files (not changed)
 
 | File | Observation |
 |---|---|
-| `FormatQuery.json` | After the correction the control content is consistent, but the file still does not parse as one document: after the radio element there is a trailing comma, and the closing `]` of `modalElements` and `}` of `config` are missing before `"ver"`. Uses MongoDB shell types (`NumberInt`), so it is shell style rather than JSON. |
-| `FormatQuery.json` | All controls use `colSize: 12` and `labelColSpan: 10`; MES pages use 8 and 8 (section 6). |
-| `cropdown.md` | 18 documents, each with 10 values or fewer. Shift and financial year are master-type data; MES pages use `/mdict` `Shift` instead. Document `X016` has a space in its name (`Task Status`). |
+| `FormatQuery.json` | Corrected by the owner on 13 Oct 2026 and reviewed again the same day: parses (9 controls) once read as MongoDB shell style (`NumberInt`); labels, placeholders and error messages match their controls; every hard-coded default is one of its values; no double or trailing spaces. Cosmetic only: one error message reads "Please Select Direction" (capital S) and indentation mixes tabs and spaces. |
+| `FormatQuery.json` | `config.api` (`/stdtools/phantomzen`) and `config.params` (`op`) are the page's submit endpoint, hard-coded per page as needed; they are outside the scope of this instruction. |
+| `cropdown.md` | 16 documents (after `ShiftZone` was deleted by the owner on 13 Oct 2026), each with 10 values or fewer. Shift and financial year are master-type data; MES pages use `/mdict` `Shift` instead. Document `X016` has a space in its name (`Task Status`). |
 | `mdict.json` | Legacy content of another application (watch dials, two-wheeler customers, other plants); kept as a format reference only. |
 
 ## 17. Change log
@@ -557,3 +594,7 @@ The filter is served by the open-calls partial index `{ siteId, status, raisedAt
 |---|---|---|---|
 | 0.1 | 13 Oct 2026 | First issue: control catalogue, seven-step procedure, source decision table, attribute reference, payload and backend translation, templates, Andon Events example, checklist, assumptions, open questions Q1 to Q19 | Claude |
 | 0.2 | 13 Oct 2026 | Owner answers to Q1 to Q3, Q5 to Q9, Q11, Q12, Q14 applied; 24-column grid; Boolean values as strings; optional Boolean filters as dropdowns, radio only for mandatory choices; no cascading; `dn` = collection name; MasterDict selection rule and new collection `u_int_mdict` (section 11, sample file with 43 documents); users and large masters moved to `/dd` search; resolved-questions table added; new questions Q2b, Q3b, Q6b, Q13 expanded, Q15 restated, Q20 to Q22; assumptions table replaced by the resolved and open question tables | Claude |
+| 0.3 | 13 Oct 2026 | `p_din` applies to radio as well (attribute table, payload contract, radio template, checklist); `config.api` / `config.params` declared out of scope; observations on `FormatQuery.json` updated after the owner's correction and the spacing clean-up; final review of the corrected `FormatQuery.json` recorded in section 16 | Claude |
+| 0.4 | 13 Oct 2026 | Owner answers to Q3b, Q4, Q13, Q15, Q16 applied: range dates as top-level string keys named `<timeKey>From` / `<timeKey>To`; day boundary left to page code; site never used in queries; search by business number through the dynamic search dropdown on the transaction collection (rule, template); Q20 to Q22 deferred to new section 14.1 with index follow-up F1; Andon Events example updated | Claude |
+| 0.5 | 13 Oct 2026 | Owner answers to Q2b, Q6b, Q10, Q17, Q18 and Q19 applied: `labelColSpan` on a 24-column scale (max 24, standard 8); `minSearchLength` = minimum characters before the `$regex` search; `subTyp` always `idame`; no period preset (cropdown `ShiftZone` deleted); page configurations stored in `PageConfig`, only `modalElements` in scope. No open questions left; deferred items in section 14.1 remain | Claude |
+| 0.6 | 13 Oct 2026 | Owner review of the Downtime Events config: range picker label `<time key> Range`; exactly one range picker per query form; `din_from` / `din_to` fixed to `from` / `to` (replaces `<timeKey>From` / `<timeKey>To`); template, Andon Events example and checklist updated | Claude |

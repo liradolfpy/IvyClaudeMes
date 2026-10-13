@@ -1,7 +1,7 @@
 {
     "_id" : "F_1019",
     "lid" : "lid_999",
-    "dictName" : "FormatQuery",
+    "dictName" : "FormatPhantomZenTemplateQuery",
     "typ" : "PageConfig",
     "page" : "Phantom",
     "dictData" : {
@@ -10,19 +10,19 @@
             "footerButtons" : {
 
             },
-            "modalElements" : [
+            "modalElements" : 
+			[
                
-             
-                {
+			     {
                     "typ" : "datePicker",
                     "default" : NumberInt(0),
                     "required" : true,
-                    "placeHolder" : "Select  Date",
-                    "errorMessage" : "Please select  Date",
+                    "placeHolder" : "Select Date",
+                    "errorMessage" : "Please Select Date",
                     "readOnly" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
                     "label" : "Date",
                     "format" : "YYYY-MM-DD",
                     "data_index" : "dt"
@@ -34,10 +34,10 @@
                     "defaultTo" : NumberInt(0),
                     "required" : true,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
-                    "placeHolder" : "Select Range ",
-                    "errorMessage" : "Please select  Range",
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "placeHolder" : "Select Range",
+                    "errorMessage" : "Please Select Range",
                     "readOnly" : false,
                     "din_from" : "from",
                     "din_to" : "to",
@@ -52,12 +52,12 @@
                         "all"
                     ],
                     "required" : true,
-                    "placeHolder" : "Select Item ",
-                    "errorMessage" : "Please select  Item",
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
                     "p_din" : "status",
                     "includeAll" : true,
                     "label" : "CropDown",
@@ -74,19 +74,19 @@
                     "default" : "all",
                     "includeAll" : true,
                     "required" : true,
-                    "placeHolder" : "Select Employee",
-                    "errorMessage" : "Please select  Employee",
+                    "placeHolder" : "Select Line",
+                    "errorMessage" : "Please Select Line",
                     "readOnly" : false,
                     "multiSelect" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
-                    "p_din" : "eame",
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "p_din" : "lineName",
                     "label" : "Mdict Without Multiselect",
-                    "data_index" : "eid",
+                    "data_index" : "lineId",
                     "api" : "/mdict",
                     "params" : {
-                        "typ" : "Employee",
+                        "typ" : "Line",
                         "subTyp" : "idame"
                     },
                     "src" : "api"
@@ -98,13 +98,13 @@
                     ],
                     "includeAll" : true,
                     "required" : true,
-                    "placeHolder" : "Select Employee ",
-                    "errorMessage" : "Please select  Employee",
+                    "placeHolder" : "Select Employee",
+                    "errorMessage" : "Please Select Employee",
                     "readOnly" : false,
                     "multiSelect" : true,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
                     "p_din" : "eame",
                     "label" : "Mdict With MultiSelect",
                     "data_index" : "eid",
@@ -120,12 +120,12 @@
                     "default" : "all",
                     "required" : false,
                     "includeAll" : true,
-                    "placeHolder" : "Select Dynamic ",
-                    "errorMessage" : "Please select Dynamic",
+                    "placeHolder" : "Select Dynamic",
+                    "errorMessage" : "Please Select Dynamic",
                     "readOnly" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
                     "p_din" : "dame",
                     "label" : "DynamicDropDown",
                     "data_index" : "did",
@@ -141,12 +141,12 @@
                     "default" : "all",
                     "required" : false,
                     "includeAll" : true,
-                    "placeHolder" : "Select Dynamic ",
-                    "errorMessage" : "Please select Dynamic",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Dynamic",
                     "readOnly" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(4),
                     "p_din" : "p_dyn_dame",
                     "label" : "Dynamic Search DropDown",
@@ -162,36 +162,38 @@
                 {
                     "typ" : "dropDown",
                     "default" : [
-                        "H"
+                        "S"
                     ],
                     "required" : true,
-                    "placeHolder" : "Select Item",
-                    "errorMessage" : "Please select  Item",
+					 "includeAll" : true,
+                    "placeHolder" : "Select Direction",
+                    "errorMessage" : "Please Select Direction",
                     "readOnly" : false,
-                    "p_din" : "status",
+                    "p_din" : "direction",
                     "label" : "HardCode",
                     "multiSelect" : true,
                     "visible" : true,
-                    "colSize" : NumberInt(12),
-                    "labelColSpan" : NumberInt(10),
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
                     "data" : {
-                        "N" : "Not Started",
-                        "I" : "In Progress",
-                        "C" : "Completed",
-                        "H" : "Hold"
+                        "N" : "North",
+                        "S" : "South",
+                        "E" : "East",
+                        "W" : "West"
                     },
-                    "data_index" : "st",
+                    "data_index" : "dir",
                     "src" : "data"
                 },
                
                 {
                     "label" : "Radio",
                     "visible" : true,
-                    "labelColSpan" : NumberInt(10),
+                    "labelColSpan" : NumberInt(8),
                     "typ" : "radio",
                     "default" : "A",
+					
                     "readOnly" : false,
-                    "colSize" : NumberInt(12),
+                    "colSize" : NumberInt(8),
                     "required" : true,
                     "data" : {
                         "A" : "Alpha",
@@ -199,10 +201,18 @@
                         "C" : "Charlie",
                         "D" : "Delta"
                     },
-                    "data_index" : "bool",
+                    "data_index" : "loc",
+					 "p_din" : "location",
                     "src" : "data"
-                },
-               
+                }
+			   
+			   
+            ],
+            "api" : "/stdtools/phantomzen",
+            "params" : {
+                "op" : "st"
+            }
+        }
     },
     "ver" : "61226ab9",
     "unq" : false,

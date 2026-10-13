@@ -135,15 +135,7 @@
         "D" : "Delegate"
     }
 }
-{ 
-    "_id" : "X017", 
-    "name" : "ShiftZone", 
-    "data" : {
-        "curShift" : "Current Shift", 
-        "today" : "Today", 
-        "yest" : "Yesterday"
-    }
-}
+
 { 
     "_id" : "X018", 
     "name" : "defectEntryType", 
