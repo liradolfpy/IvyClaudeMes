@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.6 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
+Instruction version: 0.9 | 13 October 2026 | Model version 2.9 (369 collections) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -8,7 +8,7 @@ Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to 
 
 This instruction gives one repeatable method for deciding the **query controls** of every list screen in the MES React application: which controls appear, which type each one is, where its values come from, how each attribute is set, and what the page's backend code receives.
 
-Apply it to every collection that has a list screen. The result for each collection is one `modalElements` array inside the page configuration document served by `/miscellaneous/pageconfig`. Page configuration documents are stored in the collection `PageConfig`; only `dictData.config.modalElements` is governed by this instruction, and the other fields of the document are outside its scope.
+Apply it to every collection that has a list screen. The result for each collection is one `modalElements` array inside the page configuration document served by `/miscellaneous/pageconfig`. Page configuration documents are stored in the collection `PageConfig`. This instruction governs `dictData.config.modalElements` and the fixed document frame described in step 8; any other field is outside its scope.
 
 It builds on two earlier project documents:
 
@@ -79,7 +79,7 @@ Take the profile items in this order and stop at **8 controls** (aim for 6):
 |---|---|---|
 | 1 | Period | Mandatory on Transaction, Reports, Telemetry and Audit Trail screens. Range picker on the time key. Not used on Master screens. |
 | 2 | Scope | Mandatory on Transaction screens when the collection holds a scope key. Highest useful level first (Line), then the next level (Work Center). At most two scope levels. Scope dropdowns are independent: there is no cascading (choosing a line does not narrow the work-centre list). |
-| 3 | Shift | When the collection holds `shiftId` and users read it per shift. |
+| 3 | Shift | When the collection holds `shiftId` and users read it per shift. Source: cropdown `Shift`, never mdict. |
 | 4 | Status | When the collection has a lifecycle status. |
 | 5 | Category | One or two category keys that users group by. |
 | 6 | Boolean | Only flags that users filter on regularly. |
@@ -130,7 +130,7 @@ Placement of model collections used in query controls:
 | `u_mes_maint_sparePart`, `u_mes_perf_processTag` | more than 500 | `/dd` search | `{ dn: "<collection>" }` |
 | `u_mes_prod_recipe`, `u_mes_syst_iotDevice`, `u_mes_prod_routing`, `u_mes_qual_controlPlan`, `u_mes_qual_inspectionPlan`, `u_mes_qual_checkSheet`, `u_mes_maint_maintenancePlan` | 500 or fewer, not frequently used as a filter | `/dd` | `{ dn: "<collection>" }` |
 | Status of any collection | 3 to 8 values | `data` | values from `status_values.md` |
-| Shift | – | `/mdict` `Shift`, **not** the cropdown `Shift` document | – |
+| Shift | 4 values (A, B, C, G) | `/cropdown` | `{ name: "Shift" }`. The cropdown keys are the shift codes, which equal `u_mes_mast_shift.recordNo`; the page code resolves the code to `shiftId` (see Q23). The mdict `Shift` dictionary is not used in query controls. |
 
 ### Step 5: Set the attributes
 
@@ -138,8 +138,8 @@ Use section 6 for every attribute. The most important rules:
 
 - `data_index` is the **exact key name in the collection** (`lineId`, `status`, `raisedAt`). Each page has its own backend code, so this is a naming standard rather than a technical need: it keeps page code, payload and indexes readable side by side.
 - `p_din` is the **matching display key** of the model (`lineName` for `lineId`, following the Id/Name pairing of `collection_keys.md`). For a `data` or cropdown source on a text key, `p_din` is the key name followed by `Text` (for example `statusText`), because the model has no separate name key for it.
-- `includeAll: true` and `default: "all"` (single) or `default: ["all"]` (multi) on every optional dropdown filter.
-- `required: true` makes the control mandatory. Use it on the period control and on any control whose absence would make the query unbounded.
+- `includeAll: true` and `default: "all"` on every dropdown filter; `multiSelect: false` unless there is a compelling reason (then `default: ["all"]` or the required values as an array).
+- `required: true` makes the control mandatory and is set on **every control** unless a control is specifically required to be optional (then `required: false`, with the reason noted in the query profile).
 
 ### Step 6: Check the payload and the filter
 
@@ -147,7 +147,61 @@ Write the example payload and the resulting MongoDB filter for the screen (secti
 
 ### Step 7: Run the checklist
 
-Section 12.
+Section 13.
+
+### Step 8: Build the page configuration document
+
+Wrap the `modalElements` array in this frame. Values in angle brackets are filled per collection; all other values are fixed and copied exactly.
+
+| Field | Value | Rule |
+|---|---|---|
+| `_id` | `<collectionSuffix>Query` | The collection name without `u_mes_<module>_`, followed by `Query`: `u_mes_perf_downtimeEvent` gives `downtimeEventQuery` |
+| `dictName` | Same as `_id` | `downtimeEventQuery` |
+| `typ` | `"PageConfigQuery"` | Fixed |
+| `page` | Page name | Kept as set by the owner (the reviewed Downtime Events config uses `"Phantom"`) |
+| `dictData.pageTitle` | Screen label | The label of the collection in `collection_type_matrix.md` (`Downtime Events`) |
+| `dictData.api` | `"/ivy/mes"` | Fixed |
+| `dictData.config.method` | `"GET"` | Fixed |
+| `dictData.config.modalElements` | The controls | Steps 1 to 6 |
+| `ver` | `"<YYYYMMDD-HHmm>"` | Date and time (IST) the document is generated, as a string, for example `"20261013-1708"` |
+| `rel` | `"<YYYYMMDD-HHmm>"` | Same value as `ver` |
+| `unq` | `false` | Fixed |
+| `subTyp` | `"PhantomQuery"` | Fixed |
+| `act` | `false` | Fixed |
+| `approve`, `delete`, `dynamicModal`, `edit`, `view` | `[]` | Fixed, empty arrays |
+| `mint` | `"1"` | Fixed |
+| `projid` | `""` | Fixed, empty string |
+
+```js
+{
+    "_id" : "downtimeEventQuery",
+    "dictName" : "downtimeEventQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "pageTitle" : "Downtime Events",
+        "api" : "/ivy/mes",
+        "config" : {
+            "method" : "GET",
+            "modalElements" : [ /* controls */ ]
+        }
+    },
+    "ver" : "20261013-1708",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [],
+    "delete" : [],
+    "dynamicModal" : [],
+    "edit" : [],
+    "mint" : "1",
+    "view" : [],
+    "rel" : "20261013-1708",
+    "projid" : ""
+}
+```
+
+File name of a generated configuration: `04_reference_data/ui_controls/query/PageConfig_<collection>.json` (for example `PageConfig_u_mes_perf_downtimeEvent.json`).
 
 ## 6. Attribute reference
 
@@ -157,13 +211,13 @@ Section 12.
 | `label` | all | Text shown next to the control | Title Case, the business name of the key as used in the screen label of `collection_type_matrix.md`, singular, 25 characters or fewer (for example `Work Center`, `Andon Type`, `Raised Date Range`) |
 | `placeHolder` | all except radio | Hint text inside the control | `Select <label>` for dropdowns and pickers; for the search dropdown `Type <maxSearchLength> characters of <label>` |
 | `errorMessage` | all with `required: true` | Message when a mandatory control is empty at submit | `Please select <label>` |
-| `required` | all | `true`: the control is mandatory; `false`: optional | `true` on the period control and on radios; `false` on optional dropdowns. A dropdown with `includeAll` and default `all` is always filled, so `required: true` on it only stops the user from clearing it. |
-| `default` | dropDown, radio, datePicker | Value selected when the form opens | Dropdown single: `"all"`; multi: `["all"]`; status on work-list screens: the open statuses as an array; radio: one of its `data` keys; datePicker: day offset from today as `NumberInt` (`0` = today, `-1` = yesterday) |
+| `required` | all | `true`: the control is mandatory; `false`: optional | `true` on every control unless the control is specifically required to be optional. A dropdown with `includeAll` and default `"all"` is always filled, so `required: true` on it only stops the user from clearing it. |
+| `default` | dropDown, radio, datePicker | Value selected when the form opens | Dropdown: `"all"` (an array such as `["all"]` only when `multiSelect` is true); radio: one of its `data` keys; datePicker: day offset from today as `NumberInt` (`0` = today, `-1` = yesterday) |
 | `defaultFrom`, `defaultTo` | rangePicker | Initial range | Day offsets from today as `NumberInt` (`0` = today, `-30` = 30 days ago). Standard: live screens `0` / `0`; operational lists `-7` / `0`; history and reports `-30` / `0` |
 | `format` | datePicker, rangePicker | Display and payload date format | `YYYY-MM-DD` |
 | `din_from`, `din_to` | rangePicker | Names of the two top-level payload keys that receive the from-date and to-date as strings | Always exactly `"din_from" : "from"` and `"din_to" : "to"`. A query form has only one range picker, so the names never collide. `data_index` is the time key, so the page code knows which key the range applies to. |
 | `includeAll` | dropDown | The app adds `{ "all": "ALL" }` as the first value; `all` tells the backend not to filter on this key | `true` on every optional filter; `false` only when one value must always be chosen. Not available on radio. |
-| `multiSelect` | dropDown | Several values can be selected | Exceptional. Allowed for status and for one scope or category key per screen. `default` must then be an array. |
+| `multiSelect` | dropDown | Several values can be selected | `false` under normal conditions. `true` only when there is a compelling reason, written in the query profile (for example an open-calls board that must show Raised and Acknowledged together). `default` is an array exactly when `multiSelect` is true. |
 | `readOnly` | all | Shown but not editable | Exceptional: a value fixed by the page or role, for example the line of a line-supervisor screen |
 | `visible` | all | Whether the control is shown | `true` by default; `false` when RBAC must stop a role from changing the filter. A hidden control still sends its default value, so its default must be the value that role is allowed to see. |
 | `colSize` | all | Width of the control on a 24-column grid | Standard `8` (three controls per row). Never above `8` except a single wide control on its own row. The sample's `12` (two per row) is not used for MES pages. |
@@ -246,7 +300,7 @@ Master reference from the cache (mdict):
     "default" : "all",
     "includeAll" : true,
     "multiSelect" : false,
-    "required" : false,
+    "required" : true,
     "placeHolder" : "Select Line",
     "errorMessage" : "Please select Line",
     "readOnly" : false,
@@ -267,10 +321,10 @@ Status (hard-coded from `status_values.md`):
 {
     "typ" : "dropDown",
     "label" : "Status",
-    "default" : [ "Raised", "Acknowledged" ],
+    "default" : "all",
     "includeAll" : true,
-    "multiSelect" : true,
-    "required" : false,
+    "multiSelect" : false,
+    "required" : true,
     "placeHolder" : "Select Status",
     "errorMessage" : "Please select Status",
     "readOnly" : false,
@@ -298,7 +352,7 @@ Optional Boolean filter (dropdown, because radio has no "All"):
     "default" : "all",
     "includeAll" : true,
     "multiSelect" : false,
-    "required" : false,
+    "required" : true,
     "placeHolder" : "Select Line Stopped",
     "errorMessage" : "Please select Line Stopped",
     "readOnly" : false,
@@ -342,7 +396,7 @@ Search dropdown (more than 500 documents, or users):
     "default" : "all",
     "includeAll" : true,
     "multiSelect" : false,
-    "required" : false,
+    "required" : true,
     "placeHolder" : "Type 3 characters of Operator",
     "errorMessage" : "Please select Operator",
     "readOnly" : false,
@@ -369,7 +423,7 @@ Search by business number (transaction collection):
     "default" : "all",
     "includeAll" : true,
     "multiSelect" : false,
-    "required" : false,
+    "required" : true,
     "placeHolder" : "Type 3 characters of Production Order",
     "errorMessage" : "Please select Production Order",
     "readOnly" : false,
@@ -428,7 +482,7 @@ Reference counts were taken from `02_architecture/field_lists` (references from 
 | Line | `u_mes_mast_line` | name | 18 | 12 |
 | WorkCenter | `u_mes_mast_workCenter` | name | 37 | 60 |
 | Equipment | `u_mes_mast_equipment` | name | 29 | 150 |
-| Shift | `u_mes_mast_shift` | name | 27 | 4 |
+| Shift | `u_mes_mast_shift` | name | 27 | 4 (kept in `u_int_mdict` for other uses; query controls use cropdown `Shift`) |
 | Customer | `u_mes_mast_customer` | name | 14 | 15 |
 | Supplier | `u_mes_mast_supplier` | name | 4 | 60 |
 | Item | `u_mes_prod_item` | description | 52 | 180 (review at go-live; above 200 it moves to `/dd` search) |
@@ -471,9 +525,9 @@ Profile: time key `raisedAt`; scope `lineId`, `workCenterId`; shift `shiftId`; s
 |---|---|---|---|---|
 | 1 | Raised Date Range | rangePicker | `raisedAt` | `-7` to `0` |
 | 2 | Line | dropDown, mdict `Line` | `lineId` / `lineName` | `all` |
-| 3 | Work Center | dropDown, mdict `WorkCenter`, multiSelect | `workCenterId` / `workCenterName` | `["all"]` |
-| 4 | Shift | dropDown, mdict `Shift` | `shiftId` / `shiftName` | `all` |
-| 5 | Status | dropDown, data, multiSelect | `status` / `statusText` | `["Raised", "Acknowledged"]` |
+| 3 | Work Center | dropDown, mdict `WorkCenter` | `workCenterId` / `workCenterName` | `all` |
+| 4 | Shift | dropDown, cropdown `Shift` | `shiftId` / `shiftName` | `all` |
+| 5 | Status | dropDown, data, multiSelect (compelling reason: the open-calls board must show Raised and Acknowledged together) | `status` / `statusText` | `["Raised", "Acknowledged"]` |
 | 6 | Andon Type | dropDown, mdict `AndonType` | `andonTypeId` / `andonTypeName` | `all` |
 | 7 | Line Stopped | dropDown, data (optional Boolean) | `lineStopped` / `lineStoppedText` | `all` |
 
@@ -487,8 +541,8 @@ Example payload when the user selects Front Caliper Assembly Line 1, the last 7 
     "to" : "2026-10-12",
     "lineId" : "1006000000000006",
     "lineName" : "Front Caliper Assembly Line 1",
-    "workCenterId" : [ "all" ],
-    "workCenterName" : [ "ALL" ],
+    "workCenterId" : "all",
+    "workCenterName" : "ALL",
     "shiftId" : "all",
     "shiftName" : "ALL",
     "status" : [ "Raised", "Acknowledged" ],
@@ -523,7 +577,7 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | 4 | Every dropdown and radio has a `p_din`, and it is the matching display key or `<key>Text` |
 | 5 | Every dropdown source follows the decision table of step 4; master data never comes from `data` or cropdown; `/mdict` only for dictionaries of section 11.3 |
 | 6 | `data` maps and cropdown documents have 10 values or fewer, and `data` keys equal the stored values |
-| 7 | Every optional dropdown has `includeAll: true` and default `all` or `["all"]`; `default` is an array exactly when `multiSelect` is true |
+| 7 | Every dropdown has `includeAll: true` and default `all`; `multiSelect` is `false` unless a compelling reason is written in the query profile; `default` is an array exactly when `multiSelect` is true |
 | 8 | Radios are mandatory choices with two to four options and a default; optional Boolean filters are dropdowns |
 | 9 | No control on `siteId`, `_id` or a `...Name` key; a single transaction document is selected only through one search dropdown on its business number; the filter never contains `siteId` |
 | 10 | `colSize` is 8 or below (a single wide control on its own row excepted); `labelColSpan` is 24 or below, standard 8 |
@@ -531,10 +585,15 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | 12 | Hidden controls have a default the role is allowed to see |
 | 13 | The resulting filter is served by an index of the query key strategy |
 | 14 | Every new cropdown document, `u_int_mdict` dictionary or `/dd` registration the screen needs is listed for creation |
+| 15 | Every control has `required: true` unless it is specifically required to be optional |
+| 16 | The document frame follows step 8: `_id` = `dictName` = `<collectionSuffix>Query`, `typ` = `PageConfigQuery`, `dictData.pageTitle` and `dictData.api` set, fixed fields copied exactly, `ver` = `rel` = generation time |
+| 17 | Shift controls use cropdown `Shift`, not mdict |
 
 ## 14. Open questions
 
-None at version 0.5. New questions raised by later refinements are added here with the next free number (Q23 onwards).
+| No. | Question | Why it matters |
+|---|---|---|
+| Q23 | The cropdown `Shift` sends the shift code (`A`, `B`, `C`, `G`) and the text (`Shift A`), but transaction collections store `shiftId` (for example `1015000000000001`). Should the page code resolve the code to `shiftId` through `u_mes_mast_shift.recordNo` (assumed here), or should the cropdown keys be changed to the shift `_id` values? | The shift filter must match stored data |
 
 ### 14.1 Deferred items (to be worked later)
 
@@ -578,6 +637,9 @@ None at version 0.5. New questions raised by later refinements are added here wi
 | Q18 | Meaning of the other page configuration fields | Ignore them | Section 1: only `modalElements` is in scope |
 | Q19 | Where are page configurations stored? | In the collection `PageConfig` | Section 1; Q21 note in section 14.1 |
 | – | Range picker label and payload keys (review of the Downtime Events config, 13 Oct 2026) | Label `Production Date Range`, not `Production Date Between`; only one range picker per query, so `din_from` / `din_to` stay permanently `from` / `to` | Sections 6, 7, 8, 10, 12, checklist 1; supersedes the `<timeKey>From` / `<timeKey>To` rule of version 0.4 |
+| – | Page configuration frame and `required` on "all" dropdowns (review of the Downtime Events config, 13 Oct 2026) | `_id` and `dictName` = `<collectionSuffix>Query`; `typ` = `PageConfigQuery`; fixed `ver`, `rel` (`YYYYMMDD-HHmm`), `unq`, `subTyp`, `act`, `approve`, `delete`, `dynamicModal`, `edit`, `mint`, `view`, `projid`; `dictData.pageTitle` and `dictData.api` = `/ivy/mes`; every dropdown with default `all` has `required: true` | Step 8 added; sections 1, 5, 6, 10 and checklist 15 and 16; supersedes the Q18 answer "ignore the other fields" for the fields listed |
+| – | Attribute name, Shift source, multi-select (13 Oct 2026) | All controls use `"isRequired": true` unless specifically required otherwise; Shift uses cropdown `name: "Shift"`, not mdict; `multiSelect: true` only with a compelling reason | Sections 5, 6, 10, 11.3, 12, checklist 7, 15, 17; new question Q23 |
+| – | Attribute name (13 Oct 2026, later the same day) | Keep the key name `required`, not `isRequired`; the value stays `true` on every control unless specifically optional | Sections 2, 5, 6, 10, checklist 1 and 15; supersedes the `isRequired` name of version 0.8 |
 
 ## 16. Observations on the sample files (not changed)
 
@@ -598,3 +660,6 @@ None at version 0.5. New questions raised by later refinements are added here wi
 | 0.4 | 13 Oct 2026 | Owner answers to Q3b, Q4, Q13, Q15, Q16 applied: range dates as top-level string keys named `<timeKey>From` / `<timeKey>To`; day boundary left to page code; site never used in queries; search by business number through the dynamic search dropdown on the transaction collection (rule, template); Q20 to Q22 deferred to new section 14.1 with index follow-up F1; Andon Events example updated | Claude |
 | 0.5 | 13 Oct 2026 | Owner answers to Q2b, Q6b, Q10, Q17, Q18 and Q19 applied: `labelColSpan` on a 24-column scale (max 24, standard 8); `minSearchLength` = minimum characters before the `$regex` search; `subTyp` always `idame`; no period preset (cropdown `ShiftZone` deleted); page configurations stored in `PageConfig`, only `modalElements` in scope. No open questions left; deferred items in section 14.1 remain | Claude |
 | 0.6 | 13 Oct 2026 | Owner review of the Downtime Events config: range picker label `<time key> Range`; exactly one range picker per query form; `din_from` / `din_to` fixed to `from` / `to` (replaces `<timeKey>From` / `<timeKey>To`); template, Andon Events example and checklist updated | Claude |
+| 0.7 | 13 Oct 2026 | Owner review of the Downtime Events config: new step 8 (page configuration frame: `_id` / `dictName` = `<collectionSuffix>Query`, `typ` = `PageConfigQuery`, `dictData.pageTitle`, `dictData.api` = `/ivy/mes`, fixed fields, `ver` / `rel` = `YYYYMMDD-HHmm`, file naming); `required: true` on every dropdown with default `all` (rules, templates, checklist 15); checklist 16 added; step 7 reference corrected to section 13 | Claude |
+| 0.8 | 13 Oct 2026 | Attribute renamed to `isRequired`, `true` on every control unless specifically optional; Shift source changed to cropdown `Shift`; `multiSelect` false by default, true only with a written compelling reason; Status template made single-select; Andon Events example updated; checklist 7 and 15 revised, 17 added; Q23 opened on shift code versus `shiftId` | Claude |
+| 0.9 | 13 Oct 2026 | Attribute name reverted from `isRequired` to `required` (rules, templates, checklist); value rule of 0.8 unchanged: `required: true` on every control unless specifically optional | Claude |
