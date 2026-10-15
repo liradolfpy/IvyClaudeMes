@@ -9,7 +9,7 @@
             "pageTitle" : "Tools",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -26,6 +26,7 @@
                     "errorMessage" : "Please select Tool Type",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "toolTypeId",
@@ -48,6 +49,7 @@
                     "errorMessage" : "Please select Tool Class",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "toolClass",
@@ -71,6 +73,7 @@
                     "errorMessage" : "Please select Equipment",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
@@ -93,6 +96,7 @@
                     "errorMessage" : "Please select Supplier",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "supplierId",
@@ -115,6 +119,7 @@
                     "errorMessage" : "Please select Storage Location",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -139,6 +144,7 @@
                     "errorMessage" : "Please select Owned By Customer",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "ownedByCustomerId",
@@ -161,6 +167,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
@@ -185,6 +192,7 @@
                     "errorMessage" : "Please select Block At Life Limit",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "blockAtLifeLimit",

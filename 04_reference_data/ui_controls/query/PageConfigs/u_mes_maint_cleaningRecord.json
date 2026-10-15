@@ -9,7 +9,7 @@
             "pageTitle" : "Cleaning Records",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -43,6 +43,7 @@
                     "errorMessage" : "Please select Equipment",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
@@ -65,6 +66,7 @@
                     "errorMessage" : "Please select Work Center",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "workCenterId",
@@ -87,6 +89,7 @@
                     "errorMessage" : "Please select Cleaning Type",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "cleaningType",
@@ -110,6 +113,7 @@
                     "errorMessage" : "Please select Verification Result",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "verificationResult",
@@ -131,6 +135,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",

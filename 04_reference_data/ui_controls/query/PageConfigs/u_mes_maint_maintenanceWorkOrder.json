@@ -9,7 +9,7 @@
             "pageTitle" : "Maintenance Work Orders",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -43,6 +43,7 @@
                     "errorMessage" : "Please select Equipment",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
@@ -65,6 +66,7 @@
                     "errorMessage" : "Please select Shift",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "shiftId",
@@ -86,6 +88,7 @@
                     "errorMessage" : "Please select Work Order Type",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "workOrderType",
@@ -110,6 +113,7 @@
                     "errorMessage" : "Please select Priority",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "priority",
@@ -133,6 +137,7 @@
                     "errorMessage" : "Please select Reason Code",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "reasonCodeId",
@@ -155,6 +160,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
@@ -180,6 +186,7 @@
                     "errorMessage" : "Please select Follow Up Required",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "followUpRequired",

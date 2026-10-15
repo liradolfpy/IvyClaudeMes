@@ -11,7 +11,7 @@
             "pageTitle" : "Downtime Events",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -45,6 +45,7 @@
                     "errorMessage" : "Please select Line",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "lineId",
@@ -67,6 +68,7 @@
                     "errorMessage" : "Please select Equipment",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
@@ -89,6 +91,7 @@
                     "errorMessage" : "Please select Shift",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "shiftId",
@@ -110,6 +113,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
@@ -132,6 +136,7 @@
                     "errorMessage" : "Please select Reason Code",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "reasonCodeId",
@@ -154,6 +159,7 @@
                     "errorMessage" : "Please select Downtime Type",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "downtimeType",
@@ -175,6 +181,7 @@
                     "errorMessage" : "Please select Micro Stop",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "isMicroStop",

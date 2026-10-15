@@ -9,7 +9,7 @@
             "pageTitle" : "Spare Part Transactions",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -43,6 +43,7 @@
                     "errorMessage" : "Please select Spare Part",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -67,6 +68,7 @@
                     "errorMessage" : "Please select Transaction Type",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "transactionType",
@@ -91,6 +93,7 @@
                     "errorMessage" : "Please select Equipment",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
@@ -113,6 +116,7 @@
                     "errorMessage" : "Please select Storage Location",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -137,6 +141,7 @@
                     "errorMessage" : "Please select Maintenance Work Order",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -161,6 +166,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",

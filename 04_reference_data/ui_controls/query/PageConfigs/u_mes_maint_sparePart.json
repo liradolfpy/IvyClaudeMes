@@ -9,7 +9,7 @@
             "pageTitle" : "Spare Parts",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -26,6 +26,7 @@
                     "errorMessage" : "Please select Category",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "category",
@@ -52,6 +53,7 @@
                     "errorMessage" : "Please select Manufacturer",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "manufacturerId",
@@ -74,6 +76,7 @@
                     "errorMessage" : "Please select Supplier",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "supplierId",
@@ -96,6 +99,7 @@
                     "errorMessage" : "Please select Storage Location",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -120,6 +124,7 @@
                     "errorMessage" : "Please select Criticality",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "criticality",
@@ -142,6 +147,7 @@
                     "errorMessage" : "Please select Insurance Spare",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "isInsuranceSpare",
@@ -163,6 +169,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",

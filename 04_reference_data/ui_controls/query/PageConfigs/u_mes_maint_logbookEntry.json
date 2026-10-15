@@ -9,7 +9,7 @@
             "pageTitle" : "Equipment and Area Logbook",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -43,6 +43,7 @@
                     "errorMessage" : "Please select Logbook Of",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "relatedCollectionName",
@@ -64,6 +65,7 @@
                     "errorMessage" : "Please select Activity Type",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "activityType",
@@ -90,6 +92,7 @@
                     "errorMessage" : "Please select Performed By",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -114,6 +117,7 @@
                     "errorMessage" : "Please select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",

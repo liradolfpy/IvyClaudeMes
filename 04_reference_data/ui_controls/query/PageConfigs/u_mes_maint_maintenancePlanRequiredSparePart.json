@@ -9,7 +9,7 @@
             "pageTitle" : "Maintenance Plan Required Spare Parts",
             "api" : "/ivy/mes",
             "params" : {
-
+                "op" : "st"
             },
             "footerButtons" : {
 
@@ -26,6 +26,7 @@
                     "errorMessage" : "Please select Maintenance Plan",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),
@@ -50,6 +51,7 @@
                     "errorMessage" : "Please select Spare Part",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(3),

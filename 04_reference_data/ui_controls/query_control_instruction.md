@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.15 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
+Instruction version: 0.16 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -162,7 +162,7 @@ Wrap the `modalElements` array in this frame. Values in angle brackets are fille
 | `dictData.config.method` | `"GET"` | Fixed |
 | `dictData.config.pageTitle` | Screen label | The label of the collection in `collection_type_matrix.md` (`Cleaning Records`) |
 | `dictData.config.api` | `"/ivy/mes"` | Fixed |
-| `dictData.config.params` | `{}` | Fixed, empty object |
+| `dictData.config.params` | `{ "op" : "st" }` | Fixed |
 | `dictData.config.footerButtons` | `{}` | Fixed, empty object |
 | `dictData.config.modalElements` | The controls | Steps 1 to 6 |
 
@@ -187,7 +187,7 @@ Wrap the `modalElements` array in this frame. Values in angle brackets are fille
             "method" : "GET",
             "pageTitle" : "Cleaning Records",
             "api" : "/ivy/mes",
-            "params" : {},
+            "params" : { "op" : "st" },
             "footerButtons" : {},
             "modalElements" : [ /* controls */ ]
         }
@@ -276,6 +276,7 @@ Type names (`typ`):
 | `multiSelect` | dropDown | Several values can be selected | `false` under normal conditions. `true` only when there is a compelling reason, written in the query profile (for example an open-calls board that must show Raised and Acknowledged together). `default` is an array exactly when `multiSelect` is true. |
 | `readOnly` | all | Shown but not editable | Exceptional: a value fixed by the page or role, for example the line of a line-supervisor screen |
 | `visible` | all | Whether the control is shown | `true` by default; `false` when RBAC must stop a role from changing the filter. A hidden control still sends its default value, so its default must be the value that role is allowed to see. |
+| `isSearchable` | dropDown | The user can type in the dropdown to filter its list | Always `true` on every dropdown, placed directly after `visible` (as in `FormatQuery.json`). Not used on pickers and radios. |
 | `colSize` | all | Width of the control on a 24-column grid | Standard `8` (three controls per row). Never above `8` except a single wide control on its own row. The sample's `12` (two per row) is not used for MES pages. |
 | `labelColSpan` | all | Column span of the label, on a 24-column scale (maximum `24`) | Standard `8`; never above `24` |
 | `data_index` | all | Payload key that receives the selected value | Exact key name of the collection (`raisedAt`, `lineId`, `status`, `lineStopped`) |
@@ -361,6 +362,7 @@ Master reference from the cache (mdict):
     "errorMessage" : "Please select Line",
     "readOnly" : false,
     "visible" : true,
+    "isSearchable" : true,
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "data_index" : "lineId",
@@ -385,6 +387,7 @@ Status (hard-coded from `status_values.md`):
     "errorMessage" : "Please select Status",
     "readOnly" : false,
     "visible" : true,
+    "isSearchable" : true,
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "data_index" : "status",
@@ -413,6 +416,7 @@ Optional Boolean filter (dropdown, because radio has no "All"):
     "errorMessage" : "Please select Line Stopped",
     "readOnly" : false,
     "visible" : true,
+    "isSearchable" : true,
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "data_index" : "lineStopped",
@@ -457,6 +461,7 @@ Search dropdown (more than 500 documents, or users):
     "errorMessage" : "Please select Operator",
     "readOnly" : false,
     "visible" : true,
+    "isSearchable" : true,
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "minSearchLength" : NumberInt(3),
@@ -484,6 +489,7 @@ Search by business number (transaction collection):
     "errorMessage" : "Please select Production Order",
     "readOnly" : false,
     "visible" : true,
+    "isSearchable" : true,
     "colSize" : NumberInt(8),
     "labelColSpan" : NumberInt(8),
     "minSearchLength" : NumberInt(3),
@@ -642,10 +648,11 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | 13 | The resulting filter is served by an index of the query key strategy |
 | 14 | Every new cropdown document, `u_int_mdict` dictionary or `/dd` registration the screen needs is listed for creation |
 | 15 | Every control has `required: true` unless it is specifically required to be optional |
-| 16 | The document frame follows step 8: `_id` = `dictName` = `<collection without u_>Query`; `typ` = `PageConfigQuery`; `dictData` holds only `config`, and `config` holds `method`, `pageTitle`, `api` (`/ivy/mes`), `params` (`{}`), `footerButtons` (`{}`) and `modalElements`; fixed fields copied exactly; `ver` = `rel` = generation time; file named `<collection>.json` |
+| 16 | The document frame follows step 8: `_id` = `dictName` = `<collection without u_>Query`; `typ` = `PageConfigQuery`; `dictData` holds only `config`, and `config` holds `method`, `pageTitle`, `api` (`/ivy/mes`), `params` (`{ "op" : "st" }`), `footerButtons` (`{}`) and `modalElements`; fixed fields copied exactly; `ver` = `rel` = generation time; file named `<collection>.json` |
 | 17 | Shift controls use cropdown `Shift`, not mdict |
 | 18 | The IvyConfig `<collection>Ivy.json` exists and was updated in the same step; its `get` list has exactly one entry per query control (same `din` and order, range entry with `from` / `to` and `YYYY-MM-DD`) |
 | 19 | The IvyConfig `post` list has every collection key except `_id` and the six audit keys, including `app` after `recordNo`, each with the type of section 5, step 9; `code` is the module code |
+| 20 | Every dropdown has `"isSearchable" : true` directly after `visible`; `dictData.config.params` is `{ "op" : "st" }` |
 
 ## 14. Open questions
 
@@ -703,6 +710,7 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | – | IvyConfig `code`; key `app` (13 Oct 2026) | `code` is the module code. `app` is part of the data model with the standard values Auto / Gamp / Common (D060 rule in `flatten_model.py`); the field lists, collection keys, specifications, validators, register and reports were regenerated with `gen_docs.py` and `gen_specs.py` (8,614 keys) | Step 9; checklist 19; F3 closed |
 | – | Page configuration layout (15 Oct 2026) | `pageTitle`, `api`, `params: {}` and `footerButtons: {}` inside `dictData.config`; `_id` / `dictName` = collection without `u_` + `Query` (`mes_maint_cleaningRecordQuery`); file name `<collection>.json` | Step 8, checklist 16; all 24 page configurations converted |
 | – | IvyConfig identifier (15 Oct 2026) | `_id` and `dn` = collection without `u_` + `Ivy` (`mes_maint_cleaningRecordIvy`); `collection` keeps the full name; file name unchanged (`<collection>Ivy.json`) | Step 9; all 24 IvyConfigs updated |
+| – | `params` and `isSearchable` (15 Oct 2026) | `dictData.config.params` = `{ "op" : "st" }`; every dropdown has `"isSearchable" : true` (both as in `FormatQuery.json`) | Step 8, section 6, templates, checklist 16 and 20; all 24 page configurations updated |
 
 ## 16. Observations on the sample files (not changed)
 
@@ -732,3 +740,4 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | 0.13 | 15 Oct 2026 | Step 2: child and relationship collections have no period control and start with a parent search dropdown; time key must be a required date key where one exists. Follow-up F4 (maintenance plan allowed values, equipment qualification time key). Query and IvyConfigs produced for all 21 collections of the ToolingAndMaintenance module | Claude |
 | 0.14 | 15 Oct 2026 | Page configuration layout: `pageTitle`, `api`, `params`, `footerButtons` moved inside `dictData.config`; `_id` / `dictName` = `<collection without u_>Query`; file name `<collection>.json`; all 24 existing page configurations converted (old files moved to `_to_delete/PageConfigs_old_names`) | Claude |
 | 0.15 | 15 Oct 2026 | IvyConfig `_id` and `dn` = `<collection without u_>Ivy`; all 24 IvyConfigs updated | Claude |
+| 0.16 | 15 Oct 2026 | `dictData.config.params` = `{ "op" : "st" }`; `isSearchable: true` on every dropdown (attribute table, templates, checklist 20); all 24 page configurations updated (98 dropdowns) | Claude |
