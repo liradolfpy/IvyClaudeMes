@@ -1,0 +1,146 @@
+{
+    "_id" : "logbookEntryQuery",
+    "dictName" : "logbookEntryQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "pageTitle" : "Equipment and Area Logbook",
+        "api" : "/ivy/mes",
+        "config" : {
+            "method" : "GET",
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Started Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Started Date Range",
+                    "errorMessage" : "Please select Started Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "data_index" : "startedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Logbook Of",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Logbook Of",
+                    "errorMessage" : "Please select Logbook Of",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "relatedCollectionName",
+                    "p_din" : "relatedCollectionNameText",
+                    "data" : {
+                        "u_mes_mast_equipment" : "Equipment",
+                        "u_mes_mast_area" : "Area"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Activity Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Activity Type",
+                    "errorMessage" : "Please select Activity Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "activityType",
+                    "p_din" : "activityTypeText",
+                    "data" : {
+                        "Production" : "Production",
+                        "Cleaning" : "Cleaning",
+                        "Maintenance" : "Maintenance",
+                        "Calibration" : "Calibration",
+                        "Line Clearance" : "Line Clearance",
+                        "Qualification" : "Qualification",
+                        "Idle" : "Idle"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Performed By",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Performed By",
+                    "errorMessage" : "Please select Performed By",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "performedById",
+                    "p_din" : "performedBy",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_mast_user"
+                    },
+                    "sourceParams_dynamic" : "u_mes_mast_user",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "Recorded" : "Recorded",
+                        "Reviewed" : "Reviewed"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

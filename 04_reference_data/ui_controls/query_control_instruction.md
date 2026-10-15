@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.12 | 13 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
+Instruction version: 0.13 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -77,7 +77,7 @@ Take the profile items in this order and stop at **8 controls** (aim for 6):
 
 | Order | Control | Rule |
 |---|---|---|
-| 1 | Period | Mandatory on Transaction, Reports, Telemetry and Audit Trail screens. Range picker on the time key. Not used on Master screens. |
+| 1 | Period | Mandatory on Transaction, Reports, Telemetry and Audit Trail screens of **entity** collections. Range picker on the time key; the time key must be a required (non-null) date key where one exists. Not used on Master screens. Child and relationship collections have no period control: their first control is a search dropdown on the parent (`<parent>Id`), followed by their own reference and category keys. |
 | 2 | Scope | Mandatory on Transaction screens when the collection holds a scope key. Highest useful level first (Line), then the next level (Work Center). At most two scope levels. Scope dropdowns are independent: there is no cascading (choosing a line does not narrow the work-centre list). |
 | 3 | Shift | When the collection holds `shiftId` and users read it per shift. Source: cropdown `Shift`, never mdict. |
 | 4 | Status | When the collection has a lifecycle status. |
@@ -654,6 +654,7 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | Q22 | Whether `/mdict` reads the extra keys of `u_int_mdict` (`siteId`, `recordNo`, audit keys), and how it treats the per-site dictionaries now that site is not used in queries | Deferred by the owner on 13 Oct 2026 |
 | F1 | Index alignment: the query key strategy (`02_architecture/QueryKeySelectionStrategy.md`) and the generated index scripts put `siteId` first in several indexes (`{ siteId, recordNo }`, `{ siteId, status }`, `{ siteId, <date> }`). UI queries never carry `siteId`, so those indexes need `siteId` removed from the front, or a version without it, for list screens. Not changed by this instruction. | Follow-up on the query key strategy |
 | F2 | `shiftId` now stores the shift code (`A`, `B`, `C`) in the sample documents (owner instruction, 13 Oct 2026; applied in `05_generator/gen_samples.py`). The model (`05_generator/model/flat_model.json`), `02_architecture/field_lists`, the collection specifications and their examples still describe `shiftId` as a reference to `u_mes_mast_shift._id`. They need the reference changed to the shift code (`u_mes_mast_shift.recordNo`) and a decision log entry. Child collections of the shift master (`shiftBreak`, `shiftWorkingDay`) keep the parent `_id`. | Follow-up on the model and specifications |
+| F4 | Maintenance module check (15 Oct 2026): the allowed values of `u_mes_maint_maintenancePlan.planType` (Incoming, In Process, First Off ...) and `strategy` (Torque Control ...) belong to inspection plans and tightening, not maintenance plans; they are not used as query controls until corrected in the model. `u_mes_maint_equipmentQualification` has no required date key; its period control uses `startedAt`, so records in status Planned (no start yet) are found only after they start. | Follow-up on the model |
 
 ## 15. Resolved questions
 
@@ -720,3 +721,4 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | 0.10 | 13 Oct 2026 | Q23 resolved: `shiftId` stores the shift code, matching the cropdown `Shift` (sample documents regenerated through `gen_samples.py`); follow-up F2 on model and specifications; second sample configuration `PageConfig_u_mes_perf_alarm.json` produced with this instruction | Claude |
 | 0.11 | 13 Oct 2026 | Step 9 added: IvyConfig generated or updated with every query (frame, `get` and `post` rules, type names, file location); page configurations moved to `query/PageConfigs/`; checklist 18 and 19; follow-up F3 on the key `app`; IvyConfigs produced for Downtime Events, Alarms and Station Performance | Claude |
 | 0.12 | 13 Oct 2026 | IvyConfig `code` = module code; `app` now listed in the data model (field lists, specifications, validators regenerated), so the `post` list takes it from the field list; follow-up F3 closed; three IvyConfigs regenerated | Claude |
+| 0.13 | 15 Oct 2026 | Step 2: child and relationship collections have no period control and start with a parent search dropdown; time key must be a required date key where one exists. Follow-up F4 (maintenance plan allowed values, equipment qualification time key). Query and IvyConfigs produced for all 21 collections of the Tooling & Maintenance module | Claude |

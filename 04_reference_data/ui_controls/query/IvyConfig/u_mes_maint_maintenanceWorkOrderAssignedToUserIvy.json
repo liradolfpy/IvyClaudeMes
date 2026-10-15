@@ -1,0 +1,71 @@
+{
+    "_id" : "u_mes_maint_maintenanceWorkOrderAssignedToUserIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_maintenanceWorkOrderAssignedToUser",
+    "stableName" : "mes_maint_maintenanceWorkOrderAssignedToUserStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_maintenanceWorkOrderAssignedToUserIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "maintenanceWorkOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "assignedToUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "assignedToUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "assignedToUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

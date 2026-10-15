@@ -1,0 +1,75 @@
+{
+    "_id" : "u_mes_maint_maintenancePlanRequiredSparePartIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_maintenancePlanRequiredSparePart",
+    "stableName" : "mes_maint_maintenancePlanRequiredSparePartStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_maintenancePlanRequiredSparePartIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "maintenancePlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "sparePartId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenancePlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenancePlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "sparePartId",
+            "typ" : "string"
+        },
+        {
+            "din" : "sparePartName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

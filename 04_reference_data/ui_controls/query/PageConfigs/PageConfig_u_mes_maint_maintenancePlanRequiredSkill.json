@@ -1,0 +1,83 @@
+{
+    "_id" : "maintenancePlanRequiredSkillQuery",
+    "dictName" : "maintenancePlanRequiredSkillQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "pageTitle" : "Maintenance Plan Required Skills",
+        "api" : "/ivy/mes",
+        "config" : {
+            "method" : "GET",
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Maintenance Plan",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Maintenance Plan",
+                    "errorMessage" : "Please select Maintenance Plan",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "maintenancePlanId",
+                    "p_din" : "maintenancePlanName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_maintenancePlan"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_maintenancePlan",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Required Skill",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Required Skill",
+                    "errorMessage" : "Please select Required Skill",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "requiredSkillId",
+                    "p_din" : "requiredSkillName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_mast_skill"
+                    },
+                    "sourceParams_dynamic" : "u_mes_mast_skill",
+                    "src" : "api"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

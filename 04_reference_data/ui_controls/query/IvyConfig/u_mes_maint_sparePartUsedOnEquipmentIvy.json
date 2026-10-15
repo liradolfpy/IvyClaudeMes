@@ -1,0 +1,71 @@
+{
+    "_id" : "u_mes_maint_sparePartUsedOnEquipmentIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_sparePartUsedOnEquipment",
+    "stableName" : "mes_maint_sparePartUsedOnEquipmentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_sparePartUsedOnEquipmentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "sparePartId",
+            "typ" : "string"
+        },
+        {
+            "din" : "usedOnEquipmentId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sparePartId",
+            "typ" : "string"
+        },
+        {
+            "din" : "sparePartName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "usedOnEquipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "usedOnEquipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

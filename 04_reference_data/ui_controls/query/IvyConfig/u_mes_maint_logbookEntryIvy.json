@@ -1,0 +1,158 @@
+{
+    "_id" : "u_mes_maint_logbookEntryIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_logbookEntry",
+    "stableName" : "mes_maint_logbookEntryStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_logbookEntryIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "startedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "activityType",
+            "typ" : "string"
+        },
+        {
+            "din" : "performedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "activityType",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "cleaningRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "cleaningRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineClearanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineClearanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "entryText",
+            "typ" : "string"
+        },
+        {
+            "din" : "performedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "performedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "reviewedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "_id" : "u_mes_maint_maintenancePlanIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_maintenancePlan",
+    "stableName" : "mes_maint_maintenancePlanStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_maintenancePlanIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "intervalType",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerDepartmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "blockEquipmentWhenOverdue",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolName",
+            "typ" : "string"
+        },
+        {
+            "din" : "planType",
+            "typ" : "string"
+        },
+        {
+            "din" : "strategy",
+            "typ" : "string"
+        },
+        {
+            "din" : "intervalType",
+            "typ" : "string"
+        },
+        {
+            "din" : "intervalValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "intervalUom",
+            "typ" : "string"
+        },
+        {
+            "din" : "counterSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "estimatedMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "lastDoneAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "nextDueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "toleranceDays",
+            "typ" : "int"
+        },
+        {
+            "din" : "blockEquipmentWhenOverdue",
+            "typ" : "bool"
+        },
+        {
+            "din" : "ownerDepartmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerDepartmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,274 @@
+{
+    "_id" : "equipmentLifecycleEventStable",
+    "lid" : "lid_999",
+    "dictName" : "equipmentLifecycleEventStable",
+    "typ" : "PageConfigStable",
+    "page" : "equipmentLifecycleEventStable",
+    "app" : "mes",
+    "module" : "maint",
+    "dictData" : {
+        "config" : {
+            "headerRoute" : null,
+            "headerMultiline" : null,
+            "footerMultiline" : {
+                "background-color" : "#B9C6DF",
+                "multiCol" : [
+                    [
+                        {
+                            "typ" : "dataElement",
+                            "colSize" : 6.0,
+                            "key" : {
+                                "text" : "From",
+                                "style" : {
+                                    "fontFamily" : "Roboto Condensed",
+                                    "fontWeight" : "300",
+                                    "fontSize" : "18px",
+                                    "color" : "#ecf0f1",
+                                    "textAlign" : "left",
+                                    "margin" : "1px 1px 1px 1px"
+                                }
+                            },
+                            "val" : {
+                                "text" : "",
+                                "style" : {
+                                    "fontFamily" : "Roboto Condensed",
+                                    "fontWeight" : "600",
+                                    "fontSize" : "18px",
+                                    "color" : "#ecf0f1",
+                                    "textAlign" : "left",
+                                    "margin" : "1px 1px 1px 1px"
+                                }
+                            }
+                        },
+                        {
+                            "typ" : "blankSpace",
+                            "colSize" : 1.0
+                        }
+                    ]
+                ]
+            },
+            "tableTitle" : {
+                "title-label" : "",
+                "font-family" : "Roboto Condensed",
+                "font-weight" : "600",
+                "font-size" : "30px",
+                "font-color" : "#B1B1B5",
+                "visible" : false
+            },
+            "tableSubTitle" : {
+                "visible" : true,
+                "title-label" : "Equipment Lifecycle",
+                "font-family" : "Roboto Condensed",
+                "font-weight" : "400",
+                "font-size" : "16px",
+                "font-color" : "#FFFFFF",
+                "background" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+                "display-download-icon" : true,
+                "download-icon-color" : "#0F62FE",
+                "display-search-control" : true,
+                "search-border-color" : "0px solid #0d3070",
+                "search-inner-color" : "#B9C6DF",
+                "title-icon" : "fa-list",
+                "title-icon-size" : "16px",
+                "title-icon-color" : "#FFFFFF"
+            },
+            "tableConfig" : {
+                "visible" : true,
+                "tableWidth" : "80%",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "divAlignment" : "left",
+                "leftMargin" : "0px",
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "line-color" : "#2ECC71",
+                "isSearchable" : true,
+                "isSortable" : true,
+                "pagination" : NumberInt(8),
+                "exportToPdf" : false,
+                "exportToCsv" : true,
+                "noOfRows" : 10.0,
+                "interval" : NumberInt(3000000)
+            },
+            "header" : {
+                "background-color" : "#4a4f59",
+                "font-family" : "Roboto Condensed",
+                "font-weight" : "100",
+                "font-size" : "14px",
+                "font-color" : "#125FCC",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "footer" : {
+                "background-color" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+                "font-family" : "Roboto Condensed",
+                "font-weight" : "bold",
+                "font-size" : "12px",
+                "font-color" : "#D0E2FF",
+                "row-padding" : "0px",
+                "display-pagination-control" : true,
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "visible" : true,
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#0d3070",
+                "pagination-border" : "1px solid #314f85"
+            },
+            "row" : {
+                "background-color" : "#FFFFFF",
+                "row-padding" : "0px 0px 0px 5px",
+                "font-family" : "Roboto Condensed",
+                "font-weight" : "400",
+                "font-size" : "12px",
+                "font-color" : "#000000",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "border-bottom" : "none",
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ]
+            },
+            "column" : [
+                {
+                    "title" : "Record No",
+                    "fixed" : "left",
+                    "width" : "140px",
+                    "align" : "left",
+                    "data_index" : "recordNo"
+                },
+                {
+                    "title" : "Equipment",
+                    "width" : "240px",
+                    "align" : "left",
+                    "data_index" : "equipmentName"
+                },
+                {
+                    "title" : "Event Type",
+                    "width" : "210px",
+                    "align" : "left",
+                    "data_index" : "eventType"
+                },
+                {
+                    "title" : "Event At",
+                    "width" : "160px",
+                    "align" : "center",
+                    "DtFormat" : "YYYY-MM-DD HH:mm:ss",
+                    "isIST" : true,
+                    "data_index" : "eventAt"
+                },
+                {
+                    "title" : "Description",
+                    "width" : "300px",
+                    "align" : "left",
+                    "data_index" : "description"
+                },
+                {
+                    "title" : "Cost (INR)",
+                    "width" : "120px",
+                    "align" : "right",
+                    "data_index" : "costInr"
+                },
+                {
+                    "title" : "Health Score",
+                    "width" : "140px",
+                    "align" : "right",
+                    "data_index" : "healthScore"
+                },
+                {
+                    "title" : "Lifetime Cycles At Event",
+                    "width" : "240px",
+                    "align" : "right",
+                    "data_index" : "lifetimeCyclesAtEvent"
+                },
+                {
+                    "title" : "Lifetime Run Hours At Event",
+                    "width" : "260px",
+                    "align" : "right",
+                    "data_index" : "lifetimeRunHoursAtEvent"
+                },
+                {
+                    "title" : "Maintenance Work Order",
+                    "width" : "300px",
+                    "align" : "left",
+                    "data_index" : "maintenanceWorkOrderName"
+                },
+                {
+                    "title" : "Engineering Change",
+                    "width" : "300px",
+                    "align" : "left",
+                    "data_index" : "engineeringChangeName"
+                },
+                {
+                    "title" : "Model Prediction",
+                    "width" : "170px",
+                    "align" : "left",
+                    "data_index" : "modelPredictionName"
+                },
+                {
+                    "title" : "Approved By",
+                    "width" : "130px",
+                    "align" : "left",
+                    "data_index" : "approvedBy"
+                },
+                {
+                    "title" : "Approved At",
+                    "width" : "160px",
+                    "align" : "center",
+                    "DtFormat" : "YYYY-MM-DD HH:mm:ss",
+                    "isIST" : true,
+                    "data_index" : "approvedAt"
+                },
+                {
+                    "title" : "Status",
+                    "width" : "90px",
+                    "align" : "left",
+                    "data_index" : "status"
+                },
+                {
+                    "title" : "Created By",
+                    "width" : "120px",
+                    "align" : "left",
+                    "data_index" : "createdBy"
+                },
+                {
+                    "title" : "Created At",
+                    "width" : "160px",
+                    "align" : "center",
+                    "DtFormat" : "YYYY-MM-DD HH:mm:ss",
+                    "isIST" : true,
+                    "data_index" : "createdAt"
+                },
+                {
+                    "title" : "Updated By",
+                    "width" : "120px",
+                    "align" : "left",
+                    "data_index" : "updatedBy"
+                },
+                {
+                    "title" : "Updated At",
+                    "width" : "160px",
+                    "align" : "center",
+                    "DtFormat" : "YYYY-MM-DD HH:mm:ss",
+                    "isIST" : true,
+                    "data_index" : "updatedAt"
+                }
+            ],
+            "rat" : [],
+            "ratConfig" : [],
+            "zenPop" : {},
+            "zenFuncs" : {
+                "headerRoute" : false,
+                "footerMultiline" : true,
+                "headerMultiline" : false,
+                "footerButtons" : true
+            },
+            "footerButtons" : {}
+        }
+    },
+    "subTyp" : "PhantomStable",
+    "act" : true
+}

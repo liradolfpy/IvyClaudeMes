@@ -1,0 +1,186 @@
+{
+    "_id" : "u_mes_maint_toolLifeRecordIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_toolLifeRecord",
+    "stableName" : "mes_maint_toolLifeRecordStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_toolLifeRecordIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "eventAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "toolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "eventType",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "eventType",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "eventAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "performedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "performedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "cyclesThisEvent",
+            "typ" : "int"
+        },
+        {
+            "din" : "lifeUsedBefore",
+            "typ" : "int"
+        },
+        {
+            "din" : "lifeUsedAfter",
+            "typ" : "int"
+        },
+        {
+            "din" : "lifeRemaining",
+            "typ" : "int"
+        },
+        {
+            "din" : "regrindNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "conditionOnRemoval",
+            "typ" : "string"
+        },
+        {
+            "din" : "removalReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "measuredWearMm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "maintenanceWorkOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "remarks",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

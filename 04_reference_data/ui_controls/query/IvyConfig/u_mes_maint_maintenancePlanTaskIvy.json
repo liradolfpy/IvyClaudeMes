@@ -1,0 +1,79 @@
+{
+    "_id" : "u_mes_maint_maintenancePlanTaskIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_maintenancePlanTask",
+    "stableName" : "mes_maint_maintenancePlanTaskStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_maintenancePlanTaskIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "maintenancePlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresShutdown",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenancePlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenancePlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "taskNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "standardMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "requiresShutdown",
+            "typ" : "bool"
+        },
+        {
+            "din" : "acceptanceCriteria",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,258 @@
+{
+    "_id" : "u_mes_maint_maintenanceWorkOrderIvy",
+    "code" : "maint",
+    "moduleName" : "Tooling & Maintenance",
+    "collection" : "u_mes_maint_maintenanceWorkOrder",
+    "stableName" : "mes_maint_maintenanceWorkOrderStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "u_mes_maint_maintenanceWorkOrderIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "reportedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workOrderType",
+            "typ" : "string"
+        },
+        {
+            "din" : "priority",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "followUpRequired",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "workOrderType",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolName",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenancePlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenancePlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "priority",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "problemDescription",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "failureMode",
+            "typ" : "string"
+        },
+        {
+            "din" : "rootCause",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionTaken",
+            "typ" : "string"
+        },
+        {
+            "din" : "plannedStartAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "downtimeMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "responseMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "repairMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "totalCostInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "equipmentReleasedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentReleasedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentReleasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "followUpRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "rootCauseCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "rootCauseCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "closureApprovedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "closureApprovedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "closureApprovedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "andonEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "andonEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "priorityScore",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "schedulingSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "slaResponseDueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "slaRepairDueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}
