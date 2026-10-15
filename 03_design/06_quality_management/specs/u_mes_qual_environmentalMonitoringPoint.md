@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | A monitored location and parameter in a controlled area, with its alert and action limits and sampling frequency. |
 | Kind | Entity |
 | Data class | Master |

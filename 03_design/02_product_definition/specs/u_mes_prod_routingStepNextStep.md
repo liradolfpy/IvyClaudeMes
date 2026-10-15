@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | One document per next step of a routing step |
 | Kind | Child |
 | Data class | Master |

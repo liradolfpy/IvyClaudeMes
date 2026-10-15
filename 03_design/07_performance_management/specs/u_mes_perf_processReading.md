@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Tag values over time (die temperature, furnace zone temperature, spindle load, bath pH, current) |
 | Kind | Entity |
 | Data class | Transaction |

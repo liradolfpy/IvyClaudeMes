@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Links one nonconformance to one photo controlled document; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | AIAG control plan per item and phase (prototype, pre-launch, production) |
 | Kind | Entity |
 | Data class | Master |

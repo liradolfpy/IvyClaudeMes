@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Types of notification sent by the system |
 | Kind | Entity |
 | Data class | Master |

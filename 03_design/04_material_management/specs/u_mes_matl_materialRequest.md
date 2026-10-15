@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Line-side replenishment calls (e-kanban) from a work centre to stores |
 | Kind | Entity |
 | Data class | Transaction |

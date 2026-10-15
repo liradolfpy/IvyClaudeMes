@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Layered process, process (VDA 6.3), product and system audits with findings |
 | Kind | Entity |
 | Data class | Transaction |

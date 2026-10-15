@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | One document per level scale of a skill |
 | Kind | Child |
 | Data class | Master |

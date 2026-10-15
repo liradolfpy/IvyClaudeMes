@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | One document per affected item of a engineering change |
 | Kind | Child |
 | Data class | Transaction |

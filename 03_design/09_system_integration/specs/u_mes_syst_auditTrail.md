@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Field-level change history of master and quality data (who, when, old, new, reason) |
 | Kind | Entity |
 | Data class | Transaction |

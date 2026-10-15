@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Links one operation to one required skill; one document per link |
 | Kind | Relationship |
 | Data class | Master |

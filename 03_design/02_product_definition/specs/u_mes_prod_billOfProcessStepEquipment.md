@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Links one bill of process step to one equipment; one document per link |
 | Kind | Relationship |
 | Data class | Master |

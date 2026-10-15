@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Floor-life, pot-life or open-time clock for a lot or container of an exposure-controlled item. |
 | Kind | Entity |
 | Data class | Transaction |

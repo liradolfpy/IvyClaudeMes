@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Leak test per unit: stage pressures, decay, leak rate, limits, verdict, retest counter |
 | Kind | Entity |
 | Data class | Transaction |

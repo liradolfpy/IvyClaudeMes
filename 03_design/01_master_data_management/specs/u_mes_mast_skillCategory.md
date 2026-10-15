@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Categories of skills (process, quality, maintenance, safety) |
 | Kind | Entity |
 | Data class | Master |

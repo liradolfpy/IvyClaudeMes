@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Periodic product quality review of an item: lots made, released and rejected, deviations, complaints, CAPA, changes, recalls and capability over the review period, with conclusion and actions. |
 | Kind | Entity |
 | Data class | Transaction |

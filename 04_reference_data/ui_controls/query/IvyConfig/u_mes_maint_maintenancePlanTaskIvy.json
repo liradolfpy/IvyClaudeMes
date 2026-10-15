@@ -1,7 +1,7 @@
 {
     "_id" : "mes_maint_maintenancePlanTaskIvy",
     "code" : "maint",
-    "moduleName" : "Tooling And Maintenance",
+    "moduleName" : "ToolingAndMaintenance",
     "collection" : "u_mes_maint_maintenancePlanTask",
     "stableName" : "mes_maint_maintenancePlanTaskStable",
     "typ" : "IvyConfig",

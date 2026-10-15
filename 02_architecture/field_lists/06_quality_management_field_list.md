@@ -1,4 +1,4 @@
-# Field list - Quality Management (qual)
+# Field list - QualityManagement (qual)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/06_quality_management/specs.
 

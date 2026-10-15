@@ -1,4 +1,4 @@
-# Quality Management (qual) - module summary
+# QualityManagement (qual) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

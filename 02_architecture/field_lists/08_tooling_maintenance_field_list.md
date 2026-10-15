@@ -1,4 +1,4 @@
-# Field list - Tooling And Maintenance (maint)
+# Field list - ToolingAndMaintenance (maint)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/08_tooling_maintenance/specs.
 

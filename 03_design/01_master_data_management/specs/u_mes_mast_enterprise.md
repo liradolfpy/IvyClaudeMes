@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Legal entities of the group (ISA-95 Enterprise level); tax and registration data |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Loss Pareto row per line, shift, production date and reason code (downtime, speed and quality losses). |
 | Kind | Entity |
 | Data class | Transaction |

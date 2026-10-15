@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per size row of a sampling plan |
 | Kind | Child |
 | Data class | Master |

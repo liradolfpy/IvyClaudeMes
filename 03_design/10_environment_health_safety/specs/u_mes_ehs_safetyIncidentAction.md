@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Environment Health and Safety (ehs) |
+| Module | EnvironmentHealthAndSafety (ehs) |
 | Purpose | One document per action of a safety incident |
 | Kind | Child |
 | Data class | Transaction |

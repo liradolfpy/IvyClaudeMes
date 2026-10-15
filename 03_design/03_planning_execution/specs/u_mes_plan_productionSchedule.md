@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Finite schedule per line and shift with sequenced orders, planned start/end |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Material, tooling and service suppliers; approval status, certificates, PPM rating |
 | Kind | Entity |
 | Data class | Master |

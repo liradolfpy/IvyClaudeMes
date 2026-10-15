@@ -1,7 +1,7 @@
 """Master-data review (DATA-003). Classification values that the plant defines and maintains are master collections,
 referenced by <entity>Id + <entity>Name. This file holds the new master concepts, their keys and the key conversions.
 Applied by flatten_model.py before any other rename."""
-D1="1 Master Data Management"; D2="2 Product Definition"; D3="3 Planning and Execution"; D4="4 Material Management"; D6="6 Quality Management"; D7="7 Performance Management"; D8="8 Tooling And Maintenance"; D9="9 System and Integration"; D10="10 Environment Health and Safety"
+D1="1 MasterDataManagement"; D2="2 ProductDefinition"; D3="3 PlanningAndExecution"; D4="4 MaterialManagement"; D6="6 QualityManagement"; D7="7 PerformanceManagement"; D8="8 ToolingAndMaintenance"; D9="9 SystemAndIntegration"; D10="10 EnvironmentHealthAndSafety"
 def m(name,dom,pre,purpose,keys="name, description, sequenceNo",vol="10-50"):
     return (name,dom,pre,"code",purpose,"Owner review of 11 Oct 2026",["sites"],vol,"standard","Flat master list"),keys
 _N=[

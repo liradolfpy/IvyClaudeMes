@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Links one equipment to one IoT device; one document per link |
 | Kind | Relationship |
 | Data class | Master |

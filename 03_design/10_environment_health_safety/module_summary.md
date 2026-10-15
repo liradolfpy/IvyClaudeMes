@@ -1,4 +1,4 @@
-# Environment Health and Safety (ehs) - module summary
+# EnvironmentHealthAndSafety (ehs) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Bins, trolleys, returnable crates and pallets with contents and nesting |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | Dies, fixtures, cutting tools, nutrunner spindles, test seals: life limit, life used, status, location |
 | Kind | Entity |
 | Data class | Master |

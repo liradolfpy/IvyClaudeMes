@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | One document per loss of a OEE record |
 | Kind | Child |
 | Data class | Transaction |

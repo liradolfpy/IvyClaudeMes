@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Prioritised work queue per work centre shown to the operator |
 | Kind | Entity |
 | Data class | Transaction |

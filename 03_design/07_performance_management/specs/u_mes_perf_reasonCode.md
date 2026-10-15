@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Reason tree (up to 4 levels) for downtime, scrap, hold and andon with planned / unplanned category |
 | Kind | Entity |
 | Data class | Master |

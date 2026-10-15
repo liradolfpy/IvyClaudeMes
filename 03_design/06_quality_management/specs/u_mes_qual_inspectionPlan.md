@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Executable data-collection group per operation: which characteristics, sample size, frequency, reaction |
 | Kind | Entity |
 | Data class | Master |

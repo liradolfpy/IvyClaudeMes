@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Every stock transaction: receipt, putaway, issue to line, return, scrap, transfer, shipment |
 | Kind | Entity |
 | Data class | Transaction |

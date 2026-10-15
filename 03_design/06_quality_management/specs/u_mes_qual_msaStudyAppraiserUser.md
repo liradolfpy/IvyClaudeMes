@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Links one MSA study to one appraiser user; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

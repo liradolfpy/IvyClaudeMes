@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Process validation study of an item on a line by lifecycle stage (process design, process qualification, continued process verification), with protocol, lots, acceptance criteria and result. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -221,7 +221,7 @@ Document frame:
 |---|---|---|
 | `_id` | `"<collection without the leading u_>Ivy"` | `u_mes_maint_cleaningRecord` gives `mes_maint_cleaningRecordIvy` |
 | `code` | Module code | The module code in the collection name (`u_mes_perf_downtimeEvent` gives `perf`) |
-| `moduleName` | Module name | From the module code in the collection name, using the module table of `collection_inventory.md` (`perf` gives `Performance Management`) |
+| `moduleName` | Module name | From the module code in the collection name, using the module table of `collection_inventory.md` (`perf` gives `PerformanceManagement`) |
 | `collection` | Collection name | `u_mes_perf_downtimeEvent` |
 | `stableName` | `"<collection without the leading u_>Stable"` | `mes_perf_downtimeEventStable` |
 | `typ` | `"IvyConfig"` | Fixed |
@@ -729,6 +729,6 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | 0.10 | 13 Oct 2026 | Q23 resolved: `shiftId` stores the shift code, matching the cropdown `Shift` (sample documents regenerated through `gen_samples.py`); follow-up F2 on model and specifications; second sample configuration `PageConfig_u_mes_perf_alarm.json` produced with this instruction | Claude |
 | 0.11 | 13 Oct 2026 | Step 9 added: IvyConfig generated or updated with every query (frame, `get` and `post` rules, type names, file location); page configurations moved to `query/PageConfigs/`; checklist 18 and 19; follow-up F3 on the key `app`; IvyConfigs produced for Downtime Events, Alarms and Station Performance | Claude |
 | 0.12 | 13 Oct 2026 | IvyConfig `code` = module code; `app` now listed in the data model (field lists, specifications, validators regenerated), so the `post` list takes it from the field list; follow-up F3 closed; three IvyConfigs regenerated | Claude |
-| 0.13 | 15 Oct 2026 | Step 2: child and relationship collections have no period control and start with a parent search dropdown; time key must be a required date key where one exists. Follow-up F4 (maintenance plan allowed values, equipment qualification time key). Query and IvyConfigs produced for all 21 collections of the Tooling And Maintenance module | Claude |
+| 0.13 | 15 Oct 2026 | Step 2: child and relationship collections have no period control and start with a parent search dropdown; time key must be a required date key where one exists. Follow-up F4 (maintenance plan allowed values, equipment qualification time key). Query and IvyConfigs produced for all 21 collections of the ToolingAndMaintenance module | Claude |
 | 0.14 | 15 Oct 2026 | Page configuration layout: `pageTitle`, `api`, `params`, `footerButtons` moved inside `dictData.config`; `_id` / `dictName` = `<collection without u_>Query`; file name `<collection>.json`; all 24 existing page configurations converted (old files moved to `_to_delete/PageConfigs_old_names`) | Claude |
 | 0.15 | 15 Oct 2026 | IvyConfig `_id` and `dn` = `<collection without u_>Ivy`; all 24 IvyConfigs updated | Claude |

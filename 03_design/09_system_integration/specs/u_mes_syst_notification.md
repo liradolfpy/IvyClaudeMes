@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Alerts and escalations sent to users / groups with delivery and acknowledgement status |
 | Kind | Entity |
 | Data class | Transaction |

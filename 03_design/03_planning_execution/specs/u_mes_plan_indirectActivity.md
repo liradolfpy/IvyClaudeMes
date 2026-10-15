@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Indirect labour activities (cleaning, training, waiting for material ...) |
 | Kind | Entity |
 | Data class | Master |

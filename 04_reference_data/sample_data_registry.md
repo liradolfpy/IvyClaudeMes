@@ -4,7 +4,7 @@ One consistent sample-data universe: every _id, business number and display valu
 
 Collections: 369 | Documents: 5390 | Sample period: April to September 2026; production fortnight 15 to 26 September 2026 (IST, stored as UTC)
 
-## Master Data Management (mast)
+## MasterDataManagement (mast)
 
 ### u_mes_mast_enterprise
 
@@ -397,7 +397,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 5 | 1256000000000005 | ENGG | Process Engineering | Active |
 | 6 | 1256000000000006 | PLAN | Production Planning | Active |
 | 7 | 1256000000000007 | TOOL | Tool Room | Active |
-| 8 | 1256000000000008 | EHS | Environment Health and Safety | Active |
+| 8 | 1256000000000008 | EHS | EnvironmentHealthAndSafety | Active |
 | 9 | 1256000000000009 | IT | Information Technology | Active |
 | 10 | 1256000000000010 | HR | Human Resources | Active |
 | 11 | 1256000000000011 | PROD | Production | Active |
@@ -407,7 +407,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 15 | 1256000000000015 | QC | Quality Control | Active |
 | 16 | 1256000000000016 | PPIC | Production Planning | Active |
 | 17 | 1256000000000017 | VAL | Validation | Active |
-| 18 | 1256000000000018 | EHS | Environment Health and Safety | Active |
+| 18 | 1256000000000018 | EHS | EnvironmentHealthAndSafety | Active |
 | 19 | 1256000000000019 | IT | Information Technology | Active |
 | 20 | 1256000000000020 | HR | Human Resources | Active |
 
@@ -676,7 +676,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 19 | 1269000000000019 | CARTON | Printed Cartons and Leaflets | Active |
 | 20 | 1269000000000020 | SERVICES | Facility Services | Active |
 
-## Product Definition (prod)
+## ProductDefinition (prod)
 
 ### u_mes_prod_item
 
@@ -1038,7 +1038,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1276000000000009 | KC-L5 | Kaveri L5 Light Truck | Active |
 | 10 | 1276000000000010 | TM-T2 | Tapti T2 City Car | Active |
 
-## Planning and Execution (plan)
+## PlanningAndExecution (plan)
 
 ### u_mes_plan_customerSchedule
 
@@ -1510,7 +1510,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1354000000000009 | LCL-20260924-001 | LCL-20260924-001 | In Progress |
 | 10 | 1354000000000010 | LCL-20260919-001 | LCL-20260919-001 | Passed |
 
-## Material Management (matl)
+## MaterialManagement (matl)
 
 ### u_mes_matl_storageLocation
 
@@ -2039,7 +2039,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 19 | 1314000000000019 | TRC-20260924-019 | Reverse trace, carton serial 0890000400301 for distributor audit | Running |
 | 20 | 1314000000000020 | TRC-20260918-020 | Forward trace, coated tablet lot PCM5F26091-P2 after twinning | Closed |
 
-## Quality Management (qual)
+## QualityManagement (qual)
 
 ### u_mes_qual_characteristic
 
@@ -2896,7 +2896,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1365000000000009 | PVL-2026-009 | Paracetamol 500 mg bottle pack, process qualification | Approved |
 | 10 | 1365000000000010 | PVL-2026-010 | Microcrystalline cellulose second source, process qualification | In Execution |
 
-## Performance Management (perf)
+## PerformanceManagement (perf)
 
 ### u_mes_perf_reasonCode
 
@@ -3238,7 +3238,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1327000000000009 | OPF-20260924-10231-FIN-01 | OPF-20260924-10231-FIN-01 | Calculated |
 | 10 | 1327000000000010 | OPF-20260917-10231-GDC-01 | OPF-20260917-10231-GDC-01 | Recalculated |
 
-## Tooling And Maintenance (maint)
+## ToolingAndMaintenance (maint)
 
 ### u_mes_maint_maintenancePlan
 
@@ -3450,7 +3450,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1366000000000009 | EQQ-FBD-01-D1-RQ-01 | EQQ-FBD-01-D1-RQ-01 | Approved |
 | 10 | 1366000000000010 | EQQ-COT-01-C1-OQ-01 | EQQ-COT-01-C1-OQ-01 | Approved |
 
-## System and Integration (syst)
+## SystemAndIntegration (syst)
 
 ### u_mes_syst_erpMessage
 
@@ -3692,7 +3692,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1289000000000009 | PPAP | PPAP Element | Active |
 | 10 | 1289000000000010 | TRAINING | Training Record | Active |
 | 11 | 1289000000000011 | SOP | Standard Operating Procedure | Active |
-| 12 | 1289000000000012 | MMR-DOC | Master Manufacturing Record | Active |
+| 12 | 1289000000000012 | MMR-DOC | MasterManufacturingRecord | Active |
 | 13 | 1289000000000013 | BMR-COPY | Executed Batch Record Copy | Active |
 | 14 | 1289000000000014 | COA | Certificate of Analysis | Active |
 | 15 | 1289000000000015 | CAL-CERT | Calibration Certificate | Active |
@@ -4027,7 +4027,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1348000000000009 | UAR-LIMS-QC1-2026-02 | UAR-LIMS-QC1-2026-02 | Open |
 | 10 | 1348000000000010 | UAR-RMG-01-PLC-2026-02 | UAR-RMG-01-PLC-2026-02 | Completed |
 
-## Environment Health and Safety (ehs)
+## EnvironmentHealthAndSafety (ehs)
 
 ### u_mes_ehs_safetyIncident
 
@@ -4089,7 +4089,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1296000000000009 | SLIP | Slip Or Fall Injury | Active |
 | 10 | 1296000000000010 | ELEC-SHOCK | Electric Shock | Active |
 
-## Batch Manufacturing Record (bmr)
+## BatchManufacturingRecord (bmr)
 
 ### u_mes_bmr_batchRecordReview
 
@@ -4151,7 +4151,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1369000000000009 | BMR-PCM5F26093 | BMR-PCM5F26093 | Open |
 | 10 | 1369000000000010 | BMR-PCM5B26094 | BMR-PCM5B26094 | Archived |
 
-## Master Manufacturing Record (mmr)
+## MasterManufacturingRecord (mmr)
 
 ### u_mes_mmr_masterManufacturingRecord
 

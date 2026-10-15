@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One logged defect on one unit (or lot sample) with first-fail station, origin, 4M category and follow-up links. |
 | Kind | Entity |
 | Data class | Transaction |

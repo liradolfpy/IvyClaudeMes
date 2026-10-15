@@ -39,7 +39,7 @@ The registry of every _id, business number and display value in the sample data 
 ## 4. Collection register
 
 
-### mast - Master Data Management
+### mast - MasterDataManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -101,7 +101,7 @@ The registry of every _id, business number and display value in the sample data 
 | 56 | u_mes_mast_commodity | entity | master | 16-digit numeric string | code | - | 10 |
 | 57 | u_mes_mast_roleRequiredSkill | relationship | master | 16-digit numeric string | parent recordNo + -RS<nnn> | u_mes_mast_role | 12 |
 
-### prod - Product Definition
+### prod - ProductDefinition
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -155,7 +155,7 @@ The registry of every _id, business number and display value in the sample data 
 | 48 | u_mes_prod_workInstructionWorkCenter | relationship | master | 16-digit numeric string | parent recordNo + -WC<nnn> | u_mes_prod_workInstruction | 11 |
 | 49 | u_mes_prod_workInstructionProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_prod_workInstruction | 11 |
 
-### plan - Planning and Execution
+### plan - PlanningAndExecution
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -203,7 +203,7 @@ The registry of every _id, business number and display value in the sample data 
 | 42 | u_mes_plan_setupVerificationItem | child | transaction | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_plan_setupVerification | 26 |
 | 43 | u_mes_plan_lineClearance | entity | transaction | 16-digit numeric string | LCL-<yyyymmdd>-<nnn>, e.g. LCL-20260915-001 | - | 40 |
 
-### matl - Material Management
+### matl - MaterialManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -249,7 +249,7 @@ The registry of every _id, business number and display value in the sample data 
 | 8 | u_mes_trac_traceInvestigation | entity | transaction | 16-digit numeric string | TRC-<yyyymmdd>-<nnn> | - | 33 |
 | 9 | u_mes_trac_traceInvestigationResult | child | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_trac_traceInvestigation | 29 |
 
-### qual - Quality Management
+### qual - QualityManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -339,7 +339,7 @@ The registry of every _id, business number and display value in the sample data 
 | 84 | u_mes_qual_productRecallLot | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_qual_productRecall | 21 |
 | 85 | u_mes_qual_processValidation | entity | transaction | 16-digit numeric string | PVL-<yyyy>-<nnn>, e.g. PVL-2026-007 | - | 35 |
 
-### perf - Performance Management
+### perf - PerformanceManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -365,7 +365,7 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_perf_workCenterPerformance | entity | transaction | 16-digit numeric string | WCP-<yyyymmddhh>-<work centre code> | - | 35 |
 | 21 | u_mes_perf_operatorPerformance | entity | transaction | 16-digit numeric string | OPF-<yyyymmdd>-<badge no>-<work centre code> | - | 30 |
 
-### maint - Tooling And Maintenance
+### maint - ToolingAndMaintenance
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -391,7 +391,7 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_maint_cleaningRecord | entity | transaction | 16-digit numeric string | CLN-<yyyymmdd>-<nnn>, e.g. CLN-20260915-003 | - | 37 |
 | 21 | u_mes_maint_equipmentQualification | entity | transaction | 16-digit numeric string | EQQ-<equipment code>-<phase>-<nn>, e.g. EQQ-LKT-01-T1-PQ-01 | - | 35 |
 
-### syst - System and Integration
+### syst - SystemAndIntegration
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -440,7 +440,7 @@ The registry of every _id, business number and display value in the sample data 
 | 43 | u_mes_syst_userAccessReview | entity | transaction | 16-digit numeric string | UAR-<system code>-<yyyy>-<nn>, e.g. UAR-MES-PN1-2026-03 | - | 26 |
 | 44 | u_mes_syst_userAccessReviewLine | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_syst_userAccessReview | 23 |
 
-### ehs - Environment Health and Safety
+### ehs - EnvironmentHealthAndSafety
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -451,7 +451,7 @@ The registry of every _id, business number and display value in the sample data 
 | 5 | u_mes_ehs_bodyPart | entity | master | 16-digit numeric string | code | - | 10 |
 | 6 | u_mes_ehs_injuryType | entity | master | 16-digit numeric string | code | - | 10 |
 
-### bmr - Batch Manufacturing Record
+### bmr - BatchManufacturingRecord
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -461,7 +461,7 @@ The registry of every _id, business number and display value in the sample data 
 | 4 | u_mes_bmr_yieldReconciliation | entity | transaction | 16-digit numeric string | YRC-<order number>-<nn>, e.g. YRC-PO-1000412-01 | - | 37 |
 | 5 | u_mes_bmr_batchManufacturingRecord | entity | transaction | 16-digit numeric string | BMR-<order number>, e.g. BMR-PO-1000412 | - | 41 |
 
-### mmr - Master Manufacturing Record
+### mmr - MasterManufacturingRecord
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -472,16 +472,17 @@ The registry of every _id, business number and display value in the sample data 
 
 | Version | Date | Change |
 |---|---|---|
-| 2.9 | 15 Oct 2026 | Module maint renamed Tooling And Maintenance; ampersand removed from all module names (D060). No collection, key or ID changes |
+| 2.9 | 15 Oct 2026 | Module names written in PascalCase without spaces (D061), e.g. ToolingAndMaintenance. No collection, key or ID changes |
+| 2.9 | 15 Oct 2026 | Module maint renamed ToolingAndMaintenance; ampersand removed from all module names (D060). No collection, key or ID changes |
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became 369 collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
 | 2.9 | 12 Oct 2026 | Owner decisions on the BMR / MMR designation (D057-D059): u_mes_mmr_masterManufacturingRecord (1367) with the relationship u_mes_mmr_masterManufacturingRecordRecipe (1368), and u_mes_bmr_batchManufacturingRecord (1369) added; line clearance and dispensing stay in plan and matl, audit-trail review stays in syst |
-| 2.8 | 12 Oct 2026 | Modules bmr (Batch Manufacturing Record) and mmr (Master Manufacturing Record) added on the owner's instruction (D054-D056). Collections unique to the batch manufacturing record moved to bmr with their numbers and _id values unchanged: u_mes_qual_batchRecordReview, u_mes_qual_batchRecordReviewException and u_mes_qual_batchRelease to u_mes_bmr_*, u_mes_plan_yieldReconciliation to u_mes_bmr_yieldReconciliation. No collection is unique to the master manufacturing record, so mmr has no collections yet. Collections shared by BMR / MMR and the rest of the MES are listed in 01_research/BMR_MMR_module_designation.md and were not moved |
+| 2.8 | 12 Oct 2026 | Modules bmr (BatchManufacturingRecord) and mmr (MasterManufacturingRecord) added on the owner's instruction (D054-D056). Collections unique to the batch manufacturing record moved to bmr with their numbers and _id values unchanged: u_mes_qual_batchRecordReview, u_mes_qual_batchRecordReviewException and u_mes_qual_batchRelease to u_mes_bmr_*, u_mes_plan_yieldReconciliation to u_mes_bmr_yieldReconciliation. No collection is unique to the master manufacturing record, so mmr has no collections yet. Collections shared by BMR / MMR and the rest of the MES are listed in 01_research/BMR_MMR_module_designation.md and were not moved |
 | 2.7 | 12 Oct 2026 | GMP_Pharma_01 implemented (D047-D053): 23 collections added (numbers 1344-1366, existing numbers unchanged), 33 keys added to 11 existing collections (41 keys with display pairs), allowed values extended; computerised system inventory, system validation, periodic review, audit-trail review, user access review, batch record review by exception, batch release, yield and label reconciliation, line clearance, equipment and area logbook, cleaning records, environmental monitoring, dispensing, retention samples, quality risk assessment, product quality review, recalls, process validation, equipment qualification. Analysis: 01_research/GMP_Pharma_01_impact_analysis.md |
 | 2.6 | 12 Oct 2026 | MES_ExternalRequirement_01 implemented (D036-D042): 44 collections added (numbers 1300-1343, existing numbers unchanged), 212 keys added to 38 existing collections, allowed values extended; interlock rules and events, escalation and alert rules, operator sessions, document acknowledgements, recipe downloads, set-up verification, exposure timers, replenishment rules, trace investigations, per-position results and measurement curves, defect records, LPA schedules, alarm definitions, loss and performance reports, maintenance checklists, spare-part transactions, lifecycle events, analytics models and predictions, simulation studies, record policies, saved views, backup runs. Analysis: 01_research/MES_ExternalRequirement_01_impact_analysis.md |
 | 2.5 | 12 Oct 2026 | DATA-004: dates and times stored as local plant time (IST) with the +0000 suffix; every date key tagged Date or Datetime; sample data regenerated |
 | 2.4 | 12 Oct 2026 | Sample documents: exactly 10 per collection in 03_design/<module>/samples; system IDs changed to 16-digit numeric strings; sample period moved to April-September 2026; master ID registry replaced by the generated 04_reference_data/sample_data_registry.md; child, relationship and value-list collections use recordNo as display value |
-| 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (Environment Health and Safety). Module folders renamed |
+| 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (EnvironmentHealthAndSafety). Module folders renamed |
 | 2.2 | 11 Oct 2026 | Master data review: 41 master collections added (department, designation, employmentType and others), 67 text keys converted to master references, fixed enumerations mapped in u_mes_syst_enumerationValue; see 08_validation/reports/master_data_review.md |
 | 2.1 | 11 Oct 2026 | Collection specifications written for all modules: field dictionary, validator, indexes and sample per collection under 03_design; check report in 08_validation/reports/specification_check.md |

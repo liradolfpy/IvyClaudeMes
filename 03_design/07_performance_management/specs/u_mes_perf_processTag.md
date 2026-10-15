@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Tag definitions: source address, unit, deadband, limits, equipment |
 | Kind | Entity |
 | Data class | Master |

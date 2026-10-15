@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | One document per weekly off day value of a work calendar |
 | Kind | Value list |
 | Data class | Master |

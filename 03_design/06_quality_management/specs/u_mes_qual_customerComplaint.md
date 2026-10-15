@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Customer complaints / line rejections / warranty returns with affected serials and PPM impact |
 | Kind | Entity |
 | Data class | Transaction |

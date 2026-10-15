@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Sales markets of a product variant (domestic, export) |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Pre-start verification of the set-up of a station or machine against the order, variant and bill of process. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Product variants (LH/RH, piston diameter, pad compound, market) that drive BOM, instruction and label selection |
 | Kind | Entity |
 | Data class | Master |

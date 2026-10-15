@@ -39,7 +39,7 @@ The registry of every _id, business number and display value in the sample data 
 ## 4. Collection register
 
 
-### mast - Master Data Management
+### mast - MasterDataManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -101,7 +101,7 @@ The registry of every _id, business number and display value in the sample data 
 | 56 | u_mes_mast_commodity | entity | master | 16-digit numeric string | code | - | 9 |
 | 57 | u_mes_mast_roleRequiredSkill | relationship | master | 16-digit numeric string | parent recordNo + -RS<nnn> | u_mes_mast_role | 11 |
 
-### prod - Product Definition
+### prod - ProductDefinition
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -155,7 +155,7 @@ The registry of every _id, business number and display value in the sample data 
 | 48 | u_mes_prod_workInstructionWorkCenter | relationship | master | 16-digit numeric string | parent recordNo + -WC<nnn> | u_mes_prod_workInstruction | 10 |
 | 49 | u_mes_prod_workInstructionProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_prod_workInstruction | 10 |
 
-### plan - Planning and Execution
+### plan - PlanningAndExecution
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -202,7 +202,7 @@ The registry of every _id, business number and display value in the sample data 
 | 41 | u_mes_plan_setupVerification | entity | transaction | 16-digit numeric string | SUV-<yyyymmdd>-<nnnnn> | - | 32 |
 | 42 | u_mes_plan_setupVerificationItem | child | transaction | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_plan_setupVerification | 25 |
 
-### matl - Material Management
+### matl - MaterialManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -247,7 +247,7 @@ The registry of every _id, business number and display value in the sample data 
 | 8 | u_mes_trac_traceInvestigation | entity | transaction | 16-digit numeric string | TRC-<yyyymmdd>-<nnn> | - | 32 |
 | 9 | u_mes_trac_traceInvestigationResult | child | transaction | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_trac_traceInvestigation | 28 |
 
-### qual - Quality Management
+### qual - QualityManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -329,7 +329,7 @@ The registry of every _id, business number and display value in the sample data 
 | 76 | u_mes_qual_auditSchedule | entity | master | 16-digit numeric string | LPA-<layer>-<line code>-<nn>, e.g. LPA-L2-LN-CAL-01 | - | 29 |
 | 77 | u_mes_qual_inspectionPlanProductVariant | relationship | master | 16-digit numeric string | parent recordNo + -PV<nnn> | u_mes_qual_inspectionPlan | 10 |
 
-### perf - Performance Management
+### perf - PerformanceManagement
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -355,7 +355,7 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_perf_workCenterPerformance | entity | transaction | 16-digit numeric string | WCP-<yyyymmddhh>-<work centre code> | - | 34 |
 | 21 | u_mes_perf_operatorPerformance | entity | transaction | 16-digit numeric string | OPF-<yyyymmdd>-<badge no>-<work centre code> | - | 29 |
 
-### maint - Tooling And Maintenance
+### maint - ToolingAndMaintenance
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -378,7 +378,7 @@ The registry of every _id, business number and display value in the sample data 
 | 17 | u_mes_maint_reliabilitySummary | entity | transaction | 16-digit numeric string | REL-<yyyymm or yyyymmdd>-<equipment code> | - | 28 |
 | 18 | u_mes_maint_equipmentLifecycleEvent | entity | transaction | 16-digit numeric string | ELE-<equipment code>-<nnn> | - | 30 |
 
-### syst - System and Integration
+### syst - SystemAndIntegration
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -421,7 +421,7 @@ The registry of every _id, business number and display value in the sample data 
 | 37 | u_mes_syst_savedView | entity | master | 16-digit numeric string | VIEW-<user or role code>-<nnn> | - | 16 |
 | 38 | u_mes_syst_backupRun | entity | transaction | 16-digit numeric string | BKP-<yyyymmdd>-<nn> | - | 23 |
 
-### ehs - Environment Health and Safety
+### ehs - EnvironmentHealthAndSafety
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -442,6 +442,6 @@ The registry of every _id, business number and display value in the sample data 
 | 2.6 | 12 Oct 2026 | MES_ExternalRequirement_01 implemented (D036-D042): 44 collections added (numbers 1300-1343, existing numbers unchanged), 212 keys added to 38 existing collections, allowed values extended; interlock rules and events, escalation and alert rules, operator sessions, document acknowledgements, recipe downloads, set-up verification, exposure timers, replenishment rules, trace investigations, per-position results and measurement curves, defect records, LPA schedules, alarm definitions, loss and performance reports, maintenance checklists, spare-part transactions, lifecycle events, analytics models and predictions, simulation studies, record policies, saved views, backup runs. Analysis: 01_research/MES_ExternalRequirement_01_impact_analysis.md |
 | 2.5 | 12 Oct 2026 | DATA-004: dates and times stored as local plant time (IST) with the +0000 suffix; every date key tagged Date or Datetime; sample data regenerated |
 | 2.4 | 12 Oct 2026 | Sample documents: exactly 10 per collection in 03_design/<module>/samples; system IDs changed to 16-digit numeric strings; sample period moved to April-September 2026; master ID registry replaced by the generated 04_reference_data/sample_data_registry.md; child, relationship and value-list collections use recordNo as display value |
-| 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (Environment Health and Safety). Module folders renamed |
+| 2.3 | 11 Oct 2026 | Module codes and names changed on the owner's instruction: mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs. Every collection name changed with its module code. Module Energy, safety and andon dissolved: andon collections moved to plan, energy collections to perf, safety collections kept in the new module ehs (EnvironmentHealthAndSafety). Module folders renamed |
 | 2.2 | 11 Oct 2026 | Master data review: 41 master collections added (department, designation, employmentType and others), 67 text keys converted to master references, fixed enumerations mapped in u_mes_syst_enumerationValue; see 08_validation/reports/master_data_review.md |
 | 2.1 | 11 Oct 2026 | Collection specifications written for all modules: field dictionary, validator, indexes and sample per collection under 03_design; check report in 08_validation/reports/specification_check.md |

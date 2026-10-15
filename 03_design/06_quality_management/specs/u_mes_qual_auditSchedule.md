@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Plan for layered process audits (and other recurring audits): layer, area or line, check sheet, frequency and auditor. |
 | Kind | Entity |
 | Data class | Master |

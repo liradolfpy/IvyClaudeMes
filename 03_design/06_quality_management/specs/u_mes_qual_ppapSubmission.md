@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | PPAP package: level, 18 elements with status, PSW, customer decision |
 | Kind | Entity |
 | Data class | Transaction |

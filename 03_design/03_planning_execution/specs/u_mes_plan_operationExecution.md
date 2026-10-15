@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Start / complete record of an operation on a unit or lot: who, where, when, result, cycle time (track-in / track-out) |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Cost centers charged with activities, mapped to ERP |
 | Kind | Entity |
 | Data class | Master |

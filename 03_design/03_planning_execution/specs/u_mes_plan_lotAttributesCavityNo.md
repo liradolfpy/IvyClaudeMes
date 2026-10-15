@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | One document per attributes cavity number value of a lot |
 | Kind | Value list |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Printed label instances with payload, printer, reprint count |
 | Kind | Entity |
 | Data class | Transaction |

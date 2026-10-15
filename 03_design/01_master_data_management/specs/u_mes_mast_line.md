@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Production lines / cells (ISA-95 Production Line / Work Cell) |
 | Kind | Entity |
 | Data class | Master |

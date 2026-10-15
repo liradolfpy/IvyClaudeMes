@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Skills-matrix entries: user x skill, level, valid-from/to, assessor; used for operator lock-out |
 | Kind | Entity |
 | Data class | Transaction |

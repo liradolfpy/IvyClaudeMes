@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | One document per stage of a leak test result |
 | Kind | Child |
 | Data class | Transaction |

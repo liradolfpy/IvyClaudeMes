@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Links one goods receipt line to one inspection result; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

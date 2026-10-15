@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Alarm occurrences with severity, raised / acknowledged / cleared times |
 | Kind | Entity |
 | Data class | Transaction |

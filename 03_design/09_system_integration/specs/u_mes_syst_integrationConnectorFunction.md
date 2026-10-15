@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | One document per function of a integration connector |
 | Kind | Child |
 | Data class | Master |

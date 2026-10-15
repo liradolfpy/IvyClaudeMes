@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Versioned visual work instructions with steps, media, cautions, variant applicability, required checks |
 | Kind | Entity |
 | Data class | Master |

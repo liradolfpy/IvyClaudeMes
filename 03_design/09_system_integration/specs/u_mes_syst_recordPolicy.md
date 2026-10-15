@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Edit, lock and retention policy per collection. |
 | Kind | Entity |
 | Data class | Master |

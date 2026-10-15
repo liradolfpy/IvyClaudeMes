@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | One document per comment of a downtime event |
 | Kind | Child |
 | Data class | Transaction |

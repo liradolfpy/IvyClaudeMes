@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | OEMs and aftermarket customers; ship-to addresses, label and ASN requirements |
 | Kind | Entity |
 | Data class | Master |

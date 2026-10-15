@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Links one SPC sample to one inspection result; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

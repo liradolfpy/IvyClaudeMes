@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Currencies used for costs and invoices |
 | Kind | Entity |
 | Data class | Master |

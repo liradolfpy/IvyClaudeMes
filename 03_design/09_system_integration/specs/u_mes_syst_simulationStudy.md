@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Digital-twin / what-if study with its input snapshot, result, approval and controlled rollout and pre / post comparison. |
 | Kind | Entity |
 | Data class | Transaction |

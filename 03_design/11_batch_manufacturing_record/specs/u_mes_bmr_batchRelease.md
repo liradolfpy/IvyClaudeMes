@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Batch Manufacturing Record (bmr) |
+| Module | BatchManufacturingRecord (bmr) |
 | Purpose | Release decision of the quality unit for a lot after review of its production record: released, conditionally released under a deviation, or rejected. |
 | Kind | Entity |
 | Data class | Transaction |

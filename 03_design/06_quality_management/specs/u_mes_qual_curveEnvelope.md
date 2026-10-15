@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Approved golden-sample envelope for a force–displacement, torque–angle, pressure–time or signal curve. |
 | Kind | Entity |
 | Data class | Master |

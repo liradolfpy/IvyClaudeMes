@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Threshold rule on a KPI or signal with the resulting action. |
 | Kind | Entity |
 | Data class | Master |

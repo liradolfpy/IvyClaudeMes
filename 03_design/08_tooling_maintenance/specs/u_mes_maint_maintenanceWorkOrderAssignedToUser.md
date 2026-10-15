@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | Links one maintenance work order to one assigned to user; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

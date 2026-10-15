@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Shift logbook: output, open issues, safety and quality notes, acknowledgements |
 | Kind | Entity |
 | Data class | Transaction |

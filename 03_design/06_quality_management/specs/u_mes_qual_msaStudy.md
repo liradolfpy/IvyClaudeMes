@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Measurement system analysis: gauge R&R, bias, linearity, attribute agreement |
 | Kind | Entity |
 | Data class | Transaction |

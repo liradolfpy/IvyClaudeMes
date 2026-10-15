@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | One document per line of a goods receipt |
 | Kind | Child |
 | Data class | Transaction |

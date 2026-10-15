@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | One document per used spare part of a maintenance work order |
 | Kind | Child |
 | Data class | Transaction |

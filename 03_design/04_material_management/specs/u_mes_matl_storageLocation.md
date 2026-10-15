@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Warehouses, racks, line-side supermarkets, quarantine cage, dispatch bay |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Process FMEA per item / process: failure modes, effects, causes, S-O-D, action priority |
 | Kind | Entity |
 | Data class | Master |

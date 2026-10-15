@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Alarm code master per equipment type with class, severity, restart-block and escalation settings. |
 | Kind | Entity |
 | Data class | Master |

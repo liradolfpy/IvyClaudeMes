@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | One document per completed step value of a wip unit |
 | Kind | Value list |
 | Data class | Transaction |

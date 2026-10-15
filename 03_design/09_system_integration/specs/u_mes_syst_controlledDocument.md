@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Controlled documents and attachments metadata (drawings, certificates, photos, reports); file in object store |
 | Kind | Entity |
 | Data class | Transaction |

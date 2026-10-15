@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Weighing or counting of a material lot for an order, with target, tolerance, tare, gross and net weight and the second-person or system verification. |
 | Kind | Entity |
 | Data class | Transaction |

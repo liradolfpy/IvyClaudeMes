@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Types of connected device (PLC, nutrunner controller, leak tester, printer ...) |
 | Kind | Entity |
 | Data class | Master |

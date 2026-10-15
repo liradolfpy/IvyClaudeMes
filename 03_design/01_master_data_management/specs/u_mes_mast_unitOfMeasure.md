@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Units and conversion factors (EA, kg, N.m, bar, mm, um, kWh) |
 | Kind | Entity |
 | Data class | Master |

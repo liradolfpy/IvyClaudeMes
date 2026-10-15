@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Registry of AI / ML / rule models and their released versions. |
 | Kind | Entity |
 | Data class | Master |

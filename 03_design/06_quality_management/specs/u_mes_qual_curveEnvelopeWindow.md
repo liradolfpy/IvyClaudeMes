@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per window of a curve envelope |
 | Kind | Child |
 | Data class | Master |

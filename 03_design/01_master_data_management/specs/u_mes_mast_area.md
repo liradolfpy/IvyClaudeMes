@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Production and support areas inside a site (ISA-95 Area) |
 | Kind | Entity |
 | Data class | Master |

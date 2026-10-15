@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Types of customer complaint (line rejection, zero kilometre, warranty, logistics) |
 | Kind | Entity |
 | Data class | Master |

@@ -1,4 +1,4 @@
-# Field list - Environment Health and Safety (ehs)
+# Field list - EnvironmentHealthAndSafety (ehs)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/10_environment_health_safety/specs.
 

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Manufacturers of equipment, gauges, devices and spare parts |
 | Kind | Entity |
 | Data class | Master |

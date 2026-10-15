@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Pack levels used in packaging specifications (bag, tray, bin, pallet) |
 | Kind | Entity |
 | Data class | Master |

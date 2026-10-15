@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per control limit of a SPC chart |
 | Kind | Child |
 | Data class | Master |

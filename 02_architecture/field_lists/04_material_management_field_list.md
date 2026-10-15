@@ -1,4 +1,4 @@
-# Field list - Material Management (matl)
+# Field list - MaterialManagement (matl)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/04_material_management/specs.
 

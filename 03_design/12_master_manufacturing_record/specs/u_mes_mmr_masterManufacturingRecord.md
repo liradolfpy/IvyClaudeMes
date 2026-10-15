@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Manufacturing Record (mmr) |
+| Module | MasterManufacturingRecord (mmr) |
 | Purpose | One approved, versioned master manufacturing record per item revision: the bill of material, routing, bill of process, recipes, control plan, inspection plan, packaging specification and label template that together define how a batch is made, with standard batch size, theoretical yield, yield limits, effective dates and approvals. |
 | Kind | Entity |
 | Data class | Master |

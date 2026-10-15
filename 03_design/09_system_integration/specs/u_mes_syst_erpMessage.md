@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Inbound and outbound interface messages (order download, confirmation, goods movement) with payload, status, retries |
 | Kind | Entity |
 | Data class | Transaction |

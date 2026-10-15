@@ -8,20 +8,20 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 
 | Module code | Module | Collections |
 |---|---|---|
-| mast | Master Data Management | 57 |
-| prod | Product Definition | 49 |
-| plan | Planning and Execution | 43 |
-| matl | Material Management | 27 |
+| mast | MasterDataManagement | 57 |
+| prod | ProductDefinition | 49 |
+| plan | PlanningAndExecution | 43 |
+| matl | MaterialManagement | 27 |
 | trac | Traceability | 9 |
-| qual | Quality Management | 85 |
-| perf | Performance Management | 21 |
-| maint | Tooling And Maintenance | 21 |
-| syst | System and Integration | 44 |
-| ehs | Environment Health and Safety | 6 |
-| bmr | Batch Manufacturing Record | 5 |
-| mmr | Master Manufacturing Record | 2 |
+| qual | QualityManagement | 85 |
+| perf | PerformanceManagement | 21 |
+| maint | ToolingAndMaintenance | 21 |
+| syst | SystemAndIntegration | 44 |
+| ehs | EnvironmentHealthAndSafety | 6 |
+| bmr | BatchManufacturingRecord | 5 |
+| mmr | MasterManufacturingRecord | 2 |
 
-## mast - Master Data Management
+## mast - MasterDataManagement
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -83,7 +83,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 56 | u_mes_mast_commodity | entity | master | - | Purchasing commodities used to classify suppliers | name |
 | 57 | u_mes_mast_roleRequiredSkill | relationship | master | u_mes_mast_role | Links one role to one required skill (one document per link) | recordNo |
 
-## prod - Product Definition
+## prod - ProductDefinition
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -137,7 +137,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 48 | u_mes_prod_workInstructionWorkCenter | relationship | master | u_mes_prod_workInstruction | Links one workInstruction to one work center (one document per link) | recordNo |
 | 49 | u_mes_prod_workInstructionProductVariant | relationship | master | u_mes_prod_workInstruction | Links one workInstruction to one product variant (one document per link) | recordNo |
 
-## plan - Planning and Execution
+## plan - PlanningAndExecution
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -185,7 +185,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 42 | u_mes_plan_setupVerificationItem | child | transaction | u_mes_plan_setupVerification | One document per item of a setupVerification | recordNo |
 | 43 | u_mes_plan_lineClearance | entity | transaction | - | Check that a line or station is free of materials, labels, documents and product of the previous order before the next order starts, with a second-person verification. | recordNo |
 
-## matl - Material Management
+## matl - MaterialManagement
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -231,7 +231,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 8 | u_mes_trac_traceInvestigation | entity | transaction | - | A saved forward or reverse trace run, its starting object and the containment it fed. | title |
 | 9 | u_mes_trac_traceInvestigationResult | child | transaction | u_mes_trac_traceInvestigation | One document per result of a traceInvestigation | recordNo |
 
-## qual - Quality Management
+## qual - QualityManagement
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -321,7 +321,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 84 | u_mes_qual_productRecallLot | child | transaction | u_mes_qual_productRecall | One document per lot of a productRecall | recordNo |
 | 85 | u_mes_qual_processValidation | entity | transaction | - | Process validation study of an item on a line by lifecycle stage (process design, process qualification, continued process verification), with protocol, lots, acceptance criteria and result. | title |
 
-## perf - Performance Management
+## perf - PerformanceManagement
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -347,7 +347,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 20 | u_mes_perf_workCenterPerformance | entity | transaction | - | Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag. | recordNo |
 | 21 | u_mes_perf_operatorPerformance | entity | transaction | - | Labour efficiency per operator, station, variant, shift and date. | recordNo |
 
-## maint - Tooling And Maintenance
+## maint - ToolingAndMaintenance
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -373,7 +373,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 20 | u_mes_maint_cleaningRecord | entity | transaction | - | Cleaning of a piece of equipment after use or before a product change: procedure, dirty hold time, cleaning, verification and the clean hold time it opens. | recordNo |
 | 21 | u_mes_maint_equipmentQualification | entity | transaction | - | Qualification of a piece of equipment by phase (design, installation, operational, performance, periodic requalification), with protocol, tests, deviations, approval and the next requalification date. | recordNo |
 
-## syst - System and Integration
+## syst - SystemAndIntegration
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -422,7 +422,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 43 | u_mes_syst_userAccessReview | entity | transaction | - | Periodic review of the user accounts and roles of a computerised system, confirming that every account is still needed and has the right authority. | recordNo |
 | 44 | u_mes_syst_userAccessReviewLine | child | transaction | u_mes_syst_userAccessReview | One document per line of a userAccessReview | recordNo |
 
-## ehs - Environment Health and Safety
+## ehs - EnvironmentHealthAndSafety
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -433,7 +433,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 5 | u_mes_ehs_bodyPart | entity | master | - | Body parts for injury records | name |
 | 6 | u_mes_ehs_injuryType | entity | master | - | Types of injury | name |
 
-## bmr - Batch Manufacturing Record
+## bmr - BatchManufacturingRecord
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|
@@ -443,7 +443,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 4 | u_mes_bmr_yieldReconciliation | entity | transaction | - | Calculated yield of an order, and reconciliation of issued components and labels against use, return and destruction, with the limits and the outcome. | recordNo |
 | 5 | u_mes_bmr_batchManufacturingRecord | entity | transaction | - | Header of the executed batch record of one production order: the master record version frozen at opening, links to line clearance, yield reconciliation, review and release, and the exported true copy of the compiled record with its checksum. | recordNo |
 
-## mmr - Master Manufacturing Record
+## mmr - MasterManufacturingRecord
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|

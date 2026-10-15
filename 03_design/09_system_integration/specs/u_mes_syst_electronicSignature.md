@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Signature records for approvals and releases with meaning and signed-content hash |
 | Kind | Entity |
 | Data class | Transaction |

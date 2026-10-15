@@ -1,4 +1,4 @@
-# Field list - Master Data Management (mast)
+# Field list - MasterDataManagement (mast)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/01_master_data_management/specs.
 

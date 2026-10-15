@@ -1,4 +1,4 @@
-# Field list - System and Integration (syst)
+# Field list - SystemAndIntegration (syst)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/09_system_integration/specs.
 

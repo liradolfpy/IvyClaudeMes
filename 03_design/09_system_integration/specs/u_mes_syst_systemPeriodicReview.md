@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Periodic evaluation that a computerised system remains in a validated state: changes, incidents, deviations, audit trails, access and backup over the review period. |
 | Kind | Entity |
 | Data class | Transaction |

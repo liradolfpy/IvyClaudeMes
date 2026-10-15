@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Saved dashboard and comparison filters per user or role. |
 | Kind | Entity |
 | Data class | Master |

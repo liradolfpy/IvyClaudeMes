@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per containment action of a nonconformance |
 | Kind | Child |
 | Data class | Transaction |

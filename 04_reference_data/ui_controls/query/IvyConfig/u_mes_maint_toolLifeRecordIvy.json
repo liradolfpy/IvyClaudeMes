@@ -1,7 +1,7 @@
 {
     "_id" : "mes_maint_toolLifeRecordIvy",
     "code" : "maint",
-    "moduleName" : "Tooling And Maintenance",
+    "moduleName" : "ToolingAndMaintenance",
     "collection" : "u_mes_maint_toolLifeRecord",
     "stableName" : "mes_maint_toolLifeRecordStable",
     "typ" : "IvyConfig",

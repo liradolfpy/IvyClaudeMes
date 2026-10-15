@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | One document per assignment of a shift roster |
 | Kind | Child |
 | Data class | Transaction |

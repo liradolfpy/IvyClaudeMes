@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Batch Manufacturing Record (bmr) |
+| Module | BatchManufacturingRecord (bmr) |
 | Purpose | Calculated yield of an order, and reconciliation of issued components and labels against use, return and destruction, with the limits and the outcome. |
 | Kind | Entity |
 | Data class | Transaction |

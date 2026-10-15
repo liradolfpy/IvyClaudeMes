@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Min-max or e-Kanban rule for replenishing an item at a line-side location. |
 | Kind | Entity |
 | Data class | Master |

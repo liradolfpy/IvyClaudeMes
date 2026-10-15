@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Status values and allowed transitions per collection (status mapping) |
 | Kind | Entity |
 | Data class | Master |

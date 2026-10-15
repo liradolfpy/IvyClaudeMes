@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Links one role to one required skill; one document per link |
 | Kind | Relationship |
 | Data class | Master |

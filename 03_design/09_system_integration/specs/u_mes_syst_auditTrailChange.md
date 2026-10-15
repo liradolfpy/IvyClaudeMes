@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | One document per change of a audit trail |
 | Kind | Child |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Batch Manufacturing Record (bmr) |
+| Module | BatchManufacturingRecord (bmr) |
 | Purpose | Header of the executed batch record of one production order: the master record version frozen at opening, links to line clearance, yield reconciliation, review and release, and the exported true copy of the compiled record with its checksum. |
 | Kind | Entity |
 | Data class | Transaction |

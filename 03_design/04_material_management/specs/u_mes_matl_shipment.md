@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Dispatch to customer: invoice / ASN, vehicle, containers shipped, proof of delivery |
 | Kind | Entity |
 | Data class | Transaction |

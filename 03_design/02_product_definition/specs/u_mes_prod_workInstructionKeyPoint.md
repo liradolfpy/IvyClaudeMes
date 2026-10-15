@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | One document per key point value of a work instruction |
 | Kind | Value list |
 | Data class | Master |

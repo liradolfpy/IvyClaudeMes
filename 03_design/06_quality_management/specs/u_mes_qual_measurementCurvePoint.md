@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Points of a measurement curve. Created as a MongoDB time-series collection: timeField `sampledAt`, metaField `measurementCurveId`, granularity seconds. |
 | Kind | Entity |
 | Data class | Transaction |

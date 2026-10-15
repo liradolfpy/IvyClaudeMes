@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Environment Health and Safety (ehs) |
+| Module | EnvironmentHealthAndSafety (ehs) |
 | Purpose | Body parts for injury records |
 | Kind | Entity |
 | Data class | Master |

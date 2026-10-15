@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Types of energy and utility that are metered |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Crew assignment per production day, shift and line (who is planned where) |
 | Kind | Entity |
 | Data class | Transaction |

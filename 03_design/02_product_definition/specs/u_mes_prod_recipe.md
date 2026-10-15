@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Machine parameter sets with set-points and limits (die temperature, furnace profile, CNC program, torque program, leak-test program) |
 | Kind | Entity |
 | Data class | Master |

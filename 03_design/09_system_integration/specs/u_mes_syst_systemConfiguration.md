@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Site and module settings (OEE basis, SPC rules, retention, label printer mapping) |
 | Kind | Entity |
 | Data class | Master |
@@ -28,7 +28,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 3 | app | String | - | Yes | Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both | `"Auto"` | Auto; Gamp; Common |
 | 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
-| 6 | module | String | - | Yes | Module of the system configuration | `"Master Data"` | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
+| 6 | module | String | - | Yes | Module of the system configuration | `"Master Data"` | Master Data; ProductDefinition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
 | 7 | description | String | - | Yes | Description of the system configuration | `"Time basis used as the denominator of availability (oee.plannedTimeBasis)"` |  |
 | 8 | valueType | String | - | Yes | Value type | `"Text"` | Text; Number; Flag; JSON |
 | 9 | configValueText | String | - | No (null allowed) | Config value text | `"Planned Production Time"` |  |

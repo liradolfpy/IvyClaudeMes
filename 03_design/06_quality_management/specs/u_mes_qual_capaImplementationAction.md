@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per implementation action of a CAPA |
 | Kind | Child |
 | Data class | Transaction |

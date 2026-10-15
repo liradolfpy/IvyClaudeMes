@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One captured curve per unit, position and test, with the envelope verdict and summary values. |
 | Kind | Entity |
 | Data class | Transaction |

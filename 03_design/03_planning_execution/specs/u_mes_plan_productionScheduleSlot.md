@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | One document per slot of a production schedule |
 | Kind | Child |
 | Data class | Transaction |

@@ -1,4 +1,4 @@
-# Material Management (matl) - module summary
+# MaterialManagement (matl) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Reserve or retention sample taken from a lot, with quantity, storage location, retention date and withdrawals. |
 | Kind | Entity |
 | Data class | Transaction |

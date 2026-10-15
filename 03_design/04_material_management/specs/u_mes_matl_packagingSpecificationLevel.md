@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | One document per level of a packaging specification |
 | Kind | Child |
 | Data class | Master |

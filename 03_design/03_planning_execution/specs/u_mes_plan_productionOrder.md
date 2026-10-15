@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Shop orders from ERP: item, quantity, routing/BOM version, partial releases, status |
 | Kind | Entity |
 | Data class | Transaction |

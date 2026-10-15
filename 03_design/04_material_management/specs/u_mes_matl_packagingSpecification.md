@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Pack instruction: container type, quantity per bin, layers, dunnage, label template |
 | Kind | Entity |
 | Data class | Master |

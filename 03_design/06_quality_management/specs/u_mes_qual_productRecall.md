@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Recall or field action for product already shipped: class, scope, reason, linked complaint, investigation and trace, quantities shipped and recovered, authority notification and effectiveness check. |
 | Kind | Entity |
 | Data class | Transaction |

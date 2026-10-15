@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Interval energy, compressed air and gas consumption per meter and equipment |
 | Kind | Entity |
 | Data class | Transaction |

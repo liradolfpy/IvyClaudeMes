@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Completed check sheets with answers, failures and reactions |
 | Kind | Entity |
 | Data class | Transaction |

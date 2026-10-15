@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Permissions that can be granted to roles |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Links one supplier to one supplied item; one document per link |
 | Kind | Relationship |
 | Data class | Master |

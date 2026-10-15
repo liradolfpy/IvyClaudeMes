@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Purchasing commodities used to classify suppliers |
 | Kind | Entity |
 | Data class | Master |

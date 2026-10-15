@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Calibration events: as-found / as-left readings, standard used, result, certificate |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Registry of PLCs, gateways, nutrunner controllers, leak testers, scanners, printers, energy meters |
 | Kind | Entity |
 | Data class | Master |

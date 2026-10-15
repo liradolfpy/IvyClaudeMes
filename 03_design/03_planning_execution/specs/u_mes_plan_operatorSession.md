@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | One login-to-logout session of an operator at a station, with the authentication method and the checks done at login. |
 | Kind | Entity |
 | Data class | Transaction |

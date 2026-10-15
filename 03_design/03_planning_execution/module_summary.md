@@ -1,4 +1,4 @@
-# Planning and Execution (plan) - module summary
+# PlanningAndExecution (plan) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

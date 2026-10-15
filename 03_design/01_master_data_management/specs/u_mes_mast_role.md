@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Named sets of permissions (operator, setter, quality engineer ...) |
 | Kind | Entity |
 | Data class | Master |

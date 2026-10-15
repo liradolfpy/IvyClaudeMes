@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Engineering change notices with affected objects, approvals and effectivity (cut-in serial / date) |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Stock on hand per item, lot, location and stock status |
 | Kind | Entity |
 | Data class | Transaction |

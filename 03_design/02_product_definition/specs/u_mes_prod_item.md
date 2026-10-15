@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Parts: finished caliper, semi-finished body, purchased components, raw material, consumables; drawing revision |
 | Kind | Entity |
 | Data class | Master |

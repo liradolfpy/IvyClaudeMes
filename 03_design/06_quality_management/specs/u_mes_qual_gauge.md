@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Gauges and measuring instruments: type, range, resolution, calibration interval and due date, status |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | Types of tool (die, fixture, cutting tool, socket, test seal) |
 | Kind | Entity |
 | Data class | Master |

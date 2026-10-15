@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Check sheet definitions: start-of-shift checks, poka-yoke verification, first-off, autonomous maintenance |
 | Kind | Entity |
 | Data class | Master |

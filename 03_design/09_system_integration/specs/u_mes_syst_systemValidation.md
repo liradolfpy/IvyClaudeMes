@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | One validation or computer software assurance activity on a computerised system: initial validation, revalidation after a change, or decommissioning, with its test evidence and approval. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Scrap declaration with quantity, weight, cost, defect code and operation of origin |
 | Kind | Entity |
 | Data class | Transaction |

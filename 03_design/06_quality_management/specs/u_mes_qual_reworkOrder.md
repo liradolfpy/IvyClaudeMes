@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Rework instruction and execution on the rework routing with re-inspection result |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Label layouts (unit 2D code, bin label, customer shipping label, hold tag) |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Check that a line or station is free of materials, labels, documents and product of the previous order before the next order starts, with a second-person verification. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -1,4 +1,4 @@
-# System and Integration (syst) - module summary
+# SystemAndIntegration (syst) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Periodic review of the user accounts and roles of a computerised system, confirming that every account is still needed and has the right authority. |
 | Kind | Entity |
 | Data class | Transaction |

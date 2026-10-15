@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Temporary deviations / concessions approved by the customer with quantity or date limit |
 | Kind | Entity |
 | Data class | Transaction |

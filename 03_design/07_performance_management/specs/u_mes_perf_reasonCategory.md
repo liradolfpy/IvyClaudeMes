@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Categories of reason codes (mechanical, electrical, process, material ...) |
 | Kind | Entity |
 | Data class | Master |

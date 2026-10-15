@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | OEM delivery schedules / releases (demand that drives production orders and shipments) |
 | Kind | Entity |
 | Data class | Transaction |

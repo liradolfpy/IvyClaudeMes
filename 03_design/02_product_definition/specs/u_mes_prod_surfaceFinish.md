@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Surface finishes offered as a variant option |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Lots and batches: supplier lots, melt/heat lots, casting lots, heat-treatment charges, anodising loads |
 | Kind | Entity |
 | Data class | Transaction |

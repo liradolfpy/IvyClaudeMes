@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Links one changeover to one installed tool; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

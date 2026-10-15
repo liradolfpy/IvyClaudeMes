@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Product families a line is built for (front caliper, rear caliper) |
 | Kind | Entity |
 | Data class | Master |

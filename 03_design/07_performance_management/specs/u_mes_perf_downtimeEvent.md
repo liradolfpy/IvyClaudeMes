@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Classified stops with fault, reason path, action taken, duration, responsible group |
 | Kind | Entity |
 | Data class | Transaction |

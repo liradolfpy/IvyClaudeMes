@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Every time an interlock rule blocks a transaction, is overridden or is cleared: what was checked, expected and found, and who authorised the override. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Types of equipment (casting machine, furnace, nutrunner, leak tester ...) |
 | Kind | Entity |
 | Data class | Master |

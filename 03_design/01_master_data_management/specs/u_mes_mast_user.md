@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | People and system accounts; badge id, role, home work centre |
 | Kind | Entity |
 | Data class | Master |

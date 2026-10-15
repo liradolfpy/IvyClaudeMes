@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Types of andon call with responsible department and target response time |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Shift patterns with start/end and breaks |
 | Kind | Entity |
 | Data class | Master |

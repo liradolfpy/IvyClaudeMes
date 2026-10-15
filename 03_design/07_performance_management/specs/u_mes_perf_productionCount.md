@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Hourly good / reject / rework counts per work centre against target (hour-by-hour board) |
 | Kind | Entity |
 | Data class | Transaction |

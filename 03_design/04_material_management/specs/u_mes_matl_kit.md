@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Kits of components picked for an order / line-side delivery |
 | Kind | Entity |
 | Data class | Transaction |

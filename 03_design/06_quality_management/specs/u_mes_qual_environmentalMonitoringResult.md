@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One environmental monitoring result with its evaluation against alert and action limits and the excursion handling. |
 | Kind | Entity |
 | Data class | Transaction |

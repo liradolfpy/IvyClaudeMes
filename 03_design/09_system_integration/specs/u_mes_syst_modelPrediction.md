@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Each prediction, classification, forecast or recommendation produced by a model, with the action and the actual outcome. |
 | Kind | Entity |
 | Data class | Transaction |

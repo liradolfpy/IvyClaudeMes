@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Links one defect code to one applicable operation; one document per link |
 | Kind | Relationship |
 | Data class | Master |

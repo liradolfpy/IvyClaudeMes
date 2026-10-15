@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Personal protective equipment that a work instruction can require |
 | Kind | Entity |
 | Data class | Master |

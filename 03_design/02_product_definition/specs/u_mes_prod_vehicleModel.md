@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Customer vehicle models the parts are fitted to |
 | Kind | Entity |
 | Data class | Master |

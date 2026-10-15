@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | State intervals per equipment: running, idle, setup, down, starved, blocked |
 | Kind | Entity |
 | Data class | Transaction |

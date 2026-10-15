@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Corrective and preventive actions in 8D structure (D1-D8) with team, root cause, actions, verification |
 | Kind | Entity |
 | Data class | Transaction |

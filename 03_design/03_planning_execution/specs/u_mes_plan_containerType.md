@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Types of container with dimensions and tare weight |
 | Kind | Entity |
 | Data class | Master |

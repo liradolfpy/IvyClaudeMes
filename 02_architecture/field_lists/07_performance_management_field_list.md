@@ -1,4 +1,4 @@
-# Field list - Performance Management (perf)
+# Field list - PerformanceManagement (perf)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/07_performance_management/specs.
 

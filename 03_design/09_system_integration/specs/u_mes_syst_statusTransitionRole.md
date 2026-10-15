@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Links one status transition to one role; one document per link |
 | Kind | Relationship |
 | Data class | Master |

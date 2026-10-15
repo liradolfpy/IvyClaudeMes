@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | Breakdown, preventive and improvement work orders with labour, parts used, root cause |
 | Kind | Entity |
 | Data class | Transaction |

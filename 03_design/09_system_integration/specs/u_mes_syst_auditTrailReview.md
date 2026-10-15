@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Documented review of the audit-trail entries of a production record, a system or an investigation: period, number of entries, critical entries, anomalies and outcome. |
 | Kind | Entity |
 | Data class | Transaction |

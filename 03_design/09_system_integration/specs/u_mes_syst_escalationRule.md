@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Routing and SLA rule for an exception type: first owner role, response and resolution targets. |
 | Kind | Entity |
 | Data class | Master |

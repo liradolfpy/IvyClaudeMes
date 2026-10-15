@@ -1,4 +1,4 @@
-# Product Definition (prod) - module summary
+# ProductDefinition (prod) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Sampling rules: AQL tables, skip-lot, time or counter based frequency |
 | Kind | Entity |
 | Data class | Master |

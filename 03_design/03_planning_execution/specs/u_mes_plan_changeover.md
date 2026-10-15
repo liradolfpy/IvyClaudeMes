@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Changeover from one item / variant to another: planned vs actual duration, checklist, first-off approval |
 | Kind | Entity |
 | Data class | Transaction |

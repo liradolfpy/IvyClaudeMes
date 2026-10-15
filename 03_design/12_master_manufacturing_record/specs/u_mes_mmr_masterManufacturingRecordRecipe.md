@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Manufacturing Record (mmr) |
+| Module | MasterManufacturingRecord (mmr) |
 | Purpose | Links one master manufacturing record to one recipe; one document per link |
 | Kind | Relationship |
 | Data class | Master |

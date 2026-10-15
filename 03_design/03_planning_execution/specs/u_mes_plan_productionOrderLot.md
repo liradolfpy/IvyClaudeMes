@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Links one production order to one lot; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

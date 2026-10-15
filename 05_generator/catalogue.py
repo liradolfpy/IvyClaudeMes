@@ -1,8 +1,8 @@
 # Single source of truth for the collection catalogue (Phase 1). Reused by the Phase 3 generator.
 # (name, domain, idPrefix, businessKey, purpose, sources, refs, volumePerYear, storage, embedNote)
-D_ENT="1 Master Data Management"; D_PRD="2 Product Definition"; D_EXE="3 Planning and Execution"
-D_MAT="4 Material Management"; D_TRC="5 Traceability"; D_QLT="6 Quality Management"; D_EQP="7 Performance Management"
-D_MNT="8 Tooling And Maintenance"; D_SYS="9 System and Integration"; D_ESA="10 Environment Health and Safety"
+D_ENT="1 MasterDataManagement"; D_PRD="2 ProductDefinition"; D_EXE="3 PlanningAndExecution"
+D_MAT="4 MaterialManagement"; D_TRC="5 Traceability"; D_QLT="6 QualityManagement"; D_EQP="7 PerformanceManagement"
+D_MNT="8 ToolingAndMaintenance"; D_SYS="9 SystemAndIntegration"; D_ESA="10 EnvironmentHealthAndSafety"
 C=[
 ("enterprises",D_ENT,"ENT","enterpriseCode","Legal entities of the group (ISA-95 Enterprise level); tax and registration data","Opcenter, Proficy",[],"<20 total","standard","Embeds addresses and registrations (bounded, read together)"),
 ("sites",D_ENT,"SITE","siteCode","Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate","Proficy, CM, Infor",["enterprises"],"<20 total","standard","Embeds address, certificates; referenced by every document"),

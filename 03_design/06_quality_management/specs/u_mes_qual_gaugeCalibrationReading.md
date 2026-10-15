@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per reading of a gauge calibration |
 | Kind | Child |
 | Data class | Transaction |

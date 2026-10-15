@@ -1,7 +1,7 @@
 {
     "_id" : "mes_maint_reliabilitySummaryIvy",
     "code" : "maint",
-    "moduleName" : "Tooling And Maintenance",
+    "moduleName" : "ToolingAndMaintenance",
     "collection" : "u_mes_maint_reliabilitySummary",
     "stableName" : "mes_maint_reliabilitySummaryStable",
     "typ" : "IvyConfig",

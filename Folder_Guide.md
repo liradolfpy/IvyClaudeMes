@@ -89,20 +89,20 @@ This guide is the authority for where a file belongs. Paths in all other documen
 
 | Module folder | Module code | Module name |
 |---|---|---|
-| 01_master_data_management | mast | Master Data Management |
-| 02_product_definition | prod | Product Definition |
-| 03_planning_execution | plan | Planning and Execution |
-| 04_material_management | matl | Material Management |
+| 01_master_data_management | mast | MasterDataManagement |
+| 02_product_definition | prod | ProductDefinition |
+| 03_planning_execution | plan | PlanningAndExecution |
+| 04_material_management | matl | MaterialManagement |
 | 05_traceability | trac | Traceability |
-| 06_quality_management | qual | Quality Management |
-| 07_performance_management | perf | Performance Management |
-| 08_tooling_maintenance | maint | Tooling And Maintenance |
-| 09_system_integration | syst | System and Integration |
-| 10_environment_health_safety | ehs | Environment Health and Safety |
-| 11_batch_manufacturing_record | bmr | Batch Manufacturing Record |
-| 12_master_manufacturing_record | mmr | Master Manufacturing Record |
+| 06_quality_management | qual | QualityManagement |
+| 07_performance_management | perf | PerformanceManagement |
+| 08_tooling_maintenance | maint | ToolingAndMaintenance |
+| 09_system_integration | syst | SystemAndIntegration |
+| 10_environment_health_safety | ehs | EnvironmentHealthAndSafety |
+| 11_batch_manufacturing_record | bmr | BatchManufacturingRecord |
+| 12_master_manufacturing_record | mmr | MasterManufacturingRecord |
 
-Andon collections belong to Planning and Execution; energy collections belong to Performance Management. The batch manufacturing record header, batch record review, its exceptions, batch release and yield reconciliation belong to Batch Manufacturing Record; the master manufacturing record and its recipe links belong to Master Manufacturing Record; collections shared by the batch or master record and other MES functions stay in their functional module (01_research/BMR_MMR_module_designation.md).
+Andon collections belong to PlanningAndExecution; energy collections belong to PerformanceManagement. The batch manufacturing record header, batch record review, its exceptions, batch release and yield reconciliation belong to BatchManufacturingRecord; the master manufacturing record and its recipe links belong to MasterManufacturingRecord; collections shared by the batch or master record and other MES functions stay in their functional module (01_research/BMR_MMR_module_designation.md).
 
 ## 5. File naming
 

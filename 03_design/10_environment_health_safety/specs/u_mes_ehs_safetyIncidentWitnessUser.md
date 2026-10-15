@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Environment Health and Safety (ehs) |
+| Module | EnvironmentHealthAndSafety (ehs) |
 | Purpose | Links one safety incident to one witness user; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

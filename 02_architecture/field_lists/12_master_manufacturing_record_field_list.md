@@ -1,4 +1,4 @@
-# Field list - Master Manufacturing Record (mmr)
+# Field list - MasterManufacturingRecord (mmr)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/12_master_manufacturing_record/specs.
 

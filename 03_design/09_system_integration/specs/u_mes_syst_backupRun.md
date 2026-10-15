@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Evidence of database backups and restore tests with measured recovery time (optional). |
 | Kind | Entity |
 | Data class | Transaction |

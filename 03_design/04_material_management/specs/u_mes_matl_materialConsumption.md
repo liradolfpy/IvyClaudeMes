@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Component / lot consumed at an operation on a unit or lot (backflush or scanned) |
 | Kind | Entity |
 | Data class | Transaction |

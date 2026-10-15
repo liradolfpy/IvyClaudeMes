@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Stations where operations are executed and booked; ERP work centre mapping |
 | Kind | Entity |
 | Data class | Master |

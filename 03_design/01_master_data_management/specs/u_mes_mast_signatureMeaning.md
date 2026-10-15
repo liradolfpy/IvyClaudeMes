@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Meanings an electronic signature can carry (approved, reviewed, released ...) |
 | Kind | Entity |
 | Data class | Master |

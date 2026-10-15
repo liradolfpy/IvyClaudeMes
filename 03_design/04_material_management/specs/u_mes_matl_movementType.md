@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Stock movement types with their ERP movement code and stock effect |
 | Kind | Entity |
 | Data class | Master |

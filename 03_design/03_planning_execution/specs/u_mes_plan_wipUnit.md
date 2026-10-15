@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Serialised unit in production (shop-floor control number): current operation, status, quality state |
 | Kind | Entity |
 | Data class | Transaction |

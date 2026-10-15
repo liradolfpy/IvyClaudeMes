@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Skill definitions required by operations (e.g. leak-test operation, CMM programming) |
 | Kind | Entity |
 | Data class | Master |

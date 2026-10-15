@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate |
 | Kind | Entity |
 | Data class | Master |

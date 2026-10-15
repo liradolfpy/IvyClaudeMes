@@ -93,52 +93,52 @@ A question is classed "New collection" when it cannot reach Level 3 without a co
 
 | No. | Module code | Module name | Collection | Kind | Type | UI label | Purpose | Questions |
 |---|---|---|---|---|---|---|---|---|
-| 1300 | mast | Master Data Management | `u_mes_mast_roleRequiredSkill` | Relationship | Master | Role Required Skills | Skills a user must hold before a role's rights become active | Q114, Q81 |
-| 1301 | prod | Product Definition | `u_mes_prod_recipeProductVariant` | Relationship | Master | Recipe Variants | Variants a recipe / machine program is released for | Q3, Q57, Q64, Q129 |
-| 1302 | prod | Product Definition | `u_mes_prod_recipeControlledDocument` | Relationship | Master | Recipe Reference Files | Golden images, program files and reference curves attached to a recipe version | Q58, Q129 |
-| 1303 | prod | Product Definition | `u_mes_prod_workInstructionWorkCenter` | Relationship | Master | Work Instruction Stations | Stations a work instruction is displayed at | Q3, Q89, Q91 |
-| 1304 | prod | Product Definition | `u_mes_prod_workInstructionProductVariant` | Relationship | Master | Work Instruction Variants | Variants a whole work instruction applies to | Q3, Q89 |
-| 1305 | plan | Planning and Execution | `u_mes_plan_operatorSession` | Entity | Transaction | Operator Sessions | Badge / biometric login and logout at a station | Q80, Q81, Q82, Q84, Q85 |
-| 1306 | plan | Planning and Execution | `u_mes_plan_documentAcknowledgement` | Entity | Transaction | Document Acknowledgements | Operator read-and-understood record for a work instruction, recipe or document revision at a station | Q4, Q90, Q92, Q95 |
-| 1307 | plan | Planning and Execution | `u_mes_plan_interlockEvent` | Entity | Transaction | Interlock Events | Every interlock that blocked, was overridden or was cleared, with reason and authoriser | X1 list |
-| 1308 | plan | Planning and Execution | `u_mes_plan_recipeDownload` | Entity | Transaction | Recipe Downloads | Program / recipe load to a machine with checksum verification | Q58, Q62, Q122 |
-| 1309 | plan | Planning and Execution | `u_mes_plan_setupVerification` | Entity | Transaction | Setup Verifications | Pre-start verification of fixture, tool, program, parameter and component set-up | Q60, Q106, Q120 |
-| 1310 | plan | Planning and Execution | `u_mes_plan_setupVerificationItem` | Child | Transaction | Setup Verification Items | Each expected-versus-scanned check in a set-up verification | Q60, Q106, Q120 |
-| 1311 | matl | Material Management | `u_mes_matl_exposureTimer` | Entity | Transaction | Exposure Timers | Floor-life / pot-life / open-time clock per lot or container | Q73 |
-| 1312 | matl | Material Management | `u_mes_matl_replenishmentRule` | Entity | Master | Replenishment Rules | Min-max / e-Kanban rule per item and line-side location | Q76, Q77 |
-| 1313 | matl | Material Management | `u_mes_matl_materialDemandForecast` | Entity | Reports | Material Demand Forecast | Short-term component demand and projected shortage per line | Q76, Q78 |
+| 1300 | mast | MasterDataManagement | `u_mes_mast_roleRequiredSkill` | Relationship | Master | Role Required Skills | Skills a user must hold before a role's rights become active | Q114, Q81 |
+| 1301 | prod | ProductDefinition | `u_mes_prod_recipeProductVariant` | Relationship | Master | Recipe Variants | Variants a recipe / machine program is released for | Q3, Q57, Q64, Q129 |
+| 1302 | prod | ProductDefinition | `u_mes_prod_recipeControlledDocument` | Relationship | Master | Recipe Reference Files | Golden images, program files and reference curves attached to a recipe version | Q58, Q129 |
+| 1303 | prod | ProductDefinition | `u_mes_prod_workInstructionWorkCenter` | Relationship | Master | Work Instruction Stations | Stations a work instruction is displayed at | Q3, Q89, Q91 |
+| 1304 | prod | ProductDefinition | `u_mes_prod_workInstructionProductVariant` | Relationship | Master | Work Instruction Variants | Variants a whole work instruction applies to | Q3, Q89 |
+| 1305 | plan | PlanningAndExecution | `u_mes_plan_operatorSession` | Entity | Transaction | Operator Sessions | Badge / biometric login and logout at a station | Q80, Q81, Q82, Q84, Q85 |
+| 1306 | plan | PlanningAndExecution | `u_mes_plan_documentAcknowledgement` | Entity | Transaction | Document Acknowledgements | Operator read-and-understood record for a work instruction, recipe or document revision at a station | Q4, Q90, Q92, Q95 |
+| 1307 | plan | PlanningAndExecution | `u_mes_plan_interlockEvent` | Entity | Transaction | Interlock Events | Every interlock that blocked, was overridden or was cleared, with reason and authoriser | X1 list |
+| 1308 | plan | PlanningAndExecution | `u_mes_plan_recipeDownload` | Entity | Transaction | Recipe Downloads | Program / recipe load to a machine with checksum verification | Q58, Q62, Q122 |
+| 1309 | plan | PlanningAndExecution | `u_mes_plan_setupVerification` | Entity | Transaction | Setup Verifications | Pre-start verification of fixture, tool, program, parameter and component set-up | Q60, Q106, Q120 |
+| 1310 | plan | PlanningAndExecution | `u_mes_plan_setupVerificationItem` | Child | Transaction | Setup Verification Items | Each expected-versus-scanned check in a set-up verification | Q60, Q106, Q120 |
+| 1311 | matl | MaterialManagement | `u_mes_matl_exposureTimer` | Entity | Transaction | Exposure Timers | Floor-life / pot-life / open-time clock per lot or container | Q73 |
+| 1312 | matl | MaterialManagement | `u_mes_matl_replenishmentRule` | Entity | Master | Replenishment Rules | Min-max / e-Kanban rule per item and line-side location | Q76, Q77 |
+| 1313 | matl | MaterialManagement | `u_mes_matl_materialDemandForecast` | Entity | Reports | Material Demand Forecast | Short-term component demand and projected shortage per line | Q76, Q78 |
 | 1314 | trac | Traceability | `u_mes_trac_traceInvestigation` | Entity | Transaction | Trace Investigations | Saved forward / reverse trace run with its containment link | Q14, Q15 |
 | 1315 | trac | Traceability | `u_mes_trac_traceInvestigationResult` | Child | Transaction | Trace Investigation Results | Each serial, lot or container found by a trace run | Q14, Q15 |
-| 1316 | qual | Quality Management | `u_mes_qual_characteristicPosition` | Child | Master | Characteristic Positions | Per-position nominal and limits of a characteristic | Q124, Q125, Q126, Q127, Q128 |
-| 1317 | qual | Quality Management | `u_mes_qual_curveEnvelope` | Entity | Master | Curve Envelopes | Approved golden-sample envelope for a force, torque, pressure or signal curve | Q123, Q127, Q128 |
-| 1318 | qual | Quality Management | `u_mes_qual_curveEnvelopeWindow` | Child | Master | Curve Envelope Windows | Each evaluation window of an envelope | Q123, Q127, Q128 |
-| 1319 | qual | Quality Management | `u_mes_qual_measurementCurve` | Entity | Transaction | Measurement Curves | One captured curve per unit, position and test with envelope verdict | Q123, Q127, Q128 |
-| 1320 | qual | Quality Management | `u_mes_qual_measurementCurvePoint` | Entity | Telemetry | Measurement Curve Points | Curve points (time-series collection) | Q123, Q127, Q128 |
-| 1321 | qual | Quality Management | `u_mes_qual_defectRecord` | Entity | Transaction | Defect Records | One logged defect per unit with first-fail station and 4M data | Q18, Q27, Q44 |
-| 1322 | qual | Quality Management | `u_mes_qual_auditSchedule` | Entity | Master | Audit Schedules | Layered process audit plan: layer, area, frequency, auditor role | Q34 |
-| 1323 | qual | Quality Management | `u_mes_qual_inspectionPlanProductVariant` | Relationship | Master | Inspection Plan Variants | Variants an inspection plan applies to | Q23 |
-| 1324 | perf | Performance Management | `u_mes_perf_alarmDefinition` | Entity | Master | Alarm Definitions | Alarm code master per equipment type with restart-block and escalation | Q68, Q69 |
-| 1325 | perf | Performance Management | `u_mes_perf_lossSummary` | Entity | Reports | Loss Summary | Loss Pareto per line, shift, day and reason | Q37, Q44, Q45 |
-| 1326 | perf | Performance Management | `u_mes_perf_workCenterPerformance` | Entity | Reports | Station Performance | Hourly throughput, cycle time, WIP, blocked / starved time and constraint flag per station | Q38, Q40, Q45, Q116 |
-| 1327 | perf | Performance Management | `u_mes_perf_operatorPerformance` | Entity | Reports | Operator Performance | Labour efficiency per operator, station, variant and shift | Q86, Q88 |
-| 1328 | maint | Tooling And Maintenance | `u_mes_maint_maintenanceWorkOrderTask` | Child | Transaction | Work Order Checklist | Checklist task results of a maintenance work order | Q49 |
-| 1329 | maint | Tooling And Maintenance | `u_mes_maint_sparePartTransaction` | Entity | Transaction | Spare Part Transactions | Spare-part issue, return, receipt and adjustment | Q52 |
-| 1330 | maint | Tooling And Maintenance | `u_mes_maint_reliabilitySummary` | Entity | Reports | Reliability Summary | MTBF / MTTR per equipment, line and period | Q53 |
-| 1331 | maint | Tooling And Maintenance | `u_mes_maint_equipmentLifecycleEvent` | Entity | Transaction | Equipment Lifecycle | Commissioning, overhaul, refurbishment, health assessment and decommissioning events | Q104, Q105 |
-| 1332 | syst | System and Integration | `u_mes_syst_interlockRule` | Entity | Master | Interlock Rules | Configured checks and their override policy | X1 list |
-| 1333 | syst | System and Integration | `u_mes_syst_statusTransitionRole` | Relationship | Master | Status Transition Roles | Roles allowed to perform a status transition | X4 list |
-| 1334 | syst | System and Integration | `u_mes_syst_escalationRule` | Entity | Master | Escalation Rules | Routing and SLA rule for an exception type | X2 list |
-| 1335 | syst | System and Integration | `u_mes_syst_escalationRuleLevel` | Child | Master | Escalation Levels | Each escalation level: delay, role, channel | X2 list |
-| 1336 | syst | System and Integration | `u_mes_syst_alertRule` | Entity | Master | Alert Rules | Threshold rule on a KPI or signal with the resulting action | X3 list |
-| 1337 | syst | System and Integration | `u_mes_syst_analyticsModel` | Entity | Master | Analytics Models | Registry of AI / ML / rule models and versions | X10 list |
-| 1338 | syst | System and Integration | `u_mes_syst_modelPrediction` | Entity | Transaction | Model Predictions | Each prediction, classification or recommendation and its outcome | X10 list |
-| 1339 | syst | System and Integration | `u_mes_syst_simulationStudy` | Entity | Transaction | Simulation Studies | Digital-twin / what-if study, result and controlled rollout | X11 list |
-| 1340 | syst | System and Integration | `u_mes_syst_recordPolicy` | Entity | Master | Record Policies | Edit policy, lock-on-status and retention per collection | Q32, Q115, Q118 |
-| 1341 | syst | System and Integration | `u_mes_syst_savedView` | Entity | Master | Saved Views | Saved dashboard / comparison filters per user or role | Q45, Q109 |
-| 1342 | syst | System and Integration | `u_mes_syst_backupRun` | Entity | Transaction | Backup and Restore Runs | Backup and restore-test evidence with recovery time (optional) | Q118 |
-| 1343 | matl | Material Management | `u_mes_matl_storageLocationAllowedItem` | Relationship | Master | Storage Allowed Items | Items (or item groups) a location may hold — storage matrix (from `Options_Switch` row 13, optional) | Options_Switch 13 |
+| 1316 | qual | QualityManagement | `u_mes_qual_characteristicPosition` | Child | Master | Characteristic Positions | Per-position nominal and limits of a characteristic | Q124, Q125, Q126, Q127, Q128 |
+| 1317 | qual | QualityManagement | `u_mes_qual_curveEnvelope` | Entity | Master | Curve Envelopes | Approved golden-sample envelope for a force, torque, pressure or signal curve | Q123, Q127, Q128 |
+| 1318 | qual | QualityManagement | `u_mes_qual_curveEnvelopeWindow` | Child | Master | Curve Envelope Windows | Each evaluation window of an envelope | Q123, Q127, Q128 |
+| 1319 | qual | QualityManagement | `u_mes_qual_measurementCurve` | Entity | Transaction | Measurement Curves | One captured curve per unit, position and test with envelope verdict | Q123, Q127, Q128 |
+| 1320 | qual | QualityManagement | `u_mes_qual_measurementCurvePoint` | Entity | Telemetry | Measurement Curve Points | Curve points (time-series collection) | Q123, Q127, Q128 |
+| 1321 | qual | QualityManagement | `u_mes_qual_defectRecord` | Entity | Transaction | Defect Records | One logged defect per unit with first-fail station and 4M data | Q18, Q27, Q44 |
+| 1322 | qual | QualityManagement | `u_mes_qual_auditSchedule` | Entity | Master | Audit Schedules | Layered process audit plan: layer, area, frequency, auditor role | Q34 |
+| 1323 | qual | QualityManagement | `u_mes_qual_inspectionPlanProductVariant` | Relationship | Master | Inspection Plan Variants | Variants an inspection plan applies to | Q23 |
+| 1324 | perf | PerformanceManagement | `u_mes_perf_alarmDefinition` | Entity | Master | Alarm Definitions | Alarm code master per equipment type with restart-block and escalation | Q68, Q69 |
+| 1325 | perf | PerformanceManagement | `u_mes_perf_lossSummary` | Entity | Reports | Loss Summary | Loss Pareto per line, shift, day and reason | Q37, Q44, Q45 |
+| 1326 | perf | PerformanceManagement | `u_mes_perf_workCenterPerformance` | Entity | Reports | Station Performance | Hourly throughput, cycle time, WIP, blocked / starved time and constraint flag per station | Q38, Q40, Q45, Q116 |
+| 1327 | perf | PerformanceManagement | `u_mes_perf_operatorPerformance` | Entity | Reports | Operator Performance | Labour efficiency per operator, station, variant and shift | Q86, Q88 |
+| 1328 | maint | ToolingAndMaintenance | `u_mes_maint_maintenanceWorkOrderTask` | Child | Transaction | Work Order Checklist | Checklist task results of a maintenance work order | Q49 |
+| 1329 | maint | ToolingAndMaintenance | `u_mes_maint_sparePartTransaction` | Entity | Transaction | Spare Part Transactions | Spare-part issue, return, receipt and adjustment | Q52 |
+| 1330 | maint | ToolingAndMaintenance | `u_mes_maint_reliabilitySummary` | Entity | Reports | Reliability Summary | MTBF / MTTR per equipment, line and period | Q53 |
+| 1331 | maint | ToolingAndMaintenance | `u_mes_maint_equipmentLifecycleEvent` | Entity | Transaction | Equipment Lifecycle | Commissioning, overhaul, refurbishment, health assessment and decommissioning events | Q104, Q105 |
+| 1332 | syst | SystemAndIntegration | `u_mes_syst_interlockRule` | Entity | Master | Interlock Rules | Configured checks and their override policy | X1 list |
+| 1333 | syst | SystemAndIntegration | `u_mes_syst_statusTransitionRole` | Relationship | Master | Status Transition Roles | Roles allowed to perform a status transition | X4 list |
+| 1334 | syst | SystemAndIntegration | `u_mes_syst_escalationRule` | Entity | Master | Escalation Rules | Routing and SLA rule for an exception type | X2 list |
+| 1335 | syst | SystemAndIntegration | `u_mes_syst_escalationRuleLevel` | Child | Master | Escalation Levels | Each escalation level: delay, role, channel | X2 list |
+| 1336 | syst | SystemAndIntegration | `u_mes_syst_alertRule` | Entity | Master | Alert Rules | Threshold rule on a KPI or signal with the resulting action | X3 list |
+| 1337 | syst | SystemAndIntegration | `u_mes_syst_analyticsModel` | Entity | Master | Analytics Models | Registry of AI / ML / rule models and versions | X10 list |
+| 1338 | syst | SystemAndIntegration | `u_mes_syst_modelPrediction` | Entity | Transaction | Model Predictions | Each prediction, classification or recommendation and its outcome | X10 list |
+| 1339 | syst | SystemAndIntegration | `u_mes_syst_simulationStudy` | Entity | Transaction | Simulation Studies | Digital-twin / what-if study, result and controlled rollout | X11 list |
+| 1340 | syst | SystemAndIntegration | `u_mes_syst_recordPolicy` | Entity | Master | Record Policies | Edit policy, lock-on-status and retention per collection | Q32, Q115, Q118 |
+| 1341 | syst | SystemAndIntegration | `u_mes_syst_savedView` | Entity | Master | Saved Views | Saved dashboard / comparison filters per user or role | Q45, Q109 |
+| 1342 | syst | SystemAndIntegration | `u_mes_syst_backupRun` | Entity | Transaction | Backup and Restore Runs | Backup and restore-test evidence with recovery time (optional) | Q118 |
+| 1343 | matl | MaterialManagement | `u_mes_matl_storageLocationAllowedItem` | Relationship | Master | Storage Allowed Items | Items (or item groups) a location may hold — storage matrix (from `Options_Switch` row 13, optional) | Options_Switch 13 |
 
-No new collection is needed in the ehs (Environment Health and Safety) module. Environmental monitoring in Q96–Q97 concerns process conditions (lux, ESD, temperature, humidity) that protect product quality, so it stays in perf (Performance Management) with `u_mes_perf_processTag` and `u_mes_perf_processReading`.
+No new collection is needed in the ehs (EnvironmentHealthAndSafety) module. Environmental monitoring in Q96–Q97 concerns process conditions (lux, ESD, temperature, humidity) that protect product quality, so it stays in perf (Performance Management) with `u_mes_perf_processTag` and `u_mes_perf_processReading`.
 
 By module: mast 1, prod 4, plan 6, matl 4, trac 2, qual 8, perf 4, maint 4, syst 11. By kind: 30 entity, 6 child, 8 relationship (0 value-list). By type: Master 21, Transaction 17, Reports 5, Telemetry 1, Audit Trail 0 (counting `u_mes_syst_backupRun` as Transaction). `u_mes_plan_interlockEvent` could alternatively be classed as Audit Trail; it is proposed as Transaction because it is part of the execution record and is queried with the order and unit.
 
@@ -797,7 +797,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | mast — Master Data Management |
+| Module | mast — MasterDataManagement |
 | Kind / Type / UI label | Relationship / Master / Role Required Skills |
 | Purpose | Lists the skills (and minimum level) a user must hold before the rights of a role become effective at execution. |
 | Why a separate collection | Many-to-many between role and skill; flat model forbids arrays on `u_mes_mast_role`. |
@@ -823,7 +823,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | prod — Product Definition |
+| Module | prod — ProductDefinition |
 | Kind / Type / UI label | Relationship / Master / Recipe Variants |
 | Purpose | Variants for which a recipe / machine program version is released. |
 | Why a separate collection | Many-to-many between recipe and product variant. |
@@ -848,7 +848,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | prod — Product Definition |
+| Module | prod — ProductDefinition |
 | Kind / Type / UI label | Relationship / Master / Recipe Reference Files |
 | Purpose | Program files, golden reference images and reference curves that belong to a recipe version. |
 | Why a separate collection | A recipe can have several controlled files; files are already managed in `u_mes_syst_controlledDocument`. |
@@ -874,7 +874,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | prod — Product Definition |
+| Module | prod — ProductDefinition |
 | Kind / Type / UI label | Relationship / Master / Work Instruction Stations |
 | Purpose | Stations at which a work instruction is displayed. |
 | Why a separate collection | Many-to-many between work instruction and work centre. |
@@ -899,7 +899,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | prod — Product Definition |
+| Module | prod — ProductDefinition |
 | Kind / Type / UI label | Relationship / Master / Work Instruction Variants |
 | Purpose | Variants to which a whole work instruction applies (step-level variants stay in `u_mes_prod_workInstructionStepProductVariant`). |
 | Why a separate collection | Many-to-many between work instruction and product variant. |
@@ -924,7 +924,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | plan — Planning and Execution |
+| Module | plan — PlanningAndExecution |
 | Kind / Type / UI label | Entity / Transaction / Operator Sessions |
 | Purpose | One login-to-logout session of an operator at a station, with the authentication method and the checks done at login. |
 | Why a separate collection | Unbounded event data; referenced by operation executions and labour bookings. |
@@ -972,7 +972,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | plan — Planning and Execution |
+| Module | plan — PlanningAndExecution |
 | Kind / Type / UI label | Entity / Transaction / Document Acknowledgements |
 | Purpose | Operator confirmation that a specific revision of a work instruction, recipe or controlled document was read at a station. |
 | Why a separate collection | Unbounded event data per operator, document revision and station. |
@@ -1021,7 +1021,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | plan — Planning and Execution |
+| Module | plan — PlanningAndExecution |
 | Kind / Type / UI label | Entity / Transaction / Interlock Events |
 | Purpose | Every time an interlock rule blocks a transaction, is overridden or is cleared: what was checked, expected and found, and who authorised the override. |
 | Why a separate collection | Unbounded event data; written by many modules (execution, material issue, packing, dispatch) and queried by unit, order and station. |
@@ -1087,7 +1087,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | plan — Planning and Execution |
+| Module | plan — PlanningAndExecution |
 | Kind / Type / UI label | Entity / Transaction / Recipe Downloads |
 | Purpose | Each download or selection of a program / recipe on a machine with the checksum verification result. |
 | Why a separate collection | Unbounded event data per machine and order. |
@@ -1136,7 +1136,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | plan — Planning and Execution |
+| Module | plan — PlanningAndExecution |
 | Kind / Type / UI label | Entity / Transaction / Setup Verifications |
 | Purpose | Pre-start verification of the set-up of a station or machine against the order, variant and bill of process. |
 | Why a separate collection | One record per verification; its items are in a child collection. |
@@ -1184,7 +1184,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | plan — Planning and Execution |
+| Module | plan — PlanningAndExecution |
 | Kind / Type / UI label | Child / Transaction / Setup Verification Items |
 | Purpose | Each expected-versus-actual check of a set-up verification. |
 | Why a separate collection | Replaces an embedded array of checks (DATA-001). |
@@ -1224,7 +1224,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | matl — Material Management |
+| Module | matl — MaterialManagement |
 | Kind / Type / UI label | Entity / Transaction / Exposure Timers |
 | Purpose | Floor-life, pot-life or open-time clock for a lot or container of an exposure-controlled item. |
 | Why a separate collection | Each opening of a lot or container starts its own clock; unbounded event data. |
@@ -1271,7 +1271,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | matl — Material Management |
+| Module | matl — MaterialManagement |
 | Kind / Type / UI label | Entity / Master / Replenishment Rules |
 | Purpose | Min-max or e-Kanban rule for replenishing an item at a line-side location. |
 | Why a separate collection | Plant-maintained configuration per item and location (Rule A master). |
@@ -1314,7 +1314,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | matl — Material Management |
+| Module | matl — MaterialManagement |
 | Kind / Type / UI label | Entity / Reports / Material Demand Forecast |
 | Purpose | Short-term component demand and projected line-side shortage per item, line and time bucket. |
 | Why a separate collection | Calculated output, refreshed by a job; kept separate from transactions. |
@@ -1451,7 +1451,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Child / Master / Characteristic Positions |
 | Purpose | Per-position nominal and limits when a characteristic is measured at several positions (piston 1 / piston 2, coating points, key positions). |
 | Why a separate collection | Replaces an array of positions on `u_mes_qual_characteristic` (DATA-001). |
@@ -1482,7 +1482,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Entity / Master / Curve Envelopes |
 | Purpose | Approved golden-sample envelope for a force–displacement, torque–angle, pressure–time or signal curve. |
 | Why a separate collection | Versioned engineering master referenced by every captured curve. |
@@ -1531,7 +1531,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Child / Master / Curve Envelope Windows |
 | Purpose | Each evaluation window (box or band) of a curve envelope. |
 | Why a separate collection | Replaces an array of windows (DATA-001). |
@@ -1561,7 +1561,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Entity / Transaction / Measurement Curves |
 | Purpose | One captured curve per unit, position and test, with the envelope verdict and summary values. |
 | Why a separate collection | Unbounded test data; the points themselves go to the time-series collection 1320. |
@@ -1615,7 +1615,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Entity / Telemetry / Measurement Curve Points |
 | Purpose | Points of a measurement curve. Created as a MongoDB time-series collection: timeField `sampledAt`, metaField `measurementCurveId`, granularity seconds. |
 | Why a separate collection | High-volume telemetry (hundreds of points per curve). |
@@ -1648,7 +1648,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Entity / Transaction / Defect Records |
 | Purpose | One logged defect on one unit (or lot sample) with first-fail station, origin, 4M category and follow-up links. |
 | Why a separate collection | Unbounded event data; the existing relationship `u_mes_plan_operationExecutionDefectCode` holds no detail. |
@@ -1725,7 +1725,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Entity / Master / Audit Schedules |
 | Purpose | Plan for layered process audits (and other recurring audits): layer, area or line, check sheet, frequency and auditor. |
 | Why a separate collection | Plant-maintained plan; executions stay in `u_mes_qual_audit`. |
@@ -1770,7 +1770,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | qual — Quality Management |
+| Module | qual — QualityManagement |
 | Kind / Type / UI label | Relationship / Master / Inspection Plan Variants |
 | Purpose | Variants to which an inspection plan applies. |
 | Why a separate collection | Many-to-many between inspection plan and variant. |
@@ -1795,7 +1795,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | perf — Performance Management |
+| Module | perf — PerformanceManagement |
 | Kind / Type / UI label | Entity / Master / Alarm Definitions |
 | Purpose | Alarm code master per equipment type with class, severity, restart-block and escalation settings. |
 | Why a separate collection | Plant-maintained list (Rule A master) referenced by every alarm. |
@@ -1832,7 +1832,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | perf — Performance Management |
+| Module | perf — PerformanceManagement |
 | Kind / Type / UI label | Entity / Reports / Loss Summary |
 | Purpose | Loss Pareto row per line, shift, production date and reason code (downtime, speed and quality losses). |
 | Why a separate collection | Calculated report table refreshed by a job; avoids heavy aggregation on dashboards. |
@@ -1881,7 +1881,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | perf — Performance Management |
+| Module | perf — PerformanceManagement |
 | Kind / Type / UI label | Entity / Reports / Station Performance |
 | Purpose | Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag. |
 | Why a separate collection | Calculated report table per station and hour. |
@@ -1931,7 +1931,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | perf — Performance Management |
+| Module | perf — PerformanceManagement |
 | Kind / Type / UI label | Entity / Reports / Operator Performance |
 | Purpose | Labour efficiency per operator, station, variant, shift and date. |
 | Why a separate collection | Calculated report table. |
@@ -1976,7 +1976,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling And Maintenance |
+| Module | maint — ToolingAndMaintenance |
 | Kind / Type / UI label | Child / Transaction / Work Order Checklist |
 | Purpose | Executed checklist task of a maintenance work order with its result. |
 | Why a separate collection | Replaces an array of task results (DATA-001). |
@@ -2016,7 +2016,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling And Maintenance |
+| Module | maint — ToolingAndMaintenance |
 | Kind / Type / UI label | Entity / Transaction / Spare Part Transactions |
 | Purpose | Spare-part issue, return, receipt, adjustment and scrap with work order and equipment. |
 | Why a separate collection | Unbounded event data; `u_mes_maint_sparePart` keeps the balance. |
@@ -2062,7 +2062,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling And Maintenance |
+| Module | maint — ToolingAndMaintenance |
 | Kind / Type / UI label | Entity / Reports / Reliability Summary |
 | Purpose | MTBF and MTTR per equipment, line and period. |
 | Why a separate collection | Calculated report table. |
@@ -2106,7 +2106,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling And Maintenance |
+| Module | maint — ToolingAndMaintenance |
 | Kind / Type / UI label | Entity / Transaction / Equipment Lifecycle |
 | Purpose | Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning. |
 | Why a separate collection | Unbounded history per equipment. |
@@ -2152,7 +2152,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Master / Interlock Rules |
 | Purpose | Configured check that the application must pass before a transaction is allowed, with its scope and override policy. |
 | Why a separate collection | Plant-maintained configuration used by all modules. |
@@ -2196,7 +2196,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Relationship / Master / Status Transition Roles |
 | Purpose | Roles allowed to perform a status transition defined in `u_mes_syst_statusTransition`. |
 | Why a separate collection | Many-to-many between transition and role. |
@@ -2221,7 +2221,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Master / Escalation Rules |
 | Purpose | Routing and SLA rule for an exception type: first owner role, response and resolution targets. |
 | Why a separate collection | Plant-maintained configuration; levels in a child collection. |
@@ -2254,7 +2254,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Child / Master / Escalation Levels |
 | Purpose | Each escalation level of a rule: delay after raise, role and channel. |
 | Why a separate collection | Replaces an array of levels (DATA-001). |
@@ -2284,7 +2284,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Master / Alert Rules |
 | Purpose | Threshold rule on a KPI or signal with the resulting action. |
 | Why a separate collection | Plant-maintained configuration. |
@@ -2329,7 +2329,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Master / Analytics Models |
 | Purpose | Registry of AI / ML / rule models and their released versions. |
 | Why a separate collection | Each model version must be traceable from every prediction and inspection result. |
@@ -2367,7 +2367,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Transaction / Model Predictions |
 | Purpose | Each prediction, classification, forecast or recommendation produced by a model, with the action and the actual outcome. |
 | Why a separate collection | Unbounded event data. |
@@ -2422,7 +2422,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Transaction / Simulation Studies |
 | Purpose | Digital-twin / what-if study with its input snapshot, result, approval and controlled rollout and pre / post comparison. |
 | Why a separate collection | Study record; inputs and outputs are files in `u_mes_syst_controlledDocument`. |
@@ -2471,7 +2471,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Master / Record Policies |
 | Purpose | Edit, lock and retention policy per collection. |
 | Why a separate collection | One policy per collection; read by the application on every update and delete. |
@@ -2504,7 +2504,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Master / Saved Views |
 | Purpose | Saved dashboard and comparison filters per user or role. |
 | Why a separate collection | User-maintained configuration. |
@@ -2536,7 +2536,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | syst — System and Integration |
+| Module | syst — SystemAndIntegration |
 | Kind / Type / UI label | Entity / Transaction / Backup and Restore Runs |
 | Purpose | Evidence of database backups and restore tests with measured recovery time (optional). |
 | Why a separate collection | Unbounded run history; IATF record-retention evidence. |
@@ -2575,7 +2575,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | matl — Material Management |
+| Module | matl — MaterialManagement |
 | Kind / Type / UI label | Relationship / Master / Storage Allowed Items |
 | Purpose | Items or item groups a storage location may hold (storage matrix) — optional. |
 | Why a separate collection | Many-to-many between location and item / item group. |
@@ -2904,16 +2904,16 @@ Standard sections that would need text updates: `data_modeling_standard.md` (new
 
 | Module | Code | Collections today | New | After |
 |---|---|---|---|---|
-| Master Data Management | mast | 56 | 1 | 57 |
-| Product Definition | prod | 45 | 4 | 49 |
-| Planning and Execution | plan | 36 | 6 | 42 |
-| Material Management | matl | 22 | 4 | 26 |
+| MasterDataManagement | mast | 56 | 1 | 57 |
+| ProductDefinition | prod | 45 | 4 | 49 |
+| PlanningAndExecution | plan | 36 | 6 | 42 |
+| MaterialManagement | matl | 22 | 4 | 26 |
 | Traceability | trac | 7 | 2 | 9 |
-| Quality Management | qual | 69 | 8 | 77 |
-| Performance Management | perf | 17 | 4 | 21 |
-| Tooling And Maintenance | maint | 14 | 4 | 18 |
-| System and Integration | syst | 27 | 11 | 38 |
-| Environment Health and Safety | ehs | 6 | 0 | 6 |
+| QualityManagement | qual | 69 | 8 | 77 |
+| PerformanceManagement | perf | 17 | 4 | 21 |
+| ToolingAndMaintenance | maint | 14 | 4 | 18 |
+| SystemAndIntegration | syst | 27 | 11 | 38 |
+| EnvironmentHealthAndSafety | ehs | 6 | 0 | 6 |
 | **Total** | | **299** | **44** | **343** |
 
 ### 9.3 Decisions needed from the owner

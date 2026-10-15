@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Machines, furnaces, testers (ISA-95 Unit / Equipment); hierarchy, make, model, capability |
 | Kind | Entity |
 | Data class | Master |

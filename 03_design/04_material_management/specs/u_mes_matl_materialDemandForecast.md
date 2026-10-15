@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Short-term component demand and projected line-side shortage per item, line and time bucket. |
 | Kind | Entity |
 | Data class | Transaction |

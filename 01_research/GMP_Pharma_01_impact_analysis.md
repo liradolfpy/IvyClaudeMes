@@ -4,7 +4,7 @@ Date: 12 October 2026 | Task: Good Manufacturing Practices For Pharma | Owner de
 
 ## 1. Purpose and scope
 
-Note of 12 October 2026 (D055): batch record review, its exceptions, batch release and yield reconciliation were moved to the new module bmr (Batch Manufacturing Record) after this analysis; the names below are the current ones. See `01_research/BMR_MMR_module_designation.md`.
+Note of 12 October 2026 (D055): batch record review, its exceptions, batch release and yield reconciliation were moved to the new module bmr (BatchManufacturingRecord) after this analysis; the names below are the current ones. See `01_research/BMR_MMR_module_designation.md`.
 
 This document lists the requirements of pharmaceutical Good Manufacturing Practice (GMP) that a manufacturing execution system must support. It checks each requirement against the 343 collections of model version 2.6 and records how the gaps were closed in model version 2.7.
 

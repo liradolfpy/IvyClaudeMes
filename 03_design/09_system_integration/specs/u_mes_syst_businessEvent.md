@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Business event stream (order released, unit started, recipe downloaded, hold placed) |
 | Kind | Entity |
 | Data class | Transaction |

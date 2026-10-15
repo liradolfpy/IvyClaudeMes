@@ -1,4 +1,4 @@
-# Field list - Batch Manufacturing Record (bmr)
+# Field list - BatchManufacturingRecord (bmr)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/11_batch_manufacturing_record/specs.
 

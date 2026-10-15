@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Links one operator app to one work center; one document per link |
 | Kind | Relationship |
 | Data class | Master |

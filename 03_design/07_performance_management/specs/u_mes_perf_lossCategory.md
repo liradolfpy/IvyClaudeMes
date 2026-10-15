@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | OEE loss categories with the OEE factor they reduce |
 | Kind | Entity |
 | Data class | Master |

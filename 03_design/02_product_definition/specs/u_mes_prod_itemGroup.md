@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Item groups (brake caliper, piston, seal, fastener ...) |
 | Kind | Entity |
 | Data class | Master |

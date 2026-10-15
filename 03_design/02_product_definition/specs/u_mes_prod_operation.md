@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Standard operation library (casting, T6, machining ... packing) reused by routings |
 | Kind | Entity |
 | Data class | Master |

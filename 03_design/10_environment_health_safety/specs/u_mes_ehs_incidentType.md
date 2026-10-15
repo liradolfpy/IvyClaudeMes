@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Environment Health and Safety (ehs) |
+| Module | EnvironmentHealthAndSafety (ehs) |
 | Purpose | Types of safety incident |
 | Kind | Entity |
 | Data class | Master |

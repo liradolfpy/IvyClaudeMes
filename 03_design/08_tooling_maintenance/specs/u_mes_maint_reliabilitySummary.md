@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | MTBF and MTTR per equipment, line and period. |
 | Kind | Entity |
 | Data class | Transaction |

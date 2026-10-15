@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Hold / quarantine on units, lots, containers or locations with reason and release decision |
 | Kind | Entity |
 | Data class | Transaction |

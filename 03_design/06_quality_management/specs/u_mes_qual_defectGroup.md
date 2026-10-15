@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Groups of defect codes (casting, machining, leak, torque ...) |
 | Kind | Entity |
 | Data class | Master |

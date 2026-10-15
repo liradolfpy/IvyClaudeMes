@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Multi-level bills of material per item revision with effectivity |
 | Kind | Entity |
 | Data class | Master |

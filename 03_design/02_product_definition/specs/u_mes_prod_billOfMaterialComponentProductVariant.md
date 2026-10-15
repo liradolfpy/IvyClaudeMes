@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Links one bill of material component to one product variant; one document per link |
 | Kind | Relationship |
 | Data class | Master |

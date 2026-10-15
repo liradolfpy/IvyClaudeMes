@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Connector definitions to ERP, PLM, OPC UA servers, tool controllers, label printers |
 | Kind | Entity |
 | Data class | Master |

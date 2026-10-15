@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Tightening results per unit: program, final torque, angle, status, curve reference |
 | Kind | Entity |
 | Data class | Transaction |

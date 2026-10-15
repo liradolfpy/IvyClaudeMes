@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Each download or selection of a program / recipe on a machine with the checksum verification result. |
 | Kind | Entity |
 | Data class | Transaction |

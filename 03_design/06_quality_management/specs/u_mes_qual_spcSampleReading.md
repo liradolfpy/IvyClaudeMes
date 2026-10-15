@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | One document per reading value of a SPC sample |
 | Kind | Value list |
 | Data class | Transaction |

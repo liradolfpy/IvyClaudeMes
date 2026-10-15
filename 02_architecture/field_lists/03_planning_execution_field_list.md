@@ -1,4 +1,4 @@
-# Field list - Planning and Execution (plan)
+# Field list - PlanningAndExecution (plan)
 
 Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/03_planning_execution/specs.
 

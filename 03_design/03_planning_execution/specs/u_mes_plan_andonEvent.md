@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Help calls from stations (quality, material, maintenance, safety) with response and escalation times |
 | Kind | Entity |
 | Data class | Transaction |

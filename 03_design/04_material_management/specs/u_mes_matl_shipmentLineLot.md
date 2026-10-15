@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Links one shipment line to one lot; one document per link |
 | Kind | Relationship |
 | Data class | Transaction |

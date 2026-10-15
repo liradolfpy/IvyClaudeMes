@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Dispositions for nonconforming material (use as is, rework, scrap, return, sort) |
 | Kind | Entity |
 | Data class | Master |

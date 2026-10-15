@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | Links one spare part to one used on equipment; one document per link |
 | Kind | Relationship |
 | Data class | Master |

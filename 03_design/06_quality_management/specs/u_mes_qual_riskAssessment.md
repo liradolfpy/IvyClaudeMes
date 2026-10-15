@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Documented quality risk assessment of a change, system, deviation, equipment or product: method, initial and residual risk, controls and acceptance. |
 | Kind | Entity |
 | Data class | Transaction |

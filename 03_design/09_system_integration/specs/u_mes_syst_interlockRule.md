@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Configured check that the application must pass before a transaction is allowed, with its scope and override policy. |
 | Kind | Entity |
 | Data class | Master |

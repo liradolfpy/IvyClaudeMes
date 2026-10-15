@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Counters and format masks for serials, lots, orders, labels, NCRs |
 | Kind | Entity |
 | Data class | Master |

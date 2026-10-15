@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Nonconformance reports: what, where, quantity, containment, disposition (use-as-is, rework, scrap, return) |
 | Kind | Entity |
 | Data class | Transaction |

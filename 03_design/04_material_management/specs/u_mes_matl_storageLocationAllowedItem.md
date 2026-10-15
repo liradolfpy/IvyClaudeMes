@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Links one storage location to one allowed item; one document per link |
 | Kind | Relationship |
 | Data class | Master |

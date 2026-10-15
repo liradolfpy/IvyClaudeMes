@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Subgroups with readings, mean, range, rule violations and reaction |
 | Kind | Entity |
 | Data class | Transaction |

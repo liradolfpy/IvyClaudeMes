@@ -1,4 +1,4 @@
-# Batch Manufacturing Record (bmr) - module summary
+# BatchManufacturingRecord (bmr) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

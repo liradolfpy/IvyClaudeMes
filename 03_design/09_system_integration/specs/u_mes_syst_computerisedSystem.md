@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Inventory of the computerised systems that create, hold or process GMP records, with their GxP impact, GAMP category, owners and periodic review cycle. |
 | Kind | Entity |
 | Data class | Master |

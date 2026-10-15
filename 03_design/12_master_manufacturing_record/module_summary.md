@@ -1,4 +1,4 @@
-# Master Manufacturing Record (mmr) - module summary
+# MasterManufacturingRecord (mmr) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

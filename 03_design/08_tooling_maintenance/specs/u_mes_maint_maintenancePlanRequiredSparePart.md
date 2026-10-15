@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling And Maintenance (maint) |
+| Module | ToolingAndMaintenance (maint) |
 | Purpose | One document per required spare part of a maintenance plan |
 | Kind | Child |
 | Data class | Master |

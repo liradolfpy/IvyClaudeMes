@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Environment Health and Safety (ehs) |
+| Module | EnvironmentHealthAndSafety (ehs) |
 | Purpose | Near misses, unsafe conditions, first-aid and lost-time incidents with investigation and actions |
 | Kind | Entity |
 | Data class | Transaction |

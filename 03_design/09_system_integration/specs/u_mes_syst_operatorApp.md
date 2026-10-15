@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Composable operator screen definitions (versioned) bound to work centres and operations |
 | Kind | Entity |
 | Data class | Master |

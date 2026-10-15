@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Batch Manufacturing Record (bmr) |
+| Module | BatchManufacturingRecord (bmr) |
 | Purpose | Review of the electronic production record of an order before release: production review, quality review by exception, exceptions found and their closure. |
 | Kind | Entity |
 | Data class | Transaction |

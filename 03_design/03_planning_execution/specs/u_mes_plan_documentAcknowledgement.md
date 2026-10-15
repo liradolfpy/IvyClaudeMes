@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Operator confirmation that a specific revision of a work instruction, recipe or controlled document was read at a station. |
 | Kind | Entity |
 | Data class | Transaction |

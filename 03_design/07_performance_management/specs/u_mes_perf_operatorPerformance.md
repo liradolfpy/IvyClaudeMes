@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | Labour efficiency per operator, station, variant, shift and date. |
 | Kind | Entity |
 | Data class | Transaction |

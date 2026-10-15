@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Per routing step: required equipment, tools, recipe, work instruction, data collection, consumed components, cycle time |
 | Kind | Entity |
 | Data class | Master |

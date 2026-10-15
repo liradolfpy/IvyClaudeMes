@@ -6,8 +6,8 @@ Date: 12 October 2026 | Owner instruction of 12 October 2026 | Decisions D054-D0
 
 The owner asked for two new modules:
 
-- **BMR - Batch Manufacturing Record**
-- **MMR - Master Manufacturing Record**
+- **BMR - BatchManufacturingRecord**
+- **MMR - MasterManufacturingRecord**
 
 Collections unique to the BMR or the MMR are to be designated to the new modules. Collections shared by BMR or MMR and the rest of the MES are **not** moved. They are listed below so that the owner can decide on them.
 
@@ -15,8 +15,8 @@ Collections unique to the BMR or the MMR are to be designated to the new modules
 
 | Module code | Module name | Module folder | Collections |
 |---|---|---|---|
-| bmr | Batch Manufacturing Record | 11_batch_manufacturing_record | 5 (4 moved, 1 added by decision 2) |
-| mmr | Master Manufacturing Record | 12_master_manufacturing_record | 2 (added by decision 1) |
+| bmr | BatchManufacturingRecord | 11_batch_manufacturing_record | 5 (4 moved, 1 added by decision 2) |
+| mmr | MasterManufacturingRecord | 12_master_manufacturing_record | 2 (added by decision 1) |
 
 The codes are three letters, like `ehs`. The standard asks for four or five letters (data_modeling_standard section 1), but the owner named the modules BMR and MMR. The standard is amended to allow three-letter codes fixed by the owner (D054).
 
@@ -41,7 +41,7 @@ Collection numbers and `_id` values are unchanged (D042). Only the module code i
 
 References to these collections from other collections keep working, because references use `_id` values: for example `batchRecordReviewId` on the production order, `batchReleaseId` on the lot, and `yieldReconciliationId` on the batch record review. Only the target collection name in the specifications changed.
 
-## 5. Master Manufacturing Record: no unique collection found
+## 5. MasterManufacturingRecord: no unique collection found
 
 Every collection that holds master-record content is also used by the MES at execution time: by dispatching, operator guidance, interlocks, recipe download, inspection, packing and labelling. **No collection was moved to `mmr`.** After the owner's decision of 12 October 2026 the module holds the new master record header and its recipe links (section 9).
 

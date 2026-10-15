@@ -6,7 +6,7 @@ Source: owner's requirements of 11 October 2026, with the project's own choices 
 
 - Format: `[Application]_[Module]_[Collection]` = `u_mes_<moduleCode>_<singularCollectionName>`.
 - Application code (project prefix): `u_mes`.
-- Module code: three to five lowercase letters, fixed by the owner on 11 October 2026 and extended on 12 October 2026 (D054): mast (Master Data Management), prod (Product Definition), plan (Planning and Execution), matl (Material Management), trac (Traceability), qual (Quality Management), perf (Performance Management), maint (Tooling And Maintenance), syst (System and Integration), ehs (Environment Health and Safety), bmr (Batch Manufacturing Record), mmr (Master Manufacturing Record). See `Folder_Guide.md` section 4.
+- Module code: three to five lowercase letters, fixed by the owner on 11 October 2026 and extended on 12 October 2026 (D054): mast (MasterDataManagement), prod (ProductDefinition), plan (PlanningAndExecution), matl (MaterialManagement), trac (Traceability), qual (QualityManagement), perf (PerformanceManagement), maint (ToolingAndMaintenance), syst (SystemAndIntegration), ehs (EnvironmentHealthAndSafety), bmr (BatchManufacturingRecord), mmr (MasterManufacturingRecord). See `Folder_Guide.md` section 4.
 - A collection belongs to the bmr or mmr module only when it is unique to the batch or master manufacturing record: no other MES function writes it or depends on it. A collection shared with other MES functions stays in its functional module (D055, D056).
 - Collection part: lower camelCase, singular noun (`workOrder`, `workCenter`, `operation`), no spaces, hyphens or special characters.
 - The name states the domain context and purpose. Vague names such as `data1` or `logs` are not used.

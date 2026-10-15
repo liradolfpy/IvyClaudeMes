@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | System and Integration (syst) |
+| Module | SystemAndIntegration (syst) |
 | Purpose | Allowed values of fixed enumeration keys, one document per collection, key and value |
 | Kind | Entity |
 | Data class | Master |

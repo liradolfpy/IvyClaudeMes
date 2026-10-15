@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Receipts from suppliers with lines, supplier lot, certificate, incoming inspection status |
 | Kind | Entity |
 | Data class | Transaction |

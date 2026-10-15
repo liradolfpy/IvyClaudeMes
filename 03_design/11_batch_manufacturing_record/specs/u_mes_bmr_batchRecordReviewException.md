@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Batch Manufacturing Record (bmr) |
+| Module | BatchManufacturingRecord (bmr) |
 | Purpose | One document per exception of a batch record review |
 | Kind | Child |
 | Data class | Transaction |

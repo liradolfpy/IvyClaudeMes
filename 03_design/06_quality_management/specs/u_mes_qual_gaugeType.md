@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Types of gauge and measuring instrument |
 | Kind | Entity |
 | Data class | Master |

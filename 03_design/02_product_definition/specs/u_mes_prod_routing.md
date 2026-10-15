@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Sequence of operations per item, including rework / disposition routings and alternate paths |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Working calendars with holidays and exception days per site / line |
 | Kind | Entity |
 | Data class | Master |

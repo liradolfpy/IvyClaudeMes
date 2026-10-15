@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Master Data Management (mast) |
+| Module | MasterDataManagement (mast) |
 | Purpose | Types of employment (permanent, contract, trainee, apprentice) |
 | Kind | Entity |
 | Data class | Master |

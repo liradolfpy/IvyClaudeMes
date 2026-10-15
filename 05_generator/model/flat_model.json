@@ -1,18 +1,18 @@
 {
  "application": "u_mes",
  "modules": {
-  "mast": "Master Data Management",
-  "prod": "Product Definition",
-  "plan": "Planning and Execution",
-  "matl": "Material Management",
+  "mast": "MasterDataManagement",
+  "prod": "ProductDefinition",
+  "plan": "PlanningAndExecution",
+  "matl": "MaterialManagement",
   "trac": "Traceability",
-  "qual": "Quality Management",
-  "perf": "Performance Management",
-  "maint": "Tooling And Maintenance",
-  "syst": "System and Integration",
-  "ehs": "Environment Health and Safety",
-  "bmr": "Batch Manufacturing Record",
-  "mmr": "Master Manufacturing Record"
+  "qual": "QualityManagement",
+  "perf": "PerformanceManagement",
+  "maint": "ToolingAndMaintenance",
+  "syst": "SystemAndIntegration",
+  "ehs": "EnvironmentHealthAndSafety",
+  "bmr": "BatchManufacturingRecord",
+  "mmr": "MasterManufacturingRecord"
  },
  "conversions": [
   {
@@ -428,7 +428,7 @@
   {
    "collection": "u_mes_mast_enterprise",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "enterprise",
    "sourceConcept": "enterprises",
    "kind": "entity",
@@ -583,7 +583,7 @@
   {
    "collection": "u_mes_mast_enterpriseContact",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "enterpriseContact",
    "sourceConcept": "enterprises",
    "kind": "child",
@@ -665,7 +665,7 @@
   {
    "collection": "u_mes_mast_site",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "site",
    "sourceConcept": "sites",
    "kind": "entity",
@@ -840,7 +840,7 @@
   {
    "collection": "u_mes_mast_siteCertificate",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "siteCertificate",
    "sourceConcept": "sites",
    "kind": "child",
@@ -924,7 +924,7 @@
   {
    "collection": "u_mes_mast_area",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "area",
    "sourceConcept": "areas",
    "kind": "entity",
@@ -1049,7 +1049,7 @@
   {
    "collection": "u_mes_mast_line",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "line",
    "sourceConcept": "lines",
    "kind": "entity",
@@ -1184,7 +1184,7 @@
   {
    "collection": "u_mes_mast_lineDefaultShift",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "lineDefaultShift",
    "sourceConcept": "lines",
    "kind": "relationship",
@@ -1256,7 +1256,7 @@
   {
    "collection": "u_mes_mast_lineIdealRate",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "lineIdealRate",
    "sourceConcept": "lines",
    "kind": "child",
@@ -1338,7 +1338,7 @@
   {
    "collection": "u_mes_mast_workCenter",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCenter",
    "sourceConcept": "work_centres",
    "kind": "entity",
@@ -1483,7 +1483,7 @@
   {
    "collection": "u_mes_mast_workCenterEquipment",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCenterEquipment",
    "sourceConcept": "work_centres",
    "kind": "relationship",
@@ -1555,7 +1555,7 @@
   {
    "collection": "u_mes_mast_workCenterOperation",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCenterOperation",
    "sourceConcept": "work_centres",
    "kind": "relationship",
@@ -1627,7 +1627,7 @@
   {
    "collection": "u_mes_mast_workCenterRequiresSkill",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCenterRequiresSkill",
    "sourceConcept": "work_centres",
    "kind": "relationship",
@@ -1699,7 +1699,7 @@
   {
    "collection": "u_mes_mast_equipment",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "equipment",
    "sourceConcept": "equipment",
    "kind": "entity",
@@ -1997,7 +1997,7 @@
   {
    "collection": "u_mes_mast_equipmentIotDevice",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "equipmentIotDevice",
    "sourceConcept": "equipment",
    "kind": "relationship",
@@ -2069,7 +2069,7 @@
   {
    "collection": "u_mes_mast_shift",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "shift",
    "sourceConcept": "shifts",
    "kind": "entity",
@@ -2164,7 +2164,7 @@
   {
    "collection": "u_mes_mast_shiftBreak",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "shiftBreak",
    "sourceConcept": "shifts",
    "kind": "child",
@@ -2246,7 +2246,7 @@
   {
    "collection": "u_mes_mast_shiftWorkingDay",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "shiftWorkingDay",
    "sourceConcept": "shifts",
    "kind": "valueList",
@@ -2313,7 +2313,7 @@
   {
    "collection": "u_mes_mast_workCalendar",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCalendar",
    "sourceConcept": "calendars",
    "kind": "entity",
@@ -2395,7 +2395,7 @@
   {
    "collection": "u_mes_mast_workCalendarLine",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCalendarLine",
    "sourceConcept": "calendars",
    "kind": "relationship",
@@ -2467,7 +2467,7 @@
   {
    "collection": "u_mes_mast_workCalendarShift",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCalendarShift",
    "sourceConcept": "calendars",
    "kind": "relationship",
@@ -2539,7 +2539,7 @@
   {
    "collection": "u_mes_mast_workCalendarWeeklyOffDay",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCalendarWeeklyOffDay",
    "sourceConcept": "calendars",
    "kind": "valueList",
@@ -2606,7 +2606,7 @@
   {
    "collection": "u_mes_mast_workCalendarException",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCalendarException",
    "sourceConcept": "calendars",
    "kind": "child",
@@ -2689,7 +2689,7 @@
   {
    "collection": "u_mes_mast_workCalendarExceptionShift",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "workCalendarExceptionShift",
    "sourceConcept": "calendars",
    "kind": "relationship",
@@ -2761,7 +2761,7 @@
   {
    "collection": "u_mes_mast_shiftRoster",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "shiftRoster",
    "sourceConcept": "shift_rosters",
    "kind": "entity",
@@ -2916,7 +2916,7 @@
   {
    "collection": "u_mes_mast_shiftRosterAssignment",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "shiftRosterAssignment",
    "sourceConcept": "shift_rosters",
    "kind": "child",
@@ -3072,7 +3072,7 @@
   {
    "collection": "u_mes_mast_role",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "role",
    "sourceConcept": "roles",
    "kind": "entity",
@@ -3157,7 +3157,7 @@
   {
    "collection": "u_mes_mast_rolePermission",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "rolePermission",
    "sourceConcept": "roles",
    "kind": "relationship",
@@ -3229,7 +3229,7 @@
   {
    "collection": "u_mes_mast_roleSignatureMeaning",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "roleSignatureMeaning",
    "sourceConcept": "roles",
    "kind": "relationship",
@@ -3301,7 +3301,7 @@
   {
    "collection": "u_mes_mast_user",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "user",
    "sourceConcept": "users",
    "kind": "entity",
@@ -3507,7 +3507,7 @@
   {
    "collection": "u_mes_mast_userRole",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "userRole",
    "sourceConcept": "users",
    "kind": "relationship",
@@ -3579,7 +3579,7 @@
   {
    "collection": "u_mes_mast_skill",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "skill",
    "sourceConcept": "skills",
    "kind": "entity",
@@ -3684,7 +3684,7 @@
   {
    "collection": "u_mes_mast_skillOperation",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "skillOperation",
    "sourceConcept": "skills",
    "kind": "relationship",
@@ -3756,7 +3756,7 @@
   {
    "collection": "u_mes_mast_skillLevelScale",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "skillLevelScale",
    "sourceConcept": "skills",
    "kind": "child",
@@ -3828,7 +3828,7 @@
   {
    "collection": "u_mes_mast_skillCertification",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "skillCertification",
    "sourceConcept": "certifications",
    "kind": "entity",
@@ -4032,7 +4032,7 @@
   {
    "collection": "u_mes_mast_customer",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "customer",
    "sourceConcept": "customers",
    "kind": "entity",
@@ -4187,7 +4187,7 @@
   {
    "collection": "u_mes_mast_customerShipTo",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "customerShipTo",
    "sourceConcept": "customers",
    "kind": "child",
@@ -4289,7 +4289,7 @@
   {
    "collection": "u_mes_mast_customerContact",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "customerContact",
    "sourceConcept": "customers",
    "kind": "child",
@@ -4371,7 +4371,7 @@
   {
    "collection": "u_mes_mast_supplier",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "supplier",
    "sourceConcept": "suppliers",
    "kind": "entity",
@@ -4529,7 +4529,7 @@
   {
    "collection": "u_mes_mast_supplierContact",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "supplierContact",
    "sourceConcept": "suppliers",
    "kind": "child",
@@ -4611,7 +4611,7 @@
   {
    "collection": "u_mes_mast_supplierCertificate",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "supplierCertificate",
    "sourceConcept": "suppliers",
    "kind": "child",
@@ -4689,7 +4689,7 @@
   {
    "collection": "u_mes_mast_supplierSuppliedItem",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "supplierSuppliedItem",
    "sourceConcept": "suppliers",
    "kind": "relationship",
@@ -4772,7 +4772,7 @@
   {
    "collection": "u_mes_mast_unitOfMeasure",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "unitOfMeasure",
    "sourceConcept": "units_of_measure",
    "kind": "entity",
@@ -4882,7 +4882,7 @@
   {
    "collection": "u_mes_prod_item",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "item",
    "sourceConcept": "items",
    "kind": "entity",
@@ -5099,7 +5099,7 @@
   {
    "collection": "u_mes_prod_itemRevision",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "itemRevision",
    "sourceConcept": "items",
    "kind": "child",
@@ -5187,7 +5187,7 @@
   {
    "collection": "u_mes_prod_itemCustomerPart",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "itemCustomerPart",
    "sourceConcept": "items",
    "kind": "child",
@@ -5269,7 +5269,7 @@
   {
    "collection": "u_mes_prod_productVariant",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "productVariant",
    "sourceConcept": "variants",
    "kind": "entity",
@@ -5437,7 +5437,7 @@
   {
    "collection": "u_mes_prod_billOfMaterial",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfMaterial",
    "sourceConcept": "boms",
    "kind": "entity",
@@ -5576,7 +5576,7 @@
   {
    "collection": "u_mes_prod_billOfMaterialComponent",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfMaterialComponent",
    "sourceConcept": "boms",
    "kind": "child",
@@ -5698,7 +5698,7 @@
   {
    "collection": "u_mes_prod_billOfMaterialComponentProductVariant",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfMaterialComponentProductVariant",
    "sourceConcept": "boms",
    "kind": "relationship",
@@ -5770,7 +5770,7 @@
   {
    "collection": "u_mes_prod_billOfMaterialComponentAlternateItem",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfMaterialComponentAlternateItem",
    "sourceConcept": "boms",
    "kind": "relationship",
@@ -5842,7 +5842,7 @@
   {
    "collection": "u_mes_prod_operation",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "operation",
    "sourceConcept": "operations",
    "kind": "entity",
@@ -5972,7 +5972,7 @@
   {
    "collection": "u_mes_prod_operationRequiredSkill",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "operationRequiredSkill",
    "sourceConcept": "operations",
    "kind": "relationship",
@@ -6044,7 +6044,7 @@
   {
    "collection": "u_mes_prod_routing",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "routing",
    "sourceConcept": "routings",
    "kind": "entity",
@@ -6188,7 +6188,7 @@
   {
    "collection": "u_mes_prod_routingStep",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "routingStep",
    "sourceConcept": "routings",
    "kind": "child",
@@ -6305,7 +6305,7 @@
   {
    "collection": "u_mes_prod_routingStepAlternateWorkCenter",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "routingStepAlternateWorkCenter",
    "sourceConcept": "routings",
    "kind": "relationship",
@@ -6377,7 +6377,7 @@
   {
    "collection": "u_mes_prod_routingStepNextStep",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "routingStepNextStep",
    "sourceConcept": "routings",
    "kind": "child",
@@ -6444,7 +6444,7 @@
   {
    "collection": "u_mes_prod_billOfProcess",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcess",
    "sourceConcept": "bills_of_process",
    "kind": "entity",
@@ -6568,7 +6568,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStep",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStep",
    "sourceConcept": "bills_of_process",
    "kind": "child",
@@ -6680,7 +6680,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStepEquipment",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStepEquipment",
    "sourceConcept": "bills_of_process",
    "kind": "relationship",
@@ -6752,7 +6752,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStepTool",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStepTool",
    "sourceConcept": "bills_of_process",
    "kind": "relationship",
@@ -6824,7 +6824,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStepRequiredSkill",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStepRequiredSkill",
    "sourceConcept": "bills_of_process",
    "kind": "relationship",
@@ -6896,7 +6896,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStepConsumedComponent",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStepConsumedComponent",
    "sourceConcept": "bills_of_process",
    "kind": "child",
@@ -6978,7 +6978,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStepInterlock",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStepInterlock",
    "sourceConcept": "bills_of_process",
    "kind": "child",
@@ -7055,7 +7055,7 @@
   {
    "collection": "u_mes_prod_billOfProcessStepProcessParameter",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "billOfProcessStepProcessParameter",
    "sourceConcept": "bills_of_process",
    "kind": "child",
@@ -7147,7 +7147,7 @@
   {
    "collection": "u_mes_prod_workInstruction",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstruction",
    "sourceConcept": "work_instructions",
    "kind": "entity",
@@ -7321,7 +7321,7 @@
   {
    "collection": "u_mes_prod_workInstructionStep",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionStep",
    "sourceConcept": "work_instructions",
    "kind": "child",
@@ -7448,7 +7448,7 @@
   {
    "collection": "u_mes_prod_workInstructionStepMediaControlledDocument",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionStepMediaControlledDocument",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -7520,7 +7520,7 @@
   {
    "collection": "u_mes_prod_workInstructionStepProductVariant",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionStepProductVariant",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -7592,7 +7592,7 @@
   {
    "collection": "u_mes_prod_workInstructionStepTool",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionStepTool",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -7664,7 +7664,7 @@
   {
    "collection": "u_mes_prod_workInstructionStepCharacteristic",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionStepCharacteristic",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -7736,7 +7736,7 @@
   {
    "collection": "u_mes_prod_workInstructionPpeItem",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionPpeItem",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -7808,7 +7808,7 @@
   {
    "collection": "u_mes_prod_workInstructionKeyPoint",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionKeyPoint",
    "sourceConcept": "work_instructions",
    "kind": "valueList",
@@ -7875,7 +7875,7 @@
   {
    "collection": "u_mes_prod_recipe",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "recipe",
    "sourceConcept": "recipes",
    "kind": "entity",
@@ -8087,7 +8087,7 @@
   {
    "collection": "u_mes_prod_recipeParameter",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "recipeParameter",
    "sourceConcept": "recipes",
    "kind": "child",
@@ -8199,7 +8199,7 @@
   {
    "collection": "u_mes_prod_recipeStage",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "recipeStage",
    "sourceConcept": "recipes",
    "kind": "child",
@@ -8276,7 +8276,7 @@
   {
    "collection": "u_mes_prod_engineeringChange",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "engineeringChange",
    "sourceConcept": "engineering_changes",
    "kind": "entity",
@@ -8491,7 +8491,7 @@
   {
    "collection": "u_mes_prod_engineeringChangeAffectedItem",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "engineeringChangeAffectedItem",
    "sourceConcept": "engineering_changes",
    "kind": "child",
@@ -8605,7 +8605,7 @@
   {
    "collection": "u_mes_prod_engineeringChangeAffectedObject",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "engineeringChangeAffectedObject",
    "sourceConcept": "engineering_changes",
    "kind": "child",
@@ -8719,7 +8719,7 @@
   {
    "collection": "u_mes_prod_engineeringChangeApproval",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "engineeringChangeApproval",
    "sourceConcept": "engineering_changes",
    "kind": "child",
@@ -8844,7 +8844,7 @@
   {
    "collection": "u_mes_prod_engineeringChangeControlledDocument",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "engineeringChangeControlledDocument",
    "sourceConcept": "engineering_changes",
    "kind": "relationship",
@@ -8948,7 +8948,7 @@
   {
    "collection": "u_mes_plan_customerSchedule",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "customerSchedule",
    "sourceConcept": "customer_schedules",
    "kind": "entity",
@@ -9096,7 +9096,7 @@
   {
    "collection": "u_mes_plan_customerScheduleLine",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "customerScheduleLine",
    "sourceConcept": "customer_schedules",
    "kind": "child",
@@ -9236,7 +9236,7 @@
   {
    "collection": "u_mes_plan_productionOrder",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "productionOrder",
    "sourceConcept": "production_orders",
    "kind": "entity",
@@ -9564,7 +9564,7 @@
   {
    "collection": "u_mes_plan_productionOrderRelease",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "productionOrderRelease",
    "sourceConcept": "production_orders",
    "kind": "child",
@@ -9679,7 +9679,7 @@
   {
    "collection": "u_mes_plan_productionOrderLot",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "productionOrderLot",
    "sourceConcept": "production_orders",
    "kind": "relationship",
@@ -9783,7 +9783,7 @@
   {
    "collection": "u_mes_plan_productionSchedule",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "productionSchedule",
    "sourceConcept": "production_schedules",
    "kind": "entity",
@@ -9949,7 +9949,7 @@
   {
    "collection": "u_mes_plan_productionScheduleSlot",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "productionScheduleSlot",
    "sourceConcept": "production_schedules",
    "kind": "child",
@@ -10090,7 +10090,7 @@
   {
    "collection": "u_mes_plan_dispatchList",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "dispatchList",
    "sourceConcept": "dispatch_lists",
    "kind": "entity",
@@ -10231,7 +10231,7 @@
   {
    "collection": "u_mes_plan_dispatchListEntry",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "dispatchListEntry",
    "sourceConcept": "dispatch_lists",
    "kind": "child",
@@ -10402,7 +10402,7 @@
   {
    "collection": "u_mes_plan_operationExecution",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "operationExecution",
    "sourceConcept": "operation_executions",
    "kind": "entity",
@@ -10782,7 +10782,7 @@
   {
    "collection": "u_mes_plan_operationExecutionDefectCode",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "operationExecutionDefectCode",
    "sourceConcept": "operation_executions",
    "kind": "relationship",
@@ -10886,7 +10886,7 @@
   {
    "collection": "u_mes_plan_operationExecutionTool",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "operationExecutionTool",
    "sourceConcept": "operation_executions",
    "kind": "relationship",
@@ -10990,7 +10990,7 @@
   {
    "collection": "u_mes_plan_stepCompletion",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "stepCompletion",
    "sourceConcept": "step_completions",
    "kind": "entity",
@@ -11235,7 +11235,7 @@
   {
    "collection": "u_mes_plan_wipUnit",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "wipUnit",
    "sourceConcept": "wip_units",
    "kind": "entity",
@@ -11507,7 +11507,7 @@
   {
    "collection": "u_mes_plan_wipUnitCompletedStep",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "wipUnitCompletedStep",
    "sourceConcept": "wip_units",
    "kind": "valueList",
@@ -11606,7 +11606,7 @@
   {
    "collection": "u_mes_plan_lot",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "lot",
    "sourceConcept": "lots",
    "kind": "entity",
@@ -11894,7 +11894,7 @@
   {
    "collection": "u_mes_plan_lotParentLot",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "lotParentLot",
    "sourceConcept": "lots",
    "kind": "relationship",
@@ -11998,7 +11998,7 @@
   {
    "collection": "u_mes_plan_lotAttributesCavityNo",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "lotAttributesCavityNo",
    "sourceConcept": "lots",
    "kind": "valueList",
@@ -12097,7 +12097,7 @@
   {
    "collection": "u_mes_plan_container",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "container",
    "sourceConcept": "containers",
    "kind": "entity",
@@ -12326,7 +12326,7 @@
   {
    "collection": "u_mes_plan_containerLot",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "containerLot",
    "sourceConcept": "containers",
    "kind": "relationship",
@@ -12430,7 +12430,7 @@
   {
    "collection": "u_mes_plan_labourBooking",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "labourBooking",
    "sourceConcept": "labour_bookings",
    "kind": "entity",
@@ -12672,7 +12672,7 @@
   {
    "collection": "u_mes_plan_changeover",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "changeover",
    "sourceConcept": "changeovers",
    "kind": "entity",
@@ -12905,7 +12905,7 @@
   {
    "collection": "u_mes_plan_changeoverStep",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "changeoverStep",
    "sourceConcept": "changeovers",
    "kind": "child",
@@ -13025,7 +13025,7 @@
   {
    "collection": "u_mes_plan_changeoverRemovedTool",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "changeoverRemovedTool",
    "sourceConcept": "changeovers",
    "kind": "relationship",
@@ -13129,7 +13129,7 @@
   {
    "collection": "u_mes_plan_changeoverInstalledTool",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "changeoverInstalledTool",
    "sourceConcept": "changeovers",
    "kind": "relationship",
@@ -13233,7 +13233,7 @@
   {
    "collection": "u_mes_plan_changeoverPerformedByUser",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "changeoverPerformedByUser",
    "sourceConcept": "changeovers",
    "kind": "relationship",
@@ -13337,7 +13337,7 @@
   {
    "collection": "u_mes_plan_shiftHandover",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "shiftHandover",
    "sourceConcept": "shift_handovers",
    "kind": "entity",
@@ -13528,7 +13528,7 @@
   {
    "collection": "u_mes_plan_shiftHandoverProductionOrder",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "shiftHandoverProductionOrder",
    "sourceConcept": "shift_handovers",
    "kind": "relationship",
@@ -13632,7 +13632,7 @@
   {
    "collection": "u_mes_plan_shiftHandoverDowntimeEvent",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "shiftHandoverDowntimeEvent",
    "sourceConcept": "shift_handovers",
    "kind": "relationship",
@@ -13736,7 +13736,7 @@
   {
    "collection": "u_mes_plan_shiftHandoverNonconformance",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "shiftHandoverNonconformance",
    "sourceConcept": "shift_handovers",
    "kind": "relationship",
@@ -13840,7 +13840,7 @@
   {
    "collection": "u_mes_plan_shiftHandoverOpenItem",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "shiftHandoverOpenItem",
    "sourceConcept": "shift_handovers",
    "kind": "child",
@@ -13960,7 +13960,7 @@
   {
    "collection": "u_mes_matl_storageLocation",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "storageLocation",
    "sourceConcept": "storage_locations",
    "kind": "entity",
@@ -14105,7 +14105,7 @@
   {
    "collection": "u_mes_matl_inventoryBalance",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "inventoryBalance",
    "sourceConcept": "inventory_balances",
    "kind": "entity",
@@ -14301,7 +14301,7 @@
   {
    "collection": "u_mes_matl_materialMovement",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "materialMovement",
    "sourceConcept": "material_movements",
    "kind": "entity",
@@ -14569,7 +14569,7 @@
   {
    "collection": "u_mes_matl_goodsReceipt",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "goodsReceipt",
    "sourceConcept": "goods_receipts",
    "kind": "entity",
@@ -14727,7 +14727,7 @@
   {
    "collection": "u_mes_matl_goodsReceiptLine",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "goodsReceiptLine",
    "sourceConcept": "goods_receipts",
    "kind": "child",
@@ -14896,7 +14896,7 @@
   {
    "collection": "u_mes_matl_goodsReceiptLineInspectionResult",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "goodsReceiptLineInspectionResult",
    "sourceConcept": "goods_receipts",
    "kind": "relationship",
@@ -15000,7 +15000,7 @@
   {
    "collection": "u_mes_matl_kit",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "kit",
    "sourceConcept": "kits",
    "kind": "entity",
@@ -15174,7 +15174,7 @@
   {
    "collection": "u_mes_matl_kitLine",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "kitLine",
    "sourceConcept": "kits",
    "kind": "child",
@@ -15344,7 +15344,7 @@
   {
    "collection": "u_mes_matl_materialRequest",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "materialRequest",
    "sourceConcept": "material_requests",
    "kind": "entity",
@@ -15581,7 +15581,7 @@
   {
    "collection": "u_mes_matl_materialConsumption",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "materialConsumption",
    "sourceConcept": "material_consumptions",
    "kind": "entity",
@@ -15824,7 +15824,7 @@
   {
    "collection": "u_mes_matl_packagingSpecification",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "packagingSpecification",
    "sourceConcept": "packaging_specifications",
    "kind": "entity",
@@ -15991,7 +15991,7 @@
   {
    "collection": "u_mes_matl_packagingSpecificationLevel",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "packagingSpecificationLevel",
    "sourceConcept": "packaging_specifications",
    "kind": "child",
@@ -16083,7 +16083,7 @@
   {
    "collection": "u_mes_matl_labelTemplate",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "labelTemplate",
    "sourceConcept": "label_templates",
    "kind": "entity",
@@ -16205,7 +16205,7 @@
   {
    "collection": "u_mes_matl_labelTemplateField",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "labelTemplateField",
    "sourceConcept": "label_templates",
    "kind": "child",
@@ -16297,7 +16297,7 @@
   {
    "collection": "u_mes_matl_label",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "label",
    "sourceConcept": "labels",
    "kind": "entity",
@@ -16533,7 +16533,7 @@
   {
    "collection": "u_mes_matl_shipment",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "shipment",
    "sourceConcept": "shipments",
    "kind": "entity",
@@ -16764,7 +16764,7 @@
   {
    "collection": "u_mes_matl_shipmentLine",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "shipmentLine",
    "sourceConcept": "shipments",
    "kind": "child",
@@ -16878,7 +16878,7 @@
   {
    "collection": "u_mes_matl_shipmentLineContainer",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "shipmentLineContainer",
    "sourceConcept": "shipments",
    "kind": "relationship",
@@ -16982,7 +16982,7 @@
   {
    "collection": "u_mes_matl_shipmentLineLot",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "shipmentLineLot",
    "sourceConcept": "shipments",
    "kind": "relationship",
@@ -18465,7 +18465,7 @@
   {
    "collection": "u_mes_qual_characteristic",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "characteristic",
    "sourceConcept": "characteristics",
    "kind": "entity",
@@ -18655,7 +18655,7 @@
   {
    "collection": "u_mes_qual_controlPlan",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "controlPlan",
    "sourceConcept": "control_plans",
    "kind": "entity",
@@ -18816,7 +18816,7 @@
   {
    "collection": "u_mes_qual_controlPlanCoreTeamUser",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "controlPlanCoreTeamUser",
    "sourceConcept": "control_plans",
    "kind": "relationship",
@@ -18888,7 +18888,7 @@
   {
    "collection": "u_mes_qual_controlPlanLine",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "controlPlanLine",
    "sourceConcept": "control_plans",
    "kind": "child",
@@ -19030,7 +19030,7 @@
   {
    "collection": "u_mes_qual_inspectionPlan",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "inspectionPlan",
    "sourceConcept": "inspection_plans",
    "kind": "entity",
@@ -19194,7 +19194,7 @@
   {
    "collection": "u_mes_qual_inspectionPlanLine",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "inspectionPlanLine",
    "sourceConcept": "inspection_plans",
    "kind": "child",
@@ -19316,7 +19316,7 @@
   {
    "collection": "u_mes_qual_samplingPlan",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "samplingPlan",
    "sourceConcept": "sampling_plans",
    "kind": "entity",
@@ -19431,7 +19431,7 @@
   {
    "collection": "u_mes_qual_samplingPlanSizeRow",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "samplingPlanSizeRow",
    "sourceConcept": "sampling_plans",
    "kind": "child",
@@ -19518,7 +19518,7 @@
   {
    "collection": "u_mes_qual_checkSheet",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "checkSheet",
    "sourceConcept": "check_sheets",
    "kind": "entity",
@@ -19666,7 +19666,7 @@
   {
    "collection": "u_mes_qual_checkSheetItem",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "checkSheetItem",
    "sourceConcept": "check_sheets",
    "kind": "child",
@@ -19768,7 +19768,7 @@
   {
    "collection": "u_mes_qual_checkSheetResult",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "checkSheetResult",
    "sourceConcept": "check_sheet_results",
    "kind": "entity",
@@ -19980,7 +19980,7 @@
   {
    "collection": "u_mes_qual_checkSheetResultAnswer",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "checkSheetResultAnswer",
    "sourceConcept": "check_sheet_results",
    "kind": "child",
@@ -20094,7 +20094,7 @@
   {
    "collection": "u_mes_qual_inspectionResult",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "inspectionResult",
    "sourceConcept": "inspection_results",
    "kind": "entity",
@@ -20447,7 +20447,7 @@
   {
    "collection": "u_mes_qual_spcChart",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcChart",
    "sourceConcept": "spc_charts",
    "kind": "entity",
@@ -20619,7 +20619,7 @@
   {
    "collection": "u_mes_qual_spcChartControlLimit",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcChartControlLimit",
    "sourceConcept": "spc_charts",
    "kind": "child",
@@ -20722,7 +20722,7 @@
   {
    "collection": "u_mes_qual_spcChartRule",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcChartRule",
    "sourceConcept": "spc_charts",
    "kind": "valueList",
@@ -20789,7 +20789,7 @@
   {
    "collection": "u_mes_qual_spcSample",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcSample",
    "sourceConcept": "spc_samples",
    "kind": "entity",
@@ -21023,7 +21023,7 @@
   {
    "collection": "u_mes_qual_spcSampleReading",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcSampleReading",
    "sourceConcept": "spc_samples",
    "kind": "valueList",
@@ -21122,7 +21122,7 @@
   {
    "collection": "u_mes_qual_spcSampleInspectionResult",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcSampleInspectionResult",
    "sourceConcept": "spc_samples",
    "kind": "relationship",
@@ -21226,7 +21226,7 @@
   {
    "collection": "u_mes_qual_spcSampleViolation",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "spcSampleViolation",
    "sourceConcept": "spc_samples",
    "kind": "child",
@@ -21330,7 +21330,7 @@
   {
    "collection": "u_mes_qual_defectCode",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "defectCode",
    "sourceConcept": "defect_codes",
    "kind": "entity",
@@ -21460,7 +21460,7 @@
   {
    "collection": "u_mes_qual_defectCodeApplicableOperation",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "defectCodeApplicableOperation",
    "sourceConcept": "defect_codes",
    "kind": "relationship",
@@ -21532,7 +21532,7 @@
   {
    "collection": "u_mes_qual_nonconformance",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformance",
    "sourceConcept": "nonconformances",
    "kind": "entity",
@@ -21831,7 +21831,7 @@
   {
    "collection": "u_mes_qual_nonconformanceAffectedObject",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformanceAffectedObject",
    "sourceConcept": "nonconformances",
    "kind": "child",
@@ -21971,7 +21971,7 @@
   {
    "collection": "u_mes_qual_nonconformanceContainmentAction",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformanceContainmentAction",
    "sourceConcept": "nonconformances",
    "kind": "child",
@@ -22086,7 +22086,7 @@
   {
    "collection": "u_mes_qual_nonconformanceInspectionResult",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformanceInspectionResult",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
@@ -22190,7 +22190,7 @@
   {
    "collection": "u_mes_qual_nonconformanceReworkOrder",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformanceReworkOrder",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
@@ -22294,7 +22294,7 @@
   {
    "collection": "u_mes_qual_nonconformanceScrapRecord",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformanceScrapRecord",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
@@ -22398,7 +22398,7 @@
   {
    "collection": "u_mes_qual_nonconformancePhotoControlledDocument",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformancePhotoControlledDocument",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
@@ -22502,7 +22502,7 @@
   {
    "collection": "u_mes_qual_nonconformanceMrbUser",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "nonconformanceMrbUser",
    "sourceConcept": "nonconformances",
    "kind": "relationship",
@@ -22606,7 +22606,7 @@
   {
    "collection": "u_mes_qual_reworkOrder",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "reworkOrder",
    "sourceConcept": "rework_orders",
    "kind": "entity",
@@ -22861,7 +22861,7 @@
   {
    "collection": "u_mes_qual_reworkOrderWipUnit",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "reworkOrderWipUnit",
    "sourceConcept": "rework_orders",
    "kind": "relationship",
@@ -22965,7 +22965,7 @@
   {
    "collection": "u_mes_qual_reworkOrderStep",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "reworkOrderStep",
    "sourceConcept": "rework_orders",
    "kind": "child",
@@ -23090,7 +23090,7 @@
   {
    "collection": "u_mes_qual_scrapRecord",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "scrapRecord",
    "sourceConcept": "scrap_records",
    "kind": "entity",
@@ -23370,7 +23370,7 @@
   {
    "collection": "u_mes_qual_qualityHold",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "qualityHold",
    "sourceConcept": "quality_holds",
    "kind": "entity",
@@ -23586,7 +23586,7 @@
   {
    "collection": "u_mes_qual_qualityHoldHeldObject",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "qualityHoldHeldObject",
    "sourceConcept": "quality_holds",
    "kind": "child",
@@ -23711,7 +23711,7 @@
   {
    "collection": "u_mes_qual_deviationPermit",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "deviationPermit",
    "sourceConcept": "deviation_permits",
    "kind": "entity",
@@ -23935,7 +23935,7 @@
   {
    "collection": "u_mes_qual_deviationPermitApproval",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "deviationPermitApproval",
    "sourceConcept": "deviation_permits",
    "kind": "child",
@@ -24055,7 +24055,7 @@
   {
    "collection": "u_mes_qual_capa",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capa",
    "sourceConcept": "capas",
    "kind": "entity",
@@ -24299,7 +24299,7 @@
   {
    "collection": "u_mes_qual_capaNonconformance",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capaNonconformance",
    "sourceConcept": "capas",
    "kind": "relationship",
@@ -24403,7 +24403,7 @@
   {
    "collection": "u_mes_qual_capaTeamMember",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capaTeamMember",
    "sourceConcept": "capas",
    "kind": "child",
@@ -24512,7 +24512,7 @@
   {
    "collection": "u_mes_qual_capaContainmentAction",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capaContainmentAction",
    "sourceConcept": "capas",
    "kind": "child",
@@ -24627,7 +24627,7 @@
   {
    "collection": "u_mes_qual_capaCorrectiveAction",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capaCorrectiveAction",
    "sourceConcept": "capas",
    "kind": "child",
@@ -24742,7 +24742,7 @@
   {
    "collection": "u_mes_qual_capaImplementationAction",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capaImplementationAction",
    "sourceConcept": "capas",
    "kind": "child",
@@ -24862,7 +24862,7 @@
   {
    "collection": "u_mes_qual_capaControlledDocument",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "capaControlledDocument",
    "sourceConcept": "capas",
    "kind": "relationship",
@@ -24966,7 +24966,7 @@
   {
    "collection": "u_mes_qual_pfmea",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "pfmea",
    "sourceConcept": "pfmeas",
    "kind": "entity",
@@ -25090,7 +25090,7 @@
   {
    "collection": "u_mes_qual_pfmeaCoreTeamUser",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "pfmeaCoreTeamUser",
    "sourceConcept": "pfmeas",
    "kind": "relationship",
@@ -25162,7 +25162,7 @@
   {
    "collection": "u_mes_qual_pfmeaLine",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "pfmeaLine",
    "sourceConcept": "pfmeas",
    "kind": "child",
@@ -25345,7 +25345,7 @@
   {
    "collection": "u_mes_qual_ppapSubmission",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "ppapSubmission",
    "sourceConcept": "ppap_submissions",
    "kind": "entity",
@@ -25554,7 +25554,7 @@
   {
    "collection": "u_mes_qual_ppapSubmissionElement",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "ppapSubmissionElement",
    "sourceConcept": "ppap_submissions",
    "kind": "child",
@@ -25678,7 +25678,7 @@
   {
    "collection": "u_mes_qual_ppapSubmissionMsaStudy",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "ppapSubmissionMsaStudy",
    "sourceConcept": "ppap_submissions",
    "kind": "relationship",
@@ -25782,7 +25782,7 @@
   {
    "collection": "u_mes_qual_gauge",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "gauge",
    "sourceConcept": "gauges",
    "kind": "entity",
@@ -26009,7 +26009,7 @@
   {
    "collection": "u_mes_qual_gaugeCalibration",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "gaugeCalibration",
    "sourceConcept": "gauge_calibrations",
    "kind": "entity",
@@ -26214,7 +26214,7 @@
   {
    "collection": "u_mes_qual_gaugeCalibrationReading",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "gaugeCalibrationReading",
    "sourceConcept": "gauge_calibrations",
    "kind": "child",
@@ -26333,7 +26333,7 @@
   {
    "collection": "u_mes_qual_msaStudy",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "msaStudy",
    "sourceConcept": "msa_studies",
    "kind": "entity",
@@ -26570,7 +26570,7 @@
   {
    "collection": "u_mes_qual_msaStudyAppraiserUser",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "msaStudyAppraiserUser",
    "sourceConcept": "msa_studies",
    "kind": "relationship",
@@ -26674,7 +26674,7 @@
   {
    "collection": "u_mes_qual_msaStudyTrial",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "msaStudyTrial",
    "sourceConcept": "msa_studies",
    "kind": "child",
@@ -26788,7 +26788,7 @@
   {
    "collection": "u_mes_qual_audit",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "audit",
    "sourceConcept": "audits",
    "kind": "entity",
@@ -27042,7 +27042,7 @@
   {
    "collection": "u_mes_qual_auditAuditorUser",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "auditAuditorUser",
    "sourceConcept": "audits",
    "kind": "relationship",
@@ -27146,7 +27146,7 @@
   {
    "collection": "u_mes_qual_auditFinding",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "auditFinding",
    "sourceConcept": "audits",
    "kind": "child",
@@ -27287,7 +27287,7 @@
   {
    "collection": "u_mes_qual_customerComplaint",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "customerComplaint",
    "sourceConcept": "customer_complaints",
    "kind": "entity",
@@ -27537,7 +27537,7 @@
   {
    "collection": "u_mes_qual_customerComplaintSerialNumber",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "customerComplaintSerialNumber",
    "sourceConcept": "customer_complaints",
    "kind": "relationship",
@@ -27641,7 +27641,7 @@
   {
    "collection": "u_mes_qual_customerComplaintShipment",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "customerComplaintShipment",
    "sourceConcept": "customer_complaints",
    "kind": "relationship",
@@ -27745,7 +27745,7 @@
   {
    "collection": "u_mes_qual_customerComplaintSuspectLot",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "customerComplaintSuspectLot",
    "sourceConcept": "customer_complaints",
    "kind": "relationship",
@@ -27849,7 +27849,7 @@
   {
    "collection": "u_mes_qual_customerComplaintCommunication",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "customerComplaintCommunication",
    "sourceConcept": "customer_complaints",
    "kind": "child",
@@ -27969,7 +27969,7 @@
   {
    "collection": "u_mes_perf_reasonCode",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "reasonCode",
    "sourceConcept": "reason_codes",
    "kind": "entity",
@@ -28109,7 +28109,7 @@
   {
    "collection": "u_mes_perf_equipmentState",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "equipmentState",
    "sourceConcept": "equipment_states",
    "kind": "entity",
@@ -28289,7 +28289,7 @@
   {
    "collection": "u_mes_perf_downtimeEvent",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "downtimeEvent",
    "sourceConcept": "downtime_events",
    "kind": "entity",
@@ -28591,7 +28591,7 @@
   {
    "collection": "u_mes_perf_downtimeEventComment",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "downtimeEventComment",
    "sourceConcept": "downtime_events",
    "kind": "child",
@@ -28706,7 +28706,7 @@
   {
    "collection": "u_mes_perf_productionCount",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "productionCount",
    "sourceConcept": "production_counts",
    "kind": "entity",
@@ -28906,7 +28906,7 @@
   {
    "collection": "u_mes_perf_oeeRecord",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "oeeRecord",
    "sourceConcept": "oee_records",
    "kind": "entity",
@@ -29147,7 +29147,7 @@
   {
    "collection": "u_mes_perf_oeeRecordLoss",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "oeeRecordLoss",
    "sourceConcept": "oee_records",
    "kind": "child",
@@ -29271,7 +29271,7 @@
   {
    "collection": "u_mes_perf_processTag",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "processTag",
    "sourceConcept": "process_tags",
    "kind": "entity",
@@ -29466,7 +29466,7 @@
   {
    "collection": "u_mes_perf_processReading",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "processReading",
    "sourceConcept": "process_data",
    "kind": "entity",
@@ -29637,7 +29637,7 @@
   {
    "collection": "u_mes_perf_alarm",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "alarm",
    "sourceConcept": "alarms",
    "kind": "entity",
@@ -29940,7 +29940,7 @@
   {
    "collection": "u_mes_perf_torqueResult",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "torqueResult",
    "sourceConcept": "torque_results",
    "kind": "entity",
@@ -30223,7 +30223,7 @@
   {
    "collection": "u_mes_perf_leakTestResult",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "leakTestResult",
    "sourceConcept": "leak_test_results",
    "kind": "entity",
@@ -30437,7 +30437,7 @@
   {
    "collection": "u_mes_perf_leakTestResultStage",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "leakTestResultStage",
    "sourceConcept": "leak_test_results",
    "kind": "child",
@@ -30581,7 +30581,7 @@
   {
    "collection": "u_mes_maint_maintenancePlan",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenancePlan",
    "sourceConcept": "maintenance_plans",
    "kind": "entity",
@@ -30729,7 +30729,7 @@
   {
    "collection": "u_mes_maint_maintenancePlanTask",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenancePlanTask",
    "sourceConcept": "maintenance_plans",
    "kind": "child",
@@ -30811,7 +30811,7 @@
   {
    "collection": "u_mes_maint_maintenancePlanRequiredSkill",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenancePlanRequiredSkill",
    "sourceConcept": "maintenance_plans",
    "kind": "relationship",
@@ -30883,7 +30883,7 @@
   {
    "collection": "u_mes_maint_maintenancePlanRequiredSparePart",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenancePlanRequiredSparePart",
    "sourceConcept": "maintenance_plans",
    "kind": "child",
@@ -30960,7 +30960,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrder",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenanceWorkOrder",
    "sourceConcept": "maintenance_work_orders",
    "kind": "entity",
@@ -31279,7 +31279,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderAssignedToUser",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenanceWorkOrderAssignedToUser",
    "sourceConcept": "maintenance_work_orders",
    "kind": "relationship",
@@ -31383,7 +31383,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderLabour",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenanceWorkOrderLabour",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
@@ -31492,7 +31492,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderUsedSparePart",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenanceWorkOrderUsedSparePart",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
@@ -31606,7 +31606,7 @@
   {
    "collection": "u_mes_maint_sparePart",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "sparePart",
    "sourceConcept": "spare_parts",
    "kind": "entity",
@@ -31763,7 +31763,7 @@
   {
    "collection": "u_mes_maint_sparePartUsedOnEquipment",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "sparePartUsedOnEquipment",
    "sourceConcept": "spare_parts",
    "kind": "relationship",
@@ -31835,7 +31835,7 @@
   {
    "collection": "u_mes_maint_tool",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "tool",
    "sourceConcept": "tools",
    "kind": "entity",
@@ -32058,7 +32058,7 @@
   {
    "collection": "u_mes_maint_toolItem",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "toolItem",
    "sourceConcept": "tools",
    "kind": "relationship",
@@ -32130,7 +32130,7 @@
   {
    "collection": "u_mes_maint_toolLifeRecord",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "toolLifeRecord",
    "sourceConcept": "tool_life_records",
    "kind": "entity",
@@ -32353,7 +32353,7 @@
   {
    "collection": "u_mes_syst_erpMessage",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "erpMessage",
    "sourceConcept": "erp_messages",
    "kind": "entity",
@@ -32588,7 +32588,7 @@
   {
    "collection": "u_mes_syst_integrationConnector",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "integrationConnector",
    "sourceConcept": "integration_connectors",
    "kind": "entity",
@@ -32725,7 +32725,7 @@
   {
    "collection": "u_mes_syst_integrationConnectorFunction",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "integrationConnectorFunction",
    "sourceConcept": "integration_connectors",
    "kind": "child",
@@ -32812,7 +32812,7 @@
   {
    "collection": "u_mes_syst_iotDevice",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "iotDevice",
    "sourceConcept": "iot_devices",
    "kind": "entity",
@@ -32996,7 +32996,7 @@
   {
    "collection": "u_mes_syst_operatorApp",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorApp",
    "sourceConcept": "operator_apps",
    "kind": "entity",
@@ -33109,7 +33109,7 @@
   {
    "collection": "u_mes_syst_operatorAppWorkCenter",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorAppWorkCenter",
    "sourceConcept": "operator_apps",
    "kind": "relationship",
@@ -33181,7 +33181,7 @@
   {
    "collection": "u_mes_syst_operatorAppOperation",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorAppOperation",
    "sourceConcept": "operator_apps",
    "kind": "relationship",
@@ -33253,7 +33253,7 @@
   {
    "collection": "u_mes_syst_operatorAppStep",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorAppStep",
    "sourceConcept": "operator_apps",
    "kind": "child",
@@ -33350,7 +33350,7 @@
   {
    "collection": "u_mes_syst_operatorAppStepTrigger",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorAppStepTrigger",
    "sourceConcept": "operator_apps",
    "kind": "child",
@@ -33427,7 +33427,7 @@
   {
    "collection": "u_mes_syst_operatorAppDeviceBinding",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorAppDeviceBinding",
    "sourceConcept": "operator_apps",
    "kind": "child",
@@ -33504,7 +33504,7 @@
   {
    "collection": "u_mes_syst_operatorAppLanguage",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "operatorAppLanguage",
    "sourceConcept": "operator_apps",
    "kind": "relationship",
@@ -33576,7 +33576,7 @@
   {
    "collection": "u_mes_syst_businessEvent",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "businessEvent",
    "sourceConcept": "event_logs",
    "kind": "entity",
@@ -33761,7 +33761,7 @@
   {
    "collection": "u_mes_syst_auditTrail",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "auditTrail",
    "sourceConcept": "audit_trails",
    "kind": "entity",
@@ -33936,7 +33936,7 @@
   {
    "collection": "u_mes_syst_auditTrailChange",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "auditTrailChange",
    "sourceConcept": "audit_trails",
    "kind": "child",
@@ -34045,7 +34045,7 @@
   {
    "collection": "u_mes_syst_electronicSignature",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "electronicSignature",
    "sourceConcept": "electronic_signatures",
    "kind": "entity",
@@ -34230,7 +34230,7 @@
   {
    "collection": "u_mes_syst_notification",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "notification",
    "sourceConcept": "notifications",
    "kind": "entity",
@@ -34474,7 +34474,7 @@
   {
    "collection": "u_mes_syst_notificationRecipient",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "notificationRecipient",
    "sourceConcept": "notifications",
    "kind": "child",
@@ -34611,7 +34611,7 @@
   {
    "collection": "u_mes_syst_controlledDocument",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "controlledDocument",
    "sourceConcept": "documents",
    "kind": "entity",
@@ -34832,7 +34832,7 @@
   {
    "collection": "u_mes_syst_controlledDocumentTag",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "controlledDocumentTag",
    "sourceConcept": "documents",
    "kind": "valueList",
@@ -34931,7 +34931,7 @@
   {
    "collection": "u_mes_syst_numberRange",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "numberRange",
    "sourceConcept": "number_ranges",
    "kind": "entity",
@@ -35078,7 +35078,7 @@
   {
    "collection": "u_mes_syst_systemConfiguration",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "systemConfiguration",
    "sourceConcept": "system_configurations",
    "kind": "entity",
@@ -35194,7 +35194,7 @@
   {
    "collection": "u_mes_perf_energyReading",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "energyReading",
    "sourceConcept": "energy_readings",
    "kind": "entity",
@@ -35390,7 +35390,7 @@
   {
    "collection": "u_mes_plan_andonEvent",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "andonEvent",
    "sourceConcept": "andon_events",
    "kind": "entity",
@@ -35647,7 +35647,7 @@
   {
    "collection": "u_mes_plan_andonEventEscalation",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "andonEventEscalation",
    "sourceConcept": "andon_events",
    "kind": "child",
@@ -35767,7 +35767,7 @@
   {
    "collection": "u_mes_ehs_safetyIncident",
    "module": "ehs",
-   "moduleName": "Environment Health and Safety",
+   "moduleName": "EnvironmentHealthAndSafety",
    "entity": "safetyIncident",
    "sourceConcept": "safety_incidents",
    "kind": "entity",
@@ -36020,7 +36020,7 @@
   {
    "collection": "u_mes_ehs_safetyIncidentWitnessUser",
    "module": "ehs",
-   "moduleName": "Environment Health and Safety",
+   "moduleName": "EnvironmentHealthAndSafety",
    "entity": "safetyIncidentWitnessUser",
    "sourceConcept": "safety_incidents",
    "kind": "relationship",
@@ -36124,7 +36124,7 @@
   {
    "collection": "u_mes_ehs_safetyIncidentAction",
    "module": "ehs",
-   "moduleName": "Environment Health and Safety",
+   "moduleName": "EnvironmentHealthAndSafety",
    "entity": "safetyIncidentAction",
    "sourceConcept": "safety_incidents",
    "kind": "child",
@@ -36245,7 +36245,7 @@
   {
    "collection": "u_mes_mast_department",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "department",
    "sourceConcept": "departments",
    "kind": "entity",
@@ -36345,7 +36345,7 @@
   {
    "collection": "u_mes_mast_designation",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "designation",
    "sourceConcept": "designations",
    "kind": "entity",
@@ -36435,7 +36435,7 @@
   {
    "collection": "u_mes_mast_employmentType",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "employmentType",
    "sourceConcept": "employment_types",
    "kind": "entity",
@@ -36510,7 +36510,7 @@
   {
    "collection": "u_mes_mast_costCenter",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "costCenter",
    "sourceConcept": "cost_centers",
    "kind": "entity",
@@ -36592,7 +36592,7 @@
   {
    "collection": "u_mes_mast_manufacturer",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "manufacturer",
    "sourceConcept": "manufacturers",
    "kind": "entity",
@@ -36677,7 +36677,7 @@
   {
    "collection": "u_mes_mast_equipmentType",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "equipmentType",
    "sourceConcept": "equipment_types",
    "kind": "entity",
@@ -36747,7 +36747,7 @@
   {
    "collection": "u_mes_mast_skillCategory",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "skillCategory",
    "sourceConcept": "skill_categories",
    "kind": "entity",
@@ -36817,7 +36817,7 @@
   {
    "collection": "u_mes_mast_permission",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "permission",
    "sourceConcept": "permissions",
    "kind": "entity",
@@ -36897,7 +36897,7 @@
   {
    "collection": "u_mes_mast_signatureMeaning",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "signatureMeaning",
    "sourceConcept": "signature_meanings",
    "kind": "entity",
@@ -36967,7 +36967,7 @@
   {
    "collection": "u_mes_mast_currency",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "currency",
    "sourceConcept": "currencies",
    "kind": "entity",
@@ -37047,7 +37047,7 @@
   {
    "collection": "u_mes_mast_country",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "country",
    "sourceConcept": "countries",
    "kind": "entity",
@@ -37122,7 +37122,7 @@
   {
    "collection": "u_mes_mast_language",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "language",
    "sourceConcept": "languages",
    "kind": "entity",
@@ -37192,7 +37192,7 @@
   {
    "collection": "u_mes_mast_transporter",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "transporter",
    "sourceConcept": "transporters",
    "kind": "entity",
@@ -37272,7 +37272,7 @@
   {
    "collection": "u_mes_mast_commodity",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "commodity",
    "sourceConcept": "commodities",
    "kind": "entity",
@@ -37342,7 +37342,7 @@
   {
    "collection": "u_mes_prod_itemGroup",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "itemGroup",
    "sourceConcept": "item_groups",
    "kind": "entity",
@@ -37412,7 +37412,7 @@
   {
    "collection": "u_mes_prod_itemFamily",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "itemFamily",
    "sourceConcept": "item_families",
    "kind": "entity",
@@ -37482,7 +37482,7 @@
   {
    "collection": "u_mes_prod_ppeItem",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "ppeItem",
    "sourceConcept": "ppe_items",
    "kind": "entity",
@@ -37552,7 +37552,7 @@
   {
    "collection": "u_mes_prod_market",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "market",
    "sourceConcept": "markets",
    "kind": "entity",
@@ -37622,7 +37622,7 @@
   {
    "collection": "u_mes_prod_padCompound",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "padCompound",
    "sourceConcept": "pad_compounds",
    "kind": "entity",
@@ -37692,7 +37692,7 @@
   {
    "collection": "u_mes_prod_surfaceFinish",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "surfaceFinish",
    "sourceConcept": "surface_finishes",
    "kind": "entity",
@@ -37762,7 +37762,7 @@
   {
    "collection": "u_mes_prod_vehicleModel",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "vehicleModel",
    "sourceConcept": "vehicle_models",
    "kind": "entity",
@@ -37852,7 +37852,7 @@
   {
    "collection": "u_mes_plan_indirectActivity",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "indirectActivity",
    "sourceConcept": "indirect_activities",
    "kind": "entity",
@@ -37937,7 +37937,7 @@
   {
    "collection": "u_mes_plan_containerType",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "containerType",
    "sourceConcept": "container_types",
    "kind": "entity",
@@ -38032,7 +38032,7 @@
   {
    "collection": "u_mes_matl_movementType",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "movementType",
    "sourceConcept": "movement_types",
    "kind": "entity",
@@ -38117,7 +38117,7 @@
   {
    "collection": "u_mes_matl_stockStatus",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "stockStatus",
    "sourceConcept": "stock_statuses",
    "kind": "entity",
@@ -38197,7 +38197,7 @@
   {
    "collection": "u_mes_matl_packType",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "packType",
    "sourceConcept": "pack_types",
    "kind": "entity",
@@ -38267,7 +38267,7 @@
   {
    "collection": "u_mes_qual_defectGroup",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "defectGroup",
    "sourceConcept": "defect_groups",
    "kind": "entity",
@@ -38337,7 +38337,7 @@
   {
    "collection": "u_mes_qual_gaugeType",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "gaugeType",
    "sourceConcept": "gauge_types",
    "kind": "entity",
@@ -38407,7 +38407,7 @@
   {
    "collection": "u_mes_qual_dispositionType",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "dispositionType",
    "sourceConcept": "disposition_types",
    "kind": "entity",
@@ -38492,7 +38492,7 @@
   {
    "collection": "u_mes_qual_complaintType",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "complaintType",
    "sourceConcept": "complaint_types",
    "kind": "entity",
@@ -38562,7 +38562,7 @@
   {
    "collection": "u_mes_perf_lossCategory",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "lossCategory",
    "sourceConcept": "loss_categories",
    "kind": "entity",
@@ -38642,7 +38642,7 @@
   {
    "collection": "u_mes_perf_reasonCategory",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "reasonCategory",
    "sourceConcept": "reason_categories",
    "kind": "entity",
@@ -38712,7 +38712,7 @@
   {
    "collection": "u_mes_maint_toolType",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "toolType",
    "sourceConcept": "tool_types",
    "kind": "entity",
@@ -38787,7 +38787,7 @@
   {
    "collection": "u_mes_syst_documentType",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "documentType",
    "sourceConcept": "document_types",
    "kind": "entity",
@@ -38867,7 +38867,7 @@
   {
    "collection": "u_mes_syst_deviceType",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "deviceType",
    "sourceConcept": "device_types",
    "kind": "entity",
@@ -38937,7 +38937,7 @@
   {
    "collection": "u_mes_syst_notificationType",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "notificationType",
    "sourceConcept": "notification_types",
    "kind": "entity",
@@ -39007,7 +39007,7 @@
   {
    "collection": "u_mes_plan_andonType",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "andonType",
    "sourceConcept": "andon_types",
    "kind": "entity",
@@ -39112,7 +39112,7 @@
   {
    "collection": "u_mes_ehs_incidentType",
    "module": "ehs",
-   "moduleName": "Environment Health and Safety",
+   "moduleName": "EnvironmentHealthAndSafety",
    "entity": "incidentType",
    "sourceConcept": "incident_types",
    "kind": "entity",
@@ -39192,7 +39192,7 @@
   {
    "collection": "u_mes_perf_energyType",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "energyType",
    "sourceConcept": "energy_types",
    "kind": "entity",
@@ -39272,7 +39272,7 @@
   {
    "collection": "u_mes_ehs_bodyPart",
    "module": "ehs",
-   "moduleName": "Environment Health and Safety",
+   "moduleName": "EnvironmentHealthAndSafety",
    "entity": "bodyPart",
    "sourceConcept": "body_parts",
    "kind": "entity",
@@ -39342,7 +39342,7 @@
   {
    "collection": "u_mes_ehs_injuryType",
    "module": "ehs",
-   "moduleName": "Environment Health and Safety",
+   "moduleName": "EnvironmentHealthAndSafety",
    "entity": "injuryType",
    "sourceConcept": "injury_types",
    "kind": "entity",
@@ -39412,7 +39412,7 @@
   {
    "collection": "u_mes_syst_statusDefinition",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "statusDefinition",
    "sourceConcept": "(new) status mapping",
    "kind": "entity",
@@ -39512,7 +39512,7 @@
   {
    "collection": "u_mes_syst_enumerationValue",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "enumerationValue",
    "sourceConcept": "(new) fixed enumeration mapping",
    "kind": "entity",
@@ -39602,7 +39602,7 @@
   {
    "collection": "u_mes_syst_statusTransition",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "statusTransition",
    "sourceConcept": "(new) status mapping",
    "kind": "entity",
@@ -39702,7 +39702,7 @@
   {
    "collection": "u_mes_mast_roleRequiredSkill",
    "module": "mast",
-   "moduleName": "Master Data Management",
+   "moduleName": "MasterDataManagement",
    "entity": "roleRequiredSkill",
    "sourceConcept": "roles",
    "kind": "relationship",
@@ -39779,7 +39779,7 @@
   {
    "collection": "u_mes_prod_recipeProductVariant",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "recipeProductVariant",
    "sourceConcept": "recipes",
    "kind": "relationship",
@@ -39851,7 +39851,7 @@
   {
    "collection": "u_mes_prod_recipeControlledDocument",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "recipeControlledDocument",
    "sourceConcept": "recipes",
    "kind": "relationship",
@@ -39928,7 +39928,7 @@
   {
    "collection": "u_mes_prod_workInstructionWorkCenter",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionWorkCenter",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -40000,7 +40000,7 @@
   {
    "collection": "u_mes_prod_workInstructionProductVariant",
    "module": "prod",
-   "moduleName": "Product Definition",
+   "moduleName": "ProductDefinition",
    "entity": "workInstructionProductVariant",
    "sourceConcept": "work_instructions",
    "kind": "relationship",
@@ -40072,7 +40072,7 @@
   {
    "collection": "u_mes_plan_operatorSession",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "operatorSession",
    "sourceConcept": "ext01:operatorSession",
    "kind": "entity",
@@ -40263,7 +40263,7 @@
   {
    "collection": "u_mes_plan_documentAcknowledgement",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "documentAcknowledgement",
    "sourceConcept": "ext01:documentAcknowledgement",
    "kind": "entity",
@@ -40456,7 +40456,7 @@
   {
    "collection": "u_mes_plan_interlockEvent",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "interlockEvent",
    "sourceConcept": "ext01:interlockEvent",
    "kind": "entity",
@@ -40739,7 +40739,7 @@
   {
    "collection": "u_mes_plan_recipeDownload",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "recipeDownload",
    "sourceConcept": "ext01:recipeDownload",
    "kind": "entity",
@@ -40934,7 +40934,7 @@
   {
    "collection": "u_mes_plan_setupVerification",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "setupVerification",
    "sourceConcept": "ext01:setupVerification",
    "kind": "entity",
@@ -41124,7 +41124,7 @@
   {
    "collection": "u_mes_plan_setupVerificationItem",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "setupVerificationItem",
    "sourceConcept": "ext01:setupVerification",
    "kind": "child",
@@ -41274,7 +41274,7 @@
   {
    "collection": "u_mes_matl_exposureTimer",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "exposureTimer",
    "sourceConcept": "ext01:exposureTimer",
    "kind": "entity",
@@ -41463,7 +41463,7 @@
   {
    "collection": "u_mes_matl_replenishmentRule",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "replenishmentRule",
    "sourceConcept": "ext01:replenishmentRule",
    "kind": "entity",
@@ -41625,7 +41625,7 @@
   {
    "collection": "u_mes_matl_materialDemandForecast",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "materialDemandForecast",
    "sourceConcept": "ext01:materialDemandForecast",
    "kind": "entity",
@@ -42161,7 +42161,7 @@
   {
    "collection": "u_mes_qual_characteristicPosition",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "characteristicPosition",
    "sourceConcept": "characteristics",
    "kind": "child",
@@ -42263,7 +42263,7 @@
   {
    "collection": "u_mes_qual_curveEnvelope",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "curveEnvelope",
    "sourceConcept": "ext01:curveEnvelope",
    "kind": "entity",
@@ -42447,7 +42447,7 @@
   {
    "collection": "u_mes_qual_curveEnvelopeWindow",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "curveEnvelopeWindow",
    "sourceConcept": "ext01:curveEnvelope",
    "kind": "child",
@@ -42544,7 +42544,7 @@
   {
    "collection": "u_mes_qual_measurementCurve",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "measurementCurve",
    "sourceConcept": "ext01:measurementCurve",
    "kind": "entity",
@@ -42762,7 +42762,7 @@
   {
    "collection": "u_mes_qual_measurementCurvePoint",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "measurementCurvePoint",
    "sourceConcept": "ext01:measurementCurvePoint",
    "kind": "entity",
@@ -42872,7 +42872,7 @@
   {
    "collection": "u_mes_qual_defectRecord",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "defectRecord",
    "sourceConcept": "ext01:defectRecord",
    "kind": "entity",
@@ -43209,7 +43209,7 @@
   {
    "collection": "u_mes_qual_auditSchedule",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "auditSchedule",
    "sourceConcept": "ext01:auditSchedule",
    "kind": "entity",
@@ -43382,7 +43382,7 @@
   {
    "collection": "u_mes_qual_inspectionPlanProductVariant",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "inspectionPlanProductVariant",
    "sourceConcept": "inspection_plans",
    "kind": "relationship",
@@ -43454,7 +43454,7 @@
   {
    "collection": "u_mes_perf_alarmDefinition",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "alarmDefinition",
    "sourceConcept": "ext01:alarmDefinition",
    "kind": "entity",
@@ -43584,7 +43584,7 @@
   {
    "collection": "u_mes_perf_lossSummary",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "lossSummary",
    "sourceConcept": "ext01:lossSummary",
    "kind": "entity",
@@ -43778,7 +43778,7 @@
   {
    "collection": "u_mes_perf_workCenterPerformance",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "workCenterPerformance",
    "sourceConcept": "ext01:workCenterPerformance",
    "kind": "entity",
@@ -43979,7 +43979,7 @@
   {
    "collection": "u_mes_perf_operatorPerformance",
    "module": "perf",
-   "moduleName": "Performance Management",
+   "moduleName": "PerformanceManagement",
    "entity": "operatorPerformance",
    "sourceConcept": "ext01:operatorPerformance",
    "kind": "entity",
@@ -44153,7 +44153,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderTask",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "maintenanceWorkOrderTask",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
@@ -44303,7 +44303,7 @@
   {
    "collection": "u_mes_maint_sparePartTransaction",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "sparePartTransaction",
    "sourceConcept": "ext01:sparePartTransaction",
    "kind": "entity",
@@ -44481,7 +44481,7 @@
   {
    "collection": "u_mes_maint_reliabilitySummary",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "reliabilitySummary",
    "sourceConcept": "ext01:reliabilitySummary",
    "kind": "entity",
@@ -44651,7 +44651,7 @@
   {
    "collection": "u_mes_maint_equipmentLifecycleEvent",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "equipmentLifecycleEvent",
    "sourceConcept": "ext01:equipmentLifecycleEvent",
    "kind": "entity",
@@ -44831,7 +44831,7 @@
   {
    "collection": "u_mes_syst_interlockRule",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "interlockRule",
    "sourceConcept": "ext01:interlockRule",
    "kind": "entity",
@@ -44998,7 +44998,7 @@
   {
    "collection": "u_mes_syst_statusTransitionRole",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "statusTransitionRole",
    "sourceConcept": "(new) status mapping",
    "kind": "relationship",
@@ -45070,7 +45070,7 @@
   {
    "collection": "u_mes_syst_escalationRule",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "escalationRule",
    "sourceConcept": "ext01:escalationRule",
    "kind": "entity",
@@ -45180,7 +45180,7 @@
   {
    "collection": "u_mes_syst_escalationRuleLevel",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "escalationRuleLevel",
    "sourceConcept": "ext01:escalationRule",
    "kind": "child",
@@ -45277,7 +45277,7 @@
   {
    "collection": "u_mes_syst_alertRule",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "alertRule",
    "sourceConcept": "ext01:alertRule",
    "kind": "entity",
@@ -45447,7 +45447,7 @@
   {
    "collection": "u_mes_syst_analyticsModel",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "analyticsModel",
    "sourceConcept": "ext01:analyticsModel",
    "kind": "entity",
@@ -45586,7 +45586,7 @@
   {
    "collection": "u_mes_syst_modelPrediction",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "modelPrediction",
    "sourceConcept": "ext01:modelPrediction",
    "kind": "entity",
@@ -45812,7 +45812,7 @@
   {
    "collection": "u_mes_syst_simulationStudy",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "simulationStudy",
    "sourceConcept": "ext01:simulationStudy",
    "kind": "entity",
@@ -46009,7 +46009,7 @@
   {
    "collection": "u_mes_syst_recordPolicy",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "recordPolicy",
    "sourceConcept": "ext01:recordPolicy",
    "kind": "entity",
@@ -46124,7 +46124,7 @@
   {
    "collection": "u_mes_syst_savedView",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "savedView",
    "sourceConcept": "ext01:savedView",
    "kind": "entity",
@@ -46229,7 +46229,7 @@
   {
    "collection": "u_mes_syst_backupRun",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "backupRun",
    "sourceConcept": "ext01:backupRun",
    "kind": "entity",
@@ -46374,7 +46374,7 @@
   {
    "collection": "u_mes_matl_storageLocationAllowedItem",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "storageLocationAllowedItem",
    "sourceConcept": "storage_locations",
    "kind": "relationship",
@@ -46456,7 +46456,7 @@
   {
    "collection": "u_mes_syst_computerisedSystem",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "computerisedSystem",
    "sourceConcept": "gmp01:computerisedSystem",
    "kind": "entity",
@@ -46619,7 +46619,7 @@
   {
    "collection": "u_mes_syst_systemValidation",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "systemValidation",
    "sourceConcept": "gmp01:systemValidation",
    "kind": "entity",
@@ -46843,7 +46843,7 @@
   {
    "collection": "u_mes_syst_systemPeriodicReview",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "systemPeriodicReview",
    "sourceConcept": "gmp01:systemPeriodicReview",
    "kind": "entity",
@@ -47032,7 +47032,7 @@
   {
    "collection": "u_mes_syst_auditTrailReview",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "auditTrailReview",
    "sourceConcept": "gmp01:auditTrailReview",
    "kind": "entity",
@@ -47219,7 +47219,7 @@
   {
    "collection": "u_mes_syst_userAccessReview",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "userAccessReview",
    "sourceConcept": "gmp01:userAccessReview",
    "kind": "entity",
@@ -47376,7 +47376,7 @@
   {
    "collection": "u_mes_syst_userAccessReviewLine",
    "module": "syst",
-   "moduleName": "System and Integration",
+   "moduleName": "SystemAndIntegration",
    "entity": "userAccessReviewLine",
    "sourceConcept": "gmp01:userAccessReview",
    "kind": "child",
@@ -47511,7 +47511,7 @@
   {
    "collection": "u_mes_bmr_batchRecordReview",
    "module": "bmr",
-   "moduleName": "Batch Manufacturing Record",
+   "moduleName": "BatchManufacturingRecord",
    "entity": "batchRecordReview",
    "sourceConcept": "gmp01:batchRecordReview",
    "kind": "entity",
@@ -47723,7 +47723,7 @@
   {
    "collection": "u_mes_bmr_batchRecordReviewException",
    "module": "bmr",
-   "moduleName": "Batch Manufacturing Record",
+   "moduleName": "BatchManufacturingRecord",
    "entity": "batchRecordReviewException",
    "sourceConcept": "gmp01:batchRecordReview",
    "kind": "child",
@@ -47863,7 +47863,7 @@
   {
    "collection": "u_mes_bmr_batchRelease",
    "module": "bmr",
-   "moduleName": "Batch Manufacturing Record",
+   "moduleName": "BatchManufacturingRecord",
    "entity": "batchRelease",
    "sourceConcept": "gmp01:batchRelease",
    "kind": "entity",
@@ -48068,7 +48068,7 @@
   {
    "collection": "u_mes_bmr_yieldReconciliation",
    "module": "bmr",
-   "moduleName": "Batch Manufacturing Record",
+   "moduleName": "BatchManufacturingRecord",
    "entity": "yieldReconciliation",
    "sourceConcept": "gmp01:yieldReconciliation",
    "kind": "entity",
@@ -48278,7 +48278,7 @@
   {
    "collection": "u_mes_plan_lineClearance",
    "module": "plan",
-   "moduleName": "Planning and Execution",
+   "moduleName": "PlanningAndExecution",
    "entity": "lineClearance",
    "sourceConcept": "gmp01:lineClearance",
    "kind": "entity",
@@ -48505,7 +48505,7 @@
   {
    "collection": "u_mes_maint_logbookEntry",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "logbookEntry",
    "sourceConcept": "gmp01:logbookEntry",
    "kind": "entity",
@@ -48705,7 +48705,7 @@
   {
    "collection": "u_mes_maint_cleaningRecord",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "cleaningRecord",
    "sourceConcept": "gmp01:cleaningRecord",
    "kind": "entity",
@@ -48920,7 +48920,7 @@
   {
    "collection": "u_mes_qual_environmentalMonitoringPoint",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "environmentalMonitoringPoint",
    "sourceConcept": "gmp01:environmentalMonitoringPoint",
    "kind": "entity",
@@ -49045,7 +49045,7 @@
   {
    "collection": "u_mes_qual_environmentalMonitoringResult",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "environmentalMonitoringResult",
    "sourceConcept": "gmp01:environmentalMonitoringResult",
    "kind": "entity",
@@ -49195,7 +49195,7 @@
   {
    "collection": "u_mes_matl_dispenseRecord",
    "module": "matl",
-   "moduleName": "Material Management",
+   "moduleName": "MaterialManagement",
    "entity": "dispenseRecord",
    "sourceConcept": "gmp01:dispenseRecord",
    "kind": "entity",
@@ -49432,7 +49432,7 @@
   {
    "collection": "u_mes_qual_retentionSample",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "retentionSample",
    "sourceConcept": "gmp01:retentionSample",
    "kind": "entity",
@@ -49633,7 +49633,7 @@
   {
    "collection": "u_mes_qual_riskAssessment",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "riskAssessment",
    "sourceConcept": "gmp01:riskAssessment",
    "kind": "entity",
@@ -49804,7 +49804,7 @@
   {
    "collection": "u_mes_qual_productQualityReview",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "productQualityReview",
    "sourceConcept": "gmp01:productQualityReview",
    "kind": "entity",
@@ -50000,7 +50000,7 @@
   {
    "collection": "u_mes_qual_productRecall",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "productRecall",
    "sourceConcept": "gmp01:productRecall",
    "kind": "entity",
@@ -50218,7 +50218,7 @@
   {
    "collection": "u_mes_qual_productRecallLot",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "productRecallLot",
    "sourceConcept": "gmp01:productRecall",
    "kind": "child",
@@ -50342,7 +50342,7 @@
   {
    "collection": "u_mes_qual_processValidation",
    "module": "qual",
-   "moduleName": "Quality Management",
+   "moduleName": "QualityManagement",
    "entity": "processValidation",
    "sourceConcept": "gmp01:processValidation",
    "kind": "entity",
@@ -50546,7 +50546,7 @@
   {
    "collection": "u_mes_maint_equipmentQualification",
    "module": "maint",
-   "moduleName": "Tooling And Maintenance",
+   "moduleName": "ToolingAndMaintenance",
    "entity": "equipmentQualification",
    "sourceConcept": "gmp01:equipmentQualification",
    "kind": "entity",
@@ -50750,7 +50750,7 @@
   {
    "collection": "u_mes_mmr_masterManufacturingRecord",
    "module": "mmr",
-   "moduleName": "Master Manufacturing Record",
+   "moduleName": "MasterManufacturingRecord",
    "entity": "masterManufacturingRecord",
    "sourceConcept": "gmp01:masterManufacturingRecord",
    "kind": "entity",
@@ -51047,7 +51047,7 @@
   {
    "collection": "u_mes_mmr_masterManufacturingRecordRecipe",
    "module": "mmr",
-   "moduleName": "Master Manufacturing Record",
+   "moduleName": "MasterManufacturingRecord",
    "entity": "masterManufacturingRecordRecipe",
    "sourceConcept": "gmp01:masterManufacturingRecord",
    "kind": "relationship",
@@ -51119,7 +51119,7 @@
   {
    "collection": "u_mes_bmr_batchManufacturingRecord",
    "module": "bmr",
-   "moduleName": "Batch Manufacturing Record",
+   "moduleName": "BatchManufacturingRecord",
    "entity": "batchManufacturingRecord",
    "sourceConcept": "gmp01:batchManufacturingRecord",
    "kind": "entity",

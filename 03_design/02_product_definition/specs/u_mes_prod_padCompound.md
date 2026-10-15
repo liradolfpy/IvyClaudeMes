@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Product Definition (prod) |
+| Module | ProductDefinition (prod) |
 | Purpose | Brake pad friction compounds offered as a variant option |
 | Kind | Entity |
 | Data class | Master |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Chart definition per characteristic and work centre: chart type, subgroup size, control limits, rules |
 | Kind | Entity |
 | Data class | Master |

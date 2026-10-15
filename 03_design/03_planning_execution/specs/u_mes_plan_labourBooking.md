@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Clock-on / clock-off of people against orders, operations and indirect activities |
 | Kind | Entity |
 | Data class | Transaction |

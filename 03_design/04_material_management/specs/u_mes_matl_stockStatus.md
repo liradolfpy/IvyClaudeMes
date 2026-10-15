@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Material Management (matl) |
+| Module | MaterialManagement (matl) |
 | Purpose | Stock statuses (unrestricted, quality inspection, blocked, reserved) |
 | Kind | Entity |
 | Data class | Master |

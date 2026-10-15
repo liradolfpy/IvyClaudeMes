@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Planning and Execution (plan) |
+| Module | PlanningAndExecution (plan) |
 | Purpose | Completion record for each work-instruction step: values entered, confirmations, duration, device data |
 | Kind | Entity |
 | Data class | Transaction |

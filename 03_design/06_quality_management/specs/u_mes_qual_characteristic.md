@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Product and process characteristics with nominal, tolerance, class (critical / significant), method |
 | Kind | Entity |
 | Data class | Master |

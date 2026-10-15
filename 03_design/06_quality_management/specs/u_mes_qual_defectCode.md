@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Defect / NC code catalogue with group, default disposition routing and severity |
 | Kind | Entity |
 | Data class | Master |

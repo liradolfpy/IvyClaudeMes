@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Performance Management (perf) |
+| Module | PerformanceManagement (perf) |
 | Purpose | OEE per equipment / line and shift: availability, performance, quality with the time and count basis |
 | Kind | Entity |
 | Data class | Transaction |

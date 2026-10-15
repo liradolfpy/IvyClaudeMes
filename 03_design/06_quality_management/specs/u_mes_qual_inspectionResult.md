@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Quality Management (qual) |
+| Module | QualityManagement (qual) |
 | Purpose | Measured and attribute results per unit / lot / receipt against a characteristic |
 | Kind | Entity |
 | Data class | Transaction |
