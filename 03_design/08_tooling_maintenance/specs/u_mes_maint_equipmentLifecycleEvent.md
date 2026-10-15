@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning. |
 | Kind | Entity |
 | Data class | Transaction |

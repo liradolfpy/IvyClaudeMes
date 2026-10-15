@@ -96,7 +96,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | 05_traceability | trac | Traceability |
 | 06_quality_management | qual | Quality Management |
 | 07_performance_management | perf | Performance Management |
-| 08_tooling_maintenance | maint | Tooling & Maintenance |
+| 08_tooling_maintenance | maint | Tooling And Maintenance |
 | 09_system_integration | syst | System and Integration |
 | 10_environment_health_safety | ehs | Environment Health and Safety |
 | 11_batch_manufacturing_record | bmr | Batch Manufacturing Record |

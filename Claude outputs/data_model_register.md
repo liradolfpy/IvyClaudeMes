@@ -355,7 +355,7 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_perf_workCenterPerformance | entity | transaction | 16-digit numeric string | WCP-<yyyymmddhh>-<work centre code> | - | 34 |
 | 21 | u_mes_perf_operatorPerformance | entity | transaction | 16-digit numeric string | OPF-<yyyymmdd>-<badge no>-<work centre code> | - | 29 |
 
-### maint - Tooling & Maintenance
+### maint - Tooling And Maintenance
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|

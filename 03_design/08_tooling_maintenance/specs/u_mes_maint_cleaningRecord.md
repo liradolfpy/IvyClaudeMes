@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Cleaning of a piece of equipment after use or before a product change: procedure, dirty hold time, cleaning, verification and the clean hold time it opens. |
 | Kind | Entity |
 | Data class | Transaction |

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | One document per labour of a maintenance work order |
 | Kind | Child |
 | Data class | Transaction |

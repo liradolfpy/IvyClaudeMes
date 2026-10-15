@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Maintenance spares with stock, minimum, location, where-used |
 | Kind | Entity |
 | Data class | Master |

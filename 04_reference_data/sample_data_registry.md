@@ -3238,7 +3238,7 @@ Collections: 369 | Documents: 5390 | Sample period: April to September 2026; pro
 | 9 | 1327000000000009 | OPF-20260924-10231-FIN-01 | OPF-20260924-10231-FIN-01 | Calculated |
 | 10 | 1327000000000010 | OPF-20260917-10231-GDC-01 | OPF-20260917-10231-GDC-01 | Recalculated |
 
-## Tooling & Maintenance (maint)
+## Tooling And Maintenance (maint)
 
 ### u_mes_maint_maintenancePlan
 

@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Links one maintenance plan to one required skill; one document per link |
 | Kind | Relationship |
 | Data class | Master |

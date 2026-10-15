@@ -23,7 +23,7 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | trac | Traceability | 0 | 5 | 4 | 0 | 0 | 9 |
 | qual | Quality Management | 29 | 55 | 0 | 1 | 0 | 85 |
 | perf | Performance Management | 6 | 5 | 6 | 4 | 0 | 21 |
-| maint | Tooling & Maintenance | 9 | 11 | 1 | 0 | 0 | 21 |
+| maint | Tooling And Maintenance | 9 | 11 | 1 | 0 | 0 | 21 |
 | syst | System and Integration | 27 | 13 | 0 | 0 | 4 | 44 |
 | ehs | Environment Health and Safety | 3 | 3 | 0 | 0 | 0 | 6 |
 | bmr | Batch Manufacturing Record | 0 | 5 | 0 | 0 | 0 | 5 |
@@ -324,27 +324,27 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | perf | Performance Management | u_mes_perf_lossSummary | Reports | Loss Summary |
 | perf | Performance Management | u_mes_perf_workCenterPerformance | Reports | Station Performance |
 | perf | Performance Management | u_mes_perf_operatorPerformance | Reports | Operator Performance |
-| maint | Tooling & Maintenance | u_mes_maint_maintenancePlan | Master | Maintenance Plans |
-| maint | Tooling & Maintenance | u_mes_maint_maintenancePlanTask | Master | Maintenance Plan Tasks |
-| maint | Tooling & Maintenance | u_mes_maint_maintenancePlanRequiredSkill | Master | Maintenance Plan Required Skills |
-| maint | Tooling & Maintenance | u_mes_maint_maintenancePlanRequiredSparePart | Master | Maintenance Plan Required Spare Parts |
-| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrder | Transaction | Maintenance Work Orders |
-| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderAssignedToUser | Transaction | Maintenance Work Order Assignees |
-| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderLabour | Transaction | Maintenance Work Order Labour |
-| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderUsedSparePart | Transaction | Maintenance Work Order Used Spare Parts |
-| maint | Tooling & Maintenance | u_mes_maint_sparePart | Master | Spare Parts |
-| maint | Tooling & Maintenance | u_mes_maint_sparePartUsedOnEquipment | Master | Spare Part Used on Equipment |
-| maint | Tooling & Maintenance | u_mes_maint_tool | Master | Tools |
-| maint | Tooling & Maintenance | u_mes_maint_toolItem | Master | Tool Applicable Items |
-| maint | Tooling & Maintenance | u_mes_maint_toolLifeRecord | Transaction | Tool Life Records |
-| maint | Tooling & Maintenance | u_mes_maint_toolType | Master | Tool Types |
-| maint | Tooling & Maintenance | u_mes_maint_maintenanceWorkOrderTask | Transaction | Work Order Checklist |
-| maint | Tooling & Maintenance | u_mes_maint_sparePartTransaction | Transaction | Spare Part Transactions |
-| maint | Tooling & Maintenance | u_mes_maint_reliabilitySummary | Reports | Reliability Summary |
-| maint | Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | Transaction | Equipment Lifecycle |
-| maint | Tooling & Maintenance | u_mes_maint_logbookEntry | Transaction | Equipment and Area Logbook |
-| maint | Tooling & Maintenance | u_mes_maint_cleaningRecord | Transaction | Cleaning Records |
-| maint | Tooling & Maintenance | u_mes_maint_equipmentQualification | Transaction | Equipment Qualifications |
+| maint | Tooling And Maintenance | u_mes_maint_maintenancePlan | Master | Maintenance Plans |
+| maint | Tooling And Maintenance | u_mes_maint_maintenancePlanTask | Master | Maintenance Plan Tasks |
+| maint | Tooling And Maintenance | u_mes_maint_maintenancePlanRequiredSkill | Master | Maintenance Plan Required Skills |
+| maint | Tooling And Maintenance | u_mes_maint_maintenancePlanRequiredSparePart | Master | Maintenance Plan Required Spare Parts |
+| maint | Tooling And Maintenance | u_mes_maint_maintenanceWorkOrder | Transaction | Maintenance Work Orders |
+| maint | Tooling And Maintenance | u_mes_maint_maintenanceWorkOrderAssignedToUser | Transaction | Maintenance Work Order Assignees |
+| maint | Tooling And Maintenance | u_mes_maint_maintenanceWorkOrderLabour | Transaction | Maintenance Work Order Labour |
+| maint | Tooling And Maintenance | u_mes_maint_maintenanceWorkOrderUsedSparePart | Transaction | Maintenance Work Order Used Spare Parts |
+| maint | Tooling And Maintenance | u_mes_maint_sparePart | Master | Spare Parts |
+| maint | Tooling And Maintenance | u_mes_maint_sparePartUsedOnEquipment | Master | Spare Part Used on Equipment |
+| maint | Tooling And Maintenance | u_mes_maint_tool | Master | Tools |
+| maint | Tooling And Maintenance | u_mes_maint_toolItem | Master | Tool Applicable Items |
+| maint | Tooling And Maintenance | u_mes_maint_toolLifeRecord | Transaction | Tool Life Records |
+| maint | Tooling And Maintenance | u_mes_maint_toolType | Master | Tool Types |
+| maint | Tooling And Maintenance | u_mes_maint_maintenanceWorkOrderTask | Transaction | Work Order Checklist |
+| maint | Tooling And Maintenance | u_mes_maint_sparePartTransaction | Transaction | Spare Part Transactions |
+| maint | Tooling And Maintenance | u_mes_maint_reliabilitySummary | Reports | Reliability Summary |
+| maint | Tooling And Maintenance | u_mes_maint_equipmentLifecycleEvent | Transaction | Equipment Lifecycle |
+| maint | Tooling And Maintenance | u_mes_maint_logbookEntry | Transaction | Equipment and Area Logbook |
+| maint | Tooling And Maintenance | u_mes_maint_cleaningRecord | Transaction | Cleaning Records |
+| maint | Tooling And Maintenance | u_mes_maint_equipmentQualification | Transaction | Equipment Qualifications |
 | syst | System and Integration | u_mes_syst_erpMessage | Transaction | ERP Messages |
 | syst | System and Integration | u_mes_syst_integrationConnector | Master | Integration Connectors |
 | syst | System and Integration | u_mes_syst_integrationConnectorFunction | Master | Integration Connector Functions |

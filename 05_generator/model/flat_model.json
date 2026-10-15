@@ -8,7 +8,7 @@
   "trac": "Traceability",
   "qual": "Quality Management",
   "perf": "Performance Management",
-  "maint": "Tooling & Maintenance",
+  "maint": "Tooling And Maintenance",
   "syst": "System and Integration",
   "ehs": "Environment Health and Safety",
   "bmr": "Batch Manufacturing Record",
@@ -30581,7 +30581,7 @@
   {
    "collection": "u_mes_maint_maintenancePlan",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenancePlan",
    "sourceConcept": "maintenance_plans",
    "kind": "entity",
@@ -30729,7 +30729,7 @@
   {
    "collection": "u_mes_maint_maintenancePlanTask",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenancePlanTask",
    "sourceConcept": "maintenance_plans",
    "kind": "child",
@@ -30811,7 +30811,7 @@
   {
    "collection": "u_mes_maint_maintenancePlanRequiredSkill",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenancePlanRequiredSkill",
    "sourceConcept": "maintenance_plans",
    "kind": "relationship",
@@ -30883,7 +30883,7 @@
   {
    "collection": "u_mes_maint_maintenancePlanRequiredSparePart",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenancePlanRequiredSparePart",
    "sourceConcept": "maintenance_plans",
    "kind": "child",
@@ -30960,7 +30960,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrder",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenanceWorkOrder",
    "sourceConcept": "maintenance_work_orders",
    "kind": "entity",
@@ -31279,7 +31279,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderAssignedToUser",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenanceWorkOrderAssignedToUser",
    "sourceConcept": "maintenance_work_orders",
    "kind": "relationship",
@@ -31383,7 +31383,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderLabour",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenanceWorkOrderLabour",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
@@ -31492,7 +31492,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderUsedSparePart",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenanceWorkOrderUsedSparePart",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
@@ -31606,7 +31606,7 @@
   {
    "collection": "u_mes_maint_sparePart",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "sparePart",
    "sourceConcept": "spare_parts",
    "kind": "entity",
@@ -31763,7 +31763,7 @@
   {
    "collection": "u_mes_maint_sparePartUsedOnEquipment",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "sparePartUsedOnEquipment",
    "sourceConcept": "spare_parts",
    "kind": "relationship",
@@ -31835,7 +31835,7 @@
   {
    "collection": "u_mes_maint_tool",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "tool",
    "sourceConcept": "tools",
    "kind": "entity",
@@ -32058,7 +32058,7 @@
   {
    "collection": "u_mes_maint_toolItem",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "toolItem",
    "sourceConcept": "tools",
    "kind": "relationship",
@@ -32130,7 +32130,7 @@
   {
    "collection": "u_mes_maint_toolLifeRecord",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "toolLifeRecord",
    "sourceConcept": "tool_life_records",
    "kind": "entity",
@@ -38712,7 +38712,7 @@
   {
    "collection": "u_mes_maint_toolType",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "toolType",
    "sourceConcept": "tool_types",
    "kind": "entity",
@@ -44153,7 +44153,7 @@
   {
    "collection": "u_mes_maint_maintenanceWorkOrderTask",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "maintenanceWorkOrderTask",
    "sourceConcept": "maintenance_work_orders",
    "kind": "child",
@@ -44303,7 +44303,7 @@
   {
    "collection": "u_mes_maint_sparePartTransaction",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "sparePartTransaction",
    "sourceConcept": "ext01:sparePartTransaction",
    "kind": "entity",
@@ -44481,7 +44481,7 @@
   {
    "collection": "u_mes_maint_reliabilitySummary",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "reliabilitySummary",
    "sourceConcept": "ext01:reliabilitySummary",
    "kind": "entity",
@@ -44651,7 +44651,7 @@
   {
    "collection": "u_mes_maint_equipmentLifecycleEvent",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "equipmentLifecycleEvent",
    "sourceConcept": "ext01:equipmentLifecycleEvent",
    "kind": "entity",
@@ -48505,7 +48505,7 @@
   {
    "collection": "u_mes_maint_logbookEntry",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "logbookEntry",
    "sourceConcept": "gmp01:logbookEntry",
    "kind": "entity",
@@ -48705,7 +48705,7 @@
   {
    "collection": "u_mes_maint_cleaningRecord",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "cleaningRecord",
    "sourceConcept": "gmp01:cleaningRecord",
    "kind": "entity",
@@ -50546,7 +50546,7 @@
   {
    "collection": "u_mes_maint_equipmentQualification",
    "module": "maint",
-   "moduleName": "Tooling & Maintenance",
+   "moduleName": "Tooling And Maintenance",
    "entity": "equipmentQualification",
    "sourceConcept": "gmp01:equipmentQualification",
    "kind": "entity",

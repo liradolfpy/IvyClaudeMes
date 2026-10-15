@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Qualification of a piece of equipment by phase (design, installation, operational, performance, periodic requalification), with protocol, tests, deviations, approval and the next requalification date. |
 | Kind | Entity |
 | Data class | Transaction |

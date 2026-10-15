@@ -1,4 +1,4 @@
-# Tooling & Maintenance (maint) - module summary
+# Tooling And Maintenance (maint) - module summary
 
 | # | Collection | Kind | Data class | Keys | Required (non-null) keys | Keys with allowed values | Indexes |
 |---|---|---|---|---|---|---|---|

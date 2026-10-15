@@ -365,7 +365,7 @@ The registry of every _id, business number and display value in the sample data 
 | 20 | u_mes_perf_workCenterPerformance | entity | transaction | 16-digit numeric string | WCP-<yyyymmddhh>-<work centre code> | - | 35 |
 | 21 | u_mes_perf_operatorPerformance | entity | transaction | 16-digit numeric string | OPF-<yyyymmdd>-<badge no>-<work centre code> | - | 30 |
 
-### maint - Tooling & Maintenance
+### maint - Tooling And Maintenance
 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
@@ -472,6 +472,7 @@ The registry of every _id, business number and display value in the sample data 
 
 | Version | Date | Change |
 |---|---|---|
+| 2.9 | 15 Oct 2026 | Module maint renamed Tooling And Maintenance; ampersand removed from all module names (D060). No collection, key or ID changes |
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
 | 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became 369 collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |

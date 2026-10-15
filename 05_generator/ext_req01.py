@@ -1168,7 +1168,7 @@ ADD += _GMP.ADD
 for _k, _v in _GMP.ENUM_ADD.items():
     ENUM_ADD[_k] = ENUM_ADD.get(_k, []) + [x for x in _v if x not in ENUM_ADD.get(_k, [])]
 
-MOD_NAMES={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling & Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety', 'bmr': 'Batch Manufacturing Record', 'mmr': 'Master Manufacturing Record'}
+MOD_NAMES={'mast': 'Master Data Management', 'prod': 'Product Definition', 'plan': 'Planning and Execution', 'matl': 'Material Management', 'trac': 'Traceability', 'qual': 'Quality Management', 'perf': 'Performance Management', 'maint': 'Tooling And Maintenance', 'syst': 'System and Integration', 'ehs': 'Environment Health and Safety', 'bmr': 'Batch Manufacturing Record', 'mmr': 'Master Manufacturing Record'}
 BYENT={c["entity"]:c for c in NEW}
 ROOTS={c["entity"] for c in NEW if c["kind"]=="entity"}
 

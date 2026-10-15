@@ -143,7 +143,7 @@
                     "data_index" : "_id"
                 }, 
 				                {
-                    "title" : "ThisIsANormalColumn", 
+                    "title" : "ThisIs A NormalColumn", 
                     "width" : "300px", 
                     "align" : "center", 
                    
@@ -154,7 +154,7 @@
                     "title" : "DtFormat", 
                     "width" : "120px", 
                     "align" : "center", 
-                    "DtFormat" : "YYYY-MM-DD", 
+                    "dtFormat" : "YYYY-MM-DD", 
                     "data_index" : "dt",
 					"isIST" : true, 
                 }, 
@@ -162,7 +162,7 @@
                     "title" : "DateTime", 
                     "width" : "200px", 
                     "align" : "center", 
-                    "DtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
                     "isIST" : true, 
                     "data_index" : "dtTime"
                 }, 
@@ -188,10 +188,10 @@
                     "data_index" : "rating"
                 }
             ], 
-            "rat" : [
+            "rowAction" : [
               
             ], 
-            "ratConfig" :[]
+            "action" :[]
 		  "zenPop" : {
         }, 
             "zenFuncs" : {

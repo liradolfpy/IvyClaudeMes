@@ -15,7 +15,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | trac | Traceability | 9 |
 | qual | Quality Management | 85 |
 | perf | Performance Management | 21 |
-| maint | Tooling & Maintenance | 21 |
+| maint | Tooling And Maintenance | 21 |
 | syst | System and Integration | 44 |
 | ehs | Environment Health and Safety | 6 |
 | bmr | Batch Manufacturing Record | 5 |
@@ -347,7 +347,7 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 | 20 | u_mes_perf_workCenterPerformance | entity | transaction | - | Hourly station performance: throughput, cycle time against takt, WIP, blocked and starved time and constraint flag. | recordNo |
 | 21 | u_mes_perf_operatorPerformance | entity | transaction | - | Labour efficiency per operator, station, variant, shift and date. | recordNo |
 
-## maint - Tooling & Maintenance
+## maint - Tooling And Maintenance
 
 | # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |
 |---|---|---|---|---|---|---|

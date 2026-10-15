@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Tool mount / dismount / usage / regrind events with shots or cycles consumed |
 | Kind | Entity |
 | Data class | Transaction |

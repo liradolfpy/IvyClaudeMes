@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Spare-part issue, return, receipt, adjustment and scrap with work order and equipment. |
 | Kind | Entity |
 | Data class | Transaction |

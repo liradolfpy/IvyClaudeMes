@@ -153,18 +153,18 @@ Each collection with a lifecycle defines its own `status` values. The first valu
 | Performance Management | u_mes_perf_lossSummary | Calculated, Recalculated |
 | Performance Management | u_mes_perf_workCenterPerformance | Calculated, Recalculated |
 | Performance Management | u_mes_perf_operatorPerformance | Calculated, Recalculated |
-| Tooling & Maintenance | u_mes_maint_maintenancePlan | Active, Suspended, Inactive |
-| Tooling & Maintenance | u_mes_maint_maintenanceWorkOrder | Reported, Planned, In Progress, Completed, Closed, Cancelled |
-| Tooling & Maintenance | u_mes_maint_sparePart | Active, Obsolete |
-| Tooling & Maintenance | u_mes_maint_tool | Available, Mounted, In Maintenance, Life Expired, Scrapped |
-| Tooling & Maintenance | u_mes_maint_toolLifeRecord | Recorded, Voided |
-| Tooling & Maintenance | u_mes_maint_toolType | Active, Inactive |
-| Tooling & Maintenance | u_mes_maint_sparePartTransaction | Posted, Reversed |
-| Tooling & Maintenance | u_mes_maint_reliabilitySummary | Calculated, Recalculated |
-| Tooling & Maintenance | u_mes_maint_equipmentLifecycleEvent | Recorded, Approved, Cancelled |
-| Tooling & Maintenance | u_mes_maint_logbookEntry | Recorded, Reviewed |
-| Tooling & Maintenance | u_mes_maint_cleaningRecord | In Progress, Completed, Verified, Expired, Rejected |
-| Tooling & Maintenance | u_mes_maint_equipmentQualification | Planned, In Execution, Passed, Failed, Approved |
+| Tooling And Maintenance | u_mes_maint_maintenancePlan | Active, Suspended, Inactive |
+| Tooling And Maintenance | u_mes_maint_maintenanceWorkOrder | Reported, Planned, In Progress, Completed, Closed, Cancelled |
+| Tooling And Maintenance | u_mes_maint_sparePart | Active, Obsolete |
+| Tooling And Maintenance | u_mes_maint_tool | Available, Mounted, In Maintenance, Life Expired, Scrapped |
+| Tooling And Maintenance | u_mes_maint_toolLifeRecord | Recorded, Voided |
+| Tooling And Maintenance | u_mes_maint_toolType | Active, Inactive |
+| Tooling And Maintenance | u_mes_maint_sparePartTransaction | Posted, Reversed |
+| Tooling And Maintenance | u_mes_maint_reliabilitySummary | Calculated, Recalculated |
+| Tooling And Maintenance | u_mes_maint_equipmentLifecycleEvent | Recorded, Approved, Cancelled |
+| Tooling And Maintenance | u_mes_maint_logbookEntry | Recorded, Reviewed |
+| Tooling And Maintenance | u_mes_maint_cleaningRecord | In Progress, Completed, Verified, Expired, Rejected |
+| Tooling And Maintenance | u_mes_maint_equipmentQualification | Planned, In Execution, Passed, Failed, Approved |
 | System and Integration | u_mes_syst_erpMessage | Queued, Sent, Acknowledged, Failed, Dead Letter |
 | System and Integration | u_mes_syst_integrationConnector | Active, Disabled |
 | System and Integration | u_mes_syst_iotDevice | Active, Inactive, Retired |

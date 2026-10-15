@@ -2,7 +2,7 @@
 # (name, domain, idPrefix, businessKey, purpose, sources, refs, volumePerYear, storage, embedNote)
 D_ENT="1 Master Data Management"; D_PRD="2 Product Definition"; D_EXE="3 Planning and Execution"
 D_MAT="4 Material Management"; D_TRC="5 Traceability"; D_QLT="6 Quality Management"; D_EQP="7 Performance Management"
-D_MNT="8 Tooling & Maintenance"; D_SYS="9 System and Integration"; D_ESA="10 Environment Health and Safety"
+D_MNT="8 Tooling And Maintenance"; D_SYS="9 System and Integration"; D_ESA="10 Environment Health and Safety"
 C=[
 ("enterprises",D_ENT,"ENT","enterpriseCode","Legal entities of the group (ISA-95 Enterprise level); tax and registration data","Opcenter, Proficy",[],"<20 total","standard","Embeds addresses and registrations (bounded, read together)"),
 ("sites",D_ENT,"SITE","siteCode","Plants and warehouses (ISA-95 Site); timezone, address, IATF certificate","Proficy, CM, Infor",["enterprises"],"<20 total","standard","Embeds address, certificates; referenced by every document"),

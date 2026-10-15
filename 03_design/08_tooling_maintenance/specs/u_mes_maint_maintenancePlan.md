@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Preventive / condition-based plans per equipment or tool with tasks, interval and next due |
 | Kind | Entity |
 | Data class | Master |

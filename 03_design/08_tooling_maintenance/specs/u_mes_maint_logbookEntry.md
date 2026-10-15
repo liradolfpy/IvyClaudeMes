@@ -2,7 +2,7 @@
 
 | Property | Value |
 |---|---|
-| Module | Tooling & Maintenance (maint) |
+| Module | Tooling And Maintenance (maint) |
 | Purpose | Chronological use log of a piece of equipment or an area: production, cleaning, maintenance, calibration, line clearance, qualification and idle periods, with the order and lot concerned. |
 | Kind | Entity |
 | Data class | Transaction |

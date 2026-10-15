@@ -11,7 +11,7 @@
 
 ## 1. How the workbook was read
 
-The `MES Requirement` sheet is an MES maturity audit questionnaire. Each row has a question number, a source module name (Production Execution, Product Tracking & Traceability, Quality Management, Performance & OEE, Maintenance, Process Management, Material & Inventory Management, Personnel & Labor, Document Management, Resource & Equipment Mgmt, Analytics & Intelligence, General), the feature covered, the audit question, an "Implementation Status (Select)" answer and the four maturity descriptions Level 1 to Level 4. The `Options_*` sheets hold the full six-step answer scale (0 to 5) for each question; Level 5 always describes predictive or autonomous behaviour.
+The `MES Requirement` sheet is an MES maturity audit questionnaire. Each row has a question number, a source module name (Production Execution, Product Tracking And Traceability, Quality Management, Performance And OEE, Maintenance, Process Management, Material And Inventory Management, Personnel And Labor, Document Management, Resource And Equipment Mgmt, Analytics And Intelligence, General), the feature covered, the audit question, an "Implementation Status (Select)" answer and the four maturity descriptions Level 1 to Level 4. The `Options_*` sheets hold the full six-step answer scale (0 to 5) for each question; Level 5 always describes predictive or autonomous behaviour.
 
 For every question this document states:
 
@@ -121,10 +121,10 @@ A question is classed "New collection" when it cannot reach Level 3 without a co
 | 1325 | perf | Performance Management | `u_mes_perf_lossSummary` | Entity | Reports | Loss Summary | Loss Pareto per line, shift, day and reason | Q37, Q44, Q45 |
 | 1326 | perf | Performance Management | `u_mes_perf_workCenterPerformance` | Entity | Reports | Station Performance | Hourly throughput, cycle time, WIP, blocked / starved time and constraint flag per station | Q38, Q40, Q45, Q116 |
 | 1327 | perf | Performance Management | `u_mes_perf_operatorPerformance` | Entity | Reports | Operator Performance | Labour efficiency per operator, station, variant and shift | Q86, Q88 |
-| 1328 | maint | Tooling & Maintenance | `u_mes_maint_maintenanceWorkOrderTask` | Child | Transaction | Work Order Checklist | Checklist task results of a maintenance work order | Q49 |
-| 1329 | maint | Tooling & Maintenance | `u_mes_maint_sparePartTransaction` | Entity | Transaction | Spare Part Transactions | Spare-part issue, return, receipt and adjustment | Q52 |
-| 1330 | maint | Tooling & Maintenance | `u_mes_maint_reliabilitySummary` | Entity | Reports | Reliability Summary | MTBF / MTTR per equipment, line and period | Q53 |
-| 1331 | maint | Tooling & Maintenance | `u_mes_maint_equipmentLifecycleEvent` | Entity | Transaction | Equipment Lifecycle | Commissioning, overhaul, refurbishment, health assessment and decommissioning events | Q104, Q105 |
+| 1328 | maint | Tooling And Maintenance | `u_mes_maint_maintenanceWorkOrderTask` | Child | Transaction | Work Order Checklist | Checklist task results of a maintenance work order | Q49 |
+| 1329 | maint | Tooling And Maintenance | `u_mes_maint_sparePartTransaction` | Entity | Transaction | Spare Part Transactions | Spare-part issue, return, receipt and adjustment | Q52 |
+| 1330 | maint | Tooling And Maintenance | `u_mes_maint_reliabilitySummary` | Entity | Reports | Reliability Summary | MTBF / MTTR per equipment, line and period | Q53 |
+| 1331 | maint | Tooling And Maintenance | `u_mes_maint_equipmentLifecycleEvent` | Entity | Transaction | Equipment Lifecycle | Commissioning, overhaul, refurbishment, health assessment and decommissioning events | Q104, Q105 |
 | 1332 | syst | System and Integration | `u_mes_syst_interlockRule` | Entity | Master | Interlock Rules | Configured checks and their override policy | X1 list |
 | 1333 | syst | System and Integration | `u_mes_syst_statusTransitionRole` | Relationship | Master | Status Transition Roles | Roles allowed to perform a status transition | X4 list |
 | 1334 | syst | System and Integration | `u_mes_syst_escalationRule` | Entity | Master | Escalation Rules | Routing and SLA rule for an exception type | X2 list |
@@ -202,7 +202,7 @@ Each entry gives the feature, what the requirement needs from the data model, th
 - Existing: `u_mes_syst_notification` (`escalationLevel`, `raisedAt`, `acknowledgedAt`), `u_mes_syst_notificationRecipient` (`roleId`, `channel`), `u_mes_plan_andonEventEscalation`.
 - Changes: X2 — new `u_mes_syst_escalationRule` and `u_mes_syst_escalationRuleLevel` (syst); add to `u_mes_syst_notification`: `escalationRuleId`/`escalationRuleName`, `responseDueAt` (Datetime), `resolvedAt` (Datetime), `resolvedById`/`resolvedBy`, `interlockEventId`/`interlockEventName`. Level 4 (route by skill) uses `u_mes_mast_roleRequiredSkill` (new, mast) and `u_mes_mast_skillCertification`.
 
-### 4.2 Product Tracking & Traceability (Q10–Q21, Q119, Q120)
+### 4.2 Product Tracking And Traceability (Q10–Q21, Q119, Q120)
 
 **Q10 — Unique Serialization & Scanning: unique serial generated at a defined start point; duplicates rejected.**
 - Needs: number range, serial record, uniqueness.
@@ -367,7 +367,7 @@ Each entry gives the feature, what the requirement needs from the data model, th
 - Coverage: **Not applicable to the caliper.**
 - Generic impact: covered by X8 (`curveType` values Sound Spectrum and Vibration Acceleration in `u_mes_qual_curveEnvelope`).
 
-### 4.4 Performance & OEE (Q35–Q47)
+### 4.4 Performance And OEE (Q35–Q47)
 
 **Q35 — OEE Computation Engine: OEE auto-computed from A, P, Q by line, shift and variant.**
 - Coverage: **Covered.**
@@ -559,7 +559,7 @@ Each entry gives the feature, what the requirement needs from the data model, th
 - Coverage: **New collection.** Caliper equivalent: piston press-in and guide-pin bush press-fit force–displacement.
 - Changes: X8 — `u_mes_qual_curveEnvelope`, `u_mes_qual_curveEnvelopeWindow`, `u_mes_qual_measurementCurve`, `u_mes_qual_measurementCurvePoint` (qual).
 
-### 4.7 Material & Inventory Management (Q71–Q79)
+### 4.7 Material And Inventory Management (Q71–Q79)
 
 **Q71 — Material Lot Linkage & Traceability: block pack-out, transfer or WO closure when genealogy is incomplete.**
 - Coverage: **New collection.**
@@ -601,7 +601,7 @@ Each entry gives the feature, what the requirement needs from the data model, th
 - Coverage: **New collection.**
 - Changes: X11 — `u_mes_syst_simulationStudy` with `studyType` Inventory.
 
-### 4.8 Personnel & Labor (Q80–Q88)
+### 4.8 Personnel And Labor (Q80–Q88)
 
 **Q80 — Operator Authentication & Authorization: badge / biometric login at each station linked to serial, WO, station and shift.**
 - Coverage: **New collection.**
@@ -676,7 +676,7 @@ Each entry gives the feature, what the requirement needs from the data model, th
 - Coverage: **Partly covered.**
 - Changes: add `arSessionRef` to `u_mes_plan_stepCompletion`; `deviceSource` value AR Headset; `method` value AR Confirmation in `u_mes_plan_documentAcknowledgement`.
 
-### 4.10 Resource & Equipment Management (Q96–Q103, Q106–Q108, Q129)
+### 4.10 Resource And Equipment Management (Q96–Q103, Q106–Q108, Q129)
 
 **Q96 — Environmental Monitoring: lux, ESD, temperature, humidity captured in real time and linked to area / line / shift / time.**
 - Coverage: **Partly covered.**
@@ -733,7 +733,7 @@ Each entry gives the feature, what the requirement needs from the data model, th
 - Coverage: **Partly covered.**
 - Changes: `recipeType` value Vision; `u_mes_prod_recipeControlledDocument` (golden images, counted under Q58); `u_mes_prod_recipeProductVariant` (counted under Q3); model keys on `u_mes_qual_inspectionResult` (counted under Q33).
 
-### 4.11 Analytics & Intelligence (Q109–Q112)
+### 4.11 Analytics And Intelligence (Q109–Q112)
 
 **Q109 — Enterprise Dashboards & Benchmarking (Adv): KPIs aggregated with plant / line / WO / shift drill-down; cross-plant benchmark.**
 - Coverage: **Partly covered.**
@@ -1976,7 +1976,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling & Maintenance |
+| Module | maint — Tooling And Maintenance |
 | Kind / Type / UI label | Child / Transaction / Work Order Checklist |
 | Purpose | Executed checklist task of a maintenance work order with its result. |
 | Why a separate collection | Replaces an array of task results (DATA-001). |
@@ -2016,7 +2016,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling & Maintenance |
+| Module | maint — Tooling And Maintenance |
 | Kind / Type / UI label | Entity / Transaction / Spare Part Transactions |
 | Purpose | Spare-part issue, return, receipt, adjustment and scrap with work order and equipment. |
 | Why a separate collection | Unbounded event data; `u_mes_maint_sparePart` keeps the balance. |
@@ -2062,7 +2062,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling & Maintenance |
+| Module | maint — Tooling And Maintenance |
 | Kind / Type / UI label | Entity / Reports / Reliability Summary |
 | Purpose | MTBF and MTTR per equipment, line and period. |
 | Why a separate collection | Calculated report table. |
@@ -2106,7 +2106,7 @@ Every collection below follows the current standard: flat documents (no arrays, 
 
 | Item | Value |
 |---|---|
-| Module | maint — Tooling & Maintenance |
+| Module | maint — Tooling And Maintenance |
 | Kind / Type / UI label | Entity / Transaction / Equipment Lifecycle |
 | Purpose | Lifecycle events of an equipment: commissioning, relocation, overhaul, refurbishment, upgrade, health assessment, replacement recommendation, decommissioning. |
 | Why a separate collection | Unbounded history per equipment. |
@@ -2911,7 +2911,7 @@ Standard sections that would need text updates: `data_modeling_standard.md` (new
 | Traceability | trac | 7 | 2 | 9 |
 | Quality Management | qual | 69 | 8 | 77 |
 | Performance Management | perf | 17 | 4 | 21 |
-| Tooling & Maintenance | maint | 14 | 4 | 18 |
+| Tooling And Maintenance | maint | 14 | 4 | 18 |
 | System and Integration | syst | 27 | 11 | 38 |
 | Environment Health and Safety | ehs | 6 | 0 | 6 |
 | **Total** | | **299** | **44** | **343** |
