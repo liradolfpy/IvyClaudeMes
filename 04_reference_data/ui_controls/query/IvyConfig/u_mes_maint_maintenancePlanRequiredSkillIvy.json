@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_maintenancePlanRequiredSkillIvy",
+    "_id" : "mes_maint_maintenancePlanRequiredSkillIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_maintenancePlanRequiredSkill",
     "stableName" : "mes_maint_maintenancePlanRequiredSkillStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_maintenancePlanRequiredSkillIvy",
+    "dn" : "mes_maint_maintenancePlanRequiredSkillIvy",
     "proj" : [
 
     ],

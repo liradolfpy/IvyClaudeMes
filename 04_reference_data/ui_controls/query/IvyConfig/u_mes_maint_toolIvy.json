@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_toolIvy",
+    "_id" : "mes_maint_toolIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_tool",
     "stableName" : "mes_maint_toolStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_toolIvy",
+    "dn" : "mes_maint_toolIvy",
     "proj" : [
 
     ],

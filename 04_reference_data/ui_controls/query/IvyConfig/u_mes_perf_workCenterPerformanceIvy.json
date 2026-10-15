@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_perf_workCenterPerformanceIvy",
+    "_id" : "mes_perf_workCenterPerformanceIvy",
     "code" : "perf",
     "moduleName" : "Performance Management",
     "collection" : "u_mes_perf_workCenterPerformance",
     "stableName" : "mes_perf_workCenterPerformanceStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_perf_workCenterPerformanceIvy",
+    "dn" : "mes_perf_workCenterPerformanceIvy",
     "proj" : [
 
     ],

@@ -1,0 +1,196 @@
+{
+    "_id" : "mes_maint_toolLifeRecordQuery",
+    "dictName" : "mes_maint_toolLifeRecordQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Tool Life Records",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Event Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Event Date Range",
+                    "errorMessage" : "Please select Event Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "data_index" : "eventAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Tool",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Tool",
+                    "errorMessage" : "Please select Tool",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "toolId",
+                    "p_din" : "toolName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_tool"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_tool",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Equipment",
+                    "errorMessage" : "Please select Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "equipmentId",
+                    "p_din" : "equipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Work Center",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Work Center",
+                    "errorMessage" : "Please select Work Center",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "workCenterId",
+                    "p_din" : "workCenterName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "WorkCenter",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Event Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Event Type",
+                    "errorMessage" : "Please select Event Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "eventType",
+                    "p_din" : "eventTypeText",
+                    "data" : {
+                        "Mounted" : "Mounted",
+                        "Usage" : "Usage",
+                        "Dismounted" : "Dismounted",
+                        "Regrind" : "Regrind",
+                        "Maintenance" : "Maintenance",
+                        "Scrapped" : "Scrapped"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Item",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Item",
+                    "errorMessage" : "Please select Item",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "itemId",
+                    "p_din" : "itemName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Item",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "Recorded" : "Recorded",
+                        "Voided" : "Voided"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

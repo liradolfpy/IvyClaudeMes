@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_perf_alarmIvy",
+    "_id" : "mes_perf_alarmIvy",
     "code" : "perf",
     "moduleName" : "Performance Management",
     "collection" : "u_mes_perf_alarm",
     "stableName" : "mes_perf_alarmStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_perf_alarmIvy",
+    "dn" : "mes_perf_alarmIvy",
     "proj" : [
 
     ],

@@ -1,0 +1,199 @@
+{
+    "_id" : "mes_maint_sparePartTransactionQuery",
+    "dictName" : "mes_maint_sparePartTransactionQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Spare Part Transactions",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Transacted Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Transacted Date Range",
+                    "errorMessage" : "Please select Transacted Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "data_index" : "transactedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Spare Part",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Spare Part",
+                    "errorMessage" : "Please select Spare Part",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "sparePartId",
+                    "p_din" : "sparePartName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_sparePart"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_sparePart",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Transaction Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Transaction Type",
+                    "errorMessage" : "Please select Transaction Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "transactionType",
+                    "p_din" : "transactionTypeText",
+                    "data" : {
+                        "Issue" : "Issue",
+                        "Return" : "Return",
+                        "Receipt" : "Receipt",
+                        "Adjustment" : "Adjustment",
+                        "Scrap" : "Scrap"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Equipment",
+                    "errorMessage" : "Please select Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "equipmentId",
+                    "p_din" : "equipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Storage Location",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Storage Location",
+                    "errorMessage" : "Please select Storage Location",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "storageLocationId",
+                    "p_din" : "storageLocationName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_matl_storageLocation"
+                    },
+                    "sourceParams_dynamic" : "u_mes_matl_storageLocation",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Maintenance Work Order",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Maintenance Work Order",
+                    "errorMessage" : "Please select Maintenance Work Order",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "maintenanceWorkOrderId",
+                    "p_din" : "maintenanceWorkOrderName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_maintenanceWorkOrder"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "Posted" : "Posted",
+                        "Reversed" : "Reversed"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

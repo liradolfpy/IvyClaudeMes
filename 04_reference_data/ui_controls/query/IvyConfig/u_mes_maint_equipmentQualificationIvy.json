@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_equipmentQualificationIvy",
+    "_id" : "mes_maint_equipmentQualificationIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_equipmentQualification",
     "stableName" : "mes_maint_equipmentQualificationStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_equipmentQualificationIvy",
+    "dn" : "mes_maint_equipmentQualificationIvy",
     "proj" : [
 
     ],

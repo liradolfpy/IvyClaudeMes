@@ -1,6 +1,6 @@
 # Query Control Instruction
 
-Instruction version: 0.13 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
+Instruction version: 0.15 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`
 Status: working instruction, refined regularly. Every refinement raises the version, adds a row to the change log (section 17), moves answered questions to section 15 and adds new questions to section 14.
 Location: `04_reference_data/ui_controls/query_control_instruction.md`, next to the control samples it governs (`04_reference_data/ui_controls/query/`).
 
@@ -155,14 +155,18 @@ Wrap the `modalElements` array in this frame. Values in angle brackets are fille
 
 | Field | Value | Rule |
 |---|---|---|
-| `_id` | `<collectionSuffix>Query` | The collection name without `u_mes_<module>_`, followed by `Query`: `u_mes_perf_downtimeEvent` gives `downtimeEventQuery` |
-| `dictName` | Same as `_id` | `downtimeEventQuery` |
+| `_id` | `<collection without the leading u_>Query` | `u_mes_maint_cleaningRecord` gives `mes_maint_cleaningRecordQuery` |
+| `dictName` | Same as `_id` | `mes_maint_cleaningRecordQuery` |
 | `typ` | `"PageConfigQuery"` | Fixed |
 | `page` | Page name | Kept as set by the owner (the reviewed Downtime Events config uses `"Phantom"`) |
-| `dictData.pageTitle` | Screen label | The label of the collection in `collection_type_matrix.md` (`Downtime Events`) |
-| `dictData.api` | `"/ivy/mes"` | Fixed |
 | `dictData.config.method` | `"GET"` | Fixed |
+| `dictData.config.pageTitle` | Screen label | The label of the collection in `collection_type_matrix.md` (`Cleaning Records`) |
+| `dictData.config.api` | `"/ivy/mes"` | Fixed |
+| `dictData.config.params` | `{}` | Fixed, empty object |
+| `dictData.config.footerButtons` | `{}` | Fixed, empty object |
 | `dictData.config.modalElements` | The controls | Steps 1 to 6 |
+
+`dictData` holds only `config`; `pageTitle`, `api`, `params` and `footerButtons` are inside `config`, never beside it.
 | `ver` | `"<YYYYMMDD-HHmm>"` | Date and time (IST) the document is generated, as a string, for example `"20261013-1708"` |
 | `rel` | `"<YYYYMMDD-HHmm>"` | Same value as `ver` |
 | `unq` | `false` | Fixed |
@@ -174,15 +178,17 @@ Wrap the `modalElements` array in this frame. Values in angle brackets are fille
 
 ```js
 {
-    "_id" : "downtimeEventQuery",
-    "dictName" : "downtimeEventQuery",
+    "_id" : "mes_maint_cleaningRecordQuery",
+    "dictName" : "mes_maint_cleaningRecordQuery",
     "typ" : "PageConfigQuery",
     "page" : "Phantom",
     "dictData" : {
-        "pageTitle" : "Downtime Events",
-        "api" : "/ivy/mes",
         "config" : {
             "method" : "GET",
+            "pageTitle" : "Cleaning Records",
+            "api" : "/ivy/mes",
+            "params" : {},
+            "footerButtons" : {},
             "modalElements" : [ /* controls */ ]
         }
     },
@@ -201,7 +207,7 @@ Wrap the `modalElements` array in this frame. Values in angle brackets are fille
 }
 ```
 
-File name of a generated configuration: `04_reference_data/ui_controls/query/PageConfigs/PageConfig_<collection>.json` (for example `PageConfigs/PageConfig_u_mes_perf_downtimeEvent.json`).
+File name of a generated configuration: `04_reference_data/ui_controls/query/PageConfigs/<collection>.json` (for example `PageConfigs/u_mes_maint_cleaningRecord.json`).
 
 ### Step 9: Build or update the IvyConfig
 
@@ -213,14 +219,14 @@ Document frame:
 
 | Field | Value | Rule |
 |---|---|---|
-| `_id` | `"<collection>Ivy"` | `u_mes_perf_downtimeEventIvy` |
+| `_id` | `"<collection without the leading u_>Ivy"` | `u_mes_maint_cleaningRecord` gives `mes_maint_cleaningRecordIvy` |
 | `code` | Module code | The module code in the collection name (`u_mes_perf_downtimeEvent` gives `perf`) |
 | `moduleName` | Module name | From the module code in the collection name, using the module table of `collection_inventory.md` (`perf` gives `Performance Management`) |
 | `collection` | Collection name | `u_mes_perf_downtimeEvent` |
 | `stableName` | `"<collection without the leading u_>Stable"` | `mes_perf_downtimeEventStable` |
 | `typ` | `"IvyConfig"` | Fixed |
 | `label` | `"EnterpriseIvy"` | Fixed |
-| `dn` | Same as `_id` | `u_mes_perf_downtimeEventIvy` |
+| `dn` | Same as `_id` | `mes_maint_cleaningRecordIvy` |
 | `proj` | `[]` | Empty for now |
 | `get` | One entry per query control | See below |
 | `post` | One entry per document key | See below |
@@ -636,7 +642,7 @@ The filter is served by the line history index `{ lineId, raisedAt }` described 
 | 13 | The resulting filter is served by an index of the query key strategy |
 | 14 | Every new cropdown document, `u_int_mdict` dictionary or `/dd` registration the screen needs is listed for creation |
 | 15 | Every control has `required: true` unless it is specifically required to be optional |
-| 16 | The document frame follows step 8: `_id` = `dictName` = `<collectionSuffix>Query`, `typ` = `PageConfigQuery`, `dictData.pageTitle` and `dictData.api` set, fixed fields copied exactly, `ver` = `rel` = generation time |
+| 16 | The document frame follows step 8: `_id` = `dictName` = `<collection without u_>Query`; `typ` = `PageConfigQuery`; `dictData` holds only `config`, and `config` holds `method`, `pageTitle`, `api` (`/ivy/mes`), `params` (`{}`), `footerButtons` (`{}`) and `modalElements`; fixed fields copied exactly; `ver` = `rel` = generation time; file named `<collection>.json` |
 | 17 | Shift controls use cropdown `Shift`, not mdict |
 | 18 | The IvyConfig `<collection>Ivy.json` exists and was updated in the same step; its `get` list has exactly one entry per query control (same `din` and order, range entry with `from` / `to` and `YYYY-MM-DD`) |
 | 19 | The IvyConfig `post` list has every collection key except `_id` and the six audit keys, including `app` after `recordNo`, each with the type of section 5, step 9; `code` is the module code |
@@ -695,6 +701,8 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | Q23 | Shift code versus `shiftId` | All `shiftId` values in the documents are the shift code (`A`, `B`, `C`); the cropdown `Shift` keys match directly | Step 4 placement table; sample documents regenerated; follow-up F2 |
 | – | IvyConfig (13 Oct 2026) | Generated with every query: `_id` / `dn` = `<collection>Ivy`; `code` `mast`; `moduleName` = module name; `typ` `IvyConfig`; `label` `EnterpriseIvy`; `stableName` = collection without `u_` + `Stable`; `get` = every query control (filter keys only, range format `YYYY-MM-DD`); `post` = every key except `_id` and audit keys, plus `app`; types `string`, `bool`, `int` (Int32 and Int64), `decimal`, `double`, `Date`, `range`; `proj` and `patch` empty, `staticPost` `{ act: true }`; page configurations in `query/PageConfigs/`, IvyConfigs in `query/IvyConfig/` | Step 9; step 8 file location; checklist 18 and 19; follow-up F3 |
 | – | IvyConfig `code`; key `app` (13 Oct 2026) | `code` is the module code. `app` is part of the data model with the standard values Auto / Gamp / Common (D060 rule in `flatten_model.py`); the field lists, collection keys, specifications, validators, register and reports were regenerated with `gen_docs.py` and `gen_specs.py` (8,614 keys) | Step 9; checklist 19; F3 closed |
+| – | Page configuration layout (15 Oct 2026) | `pageTitle`, `api`, `params: {}` and `footerButtons: {}` inside `dictData.config`; `_id` / `dictName` = collection without `u_` + `Query` (`mes_maint_cleaningRecordQuery`); file name `<collection>.json` | Step 8, checklist 16; all 24 page configurations converted |
+| – | IvyConfig identifier (15 Oct 2026) | `_id` and `dn` = collection without `u_` + `Ivy` (`mes_maint_cleaningRecordIvy`); `collection` keeps the full name; file name unchanged (`<collection>Ivy.json`) | Step 9; all 24 IvyConfigs updated |
 
 ## 16. Observations on the sample files (not changed)
 
@@ -722,3 +730,5 @@ None at version 0.10. New questions are added here with the next free number (Q2
 | 0.11 | 13 Oct 2026 | Step 9 added: IvyConfig generated or updated with every query (frame, `get` and `post` rules, type names, file location); page configurations moved to `query/PageConfigs/`; checklist 18 and 19; follow-up F3 on the key `app`; IvyConfigs produced for Downtime Events, Alarms and Station Performance | Claude |
 | 0.12 | 13 Oct 2026 | IvyConfig `code` = module code; `app` now listed in the data model (field lists, specifications, validators regenerated), so the `post` list takes it from the field list; follow-up F3 closed; three IvyConfigs regenerated | Claude |
 | 0.13 | 15 Oct 2026 | Step 2: child and relationship collections have no period control and start with a parent search dropdown; time key must be a required date key where one exists. Follow-up F4 (maintenance plan allowed values, equipment qualification time key). Query and IvyConfigs produced for all 21 collections of the Tooling And Maintenance module | Claude |
+| 0.14 | 15 Oct 2026 | Page configuration layout: `pageTitle`, `api`, `params`, `footerButtons` moved inside `dictData.config`; `_id` / `dictName` = `<collection without u_>Query`; file name `<collection>.json`; all 24 existing page configurations converted (old files moved to `_to_delete/PageConfigs_old_names`) | Claude |
+| 0.15 | 15 Oct 2026 | IvyConfig `_id` and `dn` = `<collection without u_>Ivy`; all 24 IvyConfigs updated | Claude |

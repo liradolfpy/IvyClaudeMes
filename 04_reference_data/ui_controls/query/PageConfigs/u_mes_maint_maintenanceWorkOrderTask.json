@@ -1,0 +1,114 @@
+{
+    "_id" : "mes_maint_maintenanceWorkOrderTaskQuery",
+    "dictName" : "mes_maint_maintenanceWorkOrderTaskQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Work Order Checklist",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Maintenance Work Order",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Maintenance Work Order",
+                    "errorMessage" : "Please select Maintenance Work Order",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "maintenanceWorkOrderId",
+                    "p_din" : "maintenanceWorkOrderName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_maintenanceWorkOrder"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Result",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Result",
+                    "errorMessage" : "Please select Result",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "result",
+                    "p_din" : "resultText",
+                    "data" : {
+                        "Done OK" : "Done OK",
+                        "Done Not OK" : "Done Not OK",
+                        "Not Applicable" : "Not Applicable",
+                        "Not Done" : "Not Done"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Completed By",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Completed By",
+                    "errorMessage" : "Please select Completed By",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "completedById",
+                    "p_din" : "completedBy",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_mast_user"
+                    },
+                    "sourceParams_dynamic" : "u_mes_mast_user",
+                    "src" : "api"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

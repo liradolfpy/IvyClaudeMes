@@ -1,0 +1,168 @@
+{
+    "_id" : "mes_perf_workCenterPerformanceQuery",
+    "dictName" : "mes_perf_workCenterPerformanceQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Station Performance",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Production Date Range",
+                    "defaultFrom" : NumberInt(-30),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Production Date Range",
+                    "errorMessage" : "Please select Production Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "data_index" : "productionDate"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Line",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Line",
+                    "errorMessage" : "Please select Line",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "lineId",
+                    "p_din" : "lineName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Line",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Work Center",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Work Center",
+                    "errorMessage" : "Please select Work Center",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "workCenterId",
+                    "p_din" : "workCenterName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "WorkCenter",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Shift",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Shift",
+                    "errorMessage" : "Please select Shift",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "shiftId",
+                    "p_din" : "shiftName",
+                    "api" : "/cropdown",
+                    "params" : {
+                        "name" : "Shift"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Product Variant",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Product Variant",
+                    "errorMessage" : "Please select Product Variant",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "productVariantId",
+                    "p_din" : "productVariantName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "ProductVariant",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Constraint",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Constraint",
+                    "errorMessage" : "Please select Constraint",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "isConstraint",
+                    "p_din" : "isConstraintText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261013-1916",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261013-1916",
+    "projid" : ""
+}

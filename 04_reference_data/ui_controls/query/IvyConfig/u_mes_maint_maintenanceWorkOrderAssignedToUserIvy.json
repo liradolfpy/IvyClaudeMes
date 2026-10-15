@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_maintenanceWorkOrderAssignedToUserIvy",
+    "_id" : "mes_maint_maintenanceWorkOrderAssignedToUserIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_maintenanceWorkOrderAssignedToUser",
     "stableName" : "mes_maint_maintenanceWorkOrderAssignedToUserStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_maintenanceWorkOrderAssignedToUserIvy",
+    "dn" : "mes_maint_maintenanceWorkOrderAssignedToUserIvy",
     "proj" : [
 
     ],

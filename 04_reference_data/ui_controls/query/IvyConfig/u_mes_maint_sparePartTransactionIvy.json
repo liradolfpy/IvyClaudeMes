@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_sparePartTransactionIvy",
+    "_id" : "mes_maint_sparePartTransactionIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_sparePartTransaction",
     "stableName" : "mes_maint_sparePartTransactionStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_sparePartTransactionIvy",
+    "dn" : "mes_maint_sparePartTransactionIvy",
     "proj" : [
 
     ],

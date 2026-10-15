@@ -1,0 +1,172 @@
+{
+    "_id" : "mes_maint_cleaningRecordQuery",
+    "dictName" : "mes_maint_cleaningRecordQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Cleaning Records",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Started Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Started Date Range",
+                    "errorMessage" : "Please select Started Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "data_index" : "startedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Equipment",
+                    "errorMessage" : "Please select Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "equipmentId",
+                    "p_din" : "equipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Work Center",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Work Center",
+                    "errorMessage" : "Please select Work Center",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "workCenterId",
+                    "p_din" : "workCenterName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "WorkCenter",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Cleaning Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Cleaning Type",
+                    "errorMessage" : "Please select Cleaning Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "cleaningType",
+                    "p_din" : "cleaningTypeText",
+                    "data" : {
+                        "Minor Cleaning" : "Minor Cleaning",
+                        "Major Cleaning" : "Major Cleaning",
+                        "Product Changeover Cleaning" : "Product Changeover Cleaning",
+                        "Bath Change" : "Bath Change"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Verification Result",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Verification Result",
+                    "errorMessage" : "Please select Verification Result",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "verificationResult",
+                    "p_din" : "verificationResultText",
+                    "data" : {
+                        "Pass" : "Pass",
+                        "Fail" : "Fail"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "In Progress" : "In Progress",
+                        "Completed" : "Completed",
+                        "Verified" : "Verified",
+                        "Expired" : "Expired",
+                        "Rejected" : "Rejected"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

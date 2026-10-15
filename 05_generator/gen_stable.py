@@ -10,7 +10,7 @@ MES collections from the data model files of this repository:
   03_design/<module>/samples/<collection>.js    sample documents (column widths)
 
 Output, one file per collection:
-  04_reference_data/ui_controls/table/PageConfigs/PageConfig_<collection>.json
+  04_reference_data/ui_controls/table/PageConfigs/<collection>.json
 written in MongoDB shell style (NumberInt), like the query page configurations.
 
 A column report (key, title, type, longest sample text, width) is printed to
@@ -221,7 +221,7 @@ def build_column(field, keyset, samples, is_first):
     t = field["type"]
     if t == "Date":
         col["align"] = "center"
-        col["DtFormat"] = DATE_FORMAT if field["tag"] == "Date" else DATETIME_FORMAT
+        col["dtFormat"] = DATE_FORMAT if field["tag"] == "Date" else DATETIME_FORMAT
         col["isIST"] = True
     elif t == "Boolean":
         col["align"] = "center"
@@ -246,8 +246,7 @@ GRADIENT = "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 
 
 
 def build_document(collection, page_title, module_code, columns):
-    suffix = re.sub(r"^u_[a-z]+_[a-z]+_", "", collection)
-    name = suffix + "Stable"
+    name = re.sub(r"^u_", "", collection) + "Stable"
     config = {
         "headerRoute": None,
         "headerMultiline": None,
@@ -287,8 +286,8 @@ def build_document(collection, page_title, module_code, columns):
                 "border-bottom-color": "#DCD5D5", "border-top-color": "#E74C3C", "border-bottom": "none",
                 "alternateRows": ["stable-row-1", "stable-row-2"]},
         "column": columns,
-        "rat": [],
-        "ratConfig": [],
+        "rowAction": [],
+        "action": [],
         "zenPop": {},
         "zenFuncs": {"headerRoute": False, "footerMultiline": True, "headerMultiline": False,
                      "footerButtons": True},
@@ -363,7 +362,7 @@ def generate(root, collection):
     check_parse(text)
     out_dir = os.path.join(root, "04_reference_data", "ui_controls", "table", "PageConfigs")
     os.makedirs(out_dir, exist_ok=True)
-    out = os.path.join(out_dir, "PageConfig_%s.json" % collection)
+    out = os.path.join(out_dir, "%s.json" % collection)
     with open(out, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(text)
 

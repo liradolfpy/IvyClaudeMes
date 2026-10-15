@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_cleaningRecordIvy",
+    "_id" : "mes_maint_cleaningRecordIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_cleaningRecord",
     "stableName" : "mes_maint_cleaningRecordStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_cleaningRecordIvy",
+    "dn" : "mes_maint_cleaningRecordIvy",
     "proj" : [
 
     ],

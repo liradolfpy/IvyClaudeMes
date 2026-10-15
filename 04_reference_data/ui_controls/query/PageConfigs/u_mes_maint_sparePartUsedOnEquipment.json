@@ -1,0 +1,89 @@
+{
+    "_id" : "mes_maint_sparePartUsedOnEquipmentQuery",
+    "dictName" : "mes_maint_sparePartUsedOnEquipmentQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Spare Part Used on Equipment",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Spare Part",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Spare Part",
+                    "errorMessage" : "Please select Spare Part",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "sparePartId",
+                    "p_din" : "sparePartName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_sparePart"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_sparePart",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Used On Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Used On Equipment",
+                    "errorMessage" : "Please select Used On Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "usedOnEquipmentId",
+                    "p_din" : "usedOnEquipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

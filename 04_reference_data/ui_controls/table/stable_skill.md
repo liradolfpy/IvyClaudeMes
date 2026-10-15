@@ -5,7 +5,7 @@ description: Stable (StandardTable) - build the React table page configuration (
 
 # Stable (StandardTable) - table page configuration
 
-Skill version: 0.2 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`)
+Skill version: 0.3 | 15 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`)
 Sibling instruction: `04_reference_data/ui_controls/query_control_instruction.md` (query controls of the same list screens). Keep the two consistent.
 Reference copy of this skill in the repository: `04_reference_data/ui_controls/table/stable_skill.md`.
 
@@ -28,9 +28,9 @@ Every list screen of the MES React application shows the documents of one collec
 
 1. Work on the user's computer through the device shell (`$HOME/mnt/ClaudeMES`).
 2. Run `python3 05_generator/gen_stable.py <collection> [<collection> ...]` from the repository root. Collection names are the full model names (`u_mes_perf_downtimeEvent`). For a whole module, take the collection names of that module from `collection_type_matrix.md` (match `| u_mes_<code>_...` only, not the module summary row).
-3. The script writes `04_reference_data/ui_controls/table/PageConfigs/PageConfig_<collection>.json` (MongoDB shell style, `NumberInt`) and prints a column report: data_index, title, type, longest sample text, width, alignment, the keys left out and why, and keys that had no sample value. For a module run, save the report as `PageConfigs/column_report_<code>.md`.
+3. The script writes `04_reference_data/ui_controls/table/PageConfigs/<collection>.json` (MongoDB shell style, `NumberInt`) and prints a column report: data_index, title, type, longest sample text, width, alignment, the keys left out and why, and keys that had no sample value. For a module run, save the report as `PageConfigs/column_report_<code>.md`.
 4. Run the checklist (section 7) on the report and the files, and read the list of titles for words the title rules do not yet handle. Show the user the result and anything the checklist flagged.
-5. If a rule must change, change it in this skill **and** in `gen_stable.py` together, raise the skill version, add a change-log row (section 9) update the reference copy `stable_skill.md`, and regenerate the configurations produced earlier so all share the same rules.
+5. If a rule must change, change it in this skill **and** in `gen_stable.py` together, raise the skill version, add a change-log row (section 9), update the reference copy `stable_skill.md`, and regenerate the configurations produced earlier so all share the same rules.
 6. If the device shell or the script is not available, apply sections 4 to 6 by hand with the same inputs; never invent keys that are not in the field list.
 
 ## 4. Column rules
@@ -51,14 +51,14 @@ The model is flat (DATA-001): every key is a top-level scalar, so there are no a
 
 ### 4.2 Attributes per column
 
-Attribute order inside each column object: `title`, `fixed` (first column only), `width`, `align`, `DtFormat`, `isIST`, `isBool`, `data_index`.
+Attribute order inside each column object: `title`, `fixed` (first column only), `width`, `align`, `dtFormat`, `isIST`, `isBool`, `data_index`.
 
 | BSON type (date tag) | `align` | Extra attributes |
 |---|---|---|
 | String | `left` | - |
 | Int32, Int64, Decimal128, Double | `right` | - (decimal formatting: open question S5) |
-| Date (Date) | `center` | `"DtFormat" : "YYYY-MM-DD"`, `"isIST" : true` |
-| Date (Datetime) | `center` | `"DtFormat" : "YYYY-MM-DD HH:mm:ss"`, `"isIST" : true` |
+| Date (Date) | `center` | `"dtFormat" : "YYYY-MM-DD"`, `"isIST" : true` |
+| Date (Datetime) | `center` | `"dtFormat" : "YYYY-MM-DD HH:mm:ss"`, `"isIST" : true` |
 | Boolean | `center` | `"isBool" : true` |
 
 - `data_index` is the exact key name of the collection.
@@ -92,9 +92,9 @@ width      = max(content, header, 80), rounded up to the next 10, capped at 300 
 
 | Field | Value | Rule |
 |---|---|---|
-| `_id` | `<collectionSuffix>Stable` | Collection name without `u_<app>_<module>_`, followed by `Stable`: `u_mes_perf_downtimeEvent` gives `downtimeEventStable` |
+| `_id` | `<collection without the leading u_>Stable` | `u_mes_maint_cleaningRecord` gives `mes_maint_cleaningRecordStable`. Equals `stableName` of the collection's IvyConfig |
 | `lid` | `"lid_999"` | Retained from the reference sample |
-| `dictName` | Same as `_id` | `downtimeEventStable`, `alarmStable`, `workCenterPerformanceStable` |
+| `dictName` | Same as `_id` | `mes_maint_cleaningRecordStable`, `mes_perf_downtimeEventStable` |
 | `typ` | `"PageConfigStable"` | Fixed |
 | `page` | Same as `_id` | Follows the reference sample, where `page` equals `_id` (open question S3) |
 | `app`, `module` | `"mes"`, module code | As the owner added to the query page configurations (`perf`, `mast`, `qual`, ...) |
@@ -102,7 +102,7 @@ width      = max(content, header, 80), rounded up to the next 10, capped at 300 
 | `subTyp` | `"PhantomStable"` | Retained |
 | `act` | `true` | Retained |
 
-File: `04_reference_data/ui_controls/table/PageConfigs/PageConfig_<collection>.json`.
+File: `04_reference_data/ui_controls/table/PageConfigs/<collection>.json`.
 
 ## 6. `dictData.config` - fixed blocks
 
@@ -119,7 +119,7 @@ Every block except `column` and `tableSubTitle.title-label` is copied exactly fr
 | `footer` | Blue gradient, Roboto Condensed bold 12px `#D0E2FF`, padding 0px, pagination control, colour `#E5F6FF`, background `#0d3070`, border `1px solid #314f85`, rows and page number visible |
 | `row` | White, padding `0px 0px 0px 5px`, Roboto Condensed 400 12px black, border colours `#DCD5D5` / `#E74C3C`, `border-bottom` none, alternate rows `stable-row-1` / `stable-row-2` |
 | `column` | Section 4 |
-| `rat`, `ratConfig` | `[]` |
+| `rowAction`, `action` | `[]` (renamed from `rat` / `ratConfig`, owner, 15 Oct 2026) |
 | `zenPop`, `footerButtons` | `{}` |
 | `zenFuncs` | `headerRoute` false, `footerMultiline` true, `headerMultiline` false, `footerButtons` true |
 
@@ -129,7 +129,7 @@ Blue gradient: `linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 10
 
 | # | Check |
 |---|---|
-| 1 | `_id` = `dictName` = `page` = `<collectionSuffix>Stable`; `typ` = `PageConfigStable`; `subTyp` = `PhantomStable`; `act` true |
+| 1 | `_id` = `dictName` = `page` = `<collection without u_>Stable` = IvyConfig `stableName`; `typ` = `PageConfigStable`; `subTyp` = `PhantomStable`; `act` true |
 | 2 | First column is `recordNo` with `fixed: "left"`; no other column is fixed |
 | 3 | Every `data_index` is a key of the collection in the field list; none is `_id`, `app`, `siteId`, `siteName`, `schemaVersion`, `createdById`, `updatedById`, or an `...Id` key with a display key |
 | 4 | Audit columns, where present, are the last four in the order createdBy, createdAt, updatedBy, updatedAt |
@@ -148,14 +148,13 @@ Blue gradient: `linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 10
 |---|---|
 | A1 | Alignment: text left, numbers right, dates and Booleans centre (the sample centres everything). |
 | A2 | Glyph widths of 7 px (row, 12px) and 8 px (header, 14px) and 20 px for the sort icon. |
-| A3 | Fixed blocks are copied from the sample as a valid document; the sample itself does not parse (trailing commas in `footerMultiline`, after `isIST` and `act`; missing comma after `ratConfig`). |
+| A3 | Fixed blocks are copied from the sample as a valid document; the sample itself does not parse (trailing commas in `footerMultiline`, after `isIST` and `act`; missing comma after `action`). |
 | A4 | Audit columns `createdBy`, `createdAt`, `updatedBy`, `updatedAt` are shown at the end where the collection has them. |
 
 ### 8.2 Open questions
 
 | No. | Question |
 |---|---|
-| S1 | The IvyConfigs hold `stableName` = `mes_perf_downtimeEventStable`, but the table `_id` / `dictName` is now `downtimeEventStable`. Should IvyConfig `stableName` change to `<collectionSuffix>Stable`? |
 | S2 | Does the React table use moment / dayjs tokens? If yes, `HH:mm:ss` is right and the sample's `HH:mm:SS` should be corrected. |
 | S3 | `page`: same as `_id` (sample) or `"Phantom"` (query page configurations)? |
 | S4 | `tableConfig.pagination` is 8 while `noOfRows` is 10.0: which one sets the rows per page, and should `noOfRows` be `NumberInt`? |
@@ -169,3 +168,4 @@ Blue gradient: `linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 10
 |---|---|---|---|
 | 0.1 | 14 Oct 2026 | First issue: column selection (display keys only), attribute and title rules, computed widths capped at 300px, frame (`<collectionSuffix>Stable`, `PageConfigStable`), fixed blocks from FormatTable.json, generator `05_generator/gen_stable.py`, checklist, assumptions A1 to A4, open questions S1 to S7. Samples produced for Downtime Events, Alarms, Station Performance, Lines, Defect Codes | Claude |
 | 0.2 | 15 Oct 2026 | Title rules extended (units Days, Inr, Mm; acronym SLA; small words lower case). Table configurations generated for all 21 Maintenance (`maint`) collections, column report `PageConfigs/column_report_maint.md`; the five 0.1 samples regenerated with the new title rules | Claude |
+| 0.3 | 15 Oct 2026 | Owner changes: column attribute `DtFormat` renamed `dtFormat`; `_id` / `dictName` / `page` = collection name without `u_` + `Stable` (`mes_maint_cleaningRecordStable`), matching IvyConfig `stableName` (S1 closed); file name `PageConfigs/<collection>.json`; `rat` / `ratConfig` renamed `rowAction` / `action` (updated FormatTable.json). All 26 configurations renamed and regenerated | Claude |

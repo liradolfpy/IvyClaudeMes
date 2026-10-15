@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_maint_equipmentLifecycleEventIvy",
+    "_id" : "mes_maint_equipmentLifecycleEventIvy",
     "code" : "maint",
     "moduleName" : "Tooling And Maintenance",
     "collection" : "u_mes_maint_equipmentLifecycleEvent",
     "stableName" : "mes_maint_equipmentLifecycleEventStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_maint_equipmentLifecycleEventIvy",
+    "dn" : "mes_maint_equipmentLifecycleEventIvy",
     "proj" : [
 
     ],

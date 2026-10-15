@@ -1,0 +1,176 @@
+{
+    "_id" : "mes_maint_maintenancePlanQuery",
+    "dictName" : "mes_maint_maintenancePlanQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Maintenance Plans",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Equipment",
+                    "errorMessage" : "Please select Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "equipmentId",
+                    "p_din" : "equipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Tool",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type 3 characters of Tool",
+                    "errorMessage" : "Please select Tool",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(3),
+                    "maxSearchLength" : NumberInt(3),
+                    "data_index" : "toolId",
+                    "p_din" : "toolName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_tool"
+                    },
+                    "sourceParams_dynamic" : "u_mes_maint_tool",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Interval Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Interval Type",
+                    "errorMessage" : "Please select Interval Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "intervalType",
+                    "p_din" : "intervalTypeText",
+                    "data" : {
+                        "Calendar" : "Calendar",
+                        "Counter" : "Counter",
+                        "Condition" : "Condition"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Owner Department",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Owner Department",
+                    "errorMessage" : "Please select Owner Department",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "ownerDepartmentId",
+                    "p_din" : "ownerDepartmentName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_mast_department"
+                    },
+                    "sourceParams_dynamic" : "u_mes_mast_department",
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "Active" : "Active",
+                        "Suspended" : "Suspended",
+                        "Inactive" : "Inactive"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Block When Overdue",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Block When Overdue",
+                    "errorMessage" : "Please select Block When Overdue",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "blockEquipmentWhenOverdue",
+                    "p_din" : "blockEquipmentWhenOverdueText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

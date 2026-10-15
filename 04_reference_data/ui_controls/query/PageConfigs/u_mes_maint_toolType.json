@@ -1,0 +1,89 @@
+{
+    "_id" : "mes_maint_toolTypeQuery",
+    "dictName" : "mes_maint_toolTypeQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Tool Types",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Life UoM",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Life UoM",
+                    "errorMessage" : "Please select Life UoM",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "lifeUom",
+                    "p_din" : "lifeUomText",
+                    "data" : {
+                        "Shots" : "Shots",
+                        "Cycles" : "Cycles",
+                        "Pieces" : "Pieces",
+                        "Run Hours" : "Run Hours",
+                        "Batches" : "Batches",
+                        "Tablets" : "Tablets"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "Active" : "Active",
+                        "Inactive" : "Inactive"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

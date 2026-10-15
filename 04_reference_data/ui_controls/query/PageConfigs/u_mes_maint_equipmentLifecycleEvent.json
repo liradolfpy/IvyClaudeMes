@@ -1,0 +1,131 @@
+{
+    "_id" : "mes_maint_equipmentLifecycleEventQuery",
+    "dictName" : "mes_maint_equipmentLifecycleEventQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Equipment Lifecycle",
+            "api" : "/ivy/mes",
+            "params" : {
+
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Event Date Range",
+                    "defaultFrom" : NumberInt(-30),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Event Date Range",
+                    "errorMessage" : "Please select Event Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "din_from" : "from",
+                    "din_to" : "to",
+                    "data_index" : "eventAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Equipment",
+                    "errorMessage" : "Please select Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "equipmentId",
+                    "p_din" : "equipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Event Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Event Type",
+                    "errorMessage" : "Please select Event Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "eventType",
+                    "p_din" : "eventTypeText",
+                    "data" : {
+                        "Commissioning" : "Commissioning",
+                        "Relocation" : "Relocation",
+                        "Overhaul" : "Overhaul",
+                        "Refurbishment" : "Refurbishment",
+                        "Upgrade" : "Upgrade",
+                        "Health Assessment" : "Health Assessment",
+                        "Replacement Recommendation" : "Replacement Recommendation",
+                        "Decommissioning" : "Decommissioning"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_din" : "statusText",
+                    "data" : {
+                        "Recorded" : "Recorded",
+                        "Approved" : "Approved",
+                        "Cancelled" : "Cancelled"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261015-1340",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261015-1340",
+    "projid" : ""
+}

@@ -1,12 +1,12 @@
 {
-    "_id" : "u_mes_perf_downtimeEventIvy",
+    "_id" : "mes_perf_downtimeEventIvy",
     "code" : "perf",
     "moduleName" : "Performance Management",
     "collection" : "u_mes_perf_downtimeEvent",
     "stableName" : "mes_perf_downtimeEventStable",
     "typ" : "IvyConfig",
     "label" : "EnterpriseIvy",
-    "dn" : "u_mes_perf_downtimeEventIvy",
+    "dn" : "mes_perf_downtimeEventIvy",
     "proj" : [
 
     ],
