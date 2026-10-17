@@ -1,0 +1,754 @@
+{ 
+    "_id" : "Z_1525", 
+    "lid" : "lid_999", 
+    "dictName" : "ImgFormBuilderStadnew", 
+    "typ" : "PageConfig", 
+    "page" : "StadNew", 
+    "dictData" : {
+        "config" : {
+            "headerRoute" : {
+
+            }, 
+            "zenFunc" : {
+
+            }, 
+            "footerMultiline" : {
+
+            }, 
+            "headerMultiline" : {
+
+            }, 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "Submit", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : false, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : false
+                    }, 
+                    "hoverProp" : {
+
+                    }, 
+                    "validateFieldsProp" : {
+
+                    }, 
+                    "confirmationPopUpProp" : {
+
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "GET", 
+                        "params" : {
+                            "param1" : "p1", 
+                            "param2" : "p2"
+                        }, 
+                        "api" : "/imagezenform"
+                    }, 
+                    "popUpModalProp" : {
+
+                    }, 
+                    "postSubmitActionProp" : {
+
+                    }
+                }, 
+                "button2" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "Add New", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : false, 
+                        "submitFormData" : false, 
+                        "popUpModal" : true, 
+                        "postSubmitAction" : true
+                    }, 
+                    "hoverProp" : {
+
+                    }, 
+                    "popUpModalProp" : {
+                        "modalHeader" : "Add DictName", 
+                        "method" : "POST", 
+                        "dataType" : "formData", 
+                        "url" : "/imagezenform", 
+                        "modalElements" : [
+                            {
+                                "typ" : "textBox", 
+                                "default" : "", 
+                                "required" : true, 
+                                "placeHolder" : "Add DictName ", 
+                                "errorMessage" : "Please add DictName", 
+                                "readOnly" : false, 
+                                "label" : "DictName", 
+                                "data_index" : "dictName"
+                            }, 
+                            {
+                                "typ" : "imageControl", 
+                                "required" : true, 
+                                "placeHolder" : "Add Image", 
+                                "errorMessage" : "Please add image", 
+                                "readOnly" : false, 
+                                "label" : "Form Image", 
+                                "data_index" : "img", 
+                                "params" : {
+
+                                }, 
+                                "api" : "/imagecontrol"
+                            }, 
+                            {
+                                "typ" : "dropDown", 
+                                "default" : null, 
+                                "required" : false, 
+                                "includeAll" : true, 
+                                "placeHolder" : "Select Standard Id ", 
+                                "errorMessage" : "Please select Standard Id", 
+                                "readOnly" : false, 
+                                "visible" : true, 
+                                "colSize" : 12.0, 
+                                "labelColSpan" : 10.0, 
+                                "label" : "QC Standard Id", 
+                                "source" : "dynamic", 
+                                "data" : {
+                                    "1" : "1", 
+                                    "2" : "2", 
+                                    "3" : "3", 
+                                    "4" : "4", 
+                                    "5" : "5", 
+                                    "6" : "6", 
+                                    "7" : "7", 
+                                    "8" : "8", 
+                                    "9" : "9", 
+                                    "10" : "10"
+                                }, 
+                                "data_index" : "qc_standard", 
+                                "p_data_index" : "qc_standard_p", 
+                                "params" : {
+                                    "name" : "QCstd", 
+                                    "act" : true
+                                }, 
+                                "api" : "/dynamicdropdown", 
+                                "src" : "api"
+                            }
+                        ]
+                    }, 
+                    "postSubmitActionProp" : {
+                        "action" : "reloadStorm"
+                    }
+                }
+            }, 
+            "modalElements" : [
+                {
+                    "typ" : "dropDown", 
+                    "default" : "", 
+                    "required" : false, 
+                    "includeAll" : true, 
+                    "placeHolder" : "Select Standard Id ", 
+                    "errorMessage" : "Please select Standard Id", 
+                    "readOnly" : false, 
+                    "label" : "DictName", 
+                    "isSearchable" : true, 
+                    "source" : "dynamic", 
+                    "data" : {
+                        "1" : "1", 
+                        "2" : "2", 
+                        "3" : "3", 
+                        "4" : "4", 
+                        "5" : "5", 
+                        "6" : "6", 
+                        "7" : "7", 
+                        "8" : "8", 
+                        "9" : "9", 
+                        "10" : "10"
+                    }, 
+                    "data_index" : "_id", 
+                    "p_data_index" : "dictName", 
+                    "params" : {
+                        "name" : "Image_ifb", 
+                        "act" : true
+                    }, 
+                    "api" : "/dynamicdropdown", 
+                    "src" : "api"
+                }
+            ]
+        }
+    }, 
+    "ver" : "0", 
+    "unq" : false, 
+    "act" : true, 
+    "subTyp" : "PhantomStadNew", 
+    "origId" : "Z_1515", 
+    "clmnDoc" : {
+        "_id" : "M_216", 
+        "lid" : "lid_999", 
+        "dictName" : "ImgFormBuilderAdd", 
+        "typ" : "Modal", 
+        "page" : "Format", 
+        "dictData" : {
+            "data" : "sdfasdfsd", 
+            "config" : {
+                "pageName" : "", 
+                "modalElements" : [
+                    [
+                        {
+                            "typ" : "dropDown", 
+                            "default" : "", 
+                            "required" : false, 
+                            "url" : "/dynamicdropdown", 
+                            "includeAll" : true, 
+                            "placeHolder" : "Select DictName ", 
+                            "errorMessage" : "Please select DictName", 
+                            "readOnly" : false, 
+                            "p_data_index" : "dictName", 
+                            "label" : "DictName", 
+                            "isSearchable" : true, 
+                            "source" : "dynamic", 
+                            "sourceParams" : {
+                                "name" : "ZenFormConfig", 
+                                "act" : true
+                            }, 
+                            "din" : "dictNameId"
+                        }
+                    ]
+                ], 
+                "bat" : {
+                    "button1" : {
+                        "buttonProp" : {
+                            "type" : "primary", 
+                            "label" : "Submit", 
+                            "visible" : true, 
+                            "enable" : true, 
+                            "hover" : false, 
+                            "validateFields" : false, 
+                            "confirmationPopUp" : false, 
+                            "submitFormData" : true, 
+                            "popUpModal" : false, 
+                            "postSubmitAction" : false
+                        }, 
+                        "hoverProp" : {
+
+                        }, 
+                        "validateFieldsProp" : {
+
+                        }, 
+                        "confirmationPopUpProp" : {
+
+                        }, 
+                        "submitFormDataProp" : {
+                            "method" : "GET", 
+                            "api" : "/sparktable/miscellaneouspageconfig", 
+                            "params" : {
+                                "param1" : "p1", 
+                                "param2" : "p2"
+                            }
+                        }, 
+                        "popUpModalProp" : {
+
+                        }, 
+                        "postSubmitActionProp" : {
+
+                        }
+                    }, 
+                    "button2" : {
+                        "buttonProp" : {
+                            "type" : "primary", 
+                            "label" : "Add New", 
+                            "visible" : true, 
+                            "enable" : true, 
+                            "hover" : false, 
+                            "validateFields" : false, 
+                            "confirmationPopUp" : false, 
+                            "submitFormData" : false, 
+                            "popUpModal" : true, 
+                            "postSubmitAction" : true
+                        }, 
+                        "hoverProp" : {
+
+                        }, 
+                        "popUpModalProp" : {
+                            "modalHeader" : "Add DictName", 
+                            "method" : "POST", 
+                            "elements" : [
+                                {
+                                    "typ" : "textBox", 
+                                    "default" : "", 
+                                    "required" : true, 
+                                    "placeHolder" : "Add DictName ", 
+                                    "errorMessage" : "Please add DictName", 
+                                    "readOnly" : false, 
+                                    "label" : "DictName", 
+                                    "din" : "dictName"
+                                }, 
+                                {
+                                    "typ" : "dropDown", 
+                                    "default" : "", 
+                                    "required" : true, 
+                                    "url" : "/dynamicdropdown", 
+                                    "includeAll" : true, 
+                                    "placeHolder" : "Select Standard Id ", 
+                                    "errorMessage" : "Please select Standard Id", 
+                                    "readOnly" : false, 
+                                    "visible" : true, 
+                                    "colSize" : 12.0, 
+                                    "labelColSpan" : 10.0, 
+                                    "p_data_index" : "qc_standard_p", 
+                                    "label" : "QC Standard Id", 
+                                    "source" : "dynamic", 
+                                    "sourceParams" : {
+                                        "name" : "QCstd", 
+                                        "act" : true
+                                    }, 
+                                    "din" : "qc_standard"
+                                }
+                            ], 
+                            "api" : "/zenformbuilder"
+                        }, 
+                        "postSubmitActionProp" : {
+                            "action" : "reloadStorm"
+                        }
+                    }
+                }
+            }
+        }, 
+        "ver" : "ABCD1234", 
+        "act" : true, 
+        "clmnDoc" : {
+            "_id" : "S_1516", 
+            "act" : true, 
+            "dictName" : "ExtrusionInsulationHtForm", 
+            "typ" : "PageConfig", 
+            "lid" : "lid_999", 
+            "subTyp" : "ZenForm", 
+            "page" : "Format", 
+            "ver" : "0", 
+            "unq" : false, 
+            "dictData" : {
+                "config" : {
+                    "layout" : "vertical", 
+                    "groupControl" : false, 
+                    "pageTitle" : "QCP 104 EXTRUSION INSULATION HT", 
+                    "zenFuncs" : {
+                        "headerMultiline" : false, 
+                        "footerMultiline" : false, 
+                        "footerButtons" : true, 
+                        "headerRoute" : false
+                    }, 
+                    "headerRoute" : {
+
+                    }, 
+                    "headerMultiline" : {
+
+                    }, 
+                    "footerMultiline" : {
+
+                    }, 
+                    "modalElements" : [
+                        [
+                            {
+                                "typ" : "dropDown", 
+                                "default" : "", 
+                                "required" : false, 
+                                "url" : "/dynamicdropdown", 
+                                "includeAll" : true, 
+                                "placeHolder" : "Select DictName ", 
+                                "errorMessage" : "Please select DictName", 
+                                "readOnly" : false, 
+                                "p_data_index" : "dictName", 
+                                "label" : "DictName", 
+                                "isSearchable" : true, 
+                                "source" : "dynamic", 
+                                "sourceParams" : {
+                                    "name" : "ZenFormConfig", 
+                                    "act" : true
+                                }, 
+                                "din" : "dictNameId"
+                            }
+                        ]
+                    ]
+                }
+            }, 
+            "approve" : [
+
+            ], 
+            "delete" : [
+
+            ], 
+            "edit" : [
+
+            ], 
+            "view" : [
+
+            ], 
+            "dynamicModal" : [
+
+            ], 
+            "countList" : 0.0, 
+            "q" : 1.0, 
+            "origId" : "X_667"
+        }
+    }, 
+    "approve" : [
+
+    ], 
+    "countList" : 0.0, 
+    "delete" : [
+
+    ], 
+    "dynamicModal" : [
+
+    ], 
+    "edit" : [
+
+    ], 
+    "q" : 1.0, 
+    "view" : [
+
+    ], 
+    "mint" : "5"
+}
+
+
+{ 
+    "_id" : "S_1209", 
+    "lid" : "lid_999", 
+    "dictName" : "MasterDataUserStadNew", 
+    "typ" : "PageConfig", 
+    "page" : "StadNew", 
+    "dictData" : {
+        "config" : {
+            "modalElements" : [
+                {
+                    "label" : "Employee Code", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "employeeCode", 
+                    "placeHolder" : "Employee Code", 
+                    "errorMessage" : "Please Enter Employee Code"
+                }, 
+                {
+                    "label" : "UserFirstName", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "userFirstName", 
+                    "placeHolder" : "Enter User First Name ", 
+                    "errorMessage" : "Please Enter User First Name"
+                }, 
+                {
+                    "label" : "UserSecondName", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "userSecName", 
+                    "placeHolder" : "Enter User Second Name ", 
+                    "errorMessage" : "Please Enter User Second Name"
+                }, 
+                {
+                    "label" : "FullName", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "fullName", 
+                    "placeHolder" : "Enter User Full Name ", 
+                    "errorMessage" : "Please Enter User Full Name"
+                }, 
+                {
+                    "label" : "Date Of Birth", 
+                    "typ" : "datePicker", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "birthDate", 
+                    "placeHolder" : "Select  Date Of Birth", 
+                    "errorMessage" : "Please select  Date Of Birth", 
+                    "format" : "YYYY-MM-DD"
+                }, 
+                {
+                    "label" : "EmailId", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "emailid", 
+                    "placeHolder" : "Enter EmailId ", 
+                    "errorMessage" : "Please Enter EmailId"
+                }, 
+                {
+                    "label" : "Mobile Number", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "mobile", 
+                    "placeHolder" : "Enter Mobile Number ", 
+                    "errorMessage" : "Please Enter Mobile Number"
+                }, 
+                {
+                    "label" : "Phone Number", 
+                    "typ" : "intControl", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "default" : 0.0, 
+                    "data_index" : "phone"
+                }, 
+                {
+                    "label" : "UserName", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "uame", 
+                    "placeHolder" : "Enter UserName ", 
+                    "errorMessage" : "Please Enter UserName"
+                }, 
+                {
+                    "label" : "Password", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "password", 
+                    "placeHolder" : "Enter Password ", 
+                    "errorMessage" : "Please Enter Password"
+                }, 
+                {
+                    "label" : "Role", 
+                    "typ" : "dropDown", 
+                    "default" : "User", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "role", 
+                    "placeHolder" : "Enter role ", 
+                    "errorMessage" : "Please Enter role", 
+                    "source" : "cropdown", 
+                    "params" : {
+                        "name" : "DfUserRole"
+                    }, 
+                    "src" : "api", 
+                    "api" : "/cropdown"
+                }, 
+                {
+                    "label" : "ContactId", 
+                    "typ" : "intControl", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "contactid"
+                }, 
+                {
+                    "label" : "Department", 
+                    "typ" : "dropDown", 
+                    "includeAll" : false, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "data_index" : "did", 
+                    "p_data_index" : "dame", 
+                    "placeHolder" : "Select Department", 
+                    "errorMessage" : "Please select  Department", 
+                    "source" : "mdict", 
+                    "params" : {
+                        "typ" : "Department", 
+                        "subTyp" : "idame"
+                    }, 
+                    "src" : "api", 
+                    "api" : "/mdict"
+                }
+            ], 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "Submit", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : true, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : true
+                    }, 
+                    "confirmationPopUpProp" : {
+                        "text" : "Do you want to Create New User?", 
+                        "okButtonLabel" : "Yes", 
+                        "cancelButtonLabel" : "Cancel"
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "POST", 
+                        "api" : "/masterdata/user", 
+                        "params" : {
+                            "param1" : "p1", 
+                            "param2" : "p2"
+                        }
+                    }, 
+                    "postSubmitActionProp" : {
+                        "action" : "clearForm", 
+                        "route" : ""
+                    }
+                }
+            }, 
+            "pageTitle" : "Add Users"
+        }
+    }, 
+    "ver" : "61226ab9", 
+    "unq" : false, 
+    "act" : true, 
+    "subTyp" : "PhantomStadNew", 
+    "mint" : "5"
+}
+
+{ 
+    "_id" : "S_1741", 
+    "lid" : "lid_999", 
+    "dictName" : "PmsNewSprintStaddNew", 
+    "typ" : "PageConfig", 
+    "page" : "StadNew", 
+    "dictData" : {
+        "config" : {
+            "pageTitle" : "New Sprint", 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "Submit", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : true, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : true
+                    }, 
+                    "confirmationPopUpProp" : {
+                        "text" : "Do you want to  Create  New Sprint ?", 
+                        "okButtonLabel" : "Yes", 
+                        "cancelButtonLabel" : "Cancel"
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "POST", 
+                        "dataType" : "formData", 
+                        "params" : {
+                            "param1" : "p1", 
+                            "param2" : "p2"
+                        }, 
+                        "api" : "/pms/sprint"
+                    }, 
+                    "postSubmitActionProp" : {
+                        "action" : "reloadPage", 
+                        "route" : ""
+                    }
+                }
+            }, 
+            "modalElements" : [
+                {
+                    "label" : "Project", 
+                    "colSize" : 10.0, 
+                    "typ" : "dropDown", 
+                    "default" : "", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "placeHolder" : "Select Project ", 
+                    "errorMessage" : "Please select Project", 
+                    "source" : "dynamic", 
+                    "data_index" : "projid", 
+                    "params" : {
+                        "name" : "AllProject", 
+                        "act" : true
+                    }, 
+                    "api" : "/dynamicdropdown", 
+                    "src" : "api"
+                }, 
+                {
+                    "label" : "Template", 
+                    "colSize" : 10.0, 
+                    "typ" : "dropDown", 
+                    "default" : "", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "placeHolder" : "Select Template ", 
+                    "errorMessage" : "Please select Template", 
+                    "source" : "dynamic", 
+                    "data_index" : "tmpid", 
+                    "params" : {
+                        "name" : " PmsSprintTemplate", 
+                        "act" : true
+                    }, 
+                    "api" : "/dynamicdropdown", 
+                    "src" : "api"
+                }, 
+                {
+                    "typ" : "textBox", 
+                    "default" : "", 
+                    "required" : true, 
+                    "placeHolder" : "Add Sprint Name ", 
+                    "errorMessage" : "Please add Sprint Name ", 
+                    "readOnly" : false, 
+                    "label" : "Sprint Name", 
+                    "data_index" : "sprint"
+                }, 
+                {
+                    "label" : "Priority", 
+                    "colSize" : 10.0, 
+                    "typ" : "dropDown", 
+                    "default" : "", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "placeHolder" : "Select Priority ", 
+                    "errorMessage" : "Please select Priority", 
+                    "source" : "dynamic", 
+                    "data_index" : "crit", 
+                    "params" : {
+                        "name" : " PmsSprintPriority"
+                    }, 
+                    "api" : "/dynamicdropdown", 
+                    "src" : "api"
+                }, 
+                {
+                    "typ" : "intControl", 
+                    "name" : "Int", 
+                    "label" : "No Of Sprint", 
+                    "required" : true, 
+                    "default" : 1.0, 
+                    "data_index" : "qty"
+                }, 
+                {
+                    "label" : "Sprint AddNew", 
+                    "typ" : "dropDown", 
+                    "default" : "noForm", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "placeHolder" : "Select Sprint", 
+                    "errorMessage" : "Please select Sprint ", 
+                    "source" : "cropdown", 
+                    "data_index" : "stdid", 
+                    "p_data_index" : "p_stdid", 
+                    "params" : {
+                        "name" : "PmsCompletionFormStd"
+                    }, 
+                    "api" : "/cropdown", 
+                    "src" : "api"
+                }
+            ]
+        }
+    }, 
+    "ver" : "6246febc", 
+    "unq" : false, 
+    "act" : true, 
+    "subTyp" : "PhantomStadNew", 
+    "origId" : "X_149", 
+    "mint" : "5"
+}

@@ -1,0 +1,786 @@
+{
+    "_id": "wrsTasksPatchSmodal",
+    "lid": "lid_999",
+    "dictName": "wrsTasksPatchSmodal",
+    "typ": "Modal",
+    "page": "Format",
+    "dictData": {
+        "data": null,
+        "config": {
+            "pageName": "",
+            "modalElements": [
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_textBox",
+                    "p_typ": "TextBox",
+                    "typ": "textBox",
+                    "label": "Sprint",
+                    "indx": 1,
+                    "required": false,
+                    "p_data_index": "p_sprint",
+                    "data_index": "sprint",
+                    "zenPreviewListIndex": 1,
+                    "labelColSpan": 8,
+                    "default": "",
+                    "visible": false,
+                    "colSize": 12,
+                    "placeHolder": " ",
+                    "errorMessage": " ",
+                    "readOnly": false
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_textBox",
+                    "p_typ": "TextBox",
+                    "typ": "textBox",
+                    "label": "Task",
+                    "indx": 1,
+                    "required": true,
+                    "p_data_index": "p_task",
+                    "data_index": "task",
+                    "zenPreviewListIndex": 1,
+                    "labelColSpan": 8,
+                    "default": "",
+                    "visible": true,
+                    "colSize": 12,
+                    "placeHolder": " ",
+                    "errorMessage": " ",
+                    "readOnly": false
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_dropDown",
+                    "p_typ": "Dropdown",
+                    "typ": "dropDown",
+                    "label": "Department",
+                    "indx": 2,
+                    "required": true,
+                    "p_data_index": "p_dept",
+                    "data_index": "dept",
+                    "src": "api",
+                    "source": "cropdown",
+                    "zenPreviewListIndex": 2,
+                    "labelColSpan": 8,
+                    "default": "",
+                    "visible": false,
+                    "colSize": 12,
+                    "placeHolder": "Please Select",
+                    "errorMessage": "Please Select",
+                    "isSearchable": true,
+                    "readOnly": false,
+                    "multiSelect": false,
+                    "includeAll": false,
+                    "p_sourceParams_cropdown": "wrsDepartmentDropDown",
+                    "sourceParams_cropdown": "wrsDepartmentDropDown",
+                    "api": "/cropdown",
+                    "params": {
+                        "name": "wrsDepartmentDropDown"
+                    }
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_dropDown",
+                    "p_typ": "Dropdown",
+                    "typ": "dropDown",
+                    "label": "Priority",
+                    "indx": 3,
+                    "required": true,
+                    "p_data_index": "p_prior",
+                    "data_index": "prior",
+                    "src": "api",
+                    "source": "cropdown",
+                    "zenPreviewListIndex": 3,
+                    "labelColSpan": 8,
+                    "default": "",
+                    "visible": true,
+                    "colSize": 12,
+                    "placeHolder": "Please Select",
+                    "errorMessage": "Please Select",
+                    "isSearchable": true,
+                    "readOnly": false,
+                    "multiSelect": false,
+                    "includeAll": false,
+                    "p_sourceParams_cropdown": "wrsPriorityDropDown",
+                    "sourceParams_cropdown": "wrsPriorityDropDown",
+                    "api": "/cropdown",
+                    "params": {
+                        "name": "wrsPriorityDropDown"
+                    }
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_datePicker",
+                    "p_typ": "Date Picker",
+                    "typ": "datePicker",
+                    "label": "Due Date",
+                    "indx": 4,
+                    "required": true,
+                    "colSize": 12,
+                    "p_data_index": "p_dueDt",
+                    "data_index": "dueDt",
+                    "format": "YYYY-MM-DD"
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "QueryElementBuilder_addNew",
+                    "p_typ": "Radio",
+                    "colSize": 12,
+                    "typ": "radio",
+                    "label": "TFT",
+                    "indx": 7,
+                    "data": {
+                        "false": "False",
+                        "true": "True"
+                    },
+                    "src": "data",
+                    "required": true,
+                    "p_data_index": "p_tft",
+                    "data_index": "tft"
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "QueryElementBuilder_addNew",
+                    "p_typ": "Radio",
+                    "colSize": 12,
+                    "typ": "radio",
+                    "label": "Current",
+                    "indx": 7,
+                    "data": {
+                        "false": "False",
+                        "true": "True"
+                    },
+                    "src": "data",
+                    "required": true,
+                    "p_data_index": "p_cur",
+                    "data_index": "cur"
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_dropDown",
+                    "p_typ": "Dropdown",
+                    "typ": "dropDown",
+                    "label": "Assigned By",
+                    "indx": 8,
+                    "required": true,
+                    "data_index": "asgBy",
+                    "p_data_index": "asgBy",
+                    "src": "api",
+                    "source": "cropdown",
+                    "zenPreviewListIndex": 8,
+                    "labelColSpan": 8,
+                    "default": "",
+                    "visible": true,
+                    "colSize": 12,
+                    "placeHolder": "Please Select",
+                    "errorMessage": "Please Select",
+                    "isSearchable": true,
+                    "readOnly": false,
+                    "multiSelect": false,
+                    "includeAll": false,
+                    "params": {
+                        "typ": "UserNonLine",
+                        "subTyp": "idame"
+                    },
+                    "api": "/mdict"
+                },
+                {
+                    "p_projid": "wrs",
+                    "projid": "NPD183",
+                    "p_typ1": "Smodal",
+                    "typ1": "smodal",
+                    "_id": "wrsTasksPostSmodal",
+                    "p__id": "wrsTasksPostSmodal",
+                    "dictName": "ZenFormBuilder_dropDown",
+                    "p_typ": "Dropdown",
+                    "typ": "dropDown",
+                    "label": "Responsibility",
+                    "indx": 8,
+                    "required": true,
+                    "data_index": "asgTo",
+                    "p_data_index": "asgTo",
+                    "src": "api",
+                    "source": "cropdown",
+                    "zenPreviewListIndex": 8,
+                    "labelColSpan": 8,
+                    "default": "",
+                    "visible": true,
+                    "colSize": 12,
+                    "placeHolder": "Please Responsibility",
+                    "errorMessage": "Please Responsibility",
+                    "isSearchable": true,
+                    "readOnly": false,
+                    "multiSelect": false,
+                    "includeAll": false,
+                    "params": {
+                        "typ": "UserNonLine",
+                        "subTyp": "idame"
+                    },
+                    "api": "/mdict"
+                },
+                {
+                    "colSize": 12,
+                    "data": {
+                        "C": "Completed",
+                        "H": "Hold",
+                        "I": "Inprogress",
+                        "O": "Open",
+                        "Q": "Queued",
+                        "X": "Cancelled"
+                    },
+                    "data_index": "st",
+                    "default": "",
+                    "errorMessage": "Please select  Status",
+                    "includeAll": false,
+                    "label": "Status",
+                    "labelColSpan": 10,
+                    "multiSelect": false,
+                    "p_data_index": "p_st",
+                    "placeHolder": "Select Status",
+                    "readOnly": false,
+                    "required": true,
+                    "src": "data",
+                    "typ": "dropDown",
+                    "visible": true
+                }
+            ],
+            "footerButtons": {
+                "button1": {
+                    "buttonProp": {
+                        "label": "Submit",
+                        "type": "primary",
+                        "enable": true,
+                        "visible": true,
+                        "validateFields": true,
+                        "hover": false,
+                        "confirmationPopUp": true,
+                        "submitFormData": true,
+                        "postSubmitAction": false,
+                        "popupModal": false
+                    },
+                    "confirmationPopUpProp": {
+                        "text": "Are you sure you want to submit this data?",
+                        "okButtonLabel": "Yes",
+                        "cancelButtonLabel": "Cancel"
+                    },
+                    "submitFormDataProp": {
+                        "method": "PATCH",
+                        "multiProps": [
+                            "task",
+                            "prior",
+                            "dueDt",
+                            "sprint",
+                            "st",
+                            "tft",
+                            "asgBy",
+                            "asgTo",
+                            "dept",
+                            "ack",
+                            "ackAt",
+                            "cur"
+                        ],
+                        "api": "/wrs/taskManagement",
+                        "params": {}
+                    }
+                }
+            }
+        }
+    },
+    "ver": "ABCD1234",
+    "act": false,
+    "clmnDoc": {
+        "_id": "TASK_1001",
+        "sprint": "WRS",
+        "task": "Prepare Weekly Sales Report",
+        "prior": "High",
+        "dueDt": "Thu, 30 Jul 2026 00:00:00 GMT",
+        "st": "InProgress",
+        "tft": true,
+        "asgBy": "Ramesh Sharma",
+        "asgTo": null,
+        "dept": "UI",
+        "ack": "Acknowledged",
+        "ackAt": "2025-05-19T09:15:00",
+        "crtAt": null
+    },
+    "dnRefid": "wrsTasks",
+    "projid": "L189",
+    "rel": "AG20260817",
+    "resp": "AG20260817"
+}
+
+{ 
+    "_id" : "DS_1403", 
+    "lid" : "lid_999", 
+    "dictName" : "Z_CalendarPmsPatchSmodal", 
+    "typ" : "Modal", 
+    "page" : "Format", 
+    "dictData" : {
+        "data" : null, 
+        "config" : {
+            "pageName" : "", 
+            "modalElements" : [
+                {
+                    "label" : "Plan From", 
+                    "typ" : "datePicker", 
+                    "default" : 0.0, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "planFrom", 
+                    "placeHolder" : "Select  Date", 
+                    "errorMessage" : "Please select  Date", 
+                    "format" : "YYYY-MM-DD"
+                }, 
+                {
+                    "label" : "Plan To", 
+                    "typ" : "datePicker", 
+                    "default" : 0.0, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "planTo", 
+                    "placeHolder" : "Select  Date", 
+                    "errorMessage" : "Please select  Date", 
+                    "format" : "YYYY-MM-DD"
+                }, 
+                {
+                    "label" : "Actual From", 
+                    "typ" : "datePicker", 
+                    "default" : 0.0, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "actualFrom", 
+                    "placeHolder" : "Select  Date", 
+                    "errorMessage" : "Please select  Date", 
+                    "format" : "YYYY-MM-DD"
+                }, 
+                {
+                    "label" : "Actual To", 
+                    "typ" : "datePicker", 
+                    "default" : 0.0, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "actualTo", 
+                    "placeHolder" : "Select  Date", 
+                    "errorMessage" : "Please select  Date", 
+                    "format" : "YYYY-MM-DD"
+                }, 
+                {
+                    "typ" : "dropDown", 
+                    "default" : "all", 
+                    "includeAll" : true, 
+                    "required" : true, 
+                    "placeHolder" : "SelectStatus", 
+                    "errorMessage" : "Please select Status", 
+                    "readOnly" : false, 
+                    "data_index" : "st", 
+                    "p_data_index" : "p_st", 
+                    "label" : "Status", 
+                    "multiSelect" : false, 
+                    "visible" : true, 
+                    "colSize" : NumberInt(10), 
+                    "labelColSpan" : NumberInt(10), 
+                    "data" : {
+                        "C" : "BirthDay Leave", 
+                        "I" : "UnPlanned Leave", 
+                        "D" : "Planned Leave", 
+                        "X" : "Earned Leave", 
+                        "O" : "Sick Leave", 
+                        "H" : "Casual Leave"
+                    }, 
+                    "src" : "data"
+                }, 
+                {
+                    "label" : "Note", 
+                    "required" : true, 
+                    "typ" : "textBox", 
+                    "default" : "", 
+                    "readOnly" : false, 
+                    "data_index" : "note"
+                }, 
+                {
+                    "label" : "Remarks", 
+                    "required" : true, 
+                    "typ" : "textBox", 
+                    "default" : "cellValue", 
+                    "readOnly" : false, 
+                    "data_index" : "itemName"
+                }
+            ], 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "Submit", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : true, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : false
+                    }, 
+                    "hoverProp" : {
+
+                    }, 
+                    "validateFieldsProp" : {
+
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "PATCH", 
+                        "api" : "/Pmsleavecalendar", 
+                        "params" : {
+
+                        }, 
+                        "multiProps" : [
+
+                        ]
+                    }, 
+                    "popUpModalProp" : {
+
+                    }, 
+                    "postSubmitActionProp" : {
+
+                    }
+                }, 
+                "button2" : {
+                    "buttonProp" : {
+                        "type" : "danger", 
+                        "label" : "Button 2", 
+                        "visible" : false, 
+                        "enable" : false, 
+                        "hover" : true, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : false, 
+                        "submitFormData" : false, 
+                        "popUpModal" : true, 
+                        "postSubmitAction" : true
+                    }
+                }
+            }
+        }
+    }, 
+    "ver" : "ABCD1234", 
+    "projid" : "QC133", 
+    "rel" : "SA20260507:16:30", 
+    "resp" : "SA20260507:16:30", 
+    "act" : false
+}
+
+{ 
+    "_id" : "GampMmrEnvMonitPatchsmodalM", 
+    "lid" : "lid_999", 
+    "dictName" : "GampMmrEnvMonitPatchsmodalM", 
+    "typ" : "Modal", 
+    "page" : "Format", 
+    "dictData" : {
+        "data" : null, 
+        "config" : {
+            "pageName" : "", 
+            "modalElements" : [
+                {
+                    "colSize" : NumberInt(24), 
+                    "data_index" : "productid", 
+                    "default" : "all", 
+                    "errorMessage" : "Please select Product ID", 
+                    "includeAll" : true, 
+                    "isSearchable" : true, 
+                    "label" : "Product ID", 
+                    "labelColSpan" : NumberInt(10), 
+                    "multiSelect" : false, 
+                    "p_data_index" : "p_productid", 
+                    "placeHolder" : "Select Product ID", 
+                    "readOnly" : false, 
+                    "required" : false, 
+                    "typ" : "dropDown", 
+                    "visible" : true, 
+                    "src" : "api", 
+                    "api" : "/dd", 
+                    "params" : {
+                        "dn" : "u_gamp_mmrEnvMonit_idproductidAll"
+                    }, 
+                    "sourceParams_dynamic" : "u_gamp_mmrEnvMonit_idproductidAll", 
+                    "sourceParams" : {
+
+                    }
+                }, 
+                {
+                    "colSize" : NumberInt(24), 
+                    "data_index" : "stgid", 
+                    "default" : "all", 
+                    "errorMessage" : "Please select Stage ID", 
+                    "includeAll" : true, 
+                    "isSearchable" : true, 
+                    "label" : "Stage ID", 
+                    "labelColSpan" : NumberInt(10), 
+                    "multiSelect" : false, 
+                    "p_data_index" : "p_stgid", 
+                    "placeHolder" : "Select Stage ID", 
+                    "readOnly" : false, 
+                    "required" : false, 
+                    "typ" : "dropDown", 
+                    "visible" : true, 
+                    "src" : "api", 
+                    "api" : "/dd", 
+                    "params" : {
+                        "dn" : "u_gamp_mmrEnvCond_idstgidAll"
+                    }, 
+                    "sourceParams_dynamic" : "u_gamp_mmrEnvCond_idstgidAll", 
+                    "sourceParams" : {
+
+                    }
+                }, 
+                {
+                    "colSize" : NumberInt(12), 
+                    "data_index" : "areaName", 
+                    "default" : "all", 
+                    "errorMessage" : "Please select Area Name", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "label" : "Area Name", 
+                    "labelColSpan" : NumberInt(10), 
+                    "multiSelect" : false, 
+                    "p_data_index" : "p_areaName", 
+                    "placeHolder" : "Select Area Name", 
+                    "readOnly" : false, 
+                    "required" : true, 
+                    "source" : "cropdown", 
+                    "params" : {
+                        "name" : "gampAreaNameDropDown", 
+                        "act" : true
+                    }, 
+                    "typ" : "dropDown", 
+                    "visible" : true, 
+                    "src" : "api", 
+                    "api" : "/cropdown", 
+                    "sourceParams" : {
+
+                    }
+                }, 
+                {
+                    "label" : "Tempmin", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "tempMin", 
+                    "placeHolder" : "Enter Tempmin", 
+                    "errorMessage" : "Please enter Tempmin"
+                }, 
+                {
+                    "label" : "Tempmax", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "tempMax", 
+                    "placeHolder" : "Enter Tempmax", 
+                    "errorMessage" : "Please enter Tempmax"
+                }, 
+                {
+                    "label" : "Tempuom", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "tempUom", 
+                    "placeHolder" : "Enter Tempuom", 
+                    "errorMessage" : "Please enter Tempuom"
+                }, 
+                {
+                    "label" : "Rhmin", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "rhMin", 
+                    "placeHolder" : "Enter Rhmin", 
+                    "errorMessage" : "Please enter Rhmin"
+                }, 
+                {
+                    "label" : "Rhmax", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "rhMax", 
+                    "placeHolder" : "Enter Rhmax", 
+                    "errorMessage" : "Please enter Rhmax"
+                }, 
+                {
+                    "label" : "Rhuom", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "rhUom", 
+                    "placeHolder" : "Enter Rhuom", 
+                    "errorMessage" : "Please enter Rhuom"
+                }, 
+                {
+                    "label" : "Monitfreq", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "monitFreq", 
+                    "placeHolder" : "Enter Monitfreq", 
+                    "errorMessage" : "Please enter Monitfreq"
+                }, 
+                {
+                    "label" : "Monitfrequom", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "monitFreqUom", 
+                    "placeHolder" : "Enter Monitfrequom", 
+                    "errorMessage" : "Please enter Monitfrequom"
+                }, 
+                {
+                    "colSize" : NumberInt(24), 
+                    "data_index" : "monitEquipid", 
+                    "default" : "all", 
+                    "errorMessage" : "Please select Equipment ID", 
+                    "includeAll" : true, 
+                    "isSearchable" : true, 
+                    "label" : "Equipment ID", 
+                    "labelColSpan" : NumberInt(10), 
+                    "multiSelect" : false, 
+                    "p_data_index" : "p_monitEquipid", 
+                    "placeHolder" : "Select Equipment ID", 
+                    "readOnly" : false, 
+                    "required" : false, 
+                    "typ" : "dropDown", 
+                    "visible" : true, 
+                    "src" : "api", 
+                    "api" : "/dd", 
+                    "params" : {
+                        "dn" : "u_gamp_mmrEnvMonit_idmonitEquipidAll"
+                    }, 
+                    "sourceParams_dynamic" : "u_gamp_mmrEnvMonit_idmonitEquipidAll", 
+                    "sourceParams" : {
+
+                    }
+                }, 
+                {
+                    "colSize" : NumberInt(12), 
+                    "data_index" : "regid", 
+                    "default" : "all", 
+                    "errorMessage" : "Please select Regulation", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "label" : "Regulation", 
+                    "labelColSpan" : NumberInt(10), 
+                    "multiSelect" : false, 
+                    "p_data_index" : "p_regid", 
+                    "placeHolder" : "Select Regulation", 
+                    "readOnly" : false, 
+                    "required" : true, 
+                    "source" : "cropdown", 
+                    "params" : {
+                        "name" : "gampRegulationDropDown", 
+                        "act" : true
+                    }, 
+                    "typ" : "dropDown", 
+                    "visible" : true, 
+                    "src" : "api", 
+                    "api" : "/cropdown", 
+                    "sourceParams" : {
+
+                    }
+                }
+            ], 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "Submit", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : true, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : false
+                    }, 
+                    "hoverProp" : {
+
+                    }, 
+                    "validateFieldsProp" : {
+
+                    }, 
+                    "confirmationPopUpProp" : {
+                        "text" : "Do you want to submit form data?", 
+                        "okButtonLabel" : "Yes", 
+                        "cancelButtonLabel" : "Cancel"
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "PATCH", 
+                        "api" : "/gamp/mmrenvmonit", 
+                        "params" : {
+
+                        }
+                    }, 
+                    "popUpModalProp" : {
+
+                    }, 
+                    "postSubmitActionProp" : {
+
+                    }
+                }, 
+                "button2" : {
+                    "buttonProp" : {
+                        "type" : "danger", 
+                        "label" : "Button 2", 
+                        "visible" : false, 
+                        "enable" : false, 
+                        "hover" : true, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : false, 
+                        "submitFormData" : false, 
+                        "popUpModal" : true, 
+                        "postSubmitAction" : true
+                    }
+                }
+            }
+        }
+    }, 
+    "ver" : "ABCD1234", 
+    "act\"" : true, 
+    "projid" : "NPD183", 
+    "rel" : "SA20260827:15:25", 
+    "resp" : "SA"
+}

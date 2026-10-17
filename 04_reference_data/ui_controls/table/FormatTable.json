@@ -1,139 +1,144 @@
-{ 
-    "_id" : "FormatStable", 
-    "lid" : "lid_999", 
-    "dictName" : "FormatStable", 
-    "typ" : "PageConfig", 
-    "page" : "FormatStable", 
-    "dictData" : {
-        "config" : {
-            "headerRoute" :null, 
-            "headerMultiline" : null, 
-            "footerMultiline" : {
-                "background-color" : "#B9C6DF", 
- 
-                "multiCol" : [
+{
+    "_id": "FormatStable",
+    "lid": "lid_999",
+    "dictName": "FormatStable",
+    "dictData": {
+        "config": {
+            "zenFuncs": {
+                "headerMultiline": false,
+                "footerMultiline": false,
+                "footerButtons": true,
+                "dynamicActionBtn": true
+            },
+            "headerMultiline": {},
+            "footerMultiline": {
+                "background-color": "#B9C6DF",
+                "multiCol": [
                     [
                         {
-                            "typ" : "dataElement", 
-                            "colSize" : 6.0, 
-                            "key" : {
-                                "text" : "From", 
-                                "style" : {
-                                    "fontFamily" : "Roboto Condensed", 
-                                    "fontWeight" : "300", 
-                                    "fontSize" : "18px", 
-                                    "color" : "#ecf0f1", 
-                                    "textAlign" : "left", 
-                                    "margin" : "1px 1px 1px 1px"
+                            "typ": "dataElement",
+                            "colSize": 6.0,
+                            "key": {
+                                "text": "From",
+                                "style": {
+                                    "fontFamily": "Roboto Condensed",
+                                    "fontWeight": "300",
+                                    "fontSize": "18px",
+                                    "color": "#ecf0f1",
+                                    "textAlign": "left",
+                                    "margin": "1px 1px 1px 1px"
                                 }
-                            }, 
-                            "val" : {
-                                "text" : "", 
-                                "style" : {
-                                    "fontFamily" : "Roboto Condensed", 
-                                    "fontWeight" : "600", 
-                                    "fontSize" : "18px", 
-                                    "color" : "#ecf0f1", 
-                                    "textAlign" : "left", 
-                                    "margin" : "1px 1px 1px 1px"
+                            },
+                            "val": {
+                                "text": "",
+                                "style": {
+                                    "fontFamily": "Roboto Condensed",
+                                    "fontWeight": "600",
+                                    "fontSize": "18px",
+                                    "color": "#ecf0f1",
+                                    "textAlign": "left",
+                                    "margin": "1px 1px 1px 1px"
                                 }
                             }
-                        }, 
+                        },
                         {
-                            "typ" : "blankSpace", 
-                            "colSize" : 1.0
-                        }, 
-                
-                    ], 
-          ]
-            }, 
-            "tableTitle" : {
-                "title-label" : "", 
-                "font-family" : "Roboto Condensed", 
-                "font-weight" : "600", 
-                "font-size" : "30px", 
-                "font-color" : "#B1B1B5", 
-                "visible" : false
-            }, 
-            "tableSubTitle" : {
-                "visible" : true, 
-                "title-label" : "StableData", 
-                "font-family" : "Roboto Condensed", 
-                "font-weight" : "400", 
-                "font-size" : "16px", 
-                "font-color" : "#FFFFFF", 
-                "background" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)", 
-                "display-download-icon" : true, 
-                "download-icon-color" : "#0F62FE", 
-                "display-search-control" : true, 
-                "search-border-color" : "0px solid #0d3070", 
-                "search-inner-color" : "#B9C6DF", 
-                "title-icon" : "fa-list", 
-                "title-icon-size" : "16px", 
-                "title-icon-color" : "#FFFFFF"
-            }, 
-            "tableConfig" : {
-                "visible" : true, 
-                "tableWidth" : "80%", 
-                "divBackgroundColor" : [
-                    "transparent", 
+                            "typ": "blankSpace",
+                            "colSize": 1.0
+                        }
+                    ]
+                ]
+            },
+            "tableTitle": {
+                "font-color": "#B1B1B5",
+                "font-family": "Roboto Condensed",
+                "font-size": "30px",
+                "font-weight": "600",
+                "title-label": "",
+                "visible": false
+            },
+            "tableSubTitle": {
+                "background": "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+                "display-download-icon": true,
+                "display-search-control": true,
+                "download-icon-color": "#0F62FE",
+                "font-color": "#FFFFFF",
+                "font-family": "Roboto Condensed",
+                "font-size": "16px",
+                "font-weight": "400",
+                "search-border-color": "0px solid #0d3070",
+                "search-inner-color": "#B9C6DF",
+                "title-icon": "fa-list",
+                "title-icon-color": "#FFFFFF",
+                "title-icon-size": "16px",
+                "title-label": "Employee Master",
+                "visible": true
+            },
+            "tableConfig": {
+                "divAlignment": "left",
+                "divBackgroundColor": [
+                    "transparent",
                     "transparent"
-                ], 
-                "divAlignment" : "left", 
-                "leftMargin" : "0px", 
-                "innerLeftPadding" : "15px", 
-                "innerRightPadding" : "15px", 
-                "line-color" : "#2ECC71", 
-                "isSearchable" : true, 
-                "isSortable" : true, 
-                "pagination" : NumberInt(8), 
-                "exportToPdf" : false, 
-                "exportToCsv" : true, 
+                ],
+                "exportToCsv": true,
+                "exportToPdf": false,
+                "innerLeftPadding": "15px",
+                "innerRightPadding": "15px",
+                "isCheckable": true,
+                "isSearchable": true,
+                "isSortable": true,
+                "leftMargin": "0px",
+                "line-color": "#2ECC71",
+                "pagination": 8.0,
+                "tableWidth": "80%",
+                "visible": true, 
                 "noOfRows" : 10.0, 
                 "interval" : NumberInt(3000000)
-            }, 
-            "header" : {
-                "background-color" : "#4a4f59", 
-                "font-family" : "Roboto Condensed", 
-                "font-weight" : "100", 
-                "font-size" : "14px", 
-                "font-color" : "#125FCC", 
-                "row-padding" : "0px 0px 0px 2px", 
-                "visible" : true
-            }, 
-            "footer" : {
-                "background-color" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)", 
-                "font-family" : "Roboto Condensed", 
-                "font-weight" : "bold", 
-                "font-size" : "12px", 
-                "font-color" : "#D0E2FF", 
-                "row-padding" : "0px", 
-                "display-pagination-control" : true, 
-                "pagination-color" : "#E5F6FF", 
-                "pagination-visible" : true, 
-                "visible" : true, 
-                "noOfRows-visible" : true, 
-                "pageNo-visible" : true, 
-                "pagination-background-color" : "#0d3070", 
-                "pagination-border" : "1px solid #314f85"
-            }, 
-            "row" : {
-                "background-color" : "#FFFFFF", 
-                "row-padding" : "0px 0px 0px 5px", 
-                "font-family" : "Roboto Condensed", 
-                "font-weight" : "400", 
-                "font-size" : "12px", 
-                "font-color" : "#000000", 
-                "border-bottom-color" : "#DCD5D5", 
-                "border-top-color" : "#E74C3C", 
-                "border-bottom" : "none", 
-                "alternateRows" : [
-                    "stable-row-1", 
+            },
+            "header": {
+                "background-color": "#4a4f59",
+                "font-color": "#125FCC",
+                "font-family": "Roboto Condensed",
+                "font-size": "14px",
+                "font-weight": "100",
+                "row-padding": "0px 0px 0px 2px",
+                "visible": true
+            },
+            "footer": {
+                "background-color": "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+                "display-pagination-control": true,
+                "font-color": "#D0E2FF",
+                "font-family": "Roboto Condensed",
+                "font-size": "12px",
+                "font-weight": "bold",
+                "noOfRows-visible": true,
+                "pageNo-visible": true,
+                "pagination-background-color": "#0d3070",
+                "pagination-border": "1px solid #314f85",
+                "pagination-color": "#E5F6FF",
+                "pagination-visible": true,
+                "row-padding": "0px",
+                "visible": true
+            },
+            "footerButtons": {
+
+            },
+            "row": {
+                "alternateRows": [
+                    "stable-row-1",
                     "stable-row-2"
-                ]
-            }, 
-            "column" : [
-                {
+                ],
+                "background-color": "#FFFFFF",
+                "border-bottom": "none",
+                "border-bottom-color": "#DCD5D5",
+                "border-top-color": "#E74C3C",
+                "font-color": "#000000",
+                "font-family": "Roboto Condensed",
+                "font-size": "12px",
+                "font-weight": "400",
+                "row-padding": "0px 0px 0px 5px"
+            },
+            "column": [		    
+				{
                     "title" : "ThisIsAFixedLeftColumn", 
                     "fixed" : "left", 
  
@@ -186,25 +191,80 @@
                     "width" : "150px", 
                     "align" : "center", 
                     "data_index" : "rating"
+                },
+                {
+                    "title": "Active",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "active"
+                },
+                {
+                    "title": "Pay Code",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "payid"
+                },
+                {
+                    "title": "Emp Name",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "eame"
+                },
+                
+                {
+                    "title": "Date Of Join",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "doj",
+					"dtFormat" : "YYYY-MM-DD"
+                },
+                
+                {
+                    "title": "Aadhaar",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "aadhar"
+                },
+                {
+                    "title": "Bank Acc",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "bankAcc"
+                },
+                {
+                    "title": "IFSC Code",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "ifscid"
+                },
+                {
+                    "title": "Date Of Confirmation",
+                    "width": "80px",
+                    "align": "center",
+                    "data_index": "dtConfi",
+					"dtFormat" : "YYYY-MM-DD"
                 }
-            ], 
-            "rowAction" : [
+            ],
+            "rowAction": [
               
-            ], 
-            "action" :[]
-		  "zenPop" : {
-        }, 
-            "zenFuncs" : {
-                "headerRoute" : false, 
-                "footerMultiline" : true, 
-                "headerMultiline" : false, 
-                "footerButtons" : true
-            }, 
-            "footerButtons" : {
-       }
+            ],
+            "action": {
+           
+              
+            },
+            "zenPop": {}
         }
-    }, 
-    "subTyp" : "PhantomStable", 
-    "act" : true, 
-
+    },
+    "typ": "PageConfigStable",
+    "page": "FormatStable",
+    "unq": true,
+    "ver": "",
+    "projid": "",
+    "rel": "CL20261014-16:05",
+    "resp": "CL",
+    "subTyp": "PhantomStable",
+    "act": true,
+    "app": "mes",
+    "module": "maint"
+    "clmnDoc": {}
 }

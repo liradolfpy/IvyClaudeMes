@@ -1,0 +1,292 @@
+{ 
+    "_id" : "DS_1024", 
+    "lid" : "lid_999", 
+    "dictName" : "Z_TaskTransferPostSmodal", 
+    "typ" : "Modal", 
+    "page" : "Format", 
+    "dictData" : {
+        "data" : null, 
+        "config" : {
+            "pageName" : "", 
+            "modalElements" : [
+                {
+                    "typ" : "TypSubTyp", 
+                    "default" : "", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "source" : "mdict", 
+                    "auxParams" : {
+                        "typName" : "srcCluster", 
+                        "typLabel" : "Source Cluster", 
+                        "typ_data_index" : "srcCluster", 
+                        "typErrorMessage" : "srcCluster", 
+                        "typPlaceHolder" : "Select Source Cluster", 
+                        "typIncludeAll" : false, 
+                        "typReadOnly" : false, 
+                        "typDefault" : "", 
+                        "subTypName" : "srcDb", 
+                        "subTypLabel" : "Source DB", 
+                        "subTyp_data_index" : "srcdb", 
+                        "subTypErrorMessage" : "Please select Source DB", 
+                        "subTypPlaceholder" : "Select Source DB", 
+                        "subTypIncludeAll" : false, 
+                        "subTypReadOnly" : false, 
+                        "subTypDefault" : ""
+                    }, 
+                    "params" : {
+                        "typ" : "SrcClusterTypSrcDbSubTyp", 
+                        "subTyp" : "typSubTyp"
+                    }, 
+                    "src" : "api", 
+                    "api" : "/mdict"
+                }, 
+                {
+                    "typ" : "TypSubTyp", 
+                    "default" : "", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "source" : "mdict", 
+                    "auxParams" : {
+                        "typName" : "destCluster", 
+                        "typLabel" : "Destination Cluster", 
+                        "typ_data_index" : "destCluster", 
+                        "typErrorMessage" : "Destination Cluster", 
+                        "typPlaceHolder" : "Select Destination Cluster", 
+                        "typIncludeAll" : false, 
+                        "typReadOnly" : false, 
+                        "typDefault" : "", 
+                        "subTypName" : "destDb", 
+                        "subTypLabel" : "Destination DB", 
+                        "subTyp_data_index" : "destdb", 
+                        "subTypErrorMessage" : "Please select Destination DB", 
+                        "subTypPlaceholder" : "Select Destination DB", 
+                        "subTypIncludeAll" : false, 
+                        "subTypReadOnly" : false, 
+                        "subTypDefault" : ""
+                    }, 
+                    "params" : {
+                        "typ" : "DestClusterTypDestDbSubTyp", 
+                        "subTyp" : "typSubTyp"
+                    }, 
+                    "src" : "api", 
+                    "api" : "/mdict"
+                }, 
+                {
+                    "typ" : "datePicker", 
+                    "default" : NumberInt(0), 
+                    "required" : true, 
+                    "placeHolder" : "Select  Date", 
+                    "errorMessage" : "Please select  Date", 
+                    "readOnly" : false, 
+                    "data_index" : "dt", 
+                    "visible" : true, 
+                    "colSize" : NumberInt(12), 
+                    "labelColSpan" : NumberInt(10), 
+                    "label" : "Date", 
+                    "format" : "YYYY-MM-DD"
+                }, 
+                {
+                    "visible" : true, 
+                    "label" : "Project", 
+                    "colSize" : 24.0, 
+                    "typ" : "dropDown", 
+                    "default" : "", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "placeHolder" : "Select Project", 
+                    "errorMessage" : "Please select Project", 
+                    "data_index" : "projid", 
+                    "api" : "/dynamicdropdown", 
+                    "params" : {
+                        "name" : "AllProject", 
+                        "act" : true
+                    }, 
+                    "src" : "api"
+                }, 
+                {
+                    "label" : "Release", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "rel", 
+                    "placeHolder" : "Enter Stage projid", 
+                    "errorMessage" : "Please enter Stage projid", 
+                    "din" : "rel"
+                }, 
+                {
+                    "label" : "Collections", 
+                    "typ" : "dropDown", 
+                    "default" : "", 
+                    "includeAll" : false, 
+                    "isSearchable" : true, 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "multiSelect" : false, 
+                    "data_index" : "coln", 
+                    "p_data_index" : "p_coln", 
+                    "placeHolder" : "Select Destination Clusters", 
+                    "errorMessage" : "Please select Destination Clusters", 
+                    "params" : {
+                        "name" : "MnxCollection"
+                    }, 
+                    "src" : "api", 
+                    "api" : "/cropdown"
+                }
+            ], 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "TRANSFERTASK", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : true, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : true
+                    }, 
+                    "confirmationPopUpProp" : {
+                        "text" : "Do you want to Update Documents", 
+                        "okButtonLabel" : "Yes", 
+                        "cancelButtonLabel" : "Cancel"
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "POST", 
+                        "api" : "/task/transfer", 
+                        "param" : {
+
+                        }
+                    }, 
+                    "postSubmitActionProp" : {
+                        "action" : "refreshStable"
+                    }
+                }
+            }
+        }
+    }, 
+    "ver" : "ABCD1234", 
+    "act\"" : true, 
+    "mint" : "5"
+}
+
+{ 
+    "_id" : "IntDocinitPostsmodalM", 
+    "lid" : "lid_999", 
+    "dictName" : "IntDocinitPostsmodalM", 
+    "typ" : "Modal", 
+    "page" : "Format", 
+    "dictData" : {
+        "data" : null, 
+        "config" : {
+            "pageName" : "AddNew", 
+            "modalElements" : [
+                {
+                    "label" : "Id", 
+                    "typ" : "textBox", 
+                    "required" : true, 
+                    "readOnly" : false, 
+                    "data_index" : "_id", 
+                    "placeholder" : "Enter Id", 
+                    "errorMessage" : "Please enter Id", 
+                    "visible" : true, 
+                    "colSize" : NumberInt(8)
+                }, 
+                {
+                    "label" : "Dt", 
+                    "typ" : "dateTimePicker", 
+                    "required" : false, 
+                    "readOnly" : false, 
+                    "data_index" : "dt", 
+                    "placeholder" : "Select Dt", 
+                    "errorMessage" : "Please select Dt", 
+                    "visible" : true, 
+                    "colSize" : NumberInt(8)
+                }, 
+                {
+                    "label" : "Act", 
+                    "typ" : "radio", 
+                    "required" : false, 
+                    "readOnly" : false, 
+                    "data_index" : "act", 
+                    "errorMessage" : "Please select Act", 
+                    "visible" : true, 
+                    "colSize" : NumberInt(8), 
+                    "src" : "data", 
+                    "data" : {
+                        "true" : "True", 
+                        "false" : "False"
+                    }, 
+                    "default" : true
+                }
+            ], 
+            "footerButtons" : {
+                "button1" : {
+                    "buttonProp" : {
+                        "type" : "primary", 
+                        "label" : "AddNew", 
+                        "visible" : true, 
+                        "enable" : true, 
+                        "hover" : false, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : true, 
+                        "submitFormData" : true, 
+                        "popUpModal" : false, 
+                        "postSubmitAction" : false
+                    }, 
+                    "hoverProp" : {
+
+                    }, 
+                    "validateFieldsProp" : {
+
+                    }, 
+                    "confirmationPopUpProp" : {
+                        "text" : "Do you want to submit form data?", 
+                        "okButtonLabel" : "Yes", 
+                        "cancelButtonLabel" : "Cancel"
+                    }, 
+                    "submitFormDataProp" : {
+                        "method" : "POST", 
+                        "api" : "/int/docinit", 
+                        "params" : {
+
+                        }
+                    }, 
+                    "popUpModalProp" : {
+
+                    }, 
+                    "postSubmitActionProp" : {
+
+                    }
+                }, 
+                "button2" : {
+                    "buttonProp" : {
+                        "type" : "danger", 
+                        "label" : "Button 2", 
+                        "visible" : false, 
+                        "enable" : false, 
+                        "hover" : true, 
+                        "validateFields" : false, 
+                        "confirmationPopUp" : false, 
+                        "submitFormData" : false, 
+                        "popUpModal" : true, 
+                        "postSubmitAction" : true
+                    }
+                }
+            }
+        }
+    }, 
+    "ver" : "ABCD1234", 
+    "projid" : "", 
+    "rel" : "", 
+    "resp" : "", 
+    "act\"" : true, 
+    "act" : false,
+	"mint" : "5"
+}
+
+

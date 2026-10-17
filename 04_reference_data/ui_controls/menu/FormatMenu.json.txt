@@ -1,4 +1,101 @@
 { 
+    "_id" : "2010", 
+    "enable" : true, 
+    "seq" : NumberInt(1), 
+    "level" : NumberInt(0), 
+    "label" : "Master Data Management", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "link" : "/dashboard", 
+    "parentid" : null, 
+    "icon" : "bi/BiData", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : true, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "childWidth" : "75vw"
+}
+{ 
+    "_id" : "2010_100", 
+    "enable" : true, 
+    "seq" : NumberInt(1), 
+    "level" : NumberInt(1), 
+    "label" : "Organisation", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "parentid" : "2010", 
+    "icon" : "fa/FaBoxes", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : true, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "colSize" : 8.0, 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
+    "_id" : "2010_100_100", 
+    "enable" : true, 
+    "seq" : NumberInt(1), 
+    "level" : NumberInt(2), 
+    "label" : "Enterprises", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "link" : "/dp?op=qy&dictName=mes_mast_enterpriseQuery&moduleName=MasterDataManagement&dn=mes_mast_enterpriseIvy", 
+    "parentid" : "2010_100", 
+    "icon" : "bi/BiInfoCircle", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : false, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
+    "_id" : "2010_100_101", 
+    "enable" : true, 
+    "seq" : NumberInt(2), 
+    "level" : NumberInt(2), 
+    "label" : "Enterprise Contacts", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "link" : "/dp?op=qy&dictName=mes_mast_enterpriseContactQuery&moduleName=MasterDataManagement&dn=mes_mast_enterpriseContactIvy", 
+    "parentid" : "2010_100", 
+    "icon" : "bi/BiInfoCircle", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : false, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
     "_id" : "1010", 
     "enable" : true, 
     "seq" : NumberInt(1), 

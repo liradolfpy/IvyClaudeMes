@@ -2,6 +2,7 @@
 
 Source : 02_architecture/collection_inventory.md (kind, parent), 02_architecture/collection_type_matrix.csv (label)
 Output : 04_reference_data/ui_controls/menu/menu.json  (mongo shell / Studio 3T format, like FormatMenu.json.txt)
+IvyConfig: 04_reference_data/ui_controls/query/IvyConfig/<collection>Ivy.json gives the dn of each query (rule: <collection without u_>Ivy)
 Levels : 0 = module, 1 = functional section, 2 = query screen (dictName = <collection without u_>Query)
 Rules  : skill mes-menu-builder
 """
@@ -10,6 +11,7 @@ ROOT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.pat
 INV = os.path.join(ROOT, "02_architecture", "collection_inventory.md")
 MAT = os.path.join(ROOT, "02_architecture", "collection_type_matrix.csv")
 OUT = os.path.join(ROOT, "04_reference_data", "ui_controls", "menu", "menu.json")
+IVY = os.path.join(ROOT, "04_reference_data", "ui_controls", "query", "IvyConfig")
 
 MODULES = [  # code, level 0 _id, icon
     ("mast", "2010", "bi/BiData"), ("prod", "2020", "bi/BiCube"), ("plan", "2030", "bi/BiCalendar"),
@@ -116,7 +118,21 @@ def root(c):
 def ent(c):
     return c.split("_", 3)[3]
 
+# dn of each collection: from its IvyConfig when present, otherwise by the IvyConfig rule
+import glob, re
+ivy_dn = {}
+for f in glob.glob(os.path.join(IVY, "*.json")):
+    t = open(f, encoding="utf-8").read()
+    col = re.search(r'"collection"\s*:\s*"([^"]+)"', t)
+    dnm = re.search(r'"dn"\s*:\s*"([^"]+)"', t)
+    if col and dnm:
+        ivy_dn[col.group(1)] = dnm.group(1)
 errors = []
+for c, d in ivy_dn.items():
+    if c not in parent:
+        errors.append("IvyConfig for unknown collection " + c)
+    elif d != c[2:] + "Ivy":
+        errors.append("IvyConfig dn %s does not follow the rule for %s" % (d, c))
 assigned = {}
 for code, secs in SECTIONS.items():
     for si, (sl, ents) in enumerate(secs):
@@ -168,7 +184,8 @@ for mseq, (code, mid, micon) in enumerate(MODULES, 1):
             sys.exit("section too large " + sid)
         for li, c in enumerate(cols):
             dn = c[2:] + "Query"
-            link = "/dp?op=qy&dictName=%s&moduleName=%s" % (dn, mname)
+            ivy = ivy_dn.get(c, c[2:] + "Ivy")
+            link = "/dp?op=qy&dictName=%s&moduleName=%s&dn=%s" % (dn, mname, ivy)
             docs.append(doc("%s_%d" % (sid, 100 + li), li + 1, 2, label[c], link, sid, "bi/BiInfoCircle", LEAF, {"style": STYLE}))
 
 # parents expose every role a child shows (rule 1.5)
@@ -199,4 +216,5 @@ os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, "w", encoding="utf-8", newline="\n") as f:
     f.write("\n".join(out) + "\n")
 n = {lv: sum(1 for d in docs if d["level"][1] == lv) for lv in (0, 1, 2)}
+print("dn from IvyConfig files: %d, dn by rule (IvyConfig not yet written): %d" % (len(ivy_dn), sum(1 for d in docs if d["level"][1] == 2) - len(ivy_dn)))
 print("menu.json written: %d documents (level 0: %d, level 1: %d, level 2: %d)" % (len(docs), n[0], n[1], n[2]))
