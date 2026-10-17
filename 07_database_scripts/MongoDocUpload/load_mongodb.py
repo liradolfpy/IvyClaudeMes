@@ -6,6 +6,8 @@ Functions (each one can be switched off by commenting its line in main()):
                             in its db.getCollection("...") call
   2. load_page_configs()  - every 04_reference_data/ui_controls/query/PageConfigs/*.json into collection "pc0M"
   3. load_ivy_configs()   - every 04_reference_data/ui_controls/query/IvyConfig/*.json into collection "u_int_ivyConfig"
+  4. load_dynamic_dropdowns() - 04_reference_data/ui_controls/query/u_int_dynamicDropdown.json (one combined file)
+                            into collection "u_int_dynamicDropdown"
 
 The source files are MongoDB shell style (NumberInt, NumberLong, NumberDecimal, Double, ISODate, unquoted keys).
 They are parsed here into the exact BSON types (Int32, Int64, Decimal128, Double, Date), so no shell is needed.
@@ -58,9 +60,11 @@ SAMPLE_GLOB = os.path.join(ROOT, "03_design", "*", "samples", "*.js")
 QUERY_DIR = os.path.join(ROOT, "04_reference_data", "ui_controls", "query")
 PAGECONFIG_GLOB = os.path.join(QUERY_DIR, "PageConfigs", "*.json")
 IVYCONFIG_GLOB = os.path.join(QUERY_DIR, "IvyConfig", "*.json")
+DYNAMIC_DROPDOWN_FILE = os.path.join(QUERY_DIR, "u_int_dynamicDropdown.json")
 
 PAGECONFIG_COLLECTION = "pc0M"
 IVYCONFIG_COLLECTION = "u_int_ivyConfig"
+DYNAMIC_DROPDOWN_COLLECTION = "u_int_dynamicDropdown"
 BATCH_SIZE = 500
 
 
@@ -325,6 +329,17 @@ def load_ivy_configs(db):
     print("IvyConfigs -> %s: %d documents (new %d, replaced %d)" % (IVYCONFIG_COLLECTION, len(docs), ins, rep))
 
 
+def load_dynamic_dropdowns(db):
+    """4. Insert the dynamic dropdown registry documents into collection u_int_dynamicDropdown."""
+    collection, docs = read_sample_file(DYNAMIC_DROPDOWN_FILE)
+    if collection != DYNAMIC_DROPDOWN_COLLECTION:
+        raise ValueError("%s: expected db.getCollection(\"%s\")" % (DYNAMIC_DROPDOWN_FILE, DYNAMIC_DROPDOWN_COLLECTION))
+    ins, rep = upsert(db, DYNAMIC_DROPDOWN_COLLECTION, docs)
+    for d in docs:
+        print("  %s" % d["_id"])
+    print("Dynamic dropdowns -> %s: %d documents (new %d, replaced %d)" % (DYNAMIC_DROPDOWN_COLLECTION, len(docs), ins, rep))
+
+
 def main():
     load_env_file()
     client, db = (None, None) if dry_run() else get_database()
@@ -334,6 +349,7 @@ def main():
         load_sample_data(db)
         load_page_configs(db)
         load_ivy_configs(db)
+        load_dynamic_dropdowns(db)
     finally:
         if client is not None:
             client.close()

@@ -35,9 +35,9 @@
                     "p_din" : "maintenancePlanName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_maintenancePlan"
+                        "dn" : "u_mes_maint_maintenancePlan__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_maintenancePlan",
+                    "sourceParams_dynamic" : "u_mes_maint_maintenancePlan__id_name",
                     "src" : "api"
                 },
                 {
@@ -58,9 +58,9 @@
                     "p_din" : "requiredSkillName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_mast_skill"
+                        "dn" : "u_mes_mast_skill__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_mast_skill",
+                    "sourceParams_dynamic" : "u_mes_mast_skill__id_name",
                     "src" : "api"
                 }
             ]

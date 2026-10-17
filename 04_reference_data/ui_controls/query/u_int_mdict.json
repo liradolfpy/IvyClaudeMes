@@ -1,5 +1,5 @@
 // Sample documents for u_int_mdict: MasterDict cache source, one document per dictionary per site
-// Built from the sample documents in 03_design/<module>/samples on 13 October 2026; rules in 04_reference_data/ui_controls/query_control_instruction.md
+// Built from the sample documents in 03_design/<module>/samples on 13 October 2026; rules in the skill mes-query-control (library E:/Ivy/Claude/ClaudeSkills/MintSkills/UiSkills/mes-query-control) and 04_reference_data/ui_controls/ui_project_profile.md
 db.getCollection("u_int_mdict").insertMany([
   {
     _id: "1370000000000001",

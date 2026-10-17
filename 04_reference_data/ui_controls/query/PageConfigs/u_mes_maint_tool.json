@@ -33,9 +33,9 @@
                     "p_din" : "toolTypeName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_toolType"
+                        "dn" : "u_mes_maint_toolType__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_toolType",
+                    "sourceParams_dynamic" : "u_mes_maint_toolType__id_name",
                     "src" : "api"
                 },
                 {
@@ -128,9 +128,9 @@
                     "p_din" : "storageLocationName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_matl_storageLocation"
+                        "dn" : "u_mes_matl_storageLocation__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_matl_storageLocation",
+                    "sourceParams_dynamic" : "u_mes_matl_storageLocation__id_name",
                     "src" : "api"
                 },
                 {

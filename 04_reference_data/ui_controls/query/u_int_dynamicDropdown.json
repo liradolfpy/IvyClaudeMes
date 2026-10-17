@@ -1,0 +1,190 @@
+// Dynamic dropdown registry: one document per /dd source (coln, key, val); rules in skill mes-query-control, section 14
+db.getCollection("u_int_dynamicDropdown").insertMany([
+  {
+      "_id" : "u_mes_maint_maintenancePlan__id_name",
+      "coln" : "u_mes_maint_maintenancePlan",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_maint_maintenanceWorkOrder__id_title",
+      "coln" : "u_mes_maint_maintenanceWorkOrder",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_maint_sparePart__id_description",
+      "coln" : "u_mes_maint_sparePart",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "description",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_maint_toolType__id_name",
+      "coln" : "u_mes_maint_toolType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_maint_tool__id_name",
+      "coln" : "u_mes_maint_tool",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_department__id_name",
+      "coln" : "u_mes_mast_department",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_manufacturer__id_name",
+      "coln" : "u_mes_mast_manufacturer",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_skill__id_name",
+      "coln" : "u_mes_mast_skill",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_user__id_fullName",
+      "coln" : "u_mes_mast_user",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "fullName",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_matl_storageLocation__id_name",
+      "coln" : "u_mes_matl_storageLocation",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_matl",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_alarmDefinition__id_recordNo",
+      "coln" : "u_mes_perf_alarmDefinition",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  }
+]);

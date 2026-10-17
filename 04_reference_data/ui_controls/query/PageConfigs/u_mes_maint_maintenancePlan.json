@@ -58,9 +58,9 @@
                     "p_din" : "toolName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_tool"
+                        "dn" : "u_mes_maint_tool__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_tool",
+                    "sourceParams_dynamic" : "u_mes_maint_tool__id_name",
                     "src" : "api"
                 },
                 {
@@ -104,9 +104,9 @@
                     "p_din" : "ownerDepartmentName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_mast_department"
+                        "dn" : "u_mes_mast_department__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_mast_department",
+                    "sourceParams_dynamic" : "u_mes_mast_department__id_name",
                     "src" : "api"
                 },
                 {

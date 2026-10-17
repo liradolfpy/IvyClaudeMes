@@ -52,9 +52,9 @@
                     "p_din" : "sparePartName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_sparePart"
+                        "dn" : "u_mes_maint_sparePart__id_description"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_sparePart",
+                    "sourceParams_dynamic" : "u_mes_maint_sparePart__id_description",
                     "src" : "api"
                 },
                 {
@@ -125,9 +125,9 @@
                     "p_din" : "storageLocationName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_matl_storageLocation"
+                        "dn" : "u_mes_matl_storageLocation__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_matl_storageLocation",
+                    "sourceParams_dynamic" : "u_mes_matl_storageLocation__id_name",
                     "src" : "api"
                 },
                 {
@@ -150,9 +150,9 @@
                     "p_din" : "maintenanceWorkOrderName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_maintenanceWorkOrder"
+                        "dn" : "u_mes_maint_maintenanceWorkOrder__id_title"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder",
+                    "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder__id_title",
                     "src" : "api"
                 },
                 {

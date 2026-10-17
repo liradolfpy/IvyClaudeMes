@@ -52,9 +52,9 @@
                     "p_din" : "toolName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_tool"
+                        "dn" : "u_mes_maint_tool__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_tool",
+                    "sourceParams_dynamic" : "u_mes_maint_tool__id_name",
                     "src" : "api"
                 },
                 {

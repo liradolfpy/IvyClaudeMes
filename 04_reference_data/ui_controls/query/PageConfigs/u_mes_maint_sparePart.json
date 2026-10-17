@@ -60,9 +60,9 @@
                     "p_din" : "manufacturerName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_mast_manufacturer"
+                        "dn" : "u_mes_mast_manufacturer__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_mast_manufacturer",
+                    "sourceParams_dynamic" : "u_mes_mast_manufacturer__id_name",
                     "src" : "api"
                 },
                 {
@@ -108,9 +108,9 @@
                     "p_din" : "storageLocationName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_matl_storageLocation"
+                        "dn" : "u_mes_matl_storageLocation__id_name"
                     },
-                    "sourceParams_dynamic" : "u_mes_matl_storageLocation",
+                    "sourceParams_dynamic" : "u_mes_matl_storageLocation__id_name",
                     "src" : "api"
                 },
                 {

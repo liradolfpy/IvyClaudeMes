@@ -101,9 +101,9 @@
                     "p_din" : "performedBy",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_mast_user"
+                        "dn" : "u_mes_mast_user__id_fullName"
                     },
-                    "sourceParams_dynamic" : "u_mes_mast_user",
+                    "sourceParams_dynamic" : "u_mes_mast_user__id_fullName",
                     "src" : "api"
                 },
                 {

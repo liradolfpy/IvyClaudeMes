@@ -35,9 +35,9 @@
                     "p_din" : "sparePartName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_sparePart"
+                        "dn" : "u_mes_maint_sparePart__id_description"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_sparePart",
+                    "sourceParams_dynamic" : "u_mes_maint_sparePart__id_description",
                     "src" : "api"
                 },
                 {

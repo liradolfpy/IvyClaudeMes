@@ -167,9 +167,9 @@
                     "p_din" : "alarmDefinitionName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_perf_alarmDefinition"
+                        "dn" : "u_mes_perf_alarmDefinition__id_recordNo"
                     },
-                    "sourceParams_dynamic" : "u_mes_perf_alarmDefinition",
+                    "sourceParams_dynamic" : "u_mes_perf_alarmDefinition__id_recordNo",
                     "src" : "api"
                 },
                 {

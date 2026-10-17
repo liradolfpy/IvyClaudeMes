@@ -35,9 +35,9 @@
                     "p_din" : "maintenanceWorkOrderName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_maint_maintenanceWorkOrder"
+                        "dn" : "u_mes_maint_maintenanceWorkOrder__id_title"
                     },
-                    "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder",
+                    "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder__id_title",
                     "src" : "api"
                 },
                 {
@@ -60,9 +60,9 @@
                     "p_din" : "assignedToUserName",
                     "api" : "/dd",
                     "params" : {
-                        "dn" : "u_mes_mast_user"
+                        "dn" : "u_mes_mast_user__id_fullName"
                     },
-                    "sourceParams_dynamic" : "u_mes_mast_user",
+                    "sourceParams_dynamic" : "u_mes_mast_user__id_fullName",
                     "src" : "api"
                 }
             ]

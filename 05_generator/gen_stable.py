@@ -20,7 +20,7 @@ Usage (from the repository root or anywhere):
   python3 05_generator/gen_stable.py u_mes_perf_downtimeEvent [u_mes_perf_alarm ...]
   python3 05_generator/gen_stable.py --root <repo root> <collection> ...
 
-Rules are documented in the Stable skill v0.5 (04_reference_data/ui_controls/table/stable_skill.md). Change a rule there and
+Rules are documented in the skill mes-stable-table v0.6 (library E:/Ivy/Claude/ClaudeSkills/MintSkills/UiSkills/mes-stable-table/SKILL.md). Change a rule there and
 here together.
 """
 import datetime

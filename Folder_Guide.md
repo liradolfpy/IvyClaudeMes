@@ -35,6 +35,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | 04_reference_data/process_values | Torque, leak test and heat treatment values | Yes | Hand |
 | 04_reference_data/code_lists | Status values, defect codes, downtime reason tree | Yes | Mixed |
 | 04_reference_data/timeline | Production calendar and scenario script for the two-week period | Yes | Hand |
+| 04_reference_data/ui_controls | UI configurations: query page configurations and IvyConfigs (`query/`), table page configurations (`table/`), menu (`menu/`), owner-maintained reference samples, and `ui_project_profile.md` (ClaudeMES values for the UI skills in the skills library `E:\Ivy\Claude\ClaudeSkills\MintSkills\UiSkills`) | Yes | Generated, except the reference samples and ui_project_profile.md (hand) |
 | 05_generator | Python source that builds the model, the documents and the seed data | Yes (source) | Hand |
 | 05_generator/model | flat_model.json, the machine-readable model | Yes | Generated |
 | 05_generator/common, domains, builders | Shared helpers, one seed module per domain, document builders | Yes (source) | Hand |
