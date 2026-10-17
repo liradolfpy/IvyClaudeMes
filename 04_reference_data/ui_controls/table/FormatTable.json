@@ -257,14 +257,14 @@
     },
     "typ": "PageConfigStable",
     "page": "FormatStable",
-    "unq": true,
+   
     "ver": "",
     "projid": "",
     "rel": "CL20261014-16:05",
     "resp": "CL",
-    "subTyp": "PhantomStable",
+    "subTyp": "",
     "act": true,
     "app": "mes",
-    "module": "maint"
+    "module": "maint",
     "clmnDoc": {}
 }
