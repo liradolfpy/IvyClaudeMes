@@ -277,7 +277,46 @@ Suggested follow-on tasks, one per task:
 
 ---
 
-## 9. Checklist
+## 9. Parking a task (starting a new task while another stays open)
+
+Sometimes you need to start a new task while an existing one is not finished and you will continue it later.
+
+### 9.1 What the new task gets and does not get
+
+| The new task GETS | The new task does NOT get |
+|---|---|
+| Project instructions and every project document **as they are when it starts**, including whatever the open task has already saved | The open task's conversation: what was discussed, decided or agreed there, unless it was written into a document |
+| Your ClaudeMES folder as it is on disk, once you connect it in the new task | Unsaved work: half-finished files in the open task's workspace, and files that appeared there only as Download cards |
+| Project memory (short notes, not reliable detail), if memory is on | Decisions agreed but not yet in `decision_log.md` or `assumptions_log.md` |
+| | Folder access (connect the folder again) |
+| | A handover note for the open task (a task only writes one when it ends) |
+
+### 9.2 Risks of two tasks side by side
+
+1. **Overwriting each other's work.** When the old task resumes, its copy of a shared file (`decision_log.md`, `data_model_register.md`, `sample_rules.py`) is the version it read earlier. If it saves that copy, the new task's changes are lost.
+2. **Duplicate numbers.** Both tasks may add the same decision number (e.g. D047) or the same new collection numbers.
+3. **Handover note replaced.** Only the latest handover note is kept, so the second task to finish replaces the first one's note.
+4. **Temporary workspace.** An idle task's workspace is cleared. The conversation stays, but unsaved workspace files do not.
+
+### 9.3 How to do it safely
+
+**Before switching**, tell the open task:
+
+> Pause this task. Save all work in progress to the project and the folder, log open decisions, and write a parked note listing what is done, what is open, files changed and the last decision number.
+
+**In the new task's brief**, add:
+
+> Another task (<name>) is paused. Do not change <files it owns>. Take decision numbers from D<nnn+10> onward.
+
+or keep the new task's work on different files.
+
+**When you resume the old task**, tell it:
+
+> Before continuing, re-read decision_log.md, data_model_register.md and any file changed since <date>; do not save from earlier copies.
+
+---
+
+## 10. Checklist
 
 **Starting a task**
 1. Open Cowork, choose project ClaudeMES1, click New task.
