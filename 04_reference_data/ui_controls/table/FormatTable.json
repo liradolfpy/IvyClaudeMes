@@ -6,7 +6,7 @@
         "config": {
             "zenFuncs": {
                 "headerMultiline": false,
-                "footerMultiline": false,
+                "footerMultiline": true,
                 "footerButtons": true,
                 "dynamicActionBtn": true
             },
@@ -83,15 +83,15 @@
                 "exportToPdf": false,
                 "innerLeftPadding": "15px",
                 "innerRightPadding": "15px",
-                "isCheckable": true,
+                "isCheckable": false,
                 "isSearchable": true,
                 "isSortable": true,
                 "leftMargin": "0px",
                 "line-color": "#2ECC71",
-                "pagination": 8.0,
+                "pagination": NumberInt(8), 
                 "tableWidth": "80%",
                 "visible": true, 
-                "noOfRows" : 10.0, 
+                "noOfRows" : NumberInt(10), 
                 "interval" : NumberInt(3000000)
             },
             "header": {
@@ -191,59 +191,8 @@
                     "width" : "150px", 
                     "align" : "center", 
                     "data_index" : "rating"
-                },
-                {
-                    "title": "Active",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "active"
-                },
-                {
-                    "title": "Pay Code",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "payid"
-                },
-                {
-                    "title": "Emp Name",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "eame"
-                },
-                
-                {
-                    "title": "Date Of Join",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "doj",
-					"dtFormat" : "YYYY-MM-DD"
-                },
-                
-                {
-                    "title": "Aadhaar",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "aadhar"
-                },
-                {
-                    "title": "Bank Acc",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "bankAcc"
-                },
-                {
-                    "title": "IFSC Code",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "ifscid"
-                },
-                {
-                    "title": "Date Of Confirmation",
-                    "width": "80px",
-                    "align": "center",
-                    "data_index": "dtConfi",
-					"dtFormat" : "YYYY-MM-DD"
                 }
+               
             ],
             "rowAction": [
               
