@@ -20,7 +20,7 @@ Usage (from the repository root or anywhere):
   python3 05_generator/gen_stable.py u_mes_perf_downtimeEvent [u_mes_perf_alarm ...]
   python3 05_generator/gen_stable.py --root <repo root> <collection> ...
 
-Rules are documented in the Stable skill v0.4 (04_reference_data/ui_controls/table/stable_skill.md). Change a rule there and
+Rules are documented in the Stable skill v0.5 (04_reference_data/ui_controls/table/stable_skill.md). Change a rule there and
 here together.
 """
 import datetime
@@ -389,8 +389,11 @@ def shell(v, ind=0):
     if isinstance(v, dict):
         if not v:
             return "{}"
-        inner = (",\n").join(" " * (ind + 4) + json.dumps(k) + " : " + shell(x, ind + 4)
-                          for k, x in sorted(v.items()))
+        keys = sorted(v)
+        if "clmnDoc" in v:                       # clmnDoc is always the last key (skill 0.5)
+            keys = [k for k in keys if k != "clmnDoc"] + ["clmnDoc"]
+        inner = (",\n").join(" " * (ind + 4) + json.dumps(k) + " : " + shell(v[k], ind + 4)
+                          for k in keys)
         return "{\n" + inner + "\n" + pad + "}"
     raise TypeError(type(v))
 

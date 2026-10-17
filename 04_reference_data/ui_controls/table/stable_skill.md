@@ -5,7 +5,7 @@ description: Stable (StandardTable) - build the React table page configuration (
 
 # Stable (StandardTable) - table page configuration
 
-Skill version: 0.4 | 17 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`)
+Skill version: 0.5 | 17 October 2026 | Model version 2.9 (369 collections, 8,614 keys including `app`)
 Sibling instruction: `04_reference_data/ui_controls/query_control_instruction.md` (query controls of the same list screens). Keep the two consistent.
 Reference copy of this skill in the repository: `04_reference_data/ui_controls/table/stable_skill.md`.
 
@@ -90,14 +90,13 @@ width      = max(content, header, 80), rounded up to the next 10, capped at 300 
 
 ## 5. Document frame (top-level keys)
 
-Written in alphanumeric key order (section 7). The table lists them in that order.
+Written in alphanumeric key order (section 7), except `clmnDoc`, which is always the **last** key of the document (owner, 17 Oct 2026). The table lists the keys in the order they are written.
 
 | Key | Value | Rule |
 |---|---|---|
 | `_id` | `<collection without the leading u_>Stable` | `u_mes_maint_cleaningRecord` gives `mes_maint_cleaningRecordStable`. Equals `stableName` of the collection's IvyConfig |
 | `act` | `true` | Fixed |
 | `app` | `"mes"` | Fixed |
-| `clmnDoc` | Array with one document: the **first document** of `03_design/<module>/samples/<collection>.js`, copied as it is | Every key of the sample document in field-list order, including `_id`, site, `app` and audit keys and `null` values, with the BSON types of the sample (`ISODate`, `NumberInt`, `NumberLong`, `NumberDecimal`). Owner answer, 17 Oct 2026 |
 | `dictData` | `{ "config" : ... }` | Section 6 |
 | `dictName` | Same as `_id` | `mes_maint_cleaningRecordStable` |
 | `lid` | `"lid_999"` | Fixed, from the reference sample |
@@ -109,6 +108,7 @@ Written in alphanumeric key order (section 7). The table lists them in that orde
 | `subTyp` | `""` | Fixed, empty (was `"PhantomStable"` up to v0.3) |
 | `typ` | `"PageConfigStable"` | Fixed |
 | `ver` | `""` | Fixed, empty |
+| `clmnDoc` | Array with one document: the **first document** of `03_design/<module>/samples/<collection>.js`, copied as it is | Every key of the sample document in field-list order, including `_id`, site, `app` and audit keys and `null` values, with the BSON types of the sample (`ISODate`, `NumberInt`, `NumberLong`, `NumberDecimal`). Owner answer, 17 Oct 2026 |
 
 File: `04_reference_data/ui_controls/table/PageConfigs/<collection>.json`.
 
@@ -139,10 +139,11 @@ No longer written (removed in the 17 Oct 2026 sample): `headerRoute` (block and 
 
 ## 7. Key order (owner answer, 17 Oct 2026: alphanumeric)
 
-- Every object of the configuration is written with its keys in alphanumeric order: the top level, `dictData`, `config`, every block inside `config`, nested objects (`footerMultiline.multiCol` elements, their `key` / `val` / `style`), and every column object.
+- Every object of the configuration is written with its keys in alphanumeric order: the top level (except `clmnDoc`, always last), `dictData`, `config`, every block inside `config`, nested objects (`footerMultiline.multiCol` elements, their `key` / `val` / `style`), and every column object.
 - Sorting is by plain character code (as `sort_keys` in JSON tools): `_id` comes first at the top level; `-` sorts before letters, so `noOfRows` comes before `noOfRows-visible`, and `title-icon` before `title-icon-color`.
 - Arrays keep their order: the `column` array keeps the column order of section 4.1, `alternateRows`, `divBackgroundColor` and `multiCol` keep the sample order.
-- Exception: the sample document inside `clmnDoc` keeps its own key order (field-list order), because it is a copy of a real document (open question S8).
+- Exception 1: `clmnDoc` is the last top-level key, after `ver` (owner, 17 Oct 2026).
+- Exception 2: the sample document inside `clmnDoc` keeps its own key order (field-list order), because it is a copy of a real document (open question S8).
 
 ## 8. Checklist per table
 
@@ -159,7 +160,7 @@ No longer written (removed in the 17 Oct 2026 sample): `headerRoute` (block and 
 | 9 | `tableSubTitle.title-label` is the screen label of `collection_type_matrix.md` |
 | 10 | `zenFuncs` = `dynamicActionBtn` true, `footerButtons` true, `footerMultiline` true, `headerMultiline` false; no `headerRoute` anywhere; `headerMultiline` `{}`; `action` `{}`; `rowAction` `[]` |
 | 11 | `tableConfig.pagination` = `NumberInt(8)`, `noOfRows` = `NumberInt(10)`, `isCheckable` false |
-| 12 | Keys of every object (except the `clmnDoc` document) are in alphanumeric order |
+| 12 | Keys of every object (except the `clmnDoc` document) are in alphanumeric order, and `clmnDoc` is the last top-level key |
 | 13 | The file parses as JSON once the shell constructors (`NumberInt`, `NumberLong`, `NumberDecimal`, `ISODate`) are read as values (the script checks this) |
 | 14 | Keys with no sample value and reference keys without a display key are reported to the user |
 
@@ -201,3 +202,4 @@ No longer written (removed in the 17 Oct 2026 sample): `headerRoute` (block and 
 | 0.2 | 15 Oct 2026 | Title rules extended (units Days, Inr, Mm; acronym SLA; small words lower case). Table configurations generated for all 21 Maintenance (`maint`) collections, column report `PageConfigs/column_report_maint.md`; the five 0.1 samples regenerated with the new title rules | Claude |
 | 0.3 | 15 Oct 2026 | Owner changes: column attribute `DtFormat` renamed `dtFormat`; `_id` / `dictName` / `page` = collection name without `u_` + `Stable` (`mes_maint_cleaningRecordStable`), matching IvyConfig `stableName` (S1 closed); file name `PageConfigs/<collection>.json`; `rat` / `ratConfig` renamed `rowAction` / `action` (updated FormatTable.json). All 26 configurations renamed and regenerated | Claude |
 | 0.4 | 17 Oct 2026 | Updated FormatTable.json (17 Oct 2026) and owner answers: new top-level keys `ver`, `projid` (empty), `rel` (`CL` + IST run time `YYYYMMDD-HH:mm`), `resp` (`CL` = generated by Claude), `clmnDoc` (first sample document); `subTyp` empty; `headerRoute` removed; `headerMultiline` `{}`; `zenFuncs.dynamicActionBtn` true, `footerMultiline` true; `action` `{}`; `tableConfig.isCheckable` false, `pagination` `NumberInt(8)`, `noOfRows` `NumberInt(10)`; datetime format `HH:mm:SS`; all keys in alphanumeric order (new section 7); column rules unchanged; S2, S3, S4, S6 closed; S8 opened. Configurations not yet regenerated | Claude |
+| 0.5 | 17 Oct 2026 | `clmnDoc` moved to the end of the document (last top-level key, exception to the alphanumeric order); frame table, section 7 and checklist 12 updated. Generator updated; no configuration regenerated | Claude |
