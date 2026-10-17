@@ -22,23 +22,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Maintenance Plan",
-                    "errorMessage" : "Please select Maintenance Plan",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Maintenance Plan",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "maintenancePlanId",
-                    "p_din" : "maintenancePlanName",
+                    "p_data_index" : "maintenancePlanName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_maint_maintenancePlan__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_maint_maintenancePlan__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -48,14 +50,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Requires Shutdown",
-                    "errorMessage" : "Please select Requires Shutdown",
+                    "errorMessage" : "Please Select Requires Shutdown",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "requiresShutdown",
-                    "p_din" : "requiresShutdownText",
+                    "p_data_index" : "requiresShutdownText",
                     "data" : {
                         "true" : "Yes",
                         "false" : "No"
@@ -65,7 +67,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -85,6 +87,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

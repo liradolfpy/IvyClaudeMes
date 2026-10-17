@@ -6,8 +6,6 @@ Functions (each one can be switched off by commenting its line in main()):
                             in its db.getCollection("...") call
   2. load_page_configs()  - every 04_reference_data/ui_controls/query/PageConfigs/*.json into collection "pc0M"
   3. load_ivy_configs()   - every 04_reference_data/ui_controls/query/IvyConfig/*.json into collection "u_int_ivyConfig"
-  4. load_dynamic_dropdowns() - 04_reference_data/ui_controls/query/u_int_dynamicDropdown.json (one combined file)
-                            into collection "u_int_dynamicDropdown"
 
 The source files are MongoDB shell style (NumberInt, NumberLong, NumberDecimal, Double, ISODate, unquoted keys).
 They are parsed here into the exact BSON types (Int32, Int64, Decimal128, Double, Date), so no shell is needed.
@@ -55,16 +53,61 @@ def find_project_root(start):
         d = parent
 
 
-ROOT = find_project_root(HERE)
+# ROOT = find_project_root(HERE)
+ROOT = r"E:\Ivy\SyncAi\MES"
 SAMPLE_GLOB = os.path.join(ROOT, "03_design", "*", "samples", "*.js")
+
+# SAMPLE_GLOB = os.path.join(ROOT, "03_design", "**", "samples", "*.js")
+
 QUERY_DIR = os.path.join(ROOT, "04_reference_data", "ui_controls", "query")
 PAGECONFIG_GLOB = os.path.join(QUERY_DIR, "PageConfigs", "*.json")
 IVYCONFIG_GLOB = os.path.join(QUERY_DIR, "IvyConfig", "*.json")
-DYNAMIC_DROPDOWN_FILE = os.path.join(QUERY_DIR, "u_int_dynamicDropdown.json")
+TABLE_DIR = os.path.join(ROOT, "04_reference_data", "ui_controls", "table")
+TABLECONFIG_GLOB = os.path.join(TABLE_DIR, "PageConfigs", "*.json")
+MENU_GLOB = os.path.join(ROOT, "04_reference_data", "ui_controls", "menu", "*.json")
 
+SMODAL_DIR = os.path.join(ROOT, "04_reference_data", "ui_controls", "smodal")
+SMODAL_GLOB = os.path.join(SMODAL_DIR, "*.json")
+
+STADNEW_DIR = os.path.join(ROOT, "04_reference_data", "ui_controls", "stadnew")
+STADNEW_GLOB = os.path.join(STADNEW_DIR, "*.json")
+
+SMODAL_COLLECTION = "smodalM"      
+STADNEW_COLLECTION = "pc0M"    
+
+
+TABLECONFIG_COLLECTION = "pc0M"
 PAGECONFIG_COLLECTION = "pc0M"
 IVYCONFIG_COLLECTION = "u_int_ivyConfig"
+MENU_COLLECTION = "menuM"
+
+
+
+# Agar yeh folders ke andar hain ya specific files hain toh aap yahan path adjust kar sakte hain
+# CROPDOWN_GLOB = os.path.join(QUERY_DIR, "cropdown", "*.json")
+# MASTER_DICT_GLOB = os.path.join(QUERY_DIR, "u_int_mdict", "*.json")
+
+CROPDOWN_COLLECTION = "cropdown"
 DYNAMIC_DROPDOWN_COLLECTION = "u_int_dynamicDropdown"
+MASTER_DICT_COLLECTION = "u_int_masterDict"
+
+
+
+
+CROPDOWN_GLOB = os.path.join(QUERY_DIR, "cropdown*")       
+MASTER_DICT_GLOB = os.path.join(QUERY_DIR, "u_int_mdict.json")   
+DYNAMIC_DROPDOWN_GLOB = os.path.join(QUERY_DIR, "u_int_dynamicDropdown")
+
+
+
+
+DYNAMIC_GLOB = os.path.join(QUERY_DIR, "u_int_dynamicDropdown*")
+DYNAMIC_COLLECTION = "u_int_dynamicDropdown" # Apni target collection ka naam
+
+
+
+
+
 BATCH_SIZE = 500
 
 
@@ -243,6 +286,17 @@ def read_config_file(path):
         raise ValueError("%s: not a document with an _id" % path)
     return doc
 
+def read_menu_file(path):
+    text = open(path, encoding="utf-8").read()
+    p = ShellParser(text, path)
+    docs = []
+    while p.peek():
+        doc = p.value()
+        if not isinstance(doc, dict) or "_id" not in doc:
+            raise ValueError("%s: not a document with an _id" % path)
+        docs.append(doc)
+    return docs
+
 
 # ------------------------------------------------------------------ connection
 def load_env_file():
@@ -262,23 +316,9 @@ def dry_run():
 
 def get_database():
     from pymongo import MongoClient
-
-    host = os.environ.get("MONGO_HOST")
-    user = os.environ.get("MONGO_USER")
-    if not host or not user:
-        sys.exit("Set MONGO_HOST and MONGO_USER (see 07_database_scripts/MongoDocUpload/.env.example).")
-    password = os.environ.get("MONGO_PASSWORD") or getpass.getpass("MongoDB password for %s: " % user)
-    srv = os.environ.get("MONGO_SRV", "0") == "1"
-    tls = os.environ.get("MONGO_TLS", "1" if srv else "0") == "1"
-    auth_db = os.environ.get("MONGO_AUTH_DB", "admin")
-    scheme = "mongodb+srv" if srv else "mongodb"
-    uri = "%s://%s:%s@%s/?authSource=%s" % (scheme, quote_plus(user), quote_plus(password), host, quote_plus(auth_db))
-    client = MongoClient(uri, tls=tls, serverSelectionTimeoutMS=10000, appname="mes-loader")
-    client.admin.command("ping")
-    db_name = os.environ.get("MONGO_DB", "mes")
-    print("Connected to %s as %s, database %s" % (host, user, db_name))  # the password is never printed
-    del password, uri
-    return client, client[db_name]
+    connection = MongoClient('vikrant2021.centralindia.cloudapp.azure.com:28428',  userName="nimbleservicepy", password=f'R4(ka14rCitrus@22')
+    db = connection.MNV_MES_V3
+    return connection, db
 
 
 def upsert(db, collection, docs):
@@ -297,16 +337,38 @@ def upsert(db, collection, docs):
 
 
 # ------------------------------------------------------------------ the three loaders
-def load_sample_data(db):
+# def load_sample_data(db):
+#     """1. Insert the sample documents of every collection into the collection of the same name."""
+#     #files = sorted(glob.glob(SAMPLE_GLOB))
+#     files =  glob.glob(SAMPLE_GLOB, recursive=True)
+#     total = 0
+#     for path in files:
+#         collection, docs = read_sample_file(path)
+#         ins, rep = upsert(db, collection, docs)
+#         total += len(docs)
+#         print("  %-60s %3d documents (new %d, replaced %d)" % (collection, len(docs), ins, rep))
+#     print("Sample data: %d files, %d documents" % (len(files), total))
+
+
+def load_sample_data(db, module_filter=None):
     """1. Insert the sample documents of every collection into the collection of the same name."""
-    files = sorted(glob.glob(SAMPLE_GLOB))
+    # Agar filter diya gaya hai (jaise "01"), toh wahi folder match karega; warna sabhi (*)
+    if module_filter:
+        folder_pattern = f"{module_filter}*"
+    else:
+        folder_pattern = "*"
+        
+    sample_glob_path = os.path.join(ROOT, "03_design", folder_pattern, "samples", "*.js")
+    files = glob.glob(sample_glob_path, recursive=True)
     total = 0
     for path in files:
         collection, docs = read_sample_file(path)
         ins, rep = upsert(db, collection, docs)
         total += len(docs)
-        print("  %-60s %3d documents (new %d, replaced %d)" % (collection, len(docs), ins, rep))
+        print("   %-60s %3d documents (new %d, replaced %d)" % (collection, len(docs), ins, rep))
     print("Sample data: %d files, %d documents" % (len(files), total))
+
+
 
 
 def load_page_configs(db):
@@ -328,16 +390,97 @@ def load_ivy_configs(db):
         print("  %s" % d["_id"])
     print("IvyConfigs -> %s: %d documents (new %d, replaced %d)" % (IVYCONFIG_COLLECTION, len(docs), ins, rep))
 
-
-def load_dynamic_dropdowns(db):
-    """4. Insert the dynamic dropdown registry documents into collection u_int_dynamicDropdown."""
-    collection, docs = read_sample_file(DYNAMIC_DROPDOWN_FILE)
-    if collection != DYNAMIC_DROPDOWN_COLLECTION:
-        raise ValueError("%s: expected db.getCollection(\"%s\")" % (DYNAMIC_DROPDOWN_FILE, DYNAMIC_DROPDOWN_COLLECTION))
-    ins, rep = upsert(db, DYNAMIC_DROPDOWN_COLLECTION, docs)
+def load_table_configs(db):
+    """4. Load table configurations into MongoDB."""
+    files = sorted(glob.glob(TABLECONFIG_GLOB))
+    docs = [read_config_file(p) for p in files]
+    ins, rep = upsert(db, TABLECONFIG_COLLECTION, docs)
     for d in docs:
         print("  %s" % d["_id"])
-    print("Dynamic dropdowns -> %s: %d documents (new %d, replaced %d)" % (DYNAMIC_DROPDOWN_COLLECTION, len(docs), ins, rep))
+    print("Table configurations -> %s: %d documents (new %d, replaced %d)" % (TABLECONFIG_COLLECTION, len(docs), ins, rep))
+
+
+def load_menu_configs(db):
+    files = sorted(glob.glob(MENU_GLOB))
+    docs = []
+    for path in files:
+        docs.extend(read_menu_file(path))
+    ins, rep = upsert(db, MENU_COLLECTION, docs)
+    for d in docs:
+        print("  %s" % d["_id"])
+    print("Menu configurations -> %s: %d documents (new %d, replaced %d)" % (MENU_COLLECTION, len(docs), ins, rep))
+
+def load_smodal_configs(db):
+    """Load smodal configurations into MongoDB."""
+    files = sorted(glob.glob(SMODAL_GLOB))
+    docs = []
+    for path in files:
+        docs.extend(read_menu_file(path))  
+    ins, rep = upsert(db, SMODAL_COLLECTION, docs)
+    for d in docs:
+        print("  %s" % d.get("_id", "unknown"))
+    print("Smodal configurations -> %s: %d documents (new %d, replaced %d)" % (SMODAL_COLLECTION, len(docs), ins, rep))
+
+
+def load_stadnew_configs(db):
+    """Load stadnew configurations into MongoDB."""
+    files = sorted(glob.glob(STADNEW_GLOB))
+    docs = []
+    for path in files:
+        docs.extend(read_menu_file(path))  
+    ins, rep = upsert(db, STADNEW_COLLECTION, docs)
+    for d in docs:
+        print("  %s" % d.get("_id", "unknown"))
+    print("Stadnew configurations -> %s: %d documents (new %d, replaced %d)" % (STADNEW_COLLECTION, len(docs), ins, rep))
+
+def load_cropdown_configs(db):
+    """Load cropdown configurations into MongoDB."""
+    files = sorted(glob.glob(CROPDOWN_GLOB))
+    docs = []
+    for path in files:
+        docs.extend(read_menu_file(path))
+    ins, rep = upsert(db, CROPDOWN_COLLECTION, docs)
+    print("Cropdown configurations -> %s: %d documents (new %d, replaced %d)" % (CROPDOWN_COLLECTION, len(docs), ins, rep))
+
+def load_mdict_configs(db):
+    """Load u_int_mdict configurations into MongoDB."""
+    files = sorted(glob.glob(MASTER_DICT_GLOB))
+    docs = []
+    for path in files:
+        docs.extend(read_menu_file(path))
+    ins, rep = upsert(db, MASTER_DICT_COLLECTION, docs)
+    print("MasterDict configurations -> %s: %d documents (new %d, replaced %d)" % (MASTER_DICT_COLLECTION, len(docs), ins, rep))
+
+
+def load_mdict_configs(db):
+    """Load u_int_mdict configurations into MongoDB using sample file reader."""
+    files = sorted(glob.glob(MASTER_DICT_GLOB))
+    total = 0
+    for path in files:
+        collection, docs = read_sample_file(path)  # read_menu_file ki jagah read_sample_file use karein
+        ins, rep = upsert(db, collection, docs)
+        total += len(docs)
+        print("   %-60s %3d documents (new %d, replaced %d)" % (collection, len(docs), ins, rep))
+    print("MasterDict configurations: %d files, %d documents" % (len(files), total))
+
+
+def load_dynamic_configs(db):
+    """Load u_int_dynamicDropdown configurations into MongoDB."""
+    print("Checking QUERY_DIR path:", QUERY_DIR)
+    print("All files inside QUERY_DIR:", os.listdir(QUERY_DIR) if os.path.exists(QUERY_DIR) else "Folder not found!")
+    
+    # Flexible glob pattern taaki agar naam mein thoda bhi fark ho toh match ho jaye
+    files = sorted(glob.glob(os.path.join(QUERY_DIR, "*dynamic*")))
+    # print("Matched files count:", len(files))
+    
+    total = 0
+    for path in files:
+        print("Processing file:", path)
+        collection, docs = read_sample_file(path)
+        ins, rep = upsert(db, collection, docs)
+        total += len(docs)
+        print("   %-60s %3d documents (new %d, replaced %d)" % (collection, len(docs), ins, rep))
+    print("Dynamic configurations: %d files, %d documents" % (len(files), total))
 
 
 def main():
@@ -346,14 +489,30 @@ def main():
     if db is None:
         print("DRY_RUN=1: files are parsed and counted, nothing is written")
     try:
-        load_sample_data(db)
-        load_page_configs(db)
-        load_ivy_configs(db)
-        load_dynamic_dropdowns(db)
+        # load_sample_data(db, module_filter="01") # None
+        # load_page_configs(db)
+        # load_ivy_configs(db)
+        # load_table_configs(db)
+        # load_menu_configs(db)
+        # load_smodal_configs(db)
+        # load_stadnew_configs(db)
+        
+        # load_cropdown_configs(db)
+        # load_mdict_configs(db)
+        load_dynamic_configs(db)
     finally:
         if client is not None:
             client.close()
 
 
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     main()
+    

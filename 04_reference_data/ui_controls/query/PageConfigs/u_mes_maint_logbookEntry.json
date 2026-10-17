@@ -22,14 +22,14 @@
                     "defaultTo" : NumberInt(0),
                     "required" : true,
                     "placeHolder" : "Select Started Date Range",
-                    "errorMessage" : "Please select Started Date Range",
+                    "errorMessage" : "Please Select Started Date Range",
                     "readOnly" : false,
                     "visible" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "format" : "YYYY-MM-DD",
-                    "din_from" : "from",
-                    "din_to" : "to",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
                     "data_index" : "startedAt"
                 },
                 {
@@ -40,14 +40,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Logbook Of",
-                    "errorMessage" : "Please select Logbook Of",
+                    "errorMessage" : "Please Select Logbook Of",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "relatedCollectionName",
-                    "p_din" : "relatedCollectionNameText",
+                    "p_data_index" : "relatedCollectionNameText",
                     "data" : {
                         "u_mes_mast_equipment" : "Equipment",
                         "u_mes_mast_area" : "Area"
@@ -62,14 +62,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Activity Type",
-                    "errorMessage" : "Please select Activity Type",
+                    "errorMessage" : "Please Select Activity Type",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "activityType",
-                    "p_din" : "activityTypeText",
+                    "p_data_index" : "activityTypeText",
                     "data" : {
                         "Production" : "Production",
                         "Cleaning" : "Cleaning",
@@ -88,23 +88,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Performed By",
-                    "errorMessage" : "Please select Performed By",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Performed By",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "performedById",
-                    "p_din" : "performedBy",
+                    "p_data_index" : "performedBy",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_mast_user__id_fullName"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_mast_user__id_fullName",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -114,14 +116,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
-                    "errorMessage" : "Please select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
-                    "p_din" : "statusText",
+                    "p_data_index" : "statusText",
                     "data" : {
                         "Recorded" : "Recorded",
                         "Reviewed" : "Reviewed"
@@ -131,7 +133,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -151,6 +153,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

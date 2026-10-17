@@ -22,23 +22,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Maintenance Work Order",
-                    "errorMessage" : "Please select Maintenance Work Order",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Maintenance Work Order",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "maintenanceWorkOrderId",
-                    "p_din" : "maintenanceWorkOrderName",
+                    "p_data_index" : "maintenanceWorkOrderName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_maint_maintenanceWorkOrder__id_title"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_maint_maintenanceWorkOrder__id_title",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -48,14 +50,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Result",
-                    "errorMessage" : "Please select Result",
+                    "errorMessage" : "Please Select Result",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "result",
-                    "p_din" : "resultText",
+                    "p_data_index" : "resultText",
                     "data" : {
                         "Done OK" : "Done OK",
                         "Done Not OK" : "Done Not OK",
@@ -71,28 +73,30 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Completed By",
-                    "errorMessage" : "Please select Completed By",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Completed By",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "completedById",
-                    "p_din" : "completedBy",
+                    "p_data_index" : "completedBy",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_mast_user__id_fullName"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_mast_user__id_fullName",
-                    "src" : "api"
+                    "sourceParams" : {}
                 }
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -112,6 +116,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

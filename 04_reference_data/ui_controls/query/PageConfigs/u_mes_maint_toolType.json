@@ -23,14 +23,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Life UoM",
-                    "errorMessage" : "Please select Life UoM",
+                    "errorMessage" : "Please Select Life UoM",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "lifeUom",
-                    "p_din" : "lifeUomText",
+                    "p_data_index" : "lifeUomText",
                     "data" : {
                         "Shots" : "Shots",
                         "Cycles" : "Cycles",
@@ -49,14 +49,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
-                    "errorMessage" : "Please select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
-                    "p_din" : "statusText",
+                    "p_data_index" : "statusText",
                     "data" : {
                         "Active" : "Active",
                         "Inactive" : "Inactive"
@@ -66,7 +66,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -86,6 +86,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

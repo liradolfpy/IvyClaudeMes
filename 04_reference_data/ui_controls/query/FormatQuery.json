@@ -1,19 +1,19 @@
-{ 
-    "_id" : "z_ams_attendanceDetailEmployeeWiseQuery", 
-    "lid" : "lid_999", 
-    "dictName" : "z_ams_attendanceDetailEmployeeWiseQuery", 
-    "typ" : "PageConfig", 
-    "page" : "Phantom", 
+{
+    "_id" : "FormatPhantomZenTemplateQuery",
+    "dictName" : "FormatPhantomZenTemplateQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
     "dictData" : {
         "config" : {
-            "method" : "GET", 
-
-
-        "modalElements" : 
-			[
-               
-			     {
+            "method" : "GET",
+            "pageTitle" : "Format Query",
+            "api" : "/ivy/mes",
+            "params" : { "op" : "st" },
+            "footerButtons" : {},
+            "modalElements" : [
+                {
                     "typ" : "datePicker",
+                    "label" : "Date",
                     "default" : NumberInt(0),
                     "required" : true,
                     "placeHolder" : "Select Date",
@@ -22,306 +22,190 @@
                     "visible" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "label" : "Date",
                     "format" : "YYYY-MM-DD",
                     "data_index" : "dt"
                 },
-                
                 {
                     "typ" : "rangePicker",
+                    "label" : "Range",
                     "defaultFrom" : NumberInt(-30),
                     "defaultTo" : NumberInt(0),
                     "required" : true,
-                    "visible" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
                     "placeHolder" : "Select Range",
                     "errorMessage" : "Please Select Range",
                     "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
                     "data_index_from" : "from",
                     "data_index_to" : "to",
-                    "label" : "Range",
-                    "format" : "YYYY-MM-DD",
                     "data_index" : "range"
                 },
-              
                 {
                     "typ" : "dropDown",
-                    "default" : [
-                        "all"
-                    ],
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
                     "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "p_data_index" : "status",
-                    "includeAll" : true,
-                    "label" : "CropDown",
-                    "multiSelect" : true,
                     "data_index" : "st",
+                    "p_data_index" : "status",
                     "api" : "/cropdown",
-                    "params" : {
-                        "name" : "ProjectStatus"
-                    },
+                    "params" : { "name" : "ProjectStatus" },
                     "src" : "api"
                 },
                 {
                     "typ" : "dropDown",
+                    "label" : "Line",
                     "default" : "all",
                     "includeAll" : true,
+                    "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Line",
                     "errorMessage" : "Please Select Line",
                     "readOnly" : false,
-                    "multiSelect" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "p_data_index" : "lineName",
-                    "label" : "Mdict Without Multiselect",
                     "data_index" : "lineId",
+                    "p_data_index" : "lineName",
                     "api" : "/mdict",
-                    "params" : {
-                        "typ" : "Line",
-                        "subTyp" : "idame"
-                    },
+                    "params" : { "typ" : "Line", "subTyp" : "idame" },
                     "src" : "api"
                 },
                 {
                     "typ" : "dropDown",
-                    "default" : [
-                        "all"
-                    ],
+                    "label" : "Employee",
+                    "default" : "all",
                     "includeAll" : true,
+                    "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Employee",
                     "errorMessage" : "Please Select Employee",
                     "readOnly" : false,
-                    "multiSelect" : true,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "p_data_index" : "eame",
-                    "label" : "Mdict With MultiSelect",
                     "data_index" : "eid",
+                    "p_data_index" : "eame",
                     "api" : "/mdict",
-                    "params" : {
-                        "typ" : "Employee",
-                        "subTyp" : "idame"
-                    },
+                    "params" : { "typ" : "Employee", "subTyp" : "idame" },
                     "src" : "api"
                 },
                 {
                     "typ" : "dropDown",
+                    "label" : "Dynamic",
                     "default" : "all",
-                    "required" : false,
                     "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
                     "placeHolder" : "Select Dynamic",
                     "errorMessage" : "Please Select Dynamic",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "p_din" : "dame",
-                    "label" : "DynamicDropDown",
                     "data_index" : "did",
+                    "p_data_index" : "dame",
                     "api" : "/dd",
-                    "params" : {
-                        "dn" : "u_wrs_kpiDetailkpikpiAll"
-                    },
-                    "sourceParams_dynamic" : "u_wrs_kpiDetailkpikpiAll",
-                    "src" : "api"
+                    "params" : { "dn" : "u_wrs_kpiDetail_kpi_kpi" },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_wrs_kpiDetail_kpi_kpi",
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
+                    "label" : "Dynamic Search",
                     "default" : "all",
-                    "required" : false,
                     "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
                     "placeHolder" : "Type min 4 characters",
-                    "errorMessage" : "Please Select Dynamic",
+                    "errorMessage" : "Please Select Dynamic Search",
                     "readOnly" : false,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "minSearchLength" : NumberInt(4),
-                    "p_din" : "p_dyn_dame",
-                    "label" : "Dynamic Search DropDown",
                     "maxSearchLength" : NumberInt(4),
                     "data_index" : "did_dyn",
+                    "p_data_index" : "p_dyn_dame",
                     "api" : "/dd",
-                    "params" : {
-                        "dn" : "u_wrs_kpiDetailkpikpiAll"
-                    },
-                    "sourceParams_dynamic" : "u_wrs_kpiDetailkpikpiAll",
-                    "src" : "api"
+                    "params" : { "dn" : "u_wrs_kpiDetail_kpi_kpi" },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_wrs_kpiDetail_kpi_kpi",
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
-                    "default" : [
-                        "S"
-                    ],
+                    "label" : "Direction",
+                    "default" : [],
+                    "includeAll" : true,
+                    "multiSelect" : true,
                     "required" : true,
-					 "includeAll" : true,
                     "placeHolder" : "Select Direction",
                     "errorMessage" : "Please Select Direction",
                     "readOnly" : false,
-                    "p_din" : "direction",
-                    "label" : "HardCode",
-                    "multiSelect" : true,
                     "visible" : true,
+                    "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
+                    "data_index" : "dir",
+                    "p_data_index" : "direction",
                     "data" : {
                         "N" : "North",
                         "S" : "South",
                         "E" : "East",
                         "W" : "West"
                     },
-                    "data_index" : "dir",
                     "src" : "data"
                 },
-               
                 {
-                    "label" : "Radio",
-                    "visible" : true,
-                    "labelColSpan" : NumberInt(8),
                     "typ" : "radio",
+                    "label" : "Location",
                     "default" : "A",
-					
-                    "readOnly" : false,
-                    "colSize" : NumberInt(8),
                     "required" : true,
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "loc",
+                    "p_data_index" : "location",
                     "data" : {
                         "A" : "Alpha",
                         "B" : "Beta",
                         "C" : "Charlie",
                         "D" : "Delta"
                     },
-                    "data_index" : "loc",
-					 "p_din" : "location",
                     "src" : "data"
                 }
-			   
-			   
-            ],
-      
-
-
-            "modalElements1" : [
-                {
-                    "colSize" : NumberInt(24), 
-                    "data_index" : "mntCode", 
-                    "default" : "all", 
-                    "errorMessage" : "Please select Month Code", 
-                    "includeAll" : true, 
-                    "isSearchable" : true, 
-                    "label" : "Month", 
-                    "labelColSpan" : NumberInt(10), 
-                    "multiSelect" : false, 
-                    "p_data_index" : "p_mntCode", 
-                    "placeHolder" : "Select Month Code", 
-                    "readOnly" : false, 
-                    "required" : true, 
-                    "source" : "dynamic", 
-                    "src" : "/api", 
-                    "params" : {
-                        "dn" : "U_int_mntCode_idmntCodeAll"
-                    }, 
-                    "typ" : "dropDown", 
-                    "api" : "/dd", 
-                    "sourceParams_dynamic" : "U_int_mntCode_idmntCodeAll", 
-                    "sourceParams" : {
-
-                    }
-                }, 
-              
-                {
-                    "colSize" : NumberInt(24), 
-                    "data_index" : "eame", 
-                    "default" : "all", 
-                    "errorMessage" : "Please select  Employee", 
-                    "includeAll" : true, 
-                    "isSearchable" : true, 
-                    "label" : "Employee", 
-                    "labelColSpan" : NumberInt(10), 
-                    "multiSelect" : false, 
-                    "p_data_index" : null, 
-                    "placeHolder" : "Select Employee", 
-                    "readOnly" : false, 
-                    "required" : true, 
-                    "source" : "dynamic", 
-                    "src" : "/api", 
-                    "params" : {
-                        "dn" : "Eida_ideameAll"
-                    }, 
-                    "typ" : "dropDown", 
-                    "api" : "/dd", 
-                    "sourceParams_dynamic" : "Eida_ideameAll", 
-                    "sourceParams" : {
-
-                    }
-                }, 
-                {
-                    "colSize" : 12.0, 
-                    "data_index" : "desig", 
-                    "default" : "all", 
-                    "errorMessage" : "Please select Designation", 
-                    "includeAll" : true, 
-                    "isSearchable" : true, 
-                    "label" : "Designation", 
-                    "labelColSpan" : 10.0, 
-                    "multiSelect" : false, 
-                    "p_data_index" : "p_desig", 
-                    "placeHolder" : "Select Item", 
-                    "readOnly" : false, 
-                    "required" : true, 
-                    "source" : "cropdown", 
-                    "params" : {
-                        "name" : "AmsDesigDropDown", 
-                        "act" : true
-                    }, 
-                    "typ" : "dropDown", 
-                    "visible" : true, 
-                    "src" : "api", 
-                    "api" : "/cropdown", 
-                    "sourceParams" : {
-
-                    }
-                }
-            ], 
-            "footerButtons" : {
-
-            }, 
-            "pageTitle" : "Attendance Detail Employee Wise", 
-            "api" : "/ams/attendanceDetailEmployeeWise", 
-            "params" : {
-                "op" : "st"
-            }
+            ]
         }
-    }, 
-    "ver" : "62170723", 
-    "unq" : false, 
-    "subTyp" : "PhantomQuery", 
-    "act" : false, 
-    "approve" : [
-
-    ], 
-    "delete" : [
-
-    ], 
-    "dynamicModal" : [
-
-    ], 
-    "edit" : [
-
-    ], 
-    "mint" : "1", 
-    "view" : [
-
-    ], 
-    "projid" : "NPD224", 
-    "rel" : "EFRA"
+    },
+    "ver" : "20261017-2110",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [],
+    "delete" : [],
+    "dynamicModal" : [],
+    "edit" : [],
+    "mint" : "1",
+    "view" : [],
+    "rel" : "20261017-2110",
+    "projid" : ""
 }

@@ -23,14 +23,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Equipment",
-                    "errorMessage" : "Please select Equipment",
+                    "errorMessage" : "Please Select Equipment",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
-                    "p_din" : "equipmentName",
+                    "p_data_index" : "equipmentName",
                     "api" : "/mdict",
                     "params" : {
                         "typ" : "Equipment",
@@ -45,23 +45,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Tool",
-                    "errorMessage" : "Please select Tool",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Tool",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "toolId",
-                    "p_din" : "toolName",
+                    "p_data_index" : "toolName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_maint_tool__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_maint_tool__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -71,14 +73,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Interval Type",
-                    "errorMessage" : "Please select Interval Type",
+                    "errorMessage" : "Please Select Interval Type",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "intervalType",
-                    "p_din" : "intervalTypeText",
+                    "p_data_index" : "intervalTypeText",
                     "data" : {
                         "Calendar" : "Calendar",
                         "Counter" : "Counter",
@@ -94,20 +96,22 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Owner Department",
-                    "errorMessage" : "Please select Owner Department",
+                    "errorMessage" : "Please Select Owner Department",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "ownerDepartmentId",
-                    "p_din" : "ownerDepartmentName",
+                    "p_data_index" : "ownerDepartmentName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_mast_department__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_mast_department__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -117,14 +121,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
-                    "errorMessage" : "Please select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
-                    "p_din" : "statusText",
+                    "p_data_index" : "statusText",
                     "data" : {
                         "Active" : "Active",
                         "Suspended" : "Suspended",
@@ -140,14 +144,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Block When Overdue",
-                    "errorMessage" : "Please select Block When Overdue",
+                    "errorMessage" : "Please Select Block When Overdue",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "blockEquipmentWhenOverdue",
-                    "p_din" : "blockEquipmentWhenOverdueText",
+                    "p_data_index" : "blockEquipmentWhenOverdueText",
                     "data" : {
                         "true" : "Yes",
                         "false" : "No"
@@ -157,7 +161,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -177,6 +181,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

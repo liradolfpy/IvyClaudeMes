@@ -84,6 +84,8 @@ None at version 0.10. New questions are added here with the next free number (Q2
 
 Q20 resolved on 17 Oct 2026 (skill `mes-query-control` 0.18, section 14): `/dd` reads the registry document `u_int_dynamicDropdown._id = params.dn`, which names `coln`, `key` (`_id`) and `val` (display key).
 
+FormatQuery.json review (17 Oct 2026, skill `mes-query-control` 0.19, decision D065): the owner's reviewed `query/FormatQuery.json` sets the key names `p_data_index`, `data_index_from` / `data_index_to`, `"source" : "dynamic"` and `"sourceParams" : {}` on `/dd` controls, `Please Select <label>`, and search length 4 with placeholder `Type min 4 characters`. Its frame (`typ` PageConfig, `_id` F_1019, `api` /stdtools/phantomzen, extra fields lid, countList, q, resp, origId), its `required: false` on `/dd` and its `multiSelect: true` example are not the rule for MES pages. All 24 page configurations in `query/PageConfigs/` were updated (27 `/dd` controls, 23 search dropdowns); no MES query screen uses `multiSelect: true`, and no master or plan screen carries a range picker, so the new `-30` default changed no file. IvyConfigs are unchanged (range entry keeps `dinFrom` / `dinTo`).
+
 #### Deferred items (to be worked later)
 
 | No. | Item | Note |

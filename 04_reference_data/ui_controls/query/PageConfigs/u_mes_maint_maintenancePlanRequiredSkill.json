@@ -22,23 +22,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Maintenance Plan",
-                    "errorMessage" : "Please select Maintenance Plan",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Maintenance Plan",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "maintenancePlanId",
-                    "p_din" : "maintenancePlanName",
+                    "p_data_index" : "maintenancePlanName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_maint_maintenancePlan__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_maint_maintenancePlan__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -48,25 +50,27 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Required Skill",
-                    "errorMessage" : "Please select Required Skill",
+                    "errorMessage" : "Please Select Required Skill",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "requiredSkillId",
-                    "p_din" : "requiredSkillName",
+                    "p_data_index" : "requiredSkillName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_mast_skill__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_mast_skill__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 }
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -86,6 +90,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

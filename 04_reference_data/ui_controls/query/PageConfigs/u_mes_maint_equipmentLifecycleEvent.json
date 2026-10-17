@@ -22,14 +22,14 @@
                     "defaultTo" : NumberInt(0),
                     "required" : true,
                     "placeHolder" : "Select Event Date Range",
-                    "errorMessage" : "Please select Event Date Range",
+                    "errorMessage" : "Please Select Event Date Range",
                     "readOnly" : false,
                     "visible" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "format" : "YYYY-MM-DD",
-                    "din_from" : "from",
-                    "din_to" : "to",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
                     "data_index" : "eventAt"
                 },
                 {
@@ -40,14 +40,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Equipment",
-                    "errorMessage" : "Please select Equipment",
+                    "errorMessage" : "Please Select Equipment",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
-                    "p_din" : "equipmentName",
+                    "p_data_index" : "equipmentName",
                     "api" : "/mdict",
                     "params" : {
                         "typ" : "Equipment",
@@ -63,14 +63,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Event Type",
-                    "errorMessage" : "Please select Event Type",
+                    "errorMessage" : "Please Select Event Type",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "eventType",
-                    "p_din" : "eventTypeText",
+                    "p_data_index" : "eventTypeText",
                     "data" : {
                         "Commissioning" : "Commissioning",
                         "Relocation" : "Relocation",
@@ -91,14 +91,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
-                    "errorMessage" : "Please select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
-                    "p_din" : "statusText",
+                    "p_data_index" : "statusText",
                     "data" : {
                         "Recorded" : "Recorded",
                         "Approved" : "Approved",
@@ -109,7 +109,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -129,6 +129,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

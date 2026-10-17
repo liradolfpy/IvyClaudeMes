@@ -23,14 +23,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Category",
-                    "errorMessage" : "Please select Category",
+                    "errorMessage" : "Please Select Category",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "category",
-                    "p_din" : "categoryText",
+                    "p_data_index" : "categoryText",
                     "data" : {
                         "Mechanical" : "Mechanical",
                         "Electrical" : "Electrical",
@@ -50,20 +50,22 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Manufacturer",
-                    "errorMessage" : "Please select Manufacturer",
+                    "errorMessage" : "Please Select Manufacturer",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "manufacturerId",
-                    "p_din" : "manufacturerName",
+                    "p_data_index" : "manufacturerName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_mast_manufacturer__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_mast_manufacturer__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -73,14 +75,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Supplier",
-                    "errorMessage" : "Please select Supplier",
+                    "errorMessage" : "Please Select Supplier",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "supplierId",
-                    "p_din" : "supplierName",
+                    "p_data_index" : "supplierName",
                     "api" : "/mdict",
                     "params" : {
                         "typ" : "Supplier",
@@ -95,23 +97,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Storage Location",
-                    "errorMessage" : "Please select Storage Location",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Storage Location",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "storageLocationId",
-                    "p_din" : "storageLocationName",
+                    "p_data_index" : "storageLocationName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_matl_storageLocation__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_matl_storageLocation__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -121,14 +125,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Criticality",
-                    "errorMessage" : "Please select Criticality",
+                    "errorMessage" : "Please Select Criticality",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "criticality",
-                    "p_din" : "criticalityText",
+                    "p_data_index" : "criticalityText",
                     "data" : {
                         "A" : "A",
                         "B" : "B",
@@ -144,14 +148,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Insurance Spare",
-                    "errorMessage" : "Please select Insurance Spare",
+                    "errorMessage" : "Please Select Insurance Spare",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "isInsuranceSpare",
-                    "p_din" : "isInsuranceSpareText",
+                    "p_data_index" : "isInsuranceSpareText",
                     "data" : {
                         "true" : "Yes",
                         "false" : "No"
@@ -166,14 +170,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
-                    "errorMessage" : "Please select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
-                    "p_din" : "statusText",
+                    "p_data_index" : "statusText",
                     "data" : {
                         "Active" : "Active",
                         "Obsolete" : "Obsolete"
@@ -183,7 +187,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -203,6 +207,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

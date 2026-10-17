@@ -22,23 +22,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Tool",
-                    "errorMessage" : "Please select Tool",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Tool",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "toolId",
-                    "p_din" : "toolName",
+                    "p_data_index" : "toolName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_maint_tool__id_name"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_maint_tool__id_name",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -48,14 +50,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Item",
-                    "errorMessage" : "Please select Item",
+                    "errorMessage" : "Please Select Item",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "itemId",
-                    "p_din" : "itemName",
+                    "p_data_index" : "itemName",
                     "api" : "/mdict",
                     "params" : {
                         "typ" : "Item",
@@ -66,7 +68,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -86,6 +88,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

@@ -22,14 +22,14 @@
                     "defaultTo" : NumberInt(0),
                     "required" : true,
                     "placeHolder" : "Select Started Date Range",
-                    "errorMessage" : "Please select Started Date Range",
+                    "errorMessage" : "Please Select Started Date Range",
                     "readOnly" : false,
                     "visible" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "format" : "YYYY-MM-DD",
-                    "din_from" : "from",
-                    "din_to" : "to",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
                     "data_index" : "startedAt"
                 },
                 {
@@ -40,14 +40,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Equipment",
-                    "errorMessage" : "Please select Equipment",
+                    "errorMessage" : "Please Select Equipment",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "equipmentId",
-                    "p_din" : "equipmentName",
+                    "p_data_index" : "equipmentName",
                     "api" : "/mdict",
                     "params" : {
                         "typ" : "Equipment",
@@ -63,14 +63,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Qualification Phase",
-                    "errorMessage" : "Please select Qualification Phase",
+                    "errorMessage" : "Please Select Qualification Phase",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "qualificationPhase",
-                    "p_din" : "qualificationPhaseText",
+                    "p_data_index" : "qualificationPhaseText",
                     "data" : {
                         "Design Qualification" : "Design Qualification",
                         "Installation Qualification" : "Installation Qualification",
@@ -88,14 +88,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Status",
-                    "errorMessage" : "Please select Status",
+                    "errorMessage" : "Please Select Status",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "status",
-                    "p_din" : "statusText",
+                    "p_data_index" : "statusText",
                     "data" : {
                         "Planned" : "Planned",
                         "In Execution" : "In Execution",
@@ -108,7 +108,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -128,6 +128,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }

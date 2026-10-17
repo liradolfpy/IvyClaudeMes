@@ -4,6 +4,7 @@
 ```text
 Task: This is plain comment
 ```
+`backtick is the Markdown inline code trigger.`
 
 Numerical  Points follow-on tasks, one per task:
 1. Pharma extension – model changes (apply the approved analysis to the generator sources; regenerate specifications).

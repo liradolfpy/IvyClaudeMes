@@ -22,23 +22,25 @@
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Type 3 characters of Spare Part",
-                    "errorMessage" : "Please select Spare Part",
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Spare Part",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
-                    "minSearchLength" : NumberInt(3),
-                    "maxSearchLength" : NumberInt(3),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
                     "data_index" : "sparePartId",
-                    "p_din" : "sparePartName",
+                    "p_data_index" : "sparePartName",
                     "api" : "/dd",
                     "params" : {
                         "dn" : "u_mes_maint_sparePart__id_description"
                     },
+                    "src" : "api",
+                    "source" : "dynamic",
                     "sourceParams_dynamic" : "u_mes_maint_sparePart__id_description",
-                    "src" : "api"
+                    "sourceParams" : {}
                 },
                 {
                     "typ" : "dropDown",
@@ -48,14 +50,14 @@
                     "multiSelect" : false,
                     "required" : true,
                     "placeHolder" : "Select Used On Equipment",
-                    "errorMessage" : "Please select Used On Equipment",
+                    "errorMessage" : "Please Select Used On Equipment",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
                     "colSize" : NumberInt(8),
                     "labelColSpan" : NumberInt(8),
                     "data_index" : "usedOnEquipmentId",
-                    "p_din" : "usedOnEquipmentName",
+                    "p_data_index" : "usedOnEquipmentName",
                     "api" : "/mdict",
                     "params" : {
                         "typ" : "Equipment",
@@ -66,7 +68,7 @@
             ]
         }
     },
-    "ver" : "20261015-1340",
+    "ver" : "20261017-2102",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -86,6 +88,6 @@
     "view" : [
 
     ],
-    "rel" : "20261015-1340",
+    "rel" : "20261017-2102",
     "projid" : ""
 }
