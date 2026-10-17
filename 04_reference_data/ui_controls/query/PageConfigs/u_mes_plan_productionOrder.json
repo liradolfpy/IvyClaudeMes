@@ -1,0 +1,204 @@
+{
+    "_id" : "mes_plan_productionOrderQuery",
+    "dictName" : "mes_plan_productionOrderQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Production Orders",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Planned Start Date Range",
+                    "defaultFrom" : NumberInt(-30),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Planned Start Date Range",
+                    "errorMessage" : "Please Select Planned Start Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
+                    "data_index" : "plannedStartAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Line",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Line",
+                    "errorMessage" : "Please Select Line",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "lineId",
+                    "p_data_index" : "lineName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Line",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Created" : "Created",
+                        "Released" : "Released",
+                        "In Progress" : "In Progress",
+                        "On Hold" : "On Hold",
+                        "Completed" : "Completed",
+                        "Closed" : "Closed",
+                        "Cancelled" : "Cancelled"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Product Variant",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Product Variant",
+                    "errorMessage" : "Please Select Product Variant",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "productVariantId",
+                    "p_data_index" : "productVariantName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "ProductVariant",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Order Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Order Type",
+                    "errorMessage" : "Please Select Order Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "orderType",
+                    "p_data_index" : "orderTypeText",
+                    "data" : {
+                        "Production" : "Production",
+                        "Rework" : "Rework",
+                        "Trial" : "Trial",
+                        "PPAP Run" : "PPAP Run",
+                        "Validation Batch" : "Validation Batch"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Priority",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Priority",
+                    "errorMessage" : "Please Select Priority",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "priority",
+                    "p_data_index" : "priorityText",
+                    "data" : {
+                        "Low" : "Low",
+                        "Normal" : "Normal",
+                        "High" : "High",
+                        "Urgent" : "Urgent"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "On Hold",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select On Hold",
+                    "errorMessage" : "Please Select On Hold",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "onHold",
+                    "p_data_index" : "onHoldText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

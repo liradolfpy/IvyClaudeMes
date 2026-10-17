@@ -1,0 +1,111 @@
+{
+    "_id" : "mes_plan_setupVerificationItemIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_setupVerificationItem",
+    "stableName" : "mes_plan_setupVerificationItemStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_setupVerificationItemIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "setupVerificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "checkType",
+            "typ" : "string"
+        },
+        {
+            "din" : "passed",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "setupVerificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "setupVerificationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "checkType",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "scannedCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "expectedValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "actualValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "passed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checkedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

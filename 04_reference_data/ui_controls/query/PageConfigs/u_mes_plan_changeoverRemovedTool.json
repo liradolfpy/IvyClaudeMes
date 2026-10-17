@@ -1,0 +1,97 @@
+{
+    "_id" : "mes_plan_changeoverRemovedToolQuery",
+    "dictName" : "mes_plan_changeoverRemovedToolQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Changeover Removed Tools",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Changeover",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Changeover",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "changeoverId",
+                    "p_data_index" : "changeoverName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_plan_changeover__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_plan_changeover__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Removed Tool",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Removed Tool",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "removedToolId",
+                    "p_data_index" : "removedToolName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_maint_tool__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_maint_tool__id_name",
+                    "sourceParams" : {}
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

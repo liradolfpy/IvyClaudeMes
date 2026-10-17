@@ -1,0 +1,63 @@
+{
+    "_id" : "mes_plan_wipUnitCompletedStepIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_wipUnitCompletedStep",
+    "stableName" : "mes_plan_wipUnitCompletedStepStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_wipUnitCompletedStepIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "completedStep",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_plan_containerTypeQuery",
+    "dictName" : "mes_plan_containerTypeQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Container Types",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Active" : "Active",
+                        "Inactive" : "Inactive"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Returnable",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Returnable",
+                    "errorMessage" : "Please Select Returnable",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "isReturnable",
+                    "p_data_index" : "isReturnableText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

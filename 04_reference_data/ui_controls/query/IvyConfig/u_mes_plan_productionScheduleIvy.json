@@ -1,0 +1,130 @@
+{
+    "_id" : "mes_plan_productionScheduleIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_productionSchedule",
+    "stableName" : "mes_plan_productionScheduleStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_productionScheduleIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "productionDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "frozen",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCalendarId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCalendarName",
+            "typ" : "string"
+        },
+        {
+            "din" : "scheduleVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "plannedOutput",
+            "typ" : "int"
+        },
+        {
+            "din" : "actualOutput",
+            "typ" : "int"
+        },
+        {
+            "din" : "attainmentPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "frozen",
+            "typ" : "bool"
+        },
+        {
+            "din" : "publishedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "publishedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "publishedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,230 @@
+{
+    "_id" : "mes_plan_interlockEventIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_interlockEvent",
+    "stableName" : "mes_plan_interlockEventStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_interlockEventIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "raisedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "interlockRuleId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "interlockRuleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "interlockRuleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "ruleType",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "foundValueText",
+            "typ" : "string"
+        },
+        {
+            "din" : "expectedValueText",
+            "typ" : "string"
+        },
+        {
+            "din" : "messageText",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "operatorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "raisedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "overrideReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "overrideReasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "overrideComment",
+            "typ" : "string"
+        },
+        {
+            "din" : "overrideById",
+            "typ" : "string"
+        },
+        {
+            "din" : "overrideBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "overrideAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "electronicSignatureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "electronicSignatureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "clearedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "notificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

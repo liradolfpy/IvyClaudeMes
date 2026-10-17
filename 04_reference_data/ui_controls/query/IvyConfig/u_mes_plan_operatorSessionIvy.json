@@ -1,0 +1,158 @@
+{
+    "_id" : "mes_plan_operatorSessionIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_operatorSession",
+    "stableName" : "mes_plan_operatorSessionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_operatorSessionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "loginAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authenticationMethod",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "authenticationMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "loginAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "logoutAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "logoutReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "skillVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "trainingVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "interlockEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "interlockEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "clientWorkstation",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

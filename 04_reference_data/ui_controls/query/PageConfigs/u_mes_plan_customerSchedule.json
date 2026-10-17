@@ -1,0 +1,131 @@
+{
+    "_id" : "mes_plan_customerScheduleQuery",
+    "dictName" : "mes_plan_customerScheduleQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Customer Schedules",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Horizon From Range",
+                    "defaultFrom" : NumberInt(-30),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Horizon From Range",
+                    "errorMessage" : "Please Select Horizon From Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
+                    "data_index" : "horizonFrom"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Received" : "Received",
+                        "Confirmed" : "Confirmed",
+                        "Partially Shipped" : "Partially Shipped",
+                        "Completed" : "Completed",
+                        "Replaced" : "Replaced"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Customer",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Customer",
+                    "errorMessage" : "Please Select Customer",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "customerId",
+                    "p_data_index" : "customerName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Customer",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Schedule Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Schedule Type",
+                    "errorMessage" : "Please Select Schedule Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "scheduleType",
+                    "p_data_index" : "scheduleTypeText",
+                    "data" : {
+                        "Forecast" : "Forecast",
+                        "Delivery Schedule" : "Delivery Schedule",
+                        "Just In Time Call Off" : "Just In Time Call Off"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

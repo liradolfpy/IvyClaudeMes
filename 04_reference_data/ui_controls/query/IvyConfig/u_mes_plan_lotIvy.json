@@ -1,0 +1,234 @@
+{
+    "_id" : "mes_plan_lotIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_lot",
+    "stableName" : "mes_plan_lotStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_lotIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "manufacturedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotType",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "onHold",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotType",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierLotNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "heatNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "goodsReceiptId",
+            "typ" : "string"
+        },
+        {
+            "din" : "goodsReceiptName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "manufacturedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "receivedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "expiryAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "initialQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "currentQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "onHold",
+            "typ" : "bool"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "attributesDieNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "attributesFurnaceChargeNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "attributesHardnessHbw",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "attributesAnodisingLoadNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "attributesCoatingThicknessUm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "attributesCureDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "certificateControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "certificateControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "closedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "retestDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "batchReleaseId",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchReleaseName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,203 @@
+{
+    "_id" : "mes_plan_recipeDownloadQuery",
+    "dictName" : "mes_plan_recipeDownloadQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Recipe Downloads",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Downloaded Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Downloaded Date Range",
+                    "errorMessage" : "Please Select Downloaded Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
+                    "data_index" : "downloadedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Work Center",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Work Center",
+                    "errorMessage" : "Please Select Work Center",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "workCenterId",
+                    "p_data_index" : "workCenterName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "WorkCenter",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Equipment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Equipment",
+                    "errorMessage" : "Please Select Equipment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "equipmentId",
+                    "p_data_index" : "equipmentName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Equipment",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Requested" : "Requested",
+                        "Verified" : "Verified",
+                        "Rejected" : "Rejected"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Recipe",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Recipe",
+                    "errorMessage" : "Please Select Recipe",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "recipeId",
+                    "p_data_index" : "recipeName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_prod_recipe__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_prod_recipe__id_name",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Verification Result",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Verification Result",
+                    "errorMessage" : "Please Select Verification Result",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "verificationResult",
+                    "p_data_index" : "verificationResultText",
+                    "data" : {
+                        "Match" : "Match",
+                        "Mismatch" : "Mismatch",
+                        "No Response" : "No Response",
+                        "Version Not Released" : "Version Not Released"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Trigger",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Trigger",
+                    "errorMessage" : "Please Select Trigger",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "trigger",
+                    "p_data_index" : "triggerText",
+                    "data" : {
+                        "Order Start" : "Order Start",
+                        "Changeover" : "Changeover",
+                        "Operator Request" : "Operator Request",
+                        "Revision Release" : "Revision Release",
+                        "Controller Reconnect" : "Controller Reconnect"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

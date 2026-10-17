@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_plan_shiftHandoverNonconformanceIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_shiftHandoverNonconformance",
+    "stableName" : "mes_plan_shiftHandoverNonconformanceStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_shiftHandoverNonconformanceIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "shiftHandoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftHandoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftHandoverName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

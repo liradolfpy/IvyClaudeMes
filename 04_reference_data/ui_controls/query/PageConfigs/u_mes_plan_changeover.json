@@ -1,0 +1,156 @@
+{
+    "_id" : "mes_plan_changeoverQuery",
+    "dictName" : "mes_plan_changeoverQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Changeovers",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Started Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Started Date Range",
+                    "errorMessage" : "Please Select Started Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
+                    "data_index" : "startedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Line",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Line",
+                    "errorMessage" : "Please Select Line",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "lineId",
+                    "p_data_index" : "lineName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Line",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Work Center",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Work Center",
+                    "errorMessage" : "Please Select Work Center",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "workCenterId",
+                    "p_data_index" : "workCenterName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "WorkCenter",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Planned" : "Planned",
+                        "In Progress" : "In Progress",
+                        "Awaiting First Off Approval" : "Awaiting First Off Approval",
+                        "Completed" : "Completed"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Changeover Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Changeover Type",
+                    "errorMessage" : "Please Select Changeover Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "changeoverType",
+                    "p_data_index" : "changeoverTypeText",
+                    "data" : {
+                        "Variant Change" : "Variant Change",
+                        "Item Change" : "Item Change",
+                        "Tool Change" : "Tool Change",
+                        "Die Change" : "Die Change",
+                        "Batch Change" : "Batch Change",
+                        "Product Change" : "Product Change"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

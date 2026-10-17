@@ -1,0 +1,204 @@
+{
+    "_id" : "mes_plan_containerQuery",
+    "dictName" : "mes_plan_containerQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Containers",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Packed Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Packed Date Range",
+                    "errorMessage" : "Please Select Packed Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "format" : "YYYY-MM-DD",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
+                    "data_index" : "packedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Storage Location",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Storage Location",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "storageLocationId",
+                    "p_data_index" : "storageLocationName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_matl_storageLocation__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_matl_storageLocation__id_name",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Empty" : "Empty",
+                        "Filling" : "Filling",
+                        "Full" : "Full",
+                        "Sealed" : "Sealed",
+                        "Shipped" : "Shipped",
+                        "Returned" : "Returned",
+                        "Under Repair" : "Under Repair"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Container Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Container Type",
+                    "errorMessage" : "Please Select Container Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "containerTypeId",
+                    "p_data_index" : "containerTypeName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "ContainerType",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Owner Customer",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Owner Customer",
+                    "errorMessage" : "Please Select Owner Customer",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "ownerCustomerId",
+                    "p_data_index" : "ownerCustomerName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Customer",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Returnable",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Returnable",
+                    "errorMessage" : "Please Select Returnable",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "isReturnable",
+                    "p_data_index" : "isReturnableText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "On Hold",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select On Hold",
+                    "errorMessage" : "Please Select On Hold",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "onHold",
+                    "p_data_index" : "onHoldText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

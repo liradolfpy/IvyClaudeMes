@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_plan_shiftHandoverDowntimeEventIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_shiftHandoverDowntimeEvent",
+    "stableName" : "mes_plan_shiftHandoverDowntimeEventStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_shiftHandoverDowntimeEventIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "shiftHandoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftHandoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftHandoverName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,120 @@
+{
+    "_id" : "mes_plan_productionScheduleSlotQuery",
+    "dictName" : "mes_plan_productionScheduleSlotQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Production Schedule Slots",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Production Schedule",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Production Schedule",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "productionScheduleId",
+                    "p_data_index" : "productionScheduleName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_plan_productionSchedule__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_plan_productionSchedule__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Production Order",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Production Order",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "productionOrderId",
+                    "p_data_index" : "productionOrderName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_plan_productionOrder__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_plan_productionOrder__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Item",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Item",
+                    "errorMessage" : "Please Select Item",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "data_index" : "itemId",
+                    "p_data_index" : "itemName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Item",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

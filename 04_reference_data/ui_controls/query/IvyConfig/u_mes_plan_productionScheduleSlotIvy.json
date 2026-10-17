@@ -1,0 +1,103 @@
+{
+    "_id" : "mes_plan_productionScheduleSlotIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_productionScheduleSlot",
+    "stableName" : "mes_plan_productionScheduleSlotStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_productionScheduleSlotIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "productionScheduleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionScheduleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionScheduleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "plannedQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "plannedStartAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "plannedEndAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "changeoverMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "actualQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

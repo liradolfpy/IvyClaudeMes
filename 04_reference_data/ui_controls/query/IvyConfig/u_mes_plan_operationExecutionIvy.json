@@ -1,0 +1,314 @@
+{
+    "_id" : "mes_plan_operationExecutionIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_operationExecution",
+    "stableName" : "mes_plan_operationExecutionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_operationExecutionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "startedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "result",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "executionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "attemptNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "cycleTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "standardCycleTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "quantityIn",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityGood",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityReject",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityRework",
+            "typ" : "int"
+        },
+        {
+            "din" : "result",
+            "typ" : "string"
+        },
+        {
+            "din" : "checksSkillVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksRecipeVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksToolLifeOk",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksGaugeCalibrationOk",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksPreviousStepComplete",
+            "typ" : "bool"
+        },
+        {
+            "din" : "nextStepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "remarks",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeVersion",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeChecksum",
+            "typ" : "string"
+        },
+        {
+            "din" : "taktTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "taktBreached",
+            "typ" : "bool"
+        },
+        {
+            "din" : "captureMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "startScanCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorSessionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorSessionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "checksVariantVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksDocumentAcknowledged",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksEquipmentReady",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksMaterialReleased",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksSetupVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "checksEnvironmentOk",
+            "typ" : "bool"
+        },
+        {
+            "din" : "interlockEventCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

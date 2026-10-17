@@ -1,0 +1,110 @@
+{
+    "_id" : "mes_plan_customerScheduleIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_customerSchedule",
+    "stableName" : "mes_plan_customerScheduleStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_customerScheduleIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "horizonFrom",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "scheduleType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipToCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "scheduleType",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerOrderNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "receivedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "horizonFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "horizonTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "supersedesCustomerScheduleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supersedesCustomerScheduleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "erpSalesOrderNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

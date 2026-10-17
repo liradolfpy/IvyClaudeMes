@@ -1,0 +1,97 @@
+{
+    "_id" : "mes_plan_shiftHandoverDowntimeEventQuery",
+    "dictName" : "mes_plan_shiftHandoverDowntimeEventQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Shift Handover Downtime Events",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Shift Handover",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Shift Handover",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "shiftHandoverId",
+                    "p_data_index" : "shiftHandoverName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_plan_shiftHandover__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_plan_shiftHandover__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Downtime Event",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Downtime Event",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(8),
+                    "labelColSpan" : NumberInt(8),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "downtimeEventId",
+                    "p_data_index" : "downtimeEventName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_perf_downtimeEvent__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_perf_downtimeEvent__id_recordNo",
+                    "sourceParams" : {}
+                }
+            ]
+        }
+    },
+    "ver" : "20261017-2122",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261017-2122",
+    "projid" : ""
+}

@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_plan_changeoverPerformedByUserIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_changeoverPerformedByUser",
+    "stableName" : "mes_plan_changeoverPerformedByUserStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_changeoverPerformedByUserIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "changeoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "performedByUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeoverName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "performedByUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "performedByUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

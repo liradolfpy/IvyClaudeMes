@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_plan_shiftHandoverOpenItemIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_shiftHandoverOpenItem",
+    "stableName" : "mes_plan_shiftHandoverOpenItemStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_shiftHandoverOpenItemIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "shiftHandoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "closed",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftHandoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftHandoverName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "closed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

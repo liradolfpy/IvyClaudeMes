@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_plan_andonEventEscalationIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_andonEventEscalation",
+    "stableName" : "mes_plan_andonEventEscalationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_andonEventEscalationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "andonEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "channel",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "andonEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "andonEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "level",
+            "typ" : "int"
+        },
+        {
+            "din" : "escalatedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "toUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "channel",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

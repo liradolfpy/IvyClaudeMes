@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_plan_operationExecutionDefectCodeIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_operationExecutionDefectCode",
+    "stableName" : "mes_plan_operationExecutionDefectCodeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_operationExecutionDefectCodeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

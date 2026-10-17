@@ -1,0 +1,103 @@
+{
+    "_id" : "mes_plan_customerScheduleLineIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_customerScheduleLine",
+    "stableName" : "mes_plan_customerScheduleLineStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_customerScheduleLineIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "customerScheduleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "firmness",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerScheduleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerScheduleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerPartNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "dueDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "cumulativeRequired",
+            "typ" : "int"
+        },
+        {
+            "din" : "cumulativeShipped",
+            "typ" : "int"
+        },
+        {
+            "din" : "firmness",
+            "typ" : "string"
+        },
+        {
+            "din" : "shippedQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

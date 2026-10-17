@@ -1,0 +1,210 @@
+{
+    "_id" : "mes_plan_andonEventIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_andonEvent",
+    "stableName" : "mes_plan_andonEventStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_andonEventIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "raisedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "andonTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineStopped",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "andonTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "andonTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "raisedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "raisedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "raisedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "acknowledgedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "acknowledgedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "acknowledgedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "resolvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "resolvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "resolvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "responseSec",
+            "typ" : "int"
+        },
+        {
+            "din" : "resolutionSec",
+            "typ" : "int"
+        },
+        {
+            "din" : "lineStopped",
+            "typ" : "bool"
+        },
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "resolutionText",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "severityClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "maintenanceWorkOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationRuleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationRuleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_plan_productionOrderReleaseIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_productionOrderRelease",
+    "stableName" : "mes_plan_productionOrderReleaseStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_productionOrderReleaseIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedById",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "releaseNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "releasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "releasedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,262 @@
+{
+    "_id" : "mes_plan_productionOrderIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_productionOrder",
+    "stableName" : "mes_plan_productionOrderStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_productionOrderIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "plannedStartAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "orderType",
+            "typ" : "string"
+        },
+        {
+            "din" : "priority",
+            "typ" : "string"
+        },
+        {
+            "din" : "onHold",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "erpOrderNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfMaterialId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfMaterialName",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerScheduleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerScheduleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "orderType",
+            "typ" : "string"
+        },
+        {
+            "din" : "priority",
+            "typ" : "string"
+        },
+        {
+            "din" : "plannedQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "releasedQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "startedQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "goodQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "scrapQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "reworkQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "plannedStartAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "plannedEndAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "actualStartAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "actualEndAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "dueDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "erpMessageId",
+            "typ" : "string"
+        },
+        {
+            "din" : "erpMessageName",
+            "typ" : "string"
+        },
+        {
+            "din" : "closedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "closedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "closedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "remarks",
+            "typ" : "string"
+        },
+        {
+            "din" : "onHold",
+            "typ" : "bool"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "holdReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "holdReasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "genealogyComplete",
+            "typ" : "bool"
+        },
+        {
+            "din" : "batchRecordReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineClearanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineClearanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "yieldWithinLimits",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

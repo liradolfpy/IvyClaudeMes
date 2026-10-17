@@ -1,0 +1,218 @@
+{
+    "_id" : "mes_plan_wipUnitIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_wipUnit",
+    "stableName" : "mes_plan_wipUnitStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_wipUnitIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "startedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "onHold",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberId",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberName",
+            "typ" : "string"
+        },
+        {
+            "din" : "bodyLotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "bodyLotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentStepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "currentOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentWorkCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "onHold",
+            "typ" : "bool"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reworkCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "createdAtOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "createdAtOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastOperationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastOperationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "bodyCavityNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "castDateCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "scrappedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "shippedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

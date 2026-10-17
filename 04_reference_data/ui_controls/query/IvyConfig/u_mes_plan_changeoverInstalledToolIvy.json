@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_plan_changeoverInstalledToolIvy",
+    "code" : "plan",
+    "moduleName" : "PlanningAndExecution",
+    "collection" : "u_mes_plan_changeoverInstalledTool",
+    "stableName" : "mes_plan_changeoverInstalledToolStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_plan_changeoverInstalledToolIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "changeoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "installedToolId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeoverId",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeoverName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "installedToolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "installedToolName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}
