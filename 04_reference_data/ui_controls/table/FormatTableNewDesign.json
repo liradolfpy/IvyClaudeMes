@@ -1,0 +1,353 @@
+{ 
+    "_id" : "mes_maint_cleaningRecordStable", 
+    "act" : true, 
+    "app" : "mes", 
+    "clmnDoc" : [
+        {
+            "_id" : "1356000000000001", 
+            "recordNo" : "CLN-20260915-001", 
+            "app" : "Gamp", 
+            "siteId" : "1003000000000011", 
+            "siteName" : "Ranjangaon OSD Plant, Pune", 
+            "equipmentId" : "1013000000000012", 
+            "equipmentName" : "Rapid Mixer Granulator 600 L", 
+            "workCenterId" : "1009000000000012", 
+            "workCenterName" : "Rapid Mixer Granulator Suite 1", 
+            "cleaningType" : "Major Cleaning", 
+            "procedureControlledDocumentId" : "1246000000000012", 
+            "procedureControlledDocumentName" : "SOP cleaning of rapid mixer granulator SOP-PRD-014 revision 6", 
+            "previousProductionOrderId" : "1083000000000014", 
+            "previousProductionOrderName" : "PCM5G26091", 
+            "previousItemId" : "1043000000000014", 
+            "previousItemName" : "Paracetamol 500 mg lubricated granules and core tablets, bulk", 
+            "dirtyHoldStartAt" : ISODate("2026-09-15T13:40:00.000+0000"), 
+            "startedAt" : ISODate("2026-09-15T13:41:00.000+0000"), 
+            "completedAt" : ISODate("2026-09-15T13:44:00.000+0000"), 
+            "cleanedById" : "1029000000000011", 
+            "cleanedBy" : "Amol Shinde", 
+            "verificationMethod" : "Rinse Sample", 
+            "verificationResult" : "Pass", 
+            "verifiedById" : "1029000000000015", 
+            "verifiedBy" : "Nilesh Sawant", 
+            "verifiedAt" : ISODate("2026-09-15T13:45:00.000+0000"), 
+            "cleanHoldExpiresAt" : ISODate("2026-09-16T13:45:00.000+0000"), 
+            "electronicSignatureId" : null, 
+            "electronicSignatureName" : null, 
+            "status" : "Verified", 
+            "schemaVersion" : NumberInt(1), 
+            "createdAt" : ISODate("2026-09-15T13:40:00.000+0000"), 
+            "createdById" : "1029000000000016", 
+            "createdBy" : "Farhan Qureshi", 
+            "updatedAt" : ISODate("2026-09-15T13:45:00.000+0000"), 
+            "updatedById" : "1029000000000016", 
+            "updatedBy" : "Farhan Qureshi"
+        }
+    ], 
+    "dictData" : {
+        "config" : {
+            "action" : {
+
+            }, 
+            "column" : [
+                {
+                    "align" : "left", 
+                    "data_index" : "recordNo", 
+                    "fixed" : "left", 
+                    "title" : "Record No", 
+                    "width" : "140px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "equipmentName", 
+                    "title" : "Equipment", 
+                    "width" : "300px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "workCenterName", 
+                    "title" : "Work Center", 
+                    "width" : "280px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "cleaningType", 
+                    "title" : "Cleaning Type", 
+                    "width" : "210px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "procedureControlledDocumentName", 
+                    "title" : "Procedure Controlled Document", 
+                    "width" : "300px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "previousProductionOrderName", 
+                    "title" : "Previous Production Order", 
+                    "width" : "240px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "previousItemName", 
+                    "title" : "Previous Item", 
+                    "width" : "300px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "dirtyHoldStartAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Dirty Hold Start At", 
+                    "width" : "200px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "startedAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Started At", 
+                    "width" : "160px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "completedAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Completed At", 
+                    "width" : "160px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "cleanedBy", 
+                    "title" : "Cleaned By", 
+                    "width" : "120px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "verificationMethod", 
+                    "title" : "Verification Method", 
+                    "width" : "200px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "verificationResult", 
+                    "title" : "Verification Result", 
+                    "width" : "200px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "verifiedBy", 
+                    "title" : "Verified By", 
+                    "width" : "130px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "verifiedAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Verified At", 
+                    "width" : "160px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "cleanHoldExpiresAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Clean Hold Expires At", 
+                    "width" : "210px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "electronicSignatureName", 
+                    "title" : "Electronic Signature", 
+                    "width" : "200px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "status", 
+                    "title" : "Status", 
+                    "width" : "100px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "createdBy", 
+                    "title" : "Created By", 
+                    "width" : "120px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "createdAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Created At", 
+                    "width" : "160px"
+                }, 
+                {
+                    "align" : "left", 
+                    "data_index" : "updatedBy", 
+                    "title" : "Updated By", 
+                    "width" : "120px"
+                }, 
+                {
+                    "align" : "center", 
+                    "data_index" : "updatedAt", 
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS", 
+                    "isIST" : true, 
+                    "title" : "Updated At", 
+                    "width" : "160px"
+                }
+            ], 
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)", 
+                "display-pagination-control" : true, 
+                "font-color" : "#D0E2FF", 
+                "font-family" : "Roboto Condensed", 
+                "font-size" : "12px", 
+                "font-weight" : "bold", 
+                "noOfRows-visible" : true, 
+                "pageNo-visible" : true, 
+                "pagination-background-color" : "#04179b", 
+                "pagination-border" : "1px solid #244ce4", 
+                "pagination-color" : "#E5F6FF", 
+                "pagination-visible" : true, 
+                "row-padding" : "0px", 
+                "visible" : true
+            }, 
+            "footerButtons" : {
+
+            }, 
+            "footerMultiline" : {
+                "background-color" : "#708090", 
+                "multiCol" : [
+                    [
+                        {
+                            "colSize" : 6.0, 
+                            "key" : {
+                                "style" : {
+                                    "color" : "#E7EDF1", 
+                                    "fontFamily" : "Roboto Condensed", 
+                                    "font-size" : "16px", 
+                                    "font-weight" : "400", 
+                                    "margin" : "1px 1px 1px 1px", 
+                                    "textAlign" : "left"
+                                }, 
+                                "text" : "From"
+                            }, 
+                            "typ" : "dataElement", 
+                            "val" : {
+                                "style" : {
+                                    "color" : "#E7EDF1", 
+                                    "fontFamily" : "Roboto Condensed", 
+                                    "font-size" : "16px", 
+                                    "font-weight" : "600", 
+                                    "margin" : "1px 1px 1px 1px", 
+                                    "textAlign" : "left"
+                                }, 
+                                "text" : "ABC"
+                            }
+                        }, 
+                        {
+                            "colSize" : 1.0, 
+                            "typ" : "blankSpace"
+                        }
+                    ]
+                ]
+            }, 
+            "header" : {
+                "background-color" : "#2E3E4E", 
+                "font-color" : "#125FCC", 
+                "font-family" : "Roboto Condensed", 
+                "font-size" : "12px", 
+                "font-weight" : "100", 
+                "row-padding" : "0px 0px 0px 2px", 
+                "visible" : true
+            }, 
+            "headerMultiline" : {
+
+            }, 
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1", 
+                    "stable-row-2"
+                ], 
+                "background-color" : "#FFFFFF", 
+                "border-bottom" : "none", 
+                "border-bottom-color" : "#DCD5D5", 
+                "border-top-color" : "#E74C3C", 
+                "font-color" : "#000000", 
+                "font-family" : "Roboto Condensed", 
+                "font-size" : "12px", 
+                "font-weight" : "100", 
+                "row-padding" : "0px 0px 0px 5px"
+            }, 
+            "rowAction" : [
+
+            ], 
+            "tableConfig" : {
+                "divAlignment" : "left", 
+                "divBackgroundColor" : [
+                    "transparent", 
+                    "transparent"
+                ], 
+                "exportToCsv" : true, 
+                "exportToPdf" : false, 
+                "innerLeftPadding" : "15px", 
+                "innerRightPadding" : "15px", 
+                "interval" : NumberInt(3000000), 
+                "isCheckable" : false, 
+                "isSearchable" : true, 
+                "isSortable" : true, 
+                "leftMargin" : "0px", 
+                "line-color" : "#2ECC71", 
+                "noOfRows" : NumberInt(10), 
+                "pagination" : NumberInt(8), 
+                "tableWidth" : "80%", 
+                "visible" : true
+            }, 
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)", 
+                "display-download-icon" : true, 
+                "display-search-control" : true, 
+                "download-icon-color" : "#0F62FE", 
+                "font-color" : "#FFFFFF", 
+                "font-family" : "Roboto Condensed", 
+                "font-size" : "16px", 
+                "font-weight" : "400", 
+                "search-border-color" : "1px solid #244ce4", 
+                "search-inner-color" : "#04179b", 
+                "title-icon" : "fa-list", 
+                "title-icon-color" : "#FFFFFF", 
+                "title-icon-size" : "16px", 
+                "title-label" : "Cleaning Records", 
+                "visible" : true
+            }, 
+            "tableTitle" : {
+                "font-color" : "#B1B1B5", 
+                "font-family" : "Roboto Condensed", 
+                "font-size" : "30px", 
+                "font-weight" : "600", 
+                "title-label" : "", 
+                "visible" : false
+            }, 
+            "zenFuncs" : {
+                "dynamicActionBtn" : true, 
+                "footerButtons" : true, 
+                "footerMultiline" : true, 
+                "headerMultiline" : false
+            }, 
+            "zenPop" : {
+
+            }
+        }
+    }, 
+    "dictName" : "mes_maint_cleaningRecordStable", 
+    "lid" : "lid_999", 
+    "module" : "maint", 
+    "page" : "mes_maint_cleaningRecordStable", 
+    "projid" : "", 
+    "rel" : "CL20261017-13:59", 
+    "resp" : "CL", 
+    "subTyp" : "", 
+    "typ" : "PageConfigStable", 
+    "ver" : ""
+}

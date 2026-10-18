@@ -4,6 +4,7 @@ ROOT=sys.argv[1]
 M=json.load(open("model/flat_model.json")); cols=M["collections"]; MODN=M["modules"]
 ORDER_ALL=["mast","prod","plan","matl","trac","qual","perf","maint","syst","ehs","bmr","mmr"]
 order=[m for m in ORDER_ALL if any(c["module"]==m for c in cols)]  # modules without collections get no files (Folder_Guide rule 5)
+MODMENU={"mast":"Master Data","prod":"Product","plan":"Plan","matl":"Mtl Mgt","trac":"Trace","qual":"Quality","perf":"Performance","maint":"Maint","syst":"System","ehs":"EHS","bmr":"BMR","mmr":"MMR"}  # short menu labels, owner list 18 Oct 2026 (D-menu)
 DOMF={'mast': '01_master_data_management', 'prod': '02_product_definition', 'plan': '03_planning_execution', 'matl': '04_material_management', 'trac': '05_traceability', 'qual': '06_quality_management', 'perf': '07_performance_management', 'maint': '08_tooling_maintenance', 'syst': '09_system_integration', 'ehs': '10_environment_health_safety', 'bmr': '11_batch_manufacturing_record', 'mmr': '12_master_manufacturing_record'}
 cat={c[0]:c for c in C}
 import ext_req01 as EXT
@@ -30,8 +31,8 @@ kinds=collections.Counter(c["kind"] for c in cols)
 HEAD="Model version 2.9 | 12 October 2026 | %d collections (%d entity, %d child, %d relationship, %d value-list), %d keys\n\n"%(NK,kinds["entity"],kinds["child"],kinds["relationship"],kinds["valueList"],NF)
 KIND={"entity":"Entity","child":"Child (was an embedded array of objects)","relationship":"Relationship (was an array of IDs)","valueList":"Value list (was an array of values)"}
 # inventory
-s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\n| Module code | Module | Collections |\n|---|---|---|\n"
-for m in ORDER_ALL: s+="| %s | %s | %d |\n"%(m,MODN[m],sum(1 for c in cols if c["module"]==m))
+s="# Collection inventory\n\n"+HEAD+"Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.\n\n## Module codes\n\nMenu = short module name shown as the main (level 0) menu label in the UI (owner list, 18 Oct 2026).\n\n| Module code | Module | Menu | Collections |\n|---|---|---|---|\n"
+for m in ORDER_ALL: s+="| %s | %s | %s | %d |\n"%(m,MODN[m],MODMENU[m],sum(1 for c in cols if c["module"]==m))
 for m in order:
     s+="\n## %s - %s\n\n| # | Collection | Kind | Data class | Parent collection | Purpose | Display value used for <entity>Name |\n|---|---|---|---|---|---|---|\n"%(m,MODN[m])
     n=0

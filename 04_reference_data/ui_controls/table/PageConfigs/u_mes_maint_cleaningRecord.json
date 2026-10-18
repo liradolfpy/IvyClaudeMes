@@ -2,6 +2,303 @@
     "_id" : "mes_maint_cleaningRecordStable",
     "act" : true,
     "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentName",
+                    "title" : "Equipment",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "cleaningType",
+                    "title" : "Cleaning Type",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "procedureControlledDocumentName",
+                    "title" : "Procedure Controlled Document",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "previousProductionOrderName",
+                    "title" : "Previous Production Order",
+                    "width" : "220px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "previousItemName",
+                    "title" : "Previous Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "dirtyHoldStartAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Dirty Hold Start At",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "startedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Started At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "completedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Completed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "cleanedBy",
+                    "title" : "Cleaned By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "verificationMethod",
+                    "title" : "Verification Method",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "verificationResult",
+                    "title" : "Verification Result",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "verifiedBy",
+                    "title" : "Verified By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "verifiedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Verified At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "cleanHoldExpiresAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Clean Hold Expires At",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "electronicSignatureName",
+                    "title" : "Electronic Signature",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#708090",
+                "multiCol" : [
+                    [
+                        {
+                            "colSize" : 6.0,
+                            "key" : {
+                                "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "400",
+                                    "fontFamily" : "Roboto Condensed",
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : "From"
+                            },
+                            "typ" : "dataElement",
+                            "val" : {
+                                "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "600",
+                                    "fontFamily" : "Roboto Condensed",
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : ""
+                            }
+                        },
+                        {
+                            "colSize" : 1.0,
+                            "typ" : "blankSpace"
+                        }
+                    ]
+                ]
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Cleaning Records",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_maint_cleaningRecordStable",
+    "lid" : "lid_999",
+    "module" : "maint",
+    "page" : "mes_maint_cleaningRecordStable",
+    "projid" : "",
+    "rel" : "CL20261018-14:02",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
     "clmnDoc" : [
         {
             "_id" : "1356000000000001",
@@ -42,302 +339,5 @@
             "updatedById" : "1029000000000016",
             "updatedBy" : "Farhan Qureshi"
         }
-    ],
-    "dictData" : {
-        "config" : {
-            "action" : {},
-            "column" : [
-                {
-                    "align" : "left",
-                    "data_index" : "recordNo",
-                    "fixed" : "left",
-                    "title" : "Record No",
-                    "width" : "140px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "equipmentName",
-                    "title" : "Equipment",
-                    "width" : "300px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "workCenterName",
-                    "title" : "Work Center",
-                    "width" : "280px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "cleaningType",
-                    "title" : "Cleaning Type",
-                    "width" : "210px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "procedureControlledDocumentName",
-                    "title" : "Procedure Controlled Document",
-                    "width" : "300px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "previousProductionOrderName",
-                    "title" : "Previous Production Order",
-                    "width" : "240px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "previousItemName",
-                    "title" : "Previous Item",
-                    "width" : "300px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "dirtyHoldStartAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Dirty Hold Start At",
-                    "width" : "200px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "startedAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Started At",
-                    "width" : "160px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "completedAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Completed At",
-                    "width" : "160px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "cleanedBy",
-                    "title" : "Cleaned By",
-                    "width" : "120px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "verificationMethod",
-                    "title" : "Verification Method",
-                    "width" : "200px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "verificationResult",
-                    "title" : "Verification Result",
-                    "width" : "200px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "verifiedBy",
-                    "title" : "Verified By",
-                    "width" : "130px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "verifiedAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Verified At",
-                    "width" : "160px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "cleanHoldExpiresAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Clean Hold Expires At",
-                    "width" : "210px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "electronicSignatureName",
-                    "title" : "Electronic Signature",
-                    "width" : "200px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "status",
-                    "title" : "Status",
-                    "width" : "100px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "createdBy",
-                    "title" : "Created By",
-                    "width" : "120px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "createdAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Created At",
-                    "width" : "160px"
-                },
-                {
-                    "align" : "left",
-                    "data_index" : "updatedBy",
-                    "title" : "Updated By",
-                    "width" : "120px"
-                },
-                {
-                    "align" : "center",
-                    "data_index" : "updatedAt",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
-                    "isIST" : true,
-                    "title" : "Updated At",
-                    "width" : "160px"
-                }
-            ],
-            "footer" : {
-                "background-color" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
-                "display-pagination-control" : true,
-                "font-color" : "#D0E2FF",
-                "font-family" : "Roboto Condensed",
-                "font-size" : "12px",
-                "font-weight" : "bold",
-                "noOfRows-visible" : true,
-                "pageNo-visible" : true,
-                "pagination-background-color" : "#0d3070",
-                "pagination-border" : "1px solid #314f85",
-                "pagination-color" : "#E5F6FF",
-                "pagination-visible" : true,
-                "row-padding" : "0px",
-                "visible" : true
-            },
-            "footerButtons" : {},
-            "footerMultiline" : {
-                "background-color" : "#B9C6DF",
-                "multiCol" : [
-                    [
-                        {
-                            "colSize" : 6.0,
-                            "key" : {
-                                "style" : {
-                                    "color" : "#ecf0f1",
-                                    "fontFamily" : "Roboto Condensed",
-                                    "fontSize" : "18px",
-                                    "fontWeight" : "300",
-                                    "margin" : "1px 1px 1px 1px",
-                                    "textAlign" : "left"
-                                },
-                                "text" : "From"
-                            },
-                            "typ" : "dataElement",
-                            "val" : {
-                                "style" : {
-                                    "color" : "#ecf0f1",
-                                    "fontFamily" : "Roboto Condensed",
-                                    "fontSize" : "18px",
-                                    "fontWeight" : "600",
-                                    "margin" : "1px 1px 1px 1px",
-                                    "textAlign" : "left"
-                                },
-                                "text" : ""
-                            }
-                        },
-                        {
-                            "colSize" : 1.0,
-                            "typ" : "blankSpace"
-                        }
-                    ]
-                ]
-            },
-            "header" : {
-                "background-color" : "#4a4f59",
-                "font-color" : "#125FCC",
-                "font-family" : "Roboto Condensed",
-                "font-size" : "14px",
-                "font-weight" : "100",
-                "row-padding" : "0px 0px 0px 2px",
-                "visible" : true
-            },
-            "headerMultiline" : {},
-            "row" : {
-                "alternateRows" : [
-                    "stable-row-1",
-                    "stable-row-2"
-                ],
-                "background-color" : "#FFFFFF",
-                "border-bottom" : "none",
-                "border-bottom-color" : "#DCD5D5",
-                "border-top-color" : "#E74C3C",
-                "font-color" : "#000000",
-                "font-family" : "Roboto Condensed",
-                "font-size" : "12px",
-                "font-weight" : "400",
-                "row-padding" : "0px 0px 0px 5px"
-            },
-            "rowAction" : [],
-            "tableConfig" : {
-                "divAlignment" : "left",
-                "divBackgroundColor" : [
-                    "transparent",
-                    "transparent"
-                ],
-                "exportToCsv" : true,
-                "exportToPdf" : false,
-                "innerLeftPadding" : "15px",
-                "innerRightPadding" : "15px",
-                "interval" : NumberInt(3000000),
-                "isCheckable" : false,
-                "isSearchable" : true,
-                "isSortable" : true,
-                "leftMargin" : "0px",
-                "line-color" : "#2ECC71",
-                "noOfRows" : NumberInt(10),
-                "pagination" : NumberInt(8),
-                "tableWidth" : "80%",
-                "visible" : true
-            },
-            "tableSubTitle" : {
-                "background" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
-                "display-download-icon" : true,
-                "display-search-control" : true,
-                "download-icon-color" : "#0F62FE",
-                "font-color" : "#FFFFFF",
-                "font-family" : "Roboto Condensed",
-                "font-size" : "16px",
-                "font-weight" : "400",
-                "search-border-color" : "0px solid #0d3070",
-                "search-inner-color" : "#B9C6DF",
-                "title-icon" : "fa-list",
-                "title-icon-color" : "#FFFFFF",
-                "title-icon-size" : "16px",
-                "title-label" : "Cleaning Records",
-                "visible" : true
-            },
-            "tableTitle" : {
-                "font-color" : "#B1B1B5",
-                "font-family" : "Roboto Condensed",
-                "font-size" : "30px",
-                "font-weight" : "600",
-                "title-label" : "",
-                "visible" : false
-            },
-            "zenFuncs" : {
-                "dynamicActionBtn" : true,
-                "footerButtons" : true,
-                "footerMultiline" : true,
-                "headerMultiline" : false
-            },
-            "zenPop" : {}
-        }
-    },
-    "dictName" : "mes_maint_cleaningRecordStable",
-    "lid" : "lid_999",
-    "module" : "maint",
-    "page" : "mes_maint_cleaningRecordStable",
-    "projid" : "",
-    "rel" : "CL20261017-13:59",
-    "resp" : "CL",
-    "subTyp" : "",
-    "typ" : "PageConfigStable",
-    "ver" : ""
+    ]
 }

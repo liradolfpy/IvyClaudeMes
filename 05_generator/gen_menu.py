@@ -1,6 +1,6 @@
 """Builds the SideBar menu for every ClaudeMES list screen (one menu item per query page configuration).
 
-Source : 02_architecture/collection_inventory.md (kind, parent), 02_architecture/collection_type_matrix.csv (label)
+Source : 02_architecture/collection_inventory.md (module table with Menu short labels; kind, parent), 02_architecture/collection_type_matrix.csv (label)
 Output : 04_reference_data/ui_controls/menu/menu.json  (mongo shell / Studio 3T format, like FormatMenu.json.txt)
 IvyConfig: 04_reference_data/ui_controls/query/IvyConfig/<collection>Ivy.json gives the dn of each query (rule: <collection without u_>Ivy)
 Levels : 0 = module, 1 = functional section, 2 = query screen (dictName = <collection without u_>Query)
@@ -102,11 +102,13 @@ ROLES = ["Hod", "Line", "SiteAdmin", "SuperAdmin", "User", "LiraAdmin"]
 STYLE = {"marginTop": "1rem", "marginLeft": "20"}
 
 # ---- read model --------------------------------------------------------------------------
-modname, inv = {}, []          # inv: (collection, kind, parent) in inventory order
+modname, modmenu, inv = {}, {}, []   # inv: (collection, kind, parent) in inventory order
 for l in open(INV, encoding="utf-8"):
     p = [x.strip() for x in l.split("|")]
-    if len(p) == 5 and p[1] in dict((m[0], 1) for m in MODULES):
+    if len(p) in (5, 6) and p[1] in dict((m[0], 1) for m in MODULES) and p[-2].isdigit():
         modname[p[1]] = p[2]
+        if len(p) == 6:
+            modmenu[p[1]] = p[3]   # Menu column: short level 0 label (owner list, 18 Oct 2026)
     if len(p) > 8 and p[2].startswith("u_mes_"):
         inv.append((p[2], p[3], p[5] if p[5] != "-" else None))
 label = {r["Collection"]: r["Label"] for r in csv.DictReader(open(MAT, encoding="utf-8"))}
@@ -170,7 +172,8 @@ LEAF = dict(ALL, Line=False)
 docs = []
 for mseq, (code, mid, micon) in enumerate(MODULES, 1):
     mname = modname[code]
-    mlabel = "".join(" " + ch if ch.isupper() and i else ch for i, ch in enumerate(mname)).replace("And ", "And ")
+    # level 0 label: the Menu column of the module table; module name split into words only when no Menu value exists
+    mlabel = modmenu.get(code) or "".join(" " + ch if ch.isupper() and i else ch for i, ch in enumerate(mname))
     docs.append(doc(mid, mseq, 0, mlabel, "/dashboard", None, micon, ALL, {"childWidth": "75vw"}))
     for si, (sl, ents) in enumerate(SECTIONS[code]):
         sid = "%s_%d" % (mid, (si + 1) * 100)

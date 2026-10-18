@@ -1,182 +1,202 @@
 {
     "_id" : "mes_maint_maintenancePlanRequiredSparePartStable",
-    "lid" : "lid_999",
-    "dictName" : "mes_maint_maintenancePlanRequiredSparePartStable",
-    "typ" : "PageConfigStable",
-    "page" : "mes_maint_maintenancePlanRequiredSparePartStable",
+    "act" : true,
     "app" : "mes",
-    "module" : "maint",
     "dictData" : {
         "config" : {
-            "headerRoute" : null,
-            "headerMultiline" : null,
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "maintenancePlanName",
+                    "title" : "Maintenance Plan",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "sequenceNo",
+                    "title" : "Sequence No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "sparePartName",
+                    "title" : "Spare Part",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantity",
+                    "title" : "Quantity",
+                    "width" : "100px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
             "footerMultiline" : {
-                "background-color" : "#B9C6DF",
+                "background-color" : "#708090",
                 "multiCol" : [
                     [
                         {
-                            "typ" : "dataElement",
                             "colSize" : 6.0,
                             "key" : {
-                                "text" : "From",
                                 "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "400",
                                     "fontFamily" : "Roboto Condensed",
-                                    "fontWeight" : "300",
-                                    "fontSize" : "18px",
-                                    "color" : "#ecf0f1",
-                                    "textAlign" : "left",
-                                    "margin" : "1px 1px 1px 1px"
-                                }
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : "From"
                             },
+                            "typ" : "dataElement",
                             "val" : {
-                                "text" : "",
                                 "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "600",
                                     "fontFamily" : "Roboto Condensed",
-                                    "fontWeight" : "600",
-                                    "fontSize" : "18px",
-                                    "color" : "#ecf0f1",
-                                    "textAlign" : "left",
-                                    "margin" : "1px 1px 1px 1px"
-                                }
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : ""
                             }
                         },
                         {
-                            "typ" : "blankSpace",
-                            "colSize" : 1.0
+                            "colSize" : 1.0,
+                            "typ" : "blankSpace"
                         }
                     ]
                 ]
             },
-            "tableTitle" : {
-                "title-label" : "",
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "600",
-                "font-size" : "30px",
-                "font-color" : "#B1B1B5",
-                "visible" : false
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
             },
-            "tableSubTitle" : {
-                "visible" : true,
-                "title-label" : "Maintenance Plan Required Spare Parts",
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "400",
-                "font-size" : "16px",
-                "font-color" : "#FFFFFF",
-                "background" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
-                "display-download-icon" : true,
-                "download-icon-color" : "#0F62FE",
-                "display-search-control" : true,
-                "search-border-color" : "0px solid #0d3070",
-                "search-inner-color" : "#B9C6DF",
-                "title-icon" : "fa-list",
-                "title-icon-size" : "16px",
-                "title-icon-color" : "#FFFFFF"
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
             },
+            "rowAction" : [],
             "tableConfig" : {
-                "visible" : true,
-                "tableWidth" : "80%",
+                "divAlignment" : "left",
                 "divBackgroundColor" : [
                     "transparent",
                     "transparent"
                 ],
-                "divAlignment" : "left",
-                "leftMargin" : "0px",
+                "exportToCsv" : true,
+                "exportToPdf" : false,
                 "innerLeftPadding" : "15px",
                 "innerRightPadding" : "15px",
-                "line-color" : "#2ECC71",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
                 "isSearchable" : true,
                 "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
                 "pagination" : NumberInt(8),
-                "exportToPdf" : false,
-                "exportToCsv" : true,
-                "noOfRows" : 10.0,
-                "interval" : NumberInt(3000000)
-            },
-            "header" : {
-                "background-color" : "#4a4f59",
-                "font-family" : "Roboto Condensed",
-                "font-weight" : "100",
-                "font-size" : "14px",
-                "font-color" : "#125FCC",
-                "row-padding" : "0px 0px 0px 2px",
+                "tableWidth" : "80%",
                 "visible" : true
             },
-            "footer" : {
-                "background-color" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "bold",
-                "font-size" : "12px",
-                "font-color" : "#D0E2FF",
-                "row-padding" : "0px",
-                "display-pagination-control" : true,
-                "pagination-color" : "#E5F6FF",
-                "pagination-visible" : true,
-                "visible" : true,
-                "noOfRows-visible" : true,
-                "pageNo-visible" : true,
-                "pagination-background-color" : "#0d3070",
-                "pagination-border" : "1px solid #314f85"
-            },
-            "row" : {
-                "background-color" : "#FFFFFF",
-                "row-padding" : "0px 0px 0px 5px",
-                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
                 "font-weight" : "400",
-                "font-size" : "12px",
-                "font-color" : "#000000",
-                "border-bottom-color" : "#DCD5D5",
-                "border-top-color" : "#E74C3C",
-                "border-bottom" : "none",
-                "alternateRows" : [
-                    "stable-row-1",
-                    "stable-row-2"
-                ]
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Maintenance Plan Required Spare Parts",
+                "visible" : true
             },
-            "column" : [
-                {
-                    "title" : "Record No",
-                    "fixed" : "left",
-                    "width" : "150px",
-                    "align" : "left",
-                    "data_index" : "recordNo"
-                },
-                {
-                    "title" : "Maintenance Plan",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "maintenancePlanName"
-                },
-                {
-                    "title" : "Sequence No",
-                    "width" : "130px",
-                    "align" : "right",
-                    "data_index" : "sequenceNo"
-                },
-                {
-                    "title" : "Spare Part",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "sparePartName"
-                },
-                {
-                    "title" : "Quantity",
-                    "width" : "110px",
-                    "align" : "right",
-                    "data_index" : "quantity"
-                }
-            ],
-            "rowAction" : [],
-            "action" : [],
-            "zenPop" : {},
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
             "zenFuncs" : {
-                "headerRoute" : false,
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
                 "footerMultiline" : true,
-                "headerMultiline" : false,
-                "footerButtons" : true
+                "headerMultiline" : false
             },
-            "footerButtons" : {}
+            "zenPop" : {}
         }
     },
-    "subTyp" : "PhantomStable",
-    "act" : true
+    "dictName" : "mes_maint_maintenancePlanRequiredSparePartStable",
+    "lid" : "lid_999",
+    "module" : "maint",
+    "page" : "mes_maint_maintenancePlanRequiredSparePartStable",
+    "projid" : "",
+    "rel" : "CL20261018-14:02",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1219000000000001",
+            "recordNo" : "PM-GDC-01-M1-RSP01",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "maintenancePlanId" : "1216000000000001",
+            "maintenancePlanName" : "Preventive maintenance, Gravity Die Casting Machine 1",
+            "sequenceNo" : NumberInt(1),
+            "sparePartId" : "1224000000000001",
+            "sparePartName" : "Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner",
+            "quantity" : NumberDecimal("1"),
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
 }

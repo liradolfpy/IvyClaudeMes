@@ -352,7 +352,7 @@ def read_inventory(root):
     modules, display = {}, {}
     for line in open(os.path.join(root, "02_architecture", "collection_inventory.md"), encoding="utf-8"):
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if len(cells) == 3 and re.fullmatch(r"[a-z]{3,5}", cells[0]) and cells[2].isdigit():
+        if len(cells) in (3, 4) and re.fullmatch(r"[a-z]{3,5}", cells[0]) and cells[-1].isdigit():  # 4 cells since the Menu column (18 Oct 2026)
             modules[cells[0]] = cells[1]
         elif len(cells) >= 7 and cells[1].startswith("u_mes_"):
             display[cells[1]] = cells[-1]

@@ -1,378 +1,441 @@
 {
     "_id" : "mes_perf_alarmStable",
-    "lid" : "lid_999",
-    "dictName" : "mes_perf_alarmStable",
-    "typ" : "PageConfigStable",
-    "page" : "mes_perf_alarmStable",
+    "act" : true,
     "app" : "mes",
-    "module" : "perf",
     "dictData" : {
         "config" : {
-            "headerRoute" : null,
-            "headerMultiline" : null,
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentName",
+                    "title" : "Equipment",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "processTagName",
+                    "title" : "Process Tag",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "iotDeviceName",
+                    "title" : "IoT Device",
+                    "width" : "290px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "alarmCode",
+                    "title" : "Alarm Code",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "alarmText",
+                    "title" : "Alarm Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "alarmClass",
+                    "title" : "Alarm Class",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "severity",
+                    "title" : "Severity",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "raisedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Raised At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "acknowledgedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Acknowledged At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "acknowledgedBy",
+                    "title" : "Acknowledged By",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "clearedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Cleared At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "durationSec",
+                    "title" : "Duration (s)",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "triggerValue",
+                    "title" : "Trigger Value",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "limitValue",
+                    "title" : "Limit Value",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productionOrderName",
+                    "title" : "Production Order",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "causedStop",
+                    "isBool" : true,
+                    "title" : "Caused Stop",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "downtimeEventName",
+                    "title" : "Downtime Event",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "actionTaken",
+                    "title" : "Action Taken",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "alarmDefinitionName",
+                    "title" : "Alarm Definition",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lineName",
+                    "title" : "Line",
+                    "width" : "270px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shiftName",
+                    "title" : "Shift",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "productionDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Production Date",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "wipUnitName",
+                    "title" : "WIP Unit",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "blocksRestart",
+                    "isBool" : true,
+                    "title" : "Blocks Restart",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "restartAuthorizedBy",
+                    "title" : "Restart Authorized By",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "restartAuthorizedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Restart Authorized At",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "closureReasonCodeName",
+                    "title" : "Closure Reason Code",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "escalationLevel",
+                    "title" : "Escalation Level",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
             "footerMultiline" : {
-                "background-color" : "#B9C6DF",
+                "background-color" : "#708090",
                 "multiCol" : [
                     [
                         {
-                            "typ" : "dataElement",
                             "colSize" : 6.0,
                             "key" : {
-                                "text" : "From",
                                 "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "400",
                                     "fontFamily" : "Roboto Condensed",
-                                    "fontWeight" : "300",
-                                    "fontSize" : "18px",
-                                    "color" : "#ecf0f1",
-                                    "textAlign" : "left",
-                                    "margin" : "1px 1px 1px 1px"
-                                }
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : "From"
                             },
+                            "typ" : "dataElement",
                             "val" : {
-                                "text" : "",
                                 "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "600",
                                     "fontFamily" : "Roboto Condensed",
-                                    "fontWeight" : "600",
-                                    "fontSize" : "18px",
-                                    "color" : "#ecf0f1",
-                                    "textAlign" : "left",
-                                    "margin" : "1px 1px 1px 1px"
-                                }
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : ""
                             }
                         },
                         {
-                            "typ" : "blankSpace",
-                            "colSize" : 1.0
+                            "colSize" : 1.0,
+                            "typ" : "blankSpace"
                         }
                     ]
                 ]
             },
-            "tableTitle" : {
-                "title-label" : "",
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "600",
-                "font-size" : "30px",
-                "font-color" : "#B1B1B5",
-                "visible" : false
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
             },
-            "tableSubTitle" : {
-                "visible" : true,
-                "title-label" : "Alarms",
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "400",
-                "font-size" : "16px",
-                "font-color" : "#FFFFFF",
-                "background" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
-                "display-download-icon" : true,
-                "download-icon-color" : "#0F62FE",
-                "display-search-control" : true,
-                "search-border-color" : "0px solid #0d3070",
-                "search-inner-color" : "#B9C6DF",
-                "title-icon" : "fa-list",
-                "title-icon-size" : "16px",
-                "title-icon-color" : "#FFFFFF"
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
             },
+            "rowAction" : [],
             "tableConfig" : {
-                "visible" : true,
-                "tableWidth" : "80%",
+                "divAlignment" : "left",
                 "divBackgroundColor" : [
                     "transparent",
                     "transparent"
                 ],
-                "divAlignment" : "left",
-                "leftMargin" : "0px",
+                "exportToCsv" : true,
+                "exportToPdf" : false,
                 "innerLeftPadding" : "15px",
                 "innerRightPadding" : "15px",
-                "line-color" : "#2ECC71",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
                 "isSearchable" : true,
                 "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
                 "pagination" : NumberInt(8),
-                "exportToPdf" : false,
-                "exportToCsv" : true,
-                "noOfRows" : 10.0,
-                "interval" : NumberInt(3000000)
-            },
-            "header" : {
-                "background-color" : "#4a4f59",
-                "font-family" : "Roboto Condensed",
-                "font-weight" : "100",
-                "font-size" : "14px",
-                "font-color" : "#125FCC",
-                "row-padding" : "0px 0px 0px 2px",
+                "tableWidth" : "80%",
                 "visible" : true
             },
-            "footer" : {
-                "background-color" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "bold",
-                "font-size" : "12px",
-                "font-color" : "#D0E2FF",
-                "row-padding" : "0px",
-                "display-pagination-control" : true,
-                "pagination-color" : "#E5F6FF",
-                "pagination-visible" : true,
-                "visible" : true,
-                "noOfRows-visible" : true,
-                "pageNo-visible" : true,
-                "pagination-background-color" : "#0d3070",
-                "pagination-border" : "1px solid #314f85"
-            },
-            "row" : {
-                "background-color" : "#FFFFFF",
-                "row-padding" : "0px 0px 0px 5px",
-                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
                 "font-weight" : "400",
-                "font-size" : "12px",
-                "font-color" : "#000000",
-                "border-bottom-color" : "#DCD5D5",
-                "border-top-color" : "#E74C3C",
-                "border-bottom" : "none",
-                "alternateRows" : [
-                    "stable-row-1",
-                    "stable-row-2"
-                ]
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Alarms",
+                "visible" : true
             },
-            "column" : [
-                {
-                    "title" : "Record No",
-                    "fixed" : "left",
-                    "width" : "130px",
-                    "align" : "left",
-                    "data_index" : "recordNo"
-                },
-                {
-                    "title" : "Equipment",
-                    "width" : "240px",
-                    "align" : "left",
-                    "data_index" : "equipmentName"
-                },
-                {
-                    "title" : "Process Tag",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "processTagName"
-                },
-                {
-                    "title" : "IoT Device",
-                    "width" : "290px",
-                    "align" : "left",
-                    "data_index" : "iotDeviceName"
-                },
-                {
-                    "title" : "Alarm Code",
-                    "width" : "120px",
-                    "align" : "left",
-                    "data_index" : "alarmCode"
-                },
-                {
-                    "title" : "Alarm Text",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "alarmText"
-                },
-                {
-                    "title" : "Alarm Class",
-                    "width" : "130px",
-                    "align" : "left",
-                    "data_index" : "alarmClass"
-                },
-                {
-                    "title" : "Severity",
-                    "width" : "110px",
-                    "align" : "right",
-                    "data_index" : "severity"
-                },
-                {
-                    "title" : "Raised At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "raisedAt"
-                },
-                {
-                    "title" : "Acknowledged At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "acknowledgedAt"
-                },
-                {
-                    "title" : "Acknowledged By",
-                    "width" : "160px",
-                    "align" : "left",
-                    "data_index" : "acknowledgedBy"
-                },
-                {
-                    "title" : "Cleared At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "clearedAt"
-                },
-                {
-                    "title" : "Duration (s)",
-                    "width" : "140px",
-                    "align" : "right",
-                    "data_index" : "durationSec"
-                },
-                {
-                    "title" : "Trigger Value",
-                    "width" : "150px",
-                    "align" : "right",
-                    "data_index" : "triggerValue"
-                },
-                {
-                    "title" : "Limit Value",
-                    "width" : "130px",
-                    "align" : "right",
-                    "data_index" : "limitValue"
-                },
-                {
-                    "title" : "Production Order",
-                    "width" : "170px",
-                    "align" : "left",
-                    "data_index" : "productionOrderName"
-                },
-                {
-                    "title" : "Caused Stop",
-                    "width" : "130px",
-                    "align" : "center",
-                    "isBool" : true,
-                    "data_index" : "causedStop"
-                },
-                {
-                    "title" : "Downtime Event",
-                    "width" : "160px",
-                    "align" : "left",
-                    "data_index" : "downtimeEventName"
-                },
-                {
-                    "title" : "Action Taken",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "actionTaken"
-                },
-                {
-                    "title" : "Alarm Definition",
-                    "width" : "170px",
-                    "align" : "left",
-                    "data_index" : "alarmDefinitionName"
-                },
-                {
-                    "title" : "Line",
-                    "width" : "270px",
-                    "align" : "left",
-                    "data_index" : "lineName"
-                },
-                {
-                    "title" : "Work Center",
-                    "width" : "260px",
-                    "align" : "left",
-                    "data_index" : "workCenterName"
-                },
-                {
-                    "title" : "Shift",
-                    "width" : "80px",
-                    "align" : "left",
-                    "data_index" : "shiftName"
-                },
-                {
-                    "title" : "Production Date",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD",
-                    "isIST" : true,
-                    "data_index" : "productionDate"
-                },
-                {
-                    "title" : "WIP Unit",
-                    "width" : "110px",
-                    "align" : "left",
-                    "data_index" : "wipUnitName"
-                },
-                {
-                    "title" : "Blocks Restart",
-                    "width" : "160px",
-                    "align" : "center",
-                    "isBool" : true,
-                    "data_index" : "blocksRestart"
-                },
-                {
-                    "title" : "Restart Authorized By",
-                    "width" : "210px",
-                    "align" : "left",
-                    "data_index" : "restartAuthorizedBy"
-                },
-                {
-                    "title" : "Restart Authorized At",
-                    "width" : "210px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "restartAuthorizedAt"
-                },
-                {
-                    "title" : "Closure Reason Code",
-                    "width" : "200px",
-                    "align" : "left",
-                    "data_index" : "closureReasonCodeName"
-                },
-                {
-                    "title" : "Escalation Level",
-                    "width" : "170px",
-                    "align" : "right",
-                    "data_index" : "escalationLevel"
-                },
-                {
-                    "title" : "Status",
-                    "width" : "110px",
-                    "align" : "left",
-                    "data_index" : "status"
-                },
-                {
-                    "title" : "Created By",
-                    "width" : "120px",
-                    "align" : "left",
-                    "data_index" : "createdBy"
-                },
-                {
-                    "title" : "Created At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "createdAt"
-                },
-                {
-                    "title" : "Updated By",
-                    "width" : "120px",
-                    "align" : "left",
-                    "data_index" : "updatedBy"
-                },
-                {
-                    "title" : "Updated At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "updatedAt"
-                }
-            ],
-            "rowAction" : [],
-            "action" : [],
-            "zenPop" : {},
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
             "zenFuncs" : {
-                "headerRoute" : false,
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
                 "footerMultiline" : true,
-                "headerMultiline" : false,
-                "footerButtons" : true
+                "headerMultiline" : false
             },
-            "footerButtons" : {}
+            "zenPop" : {}
         }
     },
-    "subTyp" : "PhantomStable",
-    "act" : true
+    "dictName" : "mes_perf_alarmStable",
+    "lid" : "lid_999",
+    "module" : "perf",
+    "page" : "mes_perf_alarmStable",
+    "projid" : "",
+    "rel" : "CL20261018-14:02",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1212000000000001",
+            "recordNo" : "ALM-2026-000176",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "equipmentId" : "1013000000000001",
+            "equipmentName" : "Gravity Die Casting Machine 1",
+            "processTagId" : "1210000000000001",
+            "processTagName" : "Die temperature, upper half, casting machine 1",
+            "iotDeviceId" : "1232000000000001",
+            "iotDeviceName" : "PLC, casting machine 1",
+            "alarmCode" : "A2031",
+            "alarmText" : "Die temperature upper half above high limit",
+            "alarmClass" : "Process",
+            "severity" : NumberInt(8),
+            "raisedAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "acknowledgedAt" : null,
+            "acknowledgedById" : null,
+            "acknowledgedBy" : null,
+            "clearedAt" : null,
+            "durationSec" : NumberInt(42),
+            "triggerValue" : NumberDecimal("421.0"),
+            "limitValue" : NumberDecimal("420.0"),
+            "productionOrderId" : "1083000000000004",
+            "productionOrderName" : "PO-1000433",
+            "causedStop" : true,
+            "downtimeEventId" : "1205000000000001",
+            "downtimeEventName" : "DT-2026-000196",
+            "actionTaken" : "Ejector pin polished and die coat thickness corrected",
+            "alarmDefinitionId" : "1324000000000001",
+            "alarmDefinitionName" : "ALD-GDC-A2031",
+            "lineId" : "1006000000000001",
+            "lineName" : "Gravity Die Casting Line 1",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "shiftId" : "A",
+            "shiftName" : "Shift A",
+            "productionDate" : ISODate("2026-09-17T00:00:00.000+0000"),
+            "wipUnitId" : null,
+            "wipUnitName" : null,
+            "blocksRestart" : true,
+            "restartAuthorizedById" : null,
+            "restartAuthorizedBy" : null,
+            "restartAuthorizedAt" : null,
+            "closureReasonCodeId" : null,
+            "closureReasonCodeName" : null,
+            "escalationLevel" : NumberInt(1),
+            "status" : "Raised",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "createdById" : "1029000000000010",
+            "createdBy" : "MES System",
+            "updatedAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "updatedById" : "1029000000000010",
+            "updatedBy" : "MES System"
+        }
+    ]
 }

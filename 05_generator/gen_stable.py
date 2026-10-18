@@ -20,7 +20,7 @@ Usage (from the repository root or anywhere):
   python3 05_generator/gen_stable.py u_mes_perf_downtimeEvent [u_mes_perf_alarm ...]
   python3 05_generator/gen_stable.py --root <repo root> <collection> ...
 
-Rules are documented in the skill mes-stable-table v0.6 (library E:/Ivy/Claude/ClaudeSkills/MintSkills/UiSkills/mes-stable-table/SKILL.md). Change a rule there and
+Rules are documented in the skill mes-stable-table v0.7 (library E:/Ivy/Claude/ClaudeSkills/MintSkills/UiSkills/mes-stable-table/SKILL.md). Change a rule there and
 here together.
 """
 import datetime
@@ -45,7 +45,7 @@ DATETIME_DISPLAY_LEN = 19    # 2026-09-17 06:51:40
 BOOL_DISPLAY_LEN = 3         # Yes / No
 
 ROW_CHAR_PX = 7              # row font: Roboto Condensed 12px, average glyph incl. digits
-HEAD_CHAR_PX = 8             # header font: Roboto Condensed 14px
+HEAD_CHAR_PX = 7             # header font: Roboto Condensed 12px (skill 0.7)
 SORT_ICON_PX = 20            # tableConfig.isSortable is true
 CELL_PADDING_PX = 20         # row-padding 5px left plus cell padding
 WIDTH_MIN = 80
@@ -280,14 +280,16 @@ def build_column(field, keyset, samples, is_first):
 
 
 # ---------------------------------------------------------------------------
-# Document frame (fixed values copied from FormatTable.json)
+# Document frame (fixed values copied from FormatTableNewDesign.json, 18 Oct 2026)
 # ---------------------------------------------------------------------------
 def text_style(weight):
-    return {"fontFamily": "Roboto Condensed", "fontWeight": weight, "fontSize": "18px",
-            "color": "#ecf0f1", "textAlign": "left", "margin": "1px 1px 1px 1px"}
+    """footerMultiline key / val style, key names exactly as FormatTableNewDesign.json (skill 0.7)."""
+    return {"color": "#E7EDF1", "fontFamily": "Roboto Condensed", "font-size": "16px",
+            "font-weight": weight, "margin": "1px 1px 1px 1px", "textAlign": "left"}
 
 
-GRADIENT = "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)"
+FOOTER_GRADIENT = "linear-gradient(180deg, #071ec9 15%, #000080 70%)"
+SUBTITLE_GRADIENT = "linear-gradient(90deg, #244ce4 30%, #000080 70%)"
 
 
 def build_document(collection, page_title, module_code, columns, first_doc, rel):
@@ -297,30 +299,30 @@ def build_document(collection, page_title, module_code, columns, first_doc, rel)
     config = {
         "action": {},
         "column": columns,
-        "footer": {"background-color": GRADIENT, "display-pagination-control": True,
+        "footer": {"background": FOOTER_GRADIENT, "display-pagination-control": True,
                    "font-color": "#D0E2FF", "font-family": "Roboto Condensed", "font-size": "12px",
                    "font-weight": "bold", "noOfRows-visible": True, "pageNo-visible": True,
-                   "pagination-background-color": "#0d3070", "pagination-border": "1px solid #314f85",
+                   "pagination-background-color": "#04179b", "pagination-border": "1px solid #244ce4",
                    "pagination-color": "#E5F6FF", "pagination-visible": True, "row-padding": "0px",
                    "visible": True},
         "footerButtons": {},
         "footerMultiline": {
-            "background-color": "#B9C6DF",
+            "background-color": "#708090",
             "multiCol": [[
                 {"typ": "dataElement", "colSize": 6.0,
-                 "key": {"text": "From", "style": text_style("300")},
+                 "key": {"text": "From", "style": text_style("400")},
                  "val": {"text": "", "style": text_style("600")}},
                 {"typ": "blankSpace", "colSize": 1.0},
             ]],
         },
-        "header": {"background-color": "#4a4f59", "font-color": "#125FCC", "font-family": "Roboto Condensed",
-                   "font-size": "14px", "font-weight": "100", "row-padding": "0px 0px 0px 2px",
+        "header": {"background-color": "#2E3E4E", "font-color": "#125FCC", "font-family": "Roboto Condensed",
+                   "font-size": "12px", "font-weight": "100", "row-padding": "0px 0px 0px 2px",
                    "visible": True},
         "headerMultiline": {},
         "row": {"alternateRows": ["stable-row-1", "stable-row-2"], "background-color": "#FFFFFF",
                 "border-bottom": "none", "border-bottom-color": "#DCD5D5", "border-top-color": "#E74C3C",
                 "font-color": "#000000", "font-family": "Roboto Condensed", "font-size": "12px",
-                "font-weight": "400", "row-padding": "0px 0px 0px 5px"},
+                "font-weight": "100", "row-padding": "0px 0px 0px 5px"},
         "rowAction": [],
         "tableConfig": {"divAlignment": "left", "divBackgroundColor": ["transparent", "transparent"],
                         "exportToCsv": True, "exportToPdf": False, "innerLeftPadding": "15px",
@@ -328,10 +330,10 @@ def build_document(collection, page_title, module_code, columns, first_doc, rel)
                         "isSearchable": True, "isSortable": True, "leftMargin": "0px",
                         "line-color": "#2ECC71", "noOfRows": NumberInt(10), "pagination": NumberInt(8),
                         "tableWidth": "80%", "visible": True},
-        "tableSubTitle": {"background": GRADIENT, "display-download-icon": True, "display-search-control": True,
+        "tableSubTitle": {"background": SUBTITLE_GRADIENT, "display-download-icon": True, "display-search-control": True,
                           "download-icon-color": "#0F62FE", "font-color": "#FFFFFF",
                           "font-family": "Roboto Condensed", "font-size": "16px", "font-weight": "400",
-                          "search-border-color": "0px solid #0d3070", "search-inner-color": "#B9C6DF",
+                          "search-border-color": "1px solid #244ce4", "search-inner-color": "#04179b",
                           "title-icon": "fa-list", "title-icon-color": "#FFFFFF", "title-icon-size": "16px",
                           "title-label": page_title, "visible": True},
         "tableTitle": {"font-color": "#B1B1B5", "font-family": "Roboto Condensed", "font-size": "30px",

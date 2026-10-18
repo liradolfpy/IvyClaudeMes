@@ -9,9 +9,9 @@ Project-specific values for the UI skills `mes-query-control`, `mes-ivy-config`,
 | Project root | `E:\Ivy\Claude\ClaudeProjects\ClaudeMES` |
 | Application code | `mes`; collections `u_mes_<moduleCode>_<entity>`; MasterDict `u_int_mdict` |
 | Model version | 2.9 (369 collections, 8,614 keys including `app`) plus `u_int_mdict`; current counts in `00_governance/data_model_register.md` |
-| Module codes and names | Module table of `02_architecture/collection_inventory.md` |
+| Module codes, names and menu labels | Module table of `02_architecture/collection_inventory.md` |
 | Folder layout | `Folder_Guide.md`; the standard paths named in the skills apply without change |
-| Reference samples (owner-maintained) | `04_reference_data/ui_controls/query/FormatQuery.json`, `query/cropdown.md`, `table/FormatTable.json`, `menu/FormatMenu.json.txt` (starting copies in the skill folders' `assets/`) |
+| Reference samples (owner-maintained) | `04_reference_data/ui_controls/query/FormatQuery.json`, `query/cropdown.md`, `table/FormatTableNewDesign.json` (Stable reference since skill 0.7, 18 Oct 2026; `table/FormatTable.json` is the previous design), `menu/FormatMenu.json.txt` (starting copies in the skill folders' `assets/`) |
 | Generators | `05_generator/gen_stable.py` (Stable), `05_generator/gen_menu.py` (Menu); starting copies in the skill folders' `templates/`. `05_generator/gen_query.py` (query page configurations, IvyConfigs and dynamic dropdown registry; screen decisions in its `SCREENS` table, PlanningAndExecution from 17 Oct 2026; `--check` runs the query and IvyConfig checklists on every file, D066) |
 | Outputs | `04_reference_data/ui_controls/query/PageConfigs/<collection>.json`, `query/IvyConfig/<collection>Ivy.json`, `query/u_int_dynamicDropdown.json` (dynamic dropdown registry, one combined file), `table/PageConfigs/<collection>.json`, `menu/menu.json` |
 
@@ -126,6 +126,7 @@ No project-specific values beyond section 1. Run `python3 05_generator/gen_stabl
 |---|---|
 | Module order | `mast, prod, plan, matl, trac, qual, perf, maint, syst, ehs, bmr, mmr` |
 | Level 0 `_id` block | `2010, 2020, ... 2120`, `seq` 1..12 |
+| Level 0 labels | Menu column of the module table in `02_architecture/collection_inventory.md` (owner short forms, 18 Oct 2026, D069): Master Data, Product, Plan, Mtl Mgt, Trace, Quality, Performance, Maint, System, EHS, BMR, MMR |
 | Icons and sections | `MODULES` and `SECTIONS` tables in `05_generator/gen_menu.py` |
 | Inputs | `02_architecture/collection_inventory.md`, `02_architecture/collection_type_matrix.csv`, `query/PageConfigs`, `query/IvyConfig` |
 | Output | `04_reference_data/ui_controls/menu/menu.json` (never edited by hand; rerun `python3 05_generator/gen_menu.py`) |

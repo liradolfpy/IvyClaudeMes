@@ -6,20 +6,22 @@ Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionN
 
 ## Module codes
 
-| Module code | Module | Collections |
-|---|---|---|
-| mast | MasterDataManagement | 57 |
-| prod | ProductDefinition | 49 |
-| plan | PlanningAndExecution | 43 |
-| matl | MaterialManagement | 27 |
-| trac | Traceability | 9 |
-| qual | QualityManagement | 85 |
-| perf | PerformanceManagement | 21 |
-| maint | ToolingAndMaintenance | 21 |
-| syst | SystemAndIntegration | 44 |
-| ehs | EnvironmentHealthAndSafety | 6 |
-| bmr | BatchManufacturingRecord | 5 |
-| mmr | MasterManufacturingRecord | 2 |
+Menu = short module name shown as the main (level 0) menu label in the UI (owner list, 18 Oct 2026).
+
+| Module code | Module | Menu | Collections |
+|---|---|---|---|
+| mast | MasterDataManagement | Master Data | 57 |
+| prod | ProductDefinition | Product | 49 |
+| plan | PlanningAndExecution | Plan | 43 |
+| matl | MaterialManagement | Mtl Mgt | 27 |
+| trac | Traceability | Trace | 9 |
+| qual | QualityManagement | Quality | 85 |
+| perf | PerformanceManagement | Performance | 21 |
+| maint | ToolingAndMaintenance | Maint | 21 |
+| syst | SystemAndIntegration | System | 44 |
+| ehs | EnvironmentHealthAndSafety | EHS | 6 |
+| bmr | BatchManufacturingRecord | BMR | 5 |
+| mmr | MasterManufacturingRecord | MMR | 2 |
 
 ## mast - MasterDataManagement
 

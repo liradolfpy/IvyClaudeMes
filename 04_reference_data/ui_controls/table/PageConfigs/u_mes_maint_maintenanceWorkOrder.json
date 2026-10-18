@@ -1,407 +1,472 @@
 {
     "_id" : "mes_maint_maintenanceWorkOrderStable",
-    "lid" : "lid_999",
-    "dictName" : "mes_maint_maintenanceWorkOrderStable",
-    "typ" : "PageConfigStable",
-    "page" : "mes_maint_maintenanceWorkOrderStable",
+    "act" : true,
     "app" : "mes",
-    "module" : "maint",
     "dictData" : {
         "config" : {
-            "headerRoute" : null,
-            "headerMultiline" : null,
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "title",
+                    "title" : "Title",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workOrderType",
+                    "title" : "Work Order Type",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentName",
+                    "title" : "Equipment",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toolName",
+                    "title" : "Tool",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "maintenancePlanName",
+                    "title" : "Maintenance Plan",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "downtimeEventName",
+                    "title" : "Downtime Event",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "priority",
+                    "title" : "Priority",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reportedBy",
+                    "title" : "Reported By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reportedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Reported At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "problemDescription",
+                    "title" : "Problem Description",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reasonCodeName",
+                    "title" : "Reason Code",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "failureMode",
+                    "title" : "Failure Mode",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "rootCause",
+                    "title" : "Root Cause",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "actionTaken",
+                    "title" : "Action Taken",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "plannedStartAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Planned Start At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "startedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Started At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "completedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Completed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "downtimeMinutes",
+                    "title" : "Downtime (min)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "responseMinutes",
+                    "title" : "Response (min)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "repairMinutes",
+                    "title" : "Repair (min)",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "totalCostInr",
+                    "title" : "Total Cost (INR)",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentReleasedBy",
+                    "title" : "Equipment Released By",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "equipmentReleasedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Equipment Released At",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "followUpRequired",
+                    "isBool" : true,
+                    "title" : "Follow Up Required",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shiftName",
+                    "title" : "Shift",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "rootCauseCodeName",
+                    "title" : "Root Cause Code",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "closureApprovedBy",
+                    "title" : "Closure Approved By",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "closureApprovedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Closure Approved At",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "andonEventName",
+                    "title" : "Andon Event",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "priorityScore",
+                    "title" : "Priority Score",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "schedulingSource",
+                    "title" : "Scheduling Source",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "slaResponseDueAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "SLA Response Due At",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "slaRepairDueAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "SLA Repair Due At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
             "footerMultiline" : {
-                "background-color" : "#B9C6DF",
+                "background-color" : "#708090",
                 "multiCol" : [
                     [
                         {
-                            "typ" : "dataElement",
                             "colSize" : 6.0,
                             "key" : {
-                                "text" : "From",
                                 "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "400",
                                     "fontFamily" : "Roboto Condensed",
-                                    "fontWeight" : "300",
-                                    "fontSize" : "18px",
-                                    "color" : "#ecf0f1",
-                                    "textAlign" : "left",
-                                    "margin" : "1px 1px 1px 1px"
-                                }
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : "From"
                             },
+                            "typ" : "dataElement",
                             "val" : {
-                                "text" : "",
                                 "style" : {
+                                    "color" : "#E7EDF1",
+                                    "font-size" : "16px",
+                                    "font-weight" : "600",
                                     "fontFamily" : "Roboto Condensed",
-                                    "fontWeight" : "600",
-                                    "fontSize" : "18px",
-                                    "color" : "#ecf0f1",
-                                    "textAlign" : "left",
-                                    "margin" : "1px 1px 1px 1px"
-                                }
+                                    "margin" : "1px 1px 1px 1px",
+                                    "textAlign" : "left"
+                                },
+                                "text" : ""
                             }
                         },
                         {
-                            "typ" : "blankSpace",
-                            "colSize" : 1.0
+                            "colSize" : 1.0,
+                            "typ" : "blankSpace"
                         }
                     ]
                 ]
             },
-            "tableTitle" : {
-                "title-label" : "",
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "600",
-                "font-size" : "30px",
-                "font-color" : "#B1B1B5",
-                "visible" : false
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
             },
-            "tableSubTitle" : {
-                "visible" : true,
-                "title-label" : "Maintenance Work Orders",
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "400",
-                "font-size" : "16px",
-                "font-color" : "#FFFFFF",
-                "background" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
-                "display-download-icon" : true,
-                "download-icon-color" : "#0F62FE",
-                "display-search-control" : true,
-                "search-border-color" : "0px solid #0d3070",
-                "search-inner-color" : "#B9C6DF",
-                "title-icon" : "fa-list",
-                "title-icon-size" : "16px",
-                "title-icon-color" : "#FFFFFF"
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
             },
+            "rowAction" : [],
             "tableConfig" : {
-                "visible" : true,
-                "tableWidth" : "80%",
+                "divAlignment" : "left",
                 "divBackgroundColor" : [
                     "transparent",
                     "transparent"
                 ],
-                "divAlignment" : "left",
-                "leftMargin" : "0px",
+                "exportToCsv" : true,
+                "exportToPdf" : false,
                 "innerLeftPadding" : "15px",
                 "innerRightPadding" : "15px",
-                "line-color" : "#2ECC71",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
                 "isSearchable" : true,
                 "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
                 "pagination" : NumberInt(8),
-                "exportToPdf" : false,
-                "exportToCsv" : true,
-                "noOfRows" : 10.0,
-                "interval" : NumberInt(3000000)
-            },
-            "header" : {
-                "background-color" : "#4a4f59",
-                "font-family" : "Roboto Condensed",
-                "font-weight" : "100",
-                "font-size" : "14px",
-                "font-color" : "#125FCC",
-                "row-padding" : "0px 0px 0px 2px",
+                "tableWidth" : "80%",
                 "visible" : true
             },
-            "footer" : {
-                "background-color" : "linear-gradient(90deg, hsla(211, 100%, 28%, 1) 30%, hsla(236, 100%, 8%, 1) 100%)",
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
                 "font-family" : "Roboto Condensed",
-                "font-weight" : "bold",
-                "font-size" : "12px",
-                "font-color" : "#D0E2FF",
-                "row-padding" : "0px",
-                "display-pagination-control" : true,
-                "pagination-color" : "#E5F6FF",
-                "pagination-visible" : true,
-                "visible" : true,
-                "noOfRows-visible" : true,
-                "pageNo-visible" : true,
-                "pagination-background-color" : "#0d3070",
-                "pagination-border" : "1px solid #314f85"
-            },
-            "row" : {
-                "background-color" : "#FFFFFF",
-                "row-padding" : "0px 0px 0px 5px",
-                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
                 "font-weight" : "400",
-                "font-size" : "12px",
-                "font-color" : "#000000",
-                "border-bottom-color" : "#DCD5D5",
-                "border-top-color" : "#E74C3C",
-                "border-bottom" : "none",
-                "alternateRows" : [
-                    "stable-row-1",
-                    "stable-row-2"
-                ]
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Maintenance Work Orders",
+                "visible" : true
             },
-            "column" : [
-                {
-                    "title" : "Record No",
-                    "fixed" : "left",
-                    "width" : "130px",
-                    "align" : "left",
-                    "data_index" : "recordNo"
-                },
-                {
-                    "title" : "Title",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "title"
-                },
-                {
-                    "title" : "Work Order Type",
-                    "width" : "160px",
-                    "align" : "left",
-                    "data_index" : "workOrderType"
-                },
-                {
-                    "title" : "Equipment",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "equipmentName"
-                },
-                {
-                    "title" : "Tool",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "toolName"
-                },
-                {
-                    "title" : "Maintenance Plan",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "maintenancePlanName"
-                },
-                {
-                    "title" : "Downtime Event",
-                    "width" : "160px",
-                    "align" : "left",
-                    "data_index" : "downtimeEventName"
-                },
-                {
-                    "title" : "Priority",
-                    "width" : "110px",
-                    "align" : "left",
-                    "data_index" : "priority"
-                },
-                {
-                    "title" : "Reported By",
-                    "width" : "130px",
-                    "align" : "left",
-                    "data_index" : "reportedBy"
-                },
-                {
-                    "title" : "Reported At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "reportedAt"
-                },
-                {
-                    "title" : "Problem Description",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "problemDescription"
-                },
-                {
-                    "title" : "Reason Code",
-                    "width" : "210px",
-                    "align" : "left",
-                    "data_index" : "reasonCodeName"
-                },
-                {
-                    "title" : "Failure Mode",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "failureMode"
-                },
-                {
-                    "title" : "Root Cause",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "rootCause"
-                },
-                {
-                    "title" : "Action Taken",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "actionTaken"
-                },
-                {
-                    "title" : "Planned Start At",
-                    "width" : "170px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "plannedStartAt"
-                },
-                {
-                    "title" : "Started At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "startedAt"
-                },
-                {
-                    "title" : "Completed At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "completedAt"
-                },
-                {
-                    "title" : "Downtime (min)",
-                    "width" : "160px",
-                    "align" : "right",
-                    "data_index" : "downtimeMinutes"
-                },
-                {
-                    "title" : "Response (min)",
-                    "width" : "160px",
-                    "align" : "right",
-                    "data_index" : "responseMinutes"
-                },
-                {
-                    "title" : "Repair (min)",
-                    "width" : "140px",
-                    "align" : "right",
-                    "data_index" : "repairMinutes"
-                },
-                {
-                    "title" : "Total Cost (INR)",
-                    "width" : "170px",
-                    "align" : "right",
-                    "data_index" : "totalCostInr"
-                },
-                {
-                    "title" : "Equipment Released By",
-                    "width" : "210px",
-                    "align" : "left",
-                    "data_index" : "equipmentReleasedBy"
-                },
-                {
-                    "title" : "Equipment Released At",
-                    "width" : "210px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "equipmentReleasedAt"
-                },
-                {
-                    "title" : "Follow Up Required",
-                    "width" : "190px",
-                    "align" : "center",
-                    "isBool" : true,
-                    "data_index" : "followUpRequired"
-                },
-                {
-                    "title" : "Shift",
-                    "width" : "80px",
-                    "align" : "left",
-                    "data_index" : "shiftName"
-                },
-                {
-                    "title" : "Root Cause Code",
-                    "width" : "210px",
-                    "align" : "left",
-                    "data_index" : "rootCauseCodeName"
-                },
-                {
-                    "title" : "Closure Approved By",
-                    "width" : "200px",
-                    "align" : "left",
-                    "data_index" : "closureApprovedBy"
-                },
-                {
-                    "title" : "Closure Approved At",
-                    "width" : "200px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "closureApprovedAt"
-                },
-                {
-                    "title" : "Andon Event",
-                    "width" : "300px",
-                    "align" : "left",
-                    "data_index" : "andonEventName"
-                },
-                {
-                    "title" : "Priority Score",
-                    "width" : "160px",
-                    "align" : "right",
-                    "data_index" : "priorityScore"
-                },
-                {
-                    "title" : "Scheduling Source",
-                    "width" : "180px",
-                    "align" : "left",
-                    "data_index" : "schedulingSource"
-                },
-                {
-                    "title" : "SLA Response Due At",
-                    "width" : "200px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "slaResponseDueAt"
-                },
-                {
-                    "title" : "SLA Repair Due At",
-                    "width" : "180px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "slaRepairDueAt"
-                },
-                {
-                    "title" : "Status",
-                    "width" : "100px",
-                    "align" : "left",
-                    "data_index" : "status"
-                },
-                {
-                    "title" : "Created By",
-                    "width" : "120px",
-                    "align" : "left",
-                    "data_index" : "createdBy"
-                },
-                {
-                    "title" : "Created At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "createdAt"
-                },
-                {
-                    "title" : "Updated By",
-                    "width" : "120px",
-                    "align" : "left",
-                    "data_index" : "updatedBy"
-                },
-                {
-                    "title" : "Updated At",
-                    "width" : "160px",
-                    "align" : "center",
-                    "dtFormat" : "YYYY-MM-DD HH:mm:ss",
-                    "isIST" : true,
-                    "data_index" : "updatedAt"
-                }
-            ],
-            "rowAction" : [],
-            "action" : [],
-            "zenPop" : {},
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
             "zenFuncs" : {
-                "headerRoute" : false,
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
                 "footerMultiline" : true,
-                "headerMultiline" : false,
-                "footerButtons" : true
+                "headerMultiline" : false
             },
-            "footerButtons" : {}
+            "zenPop" : {}
         }
     },
-    "subTyp" : "PhantomStable",
-    "act" : true
+    "dictName" : "mes_maint_maintenanceWorkOrderStable",
+    "lid" : "lid_999",
+    "module" : "maint",
+    "page" : "mes_maint_maintenanceWorkOrderStable",
+    "projid" : "",
+    "rel" : "CL20261018-14:02",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1220000000000001",
+            "recordNo" : "MWO-2026-000341",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "title" : "Ejector pin sticking, casting machine 1, die 2",
+            "workOrderType" : "Breakdown",
+            "equipmentId" : "1013000000000001",
+            "equipmentName" : "Gravity Die Casting Machine 1",
+            "toolId" : "1226000000000001",
+            "toolName" : "Gravity die, caliper body LH, die 2",
+            "maintenancePlanId" : "1216000000000001",
+            "maintenancePlanName" : "Preventive maintenance, Gravity Die Casting Machine 1",
+            "downtimeEventId" : "1205000000000001",
+            "downtimeEventName" : "DT-2026-000196",
+            "priority" : "Normal",
+            "reportedById" : "1029000000000006",
+            "reportedBy" : "Imran Shaikh",
+            "reportedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "problemDescription" : "Ejector pin sticks on cavity 2 and the casting does not release",
+            "reasonCodeId" : "1203000000000001",
+            "reasonCodeName" : "Die ejector pin stuck",
+            "failureMode" : "Shrinkage porosity in the bridge section",
+            "rootCause" : "Ejector pin galled after die coating build-up",
+            "actionTaken" : "Ejector pin polished and die coat thickness corrected",
+            "plannedStartAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "startedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "completedAt" : ISODate("2026-09-15T06:00:30.000+0000"),
+            "downtimeMinutes" : NumberInt(95),
+            "responseMinutes" : NumberInt(6),
+            "repairMinutes" : NumberInt(12),
+            "totalCostInr" : NumberDecimal("9840.00"),
+            "equipmentReleasedById" : "1029000000000007",
+            "equipmentReleasedBy" : "Meera Deshpande",
+            "equipmentReleasedAt" : ISODate("2026-09-15T07:10:30.000+0000"),
+            "followUpRequired" : false,
+            "shiftId" : "A",
+            "shiftName" : "Shift A",
+            "rootCauseCodeId" : "1203000000000001",
+            "rootCauseCodeName" : "Die ejector pin stuck",
+            "closureApprovedById" : null,
+            "closureApprovedBy" : null,
+            "closureApprovedAt" : null,
+            "andonEventId" : "1251000000000001",
+            "andonEventName" : "Castings sticking in die 2, operator needs maintenance",
+            "priorityScore" : NumberDecimal("72"),
+            "schedulingSource" : "Manual",
+            "slaResponseDueAt" : ISODate("2026-09-15T06:10:00.000+0000"),
+            "slaRepairDueAt" : ISODate("2026-09-15T08:00:00.000+0000"),
+            "status" : "Completed",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000006",
+            "createdBy" : "Imran Shaikh",
+            "updatedAt" : ISODate("2026-09-15T07:10:30.000+0000"),
+            "updatedById" : "1029000000000006",
+            "updatedBy" : "Imran Shaikh"
+        }
+    ]
 }
