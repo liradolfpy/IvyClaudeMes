@@ -1,0 +1,131 @@
+{
+    "_id" : "mes_qual_defectCodeIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_defectCode",
+    "stableName" : "mes_qual_defectCodeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_defectCodeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectGroupId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultDispositionTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "scrapCostCategory",
+            "typ" : "string"
+        },
+        {
+            "din" : "isSafetyRelated",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresPhoto",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectGroupId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectGroupName",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "severity",
+            "typ" : "int"
+        },
+        {
+            "din" : "defaultDispositionTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultDispositionTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionRoutingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionRoutingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "isSafetyRelated",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresPhoto",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresHold",
+            "typ" : "bool"
+        },
+        {
+            "din" : "scrapCostCategory",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerDefectCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaFailureMode",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

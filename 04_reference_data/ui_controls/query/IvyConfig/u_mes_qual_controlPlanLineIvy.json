@@ -1,0 +1,139 @@
+{
+    "_id" : "mes_qual_controlPlanLineIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_controlPlanLine",
+    "stableName" : "mes_qual_controlPlanLineStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_controlPlanLineIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "controlPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "classification",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "processName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentText",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "classification",
+            "typ" : "string"
+        },
+        {
+            "din" : "specification",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementTechnique",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampleSize",
+            "typ" : "int"
+        },
+        {
+            "din" : "sampleFrequency",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "reactionPlan",
+            "typ" : "string"
+        },
+        {
+            "din" : "responsible",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

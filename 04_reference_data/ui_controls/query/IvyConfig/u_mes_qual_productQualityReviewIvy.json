@@ -1,0 +1,146 @@
+{
+    "_id" : "mes_qual_productQualityReviewIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_productQualityReview",
+    "stableName" : "mes_qual_productQualityReviewStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_productQualityReviewIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "reviewPeriodFromDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewPeriodFromDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "reviewPeriodToDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lotsProducedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "lotsReleasedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "lotsRejectedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "nonconformanceCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "deviationPermitCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "customerComplaintCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "capaCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "engineeringChangeCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "productRecallCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "processCapabilityText",
+            "typ" : "string"
+        },
+        {
+            "din" : "conclusionText",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionsText",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

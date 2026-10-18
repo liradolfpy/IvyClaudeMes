@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_syst_operatorAppDeviceBindingIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_operatorAppDeviceBinding",
+    "stableName" : "mes_syst_operatorAppDeviceBindingStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_operatorAppDeviceBindingIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "operatorAppId",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "purpose",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorAppId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorAppName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "iotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "purpose",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

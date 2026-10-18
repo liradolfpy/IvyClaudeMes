@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_qual_inspectionPlanProductVariantIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_inspectionPlanProductVariant",
+    "stableName" : "mes_qual_inspectionPlanProductVariantStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_inspectionPlanProductVariantIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

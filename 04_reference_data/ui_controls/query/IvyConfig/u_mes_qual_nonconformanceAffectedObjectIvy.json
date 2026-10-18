@@ -1,0 +1,103 @@
+{
+    "_id" : "mes_qual_nonconformanceAffectedObjectIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_nonconformanceAffectedObject",
+    "stableName" : "mes_qual_nonconformanceAffectedObjectStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_nonconformanceAffectedObjectIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionById",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "dispositionTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionById",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

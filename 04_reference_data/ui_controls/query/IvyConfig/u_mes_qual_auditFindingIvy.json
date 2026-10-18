@@ -1,0 +1,107 @@
+{
+    "_id" : "mes_qual_auditFindingIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_auditFinding",
+    "stableName" : "mes_qual_auditFindingStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_auditFindingIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "auditId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "grade",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditName",
+            "typ" : "string"
+        },
+        {
+            "din" : "findingNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "clause",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "grade",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "closedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

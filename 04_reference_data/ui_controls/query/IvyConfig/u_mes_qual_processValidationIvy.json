@@ -1,0 +1,158 @@
+{
+    "_id" : "mes_qual_processValidationIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_processValidation",
+    "stableName" : "mes_qual_processValidationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_processValidationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "plannedStartDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "validationStage",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "validationStage",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "protocolControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "protocolControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "plannedLotCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "executedLotCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "acceptanceCriteriaText",
+            "typ" : "string"
+        },
+        {
+            "din" : "resultText",
+            "typ" : "string"
+        },
+        {
+            "din" : "plannedStartDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "nextReviewDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

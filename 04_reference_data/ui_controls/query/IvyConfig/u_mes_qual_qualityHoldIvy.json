@@ -1,0 +1,170 @@
+{
+    "_id" : "mes_qual_qualityHoldIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_qualityHold",
+    "stableName" : "mes_qual_qualityHoldStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_qualityHoldIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "placedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "holdType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "holdType",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonText",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "totalQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "quarantineLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "quarantineLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "placedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "placedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "placedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "expectedReleaseAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "releasedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "releaseDecision",
+            "typ" : "string"
+        },
+        {
+            "din" : "releaseComment",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerNotified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "releaseReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "releaseReasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "releaseElectronicSignatureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "releaseElectronicSignatureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

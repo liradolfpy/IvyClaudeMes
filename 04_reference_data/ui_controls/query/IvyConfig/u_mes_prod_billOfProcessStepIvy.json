@@ -1,0 +1,115 @@
+{
+    "_id" : "mes_prod_billOfProcessStepIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_billOfProcessStep",
+    "stableName" : "mes_prod_billOfProcessStepStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_billOfProcessStepIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "billOfProcessId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "cycleTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "manning",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,107 @@
+{
+    "_id" : "mes_syst_escalationRuleIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_escalationRule",
+    "stableName" : "mes_syst_escalationRuleStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_escalationRuleIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "firstResponderRoleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "sourceType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "sourceType",
+            "typ" : "string"
+        },
+        {
+            "din" : "severityClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "firstResponderRoleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "firstResponderRoleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiredSkillId",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiredSkillName",
+            "typ" : "string"
+        },
+        {
+            "din" : "responseTargetMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "resolutionTargetMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "_id" : "mes_syst_controlledDocumentTagIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_controlledDocumentTag",
+    "stableName" : "mes_syst_controlledDocumentTagStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_controlledDocumentTagIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "controlledDocumentId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "tag",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

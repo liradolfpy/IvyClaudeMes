@@ -1,0 +1,127 @@
+{
+    "_id" : "mes_prod_workInstructionStepIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_workInstructionStep",
+    "stableName" : "mes_prod_workInstructionStepStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_workInstructionStepIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "arContentControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inputType",
+            "typ" : "string"
+        },
+        {
+            "din" : "isMandatory",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresScan",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "instructionText",
+            "typ" : "string"
+        },
+        {
+            "din" : "inputType",
+            "typ" : "string"
+        },
+        {
+            "din" : "expectedValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lowerLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "upperLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "isMandatory",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresScan",
+            "typ" : "bool"
+        },
+        {
+            "din" : "caution",
+            "typ" : "string"
+        },
+        {
+            "din" : "standardTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "arContentControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "arContentControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "arAnchorRef",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

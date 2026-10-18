@@ -1,0 +1,95 @@
+{
+    "_id" : "mes_prod_engineeringChangeApprovalIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_engineeringChangeApproval",
+    "stableName" : "mes_prod_engineeringChangeApprovalStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_engineeringChangeApprovalIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "businessFunction",
+            "typ" : "string"
+        },
+        {
+            "din" : "decision",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "businessFunction",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userName",
+            "typ" : "string"
+        },
+        {
+            "din" : "decision",
+            "typ" : "string"
+        },
+        {
+            "din" : "decidedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "comment",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "_id" : "mes_prod_workInstructionKeyPointIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_workInstructionKeyPoint",
+    "stableName" : "mes_prod_workInstructionKeyPointStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_workInstructionKeyPointIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "keyPoint",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

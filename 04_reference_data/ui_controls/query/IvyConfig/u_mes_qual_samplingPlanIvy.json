@@ -1,0 +1,115 @@
+{
+    "_id" : "mes_qual_samplingPlanIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_samplingPlan",
+    "stableName" : "mes_qual_samplingPlanStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_samplingPlanIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "samplingType",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionLevel",
+            "typ" : "string"
+        },
+        {
+            "din" : "frequencyType",
+            "typ" : "string"
+        },
+        {
+            "din" : "skipLotEnabled",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "samplingType",
+            "typ" : "string"
+        },
+        {
+            "din" : "standard",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionLevel",
+            "typ" : "string"
+        },
+        {
+            "din" : "aql",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "frequencyType",
+            "typ" : "string"
+        },
+        {
+            "din" : "frequencyEveryNUnits",
+            "typ" : "int"
+        },
+        {
+            "din" : "frequencyEveryMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "skipLotEnabled",
+            "typ" : "bool"
+        },
+        {
+            "din" : "skipLotConsecutiveAcceptedToSkip",
+            "typ" : "int"
+        },
+        {
+            "din" : "skipLotSkipFraction",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "switchingRules",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

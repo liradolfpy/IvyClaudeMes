@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_mast_roleSignatureMeaningIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_roleSignatureMeaning",
+    "stableName" : "mes_mast_roleSignatureMeaningStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_roleSignatureMeaningIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "signatureMeaningId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "signatureMeaningId",
+            "typ" : "string"
+        },
+        {
+            "din" : "signatureMeaningName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_qual_customerComplaintCommunicationIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_customerComplaintCommunication",
+    "stableName" : "mes_qual_customerComplaintCommunicationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_customerComplaintCommunicationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "customerComplaintId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "direction",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerComplaintId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerComplaintName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "communicatedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "direction",
+            "typ" : "string"
+        },
+        {
+            "din" : "communicationSummary",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

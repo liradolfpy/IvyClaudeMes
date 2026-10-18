@@ -1,0 +1,187 @@
+{
+    "_id" : "mes_prod_recipeIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_recipe",
+    "stableName" : "mes_prod_recipeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_recipeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "origin",
+            "typ" : "string"
+        },
+        {
+            "din" : "isGoldenRecipe",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "version",
+            "typ" : "int"
+        },
+        {
+            "din" : "recipeType",
+            "typ" : "string"
+        },
+        {
+            "din" : "programNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "effectiveTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "checksum",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastDownloadedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "previousVersionRecipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "previousVersionRecipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeReasonText",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "isGoldenRecipe",
+            "typ" : "bool"
+        },
+        {
+            "din" : "goldenDesignatedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "goldenDesignatedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "goldenDesignatedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "origin",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelId",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

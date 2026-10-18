@@ -1,0 +1,294 @@
+{
+    "_id" : "mes_qual_inspectionResultIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_inspectionResult",
+    "stableName" : "mes_qual_inspectionResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_inspectionResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "measuredAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "overridden",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "planLineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "goodsReceiptId",
+            "typ" : "string"
+        },
+        {
+            "din" : "goodsReceiptName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampleNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "measuredValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "attributeResult",
+            "typ" : "string"
+        },
+        {
+            "din" : "nominal",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lowerSpecLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "upperSpecLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviation",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "result",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "measuredById",
+            "typ" : "string"
+        },
+        {
+            "din" : "measuredBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "measuredAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "source",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "overridden",
+            "typ" : "bool"
+        },
+        {
+            "din" : "remarks",
+            "typ" : "string"
+        },
+        {
+            "din" : "positionNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "positionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "imageControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "imageControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveId",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveName",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelId",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelName",
+            "typ" : "string"
+        },
+        {
+            "din" : "modelVersion",
+            "typ" : "string"
+        },
+        {
+            "din" : "modelClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "modelConfidence",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

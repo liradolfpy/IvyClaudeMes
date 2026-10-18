@@ -1,0 +1,131 @@
+{
+    "_id" : "mes_prod_routingIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_routing",
+    "stableName" : "mes_prod_routingStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_routingIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentRoutingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "routingType",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "effectiveTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "entryStepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "parentRoutingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentRoutingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "erpRoutingNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

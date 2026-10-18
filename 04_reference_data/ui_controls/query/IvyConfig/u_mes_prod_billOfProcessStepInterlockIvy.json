@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_prod_billOfProcessStepInterlockIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_billOfProcessStepInterlock",
+    "stableName" : "mes_prod_billOfProcessStepInterlockStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_billOfProcessStepInterlockIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "billOfProcessStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "interlockType",
+            "typ" : "string"
+        },
+        {
+            "din" : "enforced",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessStepName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "interlockType",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "enforced",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

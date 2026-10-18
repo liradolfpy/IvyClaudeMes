@@ -1,0 +1,107 @@
+{
+    "_id" : "mes_bmr_batchRecordReviewExceptionIvy",
+    "code" : "bmr",
+    "moduleName" : "BatchManufacturingRecord",
+    "collection" : "u_mes_bmr_batchRecordReviewException",
+    "stableName" : "mes_bmr_batchRecordReviewExceptionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_bmr_batchRecordReviewExceptionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "batchRecordReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "exceptionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessment",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "exceptionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessment",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

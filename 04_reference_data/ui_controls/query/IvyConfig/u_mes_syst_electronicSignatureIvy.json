@@ -1,0 +1,146 @@
+{
+    "_id" : "mes_syst_electronicSignatureIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_electronicSignature",
+    "stableName" : "mes_syst_electronicSignatureStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_electronicSignatureIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "signedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authenticationMethod",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userName",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "signatureMeaningId",
+            "typ" : "string"
+        },
+        {
+            "din" : "signatureMeaningName",
+            "typ" : "string"
+        },
+        {
+            "din" : "signedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "authenticationMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "contentHash",
+            "typ" : "string"
+        },
+        {
+            "din" : "comment",
+            "typ" : "string"
+        },
+        {
+            "din" : "clientIp",
+            "typ" : "string"
+        },
+        {
+            "din" : "workstation",
+            "typ" : "string"
+        },
+        {
+            "din" : "isSecondSignature",
+            "typ" : "bool"
+        },
+        {
+            "din" : "witnessUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "witnessUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "signatureManifestationText",
+            "typ" : "string"
+        },
+        {
+            "din" : "signedRecordVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "isFirstSigningInSession",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

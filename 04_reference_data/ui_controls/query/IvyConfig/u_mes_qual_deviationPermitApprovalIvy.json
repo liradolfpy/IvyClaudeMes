@@ -1,0 +1,91 @@
+{
+    "_id" : "mes_qual_deviationPermitApprovalIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_deviationPermitApproval",
+    "stableName" : "mes_qual_deviationPermitApprovalStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_deviationPermitApprovalIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "deviationPermitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "businessFunction",
+            "typ" : "string"
+        },
+        {
+            "din" : "decision",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationPermitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationPermitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "businessFunction",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userName",
+            "typ" : "string"
+        },
+        {
+            "din" : "decision",
+            "typ" : "string"
+        },
+        {
+            "din" : "decidedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

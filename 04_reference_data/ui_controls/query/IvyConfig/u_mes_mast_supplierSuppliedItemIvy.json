@@ -1,0 +1,83 @@
+{
+    "_id" : "mes_mast_supplierSuppliedItemIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_supplierSuppliedItem",
+    "stableName" : "mes_mast_supplierSuppliedItemStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_supplierSuppliedItemIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "suppliedItemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualificationStatus",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "suppliedItemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "suppliedItemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualificationStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualifiedUntilDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

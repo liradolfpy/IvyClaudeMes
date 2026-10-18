@@ -1,0 +1,155 @@
+{
+    "_id" : "mes_syst_computerisedSystemIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_computerisedSystem",
+    "stableName" : "mes_syst_computerisedSystemStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_computerisedSystemIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "systemCategory",
+            "typ" : "string"
+        },
+        {
+            "din" : "holdsElectronicRecords",
+            "typ" : "bool"
+        },
+        {
+            "din" : "usesElectronicSignatures",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "systemCategory",
+            "typ" : "string"
+        },
+        {
+            "din" : "gampCategory",
+            "typ" : "string"
+        },
+        {
+            "din" : "gxpImpact",
+            "typ" : "string"
+        },
+        {
+            "din" : "dataCriticality",
+            "typ" : "string"
+        },
+        {
+            "din" : "holdsElectronicRecords",
+            "typ" : "bool"
+        },
+        {
+            "din" : "usesElectronicSignatures",
+            "typ" : "bool"
+        },
+        {
+            "din" : "systemOwnerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "systemOwnerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "processOwnerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "processOwnerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "softwareVersion",
+            "typ" : "string"
+        },
+        {
+            "din" : "hostingModel",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastValidatedDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "periodicReviewIntervalMonths",
+            "typ" : "int"
+        },
+        {
+            "din" : "nextPeriodicReviewDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

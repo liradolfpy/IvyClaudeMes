@@ -1,0 +1,234 @@
+{
+    "_id" : "mes_perf_torqueResultIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_torqueResult",
+    "stableName" : "mes_perf_torqueResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_torqueResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "tightenedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controllerIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "strategy",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toolName",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "controllerIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controllerIotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "jointName",
+            "typ" : "string"
+        },
+        {
+            "din" : "programNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "tighteningNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "attemptNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "targetTorqueNm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "minTorqueNm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "maxTorqueNm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "finalTorqueNm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "targetAngleDeg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "minAngleDeg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "maxAngleDeg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "finalAngleDeg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "rundownTimeMs",
+            "typ" : "int"
+        },
+        {
+            "din" : "strategy",
+            "typ" : "string"
+        },
+        {
+            "din" : "result",
+            "typ" : "string"
+        },
+        {
+            "din" : "failureReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "tightenedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "controllerResultNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveId",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveName",
+            "typ" : "string"
+        },
+        {
+            "din" : "envelopeResult",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

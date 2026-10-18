@@ -1,0 +1,127 @@
+{
+    "_id" : "mes_prod_billOfMaterialComponentIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_billOfMaterialComponent",
+    "stableName" : "mes_prod_billOfMaterialComponentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_billOfMaterialComponentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "billOfMaterialId",
+            "typ" : "string"
+        },
+        {
+            "din" : "componentItemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "traceLevel",
+            "typ" : "string"
+        },
+        {
+            "din" : "isTraceable",
+            "typ" : "bool"
+        },
+        {
+            "din" : "backflush",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfMaterialId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfMaterialName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "componentItemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "componentItemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "scrapPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "isTraceable",
+            "typ" : "bool"
+        },
+        {
+            "din" : "traceLevel",
+            "typ" : "string"
+        },
+        {
+            "din" : "backflush",
+            "typ" : "bool"
+        },
+        {
+            "din" : "referenceDesignator",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

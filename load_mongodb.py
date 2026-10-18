@@ -490,9 +490,9 @@ def main():
         print("DRY_RUN=1: files are parsed and counted, nothing is written")
     try:
         # load_sample_data(db, module_filter="01") # None
-        # load_query_configs(db)
+        load_query_configs(db)
         # load_ivy_configs(db)
-        load_table_configs(db)
+        # load_table_configs(db)
         # load_menu_configs(db)
         # load_smodal_configs(db)
         # load_stadnew_configs(db)

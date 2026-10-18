@@ -1,0 +1,83 @@
+{
+    "_id" : "mes_prod_billOfProcessStepConsumedComponentIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_billOfProcessStepConsumedComponent",
+    "stableName" : "mes_prod_billOfProcessStepConsumedComponentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_billOfProcessStepConsumedComponentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "billOfProcessStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "verifyByScan",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessStepName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "verifyByScan",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

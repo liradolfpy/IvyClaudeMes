@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_qual_msaStudyAppraiserUserIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_msaStudyAppraiserUser",
+    "stableName" : "mes_qual_msaStudyAppraiserUserStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_msaStudyAppraiserUserIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "msaStudyId",
+            "typ" : "string"
+        },
+        {
+            "din" : "appraiserUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "msaStudyId",
+            "typ" : "string"
+        },
+        {
+            "din" : "msaStudyName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "appraiserUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "appraiserUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

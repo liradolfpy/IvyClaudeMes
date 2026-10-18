@@ -1,0 +1,162 @@
+{
+    "_id" : "mes_perf_lossSummaryIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_lossSummary",
+    "stableName" : "mes_perf_lossSummaryStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_lossSummaryIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "productionDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "lossCategoryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lossCategoryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lossCategoryName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "isPlanned",
+            "typ" : "bool"
+        },
+        {
+            "din" : "occurrenceCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "lossMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "lossUnits",
+            "typ" : "int"
+        },
+        {
+            "din" : "lossPctOfPlannedTime",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "paretoRank",
+            "typ" : "int"
+        },
+        {
+            "din" : "cumulativePct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "maintenanceWorkOrderCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "capaCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "calculatedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_qual_customerComplaintSerialNumberIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_customerComplaintSerialNumber",
+    "stableName" : "mes_qual_customerComplaintSerialNumberStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_customerComplaintSerialNumberIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "customerComplaintId",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerComplaintId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerComplaintName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "serialNumberId",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

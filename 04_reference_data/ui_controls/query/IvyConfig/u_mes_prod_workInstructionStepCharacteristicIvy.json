@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_prod_workInstructionStepCharacteristicIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_workInstructionStepCharacteristic",
+    "stableName" : "mes_prod_workInstructionStepCharacteristicStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_workInstructionStepCharacteristicIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "workInstructionStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionStepName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

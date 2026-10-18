@@ -1,0 +1,95 @@
+{
+    "_id" : "mes_syst_statusTransitionIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_statusTransition",
+    "stableName" : "mes_syst_statusTransitionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_statusTransitionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresSignature",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresReason",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "collectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "fromStatusDefinitionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "fromStatusDefinitionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "toStatusDefinitionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toStatusDefinitionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "transitionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresSignature",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresReason",
+            "typ" : "bool"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

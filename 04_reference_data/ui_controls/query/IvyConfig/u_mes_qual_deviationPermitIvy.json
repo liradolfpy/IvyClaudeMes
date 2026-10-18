@@ -1,0 +1,174 @@
+{
+    "_id" : "mes_qual_deviationPermitIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_deviationPermit",
+    "stableName" : "mes_qual_deviationPermitStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_deviationPermitIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "requestedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationType",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "specifiedValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerApprovalRef",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "limitType",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantityLimit",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityUsed",
+            "typ" : "int"
+        },
+        {
+            "din" : "validFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "validTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "markingRequirement",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "closedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

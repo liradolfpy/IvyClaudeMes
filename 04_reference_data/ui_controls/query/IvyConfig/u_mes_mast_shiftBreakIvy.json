@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_mast_shiftBreakIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_shiftBreak",
+    "stableName" : "mes_mast_shiftBreakStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_shiftBreakIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "paid",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "startTimeLocal",
+            "typ" : "string"
+        },
+        {
+            "din" : "durationMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "paid",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

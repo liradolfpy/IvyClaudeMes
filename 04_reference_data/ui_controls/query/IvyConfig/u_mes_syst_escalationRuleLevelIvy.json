@@ -1,0 +1,103 @@
+{
+    "_id" : "mes_syst_escalationRuleLevelIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_escalationRuleLevel",
+    "stableName" : "mes_syst_escalationRuleLevelStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_escalationRuleLevelIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "escalationRuleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "basis",
+            "typ" : "string"
+        },
+        {
+            "din" : "channel",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationRuleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationRuleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "level",
+            "typ" : "int"
+        },
+        {
+            "din" : "delayMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "basis",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "channel",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

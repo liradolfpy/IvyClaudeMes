@@ -1,0 +1,119 @@
+{
+    "_id" : "mes_syst_integrationConnectorFunctionQuery",
+    "dictName" : "mes_syst_integrationConnectorFunctionQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Integration Connector Functions",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "queryLayout" : "singleLine",
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Integration Connector",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Integration Connector",
+                    "errorMessage" : "Please Select Integration Connector",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "integrationConnectorId",
+                    "p_data_index" : "integrationConnectorName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_syst_integrationConnector__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_syst_integrationConnector__id_name",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Direction",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Direction",
+                    "errorMessage" : "Please Select Direction",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "direction",
+                    "p_data_index" : "directionText",
+                    "data" : {
+                        "Inbound" : "Inbound",
+                        "Outbound" : "Outbound",
+                        "Publish" : "Publish"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Message Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Message Type",
+                    "errorMessage" : "Please Select Message Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "messageType",
+                    "p_data_index" : "messageTypeText",
+                    "data" : {
+                        "Production Order Download" : "Production Order Download",
+                        "Operation Confirmation" : "Operation Confirmation",
+                        "Goods Movement" : "Goods Movement",
+                        "Goods Receipt" : "Goods Receipt",
+                        "Shipment Advice" : "Shipment Advice",
+                        "Material Master" : "Material Master",
+                        "Quality Notification" : "Quality Notification"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2344",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2344",
+    "projid" : ""
+}

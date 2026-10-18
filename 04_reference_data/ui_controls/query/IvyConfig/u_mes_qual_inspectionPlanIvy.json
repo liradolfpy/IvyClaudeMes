@@ -1,0 +1,151 @@
+{
+    "_id" : "mes_qual_inspectionPlanIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_inspectionPlan",
+    "stableName" : "mes_qual_inspectionPlanStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_inspectionPlanIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "planType",
+            "typ" : "string"
+        },
+        {
+            "din" : "blockOnFail",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "planType",
+            "typ" : "string"
+        },
+        {
+            "din" : "version",
+            "typ" : "int"
+        },
+        {
+            "din" : "collectionTrigger",
+            "typ" : "string"
+        },
+        {
+            "din" : "samplingPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "samplingPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "blockOnFail",
+            "typ" : "bool"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "effectiveTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

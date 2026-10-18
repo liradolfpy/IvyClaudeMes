@@ -1,0 +1,91 @@
+{
+    "_id" : "mes_qual_ppapSubmissionElementIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_ppapSubmissionElement",
+    "stableName" : "mes_qual_ppapSubmissionElementStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_ppapSubmissionElementIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "ppapSubmissionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "required",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "ppapSubmissionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ppapSubmissionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "elementNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "required",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

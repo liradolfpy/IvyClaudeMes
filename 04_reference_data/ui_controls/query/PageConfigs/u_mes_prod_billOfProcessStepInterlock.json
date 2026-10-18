@@ -1,0 +1,118 @@
+{
+    "_id" : "mes_prod_billOfProcessStepInterlockQuery",
+    "dictName" : "mes_prod_billOfProcessStepInterlockQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "BOP Step Interlocks",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "queryLayout" : "singleLine",
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Bill Of Process Step",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Bill Of Process Step",
+                    "errorMessage" : "Please Select Bill Of Process Step",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "billOfProcessStepId",
+                    "p_data_index" : "billOfProcessStepName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_prod_billOfProcessStep__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_prod_billOfProcessStep__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Interlock Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Interlock Type",
+                    "errorMessage" : "Please Select Interlock Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "interlockType",
+                    "p_data_index" : "interlockTypeText",
+                    "data" : {
+                        "Skill" : "Skill",
+                        "Recipe" : "Recipe",
+                        "Tool Life" : "Tool Life",
+                        "Gauge Calibration" : "Gauge Calibration",
+                        "Previous Step" : "Previous Step",
+                        "Component Scan" : "Component Scan",
+                        "Maintenance Due" : "Maintenance Due"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Enforced",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Enforced",
+                    "errorMessage" : "Please Select Enforced",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "enforced",
+                    "p_data_index" : "enforcedText",
+                    "data" : {
+                        "true" : "Yes",
+                        "false" : "No"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2344",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2344",
+    "projid" : ""
+}

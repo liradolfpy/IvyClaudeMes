@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_prod_routingStepAlternateWorkCenterIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_routingStepAlternateWorkCenter",
+    "stableName" : "mes_prod_routingStepAlternateWorkCenterStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_routingStepAlternateWorkCenterIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "routingStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "alternateWorkCenterId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingStepName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "alternateWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "alternateWorkCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

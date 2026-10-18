@@ -1,0 +1,147 @@
+{
+    "_id" : "mes_mast_supplierIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_supplier",
+    "stableName" : "mes_mast_supplierStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_supplierIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "commodityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressCountryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierType",
+            "typ" : "string"
+        },
+        {
+            "din" : "isDirectedSource",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierType",
+            "typ" : "string"
+        },
+        {
+            "din" : "commodityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "commodityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "gstin",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressLine1",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressCity",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressState",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressPostalCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressCountryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "addressCountryName",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "ppmLast12Months",
+            "typ" : "int"
+        },
+        {
+            "din" : "deliveryRatingPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "qualityRatingPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "leadTimeDays",
+            "typ" : "int"
+        },
+        {
+            "din" : "paymentTermsDays",
+            "typ" : "int"
+        },
+        {
+            "din" : "currencyId",
+            "typ" : "string"
+        },
+        {
+            "din" : "currencyName",
+            "typ" : "string"
+        },
+        {
+            "din" : "isDirectedSource",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

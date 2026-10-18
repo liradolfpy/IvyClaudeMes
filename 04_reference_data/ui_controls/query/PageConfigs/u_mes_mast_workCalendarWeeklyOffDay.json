@@ -1,0 +1,96 @@
+{
+    "_id" : "mes_mast_workCalendarWeeklyOffDayQuery",
+    "dictName" : "mes_mast_workCalendarWeeklyOffDayQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Work Calendar Weekly Off Days",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "queryLayout" : "singleLine",
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Work Calendar",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Work Calendar",
+                    "errorMessage" : "Please Select Work Calendar",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "workCalendarId",
+                    "p_data_index" : "workCalendarName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_mast_workCalendar__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_mast_workCalendar__id_name",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Weekly Off Day",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Weekly Off Day",
+                    "errorMessage" : "Please Select Weekly Off Day",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "weeklyOffDay",
+                    "p_data_index" : "weeklyOffDayText",
+                    "data" : {
+                        "Monday" : "Monday",
+                        "Tuesday" : "Tuesday",
+                        "Wednesday" : "Wednesday",
+                        "Thursday" : "Thursday",
+                        "Friday" : "Friday",
+                        "Saturday" : "Saturday",
+                        "Sunday" : "Sunday"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2345",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2345",
+    "projid" : ""
+}

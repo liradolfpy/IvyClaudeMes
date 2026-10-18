@@ -1,0 +1,119 @@
+{
+    "_id" : "mes_prod_routingStepIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_routingStep",
+    "stableName" : "mes_prod_routingStepStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_routingStepIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "isMilestone",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isOptional",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "cycleTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "setupTimeMin",
+            "typ" : "int"
+        },
+        {
+            "din" : "isMilestone",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isOptional",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reworkReturnStepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "maxQueueTimeMin",
+            "typ" : "int"
+        },
+        {
+            "din" : "maxReworkCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

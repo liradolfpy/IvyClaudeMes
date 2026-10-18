@@ -1,0 +1,198 @@
+{
+    "_id" : "mes_perf_oeeRecordIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_oeeRecord",
+    "stableName" : "mes_perf_oeeRecordStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_oeeRecordIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "periodStartAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "periodStartAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "periodEndAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "calendarMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "plannedProductionMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "plannedDowntimeMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "unplannedDowntimeMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "runMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "idealCycleTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "totalCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "goodCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "rejectCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "reworkCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "availabilityPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "performancePct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "qualityPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "oeePct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "teepPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "calculatedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "calculationVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

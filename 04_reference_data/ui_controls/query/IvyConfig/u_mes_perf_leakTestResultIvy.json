@@ -1,0 +1,178 @@
+{
+    "_id" : "mes_perf_leakTestResultIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_leakTestResult",
+    "stableName" : "mes_perf_leakTestResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_leakTestResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "testedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "testerIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "testMedium",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationExecutionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "testerIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "testerIotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "programNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "testMedium",
+            "typ" : "string"
+        },
+        {
+            "din" : "attemptNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "ambientTemperatureC",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "partTemperatureC",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "fixtureToolId",
+            "typ" : "string"
+        },
+        {
+            "din" : "fixtureToolName",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterLeakVerifiedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "verdict",
+            "typ" : "string"
+        },
+        {
+            "din" : "failureReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "testedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "measurementCurveId",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

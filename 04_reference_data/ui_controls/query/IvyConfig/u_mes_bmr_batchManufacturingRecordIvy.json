@@ -1,0 +1,182 @@
+{
+    "_id" : "mes_bmr_batchManufacturingRecordIvy",
+    "code" : "bmr",
+    "moduleName" : "BatchManufacturingRecord",
+    "collection" : "u_mes_bmr_batchManufacturingRecord",
+    "stableName" : "mes_bmr_batchManufacturingRecordStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_bmr_batchManufacturingRecordIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "openedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterManufacturingRecordId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterManufacturingRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterManufacturingRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterRecordVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "plannedQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "lineClearanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineClearanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "yieldReconciliationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "yieldReconciliationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewName",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchReleaseId",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchReleaseName",
+            "typ" : "string"
+        },
+        {
+            "din" : "openedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "compiledAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "exportControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "exportControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "checksumSha256",
+            "typ" : "string"
+        },
+        {
+            "din" : "pageCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "exportedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "exportedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "exportedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "archivedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

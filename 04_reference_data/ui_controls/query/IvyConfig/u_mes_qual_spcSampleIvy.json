@@ -1,0 +1,190 @@
+{
+    "_id" : "mes_qual_spcSampleIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_spcSample",
+    "stableName" : "mes_qual_spcSampleStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_spcSampleIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "sampledAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcChartId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reactionType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcChartId",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcChartName",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "subgroupNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "sampledAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "sampledById",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampledBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "subgroupMean",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "subgroupRange",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "stdDev",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "ucl",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lcl",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "centerLine",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "inControl",
+            "typ" : "bool"
+        },
+        {
+            "din" : "assignableCause",
+            "typ" : "string"
+        },
+        {
+            "din" : "correctiveAction",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "excludedFromLimits",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reactionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

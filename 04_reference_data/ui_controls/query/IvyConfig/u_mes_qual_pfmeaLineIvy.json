@@ -1,0 +1,175 @@
+{
+    "_id" : "mes_qual_pfmeaLineIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_pfmeaLine",
+    "stableName" : "mes_qual_pfmeaLineStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_pfmeaLineIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "pfmeaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "classification",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionPriority",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "processFunction",
+            "typ" : "string"
+        },
+        {
+            "din" : "failureMode",
+            "typ" : "string"
+        },
+        {
+            "din" : "failureEffect",
+            "typ" : "string"
+        },
+        {
+            "din" : "severity",
+            "typ" : "int"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "classification",
+            "typ" : "string"
+        },
+        {
+            "din" : "failureCause",
+            "typ" : "string"
+        },
+        {
+            "din" : "preventionControl",
+            "typ" : "string"
+        },
+        {
+            "din" : "occurrence",
+            "typ" : "int"
+        },
+        {
+            "din" : "detectionControl",
+            "typ" : "string"
+        },
+        {
+            "din" : "detection",
+            "typ" : "int"
+        },
+        {
+            "din" : "rpn",
+            "typ" : "int"
+        },
+        {
+            "din" : "actionPriority",
+            "typ" : "string"
+        },
+        {
+            "din" : "recommendedAction",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "targetDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "actionTaken",
+            "typ" : "string"
+        },
+        {
+            "din" : "revisedSeverity",
+            "typ" : "int"
+        },
+        {
+            "din" : "revisedOccurrence",
+            "typ" : "int"
+        },
+        {
+            "din" : "revisedDetection",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

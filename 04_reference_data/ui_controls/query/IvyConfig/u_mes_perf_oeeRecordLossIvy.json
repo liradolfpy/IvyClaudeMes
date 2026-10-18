@@ -1,0 +1,91 @@
+{
+    "_id" : "mes_perf_oeeRecordLossIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_oeeRecordLoss",
+    "stableName" : "mes_perf_oeeRecordLossStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_oeeRecordLossIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "oeeRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lossCategoryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "oeeRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "oeeRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "lossCategoryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lossCategoryName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lossMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "lossUnits",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

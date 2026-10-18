@@ -1,0 +1,91 @@
+{
+    "_id" : "mes_qual_spcChartControlLimitIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_spcChartControlLimit",
+    "stableName" : "mes_qual_spcChartControlLimitStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_spcChartControlLimitIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "spcChartId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcChartId",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcChartName",
+            "typ" : "string"
+        },
+        {
+            "din" : "revisionNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "ucl",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "centerLine",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lcl",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "uclRange",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "centerLineRange",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lclRange",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "basedOnSubgroups",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

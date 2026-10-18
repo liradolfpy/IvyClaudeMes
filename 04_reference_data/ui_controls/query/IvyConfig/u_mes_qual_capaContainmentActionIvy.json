@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_qual_capaContainmentActionIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_capaContainmentAction",
+    "stableName" : "mes_qual_capaContainmentActionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_capaContainmentActionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

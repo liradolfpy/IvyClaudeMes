@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_syst_integrationConnectorFunctionIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_integrationConnectorFunction",
+    "stableName" : "mes_syst_integrationConnectorFunctionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_integrationConnectorFunctionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "integrationConnectorId",
+            "typ" : "string"
+        },
+        {
+            "din" : "direction",
+            "typ" : "string"
+        },
+        {
+            "din" : "messageType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "integrationConnectorId",
+            "typ" : "string"
+        },
+        {
+            "din" : "integrationConnectorName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "functionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "direction",
+            "typ" : "string"
+        },
+        {
+            "din" : "messageType",
+            "typ" : "string"
+        },
+        {
+            "din" : "endpointPath",
+            "typ" : "string"
+        },
+        {
+            "din" : "scheduleExpression",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

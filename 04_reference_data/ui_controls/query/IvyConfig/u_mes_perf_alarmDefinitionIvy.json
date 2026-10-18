@@ -1,0 +1,131 @@
+{
+    "_id" : "mes_perf_alarmDefinitionIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_alarmDefinition",
+    "stableName" : "mes_perf_alarmDefinitionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_alarmDefinitionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorizingRoleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "blocksRestart",
+            "typ" : "bool"
+        },
+        {
+            "din" : "createsDowntime",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmText",
+            "typ" : "string"
+        },
+        {
+            "din" : "alarmClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "severityClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "blocksRestart",
+            "typ" : "bool"
+        },
+        {
+            "din" : "authorizingRoleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorizingRoleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultReasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationRuleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "escalationRuleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "createsDowntime",
+            "typ" : "bool"
+        },
+        {
+            "din" : "responseInstruction",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

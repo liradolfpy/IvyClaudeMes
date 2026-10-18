@@ -1,6 +1,6 @@
 # Claude instructions: projects, chats, conversations and tasks
 
-Reference note for using Claude in the ClaudeMES project, also for training others. Written 12 October 2026; section 7 (files shown at the bottom of a response) added 12 October 2026.
+Reference note for using Claude in the ClaudeMES project, also for training others. Written 12 October 2026; section 7 (files shown at the bottom of a response) added 12 October 2026; section 11 (skills: library file, pointer, review card) added and sections 4, 8 and 10 updated 18 October 2026 for the token-saving method (D073).
 This file is in `100_Self_Notes`, so it is a personal note and not project authority (see `project_working_rules.md` section 3). The binding handover rules are in section 7 of `project_working_rules.md`.
 
 ---
@@ -90,7 +90,7 @@ Rule of thumb: **Chat for thinking, Cowork for doing.** Each new phase gets a ne
 
 ### What this means in practice
 
-A new conversation or task only knows what is in the **project documents** (and, roughly, in project memory). That is why every task must end by saving its results and a **Session handover note** to the project (section 7.3 of `project_working_rules.md`), and every new task starts with the brief:
+A new conversation or task only knows what is in the **project documents** (and, roughly, in project memory). That is why every task must end by saving its results and a **Session handover note** to the project (section 7.3 of `project_working_rules.md`; since D073 the note is the separate file `00_governance/session_handover.md`, not the end of `decision_log.md`), and every new task starts with the brief:
 
 > Task: <phase or work package name>. Goal: <the outcome required>. Inputs: <any new files or instructions>. Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES. Follow section 7 of project_working_rules.md.
 
@@ -210,7 +210,7 @@ The brief is the only thing a new task knows about your intention. Everything el
 | Part | What to write | Why it matters |
 |---|---|---|
 | **Task** | A short, unique name, e.g. "Pharma extension – impact analysis" | Used in the handover note and the decision log, so later tasks can refer to it |
-| **Continues from** | The earlier task by name, and "read the latest Session handover note and decision log up to D<nnn>" | A new task cannot see the earlier task's conversation. Naming the last decision number shows Claude where the earlier work stopped |
+| **Continues from** | The earlier task by name, and "read `00_governance/session_handover.md` (last decision D<nnn>)" | A new task cannot see the earlier task's conversation. Naming the last decision number shows Claude where the earlier work stopped; Claude checks it with `log_decision.py next` instead of reading the whole decision log |
 | **Goal** | The outcome in one or two sentences, plus what is **in scope** and **out of scope** | Prevents Claude from widening or narrowing the work |
 | **Context** | Industry, reference product, site, regulations, standards | Drives realistic data and correct terminology |
 | **Fixed rules** | What must not change (conventions, IDs, existing collections) and which instruction wins if two conflict | Stops old or conflicting rules from coming back |
@@ -218,13 +218,13 @@ The brief is the only thing a new task knows about your intention. Everything el
 | **Outputs** | Each file to produce and the folder it goes into | Files land in the right place, not only in the chat |
 | **Way of working** | For example, "do the impact analysis first and stop for my review" | Lets you approve the direction before large changes are made |
 | **Done when** | Checks that must pass and the counts or files you expect | Tells Claude, and you, when the task is finished |
-| **Standard closing lines** | "Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES. Follow section 7 of project_working_rules.md." | Folder access and the start-up and handover routine |
+| **Standard closing lines** | "Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES and E:\Ivy\Claude\ClaudeSkills. Follow section 7 of project_working_rules.md." (ClaudeSkills is needed for UI and skill tasks, because the installed skills only point to the library files, section 11) | Folder access and the start-up and handover routine |
 
 ### 8.2 Template
 
 ```text
 Task: <short unique name>
-Continues from: <earlier task name>. Read the latest Session handover note and decision_log.md (last decision D<nnn>).
+Continues from: <earlier task name>. Read 00_governance/session_handover.md (last decision D<nnn>).
 Goal: <outcome in one or two sentences>.
   In scope: <list>
   Out of scope: <list>
@@ -234,7 +234,7 @@ Inputs: <file names with folder paths>; start from <existing documents>.
 Outputs: <file> in <folder>; <file> in <folder>.
 Way of working: <e.g. impact analysis first, then stop for my review>.
 Done when: <checks and expected results>.
-Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES. Follow section 7 of project_working_rules.md.
+Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES and E:\Ivy\Claude\ClaudeSkills. Follow section 7 of project_working_rules.md.
 ```
 
 ### 8.3 Example: continuing the Data Model work for pharma
@@ -320,12 +320,60 @@ or keep the new task's work on different files.
 
 **Starting a task**
 1. Open Cowork, choose project ClaudeMES1, click New task.
-2. Paste the brief (full form in section 8): "Task: … Goal: … Inputs: … Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES. Follow section 7 of project_working_rules.md."
+2. Paste the brief (full form in section 8): "Task: … Goal: … Inputs: … Connect E:\Ivy\Claude\ClaudeProjects\ClaudeMES and E:\Ivy\Claude\ClaudeSkills. Follow section 7 of project_working_rules.md."
 3. Approve the folder access request when it appears (on the PC the task is linked to), or connect the folder yourself with Add folder. Folder access is per task; project access is automatic.
-4. Check Claude's first reply: documents read, collection and key counts, last decision number, plan.
+4. Check Claude's first reply: documents read, collection and key counts, last decision number, plan. For a UI task it should read only the handover note, the UI profile and the skill file, and use `gen_query.py --digest` / `--propose` instead of reading field lists (section 11.4).
 
 **Ending a task**
 1. Ask: "Close this task per section 7.3."
-2. Check that the register, decision log and changed files were saved to the project (and to the Git folder if connected).
-3. Commit the changes in Git.
-4. Copy the recommended brief for the next task from Claude's last reply.
+2. Check that the decision log, `session_handover.md`, the changed files (and the register, if the model changed) were saved to the project and to the Git folder.
+3. Save any review card shown in the chat (section 11.3); a card that is not saved changes nothing.
+4. Commit the changes in Git (ClaudeMES, and ClaudeSkills if a skill changed).
+5. Copy the recommended brief for the next task from Claude's last reply.
+
+## 11. Skills: library file, rule, pointer and review card
+
+Added 18 October 2026 (decisions D073, D076). The skills that build UI configurations (`mes-query-control`, `mes-ivy-config`, `mes-stable-table`, `mes-menu-builder`) and `skill-library-sync` work this way.
+
+### 11.1 The terms
+
+| Term | What it is | Where it lives |
+|---|---|---|
+| **Skill** | The package of instructions for one kind of job, for example building query screens. It has two parts: the library file and the installed account skill. | Library folder and Claude settings |
+| **Library file** | `SKILL.md` of the skill: the one authoritative copy of the rules. Every change is made here. Beside it: `references/` (detail read only when needed) and `CHANGELOG.md` (history, never read during normal work). | `E:\Ivy\Claude\ClaudeSkills\MintSkills\UiSkills\<skill>\` (and `ClaudeSkills\skill-library-sync\`) |
+| **Rule** | One instruction inside the library file, for example "`queryLayout` is always `singleLine`" or "search dropdowns need 4 characters". | A line or table row in `SKILL.md` |
+| **Installed account skill** | The copy Claude sees automatically in every task. Its name and description decide when the skill is used. | Claude settings, Skills |
+| **Whole file (old way)** | The installed skill used to be a full copy of all the rules (43 KB for `mes-query-control`). Two copies of the same rules: every change had to be made twice. | Retired |
+| **Pointer (short pointer version)** | The installed skill now: the name, the description and one instruction, "read the library file from the connected ClaudeSkills folder". About 1 KB. The library file is the single source of truth. | Claude settings, Skills |
+| **Review card** | The box Claude shows in the chat when it proposes a new installed skill. Nothing changes in your settings until you click save. | In the chat |
+
+![Skills library versus installed account skill](images/skill_library_vs_pointer.svg)
+
+### 11.2 What happens in a task and when a rule changes
+
+![How a task uses a skill and how a rule change flows](images/skill_task_and_update_flow.svg)
+
+**When a task runs** (left lane): your brief arrives; the installed skill triggers; because it is a pointer, Claude reads the library file `SKILL.md` (about 10 KB) from the connected ClaudeSkills folder, so it always uses the latest rules; the generator does the work (`gen_query.py --digest`, `--propose`, generate); the checker (`--check`) must report 0 findings.
+
+**When you change a rule** (right lane): you ask for the change; Claude edits the library file and adds a `CHANGELOG.md` row; it changes the generator in the project and regenerates and checks the affected files; it records a decision (`log_decision.py add`) and updates the handover note. Before the pointers, Claude also had to retype the whole 43 KB file into a review card and you had to save it. Now nothing has to be saved: the next task reads the new rule.
+
+### 11.3 When a review card is still needed
+
+- When a skill's **name, description or library folder** changes, because those are the only things the pointer holds.
+- When a new skill is created, or an old full-copy skill is converted into a pointer.
+- Never for an ordinary rule change.
+
+Until you save a pointer card, the installed skill stays the old full copy and does not see changes made in the library. The five pointer cards were proposed on 18 October 2026 (`mes-query-control`, `mes-ivy-config`, `skill-library-sync`, `mes-stable-table`, `mes-menu-builder`).
+
+### 11.4 Keeping token use low
+
+| Do | Instead of |
+|---|---|
+| Put "Connect … ClaudeSkills" in the brief of UI and skill tasks | Letting Claude work from an old installed copy |
+| Let Claude read `session_handover.md` and the UI profile | Asking it to read every governance file in full |
+| Let Claude use `gen_query.py --digest <module>` and `--propose <module>` | Reading field lists (60 KB per module) |
+| Handle two or three modules in one UI task | One module per task with a full start-up each time |
+| Ask for a rule change in one sentence ("add `queryLayout: singleLine` to `dictData.config`") | Pasting or re-sending skill files |
+
+Details: `00_governance/decisions/token_optimization_review.md` and section 7 of `project_working_rules.md`.
+

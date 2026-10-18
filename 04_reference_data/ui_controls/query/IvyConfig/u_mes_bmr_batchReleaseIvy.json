@@ -1,0 +1,158 @@
+{
+    "_id" : "mes_bmr_batchReleaseIvy",
+    "code" : "bmr",
+    "moduleName" : "BatchManufacturingRecord",
+    "collection" : "u_mes_bmr_batchRelease",
+    "stableName" : "mes_bmr_batchReleaseStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_bmr_batchReleaseIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "releasedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "batchRecordReviewName",
+            "typ" : "string"
+        },
+        {
+            "din" : "releaseQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationPermitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationPermitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "certificateControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "certificateControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "electronicSignatureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "electronicSignatureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "decisionText",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

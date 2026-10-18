@@ -1,0 +1,107 @@
+{
+    "_id" : "mes_mast_unitOfMeasureIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_unitOfMeasure",
+    "stableName" : "mes_mast_unitOfMeasureStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_unitOfMeasureIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseUnitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "scope",
+            "typ" : "string"
+        },
+        {
+            "din" : "isBaseUnit",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "scope",
+            "typ" : "string"
+        },
+        {
+            "din" : "symbol",
+            "typ" : "string"
+        },
+        {
+            "din" : "dimension",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseUnitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseUnitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "factorToBase",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "offsetToBase",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "decimalPlaces",
+            "typ" : "int"
+        },
+        {
+            "din" : "isoCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "isBaseUnit",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

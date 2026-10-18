@@ -1,0 +1,127 @@
+{
+    "_id" : "mes_mast_shiftRosterAssignmentIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_shiftRosterAssignment",
+    "stableName" : "mes_mast_shiftRosterAssignmentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_shiftRosterAssignmentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "shiftRosterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "replacedUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleInCrew",
+            "typ" : "string"
+        },
+        {
+            "din" : "attendance",
+            "typ" : "string"
+        },
+        {
+            "din" : "assignmentSource",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftRosterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftRosterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleInCrew",
+            "typ" : "string"
+        },
+        {
+            "din" : "attendance",
+            "typ" : "string"
+        },
+        {
+            "din" : "replacedUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "replacedUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "assignedFromAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "assignedToAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "assignmentSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "suggestionScore",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

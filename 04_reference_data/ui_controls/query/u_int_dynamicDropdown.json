@@ -1,6 +1,23 @@
 // Dynamic dropdown registry: one document per /dd source (coln, key, val); rules in skill mes-query-control, section 14
 db.getCollection("u_int_dynamicDropdown").insertMany([
   {
+      "_id" : "u_mes_bmr_batchRecordReview__id_recordNo",
+      "coln" : "u_mes_bmr_batchRecordReview",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_bmr",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_ehs_bodyPart__id_name",
       "coln" : "u_mes_ehs_bodyPart",
       "query" : {
@@ -120,6 +137,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_mast_commodity__id_name",
+      "coln" : "u_mes_mast_commodity",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_mast_costCenter__id_name",
       "coln" : "u_mes_mast_costCenter",
       "query" : {
@@ -134,6 +168,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_mast",
       "rel" : "CL20261017-21:22",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_country__id_name",
+      "coln" : "u_mes_mast_country",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -154,6 +205,74 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_mast_designation__id_name",
+      "coln" : "u_mes_mast_designation",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_enterprise__id_name",
+      "coln" : "u_mes_mast_enterprise",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_equipmentType__id_name",
+      "coln" : "u_mes_mast_equipmentType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_language__id_name",
+      "coln" : "u_mes_mast_language",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_mast_manufacturer__id_name",
       "coln" : "u_mes_mast_manufacturer",
       "query" : {
@@ -168,6 +287,108 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_mast",
       "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_permission__id_name",
+      "coln" : "u_mes_mast_permission",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_role__id_name",
+      "coln" : "u_mes_mast_role",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_shiftRoster__id_recordNo",
+      "coln" : "u_mes_mast_shiftRoster",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_shift__id_name",
+      "coln" : "u_mes_mast_shift",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:45",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_signatureMeaning__id_name",
+      "coln" : "u_mes_mast_signatureMeaning",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_skillCategory__id_name",
+      "coln" : "u_mes_mast_skillCategory",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -205,6 +426,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_mast_unitOfMeasure__id_name",
+      "coln" : "u_mes_mast_unitOfMeasure",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_mast_user__id_fullName",
       "coln" : "u_mes_mast_user",
       "query" : {
@@ -219,6 +457,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_mast",
       "rel" : "CL20261017-19:21",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_workCalendarException__id_recordNo",
+      "coln" : "u_mes_mast_workCalendarException",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_workCalendar__id_name",
+      "coln" : "u_mes_mast_workCalendar",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -392,6 +664,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_mmr_masterManufacturingRecord__id_title",
+      "coln" : "u_mes_mmr_masterManufacturingRecord",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_mmr",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_perf_alarmDefinition__id_recordNo",
       "coln" : "u_mes_perf_alarmDefinition",
       "query" : {
@@ -423,6 +712,74 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_perf",
       "rel" : "CL20261017-21:22",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_leakTestResult__id_recordNo",
+      "coln" : "u_mes_perf_leakTestResult",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_oeeRecord__id_recordNo",
+      "coln" : "u_mes_perf_oeeRecord",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_processTag__id_description",
+      "coln" : "u_mes_perf_processTag",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "description",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_reasonCategory__id_name",
+      "coln" : "u_mes_perf_reasonCategory",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -630,6 +987,108 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_prod_billOfMaterialComponent__id_recordNo",
+      "coln" : "u_mes_prod_billOfMaterialComponent",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_billOfMaterial__id_recordNo",
+      "coln" : "u_mes_prod_billOfMaterial",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_billOfProcessStep__id_recordNo",
+      "coln" : "u_mes_prod_billOfProcessStep",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_billOfProcess__id_recordNo",
+      "coln" : "u_mes_prod_billOfProcess",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_engineeringChange__id_title",
+      "coln" : "u_mes_prod_engineeringChange",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_itemFamily__id_name",
+      "coln" : "u_mes_prod_itemFamily",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_prod_itemGroup__id_name",
       "coln" : "u_mes_prod_itemGroup",
       "query" : {
@@ -644,6 +1103,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_prod",
       "rel" : "CL20261018-23:10",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_itemRevision__id_recordNo",
+      "coln" : "u_mes_prod_itemRevision",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_ppeItem__id_name",
+      "coln" : "u_mes_prod_ppeItem",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -664,6 +1157,57 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_prod_routingStep__id_recordNo",
+      "coln" : "u_mes_prod_routingStep",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_routing__id_description",
+      "coln" : "u_mes_prod_routing",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "description",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_workInstructionStep__id_recordNo",
+      "coln" : "u_mes_prod_workInstructionStep",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_prod_workInstruction__id_title",
       "coln" : "u_mes_prod_workInstruction",
       "query" : {
@@ -678,6 +1222,261 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_prod",
       "rel" : "CL20261017-21:22",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_audit__id_title",
+      "coln" : "u_mes_qual_audit",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_capa__id_title",
+      "coln" : "u_mes_qual_capa",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_characteristic__id_name",
+      "coln" : "u_mes_qual_characteristic",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_checkSheetResult__id_recordNo",
+      "coln" : "u_mes_qual_checkSheetResult",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_checkSheet__id_name",
+      "coln" : "u_mes_qual_checkSheet",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_controlPlan__id_recordNo",
+      "coln" : "u_mes_qual_controlPlan",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_curveEnvelope__id_name",
+      "coln" : "u_mes_qual_curveEnvelope",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_customerComplaint__id_description",
+      "coln" : "u_mes_qual_customerComplaint",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "description",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_defectGroup__id_name",
+      "coln" : "u_mes_qual_defectGroup",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_deviationPermit__id_title",
+      "coln" : "u_mes_qual_deviationPermit",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_environmentalMonitoringPoint__id_name",
+      "coln" : "u_mes_qual_environmentalMonitoringPoint",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_gaugeCalibration__id_recordNo",
+      "coln" : "u_mes_qual_gaugeCalibration",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_gaugeType__id_name",
+      "coln" : "u_mes_qual_gaugeType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_gauge__id_name",
+      "coln" : "u_mes_qual_gauge",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_inspectionPlan__id_name",
+      "coln" : "u_mes_qual_inspectionPlan",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -698,6 +1497,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_qual_measurementCurve__id_recordNo",
+      "coln" : "u_mes_qual_measurementCurve",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_msaStudy__id_recordNo",
+      "coln" : "u_mes_qual_msaStudy",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_qual_nonconformance__id_title",
       "coln" : "u_mes_qual_nonconformance",
       "query" : {
@@ -715,6 +1548,176 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_qual_pfmea__id_title",
+      "coln" : "u_mes_qual_pfmea",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_ppapSubmission__id_recordNo",
+      "coln" : "u_mes_qual_ppapSubmission",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_productRecall__id_title",
+      "coln" : "u_mes_qual_productRecall",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_qualityHold__id_recordNo",
+      "coln" : "u_mes_qual_qualityHold",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_reworkOrder__id_recordNo",
+      "coln" : "u_mes_qual_reworkOrder",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_samplingPlan__id_name",
+      "coln" : "u_mes_qual_samplingPlan",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_scrapRecord__id_recordNo",
+      "coln" : "u_mes_qual_scrapRecord",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_spcChart__id_name",
+      "coln" : "u_mes_qual_spcChart",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_spcSample__id_recordNo",
+      "coln" : "u_mes_qual_spcSample",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_alertRule__id_name",
+      "coln" : "u_mes_syst_alertRule",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_syst_analyticsModel__id_name",
       "coln" : "u_mes_syst_analyticsModel",
       "query" : {
@@ -729,6 +1732,108 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_syst",
       "rel" : "CL20261018-23:10",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_auditTrail__id_recordNo",
+      "coln" : "u_mes_syst_auditTrail",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_computerisedSystem__id_name",
+      "coln" : "u_mes_syst_computerisedSystem",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_controlledDocument__id_title",
+      "coln" : "u_mes_syst_controlledDocument",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_deviceType__id_name",
+      "coln" : "u_mes_syst_deviceType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_escalationRule__id_name",
+      "coln" : "u_mes_syst_escalationRule",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_integrationConnector__id_name",
+      "coln" : "u_mes_syst_integrationConnector",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {
@@ -763,6 +1868,108 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_syst",
       "rel" : "CL20261018-23:10",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_notification__id_title",
+      "coln" : "u_mes_syst_notification",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_operatorAppStep__id_recordNo",
+      "coln" : "u_mes_syst_operatorAppStep",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_operatorApp__id_name",
+      "coln" : "u_mes_syst_operatorApp",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_statusDefinition__id_statusName",
+      "coln" : "u_mes_syst_statusDefinition",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "statusName",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_statusTransition__id_transitionName",
+      "coln" : "u_mes_syst_statusTransition",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "transitionName",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_userAccessReview__id_recordNo",
+      "coln" : "u_mes_syst_userAccessReview",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261018-23:44",
       "resp" : "CL"
   },
   {

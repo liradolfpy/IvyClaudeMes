@@ -1,0 +1,127 @@
+{
+    "_id" : "mes_prod_operationIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_operation",
+    "stableName" : "mes_prod_operationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_operationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "trackingGrain",
+            "typ" : "string"
+        },
+        {
+            "din" : "isInspection",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isSpecialProcess",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationType",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultWorkCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "trackingGrain",
+            "typ" : "string"
+        },
+        {
+            "din" : "standardCycleTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "standardSetupTimeMin",
+            "typ" : "int"
+        },
+        {
+            "din" : "standardManning",
+            "typ" : "int"
+        },
+        {
+            "din" : "isInspection",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isSpecialProcess",
+            "typ" : "bool"
+        },
+        {
+            "din" : "specialProcessStandard",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresFirstOffApproval",
+            "typ" : "bool"
+        },
+        {
+            "din" : "erpControlKey",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceHint",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_qual_spcSampleInspectionResultIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_spcSampleInspectionResult",
+    "stableName" : "mes_qual_spcSampleInspectionResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_spcSampleInspectionResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "spcSampleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionResultId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcSampleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "spcSampleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "inspectionResultId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionResultName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

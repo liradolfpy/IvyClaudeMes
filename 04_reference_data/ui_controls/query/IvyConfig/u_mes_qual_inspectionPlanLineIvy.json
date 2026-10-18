@@ -1,0 +1,135 @@
+{
+    "_id" : "mes_qual_inspectionPlanLineIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_inspectionPlanLine",
+    "stableName" : "mes_qual_inspectionPlanLineStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_inspectionPlanLineIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "frequencyType",
+            "typ" : "string"
+        },
+        {
+            "din" : "recordType",
+            "typ" : "string"
+        },
+        {
+            "din" : "autoNcOnFail",
+            "typ" : "bool"
+        },
+        {
+            "din" : "overrideAllowed",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampleSize",
+            "typ" : "int"
+        },
+        {
+            "din" : "frequencyType",
+            "typ" : "string"
+        },
+        {
+            "din" : "frequencyValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "recordType",
+            "typ" : "string"
+        },
+        {
+            "din" : "autoNcOnFail",
+            "typ" : "bool"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "overrideAllowed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

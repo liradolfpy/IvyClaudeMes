@@ -1,0 +1,186 @@
+{
+    "_id" : "mes_syst_modelPredictionIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_modelPrediction",
+    "stableName" : "mes_syst_modelPredictionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_modelPredictionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "predictedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "predictionType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelId",
+            "typ" : "string"
+        },
+        {
+            "din" : "analyticsModelName",
+            "typ" : "string"
+        },
+        {
+            "din" : "modelVersion",
+            "typ" : "string"
+        },
+        {
+            "din" : "predictionType",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "predictedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "horizonMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "predictedClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "predictedValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "confidence",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "recommendedAction",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionTakenById",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionTakenBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionTakenAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "actualValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "actualClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "notificationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

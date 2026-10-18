@@ -1,0 +1,143 @@
+{
+    "_id" : "mes_qual_controlPlanIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_controlPlan",
+    "stableName" : "mes_qual_controlPlanStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_controlPlanIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "phase",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "phase",
+            "typ" : "string"
+        },
+        {
+            "din" : "version",
+            "typ" : "int"
+        },
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerApprovalDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "preparedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "preparedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "originalDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "revisionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

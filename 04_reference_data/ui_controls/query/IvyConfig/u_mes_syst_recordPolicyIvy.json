@@ -1,0 +1,119 @@
+{
+    "_id" : "mes_syst_recordPolicyIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_recordPolicy",
+    "stableName" : "mes_syst_recordPolicyStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_recordPolicyIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "lockOnStatusDefinitionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "editRoleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "editPolicy",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresReasonForEdit",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresSignatureForEdit",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "collectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "editPolicy",
+            "typ" : "string"
+        },
+        {
+            "din" : "lockOnStatusDefinitionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lockOnStatusDefinitionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresReasonForEdit",
+            "typ" : "bool"
+        },
+        {
+            "din" : "requiresSignatureForEdit",
+            "typ" : "bool"
+        },
+        {
+            "din" : "editRoleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "editRoleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "deleteAllowed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "retentionYears",
+            "typ" : "int"
+        },
+        {
+            "din" : "archiveAfterMonths",
+            "typ" : "int"
+        },
+        {
+            "din" : "gxpRelevant",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

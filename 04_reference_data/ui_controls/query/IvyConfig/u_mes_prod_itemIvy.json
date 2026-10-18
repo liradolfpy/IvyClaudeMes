@@ -1,0 +1,199 @@
+{
+    "_id" : "mes_prod_itemIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_item",
+    "stableName" : "mes_prod_itemStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_itemIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemGroupId",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseUnitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemType",
+            "typ" : "string"
+        },
+        {
+            "din" : "isSerialised",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isLotControlled",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemType",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemGroupId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemGroupName",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseUnitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseUnitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "drawingNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "drawingRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "revisionDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "materialSpecification",
+            "typ" : "string"
+        },
+        {
+            "din" : "materialGrade",
+            "typ" : "string"
+        },
+        {
+            "din" : "netWeightKg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "grossWeightKg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "procurementType",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultSupplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultSupplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "isSerialised",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isLotControlled",
+            "typ" : "bool"
+        },
+        {
+            "din" : "serialNumberRangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberRangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotNumberRangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotNumberRangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shelfLifeDays",
+            "typ" : "int"
+        },
+        {
+            "din" : "safetyCharacteristic",
+            "typ" : "bool"
+        },
+        {
+            "din" : "hsnCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "standardCostInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "erpMaterialNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultStorageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defaultStorageLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "fefoRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "exposureControlled",
+            "typ" : "bool"
+        },
+        {
+            "din" : "openLifeMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,99 @@
+{
+    "_id" : "mes_syst_operatorAppStepIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_operatorAppStep",
+    "stableName" : "mes_syst_operatorAppStepStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_operatorAppStepIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "operatorAppId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "widgetType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorAppId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorAppName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "widgetType",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workInstructionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nextStepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

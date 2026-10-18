@@ -1,0 +1,114 @@
+{
+    "_id" : "mes_syst_userAccessReviewIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_userAccessReview",
+    "stableName" : "mes_syst_userAccessReviewStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_userAccessReviewIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "reviewPeriodFromDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "computerisedSystemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "computerisedSystemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "computerisedSystemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewPeriodFromDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "reviewPeriodToDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "usersReviewedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "accessRemovedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "accessChangedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "reviewedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

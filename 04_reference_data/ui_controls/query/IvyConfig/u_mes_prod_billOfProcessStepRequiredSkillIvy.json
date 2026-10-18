@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_prod_billOfProcessStepRequiredSkillIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_billOfProcessStepRequiredSkill",
+    "stableName" : "mes_prod_billOfProcessStepRequiredSkillStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_billOfProcessStepRequiredSkillIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "billOfProcessStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiredSkillId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessStepId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessStepName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "requiredSkillId",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiredSkillName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,158 @@
+{
+    "_id" : "mes_mast_skillCertificationIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_skillCertification",
+    "stableName" : "mes_mast_skillCertificationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_skillCertificationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "awardedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "skillId",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessmentMethod",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "userId",
+            "typ" : "string"
+        },
+        {
+            "din" : "userName",
+            "typ" : "string"
+        },
+        {
+            "din" : "skillId",
+            "typ" : "string"
+        },
+        {
+            "din" : "skillName",
+            "typ" : "string"
+        },
+        {
+            "din" : "level",
+            "typ" : "int"
+        },
+        {
+            "din" : "awardedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "validFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "validTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "assessorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "assessmentScore",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "assessmentMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "trainingHours",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "evidenceControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "evidenceControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "restrictions",
+            "typ" : "string"
+        },
+        {
+            "din" : "revokedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "revokedReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "nextReviewAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "trainedDocumentRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "requalificationRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "revocationSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

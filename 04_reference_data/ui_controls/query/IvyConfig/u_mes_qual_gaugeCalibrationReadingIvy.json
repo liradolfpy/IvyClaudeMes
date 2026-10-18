@@ -1,0 +1,83 @@
+{
+    "_id" : "mes_qual_gaugeCalibrationReadingIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_gaugeCalibrationReading",
+    "stableName" : "mes_qual_gaugeCalibrationReadingStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_gaugeCalibrationReadingIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "gaugeCalibrationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "withinTolerance",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeCalibrationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeCalibrationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "nominal",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "asFound",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "asLeft",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "tolerance",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "withinTolerance",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,162 @@
+{
+    "_id" : "mes_qual_ppapSubmissionIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_ppapSubmission",
+    "stableName" : "mes_qual_ppapSubmissionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_ppapSubmissionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "pswSignedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "submissionReason",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "submissionLevel",
+            "typ" : "int"
+        },
+        {
+            "din" : "submissionReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "pfmeaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampleQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "significantProductionRunQuantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "pswSignedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "pswSignedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "pswSignedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "submittedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "customerDecision",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerDecisionAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "customerRemarks",
+            "typ" : "string"
+        },
+        {
+            "din" : "interimApprovalValidTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

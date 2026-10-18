@@ -1,0 +1,107 @@
+{
+    "_id" : "mes_perf_leakTestResultStageIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_leakTestResultStage",
+    "stableName" : "mes_perf_leakTestResultStageStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_leakTestResultStageIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "leakTestResultId",
+            "typ" : "string"
+        },
+        {
+            "din" : "stageName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stageResult",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "leakTestResultId",
+            "typ" : "string"
+        },
+        {
+            "din" : "leakTestResultName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stageNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "stageName",
+            "typ" : "string"
+        },
+        {
+            "din" : "testPressureBar",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "fillTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "stabiliseTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "testTimeSec",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "pressureDropPa",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "leakRateSccm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "limitPressureDropPa",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "limitLeakRateSccm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "stageResult",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

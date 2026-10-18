@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_qual_capaImplementationActionIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_capaImplementationAction",
+    "stableName" : "mes_qual_capaImplementationActionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_capaImplementationActionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "verifiedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "effective",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "verifiedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "verifiedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "effective",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

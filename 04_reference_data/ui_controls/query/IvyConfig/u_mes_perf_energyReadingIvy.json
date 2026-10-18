@@ -1,0 +1,166 @@
+{
+    "_id" : "mes_perf_energyReadingIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_energyReading",
+    "stableName" : "mes_perf_energyReadingStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_energyReadingIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "intervalStartAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "meterIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "energyTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "signalQuality",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "meterIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "meterIotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "energyTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "energyTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "intervalStartAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "intervalEndAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "consumption",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "meterReadingStart",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "meterReadingEnd",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "demandKw",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "powerFactor",
+            "typ" : "double"
+        },
+        {
+            "din" : "costInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitsProduced",
+            "typ" : "int"
+        },
+        {
+            "din" : "specificConsumption",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "signalQuality",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

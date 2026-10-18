@@ -1,0 +1,190 @@
+{
+    "_id" : "mes_qual_customerComplaintIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_customerComplaint",
+    "stableName" : "mes_qual_customerComplaintStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_customerComplaintIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "reportedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "complaintTypeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerRefNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "complaintTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "complaintTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectDescription",
+            "typ" : "string"
+        },
+        {
+            "din" : "reportedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "receivedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "receivedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "occurredAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "customerLocation",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantityComplained",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityConfirmed",
+            "typ" : "int"
+        },
+        {
+            "din" : "vehicleModelId",
+            "typ" : "string"
+        },
+        {
+            "din" : "vehicleModelName",
+            "typ" : "string"
+        },
+        {
+            "din" : "mileageKm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "severity",
+            "typ" : "int"
+        },
+        {
+            "din" : "isSafetyRelated",
+            "typ" : "bool"
+        },
+        {
+            "din" : "containmentDueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "containmentSentAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "debitNoteInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "ppmImpact",
+            "typ" : "int"
+        },
+        {
+            "din" : "sortingCostInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "customerClosedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

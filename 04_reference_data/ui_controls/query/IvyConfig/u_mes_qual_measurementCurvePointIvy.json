@@ -1,0 +1,78 @@
+{
+    "_id" : "mes_qual_measurementCurvePointIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_measurementCurvePoint",
+    "stableName" : "mes_qual_measurementCurvePointStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_measurementCurvePointIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "sampledAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "measurementCurveId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveId",
+            "typ" : "string"
+        },
+        {
+            "din" : "measurementCurveName",
+            "typ" : "string"
+        },
+        {
+            "din" : "pointNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "sampledAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "xValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "yValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

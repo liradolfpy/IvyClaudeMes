@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_qual_ppapSubmissionMsaStudyIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_ppapSubmissionMsaStudy",
+    "stableName" : "mes_qual_ppapSubmissionMsaStudyStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_ppapSubmissionMsaStudyIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "ppapSubmissionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "msaStudyId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "ppapSubmissionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ppapSubmissionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "msaStudyId",
+            "typ" : "string"
+        },
+        {
+            "din" : "msaStudyName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "_id" : "mes_qual_environmentalMonitoringPointIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_environmentalMonitoringPoint",
+    "stableName" : "mes_qual_environmentalMonitoringPointStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_environmentalMonitoringPointIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "areaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "monitoredParameter",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "areaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "areaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "monitoredParameter",
+            "typ" : "string"
+        },
+        {
+            "din" : "parameterUnitText",
+            "typ" : "string"
+        },
+        {
+            "din" : "limitDirection",
+            "typ" : "string"
+        },
+        {
+            "din" : "alertLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "actionLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lowerActionLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "samplingFrequency",
+            "typ" : "string"
+        },
+        {
+            "din" : "processTagId",
+            "typ" : "string"
+        },
+        {
+            "din" : "processTagName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

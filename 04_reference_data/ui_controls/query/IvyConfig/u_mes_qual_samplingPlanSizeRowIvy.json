@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_qual_samplingPlanSizeRowIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_samplingPlanSizeRow",
+    "stableName" : "mes_qual_samplingPlanSizeRowStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_samplingPlanSizeRowIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "samplingPlanId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "samplingPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "samplingPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "lotSizeFrom",
+            "typ" : "int"
+        },
+        {
+            "din" : "lotSizeTo",
+            "typ" : "int"
+        },
+        {
+            "din" : "sampleSize",
+            "typ" : "int"
+        },
+        {
+            "din" : "acceptNumber",
+            "typ" : "int"
+        },
+        {
+            "din" : "rejectNumber",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

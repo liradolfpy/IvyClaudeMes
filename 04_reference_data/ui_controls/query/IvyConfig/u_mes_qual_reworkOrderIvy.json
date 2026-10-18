@@ -1,0 +1,206 @@
+{
+    "_id" : "mes_qual_reworkOrderIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_reworkOrder",
+    "stableName" : "mes_qual_reworkOrderStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_reworkOrderIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "startedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reworkRoutingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reworkType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "reworkRoutingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reworkRoutingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reworkType",
+            "typ" : "string"
+        },
+        {
+            "din" : "instruction",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "issuedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "issuedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "issuedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "reinspectionResult",
+            "typ" : "string"
+        },
+        {
+            "din" : "reinspectedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reinspectedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reinspectedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "quantityRecovered",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityScrapped",
+            "typ" : "int"
+        },
+        {
+            "din" : "reworkAttemptNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "returnStepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "labourMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "reasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "releasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

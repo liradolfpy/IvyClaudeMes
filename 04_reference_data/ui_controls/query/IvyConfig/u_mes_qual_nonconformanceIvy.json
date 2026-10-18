@@ -1,0 +1,234 @@
+{
+    "_id" : "mes_qual_nonconformanceIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_nonconformance",
+    "stableName" : "mes_qual_nonconformanceStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_nonconformanceIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "detectedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ncType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "ncType",
+            "typ" : "string"
+        },
+        {
+            "din" : "source",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "detectedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtWorkCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtWorkCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "originOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "originOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantityAffected",
+            "typ" : "int"
+        },
+        {
+            "din" : "quantityRejected",
+            "typ" : "int"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaId",
+            "typ" : "string"
+        },
+        {
+            "din" : "capaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "rootCauseSummary",
+            "typ" : "string"
+        },
+        {
+            "din" : "severity",
+            "typ" : "int"
+        },
+        {
+            "din" : "costInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "closedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "closedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "closedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "productImpactText",
+            "typ" : "string"
+        },
+        {
+            "din" : "investigationDueDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "qaApprovedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "qaApprovedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "qaApprovedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "riskAssessmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "riskAssessmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

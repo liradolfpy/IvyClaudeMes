@@ -1,0 +1,166 @@
+{
+    "_id" : "mes_bmr_batchRecordReviewIvy",
+    "code" : "bmr",
+    "moduleName" : "BatchManufacturingRecord",
+    "collection" : "u_mes_bmr_batchRecordReview",
+    "stableName" : "mes_bmr_batchRecordReviewStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_bmr_batchRecordReviewIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "productionReviewedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewScope",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewScope",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationsCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "exceptionCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "openExceptionCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "genealogyComplete",
+            "typ" : "bool"
+        },
+        {
+            "din" : "yieldReconciliationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "yieldReconciliationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditTrailReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditTrailReviewName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionReviewedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionReviewedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionReviewedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "qaReviewedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "qaReviewedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "qaReviewedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "electronicSignatureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "electronicSignatureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "returnReasonText",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

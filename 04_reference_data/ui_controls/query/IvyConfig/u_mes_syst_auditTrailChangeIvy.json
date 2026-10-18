@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_syst_auditTrailChangeIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_auditTrailChange",
+    "stableName" : "mes_syst_auditTrailChangeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_auditTrailChangeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "auditTrailId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditTrailId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditTrailName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "changedFieldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "oldValue",
+            "typ" : "string"
+        },
+        {
+            "din" : "newValue",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

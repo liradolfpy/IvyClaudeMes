@@ -1,0 +1,143 @@
+{
+    "_id" : "mes_mast_enterpriseIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_enterprise",
+    "stableName" : "mes_mast_enterpriseStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_enterpriseIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentEnterpriseId",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressCountryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "scope",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "legalName",
+            "typ" : "string"
+        },
+        {
+            "din" : "scope",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentEnterpriseId",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentEnterpriseName",
+            "typ" : "string"
+        },
+        {
+            "din" : "cin",
+            "typ" : "string"
+        },
+        {
+            "din" : "gstin",
+            "typ" : "string"
+        },
+        {
+            "din" : "pan",
+            "typ" : "string"
+        },
+        {
+            "din" : "industryCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressLine1",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressLine2",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressCity",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressState",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressPostalCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressCountryId",
+            "typ" : "string"
+        },
+        {
+            "din" : "registeredAddressCountryName",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseCurrencyId",
+            "typ" : "string"
+        },
+        {
+            "din" : "baseCurrencyName",
+            "typ" : "string"
+        },
+        {
+            "din" : "fiscalYearStartMonth",
+            "typ" : "int"
+        },
+        {
+            "din" : "website",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

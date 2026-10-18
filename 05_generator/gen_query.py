@@ -63,6 +63,7 @@ SEARCH_LENGTH = 4
 SEARCH_PLACEHOLDER = "Type min 4 characters"
 DATE_FORMAT = "YYYY-MM-DD"
 MAX_CONTROLS = 8
+QUERY_LAYOUT = "singleLine"   # dictData.config.queryLayout (skill 0.22, D076)
 MAX_DATA_VALUES = 10
 MAX_LABEL = 25
 AUDIT_KEYS = ["createdAt", "createdById", "createdBy", "updatedAt", "updatedById", "updatedBy"]
@@ -305,7 +306,7 @@ def build_page(coll, controls, matrix, ver):
         "_id": coll[2:] + "Query", "dictName": coll[2:] + "Query", "typ": "PageConfigQuery", "page": "Phantom",
         "dictData": {"config": {
             "method": "GET", "pageTitle": matrix[coll]["label"], "api": "/ivy/mes",
-            "params": {"op": "st"}, "footerButtons": {}, "modalElements": controls}},
+            "params": {"op": "st"}, "footerButtons": {}, "queryLayout": QUERY_LAYOUT, "modalElements": controls}},
         "ver": ver, "unq": False, "subTyp": "PhantomQuery", "act": False,
         "approve": [], "delete": [], "dynamicModal": [], "edit": [], "mint": "1", "view": [],
         "rel": ver, "projid": "",
@@ -380,6 +381,7 @@ def check(root, fields, matrix, inventory_display, mdict):
         if page.get("typ") != "PageConfigQuery" or list(page.get("dictData", {}).keys()) != ["config"]:
             f("frame typ / dictData")
         if cfg.get("api") != "/ivy/mes" or cfg.get("params") != {"op": "st"} or cfg.get("footerButtons") != {} \
+                or cfg.get("queryLayout") != QUERY_LAYOUT \
                 or cfg.get("method") != "GET" or cfg.get("pageTitle") != matrix.get(coll, {}).get("label"):
             f("frame config")
         if page.get("ver") != page.get("rel") or not re.fullmatch(r"\d{8}-\d{4}", page.get("ver", "")):
@@ -495,7 +497,7 @@ def check(root, fields, matrix, inventory_display, mdict):
                         g("registry %s does not match %s.%s" % (dn, target, inventory_display.get(target)))
             else:
                 g("unknown source")
-            if di == "shiftId" and api != "/cropdown":
+            if di == "shiftId" and api != "/cropdown" and model.get("parent") != "u_mes_mast_shift":
                 g("shift must use cropdown Shift")
         # 18, 19 IvyConfig
         ipath = os.path.join(qdir, "IvyConfig", coll + "Ivy.json")
@@ -670,7 +672,10 @@ def propose(md, coll):
     if not entity:
         pk = next((k for k, t, r in md.fields[coll]["keys"] if r.split(".")[0] == f["parent"]), None)
         if pk:
-            add(md.source(pk, f["parent"]))
+            if f["parent"] == "u_mes_mast_shift":   # children of the shift master hold its _id, not the shift code (F2)
+                add(DD(pk, ("u_mes_mast_shift", md.display.get("u_mes_mast_shift", "name"))))
+            else:
+                add(md.source(pk, f["parent"]))
     if entity and f["class"] == "transaction":
         scope = [k for k in SCOPE_KEYS if k in f["keys"]][:2]
         for k in scope:
@@ -751,7 +756,8 @@ def main(argv):
                     print("%-42s %s  missing %s  extra %s" % (coll, "same" if have == got else "diff",
                           [k for k in have if k not in got], [k for k in got if k not in have]))
                     continue
-                if coll in SCREENS and "--all" not in argv:
+                exists = os.path.exists(os.path.join(root, "04_reference_data", "ui_controls", "query", "PageConfigs", coll + ".json"))
+                if (coll in SCREENS or exists) and "--all" not in argv:
                     continue
                 print('    "%s": [%s],%s' % (coll, ", ".join(ctl_src(c) for c in ctl),
                                           ("  # " + "; ".join(notes)) if notes else ""))

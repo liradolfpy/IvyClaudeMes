@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_mast_rolePermissionIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_rolePermission",
+    "stableName" : "mes_mast_rolePermissionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_rolePermissionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "permissionId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleId",
+            "typ" : "string"
+        },
+        {
+            "din" : "roleName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "permissionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "permissionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

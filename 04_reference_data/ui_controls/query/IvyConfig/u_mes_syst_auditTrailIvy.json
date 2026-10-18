@@ -1,0 +1,130 @@
+{
+    "_id" : "mes_syst_auditTrailIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_auditTrail",
+    "stableName" : "mes_syst_auditTrailStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_auditTrailIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "changedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "changeAction",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeAction",
+            "typ" : "string"
+        },
+        {
+            "din" : "changedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "changedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "changedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reasonText",
+            "typ" : "string"
+        },
+        {
+            "din" : "electronicSignatureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "electronicSignatureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "clientIp",
+            "typ" : "string"
+        },
+        {
+            "din" : "application",
+            "typ" : "string"
+        },
+        {
+            "din" : "documentVersionBefore",
+            "typ" : "int"
+        },
+        {
+            "din" : "documentVersionAfter",
+            "typ" : "int"
+        },
+        {
+            "din" : "previousHash",
+            "typ" : "string"
+        },
+        {
+            "din" : "entryHash",
+            "typ" : "string"
+        },
+        {
+            "din" : "gxpRelevant",
+            "typ" : "bool"
+        },
+        {
+            "din" : "auditTrailReviewId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditTrailReviewName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

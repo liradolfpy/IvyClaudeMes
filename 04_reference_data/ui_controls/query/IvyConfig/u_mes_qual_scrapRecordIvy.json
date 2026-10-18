@@ -1,0 +1,230 @@
+{
+    "_id" : "mes_qual_scrapRecordIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_scrapRecord",
+    "stableName" : "mes_qual_scrapRecordStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_scrapRecordIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "declaredAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "defectCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "weightKg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "originOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "originOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtOperationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "detectedAtOperationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shiftName",
+            "typ" : "string"
+        },
+        {
+            "din" : "scrapType",
+            "typ" : "string"
+        },
+        {
+            "din" : "scrapCostInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "declaredById",
+            "typ" : "string"
+        },
+        {
+            "din" : "declaredBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "declaredAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "scrapLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "scrapLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "disposalMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "erpPosted",
+            "typ" : "bool"
+        },
+        {
+            "din" : "serialNumberId",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "dispositionTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

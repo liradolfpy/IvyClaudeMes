@@ -1,0 +1,163 @@
+{
+    "_id" : "mes_prod_workInstructionIvy",
+    "code" : "prod",
+    "moduleName" : "ProductDefinition",
+    "collection" : "u_mes_prod_workInstruction",
+    "stableName" : "mes_prod_workInstructionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_prod_workInstructionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "generationSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "readAcknowledgementRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reacknowledgeOnRevision",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "version",
+            "typ" : "int"
+        },
+        {
+            "din" : "languageId",
+            "typ" : "string"
+        },
+        {
+            "din" : "languageName",
+            "typ" : "string"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "effectiveTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "safetyNotes",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "readAcknowledgementRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reacknowledgeOnRevision",
+            "typ" : "bool"
+        },
+        {
+            "din" : "generationSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "sourceBillOfProcessId",
+            "typ" : "string"
+        },
+        {
+            "din" : "sourceBillOfProcessName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

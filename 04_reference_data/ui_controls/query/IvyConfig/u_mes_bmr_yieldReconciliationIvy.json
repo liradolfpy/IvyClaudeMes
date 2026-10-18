@@ -1,0 +1,170 @@
+{
+    "_id" : "mes_bmr_yieldReconciliationIvy",
+    "code" : "bmr",
+    "moduleName" : "BatchManufacturingRecord",
+    "collection" : "u_mes_bmr_yieldReconciliation",
+    "stableName" : "mes_bmr_yieldReconciliationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_bmr_yieldReconciliationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "calculatedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "reconciliationType",
+            "typ" : "string"
+        },
+        {
+            "din" : "withinLimits",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reconciliationType",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "theoreticalQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "issuedQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "outputQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "rejectedQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "destroyedQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "returnedQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unaccountedQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "yieldPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lowerLimitPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "upperLimitPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "withinLimits",
+            "typ" : "bool"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "calculatedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

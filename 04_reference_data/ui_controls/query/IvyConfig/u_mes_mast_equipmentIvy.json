@@ -1,0 +1,259 @@
+{
+    "_id" : "mes_mast_equipmentIvy",
+    "code" : "mast",
+    "moduleName" : "MasterDataManagement",
+    "collection" : "u_mes_mast_equipment",
+    "stableName" : "mes_mast_equipmentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mast_equipmentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "calibrationRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "isProductionReady",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentEquipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentEquipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "manufacturerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "manufacturerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "model",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "yearOfManufacture",
+            "typ" : "int"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "assetNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "commissionedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "ratedCapacity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "ratedCapacityUnitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ratedCapacityUnitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "ratedPowerKw",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "controllerMake",
+            "typ" : "string"
+        },
+        {
+            "din" : "controllerModel",
+            "typ" : "string"
+        },
+        {
+            "din" : "controllerIpAddress",
+            "typ" : "string"
+        },
+        {
+            "din" : "controllerProtocol",
+            "typ" : "string"
+        },
+        {
+            "din" : "criticality",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentState",
+            "typ" : "string"
+        },
+        {
+            "din" : "currentStateSince",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lifetimeCycles",
+            "typ" : "int"
+        },
+        {
+            "din" : "lifetimeRunHours",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "nextMaintenanceDueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "calibrationRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "safetyCategory",
+            "typ" : "string"
+        },
+        {
+            "din" : "isProductionReady",
+            "typ" : "bool"
+        },
+        {
+            "din" : "readinessReasonText",
+            "typ" : "string"
+        },
+        {
+            "din" : "healthScore",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "healthScoreAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "acquisitionCostInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "plannedReplacementDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "qualificationStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "requalificationDueDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "cleanStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "cleanHoldExpiresAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastCleaningRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastCleaningRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

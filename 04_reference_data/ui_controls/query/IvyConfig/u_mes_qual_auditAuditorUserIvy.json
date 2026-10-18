@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_qual_auditAuditorUserIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_auditAuditorUser",
+    "stableName" : "mes_qual_auditAuditorUserStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_auditAuditorUserIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "auditId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditorUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "auditorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "auditorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_perf_downtimeEventCommentIvy",
+    "code" : "perf",
+    "moduleName" : "PerformanceManagement",
+    "collection" : "u_mes_perf_downtimeEventComment",
+    "stableName" : "mes_perf_downtimeEventCommentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_perf_downtimeEventCommentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventId",
+            "typ" : "string"
+        },
+        {
+            "din" : "downtimeEventName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "commentedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "authorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "authorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "commentText",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

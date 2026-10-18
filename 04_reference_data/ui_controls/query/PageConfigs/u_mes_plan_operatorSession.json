@@ -14,6 +14,7 @@
             "footerButtons" : {
 
             },
+            "queryLayout" : "singleLine",
             "modalElements" : [
                 {
                     "typ" : "rangePicker",
@@ -177,7 +178,7 @@
             ]
         }
     },
-    "ver" : "20261018-2313",
+    "ver" : "20261018-2326",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -197,6 +198,6 @@
     "view" : [
 
     ],
-    "rel" : "20261018-2313",
+    "rel" : "20261018-2326",
     "projid" : ""
 }

@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_mmr_masterManufacturingRecordRecipeIvy",
+    "code" : "mmr",
+    "moduleName" : "MasterManufacturingRecord",
+    "collection" : "u_mes_mmr_masterManufacturingRecordRecipe",
+    "stableName" : "mes_mmr_masterManufacturingRecordRecipeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mmr_masterManufacturingRecordRecipeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "masterManufacturingRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterManufacturingRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "masterManufacturingRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

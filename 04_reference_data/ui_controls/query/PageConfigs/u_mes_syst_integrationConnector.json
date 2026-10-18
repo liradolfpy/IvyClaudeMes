@@ -1,0 +1,141 @@
+{
+    "_id" : "mes_syst_integrationConnectorQuery",
+    "dictName" : "mes_syst_integrationConnectorQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Integration Connectors",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "queryLayout" : "singleLine",
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Active" : "Active",
+                        "Disabled" : "Disabled"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Protocol",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Protocol",
+                    "errorMessage" : "Please Select Protocol",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "protocol",
+                    "p_data_index" : "protocolText",
+                    "data" : {
+                        "HTTPS REST" : "HTTPS REST",
+                        "OPC UA" : "OPC UA",
+                        "Open Protocol" : "Open Protocol",
+                        "Modbus TCP" : "Modbus TCP",
+                        "MQTT" : "MQTT",
+                        "ZPL Over TCP" : "ZPL Over TCP",
+                        "SMTP" : "SMTP",
+                        "Serial Over TCP" : "Serial Over TCP"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Environment",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Environment",
+                    "errorMessage" : "Please Select Environment",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "environment",
+                    "p_data_index" : "environmentText",
+                    "data" : {
+                        "Production" : "Production",
+                        "Quality" : "Quality",
+                        "Development" : "Development"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Auth Method",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Auth Method",
+                    "errorMessage" : "Please Select Auth Method",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "authMethod",
+                    "p_data_index" : "authMethodText",
+                    "data" : {
+                        "OAuth2 Client Credentials" : "OAuth2 Client Credentials",
+                        "Certificate" : "Certificate",
+                        "Basic" : "Basic",
+                        "None" : "None"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2344",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2344",
+    "projid" : ""
+}

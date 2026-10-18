@@ -1,0 +1,203 @@
+{
+    "_id" : "mes_qual_gaugeIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_gauge",
+    "stableName" : "mes_qual_gaugeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_gaugeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "manufacturerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "calibrationSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "isMasterGauge",
+            "typ" : "bool"
+        },
+        {
+            "din" : "blockedForUse",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "manufacturerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "manufacturerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "model",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "rangeMin",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "rangeMax",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "rangeUnitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "rangeUnitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "resolution",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "accuracy",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "calibrationIntervalDays",
+            "typ" : "int"
+        },
+        {
+            "din" : "calibrationSource",
+            "typ" : "string"
+        },
+        {
+            "din" : "calibrationSupplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "calibrationSupplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastCalibratedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "nextCalibrationDueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastGaugeCalibrationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastGaugeCalibrationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "usageCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "purchasedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "isMasterGauge",
+            "typ" : "bool"
+        },
+        {
+            "din" : "blockedForUse",
+            "typ" : "bool"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

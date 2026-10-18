@@ -1,0 +1,247 @@
+{
+    "_id" : "mes_mmr_masterManufacturingRecordIvy",
+    "code" : "mmr",
+    "moduleName" : "MasterManufacturingRecord",
+    "collection" : "u_mes_mmr_masterManufacturingRecord",
+    "stableName" : "mes_mmr_masterManufacturingRecordStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_mmr_masterManufacturingRecordIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevisionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevisionId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevisionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "version",
+            "typ" : "int"
+        },
+        {
+            "din" : "previousMasterManufacturingRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "previousMasterManufacturingRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfMaterialId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfMaterialName",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingId",
+            "typ" : "string"
+        },
+        {
+            "din" : "routingName",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessId",
+            "typ" : "string"
+        },
+        {
+            "din" : "billOfProcessName",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionPlanName",
+            "typ" : "string"
+        },
+        {
+            "din" : "packagingSpecificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "packagingSpecificationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateName",
+            "typ" : "string"
+        },
+        {
+            "din" : "processValidationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "processValidationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "controlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "engineeringChangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "changeReasonText",
+            "typ" : "string"
+        },
+        {
+            "din" : "standardBatchSize",
+            "typ" : "int"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "theoreticalQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lowerLimitPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "upperLimitPct",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "effectiveTo",
+            "typ" : "Date"
+        },
+        {
+            "din" : "authoredById",
+            "typ" : "string"
+        },
+        {
+            "din" : "authoredBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

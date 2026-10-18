@@ -1,0 +1,138 @@
+{
+    "_id" : "mes_syst_systemPeriodicReviewIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_systemPeriodicReview",
+    "stableName" : "mes_syst_systemPeriodicReviewStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_systemPeriodicReviewIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "reviewPeriodFromDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "computerisedSystemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "computerisedSystemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "computerisedSystemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewPeriodFromDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "reviewPeriodToDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "changesReviewedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "incidentsReviewedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "deviationsReviewedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "auditTrailReviewed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "accessReviewed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "backupRestoreVerified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "validatedStateConfirmed",
+            "typ" : "bool"
+        },
+        {
+            "din" : "findingsText",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "reviewedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "approvedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "nextReviewDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

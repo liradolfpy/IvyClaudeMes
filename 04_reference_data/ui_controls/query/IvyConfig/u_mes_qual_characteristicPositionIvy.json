@@ -1,0 +1,95 @@
+{
+    "_id" : "mes_qual_characteristicPositionIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_characteristicPosition",
+    "stableName" : "mes_qual_characteristicPositionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_characteristicPositionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicId",
+            "typ" : "string"
+        },
+        {
+            "din" : "characteristicName",
+            "typ" : "string"
+        },
+        {
+            "din" : "positionNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "positionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nominal",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "lowerSpecLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "upperSpecLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

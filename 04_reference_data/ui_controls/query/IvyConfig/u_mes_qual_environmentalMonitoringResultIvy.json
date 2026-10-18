@@ -1,0 +1,114 @@
+{
+    "_id" : "mes_qual_environmentalMonitoringResultIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_environmentalMonitoringResult",
+    "stableName" : "mes_qual_environmentalMonitoringResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_environmentalMonitoringResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "sampledAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "environmentalMonitoringPointId",
+            "typ" : "string"
+        },
+        {
+            "din" : "limitEvaluation",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "environmentalMonitoringPointId",
+            "typ" : "string"
+        },
+        {
+            "din" : "environmentalMonitoringPointName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampledAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "measuredValue",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "limitEvaluation",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampledById",
+            "typ" : "string"
+        },
+        {
+            "din" : "sampledBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "gaugeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productImpactText",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

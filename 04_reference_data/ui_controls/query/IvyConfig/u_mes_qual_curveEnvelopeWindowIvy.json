@@ -1,0 +1,99 @@
+{
+    "_id" : "mes_qual_curveEnvelopeWindowIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_curveEnvelopeWindow",
+    "stableName" : "mes_qual_curveEnvelopeWindowStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_curveEnvelopeWindowIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "curveEnvelopeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "windowType",
+            "typ" : "string"
+        },
+        {
+            "din" : "entrySide",
+            "typ" : "string"
+        },
+        {
+            "din" : "exitSide",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "curveEnvelopeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "windowNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "windowType",
+            "typ" : "string"
+        },
+        {
+            "din" : "xMin",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "xMax",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "yMin",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "yMax",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "entrySide",
+            "typ" : "string"
+        },
+        {
+            "din" : "exitSide",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

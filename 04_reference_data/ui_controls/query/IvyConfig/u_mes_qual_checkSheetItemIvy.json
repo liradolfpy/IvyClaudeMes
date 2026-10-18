@@ -1,0 +1,99 @@
+{
+    "_id" : "mes_qual_checkSheetItemIvy",
+    "code" : "qual",
+    "moduleName" : "QualityManagement",
+    "collection" : "u_mes_qual_checkSheetItem",
+    "stableName" : "mes_qual_checkSheetItemStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_qual_checkSheetItemIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "checkSheetId",
+            "typ" : "string"
+        },
+        {
+            "din" : "answerType",
+            "typ" : "string"
+        },
+        {
+            "din" : "isCritical",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "checkSheetId",
+            "typ" : "string"
+        },
+        {
+            "din" : "checkSheetName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "question",
+            "typ" : "string"
+        },
+        {
+            "din" : "answerType",
+            "typ" : "string"
+        },
+        {
+            "din" : "expectedAnswer",
+            "typ" : "string"
+        },
+        {
+            "din" : "lowerLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "upperLimit",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitText",
+            "typ" : "string"
+        },
+        {
+            "din" : "isCritical",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reactionOnFail",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}
