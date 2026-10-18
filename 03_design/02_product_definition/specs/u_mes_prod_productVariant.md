@@ -36,7 +36,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 12 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 13 | optionsHand | String | - | No (null allowed) | Options hand | `"LH"` | LH; RH |
-| 14 | optionsPistonDiameterMm | Decimal128 | - | No (null allowed) | Options piston diameter (mm) | `NumberDecimal("54.0")` |  |
+| 14 | optionsPistonDiameterMm | Decimal128 | - | No (null allowed) | Options piston diameter (mm) | `54.0` |  |
 | 15 | optionsPadCompoundId | String | - | No (null allowed) | Reference to u_mes_prod_padCompound._id: options pad compound | `"1274000000000001"` | Reference: u_mes_prod_padCompound._id |
 | 16 | optionsPadCompoundName | String | - | No (null allowed) | Display value of optionsPadCompoundId, copied from u_mes_prod_padCompound.name | `"NAO Ceramic"` |  |
 | 17 | optionsMarketId | String | - | No (null allowed) | Reference to u_mes_prod_market._id: options market | `"1273000000000001"` | Reference: u_mes_prod_market._id |

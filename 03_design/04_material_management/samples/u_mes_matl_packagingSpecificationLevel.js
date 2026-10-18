@@ -13,9 +13,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000001",
     packTypeName: "VCI Bag",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -30,9 +30,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000002",
     packTypeName: "Tray",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -47,9 +47,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000003",
     packTypeName: "Bin",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -64,9 +64,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000004",
     packTypeName: "Pallet",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -81,9 +81,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000005",
     packTypeName: "Layer Pad",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -98,9 +98,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000006",
     packTypeName: "Box",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -115,9 +115,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000007",
     packTypeName: "Crate",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -132,9 +132,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000008",
     packTypeName: "Sleeve",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -149,9 +149,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000009",
     packTypeName: "Lid",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -166,9 +166,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000010",
     packTypeName: "Strapped Load",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -183,9 +183,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000011",
     packTypeName: "Blister",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -200,9 +200,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000012",
     packTypeName: "Carton",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -217,9 +217,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000013",
     packTypeName: "Bottle",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -234,9 +234,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000014",
     packTypeName: "Shipper",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -251,9 +251,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000015",
     packTypeName: "Pallet",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -268,9 +268,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000016",
     packTypeName: "Leaflet",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -285,9 +285,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000017",
     packTypeName: "Shrink Wrap",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -302,9 +302,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000018",
     packTypeName: "Drum",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -319,9 +319,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000019",
     packTypeName: "Polybag",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -336,9 +336,9 @@ db.getCollection("u_mes_matl_packagingSpecificationLevel").insertMany([
     packTypeId: "1281000000000020",
     packTypeName: "Intermediate Bulk Container",
     quantity: NumberInt(1),
-    lengthMm: NumberDecimal("600.0"),
-    widthMm: NumberDecimal("400.0"),
-    heightMm: NumberDecimal("280.0"),
+    lengthMm: 600.0,
+    widthMm: 400.0,
+    heightMm: 280.0,
     schemaVersion: NumberInt(1)
   }
 ]);

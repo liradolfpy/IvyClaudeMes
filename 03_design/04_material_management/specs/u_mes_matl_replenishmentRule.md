@@ -37,10 +37,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 12 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |
 | 13 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Piston and Seal Assembly Station"` |  |
 | 14 | triggerType | String | - | Yes | How replenishment is triggered | `"Kanban Scan"` | Consumption; Kanban Scan; Min-Max; Order Demand |
-| 15 | minQuantity | Decimal128 | - | Yes | Minimum quantity | `NumberDecimal("96")` |  |
-| 16 | maxQuantity | Decimal128 | - | Yes | Maximum quantity | `NumberDecimal("480")` |  |
-| 17 | reorderPointQuantity | Decimal128 | - | Yes | Quantity that triggers a request | `NumberDecimal("192")` |  |
-| 18 | kanbanQuantity | Decimal128 | - | No (null allowed) | Quantity per kanban | `NumberDecimal("96")` |  |
+| 15 | minQuantity | Decimal128 | - | Yes | Minimum quantity | `96` |  |
+| 16 | maxQuantity | Decimal128 | - | Yes | Maximum quantity | `480` |  |
+| 17 | reorderPointQuantity | Decimal128 | - | Yes | Quantity that triggers a request | `192` |  |
+| 18 | kanbanQuantity | Decimal128 | - | No (null allowed) | Quantity per kanban | `96` |  |
 | 19 | kanbanCount | Int32 | - | No (null allowed) | Number of kanbans in the loop | `NumberInt(5)` |  |
 | 20 | containerTypeId | String | - | No (null allowed) | Reference to u_mes_plan_containerType._id | `"1278000000000002"` | Reference: u_mes_plan_containerType._id |
 | 21 | containerTypeName | String | - | No (null allowed) | Display value of containerTypeId, copied from u_mes_plan_containerType.name | `"Returnable Bin 400 x 300"` |  |

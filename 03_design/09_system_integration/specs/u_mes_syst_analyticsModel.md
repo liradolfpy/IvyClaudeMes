@@ -34,7 +34,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | framework | String | - | No (null allowed) | Framework / runtime | `"Keyence XG-X deep learning tool"` |  |
 | 10 | trainingDatasetRef | String | - | No (null allowed) | Training data set reference | `"DS-VIS-BOOT-2026-08 (18,400 labelled images)"` |  |
 | 11 | validationMetricName | String | - | No (null allowed) | Validation metric, e.g. Recall | `"Recall NOK"` |  |
-| 12 | validationMetricValue | Decimal128 | - | No (null allowed) | Validation result | `NumberDecimal("0.995")` |  |
+| 12 | validationMetricValue | Decimal128 | - | No (null allowed) | Validation result | `0.995` |  |
 | 13 | equipmentId | String | - | No (null allowed) | Reference to u_mes_mast_equipment._id | `"1013000000000010"` | Reference: u_mes_mast_equipment._id |
 | 14 | equipmentName | String | - | No (null allowed) | Display value of equipmentId, copied from u_mes_mast_equipment.name | `"Final Inspection Vision Station"` |  |
 | 15 | modelControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: model controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |

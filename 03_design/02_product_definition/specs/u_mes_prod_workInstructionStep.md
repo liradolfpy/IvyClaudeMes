@@ -33,13 +33,13 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | title | String | - | Yes | Title of the work instruction step | `"Skim the ladle, pour in one continuous stream and start the tilt cycle"` |  |
 | 10 | instructionText | String | - | Yes | Instruction text | `"Skim the ladle, pour in one continuous stream and start the tilt cycle"` |  |
 | 11 | inputType | String | - | Yes | Input type | `"None"` | None; Confirmation; Number; Text; Scan; Photo; Device Value |
-| 12 | expectedValue | Decimal128 | - | No (null allowed) | Expected value | `NumberDecimal("400.0")` |  |
-| 13 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `NumberDecimal("380.0")` |  |
-| 14 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `NumberDecimal("420.0")` |  |
+| 12 | expectedValue | Decimal128 | - | No (null allowed) | Expected value | `400.0` |  |
+| 13 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `380.0` |  |
+| 14 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `420.0` |  |
 | 15 | isMandatory | Boolean | - | Yes | True when the record is mandatory | `true` |  |
 | 16 | requiresScan | Boolean | - | Yes | True when scan is required | `true` |  |
 | 17 | caution | String | - | No (null allowed) | Caution of the work instruction step | `"Do not reuse a bleed screw that has been tightened once"` |  |
-| 18 | standardTimeSec | Decimal128 | - | Yes | Standard time (seconds) | `NumberDecimal("12.0")` |  |
+| 18 | standardTimeSec | Decimal128 | - | Yes | Standard time (seconds) | `12.0` |  |
 | 19 | arContentControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: ar content controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
 | 20 | arContentControlledDocumentName | String | - | No (null allowed) | Display value of arContentControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |
 | 21 | arAnchorRef | String | - | No (null allowed) | Anchor reference of the overlay on the part or fixture | `null` |  |

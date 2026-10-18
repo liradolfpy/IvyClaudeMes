@@ -262,7 +262,7 @@ def sh(v):
         if a=="date": return 'ISODate("%s.000+0000")'%b.strftime("%Y-%m-%dT%H:%M:%S")
         if a=="int": return "NumberInt(%d)"%b
         if a=="long": return 'NumberLong("%d")'%b
-        if a=="dec": return 'NumberDecimal("%s")'%b
+        if a=="dec": return str(b)   # Decimal128 written as a plain number, e.g. 1850.0 (no NumberDecimal())
         if a=="dbl": return "Double(%s)"%(repr(b) if b!=int(b) else str(int(b)))
     return json.dumps(v,ensure_ascii=False)
 BT={"String":"string","Date":"date","Int32":"int","Int64":"long","Decimal128":"decimal","Double":"double","Boolean":"bool"}

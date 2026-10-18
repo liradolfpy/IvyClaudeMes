@@ -12,7 +12,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("400.0"),
+    setPoint: 400.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -26,7 +26,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("400.0"),
+    setPoint: 400.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -40,7 +40,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("535.0"),
+    setPoint: 535.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -54,7 +54,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("535.0"),
+    setPoint: 535.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -68,7 +68,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("20.0"),
+    setPoint: 20.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -82,7 +82,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("20.0"),
+    setPoint: 20.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -96,7 +96,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("60.0"),
+    setPoint: 60.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -110,7 +110,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("60.0"),
+    setPoint: 60.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -124,7 +124,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("20.0"),
+    setPoint: 20.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -138,7 +138,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("20.0"),
+    setPoint: 20.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -152,7 +152,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("0.1"),
+    setPoint: 0.1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -166,7 +166,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("0.1"),
+    setPoint: 0.1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -180,7 +180,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("32.0"),
+    setPoint: 32.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -194,7 +194,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("32.0"),
+    setPoint: 32.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -208,7 +208,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("60.0"),
+    setPoint: 60.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -222,7 +222,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("60.0"),
+    setPoint: 60.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -236,7 +236,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("45.0"),
+    setPoint: 45.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -250,7 +250,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("45.0"),
+    setPoint: 45.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -264,7 +264,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(1),
     name: "Approach",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("18000.0"),
+    setPoint: 18000.0,
     schemaVersion: NumberInt(1)
   },
   {
@@ -278,7 +278,7 @@ db.getCollection("u_mes_prod_recipeStage").insertMany([
     stageNo: NumberInt(2),
     name: "Process",
     durationSec: NumberInt(42),
-    setPoint: NumberDecimal("18000.0"),
+    setPoint: 18000.0,
     schemaVersion: NumberInt(1)
   }
 ]);

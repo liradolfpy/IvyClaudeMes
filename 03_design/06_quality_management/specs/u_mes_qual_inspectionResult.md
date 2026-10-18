@@ -49,14 +49,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 24 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
 | 25 | inspectionType | String | - | Yes | Inspection type | `"In Process"` | Incoming; In Process; First Off; Final; Audit |
 | 26 | sampleNo | Int32 | - | Yes | Sample number | `NumberInt(3)` |  |
-| 27 | measuredValue | Decimal128 | - | No (null allowed) | Measured value | `NumberDecimal("8.05")` |  |
+| 27 | measuredValue | Decimal128 | - | No (null allowed) | Measured value | `8.05` |  |
 | 28 | attributeResult | String | - | No (null allowed) | Attribute result | `null` | Pass; Fail |
-| 29 | nominal | Decimal128 | - | Yes | Nominal of the inspection result | `NumberDecimal("8.00")` |  |
-| 30 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `NumberDecimal("7.50")` |  |
-| 31 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `NumberDecimal("8.50")` |  |
+| 29 | nominal | Decimal128 | - | Yes | Nominal of the inspection result | `8.00` |  |
+| 30 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `7.50` |  |
+| 31 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `8.50` |  |
 | 32 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000003"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 33 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Millimetre"` |  |
-| 34 | deviation | Decimal128 | - | No (null allowed) | Measured value minus nominal | `NumberDecimal("0.05")` |  |
+| 34 | deviation | Decimal128 | - | No (null allowed) | Measured value minus nominal | `0.05` |  |
 | 35 | result | String | - | Yes | Result of the inspection result | `"OK"` | OK; Not OK |
 | 36 | gaugeId | String | - | No (null allowed) | Reference to u_mes_qual_gauge._id | `"1189000000000001"` | Reference: u_mes_qual_gauge._id |
 | 37 | gaugeName | String | - | No (null allowed) | Display value of gaugeId, copied from u_mes_qual_gauge.name | `"Ultrasonic thickness gauge 1-25 mm"` |  |

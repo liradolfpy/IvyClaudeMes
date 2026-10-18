@@ -49,8 +49,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 17 | manufacturedAt | Date | Datetime | Yes | Date and time when the record was manufactured. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 18 | receivedAt | Date | Datetime | No (null allowed) | Date and time when the record was received. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
 | 19 | expiryAt | Date | Date | No (null allowed) | Expiry at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
-| 20 | initialQuantity | Decimal128 | - | Yes | Initial quantity | `NumberDecimal("240")` |  |
-| 21 | currentQuantity | Decimal128 | - | Yes | Current quantity | `NumberDecimal("0")` |  |
+| 20 | initialQuantity | Decimal128 | - | Yes | Initial quantity | `240` |  |
+| 21 | currentQuantity | Decimal128 | - | Yes | Current quantity | `0` |  |
 | 22 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 23 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 24 | qualityStatus | String | - | Yes | Quality status | `"Released"` | Released; Under Inspection; On Hold; Rejected |

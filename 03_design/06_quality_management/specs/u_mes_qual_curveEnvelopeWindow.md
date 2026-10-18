@@ -31,10 +31,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | curveEnvelopeName | String | - | Yes | Display value of curveEnvelopeId, copied from u_mes_qual_curveEnvelope.name | `"Piston press-in force, front caliper LH"` |  |
 | 8 | windowNo | Int32 | - | Yes | Window number | `NumberInt(1)` |  |
 | 9 | windowType | String | - | Yes | Window type | `"Box"` | Box; Upper Band; Lower Band; Peak; Final Value |
-| 10 | xMin | Decimal128 | - | Yes | Window start on X | `NumberDecimal("0.0")` |  |
-| 11 | xMax | Decimal128 | - | Yes | Window end on X | `NumberDecimal("30.0")` |  |
-| 12 | yMin | Decimal128 | - | No (null allowed) | Lower Y limit | `NumberDecimal("0")` |  |
-| 13 | yMax | Decimal128 | - | No (null allowed) | Upper Y limit | `NumberDecimal("400")` |  |
+| 10 | xMin | Decimal128 | - | Yes | Window start on X | `0.0` |  |
+| 11 | xMax | Decimal128 | - | Yes | Window end on X | `30.0` |  |
+| 12 | yMin | Decimal128 | - | No (null allowed) | Lower Y limit | `0` |  |
+| 13 | yMax | Decimal128 | - | No (null allowed) | Upper Y limit | `400` |  |
 | 14 | entrySide | String | - | No (null allowed) | Side the curve must enter (box windows) | `"Left"` | Left; Right; Top; Bottom |
 | 15 | exitSide | String | - | No (null allowed) | Side the curve must leave (box windows) | `"Right"` | Left; Right; Top; Bottom |
 | 16 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |

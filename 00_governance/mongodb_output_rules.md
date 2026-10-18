@@ -11,7 +11,7 @@ Source: owner's requirements of 11 October 2026.
 | Int32 | `NumberInt(n)` | `NumberInt(240)` |
 | Int64 | `NumberLong("n")` | `NumberLong("1250000")` |
 | Double | `Double(n)`, also for whole numbers | `Double(18)`, `Double(18.5204)` |
-| Decimal128 | `NumberDecimal("n")` with the value as a string, so no binary rounding occurs | `NumberDecimal("14.20")` |
+| Decimal128 | Plain number with its decimals written exactly as in the value, no `NumberDecimal()` constructor and no quotes (owner's requirement of 18 October 2026). Every other number carries a constructor (`NumberInt`, `NumberLong`, `Double`), so a bare number in a sample file always stands for a Decimal128 field | `floorAreaSqm : 1850.0`, `14.20` |
 | Boolean | `true` / `false` | `true` |
 | String | double-quoted text | `"In Progress"` |
 | null | `null` | `null` |

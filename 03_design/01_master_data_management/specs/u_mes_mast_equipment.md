@@ -53,10 +53,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 22 | supplierName | String | - | No (null allowed) | Display value of supplierId, copied from u_mes_mast_supplier.name | `null` |  |
 | 23 | assetNo | String | - | Yes | Asset number | `"FA-PN1-004512"` |  |
 | 24 | commissionedAt | Date | Datetime | Yes | Date and time when the record was commissioned. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
-| 25 | ratedCapacity | Decimal128 | - | Yes | Rated CAPAcity | `NumberDecimal("50.0")` |  |
+| 25 | ratedCapacity | Decimal128 | - | Yes | Rated CAPAcity | `50.0` |  |
 | 26 | ratedCapacityUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: rated CAPAcity unit of measure | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 27 | ratedCapacityUnitOfMeasureName | String | - | Yes | Display value of ratedCapacityUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
-| 28 | ratedPowerKw | Decimal128 | - | Yes | Rated power (kW) | `NumberDecimal("1.5")` |  |
+| 28 | ratedPowerKw | Decimal128 | - | Yes | Rated power (kW) | `1.5` |  |
 | 29 | controllerMake | String | - | Yes | Controller make | `"Siemens"` |  |
 | 30 | controllerModel | String | - | Yes | Controller model | `"S7-1500"` |  |
 | 31 | controllerIpAddress | String | - | Yes | Controller ip address | `"10.21.6.41"` |  |
@@ -65,15 +65,15 @@ Every key is present in every document. "Required" means the value may not be nu
 | 34 | currentState | String | - | Yes | Current state | `"Running"` | Running; Idle; Setup; Down; Starved; Blocked; Planned Stop |
 | 35 | currentStateSince | Date | Datetime | Yes | Current state since. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 36 | lifetimeCycles | Int64 | - | Yes | Lifetime cycles | `NumberLong("1284500")` |  |
-| 37 | lifetimeRunHours | Decimal128 | - | Yes | Lifetime run hours | `NumberDecimal("14820.5")` |  |
+| 37 | lifetimeRunHours | Decimal128 | - | Yes | Lifetime run hours | `14820.5` |  |
 | 38 | nextMaintenanceDueAt | Date | Date | Yes | Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
 | 39 | calibrationRequired | Boolean | - | Yes | True when: calibration required | `true` |  |
 | 40 | safetyCategory | String | - | Yes | Performance level of the safety function (ISO 13849-1) | `"PL d"` | PL a; PL b; PL c; PL d; PL e |
 | 41 | isProductionReady | Boolean | - | Yes | True when the equipment may receive work: not down, not in maintenance, PM and calibration not overdue | `true` |  |
 | 42 | readinessReasonText | String | - | No (null allowed) | Why the equipment is not production-ready; null when it is ready | `null` |  |
-| 43 | healthScore | Decimal128 | - | No (null allowed) | Rule-based health score from 0 (failed) to 100 (as new) | `NumberDecimal("84")` |  |
+| 43 | healthScore | Decimal128 | - | No (null allowed) | Rule-based health score from 0 (failed) to 100 (as new) | `84` |  |
 | 44 | healthScoreAt | Date | Datetime | No (null allowed) | Time the health score was last calculated | `ISODate("2026-09-24T23:00:00.000+0000")` |  |
-| 45 | acquisitionCostInr | Decimal128 | - | No (null allowed) | Purchase and installation cost (Indian rupees) | `NumberDecimal("14500000.00")` |  |
+| 45 | acquisitionCostInr | Decimal128 | - | No (null allowed) | Purchase and installation cost (Indian rupees) | `14500000.00` |  |
 | 46 | plannedReplacementDate | Date | Date | No (null allowed) | Planned replacement date from the lifecycle review | `ISODate("2027-11-30T00:00:00.000+0000")` |  |
 | 47 | qualificationStatus | String | - | Yes | Qualification status of the equipment (GMP-33, GMP-35) | `"Qualified"` | Qualified; Not Qualified; Requalification Due |
 | 48 | requalificationDueDate | Date | Date | No (null allowed) | Date the next requalification is due; null when not qualification-relevant | `ISODate("2027-07-17T00:00:00.000+0000")` |  |

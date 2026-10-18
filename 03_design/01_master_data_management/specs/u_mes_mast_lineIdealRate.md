@@ -32,7 +32,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 9 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
 | 10 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 11 | idealCycleTimeSec | Decimal128 | - | Yes | Ideal cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 11 | idealCycleTimeSec | Decimal128 | - | Yes | Ideal cycle time (seconds) | `95.0` |  |
 | 12 | targetPerHour | Int32 | - | Yes | Target per hour | `NumberInt(100)` |  |
 | 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 

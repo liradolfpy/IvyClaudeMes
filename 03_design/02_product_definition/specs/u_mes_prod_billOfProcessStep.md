@@ -38,7 +38,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 14 | workInstructionName | String | - | No (null allowed) | Display value of workInstructionId, copied from u_mes_prod_workInstruction.title | `"Pouring and die cycle - Caliper body LH"` |  |
 | 15 | inspectionPlanId | String | - | No (null allowed) | Reference to u_mes_qual_inspectionPlan._id | `"1142000000000001"` | Reference: u_mes_qual_inspectionPlan._id |
 | 16 | inspectionPlanName | String | - | No (null allowed) | Display value of inspectionPlanId, copied from u_mes_qual_inspectionPlan.name | `"In-process inspection, gravity die casting"` |  |
-| 17 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 17 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `95.0` |  |
 | 18 | manning | Int32 | - | Yes | Manning of the bill of process step | `NumberInt(1)` |  |
 | 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 

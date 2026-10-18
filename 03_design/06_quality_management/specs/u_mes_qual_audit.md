@@ -57,7 +57,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 25 | checkSheetName | String | - | No (null allowed) | Display value of checkSheetId, copied from u_mes_qual_checkSheet.name | `"Start of shift check, Gravity Die Casting Cell 1"` |  |
 | 26 | questionsCount | Int32 | - | Yes | Questions count | `NumberInt(20)` |  |
 | 27 | conformingCount | Int32 | - | Yes | Conforming count | `NumberInt(19)` |  |
-| 28 | scorePct | Decimal128 | - | Yes | Score (percent) | `NumberDecimal("95.0")` |  |
+| 28 | scorePct | Decimal128 | - | Yes | Score (percent) | `95.0` |  |
 | 29 | overallRating | String | - | No (null allowed) | Overall rating | `null` | A; B; C |
 | 30 | reportControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: report controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |
 | 31 | reportControlledDocumentName | String | - | No (null allowed) | Display value of reportControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-20-0105 revision B, Caliper Body Casting LH"` |  |

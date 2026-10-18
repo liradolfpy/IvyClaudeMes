@@ -44,8 +44,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 19 | acknowledgedBy | String | - | No (null allowed) | Display name of the user in acknowledgedById, copied from u_mes_mast_user.fullName | `null` |  |
 | 20 | clearedAt | Date | Datetime | No (null allowed) | Date and time when the record was cleared. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 21 | durationSec | Int32 | - | Yes | Duration (seconds) | `NumberInt(42)` |  |
-| 22 | triggerValue | Decimal128 | - | Yes | Trigger value | `NumberDecimal("421.0")` |  |
-| 23 | limitValue | Decimal128 | - | Yes | Limit value | `NumberDecimal("420.0")` |  |
+| 22 | triggerValue | Decimal128 | - | Yes | Trigger value | `421.0` |  |
+| 23 | limitValue | Decimal128 | - | Yes | Limit value | `420.0` |  |
 | 24 | productionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id | `"1083000000000004"` | Reference: u_mes_plan_productionOrder._id |
 | 25 | productionOrderName | String | - | No (null allowed) | Display value of productionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000433"` |  |
 | 26 | causedStop | Boolean | - | Yes | True when: caused stop | `true` |  |

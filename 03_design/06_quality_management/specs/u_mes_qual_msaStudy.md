@@ -46,14 +46,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 14 | studyDate | Date | Date | Yes | Study date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 15 | partsCount | Int32 | - | Yes | Parts count | `NumberInt(10)` |  |
 | 16 | trialsCount | Int32 | - | Yes | Trials count | `NumberInt(3)` |  |
-| 17 | resultsEquipmentVariation | Decimal128 | - | No (null allowed) | Results equipment variation | `NumberDecimal("0.0031")` |  |
-| 18 | resultsAppraiserVariation | Decimal128 | - | No (null allowed) | Results appraiser variation | `NumberDecimal("0.0012")` |  |
-| 19 | resultsGrr | Decimal128 | - | No (null allowed) | Results grr | `NumberDecimal("0.0033")` |  |
-| 20 | resultsPartVariation | Decimal128 | - | No (null allowed) | Results part variation | `NumberDecimal("0.0408")` |  |
-| 21 | resultsTotalVariation | Decimal128 | - | No (null allowed) | Results total variation | `NumberDecimal("0.0409")` |  |
-| 22 | resultsGrrPctTolerance | Decimal128 | - | No (null allowed) | Results grr pct tolerance | `NumberDecimal("7.2")` |  |
-| 23 | resultsGrrPctStudyVariation | Decimal128 | - | No (null allowed) | Results grr pct study variation | `NumberDecimal("8.1")` |  |
-| 24 | resultsNdc | Decimal128 | - | No (null allowed) | Number of distinct categories | `NumberDecimal("17")` |  |
+| 17 | resultsEquipmentVariation | Decimal128 | - | No (null allowed) | Results equipment variation | `0.0031` |  |
+| 18 | resultsAppraiserVariation | Decimal128 | - | No (null allowed) | Results appraiser variation | `0.0012` |  |
+| 19 | resultsGrr | Decimal128 | - | No (null allowed) | Results grr | `0.0033` |  |
+| 20 | resultsPartVariation | Decimal128 | - | No (null allowed) | Results part variation | `0.0408` |  |
+| 21 | resultsTotalVariation | Decimal128 | - | No (null allowed) | Results total variation | `0.0409` |  |
+| 22 | resultsGrrPctTolerance | Decimal128 | - | No (null allowed) | Results grr pct tolerance | `7.2` |  |
+| 23 | resultsGrrPctStudyVariation | Decimal128 | - | No (null allowed) | Results grr pct study variation | `8.1` |  |
+| 24 | resultsNdc | Decimal128 | - | No (null allowed) | Number of distinct categories | `17` |  |
 | 25 | resultsBiasValue | Decimal128 | - | No (null allowed) | Results bias value | `null` |  |
 | 26 | resultsKappa | Decimal128 | - | No (null allowed) | Results kappa | `null` |  |
 | 27 | conclusion | String | - | Yes | Conclusion of the MSA study | `"Acceptable"` | Acceptable; Conditionally Acceptable; Not Acceptable |

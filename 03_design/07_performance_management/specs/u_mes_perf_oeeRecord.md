@@ -52,16 +52,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 21 | plannedDowntimeMinutes | Int32 | - | Yes | Planned downtime (minutes) | `NumberInt(50)` |  |
 | 22 | unplannedDowntimeMinutes | Int32 | - | Yes | Unplanned downtime (minutes) | `NumberInt(18)` |  |
 | 23 | runMinutes | Int32 | - | Yes | Run (minutes) | `NumberInt(412)` |  |
-| 24 | idealCycleTimeSec | Decimal128 | - | Yes | Ideal cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 24 | idealCycleTimeSec | Decimal128 | - | Yes | Ideal cycle time (seconds) | `95.0` |  |
 | 25 | totalCount | Int32 | - | Yes | Total count | `NumberInt(768)` |  |
 | 26 | goodCount | Int32 | - | Yes | Good count | `NumberInt(762)` |  |
 | 27 | rejectCount | Int32 | - | Yes | Reject count | `NumberInt(3)` |  |
 | 28 | reworkCount | Int32 | - | Yes | Rework count | `NumberInt(0)` |  |
-| 29 | availabilityPct | Decimal128 | - | Yes | Availability (percent) | `NumberDecimal("95.8")` |  |
-| 30 | performancePct | Decimal128 | - | Yes | Performance (percent) | `NumberDecimal("85.0")` |  |
-| 31 | qualityPct | Decimal128 | - | Yes | Quality (percent) | `NumberDecimal("99.2")` |  |
-| 32 | oeePct | Decimal128 | - | Yes | OEE (percent) | `NumberDecimal("80.7")` |  |
-| 33 | teepPct | Decimal128 | - | Yes | TEEP (percent) | `NumberDecimal("69.3")` |  |
+| 29 | availabilityPct | Decimal128 | - | Yes | Availability (percent) | `95.8` |  |
+| 30 | performancePct | Decimal128 | - | Yes | Performance (percent) | `85.0` |  |
+| 31 | qualityPct | Decimal128 | - | Yes | Quality (percent) | `99.2` |  |
+| 32 | oeePct | Decimal128 | - | Yes | OEE (percent) | `80.7` |  |
+| 33 | teepPct | Decimal128 | - | Yes | TEEP (percent) | `69.3` |  |
 | 34 | calculatedAt | Date | Datetime | Yes | Date and time when the record was calculated. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:10.000+0000")` |  |
 | 35 | calculationVersion | Int32 | - | Yes | Calculation version | `NumberInt(1)` |  |
 | 36 | status | String | - | Yes | Primary lifecycle state of the document | `"Calculated"` | Calculated; Recalculated |

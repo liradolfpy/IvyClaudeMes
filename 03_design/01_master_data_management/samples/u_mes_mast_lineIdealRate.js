@@ -12,7 +12,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    idealCycleTimeSec: NumberDecimal("95.0"),
+    idealCycleTimeSec: 95.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -27,7 +27,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    idealCycleTimeSec: NumberDecimal("95.0"),
+    idealCycleTimeSec: 95.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -42,7 +42,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    idealCycleTimeSec: NumberDecimal("28800.0"),
+    idealCycleTimeSec: 28800.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -57,7 +57,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    idealCycleTimeSec: NumberDecimal("28800.0"),
+    idealCycleTimeSec: 28800.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -72,7 +72,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    idealCycleTimeSec: NumberDecimal("210.0"),
+    idealCycleTimeSec: 210.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -87,7 +87,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    idealCycleTimeSec: NumberDecimal("210.0"),
+    idealCycleTimeSec: 210.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -102,7 +102,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    idealCycleTimeSec: NumberDecimal("180.0"),
+    idealCycleTimeSec: 180.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -117,7 +117,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    idealCycleTimeSec: NumberDecimal("180.0"),
+    idealCycleTimeSec: 180.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -132,7 +132,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    idealCycleTimeSec: NumberDecimal("3600.0"),
+    idealCycleTimeSec: 3600.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   },
@@ -147,7 +147,7 @@ db.getCollection("u_mes_mast_lineIdealRate").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    idealCycleTimeSec: NumberDecimal("3600.0"),
+    idealCycleTimeSec: 3600.0,
     targetPerHour: NumberInt(100),
     schemaVersion: NumberInt(1)
   }

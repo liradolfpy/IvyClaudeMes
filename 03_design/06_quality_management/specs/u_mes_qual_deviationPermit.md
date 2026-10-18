@@ -41,8 +41,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | characteristicName | String | - | No (null allowed) | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Casting wall thickness at bridge"` |  |
 | 11 | deviationType | String | - | Yes | Deviation type | `"Product"` | Product; Process; Material |
 | 12 | description | String | - | Yes | Description of the deviation permit | `"Temporary deviation on 'casting wall thickness at bridge' at gravity die casting; all affected containers carry a deviation tag"` |  |
-| 13 | requestedValue | Decimal128 | - | Yes | Requested value | `NumberDecimal("16.5")` |  |
-| 14 | specifiedValue | Decimal128 | - | Yes | Specified value | `NumberDecimal("16.0")` |  |
+| 13 | requestedValue | Decimal128 | - | Yes | Requested value | `16.5` |  |
+| 14 | specifiedValue | Decimal128 | - | Yes | Specified value | `16.0` |  |
 | 15 | customerId | String | - | Yes | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 16 | customerName | String | - | Yes | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 17 | customerApprovalRef | String | - | No (null allowed) | Customer approval ref | `"SML/DEV/2026/044"` |  |

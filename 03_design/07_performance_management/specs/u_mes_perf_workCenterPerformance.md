@@ -40,13 +40,13 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | productVariantId | String | - | No (null allowed) | Reference to u_mes_prod_productVariant._id | `"1046000000000001"` | Reference: u_mes_prod_productVariant._id |
 | 16 | productVariantName | String | - | No (null allowed) | Display value of productVariantId, copied from u_mes_prod_productVariant.name | `"Front Caliper LH, Standard"` |  |
 | 17 | unitsCompleted | Int32 | - | Yes | Units completed | `NumberInt(98)` |  |
-| 18 | throughputPerHour | Decimal128 | - | Yes | Throughput | `NumberDecimal("98")` |  |
-| 19 | averageCycleTimeSec | Decimal128 | - | Yes | Average actual cycle time | `NumberDecimal("33.9")` |  |
-| 20 | taktTimeSec | Decimal128 | - | Yes | Takt time | `NumberDecimal("36.0")` |  |
+| 18 | throughputPerHour | Decimal128 | - | Yes | Throughput | `98` |  |
+| 19 | averageCycleTimeSec | Decimal128 | - | Yes | Average actual cycle time | `33.9` |  |
+| 20 | taktTimeSec | Decimal128 | - | Yes | Takt time | `36.0` |  |
 | 21 | taktBreachCount | Int32 | - | Yes | Cycles above takt | `NumberInt(6)` |  |
 | 22 | wipQuantity | Int32 | - | Yes | WIP in front of the station at hour end | `NumberInt(4)` |  |
-| 23 | blockedMinutes | Decimal128 | - | Yes | Minutes blocked by downstream | `NumberDecimal("2.5")` |  |
-| 24 | starvedMinutes | Decimal128 | - | Yes | Minutes starved by upstream | `NumberDecimal("0.0")` |  |
+| 23 | blockedMinutes | Decimal128 | - | Yes | Minutes blocked by downstream | `2.5` |  |
+| 24 | starvedMinutes | Decimal128 | - | Yes | Minutes starved by upstream | `0.0` |  |
 | 25 | isConstraint | Boolean | - | Yes | Active constraint in the hour | `false` |  |
 | 26 | rankInLine | Int32 | - | Yes | Rank by throughput within the line (1 = slowest) | `NumberInt(3)` |  |
 | 27 | calculatedAt | Date | Datetime | Yes | Calculation time | `ISODate("2026-09-15T07:05:00.000+0000")` |  |

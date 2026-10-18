@@ -33,9 +33,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | packTypeId | String | - | Yes | Reference to u_mes_matl_packType._id | `"1281000000000001"` | Reference: u_mes_matl_packType._id |
 | 10 | packTypeName | String | - | Yes | Display value of packTypeId, copied from u_mes_matl_packType.name | `"VCI Bag"` |  |
 | 11 | quantity | Int32 | - | Yes | Quantity of the packaging specification level | `NumberInt(1)` |  |
-| 12 | lengthMm | Decimal128 | - | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
-| 13 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
-| 14 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
+| 12 | lengthMm | Decimal128 | - | Yes | Length (mm) | `600.0` |  |
+| 13 | widthMm | Decimal128 | - | Yes | Width (mm) | `400.0` |  |
+| 14 | heightMm | Decimal128 | - | Yes | Height (mm) | `280.0` |  |
 | 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes

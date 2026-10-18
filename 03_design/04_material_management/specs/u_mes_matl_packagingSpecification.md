@@ -47,7 +47,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | layersPerContainer | Int32 | - | Yes | Layers per container | `NumberInt(3)` |  |
 | 17 | unitsPerLayer | Int32 | - | Yes | Units per layer | `NumberInt(8)` |  |
 | 18 | containersPerPallet | Int32 | - | Yes | Containers per pallet | `NumberInt(12)` |  |
-| 19 | maxGrossWeightKg | Decimal128 | - | Yes | Maximum gross weight (kg) | `NumberDecimal("95.0")` |  |
+| 19 | maxGrossWeightKg | Decimal128 | - | Yes | Maximum gross weight (kg) | `95.0` |  |
 | 20 | unitLabelTemplateId | String | - | Yes | Reference to u_mes_matl_labelTemplate._id: unit label template | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |
 | 21 | unitLabelTemplateName | String | - | Yes | Display value of unitLabelTemplateId, copied from u_mes_matl_labelTemplate.name | `"Sahyadri Motors bin label A5"` |  |
 | 22 | containerLabelTemplateId | String | - | No (null allowed) | Reference to u_mes_matl_labelTemplate._id: container label template | `"1124000000000001"` | Reference: u_mes_matl_labelTemplate._id |

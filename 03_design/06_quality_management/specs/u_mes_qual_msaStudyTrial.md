@@ -33,7 +33,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | appraiserUserName | String | - | Yes | Display value of appraiserUserId, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 | 10 | partNo | Int32 | - | Yes | Number of the study part | `NumberInt(4)` |  |
 | 11 | trialNo | Int32 | - | Yes | Trial number | `NumberInt(1)` |  |
-| 12 | measuredValue | Decimal128 | - | No (null allowed) | Measured value | `NumberDecimal("8.05")` |  |
+| 12 | measuredValue | Decimal128 | - | No (null allowed) | Measured value | `8.05` |  |
 | 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 14 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
 | 15 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |

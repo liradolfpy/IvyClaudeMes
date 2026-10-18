@@ -45,7 +45,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 20 | horizonMinutes | Int32 | - | No (null allowed) | Forecast horizon | `null` |  |
 | 21 | predictedClass | String | - | No (null allowed) | Predicted class / label | `"OK"` |  |
 | 22 | predictedValue | Decimal128 | - | No (null allowed) | Predicted numeric value | `null` |  |
-| 23 | confidence | Decimal128 | - | No (null allowed) | Confidence / score 0 to 1 | `NumberDecimal("0.993")` |  |
+| 23 | confidence | Decimal128 | - | No (null allowed) | Confidence / score 0 to 1 | `0.993` |  |
 | 24 | recommendedAction | String | - | No (null allowed) | Recommended action | `null` |  |
 | 25 | actionStatus | String | - | Yes | Action status | `"Not Required"` | Not Required; Pending; Approved; Applied; Rejected |
 | 26 | actionTakenById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'action taken' | `null` | Reference: u_mes_mast_user._id |

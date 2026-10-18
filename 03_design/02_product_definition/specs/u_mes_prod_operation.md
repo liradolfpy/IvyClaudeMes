@@ -40,7 +40,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | defaultWorkCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id: default work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
 | 10 | defaultWorkCenterName | String | - | Yes | Display value of defaultWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
 | 11 | trackingGrain | String | - | Yes | Level at which material is tracked at this point | `"Lot"` | Lot; Unit; Container |
-| 12 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 12 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `95.0` |  |
 | 13 | standardSetupTimeMin | Int32 | - | Yes | Standard setup time (minutes) | `NumberInt(45)` |  |
 | 14 | standardManning | Int32 | - | Yes | Standard manning | `NumberInt(1)` |  |
 | 15 | isInspection | Boolean | - | Yes | True when the record is inspection | `false` |  |

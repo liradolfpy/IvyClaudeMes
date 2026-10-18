@@ -44,7 +44,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | scheduleVersion | Int32 | - | Yes | Schedule version | `NumberInt(2)` |  |
 | 14 | plannedOutput | Int32 | - | Yes | Planned output | `NumberInt(800)` |  |
 | 15 | actualOutput | Int32 | - | Yes | Actual output | `NumberInt(762)` |  |
-| 16 | attainmentPct | Decimal128 | - | Yes | Attainment (percent) | `NumberDecimal("95.3")` |  |
+| 16 | attainmentPct | Decimal128 | - | Yes | Attainment (percent) | `95.3` |  |
 | 17 | frozen | Boolean | - | Yes | True when: frozen | `false` |  |
 | 18 | publishedAt | Date | Datetime | No (null allowed) | Date and time when the record was published. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 19 | publishedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'published' | `null` | Reference: u_mes_mast_user._id |

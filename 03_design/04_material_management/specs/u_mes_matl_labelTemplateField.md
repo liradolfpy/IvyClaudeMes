@@ -33,8 +33,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | fieldName | String | - | Yes | Field name | `"customerPartNo"` |  |
 | 10 | source | String | - | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
 | 11 | fieldFormat | String | - | No (null allowed) | Field format | `"%s"` |  |
-| 12 | positionXMm | Decimal128 | - | Yes | Position x (mm) | `NumberDecimal("8.0")` |  |
-| 13 | positionYMm | Decimal128 | - | Yes | Position y (mm) | `NumberDecimal("12.5")` |  |
+| 12 | positionXMm | Decimal128 | - | Yes | Position x (mm) | `8.0` |  |
+| 13 | positionYMm | Decimal128 | - | Yes | Position y (mm) | `12.5` |  |
 | 14 | isBarcode | Boolean | - | Yes | True when the record is barcode | `true` |  |
 | 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 

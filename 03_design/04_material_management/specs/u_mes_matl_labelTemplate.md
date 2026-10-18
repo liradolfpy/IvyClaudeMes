@@ -39,8 +39,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 9 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 10 | standard | String | - | Yes | Standard or specification the record refers to | `"IATF 16949:2016"` |  |
-| 11 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
-| 12 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
+| 11 | widthMm | Decimal128 | - | Yes | Width (mm) | `400.0` |  |
+| 12 | heightMm | Decimal128 | - | Yes | Height (mm) | `280.0` |  |
 | 13 | printerLanguage | String | - | Yes | Printer language | `"ZPL"` | ZPL; EPL; PDF |
 | 14 | symbology | String | - | Yes | Symbology of the label template | `"Data Matrix ECC200"` | Data Matrix ECC200; QR Code; Code 128; Code 39; PDF417 |
 | 15 | payloadPattern | String | - | Yes | Payload pattern | `"[)>{RS}06{GS}P{customerPartNo}{GS}Q{quantity}{GS}1T{lotNo}{RS}{EOT}"` |  |

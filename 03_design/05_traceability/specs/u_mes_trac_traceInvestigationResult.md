@@ -43,7 +43,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 19 | shipmentName | String | - | No (null allowed) | Display value of shipmentId, copied from u_mes_matl_shipment.recordNo | `null` |  |
 | 20 | customerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id | `null` | Reference: u_mes_mast_customer._id |
 | 21 | customerName | String | - | No (null allowed) | Display value of customerId, copied from u_mes_mast_customer.name | `null` |  |
-| 22 | quantity | Decimal128 | - | Yes | Quantity concerned | `NumberDecimal("1")` |  |
+| 22 | quantity | Decimal128 | - | Yes | Quantity concerned | `1` |  |
 | 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 24 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-19T23:28:40.000+0000")` |  |
 | 25 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |

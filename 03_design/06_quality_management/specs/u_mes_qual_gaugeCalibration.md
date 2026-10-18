@@ -44,12 +44,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | calibrationSupplierName | String | - | No (null allowed) | Display value of calibrationSupplierId, copied from u_mes_mast_supplier.name | `"Western Aluminium Alloys Ltd."` |  |
 | 14 | masterStandardRef | String | - | Yes | Master standard ref | `"Setting ring 54.000 mm, cert NABL-CC-2231"` |  |
 | 15 | traceability | String | - | Yes | Traceability of the gauge calibration | `"NABL accredited laboratory, traceable to NPL India"` |  |
-| 16 | temperatureC | Decimal128 | - | Yes | Temperature c | `NumberDecimal("20.1")` |  |
-| 17 | humidityPct | Decimal128 | - | Yes | Humidity (percent) | `NumberDecimal("48.0")` |  |
+| 16 | temperatureC | Decimal128 | - | Yes | Temperature c | `20.1` |  |
+| 17 | humidityPct | Decimal128 | - | Yes | Humidity (percent) | `48.0` |  |
 | 18 | asFoundResult | String | - | Yes | As found result | `"Within Tolerance"` | Within Tolerance; Out Of Tolerance |
 | 19 | asLeftResult | String | - | Yes | As left result | `"Within Tolerance"` | Within Tolerance; Out Of Tolerance |
 | 20 | overallResult | String | - | Yes | Overall result | `"Pass"` | Pass; Fail |
-| 21 | uncertainty | Decimal128 | - | Yes | Uncertainty of the gauge calibration | `NumberDecimal("0.0012")` |  |
+| 21 | uncertainty | Decimal128 | - | Yes | Uncertainty of the gauge calibration | `0.0012` |  |
 | 22 | adjustmentMade | Boolean | - | Yes | True when: adjustment made | `false` |  |
 | 23 | certificateNo | String | - | Yes | Certificate number | `"IATF-0412877"` |  |
 | 24 | certificateControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: certificate controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |

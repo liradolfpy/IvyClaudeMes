@@ -195,7 +195,7 @@
             "sequenceNo" : NumberInt(1),
             "sparePartId" : "1224000000000001",
             "sparePartName" : "Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner",
-            "quantity" : NumberDecimal("1"),
+            "quantity" : 1,
             "schemaVersion" : NumberInt(1)
         }
     ]

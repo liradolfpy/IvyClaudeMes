@@ -48,12 +48,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | sampledBy | String | - | Yes | Display name of the user in sampledById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 | 16 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
 | 17 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
-| 18 | subgroupMean | Decimal128 | - | Yes | Subgroup mean | `NumberDecimal("8.03")` |  |
-| 19 | subgroupRange | Decimal128 | - | Yes | Subgroup range | `NumberDecimal("0.14")` |  |
-| 20 | stdDev | Decimal128 | - | Yes | Std dev | `NumberDecimal("0.0600")` |  |
-| 21 | ucl | Decimal128 | - | Yes | Upper control limit | `NumberDecimal("8.20")` |  |
-| 22 | lcl | Decimal128 | - | Yes | Lower control limit | `NumberDecimal("7.84")` |  |
-| 23 | centerLine | Decimal128 | - | Yes | Center line | `NumberDecimal("8.02")` |  |
+| 18 | subgroupMean | Decimal128 | - | Yes | Subgroup mean | `8.03` |  |
+| 19 | subgroupRange | Decimal128 | - | Yes | Subgroup range | `0.14` |  |
+| 20 | stdDev | Decimal128 | - | Yes | Std dev | `0.0600` |  |
+| 21 | ucl | Decimal128 | - | Yes | Upper control limit | `8.20` |  |
+| 22 | lcl | Decimal128 | - | Yes | Lower control limit | `7.84` |  |
+| 23 | centerLine | Decimal128 | - | Yes | Center line | `8.02` |  |
 | 24 | inControl | Boolean | - | Yes | True when: in control | `true` |  |
 | 25 | assignableCause | String | - | No (null allowed) | Assignable cause | `null` |  |
 | 26 | correctiveAction | String | - | No (null allowed) | Corrective action | `"Ejector pin polished and die coat thickness corrected"` |  |

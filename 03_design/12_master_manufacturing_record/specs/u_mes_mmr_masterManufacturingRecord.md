@@ -68,9 +68,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 37 | standardBatchSize | Int32 | - | Yes | Standard batch size in pieces | `NumberInt(4800)` |  |
 | 38 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000011"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 39 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 40 | theoreticalQuantity | Decimal128 | - | Yes | Theoretical output of a standard batch | `NumberDecimal("4800")` |  |
-| 41 | lowerLimitPct | Decimal128 | - | Yes | Lower yield limit (percent) | `NumberDecimal("98.00")` |  |
-| 42 | upperLimitPct | Decimal128 | - | Yes | Upper yield limit (percent) | `NumberDecimal("100.00")` |  |
+| 40 | theoreticalQuantity | Decimal128 | - | Yes | Theoretical output of a standard batch | `4800` |  |
+| 41 | lowerLimitPct | Decimal128 | - | Yes | Lower yield limit (percent) | `98.00` |  |
+| 42 | upperLimitPct | Decimal128 | - | Yes | Upper yield limit (percent) | `100.00` |  |
 | 43 | effectiveFrom | Date | Date | No (null allowed) | First day the version may be used; null while in preparation | `ISODate("2026-05-25T00:00:00.000+0000")` |  |
 | 44 | effectiveTo | Date | Date | No (null allowed) | Last day the version may be used; null while effective | `null` |  |
 | 45 | authoredById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'authored' | `"1029000000000019"` | Reference: u_mes_mast_user._id |

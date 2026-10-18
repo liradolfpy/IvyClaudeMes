@@ -36,7 +36,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
 | 12 | containerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id | `null` | Reference: u_mes_plan_container._id |
 | 13 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
-| 14 | quantity | Decimal128 | - | Yes | Quantity of the material movement | `NumberDecimal("5000")` |  |
+| 14 | quantity | Decimal128 | - | Yes | Quantity of the material movement | `5000` |  |
 | 15 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 16 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 17 | fromLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: from location | `null` | Reference: u_mes_matl_storageLocation._id |

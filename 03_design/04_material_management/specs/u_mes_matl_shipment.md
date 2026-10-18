@@ -53,8 +53,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 20 | lrNo | String | - | Yes | Lorry receipt number | `"DRC-771204"` |  |
 | 21 | totalQuantity | Int32 | - | Yes | Total quantity | `NumberInt(480)` |  |
 | 22 | totalContainers | Int32 | - | Yes | Total containers | `NumberInt(20)` |  |
-| 23 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `NumberDecimal("3.480")` |  |
-| 24 | invoiceValueInr | Decimal128 | - | Yes | Invoice value (Indian rupees) | `NumberDecimal("1322880.00")` |  |
+| 23 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `3.480` |  |
+| 24 | invoiceValueInr | Decimal128 | - | Yes | Invoice value (Indian rupees) | `1322880.00` |  |
 | 25 | dockLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: dock location | `"1112000000000009"` | Reference: u_mes_matl_storageLocation._id |
 | 26 | dockLocationName | String | - | No (null allowed) | Display value of dockLocationId, copied from u_mes_matl_storageLocation.name | `"Dispatch bay 1"` |  |
 | 27 | loadedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'loaded' | `"1029000000000008"` | Reference: u_mes_mast_user._id |

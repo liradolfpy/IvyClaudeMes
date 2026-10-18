@@ -54,7 +54,7 @@ for m in order:
         if c["module"]==m: s+="| %s | %s | %s |\n"%(MODN[m],c["collection"],", ".join(f["key"]+(" [%s]"%f["dateKind"] if f.get("dateKind") else "") for f in c["fields"]))
 w("02_architecture/collection_keys.md",s)
 # field lists
-SHELL={"String":"\"text\"","Date":"ISODate(\"YYYY-MM-DDTHH:mm:ss.sss+0000\")","Int32":"NumberInt(n)","Int64":"NumberLong(\"n\")","Decimal128":"NumberDecimal(\"n.nn\")","Double":"Double(n)","Boolean":"true / false"}
+SHELL={"String":"\"text\"","Date":"ISODate(\"YYYY-MM-DDTHH:mm:ss.sss+0000\")","Int32":"NumberInt(n)","Int64":"NumberLong(\"n\")","Decimal128":"n.nn (plain number, no NumberDecimal())","Double":"Double(n)","Boolean":"true / false"}
 for m in order:
     s="# Field list - %s (%s)\n\n"%(MODN[m],m)+"Key, BSON type and reference target for every collection of this module. Requiredness, descriptions, examples and allowed values are added in the collection specifications under 03_design/%s/specs.\n\nShell constructors: "%DOMF[m]+"; ".join("%s = %s"%(k,v) for k,v in SHELL.items())+".\n"
     for c in cols:

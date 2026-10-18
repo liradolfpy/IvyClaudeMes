@@ -49,8 +49,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | addressCountryName | String | - | Yes | Display value of addressCountryId, copied from u_mes_mast_country.name | `"India"` |  |
 | 17 | approvedAt | Date | Datetime | No (null allowed) | Date and time when the record was approved. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 18 | ppmLast12Months | Int32 | - | Yes | Ppm last12 (months) | `NumberInt(38)` |  |
-| 19 | deliveryRatingPct | Decimal128 | - | Yes | Delivery rating (percent) | `NumberDecimal("96.5")` |  |
-| 20 | qualityRatingPct | Decimal128 | - | Yes | Quality rating (percent) | `NumberDecimal("98.2")` |  |
+| 19 | deliveryRatingPct | Decimal128 | - | Yes | Delivery rating (percent) | `96.5` |  |
+| 20 | qualityRatingPct | Decimal128 | - | Yes | Quality rating (percent) | `98.2` |  |
 | 21 | leadTimeDays | Int32 | - | Yes | Lead time (days) | `NumberInt(21)` |  |
 | 22 | paymentTermsDays | Int32 | - | Yes | Payment terms (days) | `NumberInt(45)` |  |
 | 23 | currencyId | String | - | Yes | Reference to u_mes_mast_currency._id | `"1265000000000001"` | Reference: u_mes_mast_currency._id |

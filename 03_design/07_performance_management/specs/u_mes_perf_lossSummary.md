@@ -43,9 +43,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 18 | occurrenceCount | Int32 | - | Yes | Number of events | `NumberInt(6)` |  |
 | 19 | lossMinutes | Int32 | - | Yes | Lost minutes | `NumberInt(14)` |  |
 | 20 | lossUnits | Int32 | - | Yes | Lost units | `NumberInt(23)` |  |
-| 21 | lossPctOfPlannedTime | Decimal128 | - | Yes | Share of planned production time | `NumberDecimal("3.3")` |  |
+| 21 | lossPctOfPlannedTime | Decimal128 | - | Yes | Share of planned production time | `3.3` |  |
 | 22 | paretoRank | Int32 | - | Yes | Rank within line, shift and date | `NumberInt(2)` |  |
-| 23 | cumulativePct | Decimal128 | - | Yes | Cumulative Pareto percentage | `NumberDecimal("79.5")` |  |
+| 23 | cumulativePct | Decimal128 | - | Yes | Cumulative Pareto percentage | `79.5` |  |
 | 24 | maintenanceWorkOrderCount | Int32 | - | Yes | Work orders raised for the reason | `NumberInt(0)` |  |
 | 25 | capaCount | Int32 | - | Yes | CAPAs linked | `NumberInt(1)` |  |
 | 26 | calculatedAt | Date | Datetime | Yes | Calculation time | `ISODate("2026-09-16T00:15:00.000+0000")` |  |

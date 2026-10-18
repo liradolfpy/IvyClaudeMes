@@ -43,11 +43,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | itemFamilyName | String | - | Yes | Display value of itemFamilyId, copied from u_mes_prod_itemFamily.name | `"Caliper Body Casting"` |  |
 | 12 | workCalendarId | String | - | No (null allowed) | Reference to u_mes_mast_workCalendar._id | `"1018000000000002"` | Reference: u_mes_mast_workCalendar._id |
 | 13 | workCalendarName | String | - | No (null allowed) | Display value of workCalendarId, copied from u_mes_mast_workCalendar.name | `"Foundry Continuous Calendar 2026"` |  |
-| 14 | taktTimeSec | Decimal128 | - | Yes | Takt time (seconds) | `NumberDecimal("36.0")` |  |
+| 14 | taktTimeSec | Decimal128 | - | Yes | Takt time (seconds) | `36.0` |  |
 | 15 | manningStandard | Int32 | - | Yes | Standard number of operators for the line | `NumberInt(6)` |  |
 | 16 | bottleneckWorkCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id: bottleneck work center | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
 | 17 | bottleneckWorkCenterName | String | - | No (null allowed) | Display value of bottleneckWorkCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 18 | oeeTarget | Decimal128 | - | Yes | Target OEE in percent | `NumberDecimal("85.0")` |  |
+| 18 | oeeTarget | Decimal128 | - | Yes | Target OEE in percent | `85.0` |  |
 | 19 | costCenterId | String | - | No (null allowed) | Reference to u_mes_mast_costCenter._id | `"1259000000000001"` | Reference: u_mes_mast_costCenter._id |
 | 20 | costCenterName | String | - | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
 | 21 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |

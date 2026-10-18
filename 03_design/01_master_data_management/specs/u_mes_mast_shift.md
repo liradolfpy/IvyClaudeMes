@@ -41,7 +41,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | crossesMidnight | Boolean | - | Yes | True when: crosses midnight | `false` |  |
 | 10 | durationMinutes | Int32 | - | Yes | Duration (minutes) | `NumberInt(480)` |  |
 | 11 | plannedProductionMinutes | Int32 | - | Yes | Shift duration less paid and unpaid breaks | `NumberInt(430)` |  |
-| 12 | shiftAllowancePerDay | Decimal128 | - | Yes | Shift allowance per day | `NumberDecimal("0.00")` |  |
+| 12 | shiftAllowancePerDay | Decimal128 | - | Yes | Shift allowance per day | `0.00` |  |
 | 13 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 14 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
 | 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |

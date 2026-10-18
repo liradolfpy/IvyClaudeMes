@@ -34,8 +34,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | dimension | String | - | Yes | Dimension of the unit of measure | `"Count"` | Count; Mass; Length; Torque; Pressure; Temperature; Time; Energy; Volume; Hardness; Leak Rate; Ratio; Force |
 | 10 | baseUnitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id: base unit of measure | `null` | Reference: u_mes_mast_unitOfMeasure._id |
 | 11 | baseUnitOfMeasureName | String | - | No (null allowed) | Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `null` |  |
-| 12 | factorToBase | Decimal128 | - | Yes | Multiplier to convert to the base unit of the dimension | `NumberDecimal("1.000000")` |  |
-| 13 | offsetToBase | Decimal128 | - | Yes | Offset to base | `NumberDecimal("0.000000")` |  |
+| 12 | factorToBase | Decimal128 | - | Yes | Multiplier to convert to the base unit of the dimension | `1.000000` |  |
+| 13 | offsetToBase | Decimal128 | - | Yes | Offset to base | `0.000000` |  |
 | 14 | decimalPlaces | Int32 | - | Yes | Decimal places | `NumberInt(0)` |  |
 | 15 | isoCode | String | - | No (null allowed) | UN/ECE Recommendation 20 unit code | `"C62"` |  |
 | 16 | isBaseUnit | Boolean | - | Yes | True when the record is base unit | `false` |  |

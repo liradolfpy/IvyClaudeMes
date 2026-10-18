@@ -44,9 +44,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | drawingZone | String | - | No (null allowed) | Drawing zone | `"C4"` |  |
 | 14 | balloonNo | String | - | Yes | Balloon number | `"12"` |  |
 | 15 | dataType | String | - | Yes | Data type | `"Variable"` | Variable; Attribute |
-| 16 | nominal | Decimal128 | - | Yes | Nominal of the characteristic | `NumberDecimal("8.00")` |  |
-| 17 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `NumberDecimal("7.50")` |  |
-| 18 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `NumberDecimal("8.50")` |  |
+| 16 | nominal | Decimal128 | - | Yes | Nominal of the characteristic | `8.00` |  |
+| 17 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `7.50` |  |
+| 18 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `8.50` |  |
 | 19 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000003"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 20 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Millimetre"` |  |
 | 21 | toleranceType | String | - | Yes | Tolerance type | `"Bilateral"` | Bilateral; Unilateral Upper; Unilateral Lower |
@@ -57,7 +57,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 26 | gaugeTypeName | String | - | Yes | Display value of gaugeTypeId, copied from u_mes_qual_gaugeType.name | `"Ultrasonic Thickness Gauge"` |  |
 | 27 | attributeAcceptance | String | - | No (null allowed) | Attribute acceptance | `"No porosity visible on sealing face"` |  |
 | 28 | isSpc | Boolean | - | Yes | True when the record is spc | `true` |  |
-| 29 | targetCpk | Decimal128 | - | No (null allowed) | Target cpk | `NumberDecimal("1.33")` |  |
+| 29 | targetCpk | Decimal128 | - | No (null allowed) | Target cpk | `1.33` |  |
 | 30 | reactionPlan | String | - | Yes | Reaction plan | `"Stop, segregate parts since last good check, inform line leader, raise NCR"` |  |
 | 31 | source | String | - | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
 | 32 | positionCount | Int32 | - | Yes | Number of positions at which the characteristic is measured (1 for a single position) | `NumberInt(2)` |  |

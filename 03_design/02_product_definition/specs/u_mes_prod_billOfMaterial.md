@@ -41,7 +41,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | itemRevision | String | - | Yes | Item revision | `"D"` |  |
 | 9 | bomVersion | Int32 | - | Yes | BOM version | `NumberInt(1)` |  |
 | 10 | bomType | String | - | Yes | BOM type | `"Production"` | Production; Engineering; Rework |
-| 11 | baseQuantity | Decimal128 | - | Yes | Base quantity | `NumberDecimal("1")` |  |
+| 11 | baseQuantity | Decimal128 | - | Yes | Base quantity | `1` |  |
 | 12 | baseUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: base unit of measure | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 13 | baseUnitOfMeasureName | String | - | Yes | Display value of baseUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 14 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |

@@ -49,8 +49,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 18 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
 | 19 | parentContainerId | String | - | No (null allowed) | Reference to u_mes_plan_container._id: parent container | `null` | Reference: u_mes_plan_container._id |
 | 20 | parentContainerName | String | - | No (null allowed) | Display value of parentContainerId, copied from u_mes_plan_container.recordNo | `null` |  |
-| 21 | tareWeightKg | Decimal128 | - | Yes | Tare weight (kg) | `NumberDecimal("2.100")` |  |
-| 22 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `NumberDecimal("3.480")` |  |
+| 21 | tareWeightKg | Decimal128 | - | Yes | Tare weight (kg) | `2.100` |  |
+| 22 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `3.480` |  |
 | 23 | onHold | Boolean | - | Yes | True when: on hold | `false` |  |
 | 24 | packedAt | Date | Datetime | No (null allowed) | Date and time when the record was packed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:30.000+0000")` |  |
 | 25 | packedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'packed' | `"1029000000000008"` | Reference: u_mes_mast_user._id |

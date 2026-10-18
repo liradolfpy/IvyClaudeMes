@@ -40,7 +40,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | checkSheetId | String | - | Yes | Reference to u_mes_qual_checkSheet._id | `"1146000000000006"` | Reference: u_mes_qual_checkSheet._id |
 | 16 | checkSheetName | String | - | Yes | Display value of checkSheetId, copied from u_mes_qual_checkSheet.name | `"Start of shift check, Piston and Seal Assembly Station"` |  |
 | 17 | frequencyType | String | - | Yes | Frequency | `"Shift"` | Shift; Daily; Weekly; Monthly |
-| 18 | frequencyValue | Decimal128 | - | Yes | Every n periods | `NumberDecimal("1")` |  |
+| 18 | frequencyValue | Decimal128 | - | Yes | Every n periods | `1` |  |
 | 19 | auditorRoleId | String | - | Yes | Reference to u_mes_mast_role._id: auditor role | `"1026000000000003"` | Reference: u_mes_mast_role._id |
 | 20 | auditorRoleName | String | - | Yes | Display value of auditorRoleId, copied from u_mes_mast_role.name | `"Line Leader"` |  |
 | 21 | auditorUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: auditor user | `null` | Reference: u_mes_mast_user._id |

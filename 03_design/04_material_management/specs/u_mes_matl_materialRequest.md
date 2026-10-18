@@ -32,8 +32,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | workCenterName | String | - | Yes | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
 | 8 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
 | 9 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 10 | requestedQuantity | Decimal128 | - | Yes | Requested quantity | `NumberDecimal("500")` |  |
-| 11 | deliveredQuantity | Decimal128 | - | Yes | Delivered quantity | `NumberDecimal("500")` |  |
+| 10 | requestedQuantity | Decimal128 | - | Yes | Requested quantity | `500` |  |
+| 11 | deliveredQuantity | Decimal128 | - | Yes | Delivered quantity | `500` |  |
 | 12 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 13 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 14 | requestType | String | - | Yes | Request type | `"Kanban"` | Kanban; Andon Call; Manual |

@@ -118,7 +118,7 @@ No project-specific values beyond section 1. `moduleName` comes from the module 
 
 ## 4. Stable
 
-No project-specific values beyond section 1. Run `python3 05_generator/gen_stable.py <collection> ...` from the project root.
+No project-specific values beyond section 1. Run from the project root: `python3 05_generator/gen_stable.py --all` (every query screen; or `--module <code>`, `--modules <a>,<b>`, named collections; `--dry-run` first after a rule change), then `python3 05_generator/gen_stable.py --check`. Scope: collections with a file in `query/PageConfigs` (skill 0.8, D069).
 
 ## 5. Menu
 

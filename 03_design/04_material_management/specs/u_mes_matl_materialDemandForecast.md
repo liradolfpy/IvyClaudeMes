@@ -35,10 +35,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | productionDate | Date | Date | Yes | Production date | `ISODate("2026-09-24T00:00:00.000+0000")` |  |
 | 11 | bucketStartAt | Date | Datetime | Yes | Bucket start | `ISODate("2026-09-24T08:00:00.000+0000")` |  |
 | 12 | bucketEndAt | Date | Datetime | Yes | Bucket end | `ISODate("2026-09-24T09:00:00.000+0000")` |  |
-| 13 | scheduledDemand | Decimal128 | - | Yes | Demand from the schedule and BOM | `NumberDecimal("100")` |  |
-| 14 | consumptionRatePerHour | Decimal128 | - | Yes | Actual consumption rate | `NumberDecimal("96")` |  |
-| 15 | onHandQuantity | Decimal128 | - | Yes | Line-side and supermarket stock at calculation | `NumberDecimal("150")` |  |
-| 16 | projectedOnHand | Decimal128 | - | Yes | Projected stock at bucket end | `NumberDecimal("54")` |  |
+| 13 | scheduledDemand | Decimal128 | - | Yes | Demand from the schedule and BOM | `100` |  |
+| 14 | consumptionRatePerHour | Decimal128 | - | Yes | Actual consumption rate | `96` |  |
+| 15 | onHandQuantity | Decimal128 | - | Yes | Line-side and supermarket stock at calculation | `150` |  |
+| 16 | projectedOnHand | Decimal128 | - | Yes | Projected stock at bucket end | `54` |  |
 | 17 | projectedShortageAt | Date | Datetime | No (null allowed) | Projected time the line starves | `null` |  |
 | 18 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 19 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |

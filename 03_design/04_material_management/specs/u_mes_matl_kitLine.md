@@ -34,11 +34,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Piston, dia 54 mm, steel, chrome plated"` |  |
 | 11 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
 | 12 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
-| 13 | requiredQuantity | Decimal128 | - | Yes | Required quantity | `NumberDecimal("480")` |  |
-| 14 | pickedQuantity | Decimal128 | - | Yes | Picked quantity | `NumberDecimal("480")` |  |
+| 13 | requiredQuantity | Decimal128 | - | Yes | Required quantity | `480` |  |
+| 14 | pickedQuantity | Decimal128 | - | Yes | Picked quantity | `480` |  |
 | 15 | fromLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: from location | `"1112000000000001"` | Reference: u_mes_matl_storageLocation._id |
 | 16 | fromLocationName | String | - | No (null allowed) | Display value of fromLocationId, copied from u_mes_matl_storageLocation.name | `"Raw material yard, ingot bay"` |  |
-| 17 | shortQuantity | Decimal128 | - | Yes | Short quantity | `NumberDecimal("0")` |  |
+| 17 | shortQuantity | Decimal128 | - | Yes | Short quantity | `0` |  |
 | 18 | itemRevision | String | - | No (null allowed) | Revision required by the active BOM | `"C"` |  |
 | 19 | scannedItemRevision | String | - | No (null allowed) | Revision read from the scanned label | `"C"` |  |
 | 20 | scannedCode | String | - | No (null allowed) | Label code scanned at picking | `"5110300040/L260921-BS-003"` |  |

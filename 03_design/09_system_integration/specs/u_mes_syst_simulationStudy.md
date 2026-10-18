@@ -36,13 +36,13 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | scenarioText | String | - | Yes | Scenario description | `"Stabilisation time of both stages reduced by 1.0 s on 5,000 historical curves"` |  |
 | 12 | inputSnapshotAt | Date | Datetime | Yes | Time of the live-data snapshot | `ISODate("2026-09-16T10:00:00.000+0000")` |  |
 | 13 | resultText | String | - | No (null allowed) | Result summary | `"Cycle time 24.0 s to 22.0 s; no additional escapes on the 5,000-curve replay"` |  |
-| 14 | predictedValue | Decimal128 | - | No (null allowed) | Predicted KPI value | `NumberDecimal("22.0")` |  |
+| 14 | predictedValue | Decimal128 | - | No (null allowed) | Predicted KPI value | `22.0` |  |
 | 15 | predictedKpi | String | - | No (null allowed) | KPI predicted, e.g. FPY % | `"Cycle time (s)"` |  |
 | 16 | recommendedRecipeId | String | - | No (null allowed) | Reference to u_mes_prod_recipe._id: recommended recipe | `"1073000000000008"` | Reference: u_mes_prod_recipe._id |
 | 17 | recommendedRecipeName | String | - | No (null allowed) | Display value of recommendedRecipeId, copied from u_mes_prod_recipe.name | `"Caliper leak test 5 bar and 140 bar"` |  |
 | 18 | rolloutProductionOrderId | String | - | No (null allowed) | Reference to u_mes_plan_productionOrder._id: rollout production order | `"1083000000000008"` | Reference: u_mes_plan_productionOrder._id |
 | 19 | rolloutProductionOrderName | String | - | No (null allowed) | Display value of rolloutProductionOrderId, copied from u_mes_plan_productionOrder.recordNo | `"PO-1000461"` |  |
-| 20 | actualValue | Decimal128 | - | No (null allowed) | Observed KPI after rollout | `NumberDecimal("22.3")` |  |
+| 20 | actualValue | Decimal128 | - | No (null allowed) | Observed KPI after rollout | `22.3` |  |
 | 21 | comparisonResult | String | - | No (null allowed) | Pre / post comparison | `"Equal"` | Better; Equal; Worse |
 | 22 | resultControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: result controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
 | 23 | resultControlledDocumentName | String | - | No (null allowed) | Display value of resultControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `null` |  |

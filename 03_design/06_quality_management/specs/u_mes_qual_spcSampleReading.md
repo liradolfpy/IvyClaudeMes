@@ -30,7 +30,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 6 | spcSampleId | String | - | Yes | Reference to u_mes_qual_spcSample._id: the parent document this one belongs to | `"1154000000000001"` | Reference: u_mes_qual_spcSample._id |
 | 7 | spcSampleName | String | - | Yes | Display value of spcSampleId, copied from u_mes_qual_spcSample.recordNo | `"SPS-2026-000253"` |  |
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 9 | reading | Decimal128 | - | Yes | Reading of the SPC sample reading | `NumberDecimal("8.05")` |  |
+| 9 | reading | Decimal128 | - | Yes | Reading of the SPC sample reading | `8.05` |  |
 | 10 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 11 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
 | 12 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |

@@ -32,8 +32,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 9 | sparePartId | String | - | Yes | Reference to u_mes_maint_sparePart._id | `"1224000000000001"` | Reference: u_mes_maint_sparePart._id |
 | 10 | sparePartName | String | - | Yes | Display value of sparePartId, copied from u_mes_maint_sparePart.description | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
-| 11 | quantity | Decimal128 | - | Yes | Quantity of the maintenance work order used spare part | `NumberDecimal("1")` |  |
-| 12 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
+| 11 | quantity | Decimal128 | - | Yes | Quantity of the maintenance work order used spare part | `1` |  |
+| 12 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `8640.00` |  |
 | 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 14 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |
 | 15 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000006"` | Reference: u_mes_mast_user._id |

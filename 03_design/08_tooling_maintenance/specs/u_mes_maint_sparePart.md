@@ -45,11 +45,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 14 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 15 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |
 | 16 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side supermarket, assembly 1"` |  |
-| 17 | stockQuantity | Decimal128 | - | Yes | Stock quantity | `NumberDecimal("6")` |  |
-| 18 | minimumQuantity | Decimal128 | - | Yes | Minimum quantity | `NumberDecimal("2")` |  |
-| 19 | reorderQuantity | Decimal128 | - | Yes | Reorder quantity | `NumberDecimal("4")` |  |
+| 17 | stockQuantity | Decimal128 | - | Yes | Stock quantity | `6` |  |
+| 18 | minimumQuantity | Decimal128 | - | Yes | Minimum quantity | `2` |  |
+| 19 | reorderQuantity | Decimal128 | - | Yes | Reorder quantity | `4` |  |
 | 20 | leadTimeDays | Int32 | - | Yes | Lead time (days) | `NumberInt(21)` |  |
-| 21 | unitCostInr | Decimal128 | - | Yes | Unit cost (Indian rupees) | `NumberDecimal("4320.00")` |  |
+| 21 | unitCostInr | Decimal128 | - | Yes | Unit cost (Indian rupees) | `4320.00` |  |
 | 22 | criticality | String | - | Yes | A = failure stops the line or affects safety, B = reduced output, C = no immediate effect | `"A"` | A; B; C |
 | 23 | lastIssuedAt | Date | Datetime | No (null allowed) | Last issued date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 24 | lastReceivedAt | Date | Datetime | No (null allowed) | Last received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |

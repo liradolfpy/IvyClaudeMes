@@ -12,7 +12,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(1),
     sparePartId: "1224000000000001",
     sparePartName: "Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -26,7 +26,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(2),
     sparePartId: "1224000000000002",
     sparePartName: "Heater element 6 kW, solution furnace",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -40,7 +40,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(1),
     sparePartId: "1224000000000003",
     sparePartName: "Boring insert CCGT 09T304, PCD",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -54,7 +54,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(2),
     sparePartId: "1224000000000004",
     sparePartName: "Bag filter 50 micrometre, washer",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -68,7 +68,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(1),
     sparePartId: "1224000000000005",
     sparePartName: "Cooling fan 230 V, rectifier cabinet",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -82,7 +82,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(2),
     sparePartId: "1224000000000006",
     sparePartName: "Test seal set, 54 mm bore, leak tester",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -96,7 +96,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(1),
     sparePartId: "1224000000000007",
     sparePartName: "Protective lens, laser marker",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -110,7 +110,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(2),
     sparePartId: "1224000000000008",
     sparePartName: "Camera cable 5 m, vision station",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -124,7 +124,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(1),
     sparePartId: "1224000000000009",
     sparePartName: "Ejector pin dia 8 x 200 mm, die 2",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   },
   {
@@ -138,7 +138,7 @@ db.getCollection("u_mes_maint_maintenancePlanRequiredSparePart").insertMany([
     sequenceNo: NumberInt(2),
     sparePartId: "1224000000000010",
     sparePartName: "Servo drive, assembly press",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     schemaVersion: NumberInt(1)
   }
 ]);

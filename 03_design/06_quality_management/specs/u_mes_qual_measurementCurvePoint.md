@@ -34,8 +34,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | measurementCurveName | String | - | Yes | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260915-01840"` |  |
 | 8 | pointNo | Int32 | - | Yes | Point number | `NumberInt(1)` |  |
 | 9 | sampledAt | Date | Datetime | Yes | Sample time | `ISODate("2026-09-15T06:01:30.000+0000")` |  |
-| 10 | xValue | Decimal128 | - | Yes | X value | `NumberDecimal("0.0")` |  |
-| 11 | yValue | Decimal128 | - | Yes | Y value | `NumberDecimal("0")` |  |
+| 10 | xValue | Decimal128 | - | Yes | X value | `0.0` |  |
+| 11 | yValue | Decimal128 | - | Yes | Y value | `0` |  |
 | 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 13 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
 | 14 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000004"` | Reference: u_mes_mast_user._id |

@@ -31,12 +31,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | spcChartName | String | - | Yes | Display value of spcChartId, copied from u_mes_qual_spcChart.name | `"Casting wall thickness at bridge, X-bar R chart"` |  |
 | 8 | revisionNo | Int32 | - | Yes | Revision number | `NumberInt(1)` |  |
 | 9 | effectiveFrom | Date | Date | Yes | Effective from. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
-| 10 | ucl | Decimal128 | - | Yes | Upper control limit | `NumberDecimal("8.20")` |  |
-| 11 | centerLine | Decimal128 | - | Yes | Center line | `NumberDecimal("8.02")` |  |
-| 12 | lcl | Decimal128 | - | Yes | Lower control limit | `NumberDecimal("7.84")` |  |
-| 13 | uclRange | Decimal128 | - | No (null allowed) | UCL range | `NumberDecimal("0.36")` |  |
-| 14 | centerLineRange | Decimal128 | - | No (null allowed) | Center line range | `NumberDecimal("0.17")` |  |
-| 15 | lclRange | Decimal128 | - | No (null allowed) | LCL range | `NumberDecimal("0.00")` |  |
+| 10 | ucl | Decimal128 | - | Yes | Upper control limit | `8.20` |  |
+| 11 | centerLine | Decimal128 | - | Yes | Center line | `8.02` |  |
+| 12 | lcl | Decimal128 | - | Yes | Lower control limit | `7.84` |  |
+| 13 | uclRange | Decimal128 | - | No (null allowed) | UCL range | `0.36` |  |
+| 14 | centerLineRange | Decimal128 | - | No (null allowed) | Center line range | `0.17` |  |
+| 15 | lclRange | Decimal128 | - | No (null allowed) | LCL range | `0.00` |  |
 | 16 | basedOnSubgroups | Int32 | - | Yes | Based on subgroups | `NumberInt(25)` |  |
 | 17 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 

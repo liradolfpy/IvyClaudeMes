@@ -40,7 +40,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | childLotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id: child lot | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
 | 16 | childLotName | String | - | No (null allowed) | Display value of childLotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
 | 17 | childSerialNo | String | - | No (null allowed) | Child serial number | `null` |  |
-| 18 | quantity | Decimal128 | - | Yes | Quantity of the genealogy link | `NumberDecimal("1")` |  |
+| 18 | quantity | Decimal128 | - | Yes | Quantity of the genealogy link | `1` |  |
 | 19 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 20 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 21 | operationId | String | - | Yes | Reference to u_mes_prod_operation._id | `"1051000000000006"` | Reference: u_mes_prod_operation._id |

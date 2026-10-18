@@ -33,9 +33,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | name | String | - | Yes | Name of the recipe parameter | `"Die temperature, upper half, casting machine 1"` |  |
 | 10 | processTagId | String | - | Yes | Reference to u_mes_perf_processTag._id | `"1210000000000001"` | Reference: u_mes_perf_processTag._id |
 | 11 | processTagName | String | - | Yes | Display value of processTagId, copied from u_mes_perf_processTag.description | `"Die temperature, upper half, casting machine 1"` |  |
-| 12 | setPoint | Decimal128 | - | Yes | Set point | `NumberDecimal("400.0")` |  |
-| 13 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `NumberDecimal("380.0")` |  |
-| 14 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `NumberDecimal("420.0")` |  |
+| 12 | setPoint | Decimal128 | - | Yes | Set point | `400.0` |  |
+| 13 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `380.0` |  |
+| 14 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `420.0` |  |
 | 15 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 16 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
 | 17 | isCritical | Boolean | - | Yes | True when the record is critical | `true` |  |

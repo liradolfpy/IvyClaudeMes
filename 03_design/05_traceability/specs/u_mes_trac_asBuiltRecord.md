@@ -52,12 +52,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 19 | builtAt | Date | Datetime | Yes | Date and time when the record was built. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:01:50.000+0000")` |  |
 | 20 | torqueTorqueResultId | String | - | No (null allowed) | Reference to u_mes_perf_torqueResult._id: torque torque result | `null` | Reference: u_mes_perf_torqueResult._id |
 | 21 | torqueTorqueResultName | String | - | No (null allowed) | Display value of torqueTorqueResultId, copied from u_mes_perf_torqueResult.recordNo | `null` |  |
-| 22 | torqueFinalTorqueNm | Decimal128 | - | No (null allowed) | Torque final torque (N.m) | `NumberDecimal("14.2")` |  |
-| 23 | torqueFinalAngleDeg | Decimal128 | - | No (null allowed) | Torque final angle (degrees) | `NumberDecimal("38.5")` |  |
+| 22 | torqueFinalTorqueNm | Decimal128 | - | No (null allowed) | Torque final torque (N.m) | `14.2` |  |
+| 23 | torqueFinalAngleDeg | Decimal128 | - | No (null allowed) | Torque final angle (degrees) | `38.5` |  |
 | 24 | leakTestLeakTestResultId | String | - | No (null allowed) | Reference to u_mes_perf_leakTestResult._id: leak test leak test result | `null` | Reference: u_mes_perf_leakTestResult._id |
 | 25 | leakTestLeakTestResultName | String | - | No (null allowed) | Display value of leakTestLeakTestResultId, copied from u_mes_perf_leakTestResult.recordNo | `null` |  |
 | 26 | leakTestVerdict | String | - | No (null allowed) | Leak test verdict | `"Pass"` | Pass; Fail |
-| 27 | leakTestLeakRate | Decimal128 | - | No (null allowed) | Measured leak rate at the high-pressure stage (sccm) | `NumberDecimal("0.21")` |  |
+| 27 | leakTestLeakRate | Decimal128 | - | No (null allowed) | Measured leak rate at the high-pressure stage (sccm) | `0.21` |  |
 | 28 | bodyLotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id: body lot | `"1096000000000004"` | Reference: u_mes_plan_lot._id |
 | 29 | bodyLotName | String | - | No (null allowed) | Display value of bodyLotId, copied from u_mes_plan_lot.recordNo | `"L260917-ANO-001"` |  |
 | 30 | castingLotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id: casting lot | `"1096000000000001"` | Reference: u_mes_plan_lot._id |

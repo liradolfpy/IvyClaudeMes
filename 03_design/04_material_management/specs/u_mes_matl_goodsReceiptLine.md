@@ -35,10 +35,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | supplierLotNo | String | - | No (null allowed) | Supplier lot number | `"KPP-260905-07"` |  |
 | 12 | lotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
 | 13 | lotName | String | - | No (null allowed) | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
-| 14 | orderedQuantity | Decimal128 | - | Yes | Ordered quantity | `NumberDecimal("5000")` |  |
-| 15 | receivedQuantity | Decimal128 | - | Yes | Received quantity | `NumberDecimal("5000")` |  |
-| 16 | acceptedQuantity | Decimal128 | - | Yes | Accepted quantity | `NumberDecimal("5000")` |  |
-| 17 | rejectedQuantity | Decimal128 | - | Yes | Rejected quantity | `NumberDecimal("0")` |  |
+| 14 | orderedQuantity | Decimal128 | - | Yes | Ordered quantity | `5000` |  |
+| 15 | receivedQuantity | Decimal128 | - | Yes | Received quantity | `5000` |  |
+| 16 | acceptedQuantity | Decimal128 | - | Yes | Accepted quantity | `5000` |  |
+| 17 | rejectedQuantity | Decimal128 | - | Yes | Rejected quantity | `0` |  |
 | 18 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 19 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 20 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000006"` | Reference: u_mes_matl_storageLocation._id |

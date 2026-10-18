@@ -32,7 +32,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 9 | sparePartId | String | - | Yes | Reference to u_mes_maint_sparePart._id | `"1224000000000001"` | Reference: u_mes_maint_sparePart._id |
 | 10 | sparePartName | String | - | Yes | Display value of sparePartId, copied from u_mes_maint_sparePart.description | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
-| 11 | quantity | Decimal128 | - | Yes | Quantity of the maintenance plan required spare part | `NumberDecimal("1")` |  |
+| 11 | quantity | Decimal128 | - | Yes | Quantity of the maintenance plan required spare part | `1` |  |
 | 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes

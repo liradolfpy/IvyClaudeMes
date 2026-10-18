@@ -42,16 +42,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | energyTypeName | String | - | Yes | Display value of energyTypeId, copied from u_mes_perf_energyType.name | `"Electricity"` |  |
 | 16 | intervalStartAt | Date | Datetime | Yes | Interval start date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
 | 17 | intervalEndAt | Date | Datetime | Yes | Interval end date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:15:00.000+0000")` |  |
-| 18 | consumption | Decimal128 | - | Yes | Quantity consumed in the interval, in the unit given by unitOfMeasureId | `NumberDecimal("41.6")` |  |
+| 18 | consumption | Decimal128 | - | Yes | Quantity consumed in the interval, in the unit given by unitOfMeasureId | `41.6` |  |
 | 19 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000010"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 20 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Kilowatt hour"` |  |
-| 21 | meterReadingStart | Decimal128 | - | Yes | Meter reading start | `NumberDecimal("184220.4")` |  |
-| 22 | meterReadingEnd | Decimal128 | - | Yes | Meter reading end | `NumberDecimal("184262.0")` |  |
-| 23 | demandKw | Decimal128 | - | No (null allowed) | Demand (kW) | `NumberDecimal("96.5")` |  |
+| 21 | meterReadingStart | Decimal128 | - | Yes | Meter reading start | `184220.4` |  |
+| 22 | meterReadingEnd | Decimal128 | - | Yes | Meter reading end | `184262.0` |  |
+| 23 | demandKw | Decimal128 | - | No (null allowed) | Demand (kW) | `96.5` |  |
 | 24 | powerFactor | Double | - | No (null allowed) | Power factor | `Double(0.96)` |  |
-| 25 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
+| 25 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `8640.00` |  |
 | 26 | unitsProduced | Int32 | - | Yes | Units produced | `NumberInt(38)` |  |
-| 27 | specificConsumption | Decimal128 | - | No (null allowed) | Consumption per unit produced | `NumberDecimal("0.0546")` |  |
+| 27 | specificConsumption | Decimal128 | - | No (null allowed) | Consumption per unit produced | `0.0546` |  |
 | 28 | signalQuality | String | - | Yes | Signal quality | `"Good"` | Good; Uncertain; Bad |
 | 29 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 30 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |

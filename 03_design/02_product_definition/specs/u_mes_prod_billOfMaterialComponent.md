@@ -32,10 +32,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | lineNo | Int32 | - | Yes | Line number within the parent record | `NumberInt(10)` |  |
 | 9 | componentItemId | String | - | Yes | Reference to u_mes_prod_item._id: component item | `"1043000000000003"` | Reference: u_mes_prod_item._id |
 | 10 | componentItemName | String | - | Yes | Display value of componentItemId, copied from u_mes_prod_item.description | `"Caliper Body, LH, machined and anodised"` |  |
-| 11 | quantity | Decimal128 | - | Yes | Quantity of the bill of material component | `NumberDecimal("1")` |  |
+| 11 | quantity | Decimal128 | - | Yes | Quantity of the bill of material component | `1` |  |
 | 12 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 13 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 14 | scrapPct | Decimal128 | - | Yes | Scrap (percent) | `NumberDecimal("0.5")` |  |
+| 14 | scrapPct | Decimal128 | - | Yes | Scrap (percent) | `0.5` |  |
 | 15 | operationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id | `"1051000000000006"` | Reference: u_mes_prod_operation._id |
 | 16 | operationName | String | - | No (null allowed) | Display value of operationId, copied from u_mes_prod_operation.name | `"Piston and seal assembly"` |  |
 | 17 | isTraceable | Boolean | - | Yes | True when the record is traceable | `true` |  |

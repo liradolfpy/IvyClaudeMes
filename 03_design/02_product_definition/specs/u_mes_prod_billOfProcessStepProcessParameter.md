@@ -31,9 +31,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | billOfProcessStepName | String | - | Yes | Display value of billOfProcessStepId, copied from u_mes_prod_billOfProcessStep.recordNo | `"BOP-5110-10-0100-R01-S01"` |  |
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 9 | name | String | - | Yes | Name of the bill of process step process parameter | `"Die temperature, upper half, casting machine 1"` |  |
-| 10 | nominal | Decimal128 | - | Yes | Nominal of the bill of process step process parameter | `NumberDecimal("400.0")` |  |
-| 11 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `NumberDecimal("380.0")` |  |
-| 12 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `NumberDecimal("420.0")` |  |
+| 10 | nominal | Decimal128 | - | Yes | Nominal of the bill of process step process parameter | `400.0` |  |
+| 11 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `380.0` |  |
+| 12 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `420.0` |  |
 | 13 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000008"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 14 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
 | 15 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |

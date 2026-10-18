@@ -41,7 +41,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | componentLotId | String | - | No (null allowed) | Reference to u_mes_plan_lot._id: component lot | `"1096000000000005"` | Reference: u_mes_plan_lot._id |
 | 17 | componentLotName | String | - | No (null allowed) | Display value of componentLotId, copied from u_mes_plan_lot.recordNo | `"L260905-PST-007"` |  |
 | 18 | componentSerialNo | String | - | No (null allowed) | Component serial number | `null` |  |
-| 19 | quantity | Decimal128 | - | Yes | Quantity of the material consumption | `NumberDecimal("1")` |  |
+| 19 | quantity | Decimal128 | - | Yes | Quantity of the material consumption | `1` |  |
 | 20 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 21 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 22 | workCenterId | String | - | Yes | Reference to u_mes_mast_workCenter._id | `"1009000000000006"` | Reference: u_mes_mast_workCenter._id |

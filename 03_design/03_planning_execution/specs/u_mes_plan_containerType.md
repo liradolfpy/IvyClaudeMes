@@ -30,10 +30,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 6 | name | String | - | Yes | Name of the container type; used as its display value in other collections | `"Returnable Bin 600 x 400"` |  |
 | 7 | description | String | - | Yes | Description of the container type | `"Returnable Bin 600 x 400 (RB-6040)"` |  |
-| 8 | lengthMm | Decimal128 | - | Yes | Length (mm) | `NumberDecimal("600.0")` |  |
-| 9 | widthMm | Decimal128 | - | Yes | Width (mm) | `NumberDecimal("400.0")` |  |
-| 10 | heightMm | Decimal128 | - | Yes | Height (mm) | `NumberDecimal("280.0")` |  |
-| 11 | tareWeightKg | Decimal128 | - | Yes | Tare weight (kg) | `NumberDecimal("2.100")` |  |
+| 8 | lengthMm | Decimal128 | - | Yes | Length (mm) | `600.0` |  |
+| 9 | widthMm | Decimal128 | - | Yes | Width (mm) | `400.0` |  |
+| 10 | heightMm | Decimal128 | - | Yes | Height (mm) | `280.0` |  |
+| 11 | tareWeightKg | Decimal128 | - | Yes | Tare weight (kg) | `2.100` |  |
 | 12 | isReturnable | Boolean | - | Yes | True when the record is returnable | `false` |  |
 | 13 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 14 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |

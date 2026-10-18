@@ -37,12 +37,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 12 | periodType | String | - | Yes | Period type | `"Month"` | Shift; Day; Week; Month |
 | 13 | periodStartAt | Date | Datetime | Yes | Period start | `ISODate("2026-09-01T00:00:00.000+0000")` |  |
 | 14 | periodEndAt | Date | Datetime | Yes | Period end | `ISODate("2026-09-30T23:59:00.000+0000")` |  |
-| 15 | operatingHours | Decimal128 | - | Yes | Run hours | `NumberDecimal("498.5")` |  |
+| 15 | operatingHours | Decimal128 | - | Yes | Run hours | `498.5` |  |
 | 16 | failureCount | Int32 | - | Yes | Breakdowns | `NumberInt(2)` |  |
 | 17 | repairMinutes | Int32 | - | Yes | Total repair minutes | `NumberInt(190)` |  |
-| 18 | mtbfHours | Decimal128 | - | No (null allowed) | Mean time between failures; null when no failure | `NumberDecimal("249.3")` |  |
-| 19 | mttrMinutes | Decimal128 | - | No (null allowed) | Mean time to repair; null when no failure | `NumberDecimal("95.0")` |  |
-| 20 | availabilityPct | Decimal128 | - | Yes | Technical availability | `NumberDecimal("99.4")` |  |
+| 18 | mtbfHours | Decimal128 | - | No (null allowed) | Mean time between failures; null when no failure | `249.3` |  |
+| 19 | mttrMinutes | Decimal128 | - | No (null allowed) | Mean time to repair; null when no failure | `95.0` |  |
+| 20 | availabilityPct | Decimal128 | - | Yes | Technical availability | `99.4` |  |
 | 21 | calculatedAt | Date | Datetime | Yes | Calculation time | `ISODate("2026-09-30T23:59:00.000+0000")` |  |
 | 22 | status | String | - | Yes | Primary lifecycle state of the document | `"Calculated"` | Calculated; Recalculated |
 | 23 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |

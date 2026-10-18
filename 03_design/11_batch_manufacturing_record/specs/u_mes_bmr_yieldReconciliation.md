@@ -35,16 +35,16 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Paracetamol Tablets IP 500 mg, blister 10 x 10"` |  |
 | 11 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000011"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 12 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 13 | theoreticalQuantity | Decimal128 | - | Yes | Quantity expected from the order quantity | `NumberDecimal("4800")` |  |
-| 14 | issuedQuantity | Decimal128 | - | Yes | Quantity issued or started | `NumberDecimal("4800")` |  |
-| 15 | outputQuantity | Decimal128 | - | Yes | Good output, or quantity used | `NumberDecimal("4741")` |  |
-| 16 | rejectedQuantity | Decimal128 | - | Yes | Rejected or scrapped | `NumberDecimal("22")` |  |
-| 17 | destroyedQuantity | Decimal128 | - | Yes | Destroyed (damaged labels, test pieces) | `NumberDecimal("25")` |  |
-| 18 | returnedQuantity | Decimal128 | - | Yes | Returned to stores | `NumberDecimal("12")` |  |
-| 19 | unaccountedQuantity | Decimal128 | - | Yes | Issued minus output, rejected, destroyed and returned | `NumberDecimal("0")` |  |
-| 20 | yieldPct | Decimal128 | - | Yes | Yield (percent) | `NumberDecimal("98.77")` |  |
-| 21 | lowerLimitPct | Decimal128 | - | Yes | Lower acceptance limit (percent) | `NumberDecimal("98.00")` |  |
-| 22 | upperLimitPct | Decimal128 | - | Yes | Upper acceptance limit (percent) | `NumberDecimal("100.00")` |  |
+| 13 | theoreticalQuantity | Decimal128 | - | Yes | Quantity expected from the order quantity | `4800` |  |
+| 14 | issuedQuantity | Decimal128 | - | Yes | Quantity issued or started | `4800` |  |
+| 15 | outputQuantity | Decimal128 | - | Yes | Good output, or quantity used | `4741` |  |
+| 16 | rejectedQuantity | Decimal128 | - | Yes | Rejected or scrapped | `22` |  |
+| 17 | destroyedQuantity | Decimal128 | - | Yes | Destroyed (damaged labels, test pieces) | `25` |  |
+| 18 | returnedQuantity | Decimal128 | - | Yes | Returned to stores | `12` |  |
+| 19 | unaccountedQuantity | Decimal128 | - | Yes | Issued minus output, rejected, destroyed and returned | `0` |  |
+| 20 | yieldPct | Decimal128 | - | Yes | Yield (percent) | `98.77` |  |
+| 21 | lowerLimitPct | Decimal128 | - | Yes | Lower acceptance limit (percent) | `98.00` |  |
+| 22 | upperLimitPct | Decimal128 | - | Yes | Upper acceptance limit (percent) | `100.00` |  |
 | 23 | withinLimits | Boolean | - | Yes | True when the yield is within limits and nothing is unaccounted | `true` |  |
 | 24 | nonconformanceId | String | - | No (null allowed) | Reference to u_mes_qual_nonconformance._id | `null` | Reference: u_mes_qual_nonconformance._id |
 | 25 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `null` |  |

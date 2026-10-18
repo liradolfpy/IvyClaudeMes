@@ -49,8 +49,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 18 | programNo | String | - | Yes | Program number | `"LT-03"` |  |
 | 19 | testMedium | String | - | Yes | Test medium | `"Dry Air"` | Dry Air; Nitrogen; Helium |
 | 20 | attemptNo | Int32 | - | Yes | 1 for the first attempt, higher for retests or repeats | `NumberInt(1)` |  |
-| 21 | ambientTemperatureC | Decimal128 | - | Yes | Ambient temperature (degrees Celsius) | `NumberDecimal("27.4")` |  |
-| 22 | partTemperatureC | Decimal128 | - | Yes | Part temperature (degrees Celsius) | `NumberDecimal("28.1")` |  |
+| 21 | ambientTemperatureC | Decimal128 | - | Yes | Ambient temperature (degrees Celsius) | `27.4` |  |
+| 22 | partTemperatureC | Decimal128 | - | Yes | Part temperature (degrees Celsius) | `28.1` |  |
 | 23 | fixtureToolId | String | - | No (null allowed) | Reference to u_mes_maint_tool._id: fixture tool | `"1226000000000008"` | Reference: u_mes_maint_tool._id |
 | 24 | fixtureToolName | String | - | No (null allowed) | Display value of fixtureToolId, copied from u_mes_maint_tool.name | `"Test seal set, piston bore 54 mm"` |  |
 | 25 | masterLeakVerifiedAt | Date | Datetime | No (null allowed) | Master leak verified date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |

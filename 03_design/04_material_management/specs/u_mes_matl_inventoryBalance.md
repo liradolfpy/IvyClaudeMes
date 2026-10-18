@@ -38,11 +38,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | containerName | String | - | No (null allowed) | Display value of containerId, copied from u_mes_plan_container.recordNo | `null` |  |
 | 14 | stockStatusId | String | - | Yes | Reference to u_mes_matl_stockStatus._id | `"1280000000000001"` | Reference: u_mes_matl_stockStatus._id |
 | 15 | stockStatusName | String | - | Yes | Display value of stockStatusId, copied from u_mes_matl_stockStatus.name | `"Unrestricted"` |  |
-| 16 | quantity | Decimal128 | - | Yes | Quantity of the inventory balance | `NumberDecimal("1")` |  |
-| 17 | reservedQuantity | Decimal128 | - | Yes | Reserved quantity | `NumberDecimal("0")` |  |
+| 16 | quantity | Decimal128 | - | Yes | Quantity of the inventory balance | `1` |  |
+| 17 | reservedQuantity | Decimal128 | - | Yes | Reserved quantity | `0` |  |
 | 18 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 19 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 20 | valueInr | Decimal128 | - | Yes | Value (Indian rupees) | `NumberDecimal("52428.00")` |  |
+| 20 | valueInr | Decimal128 | - | Yes | Value (Indian rupees) | `52428.00` |  |
 | 21 | firstReceivedAt | Date | Datetime | Yes | First received date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 22 | lastMovementAt | Date | Datetime | No (null allowed) | Last movement date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 23 | lastCountedAt | Date | Datetime | No (null allowed) | Last counted date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |

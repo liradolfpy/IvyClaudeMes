@@ -440,7 +440,7 @@ def write(root):
     tot=sum(len(v) for v in fails.values())
     s="# Sample data validation\n\nRun: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: %d | Documents: %d\n\n| # | Check | Scope | Result | Findings |\n|---|---|---|---|---|\n"%(len(cols),sum(len(v) for v in docs.values()))
     for x,ch in enumerate(CHECKS,1): s+="| %d | %s | all collections | %s | %d |\n"%(x,ch,"Pass" if not fails.get(ch) else "Fail",len(fails.get(ch,[])))
-    s+="\nShell format: every Int32 is written with NumberInt(), Int64 with NumberLong(), Decimal128 with NumberDecimal(), Double with Double(), dates with ISODate(); this is done by one formatting function for all files.\n"
+    s+="\nShell format: every Int32 is written with NumberInt(), Int64 with NumberLong(), Decimal128 as a plain number with its decimals kept (for example 1850.0, no NumberDecimal()), Double with Double(), dates with ISODate(); this is done by one formatting function for all files.\n"
     if tot:
         s+="\n## Findings\n\n| Check | Collection | Detail |\n|---|---|---|\n"
         for ch,v in fails.items():

@@ -31,14 +31,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | leakTestResultName | String | - | Yes | Display value of leakTestResultId, copied from u_mes_perf_leakTestResult.recordNo | `"LKT-2026-000377"` |  |
 | 8 | stageNo | Int32 | - | Yes | Stage number | `NumberInt(1)` |  |
 | 9 | stageName | String | - | Yes | Stage name | `"Low Pressure"` | Low Pressure; High Pressure; Gross Leak; Fine Leak |
-| 10 | testPressureBar | Decimal128 | - | Yes | Test pressure (bar) | `NumberDecimal("5.0")` |  |
-| 11 | fillTimeSec | Decimal128 | - | Yes | Fill time (seconds) | `NumberDecimal("2.0")` |  |
-| 12 | stabiliseTimeSec | Decimal128 | - | Yes | Stabilise time (seconds) | `NumberDecimal("3.0")` |  |
-| 13 | testTimeSec | Decimal128 | - | Yes | Test time (seconds) | `NumberDecimal("4.0")` |  |
-| 14 | pressureDropPa | Decimal128 | - | Yes | Pressure drop (pascal) | `NumberDecimal("8.0")` |  |
-| 15 | leakRateSccm | Decimal128 | - | Yes | Leak rate (standard cubic centimetres per minute) | `NumberDecimal("0.09")` |  |
-| 16 | limitPressureDropPa | Decimal128 | - | Yes | Limit pressure drop (pascal) | `NumberDecimal("30.0")` |  |
-| 17 | limitLeakRateSccm | Decimal128 | - | Yes | Limit leak rate (standard cubic centimetres per minute) | `NumberDecimal("0.30")` |  |
+| 10 | testPressureBar | Decimal128 | - | Yes | Test pressure (bar) | `5.0` |  |
+| 11 | fillTimeSec | Decimal128 | - | Yes | Fill time (seconds) | `2.0` |  |
+| 12 | stabiliseTimeSec | Decimal128 | - | Yes | Stabilise time (seconds) | `3.0` |  |
+| 13 | testTimeSec | Decimal128 | - | Yes | Test time (seconds) | `4.0` |  |
+| 14 | pressureDropPa | Decimal128 | - | Yes | Pressure drop (pascal) | `8.0` |  |
+| 15 | leakRateSccm | Decimal128 | - | Yes | Leak rate (standard cubic centimetres per minute) | `0.09` |  |
+| 16 | limitPressureDropPa | Decimal128 | - | Yes | Limit pressure drop (pascal) | `30.0` |  |
+| 17 | limitLeakRateSccm | Decimal128 | - | Yes | Limit leak rate (standard cubic centimetres per minute) | `0.30` |  |
 | 18 | stageResult | String | - | Yes | Stage result | `"Pass"` | Pass; Fail |
 | 19 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 20 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:14:03.000+0000")` |  |

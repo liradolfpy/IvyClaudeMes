@@ -41,7 +41,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | quantity | Int32 | - | Yes | Quantity of the scrap record | `NumberInt(1)` |  |
 | 17 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 18 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
-| 19 | weightKg | Decimal128 | - | Yes | Weight (kg) | `NumberDecimal("6.840")` |  |
+| 19 | weightKg | Decimal128 | - | Yes | Weight (kg) | `6.840` |  |
 | 20 | originOperationId | String | - | Yes | Reference to u_mes_prod_operation._id: origin operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
 | 21 | originOperationName | String | - | Yes | Display value of originOperationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
 | 22 | detectedAtOperationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id: detected at operation | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
@@ -51,7 +51,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 26 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
 | 27 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
 | 28 | scrapType | String | - | Yes | Scrap type | `"Process Scrap"` | Process Scrap; Setup Scrap; Material Defect; Destructive Test |
-| 29 | scrapCostInr | Decimal128 | - | Yes | Scrap cost (Indian rupees) | `NumberDecimal("4369.00")` |  |
+| 29 | scrapCostInr | Decimal128 | - | Yes | Scrap cost (Indian rupees) | `4369.00` |  |
 | 30 | declaredById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'declared' | `"1029000000000004"` | Reference: u_mes_mast_user._id |
 | 31 | declaredBy | String | - | Yes | Display name of the user in declaredById, copied from u_mes_mast_user.fullName | `"Anita Kulkarni"` |  |
 | 32 | declaredAt | Date | Datetime | Yes | Date and time when the record was declared. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:50.000+0000")` |  |

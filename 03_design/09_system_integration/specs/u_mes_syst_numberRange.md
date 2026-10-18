@@ -42,7 +42,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 17 | resetPolicy | String | - | Yes | Reset policy | `"Never"` | Never; Daily; Monthly; Yearly |
 | 18 | lastResetAt | Date | Datetime | No (null allowed) | Last reset date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 19 | checkDigitMethod | String | - | No (null allowed) | Check digit method | `null` | None; Modulo 10; Modulo 43 |
-| 20 | warnAtPct | Decimal128 | - | Yes | Warn at (percent) | `NumberDecimal("90.0")` |  |
+| 20 | warnAtPct | Decimal128 | - | Yes | Warn at (percent) | `90.0` |  |
 | 21 | lastIssuedValue | Int64 | - | Yes | Last issued value | `NumberLong("184")` |  |
 | 22 | lastIssuedAt | Date | Datetime | No (null allowed) | Last issued date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 23 | exampleValue | String | - | Yes | Example value | `"VB26272A00184"` |  |

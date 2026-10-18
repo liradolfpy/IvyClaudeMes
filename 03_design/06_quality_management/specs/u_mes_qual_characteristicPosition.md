@@ -31,9 +31,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | characteristicName | String | - | Yes | Display value of characteristicId, copied from u_mes_qual_characteristic.name | `"Anodic coating thickness"` |  |
 | 8 | positionNo | Int32 | - | Yes | Position number | `NumberInt(1)` |  |
 | 9 | positionName | String | - | Yes | Position name, e.g. Piston 1 inboard | `"Outer face, inboard"` |  |
-| 10 | nominal | Decimal128 | - | No (null allowed) | Nominal at this position | `NumberDecimal("12.0")` |  |
-| 11 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower limit at this position | `NumberDecimal("8.0")` |  |
-| 12 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper limit at this position | `NumberDecimal("16.0")` |  |
+| 10 | nominal | Decimal128 | - | No (null allowed) | Nominal at this position | `12.0` |  |
+| 11 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower limit at this position | `8.0` |  |
+| 12 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper limit at this position | `16.0` |  |
 | 13 | unitOfMeasureId | String | - | No (null allowed) | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000004"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 14 | unitOfMeasureName | String | - | No (null allowed) | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Micrometre"` |  |
 | 15 | curveEnvelopeId | String | - | No (null allowed) | Reference to u_mes_qual_curveEnvelope._id | `null` | Reference: u_mes_qual_curveEnvelope._id |

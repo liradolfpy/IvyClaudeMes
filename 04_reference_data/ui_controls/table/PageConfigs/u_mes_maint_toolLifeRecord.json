@@ -333,7 +333,7 @@
             "regrindNo" : null,
             "conditionOnRemoval" : "Normal wear",
             "removalReason" : "Life limit reached",
-            "measuredWearMm" : NumberDecimal("0.12"),
+            "measuredWearMm" : 0.12,
             "maintenanceWorkOrderId" : null,
             "maintenanceWorkOrderName" : null,
             "remarks" : "No abnormality observed",

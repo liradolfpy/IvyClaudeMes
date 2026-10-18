@@ -41,7 +41,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | itemId | String | - | No (null allowed) | Reference to u_mes_prod_item._id | `null` | Reference: u_mes_prod_item._id |
 | 17 | itemName | String | - | No (null allowed) | Display value of itemId, copied from u_mes_prod_item.description | `null` |  |
 | 18 | comparison | String | - | Yes | Comparison | `"Less Than"` | Less Than; Greater Than; Outside Band |
-| 19 | thresholdValue | Decimal128 | - | Yes | Threshold | `NumberDecimal("75.0")` |  |
+| 19 | thresholdValue | Decimal128 | - | Yes | Threshold | `75.0` |  |
 | 20 | thresholdUpperValue | Decimal128 | - | No (null allowed) | Upper value for Outside Band | `null` |  |
 | 21 | evaluationWindowMinutes | Int32 | - | Yes | Window evaluated | `NumberInt(60)` |  |
 | 22 | severityClass | String | - | Yes | Severity | `"Medium"` | Low; Medium; High; Critical |

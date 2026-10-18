@@ -275,7 +275,7 @@
             "planType" : "In Process",
             "strategy" : "Torque Control",
             "intervalType" : "Calendar",
-            "intervalValue" : NumberDecimal("30"),
+            "intervalValue" : 30,
             "intervalUom" : "Days",
             "counterSource" : null,
             "estimatedMinutes" : NumberInt(8),

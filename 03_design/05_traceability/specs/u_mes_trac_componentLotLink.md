@@ -37,7 +37,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 12 | childItemId | String | - | Yes | Reference to u_mes_prod_item._id: child item | `"1043000000000004"` | Reference: u_mes_prod_item._id |
 | 13 | childItemName | String | - | Yes | Display value of childItemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
 | 14 | linkType | String | - | Yes | Link type | `"Assembled"` | Assembled; Replaced; Split; Merge; Transformed |
-| 15 | quantity | Decimal128 | - | Yes | Quantity of the component lot link | `NumberDecimal("1")` |  |
+| 15 | quantity | Decimal128 | - | Yes | Quantity of the component lot link | `1` |  |
 | 16 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 17 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 18 | operationId | String | - | No (null allowed) | Reference to u_mes_prod_operation._id | `"1051000000000001"` | Reference: u_mes_prod_operation._id |
@@ -47,7 +47,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 22 | linkedAt | Date | Datetime | Yes | Date and time when the record was linked. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:50.000+0000")` |  |
 | 23 | linkedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'linked' | `"1029000000000001"` | Reference: u_mes_mast_user._id |
 | 24 | linkedBy | String | - | Yes | Display name of the user in linkedById, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 25 | yieldPct | Decimal128 | - | Yes | Yield (percent) | `NumberDecimal("98.8")` |  |
+| 25 | yieldPct | Decimal128 | - | Yes | Yield (percent) | `98.8` |  |
 | 26 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Removed |
 | 27 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 28 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:52:20.000+0000")` |  |

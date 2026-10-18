@@ -37,9 +37,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 12 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000002"` | Reference: u_mes_mast_shift._id |
 | 13 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift B"` |  |
 | 14 | productionDate | Date | Date | Yes | Production date | `ISODate("2026-09-15T00:00:00.000+0000")` |  |
-| 15 | attendedMinutes | Decimal128 | - | Yes | Minutes logged in | `NumberDecimal("455")` |  |
-| 16 | earnedMinutes | Decimal128 | - | Yes | Standard minutes earned | `NumberDecimal("421")` |  |
-| 17 | efficiencyPct | Decimal128 | - | Yes | Earned / attended | `NumberDecimal("92.5")` |  |
+| 15 | attendedMinutes | Decimal128 | - | Yes | Minutes logged in | `455` |  |
+| 16 | earnedMinutes | Decimal128 | - | Yes | Standard minutes earned | `421` |  |
+| 17 | efficiencyPct | Decimal128 | - | Yes | Earned / attended | `92.5` |  |
 | 18 | goodQuantity | Int32 | - | Yes | Good units | `NumberInt(742)` |  |
 | 19 | rejectQuantity | Int32 | - | Yes | Rejected units | `NumberInt(2)` |  |
 | 20 | errorCount | Int32 | - | Yes | Defects with 4M category Man | `NumberInt(0)` |  |

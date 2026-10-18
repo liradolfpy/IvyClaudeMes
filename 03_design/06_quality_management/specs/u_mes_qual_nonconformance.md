@@ -69,7 +69,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 32 | capaName | String | - | No (null allowed) | Display value of capaId, copied from u_mes_qual_capa.title | `"8D - Shrinkage porosity in bridge section"` |  |
 | 33 | rootCauseSummary | String | - | No (null allowed) | Root cause summary | `"Ejector pin galled after die coating build-up"` |  |
 | 34 | severity | Int32 | - | Yes | Severity rating 1 to 10 | `NumberInt(8)` |  |
-| 35 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
+| 35 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `8640.00` |  |
 | 36 | closedAt | Date | Datetime | No (null allowed) | Date and time when the record was closed. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 37 | closedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'closed' | `null` | Reference: u_mes_mast_user._id |
 | 38 | closedBy | String | - | No (null allowed) | Display name of the user in closedById, copied from u_mes_mast_user.fullName | `null` |  |

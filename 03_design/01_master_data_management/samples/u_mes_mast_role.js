@@ -11,7 +11,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Runs operations at an assigned station and records results",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -26,7 +26,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Sets up machines, changes tools and approves first-off parts with quality",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -41,7 +41,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Leads a line crew and answers andon calls",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -56,7 +56,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Plans the shift, releases orders and approves handovers",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -71,7 +71,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Inspects parts and records results",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -86,7 +86,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Owns control plans, dispositions nonconformances and releases holds",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -101,7 +101,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Carries out breakdown and preventive maintenance",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -116,7 +116,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Receives, moves and issues material",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -131,7 +131,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Maintains routings, recipes and work instructions",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -146,7 +146,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Administers users, roles and system settings",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -161,7 +161,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Runs process steps in the granulation, compression and coating suites and records results in the electronic batch record",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -176,7 +176,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Runs the blister, bottle and cartoning lines and records in-process checks",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -191,7 +191,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Leads the shift crew, verifies line clearance and signs critical steps",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -206,7 +206,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Reviews executed batch records and exceptions before release",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -221,7 +221,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Certifies batches for sale and approves deviations, CAPA and changes",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -236,7 +236,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Tests samples in the quality control laboratory and records results",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -251,7 +251,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Carries out breakdown and preventive maintenance and calibration of process equipment",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -266,7 +266,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Receives, samples, dispenses and issues material",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -281,7 +281,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Validates computerised systems and maintains master data and recipes",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -296,7 +296,7 @@ db.getCollection("u_mes_mast_role").insertMany([
     scope: "Enterprise",
     description: "Administers users, roles and system settings",
     canSign: true,
-    approvalLimitInr: NumberDecimal("0.00"),
+    approvalLimitInr: 0.00,
     isSystemRole: false,
     status: "Active",
     schemaVersion: NumberInt(1)

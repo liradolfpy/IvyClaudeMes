@@ -12,7 +12,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -27,7 +27,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -42,7 +42,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -57,7 +57,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000004",
     itemName: "Caliper Body Casting, LH, T6",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -72,7 +72,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -87,7 +87,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -102,7 +102,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -117,7 +117,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -132,7 +132,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -147,7 +147,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000003",
     itemName: "Caliper Body, LH, machined and anodised",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -162,7 +162,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -177,7 +177,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -192,7 +192,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -207,7 +207,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -222,7 +222,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -237,7 +237,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -252,7 +252,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -267,7 +267,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -282,7 +282,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(1),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   },
@@ -297,7 +297,7 @@ db.getCollection("u_mes_prod_billOfProcessStepConsumedComponent").insertMany([
     sequenceNo: NumberInt(2),
     itemId: "1043000000000014",
     itemName: "Paracetamol 500 mg lubricated granules and core tablets, bulk",
-    quantity: NumberDecimal("1"),
+    quantity: 1,
     verifyByScan: true,
     schemaVersion: NumberInt(1)
   }

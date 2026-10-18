@@ -30,10 +30,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 6 | gaugeCalibrationId | String | - | Yes | Reference to u_mes_qual_gaugeCalibration._id: the parent document this one belongs to | `"1190000000000001"` | Reference: u_mes_qual_gaugeCalibration._id |
 | 7 | gaugeCalibrationName | String | - | Yes | Display value of gaugeCalibrationId, copied from u_mes_qual_gaugeCalibration.recordNo | `"GCAL-G-UT-001-2026-01"` |  |
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
-| 9 | nominal | Decimal128 | - | Yes | Nominal of the gauge calibration reading | `NumberDecimal("8.00")` |  |
-| 10 | asFound | Decimal128 | - | Yes | As found | `NumberDecimal("54.001")` |  |
-| 11 | asLeft | Decimal128 | - | Yes | As left | `NumberDecimal("54.000")` |  |
-| 12 | tolerance | Decimal128 | - | Yes | Tolerance of the gauge calibration reading | `NumberDecimal("0.002")` |  |
+| 9 | nominal | Decimal128 | - | Yes | Nominal of the gauge calibration reading | `8.00` |  |
+| 10 | asFound | Decimal128 | - | Yes | As found | `54.001` |  |
+| 11 | asLeft | Decimal128 | - | Yes | As left | `54.000` |  |
+| 12 | tolerance | Decimal128 | - | Yes | Tolerance of the gauge calibration reading | `0.002` |  |
 | 13 | withinTolerance | Boolean | - | Yes | True when: within tolerance | `true` |  |
 | 14 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 | 15 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:03:00.000+0000")` |  |

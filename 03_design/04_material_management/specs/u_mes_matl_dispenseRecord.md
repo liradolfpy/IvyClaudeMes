@@ -35,11 +35,11 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | lotId | String | - | Yes | Reference to u_mes_plan_lot._id | `"1096000000000015"` | Reference: u_mes_plan_lot._id |
 | 11 | lotName | String | - | Yes | Display value of lotId, copied from u_mes_plan_lot.recordNo | `"R260904-API-011"` |  |
 | 12 | dispenseMethod | String | - | Yes | How the quantity is determined | `"Gravimetric Weighing"` | Gravimetric Weighing; Count By Weight |
-| 13 | targetWeight | Decimal128 | - | Yes | Target net weight | `NumberDecimal("250.000")` |  |
-| 14 | tolerancePct | Decimal128 | - | Yes | Allowed deviation from the target (percent) | `NumberDecimal("0.50")` |  |
-| 15 | tareWeight | Decimal128 | - | Yes | Tare weight of the container | `NumberDecimal("12.400")` |  |
-| 16 | grossWeight | Decimal128 | - | Yes | Gross weight | `NumberDecimal("262.550")` |  |
-| 17 | netWeight | Decimal128 | - | Yes | Net weight | `NumberDecimal("250.150")` |  |
+| 13 | targetWeight | Decimal128 | - | Yes | Target net weight | `250.000` |  |
+| 14 | tolerancePct | Decimal128 | - | Yes | Allowed deviation from the target (percent) | `0.50` |  |
+| 15 | tareWeight | Decimal128 | - | Yes | Tare weight of the container | `12.400` |  |
+| 16 | grossWeight | Decimal128 | - | Yes | Gross weight | `262.550` |  |
+| 17 | netWeight | Decimal128 | - | Yes | Net weight | `250.150` |  |
 | 18 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000012"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 19 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Kilogram"` |  |
 | 20 | pieceCount | Int32 | - | No (null allowed) | Pieces calculated by count-by-weight; null for bulk material | `null` |  |

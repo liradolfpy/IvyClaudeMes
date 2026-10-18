@@ -32,7 +32,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 9 | itemId | String | - | Yes | Reference to u_mes_prod_item._id | `"1043000000000004"` | Reference: u_mes_prod_item._id |
 | 10 | itemName | String | - | Yes | Display value of itemId, copied from u_mes_prod_item.description | `"Caliper Body Casting, LH, T6"` |  |
-| 11 | quantity | Decimal128 | - | Yes | Quantity of the bill of process step consumed component | `NumberDecimal("1")` |  |
+| 11 | quantity | Decimal128 | - | Yes | Quantity of the bill of process step consumed component | `1` |  |
 | 12 | verifyByScan | Boolean | - | Yes | True when: verify by scan | `true` |  |
 | 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 

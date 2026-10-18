@@ -40,7 +40,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 7 | scope | String | - | Yes | Whether the record applies to the whole enterprise or to one site | `"Enterprise"` | Enterprise; Site |
 | 8 | description | String | - | Yes | Description of the role | `"Runs operations at an assigned station and records results"` |  |
 | 9 | canSign | Boolean | - | Yes | True when the holder can sign | `true` |  |
-| 10 | approvalLimitInr | Decimal128 | - | No (null allowed) | Approval limit (Indian rupees) | `NumberDecimal("0.00")` |  |
+| 10 | approvalLimitInr | Decimal128 | - | No (null allowed) | Approval limit (Indian rupees) | `0.00` |  |
 | 11 | isSystemRole | Boolean | - | Yes | True when the record is system role | `false` |  |
 | 12 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive |
 | 13 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |

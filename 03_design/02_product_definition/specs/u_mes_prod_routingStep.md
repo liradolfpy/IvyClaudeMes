@@ -34,7 +34,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | operationName | String | - | Yes | Display value of operationId, copied from u_mes_prod_operation.name | `"Gravity die casting"` |  |
 | 11 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |
 | 12 | workCenterName | String | - | No (null allowed) | Display value of workCenterId, copied from u_mes_mast_workCenter.name | `"Gravity Die Casting Cell 1"` |  |
-| 13 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 13 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `95.0` |  |
 | 14 | setupTimeMin | Int32 | - | Yes | Setup time (minutes) | `NumberInt(45)` |  |
 | 15 | isMilestone | Boolean | - | Yes | True when the record is milestone | `true` |  |
 | 16 | isOptional | Boolean | - | Yes | True when the record is optional | `false` |  |

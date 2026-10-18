@@ -18,7 +18,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Pouring and die cycle - Caliper body LH",
     inspectionPlanId: "1142000000000001",
     inspectionPlanName: "In-process inspection, gravity die casting",
-    cycleTimeSec: NumberDecimal("95.0"),
+    cycleTimeSec: 95.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -39,7 +39,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Loading and T6 cycle - Caliper body castings",
     inspectionPlanId: "1142000000000002",
     inspectionPlanName: "In-process inspection, heat treatment t6",
-    cycleTimeSec: NumberDecimal("28800.0"),
+    cycleTimeSec: 28800.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -60,7 +60,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Loading and bore machining - Caliper body LH",
     inspectionPlanId: "1142000000000003",
     inspectionPlanName: "In-process inspection, cnc machining",
-    cycleTimeSec: NumberDecimal("210.0"),
+    cycleTimeSec: 210.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -81,7 +81,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Washing and drying - Caliper body LH",
     inspectionPlanId: "1142000000000004",
     inspectionPlanName: "In-process inspection, washing",
-    cycleTimeSec: NumberDecimal("180.0"),
+    cycleTimeSec: 180.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -102,7 +102,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Racking and anodising - Caliper body LH",
     inspectionPlanId: "1142000000000005",
     inspectionPlanName: "In-process inspection, anodising",
-    cycleTimeSec: NumberDecimal("3600.0"),
+    cycleTimeSec: 3600.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -123,7 +123,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Seal, piston and dust boot assembly - Front caliper LH",
     inspectionPlanId: "1142000000000006",
     inspectionPlanName: "In-process inspection, piston and seal assembly",
-    cycleTimeSec: NumberDecimal("32.0"),
+    cycleTimeSec: 32.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -144,7 +144,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Bleed screw tightening - Front caliper LH",
     inspectionPlanId: "1142000000000007",
     inspectionPlanName: "In-process inspection, bleed screw torque",
-    cycleTimeSec: NumberDecimal("18.0"),
+    cycleTimeSec: 18.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -165,7 +165,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Pressure leak test - Front caliper LH",
     inspectionPlanId: "1142000000000008",
     inspectionPlanName: "In-process inspection, pressure leak test",
-    cycleTimeSec: NumberDecimal("24.0"),
+    cycleTimeSec: 24.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -186,7 +186,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Serial and 2D code marking - Front caliper LH",
     inspectionPlanId: "1142000000000009",
     inspectionPlanName: "In-process inspection, laser marking",
-    cycleTimeSec: NumberDecimal("14.0"),
+    cycleTimeSec: 14.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -207,7 +207,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Final inspection and packing - Front caliper LH",
     inspectionPlanId: "1142000000000010",
     inspectionPlanName: "In-process inspection, final inspection",
-    cycleTimeSec: NumberDecimal("20.0"),
+    cycleTimeSec: 20.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -228,7 +228,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Dispensing of API and excipients - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000011",
     inspectionPlanName: "In-process inspection, dispensing",
-    cycleTimeSec: NumberDecimal("600.0"),
+    cycleTimeSec: 600.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -249,7 +249,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Dry mixing, binder addition and wet massing - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000012",
     inspectionPlanName: "In-process inspection, wet granulation",
-    cycleTimeSec: NumberDecimal("1800.0"),
+    cycleTimeSec: 1800.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -270,7 +270,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Drying of wet granules - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000013",
     inspectionPlanName: "In-process inspection, fluid bed drying",
-    cycleTimeSec: NumberDecimal("3600.0"),
+    cycleTimeSec: 3600.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -291,7 +291,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Sizing and lubrication - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000014",
     inspectionPlanName: "In-process inspection, sizing and lubrication blending",
-    cycleTimeSec: NumberDecimal("900.0"),
+    cycleTimeSec: 900.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -312,7 +312,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Compression of core tablets - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000015",
     inspectionPlanName: "In-process inspection, compression",
-    cycleTimeSec: NumberDecimal("0.02"),
+    cycleTimeSec: 0.02,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -333,7 +333,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Film coating of core tablets - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000016",
     inspectionPlanName: "In-process inspection, film coating",
-    cycleTimeSec: NumberDecimal("5400.0"),
+    cycleTimeSec: 5400.0,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -354,7 +354,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Counting, filling and capping - Paracetamol 500 mg, bottle of 100",
     inspectionPlanId: "1142000000000017",
     inspectionPlanName: "In-process inspection, bottle filling and capping",
-    cycleTimeSec: NumberDecimal("0.6"),
+    cycleTimeSec: 0.6,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -375,7 +375,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Blister packing and leak test - Paracetamol 500 mg 10 x 10",
     inspectionPlanId: "1142000000000018",
     inspectionPlanName: "In-process inspection, blister packing and leak test",
-    cycleTimeSec: NumberDecimal("0.5"),
+    cycleTimeSec: 0.5,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -396,7 +396,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Carton coding and code verification - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000019",
     inspectionPlanName: "In-process inspection, serialisation and printing",
-    cycleTimeSec: NumberDecimal("0.5"),
+    cycleTimeSec: 0.5,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   },
@@ -417,7 +417,7 @@ db.getCollection("u_mes_prod_billOfProcessStep").insertMany([
     workInstructionName: "Cartoning, checkweighing and shipper packing - Paracetamol 500 mg",
     inspectionPlanId: "1142000000000020",
     inspectionPlanName: "In-process inspection, cartoning and final inspection",
-    cycleTimeSec: NumberDecimal("0.4"),
+    cycleTimeSec: 0.4,
     manning: NumberInt(1),
     schemaVersion: NumberInt(1)
   }

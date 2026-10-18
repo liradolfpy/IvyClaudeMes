@@ -38,9 +38,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 13 | validTo | Date | Date | No (null allowed) | Valid to. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2027-03-31T00:00:00.000+0000")` |  |
 | 14 | assessorUserId | String | - | Yes | Reference to u_mes_mast_user._id: assessor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
 | 15 | assessorUserName | String | - | Yes | Display value of assessorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 16 | assessmentScore | Decimal128 | - | Yes | Assessment score | `NumberDecimal("86.0")` |  |
+| 16 | assessmentScore | Decimal128 | - | Yes | Assessment score | `86.0` |  |
 | 17 | assessmentMethod | String | - | Yes | Assessment method | `"Practical Test"` | Practical Test; Written Test; Observation; On the Job |
-| 18 | trainingHours | Decimal128 | - | Yes | Training hours | `NumberDecimal("16.0")` |  |
+| 18 | trainingHours | Decimal128 | - | Yes | Training hours | `16.0` |  |
 | 19 | evidenceControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: evidence controlled document | `"1246000000000001"` | Reference: u_mes_syst_controlledDocument._id |
 | 20 | evidenceControlledDocumentName | String | - | No (null allowed) | Display value of evidenceControlledDocumentId, copied from u_mes_syst_controlledDocument.title | `"Drawing 5110-20-0105 revision B, Caliper Body Casting LH"` |  |
 | 21 | restrictions | String | - | No (null allowed) | Restrictions of the skill certification | `"Not certified for master leak verification"` |  |

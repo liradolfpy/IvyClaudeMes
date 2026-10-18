@@ -46,8 +46,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 14 | revisionDate | Date | Date | Yes | Revision date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 15 | materialSpecification | String | - | No (null allowed) | Material specification | `null` |  |
 | 16 | materialGrade | String | - | No (null allowed) | Material grade | `null` |  |
-| 17 | netWeightKg | Decimal128 | - | Yes | Net weight (kg) | `NumberDecimal("3.420")` |  |
-| 18 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `NumberDecimal("3.480")` |  |
+| 17 | netWeightKg | Decimal128 | - | Yes | Net weight (kg) | `3.420` |  |
+| 18 | grossWeightKg | Decimal128 | - | Yes | Gross weight (kg) | `3.480` |  |
 | 19 | procurementType | String | - | Yes | Procurement type | `"In House"` | In House; Purchased; Subcontracted |
 | 20 | defaultSupplierId | String | - | No (null allowed) | Reference to u_mes_mast_supplier._id: default supplier | `null` | Reference: u_mes_mast_supplier._id |
 | 21 | defaultSupplierName | String | - | No (null allowed) | Display value of defaultSupplierId, copied from u_mes_mast_supplier.name | `null` |  |
@@ -60,7 +60,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 28 | shelfLifeDays | Int32 | - | No (null allowed) | Shelf life (days) | `null` |  |
 | 29 | safetyCharacteristic | Boolean | - | Yes | True when: safety characteristic | `true` |  |
 | 30 | hsnCode | String | - | Yes | Harmonised system of nomenclature code | `"87083000"` |  |
-| 31 | standardCostInr | Decimal128 | - | Yes | Standard cost (Indian rupees) | `NumberDecimal("2184.50")` |  |
+| 31 | standardCostInr | Decimal128 | - | Yes | Standard cost (Indian rupees) | `2184.50` |  |
 | 32 | erpMaterialNo | String | - | Yes | ERP material number | `"000000000051110100"` |  |
 | 33 | defaultStorageLocationId | String | - | No (null allowed) | Reference to u_mes_matl_storageLocation._id: default storage location | `"1112000000000008"` | Reference: u_mes_matl_storageLocation._id |
 | 34 | defaultStorageLocationName | String | - | No (null allowed) | Display value of defaultStorageLocationId, copied from u_mes_matl_storageLocation.name | `"Finished goods rack 01"` |  |

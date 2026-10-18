@@ -64,9 +64,9 @@ Every key is present in every document. "Required" means the value may not be nu
 | 30 | nonconformanceName | String | - | No (null allowed) | Display value of nonconformanceId, copied from u_mes_qual_nonconformance.title | `"Shrinkage porosity found on casting lot from die 2"` |  |
 | 31 | capaId | String | - | No (null allowed) | Reference to u_mes_qual_capa._id | `"1176000000000001"` | Reference: u_mes_qual_capa._id |
 | 32 | capaName | String | - | No (null allowed) | Display value of capaId, copied from u_mes_qual_capa.title | `"8D - Shrinkage porosity in bridge section"` |  |
-| 33 | debitNoteInr | Decimal128 | - | Yes | Debit note (Indian rupees) | `NumberDecimal("0.00")` |  |
+| 33 | debitNoteInr | Decimal128 | - | Yes | Debit note (Indian rupees) | `0.00` |  |
 | 34 | ppmImpact | Int32 | - | Yes | Ppm impact | `NumberInt(41)` |  |
-| 35 | sortingCostInr | Decimal128 | - | Yes | Sorting cost (Indian rupees) | `NumberDecimal("14500.00")` |  |
+| 35 | sortingCostInr | Decimal128 | - | Yes | Sorting cost (Indian rupees) | `14500.00` |  |
 | 36 | customerClosedAt | Date | Datetime | No (null allowed) | Customer closed date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 37 | status | String | - | Yes | Primary lifecycle state of the document | `"Received"` | Received; Containment Sent; Under Analysis; Closed; Rejected |
 | 38 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |

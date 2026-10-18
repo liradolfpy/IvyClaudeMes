@@ -4,7 +4,7 @@
 Functions (each one can be switched off by commenting its line in main()):
   1. load_sample_data()   - every 03_design/<module>/samples/<collection>.js file into the collection named
                             in its db.getCollection("...") call
-  2. load_page_configs()  - every 04_reference_data/ui_controls/query/PageConfigs/*.json into collection "pc0M"
+  2. load_query_configs()  - every 04_reference_data/ui_controls/query/PageConfigs/*.json into collection "pc0M"
   3. load_ivy_configs()   - every 04_reference_data/ui_controls/query/IvyConfig/*.json into collection "u_int_ivyConfig"
 
 The source files are MongoDB shell style (NumberInt, NumberLong, NumberDecimal, Double, ISODate, unquoted keys).
@@ -371,7 +371,7 @@ def load_sample_data(db, module_filter=None):
 
 
 
-def load_page_configs(db):
+def load_query_configs(db):
     """2. Insert the query page configurations into collection pc0M."""
     files = sorted(glob.glob(PAGECONFIG_GLOB))
     docs = [read_config_file(p) for p in files]
@@ -489,16 +489,16 @@ def main():
     if db is None:
         print("DRY_RUN=1: files are parsed and counted, nothing is written")
     try:
-        load_sample_data(db, module_filter="01") # None
-        load_page_configs(db)
-        load_ivy_configs(db)
+        # load_sample_data(db, module_filter="01") # None
+        # load_query_configs(db)
+        # load_ivy_configs(db)
         load_table_configs(db)
-        load_menu_configs(db)
-        load_smodal_configs(db)
-        load_stadnew_configs(db)
-        load_cropdown_configs(db)
-        load_mdict_configs(db)
-        load_dynamic_configs(db)
+        # load_menu_configs(db)
+        # load_smodal_configs(db)
+        # load_stadnew_configs(db)
+        # load_cropdown_configs(db)
+        # load_mdict_configs(db)
+        # load_dynamic_configs(db)
     finally:
         if client is not None:
             client.close()

@@ -45,7 +45,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 20 | durationSec | Int32 | - | Yes | Duration (seconds) | `NumberInt(42)` |  |
 | 21 | inputType | String | - | Yes | Input type | `"None"` | None; Confirmation; Number; Text; Scan; Photo; Device Value |
 | 22 | enteredText | String | - | No (null allowed) | Entered text | `"Seat checked, dry"` |  |
-| 23 | enteredNumber | Decimal128 | - | No (null allowed) | Entered number | `NumberDecimal("42.0")` |  |
+| 23 | enteredNumber | Decimal128 | - | No (null allowed) | Entered number | `42.0` |  |
 | 24 | enteredFlag | Boolean | - | Yes | True when: entered flag | `false` |  |
 | 25 | scannedCode | String | - | No (null allowed) | Scanned code | `"5110300040/L260921-BS-003"` |  |
 | 26 | withinLimits | Boolean | - | Yes | True when: within limits | `true` |  |

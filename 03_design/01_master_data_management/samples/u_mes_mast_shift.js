@@ -13,7 +13,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -30,7 +30,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(2),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -47,7 +47,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: true,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(3),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -64,7 +64,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(510),
     plannedProductionMinutes: NumberInt(450),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(4),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -81,7 +81,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(5),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -98,7 +98,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(6),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -115,7 +115,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(510),
     plannedProductionMinutes: NumberInt(450),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(7),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -132,7 +132,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: true,
     durationMinutes: NumberInt(510),
     plannedProductionMinutes: NumberInt(450),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(8),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -149,7 +149,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(240),
     plannedProductionMinutes: NumberInt(225),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(9),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -166,7 +166,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: true,
     durationMinutes: NumberInt(240),
     plannedProductionMinutes: NumberInt(225),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -183,7 +183,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(1),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -200,7 +200,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(2),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -217,7 +217,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: true,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(3),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -234,7 +234,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(510),
     plannedProductionMinutes: NumberInt(450),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(4),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -251,7 +251,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(5),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -268,7 +268,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(480),
     plannedProductionMinutes: NumberInt(430),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(6),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -285,7 +285,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(510),
     plannedProductionMinutes: NumberInt(450),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(7),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -302,7 +302,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: true,
     durationMinutes: NumberInt(510),
     plannedProductionMinutes: NumberInt(450),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(8),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -319,7 +319,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: false,
     durationMinutes: NumberInt(240),
     plannedProductionMinutes: NumberInt(225),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(9),
     status: "Active",
     schemaVersion: NumberInt(1)
@@ -336,7 +336,7 @@ db.getCollection("u_mes_mast_shift").insertMany([
     crossesMidnight: true,
     durationMinutes: NumberInt(240),
     plannedProductionMinutes: NumberInt(225),
-    shiftAllowancePerDay: NumberDecimal("0.00"),
+    shiftAllowancePerDay: 0.00,
     sequenceNo: NumberInt(10),
     status: "Active",
     schemaVersion: NumberInt(1)

@@ -31,7 +31,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 6 | sparePartId | String | - | Yes | Reference to u_mes_maint_sparePart._id | `"1224000000000001"` | Reference: u_mes_maint_sparePart._id |
 | 7 | sparePartName | String | - | Yes | Display value of sparePartId, copied from u_mes_maint_sparePart.description | `"Socket 10 mm, 3/8 inch drive, for bleed screw nutrunner"` |  |
 | 8 | transactionType | String | - | Yes | Transaction type | `"Issue"` | Issue; Return; Receipt; Adjustment; Scrap |
-| 9 | quantity | Decimal128 | - | Yes | Quantity (positive) | `NumberDecimal("1")` |  |
+| 9 | quantity | Decimal128 | - | Yes | Quantity (positive) | `1` |  |
 | 10 | unitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id | `"1042000000000001"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 11 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Each"` |  |
 | 12 | maintenanceWorkOrderId | String | - | No (null allowed) | Reference to u_mes_maint_maintenanceWorkOrder._id | `"1220000000000007"` | Reference: u_mes_maint_maintenanceWorkOrder._id |
@@ -41,7 +41,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000003"` | Reference: u_mes_matl_storageLocation._id |
 | 17 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Warehouse A, rack 05, bin 03"` |  |
 | 18 | scanVerified | Boolean | - | Yes | Part barcode scanned | `true` |  |
-| 19 | unitCostInr | Decimal128 | - | Yes | Unit cost in INR | `NumberDecimal("4320.00")` |  |
+| 19 | unitCostInr | Decimal128 | - | Yes | Unit cost in INR | `4320.00` |  |
 | 20 | transactedAt | Date | Datetime | Yes | Transaction time | `ISODate("2026-09-21T07:47:00.000+0000")` |  |
 | 21 | transactedById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'transacted' | `"1029000000000008"` | Reference: u_mes_mast_user._id |
 | 22 | transactedBy | String | - | Yes | Display name of the user in transactedById, copied from u_mes_mast_user.fullName | `"Vikram Pawar"` |  |

@@ -33,8 +33,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 9 | question | String | - | Yes | Question of the check sheet item | `"Is the die coating intact on both die halves?"` |  |
 | 10 | answerType | String | - | Yes | Answer type | `"Yes No"` | Yes No; Number; Text |
 | 11 | expectedAnswer | String | - | No (null allowed) | Expected answer | `"Yes"` |  |
-| 12 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `NumberDecimal("7.50")` |  |
-| 13 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `NumberDecimal("8.50")` |  |
+| 12 | lowerLimit | Decimal128 | - | No (null allowed) | Lower limit | `7.50` |  |
+| 13 | upperLimit | Decimal128 | - | No (null allowed) | Upper limit | `8.50` |  |
 | 14 | unitText | String | - | No (null allowed) | Unit text | `"N.m"` |  |
 | 15 | isCritical | Boolean | - | Yes | True when the record is critical | `true` |  |
 | 16 | reactionOnFail | String | - | No (null allowed) | Reaction on fail | `"Stop the station and call the line leader"` |  |

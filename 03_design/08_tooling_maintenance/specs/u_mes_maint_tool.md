@@ -50,7 +50,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 19 | lifeLimit | Int64 | - | Yes | Life limit | `NumberLong("80000")` |  |
 | 20 | lifeUsed | Int64 | - | Yes | Life used | `NumberLong("61600")` |  |
 | 21 | lifeRemaining | Int64 | - | Yes | Life remaining | `NumberLong("18400")` |  |
-| 22 | warningThresholdPct | Decimal128 | - | Yes | Warning threshold (percent) | `NumberDecimal("80.0")` |  |
+| 22 | warningThresholdPct | Decimal128 | - | Yes | Warning threshold (percent) | `80.0` |  |
 | 23 | regrindCount | Int32 | - | Yes | Regrind count | `NumberInt(0)` |  |
 | 24 | maxRegrinds | Int32 | - | Yes | Maximum regrinds | `NumberInt(0)` |  |
 | 25 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
@@ -58,7 +58,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 27 | lastMaintainedAt | Date | Datetime | No (null allowed) | Last maintained date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 28 | nextMaintenanceDueAt | Date | Date | Yes | Next maintenance due at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-10-06T00:00:00.000+0000")` |  |
 | 29 | purchasedAt | Date | Datetime | Yes | Date and time when the record was purchased. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
-| 30 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `NumberDecimal("8640.00")` |  |
+| 30 | costInr | Decimal128 | - | Yes | Cost (Indian rupees) | `8640.00` |  |
 | 31 | ownedByCustomerId | String | - | No (null allowed) | Reference to u_mes_mast_customer._id: owned by customer | `"1035000000000001"` | Reference: u_mes_mast_customer._id |
 | 32 | ownedByCustomerName | String | - | No (null allowed) | Display value of ownedByCustomerId, copied from u_mes_mast_customer.name | `"Sahyadri Motors Ltd."` |  |
 | 33 | blockAtLifeLimit | Boolean | - | Yes | True when production is blocked once life used reaches the life limit | `true` |  |

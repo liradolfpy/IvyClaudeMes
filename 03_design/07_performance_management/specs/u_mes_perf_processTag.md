@@ -39,13 +39,13 @@ Every key is present in every document. "Required" means the value may not be nu
 | 14 | unitOfMeasureName | String | - | Yes | Display value of unitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Degree Celsius"` |  |
 | 15 | tagClass | String | - | Yes | Tag class | `"Process Value"` | Process Value; Setpoint; Counter; State; Alarm Bit; Energy; Environment |
 | 16 | scanRateMs | Int32 | - | Yes | Scan rate (milliseconds) | `NumberInt(1000)` |  |
-| 17 | deadband | Decimal128 | - | Yes | Deadband of the process tag | `NumberDecimal("0.5")` |  |
-| 18 | lowLimit | Decimal128 | - | No (null allowed) | Low limit | `NumberDecimal("380.0")` |  |
-| 19 | highLimit | Decimal128 | - | No (null allowed) | High limit | `NumberDecimal("420.0")` |  |
-| 20 | lowLowLimit | Decimal128 | - | No (null allowed) | Low low limit | `NumberDecimal("360.0")` |  |
-| 21 | highHighLimit | Decimal128 | - | No (null allowed) | High high limit | `NumberDecimal("440.0")` |  |
-| 22 | engineeringMin | Decimal128 | - | Yes | Engineering (minutes) | `NumberDecimal("0.0")` |  |
-| 23 | engineeringMax | Decimal128 | - | Yes | Engineering max | `NumberDecimal("630.0")` |  |
+| 17 | deadband | Decimal128 | - | Yes | Deadband of the process tag | `0.5` |  |
+| 18 | lowLimit | Decimal128 | - | No (null allowed) | Low limit | `380.0` |  |
+| 19 | highLimit | Decimal128 | - | No (null allowed) | High limit | `420.0` |  |
+| 20 | lowLowLimit | Decimal128 | - | No (null allowed) | Low low limit | `360.0` |  |
+| 21 | highHighLimit | Decimal128 | - | No (null allowed) | High high limit | `440.0` |  |
+| 22 | engineeringMin | Decimal128 | - | Yes | Engineering (minutes) | `0.0` |  |
+| 23 | engineeringMax | Decimal128 | - | Yes | Engineering max | `630.0` |  |
 | 24 | isCritical | Boolean | - | Yes | True when the record is critical | `true` |  |
 | 25 | historise | Boolean | - | Yes | True when: historise | `true` |  |
 | 26 | retentionDays | Int32 | - | Yes | Retention (days) | `NumberInt(730)` |  |

@@ -46,14 +46,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 21 | programNo | String | - | Yes | Program number | `"PSET-07"` |  |
 | 22 | tighteningNo | Int32 | - | Yes | Tightening number | `NumberInt(1)` |  |
 | 23 | attemptNo | Int32 | - | Yes | 1 for the first attempt, higher for retests or repeats | `NumberInt(1)` |  |
-| 24 | targetTorqueNm | Decimal128 | - | Yes | Target torque (N.m) | `NumberDecimal("14.0")` |  |
-| 25 | minTorqueNm | Decimal128 | - | Yes | Minimum torque (N.m) | `NumberDecimal("12.0")` |  |
-| 26 | maxTorqueNm | Decimal128 | - | Yes | Maximum torque (N.m) | `NumberDecimal("16.0")` |  |
-| 27 | finalTorqueNm | Decimal128 | - | Yes | Final torque (N.m) | `NumberDecimal("14.2")` |  |
-| 28 | targetAngleDeg | Decimal128 | - | Yes | Target angle (degrees) | `NumberDecimal("40.0")` |  |
-| 29 | minAngleDeg | Decimal128 | - | Yes | Minimum angle (degrees) | `NumberDecimal("20.0")` |  |
-| 30 | maxAngleDeg | Decimal128 | - | Yes | Maximum angle (degrees) | `NumberDecimal("70.0")` |  |
-| 31 | finalAngleDeg | Decimal128 | - | Yes | Final angle (degrees) | `NumberDecimal("38.5")` |  |
+| 24 | targetTorqueNm | Decimal128 | - | Yes | Target torque (N.m) | `14.0` |  |
+| 25 | minTorqueNm | Decimal128 | - | Yes | Minimum torque (N.m) | `12.0` |  |
+| 26 | maxTorqueNm | Decimal128 | - | Yes | Maximum torque (N.m) | `16.0` |  |
+| 27 | finalTorqueNm | Decimal128 | - | Yes | Final torque (N.m) | `14.2` |  |
+| 28 | targetAngleDeg | Decimal128 | - | Yes | Target angle (degrees) | `40.0` |  |
+| 29 | minAngleDeg | Decimal128 | - | Yes | Minimum angle (degrees) | `20.0` |  |
+| 30 | maxAngleDeg | Decimal128 | - | Yes | Maximum angle (degrees) | `70.0` |  |
+| 31 | finalAngleDeg | Decimal128 | - | Yes | Final angle (degrees) | `38.5` |  |
 | 32 | rundownTimeMs | Int32 | - | Yes | Rundown time (milliseconds) | `NumberInt(1840)` |  |
 | 33 | strategy | String | - | Yes | Strategy of the torque result | `"Torque Control"` | Torque Control; Torque Control Angle Monitor; Angle Control Torque Monitor; Yield Control |
 | 34 | result | String | - | Yes | Result of the torque result | `"OK"` | OK; Not OK |

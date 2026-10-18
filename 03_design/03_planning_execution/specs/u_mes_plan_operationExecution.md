@@ -62,8 +62,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 30 | attemptNo | Int32 | - | Yes | 1 for the first attempt, higher for retests or repeats | `NumberInt(1)` |  |
 | 31 | startedAt | Date | Datetime | Yes | Date and time when the record was started. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
 | 32 | completedAt | Date | Datetime | No (null allowed) | Date and time when the record was completed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
-| 33 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `NumberDecimal("95.0")` |  |
-| 34 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `NumberDecimal("95.0")` |  |
+| 33 | cycleTimeSec | Decimal128 | - | Yes | Cycle time (seconds) | `95.0` |  |
+| 34 | standardCycleTimeSec | Decimal128 | - | Yes | Standard cycle time (seconds) | `95.0` |  |
 | 35 | quantityIn | Int32 | - | Yes | Quantity in | `NumberInt(240)` |  |
 | 36 | quantityGood | Int32 | - | Yes | Quantity good | `NumberInt(231)` |  |
 | 37 | quantityReject | Int32 | - | Yes | Quantity reject | `NumberInt(9)` |  |

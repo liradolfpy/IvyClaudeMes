@@ -50,7 +50,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 16 | outputActual | Int32 | - | Yes | Output actual | `NumberInt(762)` |  |
 | 17 | outputScrap | Int32 | - | Yes | Output scrap | `NumberInt(3)` |  |
 | 18 | outputRework | Int32 | - | Yes | Output rework | `NumberInt(6)` |  |
-| 19 | oeePct | Decimal128 | - | Yes | OEE (percent) | `NumberDecimal("80.7")` |  |
+| 19 | oeePct | Decimal128 | - | Yes | OEE (percent) | `80.7` |  |
 | 20 | safetyNotes | String | - | No (null allowed) | Safety notes | `"Keep hands clear of the nutrunner socket during rundown"` |  |
 | 21 | qualityNotes | String | - | No (null allowed) | Quality notes | `"Two leak test rejects on unit serials ending 0171 and 0178, NCR raised"` |  |
 | 22 | maintenanceNotes | String | - | No (null allowed) | Maintenance notes | `"Nutrunner socket replaced at 09:40"` |  |

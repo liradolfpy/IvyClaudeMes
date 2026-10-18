@@ -47,12 +47,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 15 | chartType | String | - | Yes | Chart type | `"X-bar R"` | X-bar R; X-bar S; I-MR; p; np; c; u |
 | 16 | subgroupSize | Int32 | - | Yes | Subgroup size | `NumberInt(5)` |  |
 | 17 | subgroupFrequency | String | - | Yes | Subgroup frequency | `"Every 2 hours"` |  |
-| 18 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `NumberDecimal("7.50")` |  |
-| 19 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `NumberDecimal("8.50")` |  |
-| 20 | capabilityCp | Decimal128 | - | No (null allowed) | CAPAbility cp | `NumberDecimal("1.92")` |  |
-| 21 | capabilityCpk | Decimal128 | - | No (null allowed) | CAPAbility cpk | `NumberDecimal("1.71")` |  |
-| 22 | capabilityPp | Decimal128 | - | No (null allowed) | CAPAbility pp | `NumberDecimal("1.84")` |  |
-| 23 | capabilityPpk | Decimal128 | - | No (null allowed) | CAPAbility ppk | `NumberDecimal("1.66")` |  |
+| 18 | lowerSpecLimit | Decimal128 | - | No (null allowed) | Lower spec limit | `7.50` |  |
+| 19 | upperSpecLimit | Decimal128 | - | No (null allowed) | Upper spec limit | `8.50` |  |
+| 20 | capabilityCp | Decimal128 | - | No (null allowed) | CAPAbility cp | `1.92` |  |
+| 21 | capabilityCpk | Decimal128 | - | No (null allowed) | CAPAbility cpk | `1.71` |  |
+| 22 | capabilityPp | Decimal128 | - | No (null allowed) | CAPAbility pp | `1.84` |  |
+| 23 | capabilityPpk | Decimal128 | - | No (null allowed) | CAPAbility ppk | `1.66` |  |
 | 24 | capabilityCalculatedAt | Date | Datetime | No (null allowed) | Capability calculated date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `null` |  |
 | 25 | capabilitySampleCount | Int32 | - | Yes | CAPAbility sample count | `NumberInt(125)` |  |
 | 26 | ownerUserId | String | - | Yes | Reference to u_mes_mast_user._id: owner user | `"1029000000000004"` | Reference: u_mes_mast_user._id |

@@ -32,7 +32,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | stageNo | Int32 | - | Yes | Stage number | `NumberInt(1)` |  |
 | 9 | name | String | - | Yes | Name of the recipe stage | `"Approach"` |  |
 | 10 | durationSec | Int32 | - | Yes | Duration (seconds) | `NumberInt(42)` |  |
-| 11 | setPoint | Decimal128 | - | Yes | Set point | `NumberDecimal("400.0")` |  |
+| 11 | setPoint | Decimal128 | - | Yes | Set point | `400.0` |  |
 | 12 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Indexes

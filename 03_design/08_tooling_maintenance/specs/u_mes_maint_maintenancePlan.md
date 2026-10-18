@@ -44,7 +44,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | planType | String | - | Yes | Plan type | `"In Process"` | Incoming; In Process; First Off; Final; Dock Audit; Layout |
 | 12 | strategy | String | - | Yes | Strategy of the maintenance plan | `"Torque Control"` | Torque Control; Torque Control Angle Monitor; Angle Control Torque Monitor; Yield Control |
 | 13 | intervalType | String | - | Yes | Interval type | `"Calendar"` | Calendar; Counter; Condition |
-| 14 | intervalValue | Decimal128 | - | Yes | Interval value | `NumberDecimal("30")` |  |
+| 14 | intervalValue | Decimal128 | - | Yes | Interval value | `30` |  |
 | 15 | intervalUom | String | - | Yes | Interval uom | `"Days"` | Days; Weeks; Months; Cycles; Shots; Run Hours |
 | 16 | counterSource | String | - | No (null allowed) | Counter source | `null` |  |
 | 17 | estimatedMinutes | Int32 | - | Yes | Estimated (minutes) | `NumberInt(8)` |  |

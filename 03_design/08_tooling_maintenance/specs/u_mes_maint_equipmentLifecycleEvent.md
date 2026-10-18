@@ -33,10 +33,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 8 | eventType | String | - | Yes | Event type | `"Commissioning"` | Commissioning; Relocation; Overhaul; Refurbishment; Upgrade; Health Assessment; Replacement Recommendation; Decommissioning |
 | 9 | eventAt | Date | Datetime | Yes | Event time | `ISODate("2026-04-20T10:00:00.000+0000")` |  |
 | 10 | description | String | - | Yes | Description | `"Commissioning of DC nutrunner station 1"` |  |
-| 11 | costInr | Decimal128 | - | No (null allowed) | Cost in INR | `NumberDecimal("1850000.00")` |  |
-| 12 | healthScore | Decimal128 | - | No (null allowed) | Health score after the event (0 to 100) | `NumberDecimal("98")` |  |
+| 11 | costInr | Decimal128 | - | No (null allowed) | Cost in INR | `1850000.00` |  |
+| 12 | healthScore | Decimal128 | - | No (null allowed) | Health score after the event (0 to 100) | `98` |  |
 | 13 | lifetimeCyclesAtEvent | Int64 | - | No (null allowed) | Cycle counter at the event | `NumberLong("0")` |  |
-| 14 | lifetimeRunHoursAtEvent | Decimal128 | - | No (null allowed) | Run hours at the event | `NumberDecimal("0.0")` |  |
+| 14 | lifetimeRunHoursAtEvent | Decimal128 | - | No (null allowed) | Run hours at the event | `0.0` |  |
 | 15 | maintenanceWorkOrderId | String | - | No (null allowed) | Reference to u_mes_maint_maintenanceWorkOrder._id | `null` | Reference: u_mes_maint_maintenanceWorkOrder._id |
 | 16 | maintenanceWorkOrderName | String | - | No (null allowed) | Display value of maintenanceWorkOrderId, copied from u_mes_maint_maintenanceWorkOrder.title | `null` |  |
 | 17 | engineeringChangeId | String | - | No (null allowed) | Reference to u_mes_prod_engineeringChange._id | `null` | Reference: u_mes_prod_engineeringChange._id |

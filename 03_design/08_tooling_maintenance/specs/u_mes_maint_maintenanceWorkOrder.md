@@ -63,7 +63,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 29 | downtimeMinutes | Int32 | - | Yes | Downtime (minutes) | `NumberInt(95)` |  |
 | 30 | responseMinutes | Int32 | - | Yes | Response (minutes) | `NumberInt(6)` |  |
 | 31 | repairMinutes | Int32 | - | Yes | Repair (minutes) | `NumberInt(12)` |  |
-| 32 | totalCostInr | Decimal128 | - | Yes | Total cost (Indian rupees) | `NumberDecimal("9840.00")` |  |
+| 32 | totalCostInr | Decimal128 | - | Yes | Total cost (Indian rupees) | `9840.00` |  |
 | 33 | equipmentReleasedById | String | - | No (null allowed) | Reference to u_mes_mast_user._id: user recorded for 'equipment released' | `"1029000000000007"` | Reference: u_mes_mast_user._id |
 | 34 | equipmentReleasedBy | String | - | No (null allowed) | Display name of the user in equipmentReleasedById, copied from u_mes_mast_user.fullName | `"Meera Deshpande"` |  |
 | 35 | equipmentReleasedAt | Date | Datetime | No (null allowed) | Equipment released date and time. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T07:10:30.000+0000")` |  |
@@ -77,7 +77,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 43 | closureApprovedAt | Date | Datetime | No (null allowed) | Time of the closure approval | `null` |  |
 | 44 | andonEventId | String | - | No (null allowed) | Reference to u_mes_plan_andonEvent._id | `"1251000000000001"` | Reference: u_mes_plan_andonEvent._id |
 | 45 | andonEventName | String | - | No (null allowed) | Display value of andonEventId, copied from u_mes_plan_andonEvent.description | `"Castings sticking in die 2, operator needs maintenance"` |  |
-| 46 | priorityScore | Decimal128 | - | No (null allowed) | Priority score from criticality, due risk and production impact (0 to 100) | `NumberDecimal("72")` |  |
+| 46 | priorityScore | Decimal128 | - | No (null allowed) | Priority score from criticality, due risk and production impact (0 to 100) | `72` |  |
 | 47 | schedulingSource | String | - | Yes | How the work order was prioritised and scheduled | `"Manual"` | Manual; Rule; Model |
 | 48 | slaResponseDueAt | Date | Datetime | No (null allowed) | Time by which a technician must respond | `ISODate("2026-09-15T06:10:00.000+0000")` |  |
 | 49 | slaRepairDueAt | Date | Datetime | No (null allowed) | Time by which the repair must be complete | `ISODate("2026-09-15T08:00:00.000+0000")` |  |

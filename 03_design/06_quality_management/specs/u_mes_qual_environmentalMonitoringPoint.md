@@ -36,8 +36,8 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | monitoredParameter | String | - | Yes | Parameter monitored | `"Airborne Particles 0.5 um"` | Temperature; Relative Humidity; Differential Pressure; Airborne Particles 0.5 um; Airborne Particles 5.0 um; Surface Particle Count; Illuminance; Surface Microbial Count |
 | 12 | parameterUnitText | String | - | Yes | Unit of the parameter as shown on the instrument | `"particles per m3"` |  |
 | 13 | limitDirection | String | - | Yes | Which side of the limits is an excursion | `"Upper"` | Upper; Lower; Range |
-| 14 | alertLimit | Decimal128 | - | No (null allowed) | Alert limit (upper, or lower for a Lower direction) | `NumberDecimal("2800000")` |  |
-| 15 | actionLimit | Decimal128 | - | Yes | Action limit (upper, or lower for a Lower direction) | `NumberDecimal("3520000")` |  |
+| 14 | alertLimit | Decimal128 | - | No (null allowed) | Alert limit (upper, or lower for a Lower direction) | `2800000` |  |
+| 15 | actionLimit | Decimal128 | - | Yes | Action limit (upper, or lower for a Lower direction) | `3520000` |  |
 | 16 | lowerActionLimit | Decimal128 | - | No (null allowed) | Lower action limit for a Range direction | `null` |  |
 | 17 | samplingFrequency | String | - | Yes | How often the point is sampled | `"Weekly"` | Continuous; Every Shift; Daily; Weekly |
 | 18 | processTagId | String | - | No (null allowed) | Reference to u_mes_perf_processTag._id | `null` | Reference: u_mes_perf_processTag._id |

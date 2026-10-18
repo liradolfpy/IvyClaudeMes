@@ -36,7 +36,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 12 | gaugeName | String | - | No (null allowed) | Display value of gaugeId, copied from u_mes_qual_gauge.name | `"Ultrasonic thickness gauge 1-25 mm"` |  |
 | 13 | sampleSize | Int32 | - | Yes | Sample size | `NumberInt(5)` |  |
 | 14 | frequencyType | String | - | Yes | Frequency type | `"Per Lot"` | Every Unit; Every N Units; Every N Minutes; Per Lot; Per Shift; First Off |
-| 15 | frequencyValue | Decimal128 | - | Yes | Frequency value | `NumberDecimal("50")` |  |
+| 15 | frequencyValue | Decimal128 | - | Yes | Frequency value | `50` |  |
 | 16 | recordType | String | - | Yes | Record type | `"Measured Value"` | Measured Value; Pass Fail; Count |
 | 17 | autoNcOnFail | Boolean | - | Yes | True when: auto nc on fail | `true` |  |
 | 18 | defectCodeId | String | - | No (null allowed) | Reference to u_mes_qual_defectCode._id | `"1158000000000001"` | Reference: u_mes_qual_defectCode._id |

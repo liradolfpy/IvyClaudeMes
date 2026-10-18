@@ -35,12 +35,12 @@ Every key is present in every document. "Required" means the value may not be nu
 | 10 | manufacturerName | String | - | No (null allowed) | Display value of manufacturerId, copied from u_mes_mast_manufacturer.name | `null` |  |
 | 11 | model | String | - | Yes | Model of the gauge | `"38DL Plus"` |  |
 | 12 | serialNo | String | - | Yes | Serial number | `"UT-21-0457"` |  |
-| 13 | rangeMin | Decimal128 | - | Yes | Range (minutes) | `NumberDecimal("1.000")` |  |
-| 14 | rangeMax | Decimal128 | - | Yes | Range max | `NumberDecimal("25.000")` |  |
+| 13 | rangeMin | Decimal128 | - | Yes | Range (minutes) | `1.000` |  |
+| 14 | rangeMax | Decimal128 | - | Yes | Range max | `25.000` |  |
 | 15 | rangeUnitOfMeasureId | String | - | Yes | Reference to u_mes_mast_unitOfMeasure._id: range unit of measure | `"1042000000000003"` | Reference: u_mes_mast_unitOfMeasure._id |
 | 16 | rangeUnitOfMeasureName | String | - | Yes | Display value of rangeUnitOfMeasureId, copied from u_mes_mast_unitOfMeasure.name | `"Millimetre"` |  |
-| 17 | resolution | Decimal128 | - | Yes | Resolution of the gauge | `NumberDecimal("0.010")` |  |
-| 18 | accuracy | Decimal128 | - | Yes | Accuracy of the gauge | `NumberDecimal("0.050")` |  |
+| 17 | resolution | Decimal128 | - | Yes | Resolution of the gauge | `0.010` |  |
+| 18 | accuracy | Decimal128 | - | Yes | Accuracy of the gauge | `0.050` |  |
 | 19 | storageLocationId | String | - | Yes | Reference to u_mes_matl_storageLocation._id | `"1112000000000004"` | Reference: u_mes_matl_storageLocation._id |
 | 20 | storageLocationName | String | - | Yes | Display value of storageLocationId, copied from u_mes_matl_storageLocation.name | `"Line-side store, foundry"` |  |
 | 21 | workCenterId | String | - | No (null allowed) | Reference to u_mes_mast_workCenter._id | `"1009000000000001"` | Reference: u_mes_mast_workCenter._id |

@@ -45,7 +45,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 20 | regrindNo | Int32 | - | No (null allowed) | Regrind number | `null` |  |
 | 21 | conditionOnRemoval | String | - | No (null allowed) | Condition on removal | `"Normal wear"` |  |
 | 22 | removalReason | String | - | No (null allowed) | Removal reason | `"Life limit reached"` |  |
-| 23 | measuredWearMm | Decimal128 | - | No (null allowed) | Measured wear (mm) | `NumberDecimal("0.12")` |  |
+| 23 | measuredWearMm | Decimal128 | - | No (null allowed) | Measured wear (mm) | `0.12` |  |
 | 24 | maintenanceWorkOrderId | String | - | No (null allowed) | Reference to u_mes_maint_maintenanceWorkOrder._id | `null` | Reference: u_mes_maint_maintenanceWorkOrder._id |
 | 25 | maintenanceWorkOrderName | String | - | No (null allowed) | Display value of maintenanceWorkOrderId, copied from u_mes_maint_maintenanceWorkOrder.title | `null` |  |
 | 26 | remarks | String | - | No (null allowed) | Remarks of the tool life record | `"No abnormality observed"` |  |

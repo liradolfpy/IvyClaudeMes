@@ -24,7 +24,7 @@ Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 369 | Do
 | 18 | Dates inside 2018-2027 | all collections | Pass | 0 |
 | 19 | Quantities not negative | all collections | Pass | 0 |
 
-Shell format: every Int32 is written with NumberInt(), Int64 with NumberLong(), Decimal128 with NumberDecimal(), Double with Double(), dates with ISODate(); this is done by one formatting function for all files.
+Shell format: every Int32 is written with NumberInt(), Int64 with NumberLong(), Decimal128 as a plain number with its decimals kept (for example 1850.0, no NumberDecimal()), Double with Double(), dates with ISODate(); this is done by one formatting function for all files.
 
 ## Schema Observation
 

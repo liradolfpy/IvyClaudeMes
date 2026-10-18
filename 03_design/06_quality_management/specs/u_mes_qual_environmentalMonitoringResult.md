@@ -31,7 +31,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 6 | environmentalMonitoringPointId | String | - | Yes | Reference to u_mes_qual_environmentalMonitoringPoint._id | `"1357000000000001"` | Reference: u_mes_qual_environmentalMonitoringPoint._id |
 | 7 | environmentalMonitoringPointName | String | - | Yes | Display value of environmentalMonitoringPointId, copied from u_mes_qual_environmentalMonitoringPoint.name | `"Dispensing booth, airborne particles 0.5 um"` |  |
 | 8 | sampledAt | Date | Datetime | Yes | Sampling time | `ISODate("2026-09-15T07:10:00.000+0000")` |  |
-| 9 | measuredValue | Decimal128 | - | Yes | Measured value | `NumberDecimal("1840000")` |  |
+| 9 | measuredValue | Decimal128 | - | Yes | Measured value | `1840000` |  |
 | 10 | limitEvaluation | String | - | Yes | Evaluation against the limits | `"Within Limits"` | Within Limits; Alert Limit Exceeded; Action Limit Exceeded |
 | 11 | sampledById | String | - | Yes | Reference to u_mes_mast_user._id: user recorded for 'sampled' | `"1029000000000014"` | Reference: u_mes_mast_user._id |
 | 12 | sampledBy | String | - | Yes | Display name of the user in sampledById, copied from u_mes_mast_user.fullName | `"Shalini Rao"` |  |

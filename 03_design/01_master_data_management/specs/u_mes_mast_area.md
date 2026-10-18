@@ -36,7 +36,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 11 | costCenterName | String | - | No (null allowed) | Display value of costCenterId, copied from u_mes_mast_costCenter.name | `"Foundry"` |  |
 | 12 | supervisorUserId | String | - | No (null allowed) | Reference to u_mes_mast_user._id: supervisor user | `"1029000000000005"` | Reference: u_mes_mast_user._id |
 | 13 | supervisorUserName | String | - | No (null allowed) | Display value of supervisorUserId, copied from u_mes_mast_user.fullName | `"Rajesh Patil"` |  |
-| 14 | floorAreaSqm | Decimal128 | - | Yes | Floor area (square metres) | `NumberDecimal("1850.0")` |  |
+| 14 | floorAreaSqm | Decimal128 | - | Yes | Floor area (square metres) | `1850.0` |  |
 | 15 | isProductionArea | Boolean | - | Yes | True when the record is production area | `true` |  |
 | 16 | sequenceNo | Int32 | - | Yes | Position of this document in its list (within the same parent for child collections), starting at 1 | `NumberInt(1)` |  |
 | 17 | cleanlinessClass | String | - | Yes | Cleanliness class of the area (GMP-37) | `"Unclassified"` | ISO 7; ISO 8; Controlled Not Classified; Unclassified |

@@ -44,10 +44,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 19 | recipeVersion | String | - | No (null allowed) | Program version | `null` |  |
 | 20 | capturedAt | Date | Datetime | Yes | Capture time | `ISODate("2026-09-15T06:01:39.000+0000")` |  |
 | 21 | pointCount | Int32 | - | Yes | Number of points stored | `NumberInt(400)` |  |
-| 22 | peakX | Decimal128 | - | No (null allowed) | X at peak | `NumberDecimal("41.9")` |  |
-| 23 | peakY | Decimal128 | - | No (null allowed) | Peak Y value | `NumberDecimal("1180")` |  |
-| 24 | finalX | Decimal128 | - | No (null allowed) | Final X | `NumberDecimal("41.9")` |  |
-| 25 | finalY | Decimal128 | - | No (null allowed) | Final Y | `NumberDecimal("1150")` |  |
+| 22 | peakX | Decimal128 | - | No (null allowed) | X at peak | `41.9` |  |
+| 23 | peakY | Decimal128 | - | No (null allowed) | Peak Y value | `1180` |  |
+| 24 | finalX | Decimal128 | - | No (null allowed) | Final X | `41.9` |  |
+| 25 | finalY | Decimal128 | - | No (null allowed) | Final Y | `1150` |  |
 | 26 | result | String | - | Yes | Envelope verdict | `"OK"` | OK; NOK |
 | 27 | failedWindowNo | Int32 | - | No (null allowed) | First failed window | `null` |  |
 | 28 | rawControlledDocumentId | String | - | No (null allowed) | Reference to u_mes_syst_controlledDocument._id: raw controlled document | `null` | Reference: u_mes_syst_controlledDocument._id |
