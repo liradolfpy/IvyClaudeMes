@@ -1,0 +1,97 @@
+{
+    "_id" : "mes_trac_asBuiltRecordInspectionResultQuery",
+    "dictName" : "mes_trac_asBuiltRecordInspectionResultQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "As-Built Record Inspection Results",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "As Built Record",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select As Built Record",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "asBuiltRecordId",
+                    "p_data_index" : "asBuiltRecordName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_trac_asBuiltRecord__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_trac_asBuiltRecord__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Inspection Result",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Inspection Result",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "inspectionResultId",
+                    "p_data_index" : "inspectionResultName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_qual_inspectionResult__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_qual_inspectionResult__id_recordNo",
+                    "sourceParams" : {}
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2310",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2310",
+    "projid" : ""
+}

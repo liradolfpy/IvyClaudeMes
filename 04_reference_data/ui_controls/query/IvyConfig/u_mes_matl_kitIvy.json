@@ -1,0 +1,134 @@
+{
+    "_id" : "mes_matl_kitIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_kit",
+    "stableName" : "mes_matl_kitStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_kitIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "requiredAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "kitType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "kitType",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiredAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "toLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "toLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "pickedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "pickedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "pickStartedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "pickCompletedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "deliveredAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "receivedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "receivedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "isComplete",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

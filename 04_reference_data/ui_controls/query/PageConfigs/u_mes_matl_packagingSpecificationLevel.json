@@ -1,0 +1,93 @@
+{
+    "_id" : "mes_matl_packagingSpecificationLevelQuery",
+    "dictName" : "mes_matl_packagingSpecificationLevelQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Packaging Specification Levels",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "Packaging Specification",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Packaging Specification",
+                    "errorMessage" : "Please Select Packaging Specification",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "packagingSpecificationId",
+                    "p_data_index" : "packagingSpecificationName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_matl_packagingSpecification__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_matl_packagingSpecification__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Pack Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Pack Type",
+                    "errorMessage" : "Please Select Pack Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "packTypeId",
+                    "p_data_index" : "packTypeName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_matl_packType__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_matl_packType__id_name",
+                    "sourceParams" : {}
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2310",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2310",
+    "projid" : ""
+}

@@ -1,0 +1,120 @@
+{
+    "_id" : "mes_trac_asBuiltRecordComponentQuery",
+    "dictName" : "mes_trac_asBuiltRecordComponentQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "As-Built Record Components",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "dropDown",
+                    "label" : "As Built Record",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select As Built Record",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "asBuiltRecordId",
+                    "p_data_index" : "asBuiltRecordName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_trac_asBuiltRecord__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_trac_asBuiltRecord__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Item",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Item",
+                    "errorMessage" : "Please Select Item",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "itemId",
+                    "p_data_index" : "itemName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Item",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Lot",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Lot",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "lotId",
+                    "p_data_index" : "lotName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_plan_lot__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_plan_lot__id_recordNo",
+                    "sourceParams" : {}
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2310",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2310",
+    "projid" : ""
+}

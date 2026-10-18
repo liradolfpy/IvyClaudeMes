@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_matl_goodsReceiptLineInspectionResultIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_goodsReceiptLineInspectionResult",
+    "stableName" : "mes_matl_goodsReceiptLineInspectionResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_goodsReceiptLineInspectionResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "goodsReceiptLineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionResultId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "goodsReceiptLineId",
+            "typ" : "string"
+        },
+        {
+            "din" : "goodsReceiptLineName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "inspectionResultId",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionResultName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

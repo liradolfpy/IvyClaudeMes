@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_matl_shipmentLineIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_shipmentLine",
+    "stableName" : "mes_matl_shipmentLineStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_shipmentLineIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lineNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerPartNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

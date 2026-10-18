@@ -1,0 +1,91 @@
+{
+    "_id" : "mes_matl_labelTemplateFieldIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_labelTemplateField",
+    "stableName" : "mes_matl_labelTemplateFieldStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_labelTemplateFieldIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "labelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "source",
+            "typ" : "string"
+        },
+        {
+            "din" : "isBarcode",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "fieldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "source",
+            "typ" : "string"
+        },
+        {
+            "din" : "fieldFormat",
+            "typ" : "string"
+        },
+        {
+            "din" : "positionXMm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "positionYMm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "isBarcode",
+            "typ" : "bool"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

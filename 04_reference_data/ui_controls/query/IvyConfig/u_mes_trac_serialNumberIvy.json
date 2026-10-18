@@ -1,0 +1,198 @@
+{
+    "_id" : "mes_trac_serialNumberIvy",
+    "code" : "trac",
+    "moduleName" : "Traceability",
+    "collection" : "u_mes_trac_serialNumber",
+    "stableName" : "mes_trac_serialNumberStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_trac_serialNumberIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "issuedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "markGrade",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "numberRangeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "numberRangeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dataMatrixPayload",
+            "typ" : "string"
+        },
+        {
+            "din" : "issuedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "markedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "markedAtEquipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "markedAtEquipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "markGrade",
+            "typ" : "string"
+        },
+        {
+            "din" : "markVerifiedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "labelId",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shippedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "voidReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "markingRecipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "markingRecipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "markingRecipeVersion",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

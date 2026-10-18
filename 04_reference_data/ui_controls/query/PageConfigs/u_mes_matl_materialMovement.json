@@ -1,0 +1,178 @@
+{
+    "_id" : "mes_matl_materialMovementQuery",
+    "dictName" : "mes_matl_materialMovementQuery",
+    "typ" : "PageConfigQuery",
+    "page" : "Phantom",
+    "dictData" : {
+        "config" : {
+            "method" : "GET",
+            "pageTitle" : "Material Movements",
+            "api" : "/ivy/mes",
+            "params" : {
+                "op" : "st"
+            },
+            "footerButtons" : {
+
+            },
+            "modalElements" : [
+                {
+                    "typ" : "rangePicker",
+                    "label" : "Moved Date Range",
+                    "defaultFrom" : NumberInt(-7),
+                    "defaultTo" : NumberInt(0),
+                    "required" : true,
+                    "placeHolder" : "Select Moved Date Range",
+                    "errorMessage" : "Please Select Moved Date Range",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "format" : "YYYY-MM-DD",
+                    "data_index_from" : "from",
+                    "data_index_to" : "to",
+                    "data_index" : "movedAt"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Production Order",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Type min 4 characters",
+                    "errorMessage" : "Please Select Production Order",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "minSearchLength" : NumberInt(4),
+                    "maxSearchLength" : NumberInt(4),
+                    "data_index" : "productionOrderId",
+                    "p_data_index" : "productionOrderName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_plan_productionOrder__id_recordNo"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_plan_productionOrder__id_recordNo",
+                    "sourceParams" : {}
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Status",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Status",
+                    "errorMessage" : "Please Select Status",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "status",
+                    "p_data_index" : "statusText",
+                    "data" : {
+                        "Posted" : "Posted",
+                        "Reversed" : "Reversed"
+                    },
+                    "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Movement Type",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Movement Type",
+                    "errorMessage" : "Please Select Movement Type",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "movementTypeId",
+                    "p_data_index" : "movementTypeName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "MovementType",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Item",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Item",
+                    "errorMessage" : "Please Select Item",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "itemId",
+                    "p_data_index" : "itemName",
+                    "api" : "/mdict",
+                    "params" : {
+                        "typ" : "Item",
+                        "subTyp" : "idame"
+                    },
+                    "src" : "api"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Scan Source",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Scan Source",
+                    "errorMessage" : "Please Select Scan Source",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "scanSource",
+                    "p_data_index" : "scanSourceText",
+                    "data" : {
+                        "Handheld Scanner" : "Handheld Scanner",
+                        "Fixed Scanner" : "Fixed Scanner",
+                        "Manual Entry" : "Manual Entry"
+                    },
+                    "src" : "data"
+                }
+            ]
+        }
+    },
+    "ver" : "20261018-2310",
+    "unq" : false,
+    "subTyp" : "PhantomQuery",
+    "act" : false,
+    "approve" : [
+
+    ],
+    "delete" : [
+
+    ],
+    "dynamicModal" : [
+
+    ],
+    "edit" : [
+
+    ],
+    "mint" : "1",
+    "view" : [
+
+    ],
+    "rel" : "20261018-2310",
+    "projid" : ""
+}

@@ -25,8 +25,8 @@
                     "errorMessage" : "Please Select Event Date Range",
                     "readOnly" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "format" : "YYYY-MM-DD",
                     "data_index_from" : "from",
                     "data_index_to" : "to",
@@ -44,8 +44,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "equipmentId",
                     "p_data_index" : "equipmentName",
                     "api" : "/mdict",
@@ -67,8 +67,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "eventType",
                     "p_data_index" : "eventTypeText",
                     "data" : {
@@ -95,8 +95,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "status",
                     "p_data_index" : "statusText",
                     "data" : {
@@ -109,7 +109,7 @@
             ]
         }
     },
-    "ver" : "20261017-2102",
+    "ver" : "20261018-2313",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -129,6 +129,6 @@
     "view" : [
 
     ],
-    "rel" : "20261017-2102",
+    "rel" : "20261018-2313",
     "projid" : ""
 }

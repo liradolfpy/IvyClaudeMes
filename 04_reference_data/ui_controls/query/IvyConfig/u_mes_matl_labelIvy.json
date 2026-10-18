@@ -1,0 +1,190 @@
+{
+    "_id" : "mes_matl_labelIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_label",
+    "stableName" : "mes_matl_labelStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_labelIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "printedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "printerIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelTemplateName",
+            "typ" : "string"
+        },
+        {
+            "din" : "labelType",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "payload",
+            "typ" : "string"
+        },
+        {
+            "din" : "humanReadable",
+            "typ" : "string"
+        },
+        {
+            "din" : "printerIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "printerIotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "printedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "printedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "printedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "copies",
+            "typ" : "int"
+        },
+        {
+            "din" : "reprintCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "reprintReason",
+            "typ" : "string"
+        },
+        {
+            "din" : "verified",
+            "typ" : "bool"
+        },
+        {
+            "din" : "verificationGrade",
+            "typ" : "string"
+        },
+        {
+            "din" : "voidedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "voidedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "voidedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

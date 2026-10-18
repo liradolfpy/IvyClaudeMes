@@ -1,0 +1,154 @@
+{
+    "_id" : "mes_matl_exposureTimerIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_exposureTimer",
+    "stableName" : "mes_matl_exposureTimerStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_exposureTimerIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "startedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "resetReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "timerType",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "timerType",
+            "typ" : "string"
+        },
+        {
+            "din" : "limitMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "startedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "pausedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "accumulatedMinutes",
+            "typ" : "int"
+        },
+        {
+            "din" : "expiresAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "resetReasonCodeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "resetReasonCodeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "resetById",
+            "typ" : "string"
+        },
+        {
+            "din" : "resetBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "resetAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

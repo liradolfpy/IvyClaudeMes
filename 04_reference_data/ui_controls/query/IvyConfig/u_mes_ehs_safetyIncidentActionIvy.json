@@ -1,0 +1,83 @@
+{
+    "_id" : "mes_ehs_safetyIncidentActionIvy",
+    "code" : "ehs",
+    "moduleName" : "EnvironmentHealthAndSafety",
+    "collection" : "u_mes_ehs_safetyIncidentAction",
+    "stableName" : "mes_ehs_safetyIncidentActionStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_ehs_safetyIncidentActionIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "safetyIncidentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "safetyIncidentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "safetyIncidentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "actionNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "ownerUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "dueAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

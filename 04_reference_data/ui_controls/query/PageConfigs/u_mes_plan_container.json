@@ -25,8 +25,8 @@
                     "errorMessage" : "Please Select Packed Date Range",
                     "readOnly" : false,
                     "visible" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "format" : "YYYY-MM-DD",
                     "data_index_from" : "from",
                     "data_index_to" : "to",
@@ -44,8 +44,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "minSearchLength" : NumberInt(4),
                     "maxSearchLength" : NumberInt(4),
                     "data_index" : "storageLocationId",
@@ -71,8 +71,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "status",
                     "p_data_index" : "statusText",
                     "data" : {
@@ -98,8 +98,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "containerTypeId",
                     "p_data_index" : "containerTypeName",
                     "api" : "/mdict",
@@ -121,8 +121,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "ownerCustomerId",
                     "p_data_index" : "ownerCustomerName",
                     "api" : "/mdict",
@@ -144,8 +144,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "isReturnable",
                     "p_data_index" : "isReturnableText",
                     "data" : {
@@ -166,8 +166,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "onHold",
                     "p_data_index" : "onHoldText",
                     "data" : {
@@ -179,7 +179,7 @@
             ]
         }
     },
-    "ver" : "20261017-2122",
+    "ver" : "20261018-2313",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -199,6 +199,6 @@
     "view" : [
 
     ],
-    "rel" : "20261017-2122",
+    "rel" : "20261018-2313",
     "projid" : ""
 }

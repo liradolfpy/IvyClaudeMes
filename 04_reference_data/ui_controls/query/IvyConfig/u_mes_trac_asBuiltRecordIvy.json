@@ -1,0 +1,238 @@
+{
+    "_id" : "mes_trac_asBuiltRecordIvy",
+    "code" : "trac",
+    "moduleName" : "Traceability",
+    "collection" : "u_mes_trac_asBuiltRecord",
+    "stableName" : "mes_trac_asBuiltRecordStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_trac_asBuiltRecordIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "builtAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "leakTestVerdict",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "wipUnitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberId",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNumberName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemRevision",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productVariantName",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderId",
+            "typ" : "string"
+        },
+        {
+            "din" : "productionOrderName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "builtAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "torqueTorqueResultId",
+            "typ" : "string"
+        },
+        {
+            "din" : "torqueTorqueResultName",
+            "typ" : "string"
+        },
+        {
+            "din" : "torqueFinalTorqueNm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "torqueFinalAngleDeg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "leakTestLeakTestResultId",
+            "typ" : "string"
+        },
+        {
+            "din" : "leakTestLeakTestResultName",
+            "typ" : "string"
+        },
+        {
+            "din" : "leakTestVerdict",
+            "typ" : "string"
+        },
+        {
+            "din" : "leakTestLeakRate",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "bodyLotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "bodyLotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "castingLotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "castingLotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "heatTreatmentLotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "heatTreatmentLotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "reworkCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "deviationPermitId",
+            "typ" : "string"
+        },
+        {
+            "din" : "deviationPermitName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "finalReleaseById",
+            "typ" : "string"
+        },
+        {
+            "din" : "finalReleaseBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "finalReleaseAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "recordHash",
+            "typ" : "string"
+        },
+        {
+            "din" : "genealogyComplete",
+            "typ" : "bool"
+        },
+        {
+            "din" : "missingComponentCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

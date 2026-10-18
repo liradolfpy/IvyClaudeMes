@@ -27,8 +27,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "minSearchLength" : NumberInt(4),
                     "maxSearchLength" : NumberInt(4),
                     "data_index" : "lotId",
@@ -45,7 +45,7 @@
             ]
         }
     },
-    "ver" : "20261017-2122",
+    "ver" : "20261018-2313",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -65,6 +65,6 @@
     "view" : [
 
     ],
-    "rel" : "20261017-2122",
+    "rel" : "20261018-2313",
     "projid" : ""
 }

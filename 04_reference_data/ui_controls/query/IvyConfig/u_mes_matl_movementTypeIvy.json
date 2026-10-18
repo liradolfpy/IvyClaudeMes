@@ -1,0 +1,83 @@
+{
+    "_id" : "mes_matl_movementTypeIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_movementType",
+    "stableName" : "mes_matl_movementTypeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_movementTypeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "stockEffect",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresReason",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "erpMovementType",
+            "typ" : "string"
+        },
+        {
+            "din" : "stockEffect",
+            "typ" : "string"
+        },
+        {
+            "din" : "requiresReason",
+            "typ" : "bool"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

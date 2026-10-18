@@ -1,0 +1,142 @@
+{
+    "_id" : "mes_trac_traceInvestigationIvy",
+    "code" : "trac",
+    "moduleName" : "Traceability",
+    "collection" : "u_mes_trac_traceInvestigation",
+    "stableName" : "mes_trac_traceInvestigationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_trac_traceInvestigationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "requestedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "direction",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "title",
+            "typ" : "string"
+        },
+        {
+            "din" : "direction",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "depthLimit",
+            "typ" : "int"
+        },
+        {
+            "din" : "resultCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "shippedCount",
+            "typ" : "int"
+        },
+        {
+            "din" : "qualityHoldId",
+            "typ" : "string"
+        },
+        {
+            "din" : "qualityHoldName",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "nonconformanceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerComplaintId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerComplaintName",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "requestedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "exportControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "exportControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

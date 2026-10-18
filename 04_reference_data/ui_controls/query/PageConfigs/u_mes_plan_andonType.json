@@ -27,8 +27,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "status",
                     "p_data_index" : "statusText",
                     "data" : {
@@ -49,8 +49,8 @@
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
-                    "colSize" : NumberInt(8),
-                    "labelColSpan" : NumberInt(8),
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
                     "data_index" : "responsibleDepartmentId",
                     "p_data_index" : "responsibleDepartmentName",
                     "api" : "/dd",
@@ -65,7 +65,7 @@
             ]
         }
     },
-    "ver" : "20261017-2122",
+    "ver" : "20261018-2313",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -85,6 +85,6 @@
     "view" : [
 
     ],
-    "rel" : "20261017-2122",
+    "rel" : "20261018-2313",
     "projid" : ""
 }

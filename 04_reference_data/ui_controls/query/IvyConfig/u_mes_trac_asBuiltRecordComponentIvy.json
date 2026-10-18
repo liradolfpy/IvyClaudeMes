@@ -1,0 +1,99 @@
+{
+    "_id" : "mes_trac_asBuiltRecordComponentIvy",
+    "code" : "trac",
+    "moduleName" : "Traceability",
+    "collection" : "u_mes_trac_asBuiltRecordComponent",
+    "stableName" : "mes_trac_asBuiltRecordComponentStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_trac_asBuiltRecordComponentIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "asBuiltRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "asBuiltRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "asBuiltRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "serialNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "genealogyLinkId",
+            "typ" : "string"
+        },
+        {
+            "din" : "genealogyLinkName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

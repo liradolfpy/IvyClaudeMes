@@ -1,0 +1,131 @@
+{
+    "_id" : "mes_trac_asBuiltRecordOperationIvy",
+    "code" : "trac",
+    "moduleName" : "Traceability",
+    "collection" : "u_mes_trac_asBuiltRecordOperation",
+    "stableName" : "mes_trac_asBuiltRecordOperationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_trac_asBuiltRecordOperationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "asBuiltRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "result",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "asBuiltRecordId",
+            "typ" : "string"
+        },
+        {
+            "din" : "asBuiltRecordName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stepNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "operationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterId",
+            "typ" : "string"
+        },
+        {
+            "din" : "workCenterName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "operatorUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "completedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "result",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeVersion",
+            "typ" : "string"
+        },
+        {
+            "din" : "recipeChecksum",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

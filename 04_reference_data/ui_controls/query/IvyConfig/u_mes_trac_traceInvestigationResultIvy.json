@@ -1,0 +1,127 @@
+{
+    "_id" : "mes_trac_traceInvestigationResultIvy",
+    "code" : "trac",
+    "moduleName" : "Traceability",
+    "collection" : "u_mes_trac_traceInvestigationResult",
+    "stableName" : "mes_trac_traceInvestigationResultStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_trac_traceInvestigationResultIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "traceInvestigationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "traceInvestigationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "traceInvestigationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "relatedCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "relatedEntityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "genealogyDepth",
+            "typ" : "int"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "statusAtRun",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "shipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

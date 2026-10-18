@@ -1,0 +1,158 @@
+{
+    "_id" : "mes_matl_inventoryBalanceIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_inventoryBalance",
+    "stableName" : "mes_matl_inventoryBalanceStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_inventoryBalanceIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "firstReceivedAt",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "stockStatusId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotId",
+            "typ" : "string"
+        },
+        {
+            "din" : "lotName",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "storageLocationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "stockStatusId",
+            "typ" : "string"
+        },
+        {
+            "din" : "stockStatusName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "reservedQuantity",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitOfMeasureId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitOfMeasureName",
+            "typ" : "string"
+        },
+        {
+            "din" : "valueInr",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "firstReceivedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastMovementAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastCountedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "lastCountedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastCountedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "expiryAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

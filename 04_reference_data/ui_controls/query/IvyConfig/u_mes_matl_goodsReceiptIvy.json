@@ -1,0 +1,114 @@
+{
+    "_id" : "mes_matl_goodsReceiptIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_goodsReceipt",
+    "stableName" : "mes_matl_goodsReceiptStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_goodsReceiptIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "dinFrom" : "from",
+            "dinTo" : "to",
+            "din" : "supplierInvoiceDate",
+            "typ" : "range",
+            "format" : "YYYY-MM-DD"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierId",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierName",
+            "typ" : "string"
+        },
+        {
+            "din" : "purchaseOrderNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierInvoiceNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "supplierInvoiceDate",
+            "typ" : "Date"
+        },
+        {
+            "din" : "deliveryChallanNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "vehicleNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "receivedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "receivedById",
+            "typ" : "string"
+        },
+        {
+            "din" : "receivedBy",
+            "typ" : "string"
+        },
+        {
+            "din" : "gateEntryNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "inspectionCompletedAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "erpGrnNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

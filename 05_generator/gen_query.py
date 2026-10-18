@@ -57,8 +57,8 @@ import sys
 # ---------------------------------------------------------------------------
 # Rule constants (skill mes-query-control 0.19, mes-ivy-config 1.0)
 # ---------------------------------------------------------------------------
-COL_SIZE = 8
-LABEL_COL_SPAN = 8
+COL_SIZE = 12
+LABEL_COL_SPAN = 24
 SEARCH_LENGTH = 4
 SEARCH_PLACEHOLDER = "Type min 4 characters"
 DATE_FORMAT = "YYYY-MM-DD"
@@ -222,6 +222,8 @@ def words(key):
 def label_of(ctl):
     key = ctl["key"]
     if ctl["kind"] == "range":
+        if key in LABELS:
+            return LABELS[key]
         base = key[:-2] + "Date" if key.endswith("At") else key
         return words(base) + " Range"
     if key in LABELS:
@@ -666,7 +668,7 @@ def propose(md, coll):
         if sk:
             add(md.source(sk, md.ref(coll, sk)))
     if not entity:
-        pk = next((k for k, t in f["refs"] if t == f["parent"]), None)
+        pk = next((k for k, t, r in md.fields[coll]["keys"] if r.split(".")[0] == f["parent"]), None)
         if pk:
             add(md.source(pk, f["parent"]))
     if entity and f["class"] == "transaction":

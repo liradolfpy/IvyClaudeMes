@@ -1,0 +1,155 @@
+{
+    "_id" : "mes_matl_packagingSpecificationIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_packagingSpecification",
+    "stableName" : "mes_matl_packagingSpecificationStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_packagingSpecificationIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "vciRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "approvedByCustomer",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemId",
+            "typ" : "string"
+        },
+        {
+            "din" : "itemName",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerId",
+            "typ" : "string"
+        },
+        {
+            "din" : "customerName",
+            "typ" : "string"
+        },
+        {
+            "din" : "version",
+            "typ" : "int"
+        },
+        {
+            "din" : "containerTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantityPerContainer",
+            "typ" : "int"
+        },
+        {
+            "din" : "dunnage",
+            "typ" : "string"
+        },
+        {
+            "din" : "vciRequired",
+            "typ" : "bool"
+        },
+        {
+            "din" : "layersPerContainer",
+            "typ" : "int"
+        },
+        {
+            "din" : "unitsPerLayer",
+            "typ" : "int"
+        },
+        {
+            "din" : "containersPerPallet",
+            "typ" : "int"
+        },
+        {
+            "din" : "maxGrossWeightKg",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "unitLabelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "unitLabelTemplateName",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerLabelTemplateId",
+            "typ" : "string"
+        },
+        {
+            "din" : "containerLabelTemplateName",
+            "typ" : "string"
+        },
+        {
+            "din" : "instructionControlledDocumentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "instructionControlledDocumentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "approvedByCustomer",
+            "typ" : "bool"
+        },
+        {
+            "din" : "effectiveFrom",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "_id" : "mes_ehs_incidentTypeIvy",
+    "code" : "ehs",
+    "moduleName" : "EnvironmentHealthAndSafety",
+    "collection" : "u_mes_ehs_incidentType",
+    "stableName" : "mes_ehs_incidentTypeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_ehs_incidentTypeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "isInjury",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reportableToAuthority",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "isInjury",
+            "typ" : "bool"
+        },
+        {
+            "din" : "reportableToAuthority",
+            "typ" : "bool"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

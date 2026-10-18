@@ -1,0 +1,87 @@
+{
+    "_id" : "mes_matl_packagingSpecificationLevelIvy",
+    "code" : "matl",
+    "moduleName" : "MaterialManagement",
+    "collection" : "u_mes_matl_packagingSpecificationLevel",
+    "stableName" : "mes_matl_packagingSpecificationLevelStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_matl_packagingSpecificationLevelIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "packagingSpecificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "packTypeId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "packagingSpecificationId",
+            "typ" : "string"
+        },
+        {
+            "din" : "packagingSpecificationName",
+            "typ" : "string"
+        },
+        {
+            "din" : "levelNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "packTypeId",
+            "typ" : "string"
+        },
+        {
+            "din" : "packTypeName",
+            "typ" : "string"
+        },
+        {
+            "din" : "quantity",
+            "typ" : "int"
+        },
+        {
+            "din" : "lengthMm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "widthMm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "heightMm",
+            "typ" : "decimal"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

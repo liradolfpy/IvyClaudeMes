@@ -1,0 +1,71 @@
+{
+    "_id" : "mes_ehs_safetyIncidentWitnessUserIvy",
+    "code" : "ehs",
+    "moduleName" : "EnvironmentHealthAndSafety",
+    "collection" : "u_mes_ehs_safetyIncidentWitnessUser",
+    "stableName" : "mes_ehs_safetyIncidentWitnessUserStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_ehs_safetyIncidentWitnessUserIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "safetyIncidentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "witnessUserId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "safetyIncidentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "safetyIncidentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "sequenceNo",
+            "typ" : "int"
+        },
+        {
+            "din" : "witnessUserId",
+            "typ" : "string"
+        },
+        {
+            "din" : "witnessUserName",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}
