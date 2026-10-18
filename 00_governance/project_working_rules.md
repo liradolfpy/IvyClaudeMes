@@ -58,17 +58,26 @@ The owner opens a new task with a brief in this form:
 Before doing any work, Claude:
 
 0. Checks that the project root folder `E:\Ivy\Claude\ClaudeProjects\ClaudeMES` is connected to the task. If it is not, Claude requests access to the root folder (not to single subfolders) and waits for the owner's approval. Folder access is granted per task and does not carry over from earlier tasks. If access is declined or the computer cannot be reached, Claude works on the project documents only and states, at the end of the task, which files were not written to the folder.
-1. Reads the level 1 and level 2 files of section 4 in full: `project_working_rules.md`, `data_modeling_standard.md`, `mongodb_output_rules.md`, `data_model_register.md` and `decision_log.md`.
-2. Reads `assumptions_log.md` and `Folder_Guide.md` where they are available.
-3. Reads the latest **Session handover note** at the end of `decision_log.md` (section 7.3), if one exists, and continues from its open items.
-4. Reads the generator sources the task will touch (for example `flatten_model.py`, `gen_specs.py`, `sample_universe.py`, `sample_rules.py`, `gen_samples.py`, `master_refs.py`, `keydict_text.py`, `keydict_num.py`, `entity_samples.py`, `ext_req01.py`, `ext_req01_samples.py`) from the project, not from memory of an earlier task.
-5. States in its first reply, in a few lines: the documents read, the current collection count and key count from `data_model_register.md`, the last decision number in `decision_log.md`, and the plan for the task.
+1. Reads `00_governance/session_handover.md` (the latest handover note) and continues from its open items.
+2. Reads only what the task type needs (D073). Governance files that are not listed are searched (`grep -n`) for the decisions or rules the task touches, not read in full:
+
+   | Task type | Read | Do not read in full |
+   |---|---|---|
+   | UI configurations (query, IvyConfig, Stable, menu) | the skill core named in the brief (library file), `04_reference_data/ui_controls/ui_project_profile.md`; generator output (`gen_query.py --digest` / `--propose`, `gen_stable.py --dry-run`) instead of field lists | field lists, collection keys, `QueryKeySelectionStrategy.md`, specifications, `data_model_register.md`, `data_modeling_standard.md`, skill change logs |
+   | Model or sample-data change | `data_modeling_standard.md`, `mongodb_output_rules.md`, `data_model_register.md` (sections the change touches), the generator sources the task will touch, `assumptions_log.md` | unrelated modules' field lists and specifications |
+   | Governance or skill change | the files being changed (by `grep -n` and in-place edits) and `skill-library-sync` | anything else |
+
+3. Runs `python3 05_generator/log_decision.py next` for the last decision number (and duplicates) instead of reading `decision_log.md`.
+4. Reads generator sources only for the functions it will change (`grep -n`, then the relevant lines), never from memory of an earlier task.
+5. States in its first reply, in a few lines: the documents read, the current collection count and key count (`data_model_register.md` header line), the last decision number, and the plan for the task.
 6. Uses the current conventions as recorded in those files and nothing older: collection names `u_mes_<moduleCode>_<singular camelCase>` (D002, D026); flat documents (D003); 16-digit numeric string `_id` (D029); `recordNo` as business identifier (D004); ten sample documents per collection (D030); sample period April to September 2026 with the production fortnight 15 to 26 September 2026 (D031); local plant time with the +0000 suffix (D035); new collections numbered after the last existing one and existing IDs never changed (D042); one BSON type per key name (D044).
 
 ### 7.2 During a task
 
 - Changes to specifications are made in the generator sources and regenerated (D019), not hand-edited in output files.
-- Every decision taken is added to `decision_log.md` with the next free number; every assumption to `assumptions_log.md`.
+- Every decision taken is added to `decision_log.md` with `python3 05_generator/log_decision.py add ...` (next free number, no duplicates); every assumption to `assumptions_log.md`.
+- Files on the connected computer are edited in place with short `device_bash` scripts. Large files are never read to change a line, and a file copied back from the cloud workspace is verified with `md5sum`.
+- The project instruction "do not shorten, summarise or use placeholders" applies to what Claude writes (specifications, data, documents), not to what Claude reads: reading through summaries and generator output is the normal way of working.
 - Finished files are saved to the project as soon as they are complete, not only at the end of the task.
 
 ### 7.3 Ending a task
@@ -76,9 +85,9 @@ Before doing any work, Claude:
 Before the task is closed, Claude:
 
 1. Saves every changed or new file to the project and to its assigned location in the connected project root folder (per `Folder_Guide.md`), overwriting in place, so that the project documents and the Git folder hold the same content.
-2. Updates `data_model_register.md` (collections, keys, business keys, master ID registry, counts) and hands it over to the owner.
+2. Updates `data_model_register.md` (collections, keys, business keys, master ID registry, counts) and hands it over to the owner, when the model changed; a task that does not change the model says so instead.
 3. Runs the checks the task affects (`schema_review_checklist.md`, the type consistency check in `flatten_model.py`, referential integrity and timeline checks on the samples) and records the result.
-4. Appends a **Session handover note** to the end of `decision_log.md` with: date; task name; what was completed; files changed; collection and key counts after the task; last decision number; checks run and their result; open items and the recommended next task. Only the latest handover note is kept; the previous one is replaced.
+4. Writes the **Session handover note** to `00_governance/session_handover.md` with `python3 05_generator/log_decision.py handover <file>` with: date; task name; what was completed; files changed; collection and key counts after the task; last decision number; checks run and their result; open items and the recommended next task. Only the latest handover note is kept; the previous one is replaced (Git keeps the history).
 5. Ends its final reply with the recommended brief for the next task, in the form of section 7.1.
 
 ### 7.4 When to start a new task

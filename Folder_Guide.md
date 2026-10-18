@@ -75,7 +75,10 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | gmp01.py (23 collections and 33 keys of GMP_Pharma_01, merged through ext_req01.py), gmp01_samples.py (their sample rules) | 05_generator |
 | spec_rules.py (rules shared by the specification and sample generators) | 05_generator |
 | gen_samples.py, sample_rules.py, sample_universe.py (sample documents) | 05_generator |
-| gen_stable.py, gen_menu.py, gen_query.py (UI configurations: Stable table pages, menu, query page configurations with IvyConfigs and the dynamic dropdown registry) | 05_generator |
+| gen_stable.py, gen_menu.py, gen_query.py (UI configurations: Stable table pages, menu, query page configurations with IvyConfigs and the dynamic dropdown registry; `gen_query.py --digest / --propose` for token-saving module work), query_screens.py (query screen decisions) | 05_generator |
+| log_decision.py (next decision number, new decision rows, session handover note) | 05_generator |
+| session_handover.md (latest session handover note only) | 00_governance |
+| token_optimization_review.md (D073) | 00_governance/decisions |
 | sample_data_registry.md (every sample _id, business number and display value) | 04_reference_data |
 | sample_data_validation.md | 08_validation/reports |
 | enumeration_values.md | 04_reference_data/code_lists |

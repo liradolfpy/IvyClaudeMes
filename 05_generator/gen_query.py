@@ -25,8 +25,9 @@ Inputs read from the repository:
   04_reference_data/ui_controls/query/u_int_mdict.json  dictionaries available to /mdict
 
 The control decisions (which keys become controls, type, source, default range)
-are made with the skill's procedure and recorded in SCREENS below, one entry per
-collection, in display order. To change a screen, change its entry here and rerun.
+are recorded in SCREENS in 05_generator/query_screens.py, one entry per collection,
+in display order. --propose drafts new entries from the model with the skill's rules
+and the D067 readings, so the field lists never have to be read in full (D073).
 SCREENS covers the PlanningAndExecution module (43 collections, 17 Oct 2026).
 The 24 PerformanceManagement and ToolingAndMaintenance configurations were built
 before this generator existed; they are not regenerated, but --check verifies them.
@@ -35,6 +36,10 @@ Usage (from the repository root or anywhere):
   python3 05_generator/gen_query.py plan                 generate every SCREENS entry of module plan
   python3 05_generator/gen_query.py u_mes_plan_lot ...   generate the named collections
   python3 05_generator/gen_query.py --check              run the checklist on every file in PageConfigs
+  python3 05_generator/gen_query.py --digest <module>    one line per collection: kind, type, dates (! required), status,
+                                                         enums (value count), Booleans, references with their source
+  python3 05_generator/gen_query.py --propose <module>   draft SCREENS entries for collections not yet in query_screens.py
+  python3 05_generator/gen_query.py --compare <module>   compare the draft with the decided SCREENS entries
   python3 05_generator/gen_query.py --root <repo> ...    explicit repository root
 
 Rules are documented in the skills mes-query-control 0.19 and mes-ivy-config 1.0
@@ -65,195 +70,8 @@ IVY_TYPES = {"String": "string", "Boolean": "bool", "Int32": "int", "Int64": "in
              "Decimal128": "decimal", "Double": "double", "Date": "Date"}
 BOOL_DATA = {"true": "Yes", "false": "No"}
 
-# Registry ids of the shared sources (profile section 2.1)
-USER = ("u_mes_mast_user", "fullName")
-TOOL = ("u_mes_maint_tool", "name")
-STORAGE = ("u_mes_matl_storageLocation", "name")
-PO = ("u_mes_plan_productionOrder", "recordNo")
-LOT = ("u_mes_plan_lot", "recordNo")
-WIP = ("u_mes_plan_wipUnit", "recordNo")
-OPEX = ("u_mes_plan_operationExecution", "recordNo")
-CHANGEOVER = ("u_mes_plan_changeover", "recordNo")
-HANDOVER = ("u_mes_plan_shiftHandover", "recordNo")
-
-# Display text of data maps whose stored values are not readable words
-DATA_TEXT = {
-    ("u_mes_plan_documentAcknowledgement", "relatedCollectionName"): {
-        "u_mes_prod_workInstruction": "Work Instruction",
-        "u_mes_prod_recipe": "Recipe",
-        "u_mes_syst_controlledDocument": "Controlled Document",
-    },
-}
-
-# Label overrides (default: key without Id / ById, camelCase split, Title Case)
-LABELS = {
-    "currentWorkCenterId": "Current Work Center",
-    "ownerCustomerId": "Owner Customer",
-    "ownerUserId": "Owner",
-    "toUserId": "Escalated To",
-    "performedByUserId": "Performed By",
-    "userId": "User",
-    "rule": "Sequencing Rule",
-    "internalExternal": "Internal or External",
-    "isReturnable": "Returnable",
-    "isPaid": "Paid",
-    "relatedCollectionName": "Document Source",
-    "closed": "Closed",
-    "passed": "Passed",
-    "frozen": "Frozen",
-}
-ACRONYMS = {"Wip": "WIP", "Erp": "ERP", "Plc": "PLC"}
-
-
-# ---------------------------------------------------------------------------
-# Control decisions per collection (display order = modalElements order)
-# R  = range picker on the time key (defaultFrom, defaultTo)
-# MD = dropdown from /mdict (dictName)
-# SH = Shift dropdown from cropdown "Shift"
-# D  = hard-coded data dropdown (status, enumeration or Boolean)
-# DD = /dd dynamic dropdown (coln, val); DS = /dd search dropdown (coln, val)
-# ---------------------------------------------------------------------------
-def R(key, frm, to):
-    return {"kind": "range", "key": key, "from": frm, "to": to}
-
-
-def MD(key, dict_name):
-    return {"kind": "mdict", "key": key, "dict": dict_name}
-
-
-def SH():
-    return {"kind": "shift", "key": "shiftId"}
-
-
-def D(key, multi=False):
-    return {"kind": "data", "key": key, "multi": multi}
-
-
-def DD(key, source):
-    return {"kind": "dd", "key": key, "coln": source[0], "val": source[1], "search": False}
-
-
-def DS(key, source):
-    return {"kind": "dd", "key": key, "coln": source[0], "val": source[1], "search": True}
-
-
-SCREENS = {
-    # Plan and schedule screens: range -30 / 0 (skill 0.19, Q10)
-    "u_mes_plan_customerSchedule": [
-        R("horizonFrom", -30, 0), D("status"), MD("customerId", "Customer"), D("scheduleType")],
-    "u_mes_plan_customerScheduleLine": [
-        DS("customerScheduleId", ("u_mes_plan_customerSchedule", "recordNo")), MD("itemId", "Item"),
-        D("firmness")],
-    "u_mes_plan_productionOrder": [
-        R("plannedStartAt", -30, 0), MD("lineId", "Line"), D("status"),
-        MD("productVariantId", "ProductVariant"), D("orderType"), D("priority"), D("onHold")],
-    "u_mes_plan_productionOrderRelease": [
-        DS("productionOrderId", PO), DS("releasedById", USER)],
-    "u_mes_plan_productionOrderLot": [
-        DS("productionOrderId", PO), DS("lotId", LOT)],
-    "u_mes_plan_productionSchedule": [
-        R("productionDate", -30, 0), MD("lineId", "Line"), SH(), D("status"), D("frozen")],
-    "u_mes_plan_productionScheduleSlot": [
-        DS("productionScheduleId", ("u_mes_plan_productionSchedule", "recordNo")),
-        DS("productionOrderId", PO), MD("itemId", "Item")],
-    # Operational screens: range -7 / 0
-    "u_mes_plan_dispatchList": [
-        R("productionDate", -7, 0), MD("workCenterId", "WorkCenter"), SH(), D("status"), D("rule")],
-    "u_mes_plan_dispatchListEntry": [
-        DS("dispatchListId", ("u_mes_plan_dispatchList", "recordNo")), DS("productionOrderId", PO),
-        D("status"), MD("itemId", "Item"), D("priority"), D("materialAvailable"), D("toolAvailable")],
-    "u_mes_plan_operationExecution": [
-        R("startedAt", -7, 0), DS("productionOrderId", PO), MD("workCenterId", "WorkCenter"),
-        MD("equipmentId", "Equipment"), SH(), D("status"), MD("operationId", "Operation"), D("result")],
-    "u_mes_plan_operationExecutionDefectCode": [
-        DS("operationExecutionId", OPEX), MD("defectCodeId", "DefectCode")],
-    "u_mes_plan_operationExecutionTool": [
-        DS("operationExecutionId", OPEX), DS("toolId", TOOL)],
-    "u_mes_plan_stepCompletion": [
-        R("startedAt", -7, 0), DS("wipUnitId", WIP), MD("workCenterId", "WorkCenter"), D("status"),
-        DD("workInstructionId", ("u_mes_prod_workInstruction", "title")), D("withinLimits"),
-        D("overridden")],
-    "u_mes_plan_wipUnit": [
-        R("startedAt", -7, 0), DS("productionOrderId", PO), MD("currentWorkCenterId", "WorkCenter"),
-        D("status"), MD("productVariantId", "ProductVariant"), D("qualityStatus"), D("onHold")],
-    "u_mes_plan_wipUnitCompletedStep": [
-        DS("wipUnitId", WIP)],
-    "u_mes_plan_lot": [
-        R("manufacturedAt", -7, 0), DS("productionOrderId", PO), DS("storageLocationId", STORAGE),
-        D("status"), D("lotType"), MD("itemId", "Item"), D("qualityStatus"), D("onHold")],
-    "u_mes_plan_lotParentLot": [
-        DS("lotId", LOT), DS("parentLotId", LOT)],
-    "u_mes_plan_lotAttributesCavityNo": [
-        DS("lotId", LOT)],
-    "u_mes_plan_container": [
-        R("packedAt", -7, 0), DS("storageLocationId", STORAGE), D("status"),
-        MD("containerTypeId", "ContainerType"), MD("ownerCustomerId", "Customer"), D("isReturnable"),
-        D("onHold")],
-    "u_mes_plan_containerLot": [
-        DS("containerId", ("u_mes_plan_container", "recordNo")), DS("lotId", LOT)],
-    "u_mes_plan_labourBooking": [
-        R("productionDate", -7, 0), DS("productionOrderId", PO), MD("workCenterId", "WorkCenter"), SH(),
-        D("status"), DS("userId", USER), D("bookingType"), MD("indirectActivityId", "IndirectActivity")],
-    "u_mes_plan_changeover": [
-        R("startedAt", -7, 0), MD("lineId", "Line"), MD("workCenterId", "WorkCenter"), D("status"),
-        D("changeoverType")],
-    "u_mes_plan_changeoverStep": [
-        DS("changeoverId", CHANGEOVER), D("internalExternal"), DS("completedById", USER)],
-    "u_mes_plan_changeoverRemovedTool": [
-        DS("changeoverId", CHANGEOVER), DS("removedToolId", TOOL)],
-    "u_mes_plan_changeoverInstalledTool": [
-        DS("changeoverId", CHANGEOVER), DS("installedToolId", TOOL)],
-    "u_mes_plan_changeoverPerformedByUser": [
-        DS("changeoverId", CHANGEOVER), DS("performedByUserId", USER)],
-    "u_mes_plan_shiftHandover": [
-        R("productionDate", -7, 0), MD("lineId", "Line"), SH(), D("status")],
-    "u_mes_plan_shiftHandoverProductionOrder": [
-        DS("shiftHandoverId", HANDOVER), DS("productionOrderId", PO)],
-    "u_mes_plan_shiftHandoverDowntimeEvent": [
-        DS("shiftHandoverId", HANDOVER), DS("downtimeEventId", ("u_mes_perf_downtimeEvent", "recordNo"))],
-    "u_mes_plan_shiftHandoverNonconformance": [
-        DS("shiftHandoverId", HANDOVER), DS("nonconformanceId", ("u_mes_qual_nonconformance", "title"))],
-    "u_mes_plan_shiftHandoverOpenItem": [
-        DS("shiftHandoverId", HANDOVER), DS("ownerUserId", USER), D("closed")],
-    # Worked example of the skill (section 12): multi-select status, compelling reason:
-    # the open-calls board must show Raised and Acknowledged together
-    "u_mes_plan_andonEvent": [
-        R("raisedAt", -7, 0), MD("lineId", "Line"), MD("workCenterId", "WorkCenter"), SH(),
-        D("status", multi=True), MD("andonTypeId", "AndonType"), D("lineStopped")],
-    "u_mes_plan_andonEventEscalation": [
-        DS("andonEventId", ("u_mes_plan_andonEvent", "description")), DS("toUserId", USER), D("channel")],
-    # Master screens: no period control
-    "u_mes_plan_indirectActivity": [
-        D("status"), DD("costCenterId", ("u_mes_mast_costCenter", "name")), D("isPaid")],
-    "u_mes_plan_containerType": [
-        D("status"), D("isReturnable")],
-    "u_mes_plan_andonType": [
-        D("status"), DD("responsibleDepartmentId", ("u_mes_mast_department", "name"))],
-    # Station evidence (D036 - D041)
-    "u_mes_plan_operatorSession": [
-        R("loginAt", -7, 0), MD("workCenterId", "WorkCenter"), MD("equipmentId", "Equipment"), SH(),
-        D("status"), DS("userId", USER), D("authenticationMethod")],
-    "u_mes_plan_documentAcknowledgement": [
-        R("acknowledgedAt", -7, 0), MD("workCenterId", "WorkCenter"), SH(), D("status"),
-        D("relatedCollectionName"), D("acknowledgementType"), DS("userId", USER)],
-    "u_mes_plan_interlockEvent": [
-        R("raisedAt", -7, 0), DS("productionOrderId", PO), MD("workCenterId", "WorkCenter"),
-        MD("equipmentId", "Equipment"), SH(), D("status"),
-        DD("interlockRuleId", ("u_mes_syst_interlockRule", "name"))],
-    "u_mes_plan_recipeDownload": [
-        R("downloadedAt", -7, 0), MD("workCenterId", "WorkCenter"), MD("equipmentId", "Equipment"),
-        D("status"), DD("recipeId", ("u_mes_prod_recipe", "name")), D("verificationResult"), D("trigger")],
-    "u_mes_plan_setupVerification": [
-        R("verifiedAt", -7, 0), DS("productionOrderId", PO), MD("workCenterId", "WorkCenter"),
-        MD("equipmentId", "Equipment"), D("status"), MD("productVariantId", "ProductVariant"),
-        D("trigger")],
-    "u_mes_plan_setupVerificationItem": [
-        DS("setupVerificationId", ("u_mes_plan_setupVerification", "recordNo")), D("checkType"),
-        D("passed")],
-    "u_mes_plan_lineClearance": [
-        R("startedAt", -7, 0), DS("productionOrderId", PO), MD("lineId", "Line"),
-        MD("workCenterId", "WorkCenter"), D("status"), D("clearanceType")],
-}
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from query_screens import *  # noqa: F401,F403  (USER, TOOL, ..., LABELS, DATA_TEXT, R, MD, SH, D, DD, DS, SCREENS)
 
 
 # ---------------------------------------------------------------------------
@@ -718,6 +536,197 @@ def refs_target(model, key):
 
 
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Module digest and screen proposal (token-saving path, D073)
+# ---------------------------------------------------------------------------
+# Time-key choice for transaction entity screens, in order (D067 reading 3):
+# 1. a required event Datetime from EVENT_KEYS, 2. productionDate, 3. plannedStartAt,
+# 4. any other required Datetime, 5. any required Date, 6. a nullable date (flagged).
+EVENT_KEYS = ["raisedAt", "reportedAt", "startedAt", "loginAt", "acknowledgedAt", "downloadedAt",
+              "verifiedAt", "manufacturedAt", "eventAt", "transactedAt", "measuredAt", "checkedAt",
+              "escalatedAt", "detectedAt", "occurredAt", "receivedAt", "periodStartAt"]
+LONG_RANGE = re.compile(r"(Schedule|Plan|Order)$")       # plan and schedule screens: -30 / 0
+SEARCH_KEYS = ["productionOrderId", "wipUnitId", "lotId", "serialNumberId", "containerId", "shipmentId"]
+SCOPE_KEYS = ["areaId", "lineId", "workCenterId", "currentWorkCenterId", "equipmentId", "storageLocationId"]
+SEARCH_MASTERS = {"u_mes_matl_storageLocation", "u_mes_maint_tool", "u_mes_qual_gauge",
+                  "u_mes_qual_characteristic", "u_mes_maint_sparePart", "u_mes_perf_processTag"}
+NEVER_REF = {"siteId", "unitOfMeasureId", "createdById", "updatedById",
+             # definition and link references: never a filter (query key strategy R7, G2)
+             "billOfMaterialId", "routingId", "workCalendarId", "billOfProcessId", "packagingSpecificationId",
+             "escalationRuleId", "erpMessageId", "electronicSignatureId", "notificationId", "labelId"}
+ROLE_PREFIX = re.compile(r"^(from|to|override|hold|previous|rootCause|supersedes|photo|certificate|firstOff)[A-Z]")
+BOOL_FIRST = ["onHold", "lineStopped", "isReturnable", "causedStop", "isMicroStop", "followUpRequired",
+              "frozen", "withinLimits", "overridden", "materialAvailable", "toolAvailable", "passed", "closed",
+              "isPaid", "isConstraint", "requiresShutdown", "blockAtLifeLimit"]
+
+
+def read_required(root, coll):
+    hits = glob.glob(os.path.join(root, "03_design", "*", "validators", coll + ".json"))
+    if not hits:
+        return set()
+    props = json.load(open(hits[0], encoding="utf-8"))["validator"]["$jsonSchema"]["properties"]
+    out = set()
+    for k, v in props.items():
+        bt = v.get("bsonType")
+        if "null" not in (bt if isinstance(bt, list) else [bt]):
+            out.add(k)
+    return out
+
+
+class Model:
+    """Everything the digest and the proposal need, read once."""
+    def __init__(self, root):
+        self.root = root
+        self.fields = read_field_lists(root)
+        self.matrix = read_matrix(root)
+        self.modules, self.display = read_inventory(root)
+        self.status, self.enums = read_status(root), read_enums(root)
+        self.mdict_by_coll = {d["sourceCollection"]: n for n, d in read_mdict(root).items()}
+
+    def ref(self, coll, key):
+        for k, t, r in self.fields[coll]["keys"]:
+            if k == key and r.startswith("u_mes_"):
+                return r.split(".")[0]
+        return None
+
+    def source(self, key, target):
+        """Control for a reference key (skill step 4, profile 2.1)."""
+        if target == "u_mes_mast_user":
+            return DS(key, USER)
+        if target == "u_mes_mast_shift":
+            return SH()
+        if target in self.mdict_by_coll:
+            return MD(key, self.mdict_by_coll[target])
+        val = self.display.get(target, "recordNo")
+        if target in SEARCH_MASTERS or self.fields.get(target, {}).get("dataClass") == "transaction":
+            return DS(key, (target, val))
+        return DD(key, (target, val))
+
+    def facts(self, coll):
+        m = self.fields[coll]
+        req = read_required(self.root, coll)
+        keys = [(k, t, r) for k, t, r in m["keys"] if k not in AUDIT_KEYS and k != "_id"]
+        f = {"kind": m["kind"], "class": m["dataClass"], "parent": m.get("parent", "-"),
+             "type": self.matrix.get(coll, {}).get("type", "?"), "label": self.matrix.get(coll, {}).get("label", "?"),
+             "dates": [(k, k in req) for k, t, r in keys if t == "Date"],
+             "bools": [k for k, t, r in keys if t == "Boolean"],
+             "status": self.status.get(coll, []),
+             "enums": [(k, len(self.enums[(coll, k)])) for k, t, r in keys
+                       if (coll, k) in self.enums and k not in ("app",)],
+             "refs": [(k, r.split(".")[0]) for k, t, r in keys if r.startswith("u_mes_") and k not in NEVER_REF],
+             "keys": {k for k, t, r in keys}}
+        return f
+
+
+def digest_line(md, coll):
+    f = md.facts(coll)
+    def src(k, tgt):
+        c = md.source(k, tgt)
+        return {"mdict": "md:" + c.get("dict", ""), "shift": "crop", "dd": ("ddS:" if c.get("search") else "dd:")
+                + c.get("coln", "").replace("u_mes_", "")}.get(c["kind"], c["kind"])
+    parts = ["%s | %s %s %s | %s" % (coll.replace("u_mes_", ""), f["kind"], f["class"], f["type"], f["label"])]
+    if f["parent"] != "-":
+        parts.append("parent " + f["parent"].replace("u_mes_", ""))
+    if f["dates"]:
+        parts.append("dates " + " ".join(k + ("!" if r else "?") for k, r in f["dates"]))
+    if f["status"]:
+        parts.append("status(%d)" % len(f["status"]))
+    if f["enums"]:
+        parts.append("enums " + " ".join("%s(%d)" % e for e in f["enums"]))
+    if f["bools"]:
+        parts.append("bools " + " ".join(f["bools"]))
+    if f["refs"]:
+        parts.append("refs " + " ".join("%s>%s" % (k, src(k, t)) for k, t in f["refs"]))
+    return " | ".join(parts)
+
+
+def propose(md, coll):
+    """Draft SCREENS entry plus notes (D067 readings built in)."""
+    f, notes, ctl = md.facts(coll), [], []
+    used = set()
+    def add(c):
+        if c and c["key"] not in used and len(ctl) < MAX_CONTROLS:
+            ctl.append(c); used.add(c["key"])
+    entity = f["kind"] == "entity"
+    if entity and f["class"] == "transaction":
+        req_dt = [k for k, r in f["dates"] if r]
+        tk = next((k for k in EVENT_KEYS if k in req_dt), None) \
+            or next((k for k in ("productionDate", "plannedStartAt") if k in req_dt), None) \
+            or next((k for k in req_dt if k.endswith("At")), None) or (req_dt[0] if req_dt else None)
+        if not tk and f["dates"]:
+            tk = f["dates"][0][0]
+            notes.append("no required date key; period on nullable %s (follow-up)" % tk)
+        if tk:
+            name = coll.split("_")[3]
+            frm = -10 if f["type"] == "Reports" else -30 if LONG_RANGE.search(name) else -7
+            add(R(tk, frm, 0))
+        else:
+            notes.append("no date key; no period control")
+        sk = next((k for k in SEARCH_KEYS if k in f["keys"] and md.ref(coll, k) != coll), None)
+        if sk:
+            add(md.source(sk, md.ref(coll, sk)))
+    if not entity:
+        pk = next((k for k, t in f["refs"] if t == f["parent"]), None)
+        if pk:
+            add(md.source(pk, f["parent"]))
+    if entity and f["class"] == "transaction":
+        scope = [k for k in SCOPE_KEYS if k in f["keys"]][:2]
+        for k in scope:
+            add(md.source(k, md.ref(coll, k)))
+    if "shiftId" in f["keys"]:
+        add(SH())
+    if f["status"]:
+        add(D("status"))
+    budget = MAX_CONTROLS - (1 if f["bools"] else 0)
+    cats, own_txn = 0, 0
+    if entity and f["class"] == "transaction" and "userId" in f["keys"]:
+        add(DS("userId", USER)); cats += 1
+    for k, t in f["refs"]:
+        if k in used or t == "u_mes_mast_shift" or (k in SCOPE_KEYS and f["class"] == "transaction"):
+            continue
+        if k == "itemId" and "productVariantId" in f["keys"]:
+            continue
+        c = md.source(k, t)
+        if entity:
+            ok = (c["kind"] == "mdict" or (c["kind"] == "dd" and not c["search"])) and not ROLE_PREFIX.match(k)
+            if ok and cats < 2 and len(ctl) < budget:
+                add(c); cats += 1
+        else:
+            is_txn = c["kind"] == "dd" and c["search"] and md.fields.get(t, {}).get("dataClass") == "transaction"
+            if is_txn and own_txn >= 1:
+                continue
+            if len(ctl) < budget:
+                add(c); own_txn += is_txn
+    for k, n in f["enums"]:
+        if k in used or n > MAX_DATA_VALUES or k == "relatedCollectionName":
+            continue
+        if len(ctl) < budget and cats < 3:
+            add(D(k)); cats += 1
+    pick = [b for b in BOOL_FIRST if b in f["bools"]]
+    if not (entity and f["class"] == "transaction"):
+        pick += [b for b in f["bools"] if b not in pick]
+    for b in pick[:2]:
+        add(D(b))
+    return ctl, notes
+
+
+def ctl_src(c):
+    if c["kind"] == "range":
+        return 'R("%s", %d, %d)' % (c["key"], c["from"], c["to"])
+    if c["kind"] == "mdict":
+        return 'MD("%s", "%s")' % (c["key"], c["dict"])
+    if c["kind"] == "shift":
+        return "SH()"
+    if c["kind"] == "data":
+        return 'D("%s")' % c["key"]
+    return '%s("%s", ("%s", "%s"))' % ("DS" if c["search"] else "DD", c["key"], c["coln"], c["val"])
+
+
+def module_colls(md, mod):
+    return [c for c in md.fields if c.split("_")[2] == mod]
+
+
+
 def main(argv):
     root, argv = find_root(argv[1:])
     fields = read_field_lists(root)
@@ -725,6 +734,26 @@ def main(argv):
     modules, display = read_inventory(root)
     status, enums = read_status(root), read_enums(root)
     mdict = read_mdict(root)
+    if argv and argv[0] in ("--digest", "--propose", "--compare"):
+        md = Model(root)
+        for mod in argv[1:]:
+            colls = [c for c in module_colls(md, mod)]
+            for coll in colls:
+                if argv[0] == "--digest":
+                    print(digest_line(md, coll))
+                    continue
+                ctl, notes = propose(md, coll)
+                if argv[0] == "--compare":
+                    have = [c["key"] for c in SCREENS.get(coll, [])]
+                    got = [c["key"] for c in ctl]
+                    print("%-42s %s  missing %s  extra %s" % (coll, "same" if have == got else "diff",
+                          [k for k in have if k not in got], [k for k in got if k not in have]))
+                    continue
+                if coll in SCREENS and "--all" not in argv:
+                    continue
+                print('    "%s": [%s],%s' % (coll, ", ".join(ctl_src(c) for c in ctl),
+                                          ("  # " + "; ".join(notes)) if notes else ""))
+        return 0
     if argv == ["--check"]:
         n, c, r, findings = check(root, fields, matrix, display, mdict)
         print("Checked %d page configurations (%d controls), their IvyConfigs and %d registry documents: "
