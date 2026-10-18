@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-gen_stable.py - Stable (StandardTable) page configuration generator (skill mes-stable-table 0.8).
+gen_stable.py - Stable (StandardTable) page configuration generator (skill mes-stable-table 0.10).
 
 Builds the table page configuration (typ "PageConfigStable") of MES list screens from:
 
@@ -29,7 +29,7 @@ Usage (from the repository root or anywhere):
                                                             (default: every file), failures only
   --root <repo root>   when not run from inside the repository
 
-Rules are documented in the skill mes-stable-table v0.8 (library
+Rules are documented in the skill mes-stable-table v0.10 (library
 E:/Ivy/Claude/ClaudeSkills/MintSkills/UiSkills/mes-stable-table/SKILL.md). Change a
 rule there and here together.
 """
@@ -327,12 +327,6 @@ def build_column(field, keyset, samples, is_first):
 # ---------------------------------------------------------------------------
 # Document frame (fixed values copied from FormatTableNewDesign.json, 18 Oct 2026)
 # ---------------------------------------------------------------------------
-def text_style(weight):
-    """footerMultiline key / val style, key names exactly as FormatTableNewDesign.json (skill 0.7)."""
-    return {"color": "#E7EDF1", "fontFamily": "Roboto Condensed", "font-size": "16px",
-            "font-weight": weight, "margin": "1px 1px 1px 1px", "textAlign": "left"}
-
-
 FOOTER_GRADIENT = "linear-gradient(180deg, #071ec9 15%, #000080 70%)"
 SUBTITLE_GRADIENT = "linear-gradient(90deg, #244ce4 30%, #000080 70%)"
 
@@ -351,15 +345,7 @@ def build_document(collection, page_title, module_code, columns, first_doc, rel)
                    "pagination-color": "#E5F6FF", "pagination-visible": True, "row-padding": "0px",
                    "visible": True},
         "footerButtons": {},
-        "footerMultiline": {
-            "background-color": "#708090",
-            "multiCol": [[
-                {"typ": "dataElement", "colSize": 6.0,
-                 "key": {"text": "From", "style": text_style("400")},
-                 "val": {"text": "", "style": text_style("600")}},
-                {"typ": "blankSpace", "colSize": 1.0},
-            ]],
-        },
+        "footerMultiline": {"background-color": "#6F7786", "multiCol": []},   # skill 0.10
         "header": {"background-color": "#2E3E4E", "font-color": "#125FCC", "font-family": "Roboto Condensed",
                    "font-size": "12px", "font-weight": "100", "row-padding": "0px 0px 0px 2px",
                    "visible": True},
@@ -605,7 +591,6 @@ V07_DESIGN = [
     ("footer.background", ("footer", "background"), FOOTER_GRADIENT),
     ("footer.pagination-background-color", ("footer", "pagination-background-color"), "#04179b"),
     ("footer.pagination-border", ("footer", "pagination-border"), "1px solid #244ce4"),
-    ("footerMultiline.background-color", ("footerMultiline", "background-color"), "#708090"),
     ("header.background-color", ("header", "background-color"), "#2E3E4E"),
     ("header.font-size", ("header", "font-size"), "12px"),
     ("row.font-weight", ("row", "font-weight"), "100"),
@@ -694,15 +679,8 @@ def check_file(root, collection, screens, ivy):
             f.append("11a %s" % label)
     if "background-color" in c.get("footer", {}):
         f.append("11a footer.background-color present")
-    try:
-        e = c["footerMultiline"]["multiCol"][0][0]
-        for part, wt in (("key", "400"), ("val", "600")):
-            if e[part]["style"] != text_style(wt):
-                f.append("11a footerMultiline %s.style" % part)
-        if e["val"]["text"] != "":
-            f.append("11a footerMultiline val.text")
-    except (KeyError, IndexError, TypeError):
-        f.append("11a footerMultiline structure")
+    if c.get("footerMultiline") != {"background-color": "#6F7786", "multiCol": []}:
+        f.append("11a footerMultiline is not {background-color #6F7786, multiCol []}")
 
     def order(o, p):
         if isinstance(o, dict):

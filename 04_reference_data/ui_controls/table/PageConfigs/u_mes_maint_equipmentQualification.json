@@ -164,41 +164,8 @@
             },
             "footerButtons" : {},
             "footerMultiline" : {
-                "background-color" : "#708090",
-                "multiCol" : [
-                    [
-                        {
-                            "colSize" : 6.0,
-                            "key" : {
-                                "style" : {
-                                    "color" : "#E7EDF1",
-                                    "font-size" : "16px",
-                                    "font-weight" : "400",
-                                    "fontFamily" : "Roboto Condensed",
-                                    "margin" : "1px 1px 1px 1px",
-                                    "textAlign" : "left"
-                                },
-                                "text" : "From"
-                            },
-                            "typ" : "dataElement",
-                            "val" : {
-                                "style" : {
-                                    "color" : "#E7EDF1",
-                                    "font-size" : "16px",
-                                    "font-weight" : "600",
-                                    "fontFamily" : "Roboto Condensed",
-                                    "margin" : "1px 1px 1px 1px",
-                                    "textAlign" : "left"
-                                },
-                                "text" : ""
-                            }
-                        },
-                        {
-                            "colSize" : 1.0,
-                            "typ" : "blankSpace"
-                        }
-                    ]
-                ]
+                "background-color" : "#6F7786",
+                "multiCol" : []
             },
             "header" : {
                 "background-color" : "#2E3E4E",
@@ -286,7 +253,7 @@
     "module" : "maint",
     "page" : "mes_maint_equipmentQualificationStable",
     "projid" : "",
-    "rel" : "CL20261018-14:02",
+    "rel" : "CL20261018-22:43",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",

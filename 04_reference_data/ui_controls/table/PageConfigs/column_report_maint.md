@@ -1,6 +1,6 @@
 ## u_mes_maint_cleaningRecord - Cleaning Records (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_cleaningRecord.json | _id: mes_maint_cleaningRecordStable | rel: CL20261018-14:02 | samples: 10 | columns: 22 | total width: 4040px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_cleaningRecord.json | _id: mes_maint_cleaningRecordStable | rel: CL20261018-22:43 | samples: 10 | columns: 22 | total width: 4040px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -33,7 +33,7 @@ No non-null sample value (width from title only): electronicSignatureName
 
 ## u_mes_maint_equipmentLifecycleEvent - Equipment Lifecycle (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_equipmentLifecycleEvent.json | _id: mes_maint_equipmentLifecycleEventStable | rel: CL20261018-14:02 | samples: 10 | columns: 19 | total width: 3410px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_equipmentLifecycleEvent.json | _id: mes_maint_equipmentLifecycleEventStable | rel: CL20261018-22:43 | samples: 10 | columns: 19 | total width: 3410px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -42,7 +42,7 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_equipmentLifec
 | 3 | eventType | Event Type | String | 26 | 210px | left |
 | 4 | eventAt | Event At | Date/Datetime | 19 | 160px | center |
 | 5 | description | Description | String | 63 | 300px | left |
-| 6 | costInr | Cost (INR) | Decimal128 | 10 | 110px | right |
+| 6 | costInr | Cost (INR) | Decimal128 | 9 | 110px | right |
 | 7 | healthScore | Health Score | Decimal128 | 2 | 130px | right |
 | 8 | lifetimeCyclesAtEvent | Lifetime Cycles At Event | Int64 | 7 | 210px | right |
 | 9 | lifetimeRunHoursAtEvent | Lifetime Run Hours At Event | Decimal128 | 7 | 230px | right |
@@ -61,7 +61,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_equipmentQualification - Equipment Qualifications (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_equipmentQualification.json | _id: mes_maint_equipmentQualificationStable | rel: CL20261018-14:02 | samples: 10 | columns: 21 | total width: 3690px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_equipmentQualification.json | _id: mes_maint_equipmentQualificationStable | rel: CL20261018-22:43 | samples: 10 | columns: 21 | total width: 3690px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -93,7 +93,7 @@ No non-null sample value (width from title only): protocolControlledDocumentName
 
 ## u_mes_maint_logbookEntry - Equipment and Area Logbook (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_logbookEntry.json | _id: mes_maint_logbookEntryStable | rel: CL20261018-14:02 | samples: 10 | columns: 20 | total width: 3370px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_logbookEntry.json | _id: mes_maint_logbookEntryStable | rel: CL20261018-22:43 | samples: 10 | columns: 20 | total width: 3370px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -122,7 +122,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenancePlan - Maintenance Plans (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlan.json | _id: mes_maint_maintenancePlanStable | rel: CL20261018-14:02 | samples: 10 | columns: 17 | total width: 2780px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlan.json | _id: mes_maint_maintenancePlanStable | rel: CL20261018-22:43 | samples: 10 | columns: 17 | total width: 2780px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -150,7 +150,7 @@ No non-null sample value (width from title only): counterSource, lastDoneAt
 
 ## u_mes_maint_maintenancePlanRequiredSkill - Maintenance Plan Required Skills (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlanRequiredSkill.json | _id: mes_maint_maintenancePlanRequiredSkillStable | rel: CL20261018-14:02 | samples: 10 | columns: 4 | total width: 810px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlanRequiredSkill.json | _id: mes_maint_maintenancePlanRequiredSkillStable | rel: CL20261018-22:43 | samples: 10 | columns: 4 | total width: 810px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -163,7 +163,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenancePlanRequiredSparePart - Maintenance Plan Required Spare Parts (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlanRequiredSparePart.json | _id: mes_maint_maintenancePlanRequiredSparePartStable | rel: CL20261018-14:02 | samples: 10 | columns: 5 | total width: 970px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlanRequiredSparePart.json | _id: mes_maint_maintenancePlanRequiredSparePartStable | rel: CL20261018-22:43 | samples: 10 | columns: 5 | total width: 970px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -177,7 +177,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenancePlanTask - Maintenance Plan Tasks (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlanTask.json | _id: mes_maint_maintenancePlanTaskStable | rel: CL20261018-14:02 | samples: 10 | columns: 7 | total width: 1430px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenancePlanTask.json | _id: mes_maint_maintenancePlanTaskStable | rel: CL20261018-22:43 | samples: 10 | columns: 7 | total width: 1430px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -193,7 +193,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenanceWorkOrder - Maintenance Work Orders (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrder.json | _id: mes_maint_maintenanceWorkOrderStable | rel: CL20261018-14:02 | samples: 20 | columns: 39 | total width: 7260px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrder.json | _id: mes_maint_maintenanceWorkOrderStable | rel: CL20261018-22:43 | samples: 20 | columns: 39 | total width: 7260px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -218,7 +218,7 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWor
 | 19 | downtimeMinutes | Downtime (min) | Int32 | 3 | 140px | right |
 | 20 | responseMinutes | Response (min) | Int32 | 1 | 140px | right |
 | 21 | repairMinutes | Repair (min) | Int32 | 2 | 130px | right |
-| 22 | totalCostInr | Total Cost (INR) | Decimal128 | 8 | 160px | right |
+| 22 | totalCostInr | Total Cost (INR) | Decimal128 | 7 | 160px | right |
 | 23 | equipmentReleasedBy | Equipment Released By | String | 15 | 190px | left |
 | 24 | equipmentReleasedAt | Equipment Released At | Date/Datetime | 19 | 190px | center |
 | 25 | followUpRequired | Follow Up Required | Boolean | 3 | 170px | center |
@@ -241,7 +241,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenanceWorkOrderAssignedToUser - Maintenance Work Order Assignees (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderAssignedToUser.json | _id: mes_maint_maintenanceWorkOrderAssignedToUserStable | rel: CL20261018-14:02 | samples: 10 | columns: 8 | total width: 1290px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderAssignedToUser.json | _id: mes_maint_maintenanceWorkOrderAssignedToUserStable | rel: CL20261018-22:43 | samples: 10 | columns: 8 | total width: 1290px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -258,7 +258,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenanceWorkOrderLabour - Maintenance Work Order Labour (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderLabour.json | _id: mes_maint_maintenanceWorkOrderLabourStable | rel: CL20261018-14:02 | samples: 10 | columns: 9 | total width: 1360px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderLabour.json | _id: mes_maint_maintenanceWorkOrderLabourStable | rel: CL20261018-22:43 | samples: 10 | columns: 9 | total width: 1360px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -276,7 +276,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_maintenanceWorkOrderTask - Work Order Checklist (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderTask.json | _id: mes_maint_maintenanceWorkOrderTaskStable | rel: CL20261018-14:02 | samples: 10 | columns: 15 | total width: 2550px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderTask.json | _id: mes_maint_maintenanceWorkOrderTaskStable | rel: CL20261018-22:43 | samples: 10 | columns: 15 | total width: 2550px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -302,7 +302,7 @@ No non-null sample value (width from title only): maintenancePlanTaskName
 
 ## u_mes_maint_maintenanceWorkOrderUsedSparePart - Maintenance Work Order Used Spare Parts (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderUsedSparePart.json | _id: mes_maint_maintenanceWorkOrderUsedSparePartStable | rel: CL20261018-14:02 | samples: 10 | columns: 10 | total width: 1640px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWorkOrderUsedSparePart.json | _id: mes_maint_maintenanceWorkOrderUsedSparePartStable | rel: CL20261018-22:43 | samples: 10 | columns: 10 | total width: 1640px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -311,7 +311,7 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_maintenanceWor
 | 3 | sequenceNo | Sequence No | Int32 | 1 | 120px | right |
 | 4 | sparePartName | Spare Part | String | 55 | 300px | left |
 | 5 | quantity | Quantity | Decimal128 | 1 | 100px | right |
-| 6 | costInr | Cost (INR) | Decimal128 | 8 | 110px | right |
+| 6 | costInr | Cost (INR) | Decimal128 | 7 | 110px | right |
 | 7 | createdBy | Created By | String | 12 | 110px | left |
 | 8 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
 | 9 | updatedBy | Updated By | String | 12 | 110px | left |
@@ -321,7 +321,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_reliabilitySummary - Reliability Summary (Reports)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_reliabilitySummary.json | _id: mes_maint_reliabilitySummaryStable | rel: CL20261018-14:02 | samples: 10 | columns: 19 | total width: 2760px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_reliabilitySummary.json | _id: mes_maint_reliabilitySummaryStable | rel: CL20261018-22:43 | samples: 10 | columns: 19 | total width: 2760px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -351,7 +351,7 @@ No non-null sample value (width from title only): shiftName
 
 ## u_mes_maint_sparePart - Spare Parts (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePart.json | _id: mes_maint_sparePartStable | rel: CL20261018-14:02 | samples: 10 | columns: 18 | total width: 3040px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePart.json | _id: mes_maint_sparePartStable | rel: CL20261018-22:43 | samples: 10 | columns: 18 | total width: 3040px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -367,7 +367,7 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePart.json
 | 10 | minimumQuantity | Minimum Quantity | Decimal128 | 1 | 160px | right |
 | 11 | reorderQuantity | Reorder Quantity | Decimal128 | 1 | 160px | right |
 | 12 | leadTimeDays | Lead Time (days) | Int32 | 2 | 160px | right |
-| 13 | unitCostInr | Unit Cost (INR) | Decimal128 | 7 | 150px | right |
+| 13 | unitCostInr | Unit Cost (INR) | Decimal128 | 6 | 150px | right |
 | 14 | criticality | Criticality | String | 1 | 120px | left |
 | 15 | lastIssuedAt | Last Issued At | Date/Datetime | 0 | 140px | center |
 | 16 | lastReceivedAt | Last Received At | Date/Datetime | 0 | 160px | center |
@@ -380,7 +380,7 @@ No non-null sample value (width from title only): lastIssuedAt, lastReceivedAt
 
 ## u_mes_maint_sparePartTransaction - Spare Part Transactions (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePartTransaction.json | _id: mes_maint_sparePartTransactionStable | rel: CL20261018-14:02 | samples: 10 | columns: 18 | total width: 2990px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePartTransaction.json | _id: mes_maint_sparePartTransactionStable | rel: CL20261018-22:43 | samples: 10 | columns: 18 | total width: 2990px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -393,7 +393,7 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePartTrans
 | 7 | equipmentName | Equipment | String | 31 | 240px | left |
 | 8 | storageLocationName | Storage Location | String | 28 | 220px | left |
 | 9 | scanVerified | Scan Verified | Boolean | 3 | 140px | center |
-| 10 | unitCostInr | Unit Cost (INR) | Decimal128 | 7 | 150px | right |
+| 10 | unitCostInr | Unit Cost (INR) | Decimal128 | 6 | 150px | right |
 | 11 | transactedAt | Transacted At | Date/Datetime | 19 | 160px | center |
 | 12 | transactedBy | Transacted By | String | 12 | 140px | left |
 | 13 | erpDocumentNo | ERP Document No | String | 10 | 150px | left |
@@ -407,7 +407,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_sparePartUsedOnEquipment - Spare Part Used on Equipment (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePartUsedOnEquipment.json | _id: mes_maint_sparePartUsedOnEquipmentStable | rel: CL20261018-14:02 | samples: 10 | columns: 4 | total width: 790px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_sparePartUsedOnEquipment.json | _id: mes_maint_sparePartUsedOnEquipmentStable | rel: CL20261018-22:43 | samples: 10 | columns: 4 | total width: 790px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -420,7 +420,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_tool - Tools (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_tool.json | _id: mes_maint_toolStable | rel: CL20261018-14:02 | samples: 20 | columns: 28 | total width: 4920px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_tool.json | _id: mes_maint_toolStable | rel: CL20261018-22:43 | samples: 20 | columns: 28 | total width: 4920px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -445,7 +445,7 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_tool.json | _i
 | 19 | lastMaintainedAt | Last Maintained At | Date/Datetime | 19 | 170px | center |
 | 20 | nextMaintenanceDueAt | Next Maintenance Due At | Date/Date | 10 | 210px | center |
 | 21 | purchasedAt | Purchased At | Date/Datetime | 19 | 160px | center |
-| 22 | costInr | Cost (INR) | Decimal128 | 8 | 110px | right |
+| 22 | costInr | Cost (INR) | Decimal128 | 7 | 110px | right |
 | 23 | ownedByCustomerName | Owned By Customer | String | 42 | 300px | left |
 | 24 | blockAtLifeLimit | Block At Life Limit | Boolean | 3 | 180px | center |
 | 25 | lastCertifiedAt | Last Certified At | Date/Datetime | 19 | 160px | center |
@@ -459,7 +459,7 @@ No non-null sample value (width from title only): certificateControlledDocumentN
 
 ## u_mes_maint_toolItem - Tool Applicable Items (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolItem.json | _id: mes_maint_toolItemStable | rel: CL20261018-14:02 | samples: 10 | columns: 4 | total width: 870px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolItem.json | _id: mes_maint_toolItemStable | rel: CL20261018-22:43 | samples: 10 | columns: 4 | total width: 870px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -472,7 +472,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_maint_toolLifeRecord - Tool Life Records (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolLifeRecord.json | _id: mes_maint_toolLifeRecordStable | rel: CL20261018-14:02 | samples: 10 | columns: 25 | total width: 4400px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolLifeRecord.json | _id: mes_maint_toolLifeRecordStable | rel: CL20261018-22:43 | samples: 10 | columns: 25 | total width: 4400px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -508,7 +508,7 @@ No non-null sample value (width from title only): regrindNo, operationExecutionN
 
 ## u_mes_maint_toolType - Tool Types (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolType.json | _id: mes_maint_toolTypeStable | rel: CL20261018-14:02 | samples: 20 | columns: 6 | total width: 850px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolType.json | _id: mes_maint_toolTypeStable | rel: CL20261018-22:43 | samples: 20 | columns: 6 | total width: 850px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -520,4 +520,3 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_maint_toolType.json 
 | 6 | status | Status | String | 6 | 90px | left |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); schemaVersion (excluded key (identifier, site, app or schema))
-
