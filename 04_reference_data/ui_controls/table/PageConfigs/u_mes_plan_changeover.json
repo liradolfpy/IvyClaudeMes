@@ -1,0 +1,324 @@
+{
+    "_id" : "mes_plan_changeoverStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lineName",
+                    "title" : "Line",
+                    "width" : "270px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentName",
+                    "title" : "Equipment",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "fromProductionOrderName",
+                    "title" : "From Production Order",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toProductionOrderName",
+                    "title" : "To Production Order",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "fromItemName",
+                    "title" : "From Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toItemName",
+                    "title" : "To Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "changeoverType",
+                    "title" : "Changeover Type",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "plannedStartAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Planned Start At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "startedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Started At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "completedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Completed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "plannedMinutes",
+                    "title" : "Planned (min)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "actualMinutes",
+                    "title" : "Actual (min)",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "recipeName",
+                    "title" : "Recipe",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "firstOffCheckSheetResultName",
+                    "title" : "First Off Check Sheet Result",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "firstOffApprovedBy",
+                    "title" : "First Off Approved By",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "firstOffApprovedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "First Off Approved At",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lossReason",
+                    "title" : "Loss Reason",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Changeovers",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_plan_changeoverStable",
+    "lid" : "lid_999",
+    "module" : "plan",
+    "page" : "mes_plan_changeoverStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1102000000000001",
+            "recordNo" : "CHG-2026-000307",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "lineId" : "1006000000000001",
+            "lineName" : "Gravity Die Casting Line 1",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "equipmentId" : "1013000000000001",
+            "equipmentName" : "Gravity Die Casting Machine 1",
+            "fromProductionOrderId" : "1083000000000004",
+            "fromProductionOrderName" : "PO-1000433",
+            "toProductionOrderId" : "1083000000000004",
+            "toProductionOrderName" : "PO-1000433",
+            "fromItemId" : "1043000000000002",
+            "fromItemName" : "Front Brake Caliper Assembly, RH",
+            "toItemId" : "1043000000000004",
+            "toItemName" : "Caliper Body Casting, LH, T6",
+            "changeoverType" : "Variant Change",
+            "plannedStartAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "startedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "completedAt" : null,
+            "plannedMinutes" : NumberInt(20),
+            "actualMinutes" : NumberInt(27),
+            "recipeId" : "1073000000000001",
+            "recipeName" : "Caliper body LH casting parameters",
+            "firstOffCheckSheetResultId" : "1148000000000001",
+            "firstOffCheckSheetResultName" : "CKR-2026-000479",
+            "firstOffApprovedById" : null,
+            "firstOffApprovedBy" : null,
+            "firstOffApprovedAt" : null,
+            "lossReason" : "Socket for RH variant not at point of use",
+            "status" : "Planned",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000001",
+            "createdBy" : "Sunil Jadhav",
+            "updatedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "updatedById" : "1029000000000001",
+            "updatedBy" : "Sunil Jadhav"
+        }
+    ]
+}

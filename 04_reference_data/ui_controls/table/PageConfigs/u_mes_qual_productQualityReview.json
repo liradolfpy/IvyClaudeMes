@@ -1,0 +1,315 @@
+{
+    "_id" : "mes_qual_productQualityReviewStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reviewPeriodFromDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Review Period From Date",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reviewPeriodToDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Review Period to Date",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lotsProducedCount",
+                    "title" : "Lots Produced Count",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lotsReleasedCount",
+                    "title" : "Lots Released Count",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lotsRejectedCount",
+                    "title" : "Lots Rejected Count",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "nonconformanceCount",
+                    "title" : "Nonconformance Count",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "deviationPermitCount",
+                    "title" : "Deviation Permit Count",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "customerComplaintCount",
+                    "title" : "Customer Complaint Count",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "capaCount",
+                    "title" : "CAPA Count",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "engineeringChangeCount",
+                    "title" : "Engineering Change Count",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "productRecallCount",
+                    "title" : "Product Recall Count",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "processCapabilityText",
+                    "title" : "Process Capability Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "conclusionText",
+                    "title" : "Conclusion Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "actionsText",
+                    "title" : "Actions Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reportControlledDocumentName",
+                    "title" : "Report Controlled Document",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "approvedBy",
+                    "title" : "Approved By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "approvedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Approved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Product Quality Reviews",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_productQualityReviewStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_productQualityReviewStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1362000000000001",
+            "recordNo" : "PQR-FG-PCM500-B10-2026-Q2",
+            "app" : "Gamp",
+            "siteId" : "1003000000000011",
+            "siteName" : "Ranjangaon OSD Plant, Pune",
+            "itemId" : "1043000000000011",
+            "itemName" : "Paracetamol Tablets IP 500 mg, blister 10 x 10",
+            "reviewPeriodFromDate" : ISODate("2026-04-01T00:00:00.000+0000"),
+            "reviewPeriodToDate" : ISODate("2026-06-30T00:00:00.000+0000"),
+            "lotsProducedCount" : NumberInt(38),
+            "lotsReleasedCount" : NumberInt(37),
+            "lotsRejectedCount" : NumberInt(1),
+            "nonconformanceCount" : NumberInt(5),
+            "deviationPermitCount" : NumberInt(1),
+            "customerComplaintCount" : NumberInt(3),
+            "capaCount" : NumberInt(2),
+            "engineeringChangeCount" : NumberInt(2),
+            "productRecallCount" : NumberInt(1),
+            "processCapabilityText" : "Tablet weight Cpk 1.92; blister leak test pass rate 99.6 percent",
+            "conclusionText" : "Process in a state of control; no change to the control strategy",
+            "actionsText" : "None",
+            "reportControlledDocumentId" : null,
+            "reportControlledDocumentName" : null,
+            "approvedById" : "1029000000000017",
+            "approvedBy" : "Vandana Iyer",
+            "approvedAt" : ISODate("2026-07-15T11:00:00.000+0000"),
+            "status" : "Approved",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-07-15T11:00:00.000+0000"),
+            "createdById" : "1029000000000014",
+            "createdBy" : "Shalini Rao",
+            "updatedAt" : ISODate("2026-07-15T11:00:00.000+0000"),
+            "updatedById" : "1029000000000014",
+            "updatedBy" : "Shalini Rao"
+        }
+    ]
+}

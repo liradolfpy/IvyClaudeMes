@@ -1,0 +1,397 @@
+{
+    "_id" : "mes_qual_nonconformanceStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "title",
+                    "title" : "Title",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "description",
+                    "title" : "Description",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "ncType",
+                    "title" : "Nc Type",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "source",
+                    "title" : "Source",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "detectedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Detected At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "detectedBy",
+                    "title" : "Detected By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "detectedAtOperationName",
+                    "title" : "Detected At Operation",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "detectedAtWorkCenterName",
+                    "title" : "Detected At Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "originOperationName",
+                    "title" : "Origin Operation",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "defectCodeName",
+                    "title" : "Defect Code",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "supplierName",
+                    "title" : "Supplier",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "customerName",
+                    "title" : "Customer",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantityAffected",
+                    "title" : "Quantity Affected",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantityRejected",
+                    "title" : "Quantity Rejected",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "qualityHoldName",
+                    "title" : "Quality Hold",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "capaName",
+                    "title" : "CAPA",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "rootCauseSummary",
+                    "title" : "Root Cause Summary",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "severity",
+                    "title" : "Severity",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "costInr",
+                    "title" : "Cost (INR)",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "closedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Closed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "closedBy",
+                    "title" : "Closed By",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "deviationClass",
+                    "title" : "Deviation Class",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productImpactText",
+                    "title" : "Product Impact Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "investigationDueDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Investigation Due Date",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "qaApprovedBy",
+                    "title" : "Qa Approved By",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "qaApprovedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Qa Approved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "riskAssessmentName",
+                    "title" : "Risk Assessment",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Nonconformances",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_nonconformanceStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_nonconformanceStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1160000000000001",
+            "recordNo" : "NCR-2026-000118",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "title" : "Shrinkage porosity found on casting lot from die 2",
+            "description" : "Porosity visible on machined face or found by X-ray sampling. Ejector pin sticks on cavity 2 and the casting does not release",
+            "ncType" : "Internal",
+            "source" : "MES Terminal",
+            "detectedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "detectedById" : "1029000000000004",
+            "detectedBy" : "Anita Kulkarni",
+            "detectedAtOperationId" : "1051000000000001",
+            "detectedAtOperationName" : "Gravity die casting",
+            "detectedAtWorkCenterId" : "1009000000000001",
+            "detectedAtWorkCenterName" : "Gravity Die Casting Cell 1",
+            "originOperationId" : "1051000000000001",
+            "originOperationName" : "Gravity die casting",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "defectCodeId" : "1158000000000001",
+            "defectCodeName" : "Shrinkage porosity",
+            "supplierId" : null,
+            "supplierName" : null,
+            "customerId" : null,
+            "customerName" : null,
+            "quantityAffected" : NumberInt(480),
+            "quantityRejected" : NumberInt(6),
+            "qualityHoldId" : "1172000000000005",
+            "qualityHoldName" : "HLD-2026-000029",
+            "capaId" : "1176000000000001",
+            "capaName" : "8D - Shrinkage porosity in bridge section",
+            "rootCauseSummary" : "Ejector pin galled after die coating build-up",
+            "severity" : NumberInt(8),
+            "costInr" : 8640.00,
+            "closedAt" : null,
+            "closedById" : null,
+            "closedBy" : null,
+            "deviationClass" : "Major",
+            "productImpactText" : "Castings of die 2 from the lot quarantined; other dies not affected",
+            "investigationDueDate" : ISODate("2026-10-15T00:00:00.000+0000"),
+            "qaApprovedById" : null,
+            "qaApprovedBy" : null,
+            "qaApprovedAt" : null,
+            "riskAssessmentId" : null,
+            "riskAssessmentName" : null,
+            "status" : "Open",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000004",
+            "createdBy" : "Anita Kulkarni",
+            "updatedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "updatedById" : "1029000000000004",
+            "updatedBy" : "Anita Kulkarni"
+        }
+    ]
+}

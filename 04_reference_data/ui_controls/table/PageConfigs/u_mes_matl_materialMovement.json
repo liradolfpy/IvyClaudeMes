@@ -1,0 +1,344 @@
+{
+    "_id" : "mes_matl_materialMovementStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "movementTypeName",
+                    "title" : "Movement Type",
+                    "width" : "290px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lotName",
+                    "title" : "Lot",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "containerName",
+                    "title" : "Container",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantity",
+                    "title" : "Quantity",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "unitOfMeasureName",
+                    "title" : "Unit of Measure",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "fromLocationName",
+                    "title" : "From Location",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toLocationName",
+                    "title" : "To Location",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "fromStockStatusName",
+                    "title" : "From Stock Status",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toStockStatusName",
+                    "title" : "To Stock Status",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productionOrderName",
+                    "title" : "Production Order",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "goodsReceiptName",
+                    "title" : "Goods Receipt",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shipmentName",
+                    "title" : "Shipment",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "kitName",
+                    "title" : "Kit",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "movedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Moved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "movedBy",
+                    "title" : "Moved By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "scanSource",
+                    "title" : "Scan Source",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reasonText",
+                    "title" : "Reason Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "erpDocumentNo",
+                    "title" : "ERP Document No",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "erpMovementType",
+                    "title" : "ERP Movement Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reversalOfMaterialMovementName",
+                    "title" : "Reversal of Material Movement",
+                    "width" : "250px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Material Movements",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_matl_materialMovementStable",
+    "lid" : "lid_999",
+    "module" : "matl",
+    "page" : "mes_matl_materialMovementStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1114000000000001",
+            "recordNo" : "MM-2026-000331",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "movementTypeId" : "1279000000000001",
+            "movementTypeName" : "Goods Receipt Against Purchase Order",
+            "itemId" : "1043000000000005",
+            "itemName" : "Piston, dia 54 mm, steel, chrome plated",
+            "lotId" : "1096000000000005",
+            "lotName" : "L260905-PST-007",
+            "containerId" : null,
+            "containerName" : null,
+            "quantity" : 5000,
+            "unitOfMeasureId" : "1042000000000001",
+            "unitOfMeasureName" : "Each",
+            "fromLocationId" : null,
+            "fromLocationName" : null,
+            "toLocationId" : "1112000000000002",
+            "toLocationName" : "Warehouse A, rack 02, bin 14",
+            "fromStockStatusId" : null,
+            "fromStockStatusName" : null,
+            "toStockStatusId" : "1280000000000002",
+            "toStockStatusName" : "Quality Inspection",
+            "productionOrderId" : null,
+            "productionOrderName" : null,
+            "goodsReceiptId" : "1115000000000001",
+            "goodsReceiptName" : "GRN-2026-000918",
+            "shipmentId" : null,
+            "shipmentName" : null,
+            "kitId" : null,
+            "kitName" : null,
+            "movedAt" : ISODate("2026-09-15T06:02:18.000+0000"),
+            "movedById" : "1029000000000008",
+            "movedBy" : "Vikram Pawar",
+            "scanSource" : "Handheld Scanner",
+            "reasonText" : "Replenishment against kanban call",
+            "erpDocumentNo" : "4900318842",
+            "erpMovementType" : "261",
+            "reversalOfMaterialMovementId" : null,
+            "reversalOfMaterialMovementName" : null,
+            "status" : "Posted",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:01:48.000+0000"),
+            "createdById" : "1029000000000008",
+            "createdBy" : "Vikram Pawar",
+            "updatedAt" : ISODate("2026-09-15T06:02:18.000+0000"),
+            "updatedById" : "1029000000000008",
+            "updatedBy" : "Vikram Pawar"
+        }
+    ]
+}

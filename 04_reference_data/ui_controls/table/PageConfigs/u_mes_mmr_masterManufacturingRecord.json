@@ -1,0 +1,375 @@
+{
+    "_id" : "mes_mmr_masterManufacturingRecordStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "title",
+                    "title" : "Title",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemRevisionName",
+                    "title" : "Item Revision",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productVariantName",
+                    "title" : "Product Variant",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "version",
+                    "title" : "Version",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "previousMasterManufacturingRecordName",
+                    "title" : "Previous Master Manufacturing Record",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "billOfMaterialName",
+                    "title" : "Bill of Material",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "routingName",
+                    "title" : "Routing",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "billOfProcessName",
+                    "title" : "Bill of Process",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "controlPlanName",
+                    "title" : "Control Plan",
+                    "width" : "220px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "inspectionPlanName",
+                    "title" : "Inspection Plan",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "packagingSpecificationName",
+                    "title" : "Packaging Specification",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "labelTemplateName",
+                    "title" : "Label Template",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "processValidationName",
+                    "title" : "Process Validation",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "controlledDocumentName",
+                    "title" : "Controlled Document",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "engineeringChangeName",
+                    "title" : "Engineering Change",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "changeReasonText",
+                    "title" : "Change Reason Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "standardBatchSize",
+                    "title" : "Standard Batch Size",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "unitOfMeasureName",
+                    "title" : "Unit of Measure",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "theoreticalQuantity",
+                    "title" : "Theoretical Quantity",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lowerLimitPct",
+                    "title" : "Lower Limit (%)",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "upperLimitPct",
+                    "title" : "Upper Limit (%)",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "effectiveFrom",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Effective From",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "effectiveTo",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Effective to",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "authoredBy",
+                    "title" : "Authored By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reviewedBy",
+                    "title" : "Reviewed By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reviewedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Reviewed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "approvedBy",
+                    "title" : "Approved By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "approvedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Approved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "120px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Master Manufacturing Records",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_mmr_masterManufacturingRecordStable",
+    "lid" : "lid_999",
+    "module" : "mmr",
+    "page" : "mes_mmr_masterManufacturingRecordStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1367000000000001",
+            "recordNo" : "MMR-PCM500-B10-03",
+            "app" : "Gamp",
+            "siteId" : "1003000000000011",
+            "siteName" : "Ranjangaon OSD Plant, Pune",
+            "title" : "Paracetamol Tablets IP 500 mg blister 10 x 10, master manufacturing record version 3",
+            "itemId" : "1043000000000011",
+            "itemName" : "Paracetamol Tablets IP 500 mg, blister 10 x 10",
+            "itemRevisionId" : "1044000000000012",
+            "itemRevisionName" : "FG-PCM500-B10-R02",
+            "productVariantId" : "1046000000000011",
+            "productVariantName" : "Paracetamol 500 mg 10 x 10 blister, domestic",
+            "version" : NumberInt(3),
+            "previousMasterManufacturingRecordId" : "1367000000000002",
+            "previousMasterManufacturingRecordName" : "Paracetamol Tablets IP 500 mg blister 10 x 10, master manufacturing record version 2",
+            "billOfMaterialId" : "1047000000000019",
+            "billOfMaterialName" : "BOM-FG-PCM500-B10-03",
+            "routingId" : "1053000000000011",
+            "routingName" : "Paracetamol 500 mg blister, full process routing",
+            "billOfProcessId" : "1057000000000011",
+            "billOfProcessName" : "BOP-FG-PCM500-B10-R01",
+            "controlPlanId" : "1139000000000011",
+            "controlPlanName" : "CP-FG-PCM500-B10-PROD",
+            "inspectionPlanId" : "1142000000000020",
+            "inspectionPlanName" : "In-process inspection, cartoning and final inspection",
+            "packagingSpecificationId" : "1122000000000015",
+            "packagingSpecificationName" : "PKS-FG-PCM500-B10-MCH-03",
+            "labelTemplateId" : "1124000000000011",
+            "labelTemplateName" : "Medicura Healthcare shipper label A5",
+            "processValidationId" : "1365000000000001",
+            "processValidationName" : "Paracetamol 500 mg tablets, process performance qualification, three batches",
+            "controlledDocumentId" : "1246000000000020",
+            "controlledDocumentName" : "SOP dispensing of raw materials SOP-WH-007 revision 9",
+            "engineeringChangeId" : "1076000000000014",
+            "engineeringChangeName" : "Blister foil supplier changed",
+            "changeReasonText" : "Blister foil supplier changed and leak test program revised (ECN-2026-0030)",
+            "standardBatchSize" : NumberInt(4800),
+            "unitOfMeasureId" : "1042000000000011",
+            "unitOfMeasureName" : "Each",
+            "theoreticalQuantity" : 4800,
+            "lowerLimitPct" : 98.00,
+            "upperLimitPct" : 100.00,
+            "effectiveFrom" : ISODate("2026-05-25T00:00:00.000+0000"),
+            "effectiveTo" : null,
+            "authoredById" : "1029000000000019",
+            "authoredBy" : "Tejas Bapat",
+            "reviewedById" : "1029000000000014",
+            "reviewedBy" : "Shalini Rao",
+            "reviewedAt" : ISODate("2026-05-22T15:00:00.000+0000"),
+            "approvedById" : "1029000000000017",
+            "approvedBy" : "Vandana Iyer",
+            "approvedAt" : ISODate("2026-05-23T11:00:00.000+0000"),
+            "status" : "Effective",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

@@ -18,6 +18,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_bmr_batchRelease__id_recordNo",
+      "coln" : "u_mes_bmr_batchRelease",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_bmr",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_bmr_yieldReconciliation__id_recordNo",
+      "coln" : "u_mes_bmr_yieldReconciliation",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_bmr",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_ehs_bodyPart__id_name",
       "coln" : "u_mes_ehs_bodyPart",
       "query" : {
@@ -35,6 +69,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_ehs_injuryType__id_name",
+      "coln" : "u_mes_ehs_injuryType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_ehs",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_ehs_safetyIncident__id_title",
       "coln" : "u_mes_ehs_safetyIncident",
       "query" : {
@@ -49,6 +100,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_ehs",
       "rel" : "CL20261018-23:10",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_maint_cleaningRecord__id_recordNo",
+      "coln" : "u_mes_maint_cleaningRecord",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_maint_maintenancePlanTask__id_recordNo",
+      "coln" : "u_mes_maint_maintenancePlanTask",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_maint",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -188,6 +273,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_mast_currency__id_name",
+      "coln" : "u_mes_mast_currency",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_mast_department__id_name",
       "coln" : "u_mes_mast_department",
       "query" : {
@@ -219,6 +321,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_mast",
       "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_mast_employmentType__id_name",
+      "coln" : "u_mes_mast_employmentType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_mast",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -562,6 +681,57 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_matl_label__id_recordNo",
+      "coln" : "u_mes_matl_label",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_matl",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_matl_materialConsumption__id_recordNo",
+      "coln" : "u_mes_matl_materialConsumption",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_matl",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_matl_materialMovement__id_recordNo",
+      "coln" : "u_mes_matl_materialMovement",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_matl",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_matl_packType__id_name",
       "coln" : "u_mes_matl_packType",
       "query" : {
@@ -698,6 +868,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_perf_alarm__id_recordNo",
+      "coln" : "u_mes_perf_alarm",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_perf_downtimeEvent__id_recordNo",
       "coln" : "u_mes_perf_downtimeEvent",
       "query" : {
@@ -712,6 +899,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_perf",
       "rel" : "CL20261017-21:22",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_equipmentState__id_recordNo",
+      "coln" : "u_mes_perf_equipmentState",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -780,6 +984,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_perf",
       "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_perf_torqueResult__id_recordNo",
+      "coln" : "u_mes_perf_torqueResult",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_perf",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -868,6 +1089,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_plan_interlockEvent__id_recordNo",
+      "coln" : "u_mes_plan_interlockEvent",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_plan",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_plan_lineClearance__id_recordNo",
+      "coln" : "u_mes_plan_lineClearance",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_plan",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_plan_lot__id_recordNo",
       "coln" : "u_mes_plan_lot",
       "query" : {
@@ -899,6 +1154,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_plan",
       "rel" : "CL20261017-21:22",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_plan_operatorSession__id_recordNo",
+      "coln" : "u_mes_plan_operatorSession",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_plan",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -1123,6 +1395,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_prod_market__id_name",
+      "coln" : "u_mes_prod_market",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_padCompound__id_name",
+      "coln" : "u_mes_prod_padCompound",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_prod_ppeItem__id_name",
       "coln" : "u_mes_prod_ppeItem",
       "query" : {
@@ -1191,6 +1497,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_prod_surfaceFinish__id_name",
+      "coln" : "u_mes_prod_surfaceFinish",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_prod_vehicleModel__id_name",
+      "coln" : "u_mes_prod_vehicleModel",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_prod",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_prod_workInstructionStep__id_recordNo",
       "coln" : "u_mes_prod_workInstructionStep",
       "query" : {
@@ -1222,6 +1562,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-17T00:00:00.000+0000"),
       "projid" : "mes_prod",
       "rel" : "CL20261017-21:22",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_auditSchedule__id_name",
+      "coln" : "u_mes_qual_auditSchedule",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -1582,6 +1939,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_qual_processValidation__id_title",
+      "coln" : "u_mes_qual_processValidation",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_qual_productRecall__id_title",
       "coln" : "u_mes_qual_productRecall",
       "query" : {
@@ -1630,6 +2004,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_qual",
       "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_qual_riskAssessment__id_title",
+      "coln" : "u_mes_qual_riskAssessment",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "title",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_qual",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -1735,6 +2126,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_syst_auditTrailReview__id_recordNo",
+      "coln" : "u_mes_syst_auditTrailReview",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_syst_auditTrail__id_recordNo",
       "coln" : "u_mes_syst_auditTrail",
       "query" : {
@@ -1800,6 +2208,40 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_syst",
       "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_electronicSignature__id_recordNo",
+      "coln" : "u_mes_syst_electronicSignature",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_erpMessage__id_recordNo",
+      "coln" : "u_mes_syst_erpMessage",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -1871,6 +2313,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_syst_modelPrediction__id_recordNo",
+      "coln" : "u_mes_syst_modelPrediction",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-00:00",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_syst_notification__id_title",
       "coln" : "u_mes_syst_notification",
       "query" : {
@@ -1885,6 +2344,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_syst",
       "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_numberRange__id_name",
+      "coln" : "u_mes_syst_numberRange",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {
@@ -1987,6 +2463,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_trac",
       "rel" : "CL20261018-23:10",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_trac_genealogyLink__id_recordNo",
+      "coln" : "u_mes_trac_genealogyLink",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "recordNo",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_trac",
+      "rel" : "CL20261019-00:00",
       "resp" : "CL"
   },
   {

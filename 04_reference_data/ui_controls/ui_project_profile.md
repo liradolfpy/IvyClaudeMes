@@ -13,7 +13,7 @@ Project-specific values for the UI skills `mes-query-control`, `mes-ivy-config`,
 | Folder layout | `Folder_Guide.md`; the standard paths named in the skills apply without change |
 | Reference samples (owner-maintained) | `04_reference_data/ui_controls/query/FormatQuery.json`, `query/cropdown.md`, `table/FormatTableNewDesign.json` (Stable reference since skill 0.7, 18 Oct 2026; `table/FormatTable.json` is the previous design), `menu/FormatMenu.json.txt` (starting copies in the skill folders' `assets/`) |
 | Generators | `05_generator/gen_stable.py` (Stable), `05_generator/gen_menu.py` (Menu); starting copies in the skill folders' `templates/`. `05_generator/gen_query.py` (query page configurations, IvyConfigs and dynamic dropdown registry; screen decisions in `05_generator/query_screens.py`; `--digest <module>` and `--propose <module>` give the module summary and the draft decisions so field lists are not read in full; `--compare <module>`; `--check` runs the query and IvyConfig checklists on every file; D066, D073). Constants `COL_SIZE` / `LABEL_COL_SPAN` are 12 / 24 (D071, D075) |
-| Outputs | `04_reference_data/ui_controls/query/PageConfigs/<collection>.json`, `query/IvyConfig/<collection>Ivy.json`, `query/u_int_dynamicDropdown.json` (dynamic dropdown registry, one combined file), `table/PageConfigs/<collection>.json`, `menu/menu.json` |
+| Outputs | `04_reference_data/ui_controls/query/PageConfigs/<collection>.json`, `query/IvyConfig/<collection>Ivy.json`, `query/u_int_dynamicDropdown.json` (dynamic dropdown registry, one combined file), `query/cropdown_mes.json` (MES cropdown documents, `gen_query.py --cropdown`), `table/PageConfigs/<collection>.json`, `menu/menu.json` |
 
 ## 2. Query
 
@@ -33,7 +33,7 @@ Project-specific values for the UI skills `mes-query-control`, `mes-ivy-config`,
 | `u_mes_plan_andonEvent` (display key `description`), `u_mes_qual_nonconformance` (display key `title`), `u_mes_maint_maintenanceWorkOrder` (display key `title`) | grow without limit | `/dd` search | `{ dn: "<collection>__id_<display key>" }` |
 | `u_mes_prod_workInstruction` (`title`), `u_mes_syst_interlockRule`, `u_mes_mast_costCenter`, `u_mes_mast_department`, `u_mes_mast_skill`, `u_mes_mast_manufacturer`, `u_mes_maint_toolType` (`name`) | 500 or fewer, not in `u_int_mdict` | `/dd` | `{ dn: "<collection>__id_<display key>" }` |
 | Status of any collection | 3 to 8 values | `data` | values from `status_values.md` |
-| Shift | 4 values (A, B, C, G) | `/cropdown` | `{ name: "Shift" }`. The cropdown keys are the shift codes (`A`, `B`, `C`, `G`), and `shiftId` in transaction, report and telemetry collections stores the same code, so the filter is a direct match. The mdict `Shift` dictionary is not used in query controls. |
+| Shift | 4 values (A, B, C, G) | `/cropdown` | `{ name: "Shift" }`. The cropdown keys are the shift codes (`A`, `B`, `C`, `G`), and `shiftId` in transaction, report and telemetry collections stores the same code, so the filter is a direct match. The mdict `Shift` dictionary is not used in query controls. The cropdown document is generated into `query/cropdown_mes.json` from the shift master (D080): `_id` `X007`, A Shift A, B Shift B, C Shift C, G General Shift; it replaces the legacy `X007` of `cropdown.md` (which says "Shift G") when both files are loaded. Calendar variants of the shift master (A-SAT, B-SAT, M1, M2, OT-A, OT-B) are not in the cropdown because transactions never record them. |
 
 ### 2.2 MasterDict dictionaries (`u_int_mdict`)
 
@@ -65,6 +65,8 @@ Reference counts were taken from `02_architecture/field_lists` (references from 
 | DocumentType | `u_mes_syst_documentType` | name | 1 (category of Controlled Documents) | 30 |
 | NotificationType | `u_mes_syst_notificationType` | name | 1 (category of Notifications) | 15 |
 | IncidentType | `u_mes_ehs_incidentType` | name | 1 (category of Safety Incidents) | 8 |
+| Role | `u_mes_mast_role` | name | 3 (13 query controls since D078) | 15 (added 19 Oct 2026, D079) |
+| UnitOfMeasure | `u_mes_mast_unitOfMeasure` | name | 20 (query control `baseUnitOfMeasureId` since D078) | 20 (added 19 Oct 2026, D079) |
 
 Not given a dictionary:
 
@@ -73,7 +75,6 @@ Not given a dictionary:
 | `u_mes_mast_user` (518 references) | About 600 documents per site | `/dd` search |
 | `u_mes_matl_storageLocation`, `u_mes_maint_tool`, `u_mes_qual_gauge`, `u_mes_qual_characteristic`, `u_mes_maint_sparePart`, `u_mes_perf_processTag` | More than 200 documents, or growing | `/dd` search |
 | `u_mes_prod_recipe`, `u_mes_syst_iotDevice`, `u_mes_prod_routing`, `u_mes_qual_controlPlan`, `u_mes_qual_pfmea`, `u_mes_prod_billOfMaterial` and other definition masters | Versioned or rarely used as a filter | `/dd` |
-| `u_mes_mast_unitOfMeasure` (20 references) | Displayed only, never a query control | – |
 | Value-list masters without transaction references (country, currency, language, item group, defect group and similar) | Not used in query controls of transaction screens | `/dd` on their own admin screen |
 
 ### 2.3 Sample file
@@ -96,6 +97,10 @@ Layout standard (18 Oct 2026, skill `mes-query-control` 0.20, D071, D075): every
 MaterialManagement, Traceability and EnvironmentHealthAndSafety (18 Oct 2026, D074): 42 page configurations and IvyConfigs from `gen_query.py --propose` plus review; new `/dd` sources `u_mes_mast_transporter`, `u_mes_matl_labelTemplate`, `u_mes_matl_packType`, `u_mes_syst_iotDevice`, `u_mes_syst_analyticsModel`, `u_mes_prod_itemGroup`, `u_mes_ehs_bodyPart` (`name`), `u_mes_matl_packagingSpecification`, `u_mes_matl_replenishmentRule` (`recordNo`); search dropdowns on the transaction collections goods receipt, kit, shipment and their lines, serial number, as-built record, inspection result (`recordNo`), trace investigation and safety incident (`title`). 109 page configurations in total.
 
 All modules (18 Oct 2026, D078): the remaining 260 screens of mast, prod, qual, perf, syst, bmr and mmr generated from `--propose` plus review; every one of the 369 collections has a query page configuration and an IvyConfig; 119 registry documents.
+
+Dropdown sources for all modules (19 Oct 2026, D079): every collection referenced by a key anywhere in the model has a source, either a MasterDict dictionary (26 dictionaries, 47 documents in `u_int_mdict.json`; Role and UnitOfMeasure added) or a `/dd` registry document (148 in `u_int_dynamicDropdown.json`; 29 added for targets that no query screen uses yet, ready for entry forms). The remaining candidates of the selection rule stay on `/dd` for the reasons in the table above (more than 200 documents or growing, or versioned definition masters).
+
+Cropdowns for all modules (19 Oct 2026, D080): the 369 screens use one cropdown, `Shift` (29 controls); every other list is a status or fixed value list (`data`) or a master (`/mdict`, `/dd`), so no other cropdown is needed. `gen_query.py --check` confirms that every called cropdown exists.
 
 #### Deferred items (to be worked later)
 

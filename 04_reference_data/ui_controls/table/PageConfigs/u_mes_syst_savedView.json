@@ -1,0 +1,205 @@
+{
+    "_id" : "mes_syst_savedViewStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "name",
+                    "title" : "Name",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "viewType",
+                    "title" : "View Type",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "collectionName",
+                    "title" : "Collection Name",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "filterJson",
+                    "title" : "Filter Json",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "sortJson",
+                    "title" : "Sort Json",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "ownerUserName",
+                    "title" : "Owner User",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "roleName",
+                    "title" : "Role",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "isShared",
+                    "isBool" : true,
+                    "title" : "Shared",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Saved Views",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_syst_savedViewStable",
+    "lid" : "lid_999",
+    "module" : "syst",
+    "page" : "mes_syst_savedViewStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1341000000000001",
+            "recordNo" : "VIEW-10045-001",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "name" : "OEE by shift, assembly line 1, last 7 days",
+            "viewType" : "Comparison",
+            "collectionName" : "u_mes_perf_oeeRecord",
+            "filterJson" : "{\"lineName\":\"Front Caliper Assembly Line 1\",\"periodStartAt\":{\"$gte\":\"-7d\"}}",
+            "sortJson" : "{\"oeePct\":-1}",
+            "ownerUserId" : "1029000000000005",
+            "ownerUserName" : "Rajesh Patil",
+            "roleId" : "1026000000000004",
+            "roleName" : "Production Supervisor",
+            "isShared" : true,
+            "status" : "Active",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

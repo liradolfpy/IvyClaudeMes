@@ -1,0 +1,524 @@
+{
+    "_id" : "mes_plan_operationExecutionStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productionOrderName",
+                    "title" : "Production Order",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "wipUnitName",
+                    "title" : "WIP Unit",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lotName",
+                    "title" : "Lot",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "routingName",
+                    "title" : "Routing",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "stepNo",
+                    "title" : "Step No",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "operationName",
+                    "title" : "Operation",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentName",
+                    "title" : "Equipment",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "recipeName",
+                    "title" : "Recipe",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shiftName",
+                    "title" : "Shift",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "operatorUserName",
+                    "title" : "Operator User",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "executionType",
+                    "title" : "Execution Type",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "attemptNo",
+                    "title" : "Attempt No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "startedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Started At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "completedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Completed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "cycleTimeSec",
+                    "title" : "Cycle Time (s)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "standardCycleTimeSec",
+                    "title" : "Standard Cycle Time (s)",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantityIn",
+                    "title" : "Quantity in",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantityGood",
+                    "title" : "Quantity Good",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantityReject",
+                    "title" : "Quantity Reject",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "quantityRework",
+                    "title" : "Quantity Rework",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "result",
+                    "title" : "Result",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksSkillVerified",
+                    "isBool" : true,
+                    "title" : "Checks Skill Verified",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksRecipeVerified",
+                    "isBool" : true,
+                    "title" : "Checks Recipe Verified",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksToolLifeOk",
+                    "isBool" : true,
+                    "title" : "Checks Tool Life Ok",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksGaugeCalibrationOk",
+                    "isBool" : true,
+                    "title" : "Checks Gauge Calibration Ok",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksPreviousStepComplete",
+                    "isBool" : true,
+                    "title" : "Checks Previous Step Complete",
+                    "width" : "250px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "nextStepNo",
+                    "title" : "Next Step No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "remarks",
+                    "title" : "Remarks",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productVariantName",
+                    "title" : "Product Variant",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "recipeVersion",
+                    "title" : "Recipe Version",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "recipeChecksum",
+                    "title" : "Recipe Checksum",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "taktTimeSec",
+                    "title" : "Takt Time (s)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "taktBreached",
+                    "isBool" : true,
+                    "title" : "Takt Breached",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "captureMethod",
+                    "title" : "Capture Method",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "startScanCode",
+                    "title" : "Start Scan Code",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "operatorSessionName",
+                    "title" : "Operator Session",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksVariantVerified",
+                    "isBool" : true,
+                    "title" : "Checks Variant Verified",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksDocumentAcknowledged",
+                    "isBool" : true,
+                    "title" : "Checks Document Acknowledged",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksEquipmentReady",
+                    "isBool" : true,
+                    "title" : "Checks Equipment Ready",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksMaterialReleased",
+                    "isBool" : true,
+                    "title" : "Checks Material Released",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksSetupVerified",
+                    "isBool" : true,
+                    "title" : "Checks Setup Verified",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "checksEnvironmentOk",
+                    "isBool" : true,
+                    "title" : "Checks Environment Ok",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "interlockEventCount",
+                    "title" : "Interlock Event Count",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Operation Executions",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_plan_operationExecutionStable",
+    "lid" : "lid_999",
+    "module" : "plan",
+    "page" : "mes_plan_operationExecutionStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1090000000000001",
+            "recordNo" : "OPX-2026-000376",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "productionOrderId" : "1083000000000004",
+            "productionOrderName" : "PO-1000433",
+            "wipUnitId" : null,
+            "wipUnitName" : null,
+            "lotId" : "1096000000000001",
+            "lotName" : "L260915-GDC-014",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "routingId" : "1053000000000004",
+            "routingName" : "Caliper body casting LH, casting and T6",
+            "stepNo" : NumberInt(10),
+            "operationId" : "1051000000000001",
+            "operationName" : "Gravity die casting",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "equipmentId" : "1013000000000001",
+            "equipmentName" : "Gravity Die Casting Machine 1",
+            "recipeId" : "1073000000000001",
+            "recipeName" : "Caliper body LH casting parameters",
+            "shiftId" : "A",
+            "shiftName" : "Shift A",
+            "operatorUserId" : "1029000000000001",
+            "operatorUserName" : "Sunil Jadhav",
+            "executionType" : "Production",
+            "attemptNo" : NumberInt(1),
+            "startedAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "completedAt" : ISODate("2026-09-17T06:53:15.000+0000"),
+            "cycleTimeSec" : 95.0,
+            "standardCycleTimeSec" : 95.0,
+            "quantityIn" : NumberInt(240),
+            "quantityGood" : NumberInt(231),
+            "quantityReject" : NumberInt(9),
+            "quantityRework" : NumberInt(0),
+            "result" : "OK",
+            "checksSkillVerified" : true,
+            "checksRecipeVerified" : true,
+            "checksToolLifeOk" : true,
+            "checksGaugeCalibrationOk" : true,
+            "checksPreviousStepComplete" : true,
+            "nextStepNo" : NumberInt(20),
+            "remarks" : "Die 2, both cavities running",
+            "productVariantId" : null,
+            "productVariantName" : null,
+            "recipeVersion" : "1",
+            "recipeChecksum" : "9f2c4a1be07d53c6",
+            "taktTimeSec" : null,
+            "taktBreached" : false,
+            "captureMethod" : "PLC Signal",
+            "startScanCode" : null,
+            "operatorSessionId" : null,
+            "operatorSessionName" : null,
+            "checksVariantVerified" : true,
+            "checksDocumentAcknowledged" : true,
+            "checksEquipmentReady" : true,
+            "checksMaterialReleased" : true,
+            "checksSetupVerified" : true,
+            "checksEnvironmentOk" : true,
+            "interlockEventCount" : NumberInt(0),
+            "status" : "Completed",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "createdById" : "1029000000000001",
+            "createdBy" : "Sunil Jadhav",
+            "updatedAt" : ISODate("2026-09-17T06:53:15.000+0000"),
+            "updatedById" : "1029000000000001",
+            "updatedBy" : "Sunil Jadhav"
+        }
+    ]
+}

@@ -80,14 +80,12 @@
                     "labelColSpan" : NumberInt(24),
                     "data_index" : "baseUnitOfMeasureId",
                     "p_data_index" : "baseUnitOfMeasureName",
-                    "api" : "/dd",
+                    "api" : "/mdict",
                     "params" : {
-                        "dn" : "u_mes_mast_unitOfMeasure__id_name"
+                        "typ" : "UnitOfMeasure",
+                        "subTyp" : "idame"
                     },
-                    "src" : "api",
-                    "source" : "dynamic",
-                    "sourceParams_dynamic" : "u_mes_mast_unitOfMeasure__id_name",
-                    "sourceParams" : {}
+                    "src" : "api"
                 },
                 {
                     "typ" : "dropDown",
@@ -162,7 +160,7 @@
             ]
         }
     },
-    "ver" : "20261018-2344",
+    "ver" : "20261019-0000",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -182,6 +180,6 @@
     "view" : [
 
     ],
-    "rel" : "20261018-2344",
+    "rel" : "20261019-0000",
     "projid" : ""
 }

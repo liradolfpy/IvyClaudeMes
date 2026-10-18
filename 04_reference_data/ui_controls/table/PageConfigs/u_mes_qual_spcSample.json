@@ -1,0 +1,339 @@
+{
+    "_id" : "mes_qual_spcSampleStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "spcChartName",
+                    "title" : "SPC Chart",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "characteristicName",
+                    "title" : "Characteristic",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "subgroupNo",
+                    "title" : "Subgroup No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "sampledAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Sampled At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "sampledBy",
+                    "title" : "Sampled By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shiftName",
+                    "title" : "Shift",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "subgroupMean",
+                    "title" : "Subgroup Mean",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "subgroupRange",
+                    "title" : "Subgroup Range",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "stdDev",
+                    "title" : "Std Dev",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "ucl",
+                    "title" : "Ucl",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lcl",
+                    "title" : "Lcl",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "centerLine",
+                    "title" : "Center Line",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "inControl",
+                    "isBool" : true,
+                    "title" : "In Control",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "assignableCause",
+                    "title" : "Assignable Cause",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "correctiveAction",
+                    "title" : "Corrective Action",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "nonconformanceName",
+                    "title" : "Nonconformance",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "excludedFromLimits",
+                    "isBool" : true,
+                    "title" : "Excluded From Limits",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reactionType",
+                    "title" : "Reaction Type",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "qualityHoldName",
+                    "title" : "Quality Hold",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "notificationName",
+                    "title" : "Notification",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "SPC Samples",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_spcSampleStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_spcSampleStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1154000000000001",
+            "recordNo" : "SPS-2026-000253",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "spcChartId" : "1151000000000001",
+            "spcChartName" : "Casting wall thickness at bridge, X-bar R chart",
+            "characteristicId" : "1138000000000001",
+            "characteristicName" : "Casting wall thickness at bridge",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "subgroupNo" : NumberInt(147),
+            "sampledAt" : ISODate("2026-09-15T06:00:30.000+0000"),
+            "sampledById" : "1029000000000004",
+            "sampledBy" : "Anita Kulkarni",
+            "shiftId" : "A",
+            "shiftName" : "Shift A",
+            "subgroupMean" : 8.03,
+            "subgroupRange" : 0.14,
+            "stdDev" : 0.0600,
+            "ucl" : 8.20,
+            "lcl" : 7.84,
+            "centerLine" : 8.02,
+            "inControl" : true,
+            "assignableCause" : null,
+            "correctiveAction" : "Ejector pin polished and die coat thickness corrected",
+            "nonconformanceId" : null,
+            "nonconformanceName" : null,
+            "excludedFromLimits" : false,
+            "reactionType" : null,
+            "qualityHoldId" : null,
+            "qualityHoldName" : null,
+            "notificationId" : null,
+            "notificationName" : null,
+            "status" : "Recorded",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000004",
+            "createdBy" : "Anita Kulkarni",
+            "updatedAt" : ISODate("2026-09-15T06:00:30.000+0000"),
+            "updatedById" : "1029000000000004",
+            "updatedBy" : "Anita Kulkarni"
+        }
+    ]
+}

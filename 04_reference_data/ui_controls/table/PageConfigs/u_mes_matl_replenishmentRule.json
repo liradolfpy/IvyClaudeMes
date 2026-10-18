@@ -1,0 +1,261 @@
+{
+    "_id" : "mes_matl_replenishmentRuleStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toLocationName",
+                    "title" : "To Location",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "fromLocationName",
+                    "title" : "From Location",
+                    "width" : "220px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "250px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "triggerType",
+                    "title" : "Trigger Type",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "minQuantity",
+                    "title" : "Min Quantity",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "maxQuantity",
+                    "title" : "Max Quantity",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "reorderPointQuantity",
+                    "title" : "Reorder Point Quantity",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "kanbanQuantity",
+                    "title" : "Kanban Quantity",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "kanbanCount",
+                    "title" : "Kanban Count",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "containerTypeName",
+                    "title" : "Container Type",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "unitOfMeasureName",
+                    "title" : "Unit of Measure",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "leadTimeMinutes",
+                    "title" : "Lead Time (min)",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "validFrom",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Valid From",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "validTo",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Valid to",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Replenishment Rules",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_matl_replenishmentRuleStable",
+    "lid" : "lid_999",
+    "module" : "matl",
+    "page" : "mes_matl_replenishmentRuleStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1312000000000001",
+            "recordNo" : "RPL-5110-30-0010-LS-ASY-01",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "itemId" : "1043000000000005",
+            "itemName" : "Piston, dia 54 mm, steel, chrome plated",
+            "toLocationId" : "1112000000000006",
+            "toLocationName" : "Line-side supermarket, assembly 1",
+            "fromLocationId" : "1112000000000002",
+            "fromLocationName" : "Warehouse A, rack 02, bin 14",
+            "workCenterId" : "1009000000000006",
+            "workCenterName" : "Piston and Seal Assembly Station",
+            "triggerType" : "Kanban Scan",
+            "minQuantity" : 96,
+            "maxQuantity" : 480,
+            "reorderPointQuantity" : 192,
+            "kanbanQuantity" : 96,
+            "kanbanCount" : NumberInt(5),
+            "containerTypeId" : "1278000000000002",
+            "containerTypeName" : "Returnable Bin 400 x 300",
+            "unitOfMeasureId" : "1042000000000001",
+            "unitOfMeasureName" : "Each",
+            "leadTimeMinutes" : NumberInt(45),
+            "validFrom" : ISODate("2026-04-01T00:00:00.000+0000"),
+            "validTo" : null,
+            "status" : "Active",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

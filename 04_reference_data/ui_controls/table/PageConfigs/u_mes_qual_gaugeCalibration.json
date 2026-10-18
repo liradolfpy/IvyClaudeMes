@@ -1,0 +1,323 @@
+{
+    "_id" : "mes_qual_gaugeCalibrationStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "gaugeName",
+                    "title" : "Gauge",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "calibrationType",
+                    "title" : "Calibration Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "calibratedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Calibrated At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "calibratedBy",
+                    "title" : "Calibrated By",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "calibrationSupplierName",
+                    "title" : "Calibration Supplier",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "masterStandardRef",
+                    "title" : "Master Standard Ref",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "traceability",
+                    "title" : "Traceability",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "temperatureC",
+                    "title" : "Temperature C",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "humidityPct",
+                    "title" : "Humidity (%)",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "asFoundResult",
+                    "title" : "As Found Result",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "asLeftResult",
+                    "title" : "As Left Result",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "overallResult",
+                    "title" : "Overall Result",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "uncertainty",
+                    "title" : "Uncertainty",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "adjustmentMade",
+                    "isBool" : true,
+                    "title" : "Adjustment Made",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "certificateNo",
+                    "title" : "Certificate No",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "certificateControlledDocumentName",
+                    "title" : "Certificate Controlled Document",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "nextDueAt",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Next Due At",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "impactAssessmentRequired",
+                    "isBool" : true,
+                    "title" : "Impact Assessment Required",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "remarks",
+                    "title" : "Remarks",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Gauge Calibrations",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_gaugeCalibrationStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_gaugeCalibrationStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1190000000000001",
+            "recordNo" : "GCAL-G-UT-001-2026-01",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "gaugeId" : "1189000000000001",
+            "gaugeName" : "Ultrasonic thickness gauge 1-25 mm",
+            "calibrationType" : "Periodic",
+            "calibratedAt" : ISODate("2026-04-02T00:00:00.000+0000"),
+            "calibratedById" : "1029000000000004",
+            "calibratedBy" : "Anita Kulkarni",
+            "calibrationSupplierId" : "1038000000000004",
+            "calibrationSupplierName" : "Western Aluminium Alloys Ltd.",
+            "masterStandardRef" : "Setting ring 54.000 mm, cert NABL-CC-2231",
+            "traceability" : "NABL accredited laboratory, traceable to NPL India",
+            "temperatureC" : 20.1,
+            "humidityPct" : 48.0,
+            "asFoundResult" : "Within Tolerance",
+            "asLeftResult" : "Within Tolerance",
+            "overallResult" : "Pass",
+            "uncertainty" : 0.0012,
+            "adjustmentMade" : false,
+            "certificateNo" : "IATF-0412877",
+            "certificateControlledDocumentId" : "1246000000000001",
+            "certificateControlledDocumentName" : "Drawing 5110-20-0105 revision B, Caliper Body Casting LH",
+            "nextDueAt" : ISODate("2026-10-06T00:00:00.000+0000"),
+            "impactAssessmentRequired" : false,
+            "remarks" : "No abnormality observed",
+            "status" : "Planned",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000004",
+            "createdBy" : "Anita Kulkarni",
+            "updatedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "updatedById" : "1029000000000004",
+            "updatedBy" : "Anita Kulkarni"
+        }
+    ]
+}

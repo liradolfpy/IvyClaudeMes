@@ -1,0 +1,341 @@
+{
+    "_id" : "mes_prod_itemStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "description",
+                    "title" : "Description",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemType",
+                    "title" : "Item Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemGroupName",
+                    "title" : "Item Group",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "baseUnitOfMeasureName",
+                    "title" : "Base Unit of Measure",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "drawingNo",
+                    "title" : "Drawing No",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "drawingRevision",
+                    "title" : "Drawing Revision",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "revisionDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Revision Date",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "materialSpecification",
+                    "title" : "Material Specification",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "materialGrade",
+                    "title" : "Material Grade",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "netWeightKg",
+                    "title" : "Net Weight Kg",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "grossWeightKg",
+                    "title" : "Gross Weight Kg",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "procurementType",
+                    "title" : "Procurement Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "defaultSupplierName",
+                    "title" : "Default Supplier",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "isSerialised",
+                    "isBool" : true,
+                    "title" : "Serialised",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "isLotControlled",
+                    "isBool" : true,
+                    "title" : "Lot Controlled",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "serialNumberRangeName",
+                    "title" : "Serial Number Range",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lotNumberRangeName",
+                    "title" : "Lot Number Range",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "shelfLifeDays",
+                    "title" : "Shelf Life (days)",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "safetyCharacteristic",
+                    "isBool" : true,
+                    "title" : "Safety Characteristic",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "hsnCode",
+                    "title" : "Hsn Code",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "standardCostInr",
+                    "title" : "Standard Cost (INR)",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "erpMaterialNo",
+                    "title" : "ERP Material No",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "defaultStorageLocationName",
+                    "title" : "Default Storage Location",
+                    "width" : "250px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "fefoRequired",
+                    "isBool" : true,
+                    "title" : "Fefo Required",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "exposureControlled",
+                    "isBool" : true,
+                    "title" : "Exposure Controlled",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "openLifeMinutes",
+                    "title" : "Open Life (min)",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Items",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_prod_itemStable",
+    "lid" : "lid_999",
+    "module" : "prod",
+    "page" : "mes_prod_itemStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1043000000000001",
+            "recordNo" : "5110-10-0100",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "description" : "Front Brake Caliper Assembly, LH",
+            "itemType" : "Finished Good",
+            "itemGroupId" : "1270000000000001",
+            "itemGroupName" : "Brake Caliper Assembly",
+            "baseUnitOfMeasureId" : "1042000000000001",
+            "baseUnitOfMeasureName" : "Each",
+            "drawingNo" : "5110-10-0100",
+            "drawingRevision" : "D",
+            "revisionDate" : ISODate("2026-04-02T00:00:00.000+0000"),
+            "materialSpecification" : null,
+            "materialGrade" : null,
+            "netWeightKg" : 3.420,
+            "grossWeightKg" : 3.480,
+            "procurementType" : "In House",
+            "defaultSupplierId" : null,
+            "defaultSupplierName" : null,
+            "isSerialised" : true,
+            "isLotControlled" : false,
+            "serialNumberRangeId" : "1248000000000001",
+            "serialNumberRangeName" : "Serial numbers, front caliper LH",
+            "lotNumberRangeId" : null,
+            "lotNumberRangeName" : null,
+            "shelfLifeDays" : null,
+            "safetyCharacteristic" : true,
+            "hsnCode" : "87083000",
+            "standardCostInr" : 2184.50,
+            "erpMaterialNo" : "000000000051110100",
+            "defaultStorageLocationId" : "1112000000000008",
+            "defaultStorageLocationName" : "Finished goods rack 01",
+            "fefoRequired" : false,
+            "exposureControlled" : false,
+            "openLifeMinutes" : null,
+            "status" : "Active",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

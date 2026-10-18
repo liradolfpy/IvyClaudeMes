@@ -1,0 +1,265 @@
+{
+    "_id" : "mes_matl_goodsReceiptStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "supplierName",
+                    "title" : "Supplier",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "purchaseOrderNo",
+                    "title" : "Purchase Order No",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "supplierInvoiceNo",
+                    "title" : "Supplier Invoice No",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "supplierInvoiceDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Supplier Invoice Date",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "deliveryChallanNo",
+                    "title" : "Delivery Challan No",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "vehicleNo",
+                    "title" : "Vehicle No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "receivedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Received At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "receivedBy",
+                    "title" : "Received By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "gateEntryNo",
+                    "title" : "Gate Entry No",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "inspectionCompletedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Inspection Completed At",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "erpGrnNo",
+                    "title" : "ERP Grn No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Goods Receipts",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_matl_goodsReceiptStable",
+    "lid" : "lid_999",
+    "module" : "matl",
+    "page" : "mes_matl_goodsReceiptStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1115000000000001",
+            "recordNo" : "GRN-2026-000918",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "supplierId" : "1038000000000001",
+            "supplierName" : "Konkan Precision Pistons Pvt. Ltd.",
+            "purchaseOrderNo" : "4500117302",
+            "supplierInvoiceNo" : "KPP/26-27/1842",
+            "supplierInvoiceDate" : ISODate("2026-04-02T00:00:00.000+0000"),
+            "deliveryChallanNo" : "DC-07713",
+            "vehicleNo" : "MH14 GT 4471",
+            "receivedAt" : null,
+            "receivedById" : null,
+            "receivedBy" : null,
+            "gateEntryNo" : "GE-260925-0044",
+            "inspectionCompletedAt" : null,
+            "erpGrnNo" : "5000209117",
+            "status" : "Received",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000008",
+            "createdBy" : "Vikram Pawar",
+            "updatedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "updatedById" : "1029000000000008",
+            "updatedBy" : "Vikram Pawar"
+        }
+    ]
+}

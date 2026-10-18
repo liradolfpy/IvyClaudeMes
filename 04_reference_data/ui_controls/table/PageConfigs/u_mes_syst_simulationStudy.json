@@ -1,0 +1,301 @@
+{
+    "_id" : "mes_syst_simulationStudyStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "title",
+                    "title" : "Title",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "studyType",
+                    "title" : "Study Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "relatedCollectionName",
+                    "title" : "Related Collection Name",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "relatedEntityName",
+                    "title" : "Related Entity",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "scenarioText",
+                    "title" : "Scenario Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "inputSnapshotAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Input Snapshot At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "resultText",
+                    "title" : "Result Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "predictedValue",
+                    "title" : "Predicted Value",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "predictedKpi",
+                    "title" : "Predicted Kpi",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "recommendedRecipeName",
+                    "title" : "Recommended Recipe",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "rolloutProductionOrderName",
+                    "title" : "Rollout Production Order",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "actualValue",
+                    "title" : "Actual Value",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "comparisonResult",
+                    "title" : "Comparison Result",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "resultControlledDocumentName",
+                    "title" : "Result Controlled Document",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "approvedBy",
+                    "title" : "Approved By",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "approvedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Approved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Simulation Studies",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_syst_simulationStudyStable",
+    "lid" : "lid_999",
+    "module" : "syst",
+    "page" : "mes_syst_simulationStudyStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1339000000000001",
+            "recordNo" : "SIM-2026-014",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "title" : "Leak test stabilisation time 5.0 s to 4.0 s, what-if on cycle time and escape risk",
+            "studyType" : "Process",
+            "relatedCollectionName" : "u_mes_prod_recipe",
+            "relatedEntityId" : "1073000000000008",
+            "relatedEntityName" : "Caliper leak test 5 bar and 140 bar",
+            "scenarioText" : "Stabilisation time of both stages reduced by 1.0 s on 5,000 historical curves",
+            "inputSnapshotAt" : ISODate("2026-09-16T10:00:00.000+0000"),
+            "resultText" : "Cycle time 24.0 s to 22.0 s; no additional escapes on the 5,000-curve replay",
+            "predictedValue" : 22.0,
+            "predictedKpi" : "Cycle time (s)",
+            "recommendedRecipeId" : "1073000000000008",
+            "recommendedRecipeName" : "Caliper leak test 5 bar and 140 bar",
+            "rolloutProductionOrderId" : "1083000000000008",
+            "rolloutProductionOrderName" : "PO-1000461",
+            "actualValue" : 22.3,
+            "comparisonResult" : "Equal",
+            "resultControlledDocumentId" : null,
+            "resultControlledDocumentName" : null,
+            "approvedById" : "1029000000000007",
+            "approvedBy" : "Meera Deshpande",
+            "approvedAt" : ISODate("2026-09-17T09:00:00.000+0000"),
+            "status" : "Rolled Out",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000001",
+            "createdBy" : "Sunil Jadhav",
+            "updatedAt" : ISODate("2026-09-17T09:00:00.000+0000"),
+            "updatedById" : "1029000000000001",
+            "updatedBy" : "Sunil Jadhav"
+        }
+    ]
+}

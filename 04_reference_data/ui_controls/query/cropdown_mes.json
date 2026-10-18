@@ -1,0 +1,11 @@
+// MES cropdown documents (collection cropdown); built by gen_query.py --cropdown from the masters named in CROPDOWNS
+{
+    "_id" : "X007",
+    "name" : "Shift",
+    "data" : {
+        "A" : "Shift A",
+        "B" : "Shift B",
+        "C" : "Shift C",
+        "G" : "General Shift"
+    }
+}

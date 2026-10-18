@@ -1,0 +1,368 @@
+{
+    "_id" : "mes_perf_oeeRecordStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "equipmentName",
+                    "title" : "Equipment",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lineName",
+                    "title" : "Line",
+                    "width" : "270px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shiftName",
+                    "title" : "Shift",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "productionDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Production Date",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productionOrderName",
+                    "title" : "Production Order",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "periodStartAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Period Start At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "periodEndAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Period End At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "calendarMinutes",
+                    "title" : "Calendar (min)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "plannedProductionMinutes",
+                    "title" : "Planned Production (min)",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "plannedDowntimeMinutes",
+                    "title" : "Planned Downtime (min)",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "unplannedDowntimeMinutes",
+                    "title" : "Unplanned Downtime (min)",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "runMinutes",
+                    "title" : "Run (min)",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "idealCycleTimeSec",
+                    "title" : "Ideal Cycle Time (s)",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "totalCount",
+                    "title" : "Total Count",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "goodCount",
+                    "title" : "Good Count",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "rejectCount",
+                    "title" : "Reject Count",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "reworkCount",
+                    "title" : "Rework Count",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "availabilityPct",
+                    "title" : "Availability (%)",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "performancePct",
+                    "title" : "Performance (%)",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "qualityPct",
+                    "title" : "Quality (%)",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "oeePct",
+                    "title" : "OEE (%)",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "teepPct",
+                    "title" : "Teep (%)",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "calculatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Calculated At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "calculationVersion",
+                    "title" : "Calculation Version",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "OEE Records",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_perf_oeeRecordStable",
+    "lid" : "lid_999",
+    "module" : "perf",
+    "page" : "mes_perf_oeeRecordStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1208000000000001",
+            "recordNo" : "OEE-2026-000141",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "equipmentId" : "1013000000000001",
+            "equipmentName" : "Gravity Die Casting Machine 1",
+            "lineId" : "1006000000000001",
+            "lineName" : "Gravity Die Casting Line 1",
+            "shiftId" : "A",
+            "shiftName" : "Shift A",
+            "productionDate" : ISODate("2026-09-17T00:00:00.000+0000"),
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "productionOrderId" : "1083000000000004",
+            "productionOrderName" : "PO-1000433",
+            "periodStartAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "periodEndAt" : ISODate("2026-09-17T14:51:40.000+0000"),
+            "calendarMinutes" : NumberInt(480),
+            "plannedProductionMinutes" : NumberInt(430),
+            "plannedDowntimeMinutes" : NumberInt(50),
+            "unplannedDowntimeMinutes" : NumberInt(18),
+            "runMinutes" : NumberInt(412),
+            "idealCycleTimeSec" : 95.0,
+            "totalCount" : NumberInt(768),
+            "goodCount" : NumberInt(762),
+            "rejectCount" : NumberInt(3),
+            "reworkCount" : NumberInt(0),
+            "availabilityPct" : 95.8,
+            "performancePct" : 85.0,
+            "qualityPct" : 99.2,
+            "oeePct" : 80.7,
+            "teepPct" : 69.3,
+            "calculatedAt" : ISODate("2026-09-17T06:52:10.000+0000"),
+            "calculationVersion" : NumberInt(1),
+            "status" : "Calculated",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-17T00:00:00.000+0000"),
+            "createdById" : "1029000000000010",
+            "createdBy" : "MES System",
+            "updatedAt" : ISODate("2026-09-17T14:51:40.000+0000"),
+            "updatedById" : "1029000000000010",
+            "updatedBy" : "MES System"
+        }
+    ]
+}

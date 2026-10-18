@@ -1,0 +1,289 @@
+{
+    "_id" : "mes_syst_auditTrailReviewStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reviewType",
+                    "title" : "Review Type",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "computerisedSystemName",
+                    "title" : "Computerised System",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "relatedCollectionName",
+                    "title" : "Related Collection Name",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "relatedEntityName",
+                    "title" : "Related Entity",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reviewFromAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Review From At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reviewToAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Review to At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "entriesReviewedCount",
+                    "title" : "Entries Reviewed Count",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "criticalEntriesCount",
+                    "title" : "Critical Entries Count",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "anomalyCount",
+                    "title" : "Anomaly Count",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "findingsText",
+                    "title" : "Findings Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "nonconformanceName",
+                    "title" : "Nonconformance",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "reviewedBy",
+                    "title" : "Reviewed By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "reviewedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Reviewed At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "electronicSignatureName",
+                    "title" : "Electronic Signature",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Audit Trail Reviews",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_syst_auditTrailReviewStable",
+    "lid" : "lid_999",
+    "module" : "syst",
+    "page" : "mes_syst_auditTrailReviewStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1347000000000001",
+            "recordNo" : "ATR-20260916-001",
+            "app" : "Gamp",
+            "siteId" : "1003000000000011",
+            "siteName" : "Ranjangaon OSD Plant, Pune",
+            "reviewType" : "Batch Record Review",
+            "computerisedSystemId" : "1344000000000001",
+            "computerisedSystemName" : "Manufacturing execution system, Ranjangaon OSD plant",
+            "relatedCollectionName" : "u_mes_plan_productionOrder",
+            "relatedEntityId" : "1083000000000011",
+            "relatedEntityName" : "PCM5B26091",
+            "reviewFromAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "reviewToAt" : ISODate("2026-09-15T13:40:00.000+0000"),
+            "entriesReviewedCount" : NumberInt(38),
+            "criticalEntriesCount" : NumberInt(5),
+            "anomalyCount" : NumberInt(1),
+            "findingsText" : "Change part life override justified in the interlock event",
+            "nonconformanceId" : null,
+            "nonconformanceName" : null,
+            "reviewedById" : "1029000000000014",
+            "reviewedBy" : "Shalini Rao",
+            "reviewedAt" : ISODate("2026-09-16T10:00:00.000+0000"),
+            "electronicSignatureId" : null,
+            "electronicSignatureName" : null,
+            "status" : "Completed",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000011",
+            "createdBy" : "Amol Shinde",
+            "updatedAt" : ISODate("2026-09-16T10:00:00.000+0000"),
+            "updatedById" : "1029000000000011",
+            "updatedBy" : "Amol Shinde"
+        }
+    ]
+}

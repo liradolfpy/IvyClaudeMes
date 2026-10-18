@@ -1,0 +1,310 @@
+{
+    "_id" : "mes_perf_productionCountStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lineName",
+                    "title" : "Line",
+                    "width" : "270px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "shiftName",
+                    "title" : "Shift",
+                    "width" : "80px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "productionDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Production Date",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "hourStartAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Hour Start At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "hourEndAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Hour End At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "productionOrderName",
+                    "title" : "Production Order",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "targetQuantity",
+                    "title" : "Target Quantity",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "goodQuantity",
+                    "title" : "Good Quantity",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "rejectQuantity",
+                    "title" : "Reject Quantity",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "reworkQuantity",
+                    "title" : "Rework Quantity",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "cumulativeTarget",
+                    "title" : "Cumulative Target",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "cumulativeGood",
+                    "title" : "Cumulative Good",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "downtimeMinutes",
+                    "title" : "Downtime (min)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "source",
+                    "title" : "Source",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "gapReason",
+                    "title" : "Gap Reason",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Hourly Production Counts",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_perf_productionCountStable",
+    "lid" : "lid_999",
+    "module" : "perf",
+    "page" : "mes_perf_productionCountStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1207000000000001",
+            "recordNo" : "PC-2026-000213",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "lineId" : "1006000000000001",
+            "lineName" : "Gravity Die Casting Line 1",
+            "shiftId" : "A",
+            "shiftName" : "Shift A",
+            "productionDate" : ISODate("2026-09-17T00:00:00.000+0000"),
+            "hourStartAt" : ISODate("2026-09-17T06:51:40.000+0000"),
+            "hourEndAt" : ISODate("2026-09-17T07:51:40.000+0000"),
+            "productionOrderId" : "1083000000000004",
+            "productionOrderName" : "PO-1000433",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "targetQuantity" : NumberInt(100),
+            "goodQuantity" : NumberInt(474),
+            "rejectQuantity" : NumberInt(1),
+            "reworkQuantity" : NumberInt(4),
+            "cumulativeTarget" : NumberInt(300),
+            "cumulativeGood" : NumberInt(281),
+            "downtimeMinutes" : NumberInt(18),
+            "source" : "MES Terminal",
+            "gapReason" : "Nutrunner socket change 18 minutes",
+            "status" : "Open",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-17T00:00:00.000+0000"),
+            "createdById" : "1029000000000010",
+            "createdBy" : "MES System",
+            "updatedAt" : ISODate("2026-09-17T07:51:40.000+0000"),
+            "updatedById" : "1029000000000010",
+            "updatedBy" : "MES System"
+        }
+    ]
+}

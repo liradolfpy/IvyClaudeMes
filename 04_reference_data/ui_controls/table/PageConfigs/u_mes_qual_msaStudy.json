@@ -1,0 +1,360 @@
+{
+    "_id" : "mes_qual_msaStudyStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "gaugeName",
+                    "title" : "Gauge",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "characteristicName",
+                    "title" : "Characteristic",
+                    "width" : "250px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "studyType",
+                    "title" : "Study Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "studyMethod",
+                    "title" : "Study Method",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "studyDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Study Date",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "partsCount",
+                    "title" : "Parts Count",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "trialsCount",
+                    "title" : "Trials Count",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsEquipmentVariation",
+                    "title" : "Results Equipment Variation",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsAppraiserVariation",
+                    "title" : "Results Appraiser Variation",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsGrr",
+                    "title" : "Results GRR",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsPartVariation",
+                    "title" : "Results Part Variation",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsTotalVariation",
+                    "title" : "Results Total Variation",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsGrrPctTolerance",
+                    "title" : "Results GRR Pct Tolerance",
+                    "width" : "220px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsGrrPctStudyVariation",
+                    "title" : "Results GRR Pct Study Variation",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsNdc",
+                    "title" : "Results Ndc",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsBiasValue",
+                    "title" : "Results Bias Value",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "resultsKappa",
+                    "title" : "Results Kappa",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "conclusion",
+                    "title" : "Conclusion",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "actionRequired",
+                    "isBool" : true,
+                    "title" : "Action Required",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "conductedBy",
+                    "title" : "Conducted By",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "approvedBy",
+                    "title" : "Approved By",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "approvedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Approved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "nextStudyDueAt",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Next Study Due At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "MSA Studies",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_msaStudyStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_msaStudyStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1192000000000001",
+            "recordNo" : "MSA-2026-0009",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "gaugeId" : "1189000000000001",
+            "gaugeName" : "Ultrasonic thickness gauge 1-25 mm",
+            "characteristicId" : "1138000000000001",
+            "characteristicName" : "Casting wall thickness at bridge",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "studyType" : "Gauge R and R",
+            "studyMethod" : "ANOVA",
+            "studyDate" : ISODate("2026-04-02T00:00:00.000+0000"),
+            "partsCount" : NumberInt(10),
+            "trialsCount" : NumberInt(3),
+            "resultsEquipmentVariation" : 0.0031,
+            "resultsAppraiserVariation" : 0.0012,
+            "resultsGrr" : 0.0033,
+            "resultsPartVariation" : 0.0408,
+            "resultsTotalVariation" : 0.0409,
+            "resultsGrrPctTolerance" : 7.2,
+            "resultsGrrPctStudyVariation" : 8.1,
+            "resultsNdc" : 17,
+            "resultsBiasValue" : null,
+            "resultsKappa" : null,
+            "conclusion" : "Acceptable",
+            "actionRequired" : false,
+            "conductedById" : "1029000000000004",
+            "conductedBy" : "Anita Kulkarni",
+            "approvedById" : null,
+            "approvedBy" : null,
+            "approvedAt" : null,
+            "nextStudyDueAt" : ISODate("2026-10-06T00:00:00.000+0000"),
+            "status" : "Planned",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "createdById" : "1029000000000004",
+            "createdBy" : "Anita Kulkarni",
+            "updatedAt" : ISODate("2026-09-15T06:00:00.000+0000"),
+            "updatedById" : "1029000000000004",
+            "updatedBy" : "Anita Kulkarni"
+        }
+    ]
+}

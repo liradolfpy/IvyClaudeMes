@@ -1,0 +1,264 @@
+{
+    "_id" : "mes_syst_numberRangeStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "name",
+                    "title" : "Name",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "rangeType",
+                    "title" : "Range Type",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "prefix",
+                    "title" : "Prefix",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "formatMask",
+                    "title" : "Format Mask",
+                    "width" : "200px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "currentValue",
+                    "title" : "Current Value",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "minValue",
+                    "title" : "Min Value",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "maxValue",
+                    "title" : "Max Value",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "incrementBy",
+                    "title" : "Increment By",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "resetPolicy",
+                    "title" : "Reset Policy",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "lastResetAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Last Reset At",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "checkDigitMethod",
+                    "title" : "Check Digit Method",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "warnAtPct",
+                    "title" : "Warn At (%)",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lastIssuedValue",
+                    "title" : "Last Issued Value",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "lastIssuedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Last Issued At",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "exampleValue",
+                    "title" : "Example Value",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Number Ranges",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_syst_numberRangeStable",
+    "lid" : "lid_999",
+    "module" : "syst",
+    "page" : "mes_syst_numberRangeStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1248000000000001",
+            "recordNo" : "SERIAL-FBC-LH",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "name" : "Serial numbers, front caliper LH",
+            "rangeType" : "Serial Number",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "prefix" : "VB",
+            "formatMask" : "VB{YY}{DDD}{SHIFT}{NNNNN}",
+            "currentValue" : NumberLong("184"),
+            "minValue" : NumberLong("1"),
+            "maxValue" : NumberLong("99999"),
+            "incrementById" : "1029000000000001",
+            "incrementBy" : "Sunil Jadhav",
+            "resetPolicy" : "Never",
+            "lastResetAt" : null,
+            "checkDigitMethod" : null,
+            "warnAtPct" : 90.0,
+            "lastIssuedValue" : NumberLong("184"),
+            "lastIssuedAt" : null,
+            "exampleValue" : "VB26272A00184",
+            "status" : "Active",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

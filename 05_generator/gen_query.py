@@ -36,6 +36,7 @@ Usage (from the repository root or anywhere):
   python3 05_generator/gen_query.py plan                 generate every SCREENS entry of module plan
   python3 05_generator/gen_query.py u_mes_plan_lot ...   generate the named collections
   python3 05_generator/gen_query.py --check              run the checklist on every file in PageConfigs
+  python3 05_generator/gen_query.py --cropdown           rebuild query/cropdown_mes.json from the masters named in CROPDOWNS
   python3 05_generator/gen_query.py --digest <module>    one line per collection: kind, type, dates (! required), status,
                                                          enums (value count), Booleans, references with their source
   python3 05_generator/gen_query.py --propose <module>   draft SCREENS entries for collections not yet in query_screens.py
@@ -356,6 +357,7 @@ def write_registry(root, docs):
 def check(root, fields, matrix, inventory_display, mdict):
     qdir = os.path.join(root, "04_reference_data", "ui_controls", "query")
     registry = {d["_id"]: d for d in read_registry(root)}
+    crop = read_cropdowns(root)
     findings, n_files, n_controls = [], 0, 0
     order_rank = {"range": 0, "search": 1, "scope": 2, "shift": 3, "status": 4, "category": 5, "bool": 6}
     for path in sorted(glob.glob(os.path.join(qdir, "PageConfigs", "*.json"))):
@@ -482,6 +484,8 @@ def check(root, fields, matrix, inventory_display, mdict):
             elif api == "/cropdown":
                 if di != "shiftId" or e.get("params") != {"name": "Shift"}:  # 17
                     g("cropdown")
+                elif "Shift" not in crop:                                    # 14
+                    g("cropdown document Shift missing (gen_query.py --cropdown)")
             elif api == "/dd":
                 dn = e.get("params", {}).get("dn")
                 if dn != e.get("sourceParams_dynamic") or e.get("source") != "dynamic" or e.get("sourceParams") != {}:
@@ -530,6 +534,52 @@ def check(root, fields, matrix, inventory_display, mdict):
                 or doc["val"] not in {k for k, t, r in fields[doc["coln"]]["keys"]}:
             findings.append("registry %s: id or val does not match its collection" % dn)
     return n_files, n_controls, len(registry), findings
+
+
+
+# ---------------------------------------------------------------------------
+# Cropdown documents (skill section 3, step 4 row 2; D080)
+# ---------------------------------------------------------------------------
+# A cropdown is a small shared list outside the data model. The MES screens use one: "Shift", whose keys are
+# the shift codes stored in shiftId (F2) and whose texts are the shift master names stored in shiftName.
+# The _id "X007" is the one of the legacy Shift document in cropdown.md, so loading both files leaves one document.
+# Only the production shift codes recorded in transactions are listed (profile 2.1); calendar variants (A-SAT, M1, OT-A ...)
+# stay in the shift master.
+CROPDOWNS = {"Shift": {"_id": "X007", "source": "u_mes_mast_shift", "key": "recordNo", "val": "name",
+                       "keys": ["A", "B", "C", "G"]}}
+
+
+def cropdown_path(root):
+    return os.path.join(root, "04_reference_data", "ui_controls", "query", "cropdown_mes.json")
+
+
+def build_cropdowns(root):
+    docs = []
+    for name, spec in CROPDOWNS.items():
+        sample = glob.glob(os.path.join(root, "03_design", "*", "samples", spec["source"] + ".js"))[0]
+        data = {}
+        for d in parse_shell(re.sub(r'NumberDecimal\("([^"]+)"\)', r'"\1"', open(sample, encoding="utf-8").read())):
+            k, v = d[spec["key"]], d[spec["val"]]
+            if spec.get("keys") and k not in spec["keys"]:
+                continue
+            if data.get(k, v) != v:
+                raise ValueError("%s: key %s has two texts (%s, %s)" % (name, k, data[k], v))
+            data[k] = v
+        if len(data) > MAX_DATA_VALUES:
+            raise ValueError("%s: more than %d values" % (name, MAX_DATA_VALUES))
+        docs.append({"_id": spec["_id"], "name": name, "data": dict(sorted(data.items()))})
+    header = "// MES cropdown documents (collection cropdown); built by gen_query.py --cropdown from the masters named in CROPDOWNS\n"
+    open(cropdown_path(root), "w", encoding="utf-8", newline="\n").write(header + "\n".join(dump(d) for d in docs) + "\n")
+    return docs
+
+
+def read_cropdowns(root):
+    path = cropdown_path(root)
+    if not os.path.exists(path):
+        return {}
+    text = open(path, encoding="utf-8").read()
+    text = "[" + re.sub(r"\}\s*\n\{", "},\n{", "\n".join(l for l in text.splitlines() if not l.startswith("//"))) + "]"
+    return {d["name"]: d for d in json.loads(text)}
 
 
 def refs_target(model, key):
@@ -761,6 +811,10 @@ def main(argv):
                     continue
                 print('    "%s": [%s],%s' % (coll, ", ".join(ctl_src(c) for c in ctl),
                                           ("  # " + "; ".join(notes)) if notes else ""))
+        return 0
+    if argv == ["--cropdown"]:
+        for d in build_cropdowns(root):
+            print("cropdown %s (%s): %s" % (d["name"], d["_id"], ", ".join("%s=%s" % kv for kv in d["data"].items())))
         return 0
     if argv == ["--check"]:
         n, c, r, findings = check(root, fields, matrix, display, mdict)

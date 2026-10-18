@@ -1,0 +1,278 @@
+{
+    "_id" : "mes_qual_riskAssessmentStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "title",
+                    "title" : "Title",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "relatedCollectionName",
+                    "title" : "Related Collection Name",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "relatedEntityName",
+                    "title" : "Related Entity",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "assessmentMethod",
+                    "title" : "Assessment Method",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "scopeText",
+                    "title" : "Scope Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "initialRiskLevel",
+                    "title" : "Initial Risk Level",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "residualRiskLevel",
+                    "title" : "Residual Risk Level",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "riskControlsText",
+                    "title" : "Risk Controls Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "pfmeaName",
+                    "title" : "PFMEA",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "acceptanceDecision",
+                    "title" : "Acceptance Decision",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "approvedBy",
+                    "title" : "Approved By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "approvedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Approved At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "nextReviewDate",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Next Review Date",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Quality Risk Assessments",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_riskAssessmentStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_riskAssessmentStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1361000000000001",
+            "recordNo" : "QRA-2026-021",
+            "app" : "Gamp",
+            "siteId" : "1003000000000011",
+            "siteName" : "Ranjangaon OSD Plant, Pune",
+            "title" : "MES release 2.7.0, validation risk assessment of GMP functions",
+            "relatedCollectionName" : "u_mes_syst_computerisedSystem",
+            "relatedEntityId" : "1344000000000001",
+            "relatedEntityName" : "Manufacturing execution system, Ranjangaon OSD plant",
+            "assessmentMethod" : "Risk Ranking And Filtering",
+            "scopeText" : "New and changed functions of release 2.7.0: signatures, batch record review by exception, release, reconciliation, reports",
+            "initialRiskLevel" : "High",
+            "residualRiskLevel" : "Low",
+            "riskControlsText" : "Scripted testing of signature, release and reconciliation functions; unscripted testing of reports",
+            "pfmeaId" : null,
+            "pfmeaName" : null,
+            "acceptanceDecision" : "Accepted With Controls",
+            "approvedById" : "1029000000000014",
+            "approvedBy" : "Shalini Rao",
+            "approvedAt" : ISODate("2026-08-14T10:00:00.000+0000"),
+            "nextReviewDate" : ISODate("2027-08-14T00:00:00.000+0000"),
+            "status" : "Approved",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-08-14T10:00:00.000+0000"),
+            "createdById" : "1029000000000014",
+            "createdBy" : "Shalini Rao",
+            "updatedAt" : ISODate("2026-08-14T10:00:00.000+0000"),
+            "updatedById" : "1029000000000014",
+            "updatedBy" : "Shalini Rao"
+        }
+    ]
+}

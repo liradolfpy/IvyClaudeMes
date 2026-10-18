@@ -1,0 +1,296 @@
+{
+    "_id" : "mes_mast_siteStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "name",
+                    "title" : "Name",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "enterpriseName",
+                    "title" : "Enterprise",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "siteType",
+                    "title" : "Site Type",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "timezone",
+                    "title" : "Timezone",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "utcOffsetMinutes",
+                    "title" : "Utc Offset (min)",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressLine1",
+                    "title" : "Address Line1",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressLine2",
+                    "title" : "Address Line2",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressCity",
+                    "title" : "Address City",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressDistrict",
+                    "title" : "Address District",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressState",
+                    "title" : "Address State",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressPostalCode",
+                    "title" : "Address Postal Code",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "addressCountryName",
+                    "title" : "Address Country",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "geoLatitude",
+                    "title" : "Geo Latitude",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "geoLongitude",
+                    "title" : "Geo Longitude",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "gstin",
+                    "title" : "Gstin",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "factoryLicenceNo",
+                    "title" : "Factory Licence No",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "erpPlantCode",
+                    "title" : "ERP Plant Code",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "defaultWorkCalendarName",
+                    "title" : "Default Work Calendar",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "currencyName",
+                    "title" : "Currency",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "languageName",
+                    "title" : "Language",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "headcount",
+                    "title" : "Headcount",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Sites",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_mast_siteStable",
+    "lid" : "lid_999",
+    "module" : "mast",
+    "page" : "mes_mast_siteStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1003000000000001",
+            "recordNo" : "PN1",
+            "app" : "Auto",
+            "name" : "Chakan Plant, Pune",
+            "enterpriseId" : "1001000000000001",
+            "enterpriseName" : "Varuna Brake Systems Pvt. Ltd.",
+            "siteType" : "Manufacturing Plant",
+            "timezone" : "Asia/Kolkata",
+            "utcOffsetMinutes" : NumberInt(330),
+            "addressLine1" : "Plot B-14, Chakan MIDC Phase II",
+            "addressLine2" : "Village Khalumbre, Taluka Khed",
+            "addressCity" : "Pune",
+            "addressDistrict" : "Pune",
+            "addressState" : "Maharashtra",
+            "addressPostalCode" : "410501",
+            "addressCountryId" : "1266000000000001",
+            "addressCountryName" : "India",
+            "geoLatitude" : Double(18.7606),
+            "geoLongitude" : Double(73.8636),
+            "gstin" : "27AAACV4521K1Z6",
+            "factoryLicenceNo" : "MH/PUN/2(m)(i)/34300/2011/0871",
+            "erpPlantCode" : "PN01",
+            "defaultWorkCalendarId" : "1018000000000001",
+            "defaultWorkCalendarName" : "Chakan Plant Calendar 2026",
+            "currencyId" : "1265000000000001",
+            "currencyName" : "Indian Rupee",
+            "languageId" : "1267000000000001",
+            "languageName" : "English",
+            "headcount" : NumberInt(412),
+            "status" : "Active",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

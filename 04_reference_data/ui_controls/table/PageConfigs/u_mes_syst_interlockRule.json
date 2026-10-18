@@ -1,0 +1,271 @@
+{
+    "_id" : "mes_syst_interlockRuleStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "name",
+                    "title" : "Name",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "ruleType",
+                    "title" : "Rule Type",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "transactionPoint",
+                    "title" : "Transaction Point",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lineName",
+                    "title" : "Line",
+                    "width" : "270px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "operationName",
+                    "title" : "Operation",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "enforcementMode",
+                    "title" : "Enforcement Mode",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "overrideAllowed",
+                    "isBool" : true,
+                    "title" : "Override Allowed",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "overrideRoleName",
+                    "title" : "Override Role",
+                    "width" : "190px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "overrideRequiresSignature",
+                    "isBool" : true,
+                    "title" : "Override Requires Signature",
+                    "width" : "230px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "overrideRequiresReasonCode",
+                    "isBool" : true,
+                    "title" : "Override Requires Reason Code",
+                    "width" : "250px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "escalationRuleName",
+                    "title" : "Escalation Rule",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "messageText",
+                    "title" : "Message Text",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "validFrom",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Valid From",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "validTo",
+                    "dtFormat" : "YYYY-MM-DD",
+                    "isIST" : true,
+                    "title" : "Valid to",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Interlock Rules",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_syst_interlockRuleStable",
+    "lid" : "lid_999",
+    "module" : "syst",
+    "page" : "mes_syst_interlockRuleStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1332000000000001",
+            "recordNo" : "ILR-HOLD-001",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "name" : "Hold check at operation start",
+            "ruleType" : "Hold Check",
+            "transactionPoint" : "Operation Start",
+            "lineId" : null,
+            "lineName" : null,
+            "workCenterId" : null,
+            "workCenterName" : null,
+            "operationId" : null,
+            "operationName" : null,
+            "itemId" : null,
+            "itemName" : null,
+            "enforcementMode" : "Block",
+            "overrideAllowed" : false,
+            "overrideRoleId" : null,
+            "overrideRoleName" : null,
+            "overrideRequiresSignature" : false,
+            "overrideRequiresReasonCode" : false,
+            "escalationRuleId" : "1334000000000004",
+            "escalationRuleName" : "Interlock block not cleared",
+            "messageText" : "Unit, lot or order is on quality hold; operation not allowed",
+            "validFrom" : ISODate("2026-04-01T00:00:00.000+0000"),
+            "validTo" : null,
+            "status" : "Active",
+            "schemaVersion" : NumberInt(1)
+        }
+    ]
+}

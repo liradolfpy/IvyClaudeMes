@@ -1,0 +1,329 @@
+{
+    "_id" : "mes_matl_materialRequestStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "requestedQuantity",
+                    "title" : "Requested Quantity",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "deliveredQuantity",
+                    "title" : "Delivered Quantity",
+                    "width" : "170px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "unitOfMeasureName",
+                    "title" : "Unit of Measure",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "requestType",
+                    "title" : "Request Type",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "triggerSource",
+                    "title" : "Trigger Source",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "requestedBy",
+                    "title" : "Requested By",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "requestedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Requested At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "fromLocationName",
+                    "title" : "From Location",
+                    "width" : "220px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "toLocationName",
+                    "title" : "To Location",
+                    "width" : "260px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "priority",
+                    "title" : "Priority",
+                    "width" : "100px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "acknowledgedBy",
+                    "title" : "Acknowledged By",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "acknowledgedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Acknowledged At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "deliveredAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Delivered At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "responseMinutes",
+                    "title" : "Response (min)",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "andonEventName",
+                    "title" : "Andon Event",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lotName",
+                    "title" : "Lot",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "replenishmentRuleName",
+                    "title" : "Replenishment Rule",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Material Requests",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_matl_materialRequestStable",
+    "lid" : "lid_999",
+    "module" : "matl",
+    "page" : "mes_matl_materialRequestStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1120000000000001",
+            "recordNo" : "MRQ-2026-000445",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "requestedQuantity" : 500,
+            "deliveredQuantity" : 500,
+            "unitOfMeasureId" : "1042000000000001",
+            "unitOfMeasureName" : "Each",
+            "requestType" : "Kanban",
+            "triggerSource" : "Minimum Level Sensor",
+            "requestedById" : "1029000000000008",
+            "requestedBy" : "Vikram Pawar",
+            "requestedAt" : ISODate("2026-09-17T06:52:50.000+0000"),
+            "fromLocationId" : "1112000000000001",
+            "fromLocationName" : "Raw material yard, ingot bay",
+            "toLocationId" : "1112000000000004",
+            "toLocationName" : "Line-side store, foundry",
+            "priority" : "Normal",
+            "acknowledgedById" : null,
+            "acknowledgedBy" : null,
+            "acknowledgedAt" : null,
+            "deliveredAt" : null,
+            "responseMinutes" : NumberInt(6),
+            "andonEventId" : null,
+            "andonEventName" : null,
+            "lotId" : "1096000000000001",
+            "lotName" : "L260915-GDC-014",
+            "replenishmentRuleId" : null,
+            "replenishmentRuleName" : null,
+            "status" : "Raised",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-17T06:52:20.000+0000"),
+            "createdById" : "1029000000000008",
+            "createdBy" : "Vikram Pawar",
+            "updatedAt" : ISODate("2026-09-17T06:52:50.000+0000"),
+            "updatedById" : "1029000000000008",
+            "updatedBy" : "Vikram Pawar"
+        }
+    ]
+}

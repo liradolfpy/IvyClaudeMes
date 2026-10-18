@@ -1,0 +1,452 @@
+{
+    "_id" : "mes_qual_inspectionResultStable",
+    "act" : true,
+    "app" : "mes",
+    "dictData" : {
+        "config" : {
+            "action" : {},
+            "column" : [
+                {
+                    "align" : "left",
+                    "data_index" : "recordNo",
+                    "fixed" : "left",
+                    "title" : "Record No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "inspectionPlanName",
+                    "title" : "Inspection Plan",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "planLineNo",
+                    "title" : "Plan Line No",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "characteristicName",
+                    "title" : "Characteristic",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "itemName",
+                    "title" : "Item",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "wipUnitName",
+                    "title" : "WIP Unit",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "lotName",
+                    "title" : "Lot",
+                    "width" : "130px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "goodsReceiptName",
+                    "title" : "Goods Receipt",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "operationExecutionName",
+                    "title" : "Operation Execution",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "operationName",
+                    "title" : "Operation",
+                    "width" : "240px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "workCenterName",
+                    "title" : "Work Center",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "inspectionType",
+                    "title" : "Inspection Type",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "sampleNo",
+                    "title" : "Sample No",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "measuredValue",
+                    "title" : "Measured Value",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "attributeResult",
+                    "title" : "Attribute Result",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "nominal",
+                    "title" : "Nominal",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "lowerSpecLimit",
+                    "title" : "Lower Spec Limit",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "upperSpecLimit",
+                    "title" : "Upper Spec Limit",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "unitOfMeasureName",
+                    "title" : "Unit of Measure",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "deviation",
+                    "title" : "Deviation",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "result",
+                    "title" : "Result",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "gaugeName",
+                    "title" : "Gauge",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "measuredBy",
+                    "title" : "Measured By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "measuredAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Measured At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "source",
+                    "title" : "Source",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "defectCodeName",
+                    "title" : "Defect Code",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "nonconformanceName",
+                    "title" : "Nonconformance",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "overridden",
+                    "isBool" : true,
+                    "title" : "Overridden",
+                    "width" : "110px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "remarks",
+                    "title" : "Remarks",
+                    "width" : "300px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "positionNo",
+                    "title" : "Position No",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "positionName",
+                    "title" : "Position Name",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "imageControlledDocumentName",
+                    "title" : "Image Controlled Document",
+                    "width" : "220px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "measurementCurveName",
+                    "title" : "Measurement Curve",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "analyticsModelName",
+                    "title" : "Analytics Model",
+                    "width" : "150px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "modelVersion",
+                    "title" : "Model Version",
+                    "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "modelClass",
+                    "title" : "Model Class",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "right",
+                    "data_index" : "modelConfidence",
+                    "title" : "Model Confidence",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "status",
+                    "title" : "Status",
+                    "width" : "90px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "createdBy",
+                    "title" : "Created By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "createdAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Created At",
+                    "width" : "160px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "updatedBy",
+                    "title" : "Updated By",
+                    "width" : "120px"
+                },
+                {
+                    "align" : "center",
+                    "data_index" : "updatedAt",
+                    "dtFormat" : "YYYY-MM-DD HH:mm:SS",
+                    "isIST" : true,
+                    "title" : "Updated At",
+                    "width" : "160px"
+                }
+            ],
+            "footer" : {
+                "background" : "linear-gradient(180deg, #071ec9 15%, #000080 70%)",
+                "display-pagination-control" : true,
+                "font-color" : "#D0E2FF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "bold",
+                "noOfRows-visible" : true,
+                "pageNo-visible" : true,
+                "pagination-background-color" : "#04179b",
+                "pagination-border" : "1px solid #244ce4",
+                "pagination-color" : "#E5F6FF",
+                "pagination-visible" : true,
+                "row-padding" : "0px",
+                "visible" : true
+            },
+            "footerButtons" : {},
+            "footerMultiline" : {
+                "background-color" : "#6F7786",
+                "multiCol" : []
+            },
+            "header" : {
+                "background-color" : "#2E3E4E",
+                "font-color" : "#125FCC",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 2px",
+                "visible" : true
+            },
+            "headerMultiline" : {},
+            "row" : {
+                "alternateRows" : [
+                    "stable-row-1",
+                    "stable-row-2"
+                ],
+                "background-color" : "#FFFFFF",
+                "border-bottom" : "none",
+                "border-bottom-color" : "#DCD5D5",
+                "border-top-color" : "#E74C3C",
+                "font-color" : "#000000",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "12px",
+                "font-weight" : "100",
+                "row-padding" : "0px 0px 0px 5px"
+            },
+            "rowAction" : [],
+            "tableConfig" : {
+                "divAlignment" : "left",
+                "divBackgroundColor" : [
+                    "transparent",
+                    "transparent"
+                ],
+                "exportToCsv" : true,
+                "exportToPdf" : false,
+                "innerLeftPadding" : "15px",
+                "innerRightPadding" : "15px",
+                "interval" : NumberInt(3000000),
+                "isCheckable" : false,
+                "isSearchable" : true,
+                "isSortable" : true,
+                "leftMargin" : "0px",
+                "line-color" : "#2ECC71",
+                "noOfRows" : NumberInt(10),
+                "pagination" : NumberInt(8),
+                "tableWidth" : "80%",
+                "visible" : true
+            },
+            "tableSubTitle" : {
+                "background" : "linear-gradient(90deg, #244ce4 30%, #000080 70%)",
+                "display-download-icon" : true,
+                "display-search-control" : true,
+                "download-icon-color" : "#0F62FE",
+                "font-color" : "#FFFFFF",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "16px",
+                "font-weight" : "400",
+                "search-border-color" : "1px solid #244ce4",
+                "search-inner-color" : "#04179b",
+                "title-icon" : "fa-list",
+                "title-icon-color" : "#FFFFFF",
+                "title-icon-size" : "16px",
+                "title-label" : "Inspection Results",
+                "visible" : true
+            },
+            "tableTitle" : {
+                "font-color" : "#B1B1B5",
+                "font-family" : "Roboto Condensed",
+                "font-size" : "30px",
+                "font-weight" : "600",
+                "title-label" : "",
+                "visible" : false
+            },
+            "zenFuncs" : {
+                "dynamicActionBtn" : true,
+                "footerButtons" : true,
+                "footerMultiline" : true,
+                "headerMultiline" : false
+            },
+            "zenPop" : {}
+        }
+    },
+    "dictName" : "mes_qual_inspectionResultStable",
+    "lid" : "lid_999",
+    "module" : "qual",
+    "page" : "mes_qual_inspectionResultStable",
+    "projid" : "",
+    "rel" : "CL20261018-23:51",
+    "resp" : "CL",
+    "subTyp" : "",
+    "typ" : "PageConfigStable",
+    "ver" : "",
+    "clmnDoc" : [
+        {
+            "_id" : "1150000000000001",
+            "recordNo" : "IR-2026-000162",
+            "app" : "Auto",
+            "siteId" : "1003000000000001",
+            "siteName" : "Chakan Plant, Pune",
+            "inspectionPlanId" : "1142000000000001",
+            "inspectionPlanName" : "In-process inspection, gravity die casting",
+            "planLineNo" : NumberInt(10),
+            "characteristicId" : "1138000000000001",
+            "characteristicName" : "Casting wall thickness at bridge",
+            "itemId" : "1043000000000004",
+            "itemName" : "Caliper Body Casting, LH, T6",
+            "wipUnitId" : null,
+            "wipUnitName" : null,
+            "lotId" : "1096000000000001",
+            "lotName" : "L260915-GDC-014",
+            "goodsReceiptId" : null,
+            "goodsReceiptName" : null,
+            "operationExecutionId" : "1090000000000001",
+            "operationExecutionName" : "OPX-2026-000376",
+            "operationId" : "1051000000000001",
+            "operationName" : "Gravity die casting",
+            "workCenterId" : "1009000000000001",
+            "workCenterName" : "Gravity Die Casting Cell 1",
+            "inspectionType" : "In Process",
+            "sampleNo" : NumberInt(3),
+            "measuredValue" : 8.05,
+            "attributeResult" : null,
+            "nominal" : 8.00,
+            "lowerSpecLimit" : 7.50,
+            "upperSpecLimit" : 8.50,
+            "unitOfMeasureId" : "1042000000000003",
+            "unitOfMeasureName" : "Millimetre",
+            "deviation" : 0.05,
+            "result" : "OK",
+            "gaugeId" : "1189000000000001",
+            "gaugeName" : "Ultrasonic thickness gauge 1-25 mm",
+            "measuredById" : "1029000000000004",
+            "measuredBy" : "Anita Kulkarni",
+            "measuredAt" : ISODate("2026-09-17T06:52:50.000+0000"),
+            "source" : "MES Terminal",
+            "defectCodeId" : null,
+            "defectCodeName" : null,
+            "nonconformanceId" : null,
+            "nonconformanceName" : null,
+            "overridden" : false,
+            "remarks" : "No abnormality observed",
+            "positionNo" : NumberInt(1),
+            "positionName" : "Bridge, left of centre",
+            "imageControlledDocumentId" : null,
+            "imageControlledDocumentName" : null,
+            "measurementCurveId" : null,
+            "measurementCurveName" : null,
+            "analyticsModelId" : null,
+            "analyticsModelName" : null,
+            "modelVersion" : null,
+            "modelClass" : null,
+            "modelConfidence" : null,
+            "status" : "Recorded",
+            "schemaVersion" : NumberInt(1),
+            "createdAt" : ISODate("2026-09-17T06:52:20.000+0000"),
+            "createdById" : "1029000000000004",
+            "createdBy" : "Anita Kulkarni",
+            "updatedAt" : ISODate("2026-09-17T06:52:50.000+0000"),
+            "updatedById" : "1029000000000004",
+            "updatedBy" : "Anita Kulkarni"
+        }
+    ]
+}
