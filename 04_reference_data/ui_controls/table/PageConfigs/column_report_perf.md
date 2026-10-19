@@ -1,6 +1,6 @@
 ## u_mes_perf_alarm - Alarms (Telemetry)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_alarm.json | _id: mes_perf_alarmStable | rel: CL20261018-22:43 | samples: 10 | columns: 35 | total width: 5880px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_alarm.json | _id: mes_perf_alarmStable | rel: CL20261019-12:24 | samples: 10 | columns: 36 | total width: 6160px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -34,11 +34,12 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_alarm.json | _i
 | 28 | restartAuthorizedAt | Restart Authorized At | Date/Datetime | 19 | 190px | center |
 | 29 | closureReasonCodeName | Closure Reason Code | String | 25 | 200px | left |
 | 30 | escalationLevel | Escalation Level | Int32 | 1 | 160px | right |
-| 31 | status | Status | String | 12 | 110px | left |
-| 32 | createdBy | Created By | String | 10 | 110px | left |
-| 33 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 34 | updatedBy | Updated By | String | 10 | 110px | left |
-| 35 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 31 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 32 | status | Status | String | 12 | 110px | left |
+| 33 | createdBy | Created By | String | 10 | 110px | left |
+| 34 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 35 | updatedBy | Updated By | String | 10 | 110px | left |
+| 36 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); equipmentId (reference key, shown through equipmentName); processTagId (reference key, shown through processTagName); iotDeviceId (reference key, shown through iotDeviceName); acknowledgedById (reference key, shown through acknowledgedBy); productionOrderId (reference key, shown through productionOrderName); downtimeEventId (reference key, shown through downtimeEventName); alarmDefinitionId (reference key, shown through alarmDefinitionName); lineId (reference key, shown through lineName); workCenterId (reference key, shown through workCenterName); shiftId (reference key, shown through shiftName); wipUnitId (reference key, shown through wipUnitName); restartAuthorizedById (reference key, shown through restartAuthorizedBy); closureReasonCodeId (reference key, shown through closureReasonCodeName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
@@ -131,7 +132,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_perf_energyReading - Energy Readings (Telemetry)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_energyReading.json | _id: mes_perf_energyReadingStable | rel: CL20261018-23:51 | samples: 10 | columns: 22 | total width: 3400px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_energyReading.json | _id: mes_perf_energyReadingStable | rel: CL20261019-12:24 | samples: 10 | columns: 23 | total width: 3680px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -153,10 +154,11 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_energyReading.j
 | 16 | unitsProduced | Units Produced | Int32 | 3 | 140px | right |
 | 17 | specificConsumption | Specific Consumption | Decimal128 | 6 | 180px | right |
 | 18 | signalQuality | Signal Quality | String | 9 | 140px | left |
-| 19 | createdBy | Created By | String | 10 | 110px | left |
-| 20 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 21 | updatedBy | Updated By | String | 10 | 110px | left |
-| 22 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 19 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 20 | createdBy | Created By | String | 10 | 110px | left |
+| 21 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 22 | updatedBy | Updated By | String | 10 | 110px | left |
+| 23 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); meterIotDeviceId (reference key, shown through meterIotDeviceName); equipmentId (reference key, shown through equipmentName); lineId (reference key, shown through lineName); shiftId (reference key, shown through shiftName); energyTypeId (reference key, shown through energyTypeName); unitOfMeasureId (reference key, shown through unitOfMeasureName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
@@ -177,7 +179,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_perf_equipmentState - Equipment States (Telemetry)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_equipmentState.json | _id: mes_perf_equipmentStateStable | rel: CL20261018-23:51 | samples: 10 | columns: 19 | total width: 2740px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_equipmentState.json | _id: mes_perf_equipmentStateStable | rel: CL20261019-12:24 | samples: 10 | columns: 20 | total width: 3000px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -192,20 +194,21 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_equipmentState.
 | 9 | productionOrderName | Production Order | String | 10 | 160px | left |
 | 10 | shiftName | Shift | String | 7 | 80px | left |
 | 11 | productionDate | Production Date | Date/Date | 10 | 150px | center |
-| 12 | source | Source | String | 12 | 110px | left |
+| 12 | source | Source | String | 3 | 90px | left |
 | 13 | plcStateCode | PLC State Code | String | 1 | 140px | left |
 | 14 | downtimeEventName | Downtime Event | String | 14 | 140px | left |
-| 15 | status | Status | String | 6 | 90px | left |
-| 16 | createdBy | Created By | String | 10 | 110px | left |
-| 17 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 18 | updatedBy | Updated By | String | 10 | 110px | left |
-| 19 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 15 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 16 | status | Status | String | 6 | 90px | left |
+| 17 | createdBy | Created By | String | 10 | 110px | left |
+| 18 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 19 | updatedBy | Updated By | String | 10 | 110px | left |
+| 20 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); equipmentId (reference key, shown through equipmentName); workCenterId (reference key, shown through workCenterName); productionOrderId (reference key, shown through productionOrderName); shiftId (reference key, shown through shiftName); downtimeEventId (reference key, shown through downtimeEventName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
 ## u_mes_perf_leakTestResult - Leak Test Results (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_leakTestResult.json | _id: mes_perf_leakTestResultStable | rel: CL20261018-23:51 | samples: 20 | columns: 23 | total width: 4040px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_leakTestResult.json | _id: mes_perf_leakTestResultStable | rel: CL20261019-12:24 | samples: 20 | columns: 24 | total width: 4320px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -227,11 +230,12 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_leakTestResult.
 | 16 | failureReason | Failure Reason | String | 91 | 300px | left |
 | 17 | testedAt | Tested At | Date/Datetime | 19 | 160px | center |
 | 18 | measurementCurveName | Measurement Curve | String | 18 | 160px | left |
-| 19 | status | Status | String | 8 | 90px | left |
-| 20 | createdBy | Created By | String | 18 | 150px | left |
-| 21 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 22 | updatedBy | Updated By | String | 18 | 150px | left |
-| 23 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 19 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 20 | status | Status | String | 8 | 90px | left |
+| 21 | createdBy | Created By | String | 18 | 150px | left |
+| 22 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 23 | updatedBy | Updated By | String | 18 | 150px | left |
+| 24 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); wipUnitId (reference key, shown through wipUnitName); operationExecutionId (reference key, shown through operationExecutionName); equipmentId (reference key, shown through equipmentName); recipeId (reference key, shown through recipeName); testerIotDeviceId (reference key, shown through testerIotDeviceName); operatorUserId (reference key, shown through operatorUserName); fixtureToolId (reference key, shown through fixtureToolName); measurementCurveId (reference key, shown through measurementCurveName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
@@ -398,7 +402,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_perf_processReading - Process Readings (Telemetry)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_processReading.json | _id: mes_perf_processReadingStable | rel: CL20261018-23:51 | samples: 20 | columns: 17 | total width: 2700px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_processReading.json | _id: mes_perf_processReadingStable | rel: CL20261019-12:24 | samples: 20 | columns: 18 | total width: 2980px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -415,10 +419,11 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_processReading.
 | 11 | areaName | Area | String | 22 | 180px | left |
 | 12 | shiftName | Shift | String | 7 | 80px | left |
 | 13 | productionDate | Production Date | Date/Date | 10 | 150px | center |
-| 14 | createdBy | Created By | String | 18 | 150px | left |
-| 15 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 16 | updatedBy | Updated By | String | 18 | 150px | left |
-| 17 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 14 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 15 | createdBy | Created By | String | 18 | 150px | left |
+| 16 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 17 | updatedBy | Updated By | String | 18 | 150px | left |
+| 18 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); processTagId (reference key, shown through processTagName); equipmentId (reference key, shown through equipmentName); productionOrderId (reference key, shown through productionOrderName); lotId (reference key, shown through lotName); areaId (reference key, shown through areaName); shiftId (reference key, shown through shiftName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
@@ -531,7 +536,7 @@ No non-null sample value (width from title only): parentReasonCodeName
 
 ## u_mes_perf_torqueResult - Torque Results (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_torqueResult.json | _id: mes_perf_torqueResultStable | rel: CL20261018-23:51 | samples: 20 | columns: 35 | total width: 6120px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_torqueResult.json | _id: mes_perf_torqueResultStable | rel: CL20261019-12:24 | samples: 20 | columns: 36 | total width: 6400px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -565,11 +570,12 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_perf_torqueResult.js
 | 28 | curveEnvelopeName | Curve Envelope | String | 67 | 300px | left |
 | 29 | measurementCurveName | Measurement Curve | String | 18 | 160px | left |
 | 30 | envelopeResult | Envelope Result | String | 3 | 150px | left |
-| 31 | status | Status | String | 8 | 90px | left |
-| 32 | createdBy | Created By | String | 18 | 150px | left |
-| 33 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 34 | updatedBy | Updated By | String | 18 | 150px | left |
-| 35 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 31 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 32 | status | Status | String | 8 | 90px | left |
+| 33 | createdBy | Created By | String | 18 | 150px | left |
+| 34 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 35 | updatedBy | Updated By | String | 18 | 150px | left |
+| 36 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); wipUnitId (reference key, shown through wipUnitName); operationExecutionId (reference key, shown through operationExecutionName); equipmentId (reference key, shown through equipmentName); toolId (reference key, shown through toolName); recipeId (reference key, shown through recipeName); controllerIotDeviceId (reference key, shown through controllerIotDeviceName); operatorUserId (reference key, shown through operatorUserName); curveControlledDocumentId (reference key, shown through curveControlledDocumentName); curveEnvelopeId (reference key, shown through curveEnvelopeName); measurementCurveId (reference key, shown through measurementCurveName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 

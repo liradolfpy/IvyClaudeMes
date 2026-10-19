@@ -503,7 +503,7 @@ No non-null sample value (width from title only): validTo
 
 ## u_mes_syst_iotDevice - IoT Devices (Master)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_iotDevice.json | _id: mes_syst_iotDeviceStable | rel: CL20261018-23:51 | samples: 20 | columns: 22 | total width: 3740px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_iotDevice.json | _id: mes_syst_iotDeviceStable | rel: CL20261019-12:24 | samples: 20 | columns: 23 | total width: 3950px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -528,11 +528,40 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_iotDevice.json 
 | 19 | connectionStatus | Connection Status | String | 7 | 160px | left |
 | 20 | certificateExpiresAt | Certificate Expires At | Date/Date | 10 | 200px | center |
 | 21 | installedAt | Installed At | Date/Datetime | 19 | 160px | center |
-| 22 | status | Status | String | 6 | 90px | left |
+| 22 | edgeGatewayIotDeviceName | Edge Gateway IoT Device | String | 0 | 210px | left |
+| 23 | status | Status | String | 6 | 90px | left |
 
-Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); deviceTypeId (reference key, shown through deviceTypeName); manufacturerId (reference key, shown through manufacturerName); equipmentId (reference key, shown through equipmentName); workCenterId (reference key, shown through workCenterName); integrationConnectorId (reference key, shown through integrationConnectorName); schemaVersion (excluded key (identifier, site, app or schema))
+Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); deviceTypeId (reference key, shown through deviceTypeName); manufacturerId (reference key, shown through manufacturerName); equipmentId (reference key, shown through equipmentName); workCenterId (reference key, shown through workCenterName); integrationConnectorId (reference key, shown through integrationConnectorName); edgeGatewayIotDeviceId (reference key, shown through edgeGatewayIotDeviceName); schemaVersion (excluded key (identifier, site, app or schema))
 
-No non-null sample value (width from title only): lastSeenAt
+No non-null sample value (width from title only): lastSeenAt, edgeGatewayIotDeviceName
+
+## u_mes_syst_iotHubIdentity - IoT Hub Identities (Master)
+
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_iotHubIdentity.json | _id: mes_syst_iotHubIdentityStable | rel: CL20261019-12:24 | samples: 10 | columns: 17 | total width: 3350px
+
+| # | data_index | title | type | longest sample | width | align |
+|---|---|---|---|---|---|---|
+| 1 | recordNo | Record No | String | 14 | 120px | left |
+| 2 | name | Name | String | 46 | 300px | left |
+| 3 | identityType | Identity Type | String | 16 | 140px | left |
+| 4 | iotHubName | IoT Hub Name | String | 14 | 130px | left |
+| 5 | equipmentName | Equipment | String | 31 | 240px | left |
+| 6 | iotDeviceName | IoT Device | String | 38 | 290px | left |
+| 7 | parentIotHubIdentityName | Parent IoT Hub Identity | String | 46 | 300px | left |
+| 8 | authenticationMethod | Authentication Method | String | 15 | 190px | left |
+| 9 | certificateThumbprint | Certificate Thumbprint | String | 40 | 300px | left |
+| 10 | certificateExpiresAt | Certificate Expires At | Date/Date | 10 | 200px | center |
+| 11 | provisioningStatus | Provisioning Status | String | 11 | 180px | left |
+| 12 | lastRegistrySyncAt | Last Registry Sync At | Date/Datetime | 19 | 190px | center |
+| 13 | twinTagsVersion | Twin Tags Version | Int32 | 1 | 160px | right |
+| 14 | lastSyncErrorText | Last Sync Error Text | String | 0 | 180px | left |
+| 15 | connectionState | Connection State | String | 12 | 160px | left |
+| 16 | connectionStateAt | Connection State At | Date/Datetime | 19 | 180px | center |
+| 17 | status | Status | String | 6 | 90px | left |
+
+Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); equipmentId (reference key, shown through equipmentName); iotDeviceId (reference key, shown through iotDeviceName); parentIotHubIdentityId (reference key, shown through parentIotHubIdentityName); schemaVersion (excluded key (identifier, site, app or schema))
+
+No non-null sample value (width from title only): lastSyncErrorText
 
 ## u_mes_syst_modelPrediction - Model Predictions (Transaction)
 
@@ -996,6 +1025,61 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_systemValidatio
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); computerisedSystemId (reference key, shown through computerisedSystemName); engineeringChangeId (reference key, shown through engineeringChangeName); riskAssessmentId (reference key, shown through riskAssessmentName); protocolControlledDocumentId (reference key, shown through protocolControlledDocumentName); reportControlledDocumentId (reference key, shown through reportControlledDocumentName); approvedById (reference key, shown through approvedBy); electronicSignatureId (reference key, shown through electronicSignatureName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
 No non-null sample value (width from title only): protocolControlledDocumentName, reportControlledDocumentName, electronicSignatureName
+
+## u_mes_syst_unsMessageType - UNS Message Types (Master)
+
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_unsMessageType.json | _id: mes_syst_unsMessageTypeStable | rel: CL20261019-12:24 | samples: 10 | columns: 15 | total width: 2660px
+
+| # | data_index | title | type | longest sample | width | align |
+|---|---|---|---|---|---|---|
+| 1 | recordNo | Record No | String | 22 | 180px | left |
+| 2 | name | Name | String | 19 | 160px | left |
+| 3 | description | Description | String | 117 | 300px | left |
+| 4 | unsNamespace | Uns Namespace | String | 4 | 140px | left |
+| 5 | messageTypeCode | Message Type Code | String | 18 | 160px | left |
+| 6 | payloadSchemaName | Payload Schema Name | String | 26 | 210px | left |
+| 7 | payloadSchemaVersion | Payload Schema Version | Int32 | 1 | 200px | right |
+| 8 | messageClass | Message Class | String | 11 | 140px | left |
+| 9 | hierarchyLevel | Hierarchy Level | String | 11 | 150px | left |
+| 10 | senderType | Sender Type | String | 16 | 140px | left |
+| 11 | targetCollectionName | Target Collection Name | String | 27 | 210px | left |
+| 12 | twinPropertyPath | Twin Property Path | String | 32 | 250px | left |
+| 13 | ingestedByMes | Ingested By Mes | Boolean | 3 | 150px | center |
+| 14 | routedToDataLake | Routed to Data Lake | Boolean | 3 | 180px | center |
+| 15 | status | Status | String | 6 | 90px | left |
+
+Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); schemaVersion (excluded key (identifier, site, app or schema))
+
+## u_mes_syst_unsRejectedMessage - UNS Rejected Messages (Transaction)
+
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_syst_unsRejectedMessage.json | _id: mes_syst_unsRejectedMessageStable | rel: CL20261019-12:24 | samples: 10 | columns: 22 | total width: 4480px
+
+| # | data_index | title | type | longest sample | width | align |
+|---|---|---|---|---|---|---|
+| 1 | recordNo | Record No | String | 18 | 150px | left |
+| 2 | messageUuid | Message Uuid | String | 36 | 280px | left |
+| 3 | iotHubIdentityName | IoT Hub Identity | String | 31 | 240px | left |
+| 4 | unsMessageTypeName | Uns Message Type | String | 17 | 160px | left |
+| 5 | equipmentName | Equipment | String | 31 | 240px | left |
+| 6 | isa95Path | Isa95 Path | String | 35 | 270px | left |
+| 7 | payloadSchemaName | Payload Schema Name | String | 28 | 220px | left |
+| 8 | messageTimestamp | Message Timestamp | Date/Datetime | 19 | 160px | center |
+| 9 | receivedAt | Received At | Date/Datetime | 19 | 160px | center |
+| 10 | rejectionReason | Rejection Reason | String | 27 | 210px | left |
+| 11 | rejectionDetailText | Rejection Detail Text | String | 150 | 300px | left |
+| 12 | payloadText | Payload Text | String | 592 | 300px | left |
+| 13 | deadLetterBlobPath | Dead Letter Blob Path | String | 67 | 300px | left |
+| 14 | resolvedBy | Resolved By | String | 12 | 120px | left |
+| 15 | resolvedAt | Resolved At | Date/Datetime | 19 | 160px | center |
+| 16 | resolutionText | Resolution Text | String | 174 | 300px | left |
+| 17 | resentMessageUuid | Resent Message Uuid | String | 36 | 280px | left |
+| 18 | status | Status | String | 9 | 90px | left |
+| 19 | createdBy | Created By | String | 10 | 110px | left |
+| 20 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 21 | updatedBy | Updated By | String | 12 | 110px | left |
+| 22 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+
+Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); iotHubIdentityId (reference key, shown through iotHubIdentityName); unsMessageTypeId (reference key, shown through unsMessageTypeName); equipmentId (reference key, shown through equipmentName); resolvedById (reference key, shown through resolvedBy); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
 ## u_mes_syst_userAccessReview - User Access Reviews (Transaction)
 

@@ -121,6 +121,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "90px"
@@ -261,7 +267,7 @@
     "module" : "perf",
     "page" : "mes_perf_leakTestResultStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -298,6 +304,7 @@
             "testedAt" : ISODate("2026-09-18T15:11:33.000+0000"),
             "measurementCurveId" : "1319000000000007",
             "measurementCurveName" : "CRV-20260918-01882",
+            "sourceMessageUuid" : "a3354e57-ef7d-5d57-ae79-712cbc4cff69",
             "status" : "Recorded",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-18T15:11:03.000+0000"),

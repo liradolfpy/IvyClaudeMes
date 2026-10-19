@@ -139,8 +139,10 @@ Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric st
 | 28 | connectionStatus | String | - |  |
 | 29 | certificateExpiresAt | Date | Date |  |
 | 30 | installedAt | Date | Datetime |  |
-| 31 | status | String | - |  |
-| 32 | schemaVersion | Int32 | - |  |
+| 31 | edgeGatewayIotDeviceId | String | - | u_mes_syst_iotDevice._id |
+| 32 | edgeGatewayIotDeviceName | String | - |  |
+| 33 | status | String | - |  |
+| 34 | schemaVersion | Int32 | - |  |
 
 ## u_mes_syst_operatorApp
 
@@ -1311,3 +1313,102 @@ Kind: child | Data class: transaction | Parent: u_mes_syst_userAccessReview | _i
 | 21 | updatedAt | Date | Datetime |  |
 | 22 | updatedById | String | - | u_mes_mast_user._id |
 | 23 | updatedBy | String | - |  |
+
+## u_mes_syst_unsMessageType
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | description | String | - |  |
+| 8 | unsNamespace | String | - |  |
+| 9 | messageTypeCode | String | - |  |
+| 10 | payloadSchemaName | String | - |  |
+| 11 | payloadSchemaVersion | Int32 | - |  |
+| 12 | messageClass | String | - |  |
+| 13 | hierarchyLevel | String | - |  |
+| 14 | senderType | String | - |  |
+| 15 | targetCollectionName | String | - |  |
+| 16 | twinPropertyPath | String | - |  |
+| 17 | ingestedByMes | Boolean | - |  |
+| 18 | routedToDataLake | Boolean | - |  |
+| 19 | status | String | - |  |
+| 20 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_iotHubIdentity
+
+Kind: entity | Data class: master | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | name | String | - |  |
+| 7 | identityType | String | - |  |
+| 8 | iotHubName | String | - |  |
+| 9 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 10 | equipmentName | String | - |  |
+| 11 | iotDeviceId | String | - | u_mes_syst_iotDevice._id |
+| 12 | iotDeviceName | String | - |  |
+| 13 | parentIotHubIdentityId | String | - | u_mes_syst_iotHubIdentity._id |
+| 14 | parentIotHubIdentityName | String | - |  |
+| 15 | authenticationMethod | String | - |  |
+| 16 | certificateThumbprint | String | - |  |
+| 17 | certificateExpiresAt | Date | Date |  |
+| 18 | provisioningStatus | String | - |  |
+| 19 | lastRegistrySyncAt | Date | Datetime |  |
+| 20 | twinTagsVersion | Int32 | - |  |
+| 21 | lastSyncErrorText | String | - |  |
+| 22 | connectionState | String | - |  |
+| 23 | connectionStateAt | Date | Datetime |  |
+| 24 | status | String | - |  |
+| 25 | schemaVersion | Int32 | - |  |
+
+## u_mes_syst_unsRejectedMessage
+
+Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numeric string
+
+| # | Key | BSON type | Date tag | References |
+|---|---|---|---|---|
+| 1 | _id | String | - |  |
+| 2 | recordNo | String | - |  |
+| 3 | app | String | - |  |
+| 4 | siteId | String | - | u_mes_mast_site._id |
+| 5 | siteName | String | - |  |
+| 6 | messageUuid | String | - |  |
+| 7 | iotHubIdentityId | String | - | u_mes_syst_iotHubIdentity._id |
+| 8 | iotHubIdentityName | String | - |  |
+| 9 | unsMessageTypeId | String | - | u_mes_syst_unsMessageType._id |
+| 10 | unsMessageTypeName | String | - |  |
+| 11 | equipmentId | String | - | u_mes_mast_equipment._id |
+| 12 | equipmentName | String | - |  |
+| 13 | isa95Path | String | - |  |
+| 14 | payloadSchemaName | String | - |  |
+| 15 | messageTimestamp | Date | Datetime |  |
+| 16 | receivedAt | Date | Datetime |  |
+| 17 | rejectionReason | String | - |  |
+| 18 | rejectionDetailText | String | - |  |
+| 19 | payloadText | String | - |  |
+| 20 | deadLetterBlobPath | String | - |  |
+| 21 | resolvedById | String | - | u_mes_mast_user._id |
+| 22 | resolvedBy | String | - |  |
+| 23 | resolvedAt | Date | Datetime |  |
+| 24 | resolutionText | String | - |  |
+| 25 | resentMessageUuid | String | - |  |
+| 26 | status | String | - |  |
+| 27 | schemaVersion | Int32 | - |  |
+| 28 | createdAt | Date | Datetime |  |
+| 29 | createdById | String | - | u_mes_mast_user._id |
+| 30 | createdBy | String | - |  |
+| 31 | updatedAt | Date | Datetime |  |
+| 32 | updatedById | String | - | u_mes_mast_user._id |
+| 33 | updatedBy | String | - |  |

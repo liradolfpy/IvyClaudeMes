@@ -52,6 +52,7 @@
         "closureReasonCodeId",
         "closureReasonCodeName",
         "escalationLevel",
+        "sourceMessageUuid",
         "status",
         "schemaVersion",
         "createdAt",
@@ -348,6 +349,13 @@
         "escalationLevel": {
           "bsonType": "int",
           "description": "Escalation level reached (0 = not escalated)"
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "status": {
           "bsonType": "string",

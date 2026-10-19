@@ -1,7 +1,7 @@
 # data_model_register.md
 
 MES on MongoDB - Front Brake Caliper Assembly LH - Pune
-Register version: 2.9 | Date: 12 October 2026 | Database: mes | Model version 2.9 | 12 October 2026 | 369 collections (200 entity, 85 child, 76 relationship, 8 value-list), 8614 keys
+Register version: 3.0 | Date: 19 October 2026 | Database: mes | Model version 3.0 | 19 October 2026 | 372 collections (203 entity, 85 child, 76 relationship, 8 value-list), 8703 keys
 
 This file is the single reference for collection names, identifiers and master IDs. It follows 00_governance/data_modeling_standard.md. Field-level detail: 02_architecture/collection_keys.md and 02_architecture/field_lists. Machine-readable copy: 05_generator/model/flat_model.json.
 
@@ -168,7 +168,7 @@ The registry of every _id, business number and display value in the sample data 
 | 7 | u_mes_plan_productionScheduleSlot | child | transaction | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_plan_productionSchedule | 24 |
 | 8 | u_mes_plan_dispatchList | entity | transaction | 16-digit numeric string | dispatchNo | - | 23 |
 | 9 | u_mes_plan_dispatchListEntry | child | transaction | 16-digit numeric string | parent recordNo + -E<nnn> | u_mes_plan_dispatchList | 29 |
-| 10 | u_mes_plan_operationExecution | entity | transaction | 16-digit numeric string | executionNo | - | 71 |
+| 10 | u_mes_plan_operationExecution | entity | transaction | 16-digit numeric string | executionNo | - | 72 |
 | 11 | u_mes_plan_operationExecutionDefectCode | relationship | transaction | 16-digit numeric string | parent recordNo + -DC<nnn> | u_mes_plan_operationExecution | 17 |
 | 12 | u_mes_plan_operationExecutionTool | relationship | transaction | 16-digit numeric string | parent recordNo + -T<nnn> | u_mes_plan_operationExecution | 17 |
 | 13 | u_mes_plan_stepCompletion | entity | transaction | 16-digit numeric string | completionNo | - | 44 |
@@ -265,7 +265,7 @@ The registry of every _id, business number and display value in the sample data 
 | 10 | u_mes_qual_checkSheetItem | child | master | 16-digit numeric string | parent recordNo + -I<nnn> | u_mes_qual_checkSheet | 17 |
 | 11 | u_mes_qual_checkSheetResult | entity | transaction | 16-digit numeric string | checkResultNo | - | 37 |
 | 12 | u_mes_qual_checkSheetResultAnswer | child | transaction | 16-digit numeric string | parent recordNo + -A<nnn> | u_mes_qual_checkSheetResult | 19 |
-| 13 | u_mes_qual_inspectionResult | entity | transaction | 16-digit numeric string | resultNo | - | 66 |
+| 13 | u_mes_qual_inspectionResult | entity | transaction | 16-digit numeric string | resultNo | - | 67 |
 | 14 | u_mes_qual_spcChart | entity | master | 16-digit numeric string | chartNo | - | 30 |
 | 15 | u_mes_qual_spcChartControlLimit | child | master | 16-digit numeric string | parent recordNo + -CL<nnn> | u_mes_qual_spcChart | 17 |
 | 16 | u_mes_qual_spcChartRule | valueList | master | 16-digit numeric string | parent recordNo + -R<nnn> | u_mes_qual_spcChart | 10 |
@@ -325,7 +325,7 @@ The registry of every _id, business number and display value in the sample data 
 | 70 | u_mes_qual_characteristicPosition | child | master | 16-digit numeric string | parent recordNo + -P<nnn> | u_mes_qual_characteristic | 17 |
 | 71 | u_mes_qual_curveEnvelope | entity | master | 16-digit numeric string | ENV-<characteristic code>-<version>, e.g. ENV-OP060-PISTON-PRESS-02 | - | 32 |
 | 72 | u_mes_qual_curveEnvelopeWindow | child | master | 16-digit numeric string | parent recordNo + -W<nnn> | u_mes_qual_curveEnvelope | 16 |
-| 73 | u_mes_qual_measurementCurve | entity | transaction | 16-digit numeric string | CRV-<yyyymmdd>-<nnnnnn> | - | 39 |
+| 73 | u_mes_qual_measurementCurve | entity | transaction | 16-digit numeric string | CRV-<yyyymmdd>-<nnnnnn> | - | 40 |
 | 74 | u_mes_qual_measurementCurvePoint | entity | transaction | 16-digit numeric string | parent curve recordNo + -<nnnn> | - | 18 |
 | 75 | u_mes_qual_defectRecord | entity | transaction | 16-digit numeric string | DEF-<yyyymmdd>-<nnnnn> | - | 62 |
 | 76 | u_mes_qual_auditSchedule | entity | master | 16-digit numeric string | LPA-<layer>-<line code>-<nn>, e.g. LPA-L2-LN-CAL-01 | - | 30 |
@@ -344,19 +344,19 @@ The registry of every _id, business number and display value in the sample data 
 | # | Collection | Kind | Data class | _id pattern | recordNo holds | Parent collection | Keys |
 |---|---|---|---|---|---|---|---|
 | 1 | u_mes_perf_reasonCode | entity | master | 16-digit numeric string | reasonCode | - | 24 |
-| 2 | u_mes_perf_equipmentState | entity | transaction | 16-digit numeric string | stateEventNo | - | 31 |
+| 2 | u_mes_perf_equipmentState | entity | transaction | 16-digit numeric string | stateEventNo | - | 32 |
 | 3 | u_mes_perf_downtimeEvent | entity | transaction | 16-digit numeric string | downtimeNo | - | 55 |
 | 4 | u_mes_perf_downtimeEventComment | child | transaction | 16-digit numeric string | parent recordNo + -C<nnn> | u_mes_perf_downtimeEvent | 19 |
 | 5 | u_mes_perf_productionCount | entity | transaction | 16-digit numeric string | countNo | - | 35 |
 | 6 | u_mes_perf_oeeRecord | entity | transaction | 16-digit numeric string | oeeRecordNo | - | 43 |
 | 7 | u_mes_perf_oeeRecordLoss | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_perf_oeeRecord | 21 |
 | 8 | u_mes_perf_processTag | entity | master | 16-digit numeric string | tagName | - | 35 |
-| 9 | u_mes_perf_processReading | entity | transaction | 16-digit numeric string | readingNo | - | 30 |
-| 10 | u_mes_perf_alarm | entity | transaction | 16-digit numeric string | alarmNo | - | 55 |
-| 11 | u_mes_perf_torqueResult | entity | transaction | 16-digit numeric string | torqueResultNo | - | 52 |
-| 12 | u_mes_perf_leakTestResult | entity | transaction | 16-digit numeric string | leakTestNo | - | 38 |
+| 9 | u_mes_perf_processReading | entity | transaction | 16-digit numeric string | readingNo | - | 31 |
+| 10 | u_mes_perf_alarm | entity | transaction | 16-digit numeric string | alarmNo | - | 56 |
+| 11 | u_mes_perf_torqueResult | entity | transaction | 16-digit numeric string | torqueResultNo | - | 53 |
+| 12 | u_mes_perf_leakTestResult | entity | transaction | 16-digit numeric string | leakTestNo | - | 39 |
 | 13 | u_mes_perf_leakTestResultStage | child | transaction | 16-digit numeric string | parent recordNo + -S<nnn> | u_mes_perf_leakTestResult | 25 |
-| 14 | u_mes_perf_energyReading | entity | transaction | 16-digit numeric string | energyReadingNo | - | 35 |
+| 14 | u_mes_perf_energyReading | entity | transaction | 16-digit numeric string | energyReadingNo | - | 36 |
 | 15 | u_mes_perf_lossCategory | entity | master | 16-digit numeric string | code | - | 12 |
 | 16 | u_mes_perf_reasonCategory | entity | master | 16-digit numeric string | code | - | 10 |
 | 17 | u_mes_perf_energyType | entity | master | 16-digit numeric string | code | - | 12 |
@@ -398,7 +398,7 @@ The registry of every _id, business number and display value in the sample data 
 | 1 | u_mes_syst_erpMessage | entity | transaction | 16-digit numeric string | messageNo | - | 41 |
 | 2 | u_mes_syst_integrationConnector | entity | master | 16-digit numeric string | connectorCode | - | 23 |
 | 3 | u_mes_syst_integrationConnectorFunction | child | master | 16-digit numeric string | parent recordNo + -F<nnn> | u_mes_syst_integrationConnector | 14 |
-| 4 | u_mes_syst_iotDevice | entity | master | 16-digit numeric string | deviceCode | - | 32 |
+| 4 | u_mes_syst_iotDevice | entity | master | 16-digit numeric string | deviceCode | - | 34 |
 | 5 | u_mes_syst_operatorApp | entity | master | 16-digit numeric string | appCode | - | 18 |
 | 6 | u_mes_syst_operatorAppWorkCenter | relationship | master | 16-digit numeric string | parent recordNo + -WC<nnn> | u_mes_syst_operatorApp | 11 |
 | 7 | u_mes_syst_operatorAppOperation | relationship | master | 16-digit numeric string | parent recordNo + -O<nnn> | u_mes_syst_operatorApp | 11 |
@@ -439,6 +439,9 @@ The registry of every _id, business number and display value in the sample data 
 | 42 | u_mes_syst_auditTrailReview | entity | transaction | 16-digit numeric string | ATR-<yyyymmdd>-<nnn>, e.g. ATR-20260916-004 | - | 32 |
 | 43 | u_mes_syst_userAccessReview | entity | transaction | 16-digit numeric string | UAR-<system code>-<yyyy>-<nn>, e.g. UAR-MES-PN1-2026-03 | - | 26 |
 | 44 | u_mes_syst_userAccessReviewLine | child | transaction | 16-digit numeric string | parent recordNo + -L<nnn> | u_mes_syst_userAccessReview | 23 |
+| 45 | u_mes_syst_unsMessageType | entity | master | 16-digit numeric string | <namespace>.<message type>, e.g. edge.result.tightening | - | 20 |
+| 46 | u_mes_syst_iotHubIdentity | entity | master | 16-digit numeric string | IoT Hub device identity name, e.g. PN1-TRQ-01-N1 | - | 25 |
+| 47 | u_mes_syst_unsRejectedMessage | entity | transaction | 16-digit numeric string | URM-<yyyymmdd>-<nnnnn>, e.g. URM-20260915-00001 | - | 33 |
 
 ### ehs - EnvironmentHealthAndSafety
 
@@ -472,12 +475,13 @@ The registry of every _id, business number and display value in the sample data 
 
 | Version | Date | Change |
 |---|---|---|
+| 3.0 | 19 Oct 2026 | Unified Namespace on Azure IoT Hub, requirement set UNS_01 (D081-D083, design 02_architecture/data_flows/unified_namespace_design.md): new collections u_mes_syst_unsMessageType (1370), u_mes_syst_iotHubIdentity (1371) and u_mes_syst_unsRejectedMessage (1372); key sourceMessageUuid added to u_mes_perf_equipmentState, u_mes_perf_processReading, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_perf_energyReading, u_mes_qual_measurementCurve, u_mes_qual_inspectionResult and u_mes_plan_operationExecution (unique partial index on siteId + sourceMessageUuid, plain index on the two time-series candidates); edgeGatewayIotDeviceId / edgeGatewayIotDeviceName added to u_mes_syst_iotDevice; connectorType value Azure IoT Hub |
 | 2.9 | 17 Oct 2026 | UI configurations of the PlanningAndExecution list screens (D066, D067): 43 query page configurations, 43 IvyConfigs and 18 dynamic dropdown registry documents generated by 05_generator/gen_query.py. No collection, key or ID changes; u_int_mdict and u_int_dynamicDropdown are UI support collections outside this register (deferred item Q21) |
 | 2.9 | 15 Oct 2026 | Module names written in PascalCase without spaces (D061), e.g. ToolingAndMaintenance. No collection, key or ID changes |
 | 2.9 | 15 Oct 2026 | Module maint renamed ToolingAndMaintenance; ampersand removed from all module names (D060). No collection, key or ID changes |
 | 1.0 | 11 Oct 2026 | 104 collections registered (nested model), conventions, seed frame, first master IDs |
 | 1.1 | 11 Oct 2026 | Key list added |
-| 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became 369 collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
+| 2.0 | 11 Oct 2026 | Requirements of 11 Oct applied: u_mes_<moduleCode>_<singular> names, flat documents, ID plus display pairs, recordNo, audit keys on transaction data only, status mapping collections; 104 concepts became 372 collections; operations 11 and items 12 documents confirmed; work centre spelling changed to workCenter |
 | 2.9 | 12 Oct 2026 | Owner decisions on the BMR / MMR designation (D057-D059): u_mes_mmr_masterManufacturingRecord (1367) with the relationship u_mes_mmr_masterManufacturingRecordRecipe (1368), and u_mes_bmr_batchManufacturingRecord (1369) added; line clearance and dispensing stay in plan and matl, audit-trail review stays in syst |
 | 2.8 | 12 Oct 2026 | Modules bmr (BatchManufacturingRecord) and mmr (MasterManufacturingRecord) added on the owner's instruction (D054-D056). Collections unique to the batch manufacturing record moved to bmr with their numbers and _id values unchanged: u_mes_qual_batchRecordReview, u_mes_qual_batchRecordReviewException and u_mes_qual_batchRelease to u_mes_bmr_*, u_mes_plan_yieldReconciliation to u_mes_bmr_yieldReconciliation. No collection is unique to the master manufacturing record, so mmr has no collections yet. Collections shared by BMR / MMR and the rest of the MES are listed in 01_research/BMR_MMR_module_designation.md and were not moved |
 | 2.7 | 12 Oct 2026 | GMP_Pharma_01 implemented (D047-D053): 23 collections added (numbers 1344-1366, existing numbers unchanged), 33 keys added to 11 existing collections (41 keys with display pairs), allowed values extended; computerised system inventory, system validation, periodic review, audit-trail review, user access review, batch record review by exception, batch release, yield and label reconciliation, line clearance, equipment and area logbook, cleaning records, environmental monitoring, dispensing, retention samples, quality risk assessment, product quality review, recalls, process validation, equipment qualification. Analysis: 01_research/GMP_Pharma_01_impact_analysis.md |

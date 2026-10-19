@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 35 (26 required, 9 may be null) |
+| Keys | 36 (26 required, 10 may be null) |
 | Estimated volume per year | ~3.5 million |
 | Storage | time-series (recommended) |
 
@@ -53,13 +53,14 @@ Every key is present in every document. "Required" means the value may not be nu
 | 26 | unitsProduced | Int32 | - | Yes | Units produced | `NumberInt(38)` |  |
 | 27 | specificConsumption | Decimal128 | - | No (null allowed) | Consumption per unit produced | `0.0546` |  |
 | 28 | signalQuality | String | - | Yes | Signal quality | `"Good"` | Good; Uncertain; Bad |
-| 29 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 30 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
-| 31 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 32 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 33 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:15:00.000+0000")` |  |
-| 34 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 35 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 29 | sourceMessageUuid | String | - | No (null allowed) | UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1) | `"0e51bae1-8211-5038-b86a-36f6ee3a4cf0"` |  |
+| 30 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 31 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:00:00.000+0000")` |  |
+| 32 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 33 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 34 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:15:00.000+0000")` |  |
+| 35 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 36 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Indexes
 
@@ -73,6 +74,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 6 | `{ energyTypeId: 1 }` | No | Look-up of documents by energy type |
 | 7 | `{ siteId: 1, intervalStartAt: -1 }` | No | Time-ordered lists and reports by interval start at |
 | 8 | `{ meterIotDeviceId: 1, intervalStartAt: -1 }` | No | Consumption of one meter over time |
+| 9 | `{ sourceMessageUuid: 1 }` | No | Duplicate check of UNS messages; time-series collection, so no unique index (the ingestion service removes duplicates) |
 
 ## Referenced by
 

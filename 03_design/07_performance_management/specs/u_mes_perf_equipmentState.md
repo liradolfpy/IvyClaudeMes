@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 31 (24 required, 7 may be null) |
+| Keys | 32 (24 required, 8 may be null) |
 | Estimated volume per year | ~3 million |
 | Storage | time-series candidate |
 
@@ -44,18 +44,19 @@ Every key is present in every document. "Required" means the value may not be nu
 | 17 | shiftId | String | - | Yes | Reference to u_mes_mast_shift._id | `"1015000000000001"` | Reference: u_mes_mast_shift._id |
 | 18 | shiftName | String | - | Yes | Display value of shiftId, copied from u_mes_mast_shift.name | `"Shift A"` |  |
 | 19 | productionDate | Date | Date | Yes | Production date. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
-| 20 | source | String | - | Yes | Where the record originated | `"MES Terminal"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
+| 20 | source | String | - | Yes | Where the record originated | `"PLC"` | MES Terminal; PLC; Scanner; ERP; Device; Manual Entry |
 | 21 | plcStateCode | String | - | No (null allowed) | PLC state code | `"3"` |  |
 | 22 | downtimeEventId | String | - | No (null allowed) | Reference to u_mes_perf_downtimeEvent._id | `null` | Reference: u_mes_perf_downtimeEvent._id |
 | 23 | downtimeEventName | String | - | No (null allowed) | Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo | `null` |  |
-| 24 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Closed |
-| 25 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 26 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
-| 27 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 28 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 29 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 30 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 31 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 24 | sourceMessageUuid | String | - | No (null allowed) | UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1) | `"1895d8b6-49bf-59b4-b090-e5a45b986932"` |  |
+| 25 | status | String | - | Yes | Primary lifecycle state of the document | `"Open"` | Open; Closed |
+| 26 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 27 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T00:00:00.000+0000")` |  |
+| 28 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 29 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 30 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 31 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 32 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 
@@ -74,6 +75,7 @@ Open, Closed. Initial state: Open. The values are maintained in u_mes_syst_statu
 | 7 | `{ downtimeEventId: 1 }` | No | Look-up of documents by downtime event |
 | 8 | `{ siteId: 1, startedAt: -1 }` | No | Time-ordered lists and reports by started at |
 | 9 | `{ equipmentId: 1, startedAt: -1 }` | No | State history of one equipment |
+| 10 | `{ siteId: 1, sourceMessageUuid: 1 }` | Yes (partial) | A UNS message is stored once; only documents with a message id are indexed (partial index) |
 
 ## Referenced by
 

@@ -35,7 +35,7 @@ Every key is present in every document. "Required" means the value may not be nu
 | 4 | siteId | String | - | Yes | Reference to u_mes_mast_site._id: the site the document belongs to | `"1003000000000001"` | Reference: u_mes_mast_site._id |
 | 5 | siteName | String | - | Yes | Display value of the site, copied from u_mes_mast_site.name | `"Chakan Plant, Pune"` |  |
 | 6 | name | String | - | Yes | Name of the integration connector; used as its display value in other collections | `"ERP production interface"` |  |
-| 7 | connectorType | String | - | Yes | Connector type | `"ERP"` | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway; LIMS; Weighing System; Serialisation Server; Track And Trace Portal; Document Management |
+| 7 | connectorType | String | - | Yes | Connector type | `"ERP"` | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway; LIMS; Weighing System; Serialisation Server; Track And Trace Portal; Document Management; Azure IoT Hub |
 | 8 | targetSystem | String | - | Yes | Target system | `"SAP S/4HANA"` |  |
 | 9 | protocol | String | - | Yes | Protocol of the integration connector | `"HTTPS REST"` | HTTPS REST; OPC UA; Open Protocol; Modbus TCP; MQTT; ZPL Over TCP; SMTP; Serial Over TCP |
 | 10 | endpoint | String | - | Yes | Endpoint of the integration connector | `"https://erp-prd.varunabrakes.example/api/mes"` |  |

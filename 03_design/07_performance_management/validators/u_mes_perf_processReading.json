@@ -28,6 +28,7 @@
         "shiftId",
         "shiftName",
         "productionDate",
+        "sourceMessageUuid",
         "schemaVersion",
         "createdAt",
         "createdById",
@@ -169,6 +170,13 @@
             "null"
           ],
           "description": "Production date of the reading"
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "schemaVersion": {
           "bsonType": "int",

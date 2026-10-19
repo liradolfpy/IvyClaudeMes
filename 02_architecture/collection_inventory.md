@@ -1,6 +1,6 @@
 # Collection inventory
 
-Model version 2.9 | 12 October 2026 | 369 collections (200 entity, 85 child, 76 relationship, 8 value-list), 8614 keys
+Model version 3.0 | 19 October 2026 | 372 collections (203 entity, 85 child, 76 relationship, 8 value-list), 8703 keys
 
 Authority for collection names. Naming: `u_mes_<moduleCode>_<singularCollectionName>`. Each business concept appears once. Data class decides audit keys: transaction collections carry the six audit keys, master collections do not.
 
@@ -18,7 +18,7 @@ Menu = short module name shown as the main (level 0) menu label in the UI (owner
 | qual | QualityManagement | Quality | 85 |
 | perf | PerformanceManagement | Performance | 21 |
 | maint | ToolingAndMaintenance | Maint | 21 |
-| syst | SystemAndIntegration | System | 44 |
+| syst | SystemAndIntegration | System | 47 |
 | ehs | EnvironmentHealthAndSafety | EHS | 6 |
 | bmr | BatchManufacturingRecord | BMR | 5 |
 | mmr | MasterManufacturingRecord | MMR | 2 |
@@ -423,6 +423,9 @@ Menu = short module name shown as the main (level 0) menu label in the UI (owner
 | 42 | u_mes_syst_auditTrailReview | entity | transaction | - | Documented review of the audit-trail entries of a production record, a system or an investigation: period, number of entries, critical entries, anomalies and outcome. | recordNo |
 | 43 | u_mes_syst_userAccessReview | entity | transaction | - | Periodic review of the user accounts and roles of a computerised system, confirming that every account is still needed and has the right authority. | recordNo |
 | 44 | u_mes_syst_userAccessReviewLine | child | transaction | u_mes_syst_userAccessReview | One document per line of a userAccessReview | recordNo |
+| 45 | u_mes_syst_unsMessageType | entity | master | - | Catalogue of the message types carried by the Unified Namespace on Azure IoT Hub: namespace, message type, payload schema and version, message class, the MES collection the ingestion service writes and the device twin property that holds the current state. | name |
+| 46 | u_mes_syst_iotHubIdentity | entity | master | - | One Azure IoT Hub device identity: an equipment identity, an IoT Edge gateway or the MES publisher, with its parent gateway, authentication, certificate, provisioning state, last registry sync and last connection state. | name |
+| 47 | u_mes_syst_unsRejectedMessage | entity | transaction | - | One UNS message that the MES ingestion service could not store, with the reason, the payload as received, the copy in the dead-letter container and how it was resolved (sent again after correction, or discarded). | recordNo |
 
 ## ehs - EnvironmentHealthAndSafety
 

@@ -1034,7 +1034,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_qual_inspectionResult - Inspection Results (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_qual_inspectionResult.json | _id: mes_qual_inspectionResultStable | rel: CL20261018-23:51 | samples: 20 | columns: 42 | total width: 7080px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_qual_inspectionResult.json | _id: mes_qual_inspectionResultStable | rel: CL20261019-12:24 | samples: 20 | columns: 43 | total width: 7260px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -1075,19 +1075,20 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_qual_inspectionResul
 | 35 | modelVersion | Model Version | String | 0 | 140px | left |
 | 36 | modelClass | Model Class | String | 0 | 120px | left |
 | 37 | modelConfidence | Model Confidence | Decimal128 | 0 | 160px | right |
-| 38 | status | Status | String | 8 | 90px | left |
-| 39 | createdBy | Created By | String | 14 | 120px | left |
-| 40 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 41 | updatedBy | Updated By | String | 14 | 120px | left |
-| 42 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 38 | sourceMessageUuid | Source Message Uuid | String | 0 | 180px | left |
+| 39 | status | Status | String | 8 | 90px | left |
+| 40 | createdBy | Created By | String | 14 | 120px | left |
+| 41 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 42 | updatedBy | Updated By | String | 14 | 120px | left |
+| 43 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); inspectionPlanId (reference key, shown through inspectionPlanName); characteristicId (reference key, shown through characteristicName); itemId (reference key, shown through itemName); wipUnitId (reference key, shown through wipUnitName); lotId (reference key, shown through lotName); goodsReceiptId (reference key, shown through goodsReceiptName); operationExecutionId (reference key, shown through operationExecutionName); operationId (reference key, shown through operationName); workCenterId (reference key, shown through workCenterName); unitOfMeasureId (reference key, shown through unitOfMeasureName); gaugeId (reference key, shown through gaugeName); measuredById (reference key, shown through measuredBy); defectCodeId (reference key, shown through defectCodeName); nonconformanceId (reference key, shown through nonconformanceName); imageControlledDocumentId (reference key, shown through imageControlledDocumentName); measurementCurveId (reference key, shown through measurementCurveName); analyticsModelId (reference key, shown through analyticsModelName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 
-No non-null sample value (width from title only): attributeResult, imageControlledDocumentName, analyticsModelName, modelVersion, modelClass, modelConfidence
+No non-null sample value (width from title only): attributeResult, imageControlledDocumentName, analyticsModelName, modelVersion, modelClass, modelConfidence, sourceMessageUuid
 
 ## u_mes_qual_measurementCurve - Measurement Curves (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_qual_measurementCurve.json | _id: mes_qual_measurementCurveStable | rel: CL20261018-23:51 | samples: 20 | columns: 24 | total width: 3680px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_qual_measurementCurve.json | _id: mes_qual_measurementCurveStable | rel: CL20261019-12:24 | samples: 20 | columns: 25 | total width: 3960px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -1110,11 +1111,12 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_qual_measurementCurv
 | 17 | failedWindowNo | Failed Window No | Int32 | 1 | 160px | right |
 | 18 | rawControlledDocumentName | Raw Controlled Document | String | 44 | 300px | left |
 | 19 | inspectionResultName | Inspection Result | String | 14 | 160px | left |
-| 20 | status | Status | String | 8 | 90px | left |
-| 21 | createdBy | Created By | String | 14 | 120px | left |
-| 22 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 23 | updatedBy | Updated By | String | 14 | 120px | left |
-| 24 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 20 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 21 | status | Status | String | 8 | 90px | left |
+| 22 | createdBy | Created By | String | 14 | 120px | left |
+| 23 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 24 | updatedBy | Updated By | String | 14 | 120px | left |
+| 25 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); curveEnvelopeId (reference key, shown through curveEnvelopeName); characteristicId (reference key, shown through characteristicName); wipUnitId (reference key, shown through wipUnitName); serialNumberId (reference key, shown through serialNumberName); operationExecutionId (reference key, shown through operationExecutionName); equipmentId (reference key, shown through equipmentName); rawControlledDocumentId (reference key, shown through rawControlledDocumentName); inspectionResultId (reference key, shown through inspectionResultName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 

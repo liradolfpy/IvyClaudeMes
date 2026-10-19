@@ -7,3 +7,4 @@ db.getCollection("u_mes_qual_inspectionResult").createIndex({ itemId: 1 }, { nam
 db.getCollection("u_mes_qual_inspectionResult").createIndex({ wipUnitId: 1 }, { name: "ix_wipUnitId" });
 db.getCollection("u_mes_qual_inspectionResult").createIndex({ lotId: 1 }, { name: "ix_lotId" });
 db.getCollection("u_mes_qual_inspectionResult").createIndex({ siteId: 1, measuredAt: -1 }, { name: "ix_siteId_measuredAt" });
+db.getCollection("u_mes_qual_inspectionResult").createIndex({ siteId: 1, sourceMessageUuid: 1 }, { name: "ux_siteId_sourceMessageUuid", unique: true, partialFilterExpression: { sourceMessageUuid: { $type: "string" } } });

@@ -86,6 +86,7 @@ SECTIONS = {
   ("Audit Trail And Signatures", ["auditTrail", "electronicSignature"]),
   ("Analytics", ["analyticsModel", "modelPrediction", "simulationStudy"]),
   ("Computerised System Compliance", ["computerisedSystem", "systemValidation", "systemPeriodicReview", "auditTrailReview", "userAccessReview", "backupRun"]),
+  ("Unified Namespace", ["unsMessageType", "iotHubIdentity", "unsRejectedMessage"]),   # UNS_01 (D083), appended so existing _ids stay stable
  ],
  "ehs": [
   ("Safety Incidents", ["safetyIncident"]),

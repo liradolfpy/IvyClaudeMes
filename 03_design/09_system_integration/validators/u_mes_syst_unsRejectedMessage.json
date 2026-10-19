@@ -1,0 +1,234 @@
+{
+  "collMod": "u_mes_syst_unsRejectedMessage",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_unsRejectedMessage",
+      "required": [
+        "_id",
+        "recordNo",
+        "app",
+        "siteId",
+        "siteName",
+        "messageUuid",
+        "iotHubIdentityId",
+        "iotHubIdentityName",
+        "unsMessageTypeId",
+        "unsMessageTypeName",
+        "equipmentId",
+        "equipmentName",
+        "isa95Path",
+        "payloadSchemaName",
+        "messageTimestamp",
+        "receivedAt",
+        "rejectionReason",
+        "rejectionDetailText",
+        "payloadText",
+        "deadLetterBlobPath",
+        "resolvedById",
+        "resolvedBy",
+        "resolvedAt",
+        "resolutionText",
+        "resentMessageUuid",
+        "status",
+        "schemaVersion",
+        "createdAt",
+        "createdById",
+        "createdBy",
+        "updatedAt",
+        "updatedById",
+        "updatedBy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "messageUuid": {
+          "bsonType": "string",
+          "description": "Envelope msgId and IoT Hub message-id of the rejected message"
+        },
+        "iotHubIdentityId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_syst_iotHubIdentity._id"
+        },
+        "iotHubIdentityName": {
+          "bsonType": "string",
+          "description": "Display value of iotHubIdentityId, copied from u_mes_syst_iotHubIdentity.name"
+        },
+        "unsMessageTypeId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_unsMessageType._id"
+        },
+        "unsMessageTypeName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of unsMessageTypeId, copied from u_mes_syst_unsMessageType.name"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "isa95Path": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "ISA-95 path stamped by IoT Hub message enrichment; null when missing"
+        },
+        "payloadSchemaName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Schema named in the envelope; null when the envelope cannot be read"
+        },
+        "messageTimestamp": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Envelope ts as plant time; null when missing or unreadable"
+        },
+        "receivedAt": {
+          "bsonType": "date",
+          "description": "Time the ingestion service read the message"
+        },
+        "rejectionReason": {
+          "bsonType": "string",
+          "description": "Rule that rejected the message",
+          "enum": [
+            "Invalid Envelope",
+            "Unknown Schema",
+            "Unresolved Master Reference",
+            "Clock Skew",
+            "Validator Failure"
+          ]
+        },
+        "rejectionDetailText": {
+          "bsonType": "string",
+          "description": "Detail of the failed check"
+        },
+        "payloadText": {
+          "bsonType": "string",
+          "description": "Message body as received (UTF-8 JSON text)"
+        },
+        "deadLetterBlobPath": {
+          "bsonType": "string",
+          "description": "Path of the copy in the uns-deadletter blob container"
+        },
+        "resolvedById": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_user._id: user recorded for 'resolved'"
+        },
+        "resolvedBy": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display name of the user in resolvedById, copied from u_mes_mast_user.fullName"
+        },
+        "resolvedAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the resolution"
+        },
+        "resolutionText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "What was corrected, or why the message was discarded"
+        },
+        "resentMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "msgId of the corrected message sent again; null when open or discarded"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Open",
+            "Resent",
+            "Discarded"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        },
+        "createdAt": {
+          "bsonType": "date",
+          "description": "Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "createdById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that created the document"
+        },
+        "createdBy": {
+          "bsonType": "string",
+          "description": "Display name of the creator, copied from u_mes_mast_user.fullName"
+        },
+        "updatedAt": {
+          "bsonType": "date",
+          "description": "Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "updatedById": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_user._id: user or process that last updated the document"
+        },
+        "updatedBy": {
+          "bsonType": "string",
+          "description": "Display name of the last updater, copied from u_mes_mast_user.fullName"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

@@ -161,6 +161,10 @@
             "typ" : "string"
         },
         {
+            "din" : "sourceMessageUuid",
+            "typ" : "string"
+        },
+        {
             "din" : "status",
             "typ" : "string"
         },

@@ -68,6 +68,7 @@
         "checksSetupVerified",
         "checksEnvironmentOk",
         "interlockEventCount",
+        "sourceMessageUuid",
         "status",
         "schemaVersion",
         "createdAt",
@@ -407,6 +408,13 @@
         "interlockEventCount": {
           "bsonType": "int",
           "description": "Number of interlock events raised during the operation"
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "status": {
           "bsonType": "string",

@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 52 (42 required, 10 may be null) |
+| Keys | 53 (42 required, 11 may be null) |
 | Estimated volume per year | ~1.5 million |
 | Storage | standard |
 
@@ -67,14 +67,15 @@ Every key is present in every document. "Required" means the value may not be nu
 | 42 | measurementCurveId | String | - | No (null allowed) | Reference to u_mes_qual_measurementCurve._id | `"1319000000000002"` | Reference: u_mes_qual_measurementCurve._id |
 | 43 | measurementCurveName | String | - | No (null allowed) | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260915-01847"` |  |
 | 44 | envelopeResult | String | - | No (null allowed) | Verdict of the envelope check | `"OK"` | OK; NOK |
-| 45 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
-| 46 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 47 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:21.000+0000")` |  |
-| 48 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 49 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 50 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:51.000+0000")` |  |
-| 51 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 52 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 45 | sourceMessageUuid | String | - | No (null allowed) | UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1) | `"a9176ed0-67b8-5732-b239-9ac144dfdc57"` |  |
+| 46 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
+| 47 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 48 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:21.000+0000")` |  |
+| 49 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 50 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 51 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-15T06:02:51.000+0000")` |  |
+| 52 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 53 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 
@@ -93,6 +94,7 @@ Recorded, Voided. Initial state: Recorded. The values are maintained in u_mes_sy
 | 7 | `{ recipeId: 1 }` | No | Look-up of documents by recipe |
 | 8 | `{ siteId: 1, tightenedAt: -1 }` | No | Time-ordered lists and reports by tightened at |
 | 9 | `{ wipUnitId: 1, tightenedAt: -1 }` | No | Tightening history of one unit |
+| 10 | `{ siteId: 1, sourceMessageUuid: 1 }` | Yes (partial) | A UNS message is stored once; only documents with a message id are indexed (partial index) |
 
 ## Referenced by
 

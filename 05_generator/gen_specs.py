@@ -293,7 +293,14 @@ def indexes(c):
             "torqueResult":[([("wipUnitId",1),("tightenedAt",-1)],False,"Tightening history of one unit")],"leakTestResult":[([("wipUnitId",1),("testedAt",-1)],False,"Test history of one unit")],
             "operationExecution":[([("wipUnitId",1),("stepNo",1),("attemptNo",1)],False,"History of one unit through the routing"),([("workCenterId",1),("startedAt",-1)],False,"Activity of one work center over time")],
             "energyReading":[([("meterIotDeviceId",1),("intervalStartAt",-1)],False,"Consumption of one meter over time")],"systemConfiguration":[],"auditTrail":[([("relatedCollectionName",1),("relatedEntityId",1),("changedAt",-1)],False,"Change history of one document")]}
+        sp.update({"unsMessageType":[([("unsNamespace",1),("messageTypeCode",1),("payloadSchemaVersion",1)],True,"One definition per namespace, message type and schema version")],
+            "iotHubIdentity":[([("provisioningStatus",1)],False,"Registry sync work list")],
+            "unsRejectedMessage":[([("messageUuid",1)],True,"One rejection record per UNS message"),([("siteId",1),("status",1),("receivedAt",-1)],False,"Open rejections, newest first")]})
         for a,b,cc in sp.get(e,[]): add(a,b,cc)
+        if "sourceMessageUuid" in ks:   # UNS_01 (D083): duplicate deliveries of a UNS message are stored once
+            import uns01 as _UNS
+            if e in _UNS.TIMESERIES_SMU: add([("sourceMessageUuid",1)],False,"Duplicate check of UNS messages; time-series collection, so no unique index (the ingestion service removes duplicates)")
+            else: add([("siteId",1),("sourceMessageUuid",1)],"partial","A UNS message is stored once; only documents with a message id are indexed (partial index)")
     else:
         pe=bycol[c["parent"]]["entity"]; pk=pe+"Id" if pe!="site" else "siteId"
         if c["kind"]=="relationship":
@@ -392,8 +399,9 @@ for m in order:
         js='// Indexes for %s\n'%name
         for i,(k,u,why) in enumerate(idx,1):
             ks="{ "+", ".join("%s: %d"%(a,b) for a,b in k.items())+" }"; iname=("ux_" if u else "ix_")+"_".join(k.keys())
-            s+="| %d | `%s` | %s | %s |\n"%(i,ks,"Yes" if u else "No",why)
-            js+='db.getCollection("%s").createIndex(%s, { name: "%s"%s });\n'%(name,ks,iname[:120],", unique: true" if u else "")
+            s+="| %d | `%s` | %s | %s |\n"%(i,ks,"Yes (partial)" if u=="partial" else ("Yes" if u else "No"),why)
+            opt=', unique: true, partialFilterExpression: { %s: { $type: "string" } }'%list(k.keys())[-1] if u=="partial" else (", unique: true" if u else "")
+            js+='db.getCollection("%s").createIndex(%s, { name: "%s"%s });\n'%(name,ks,iname[:120],opt)
         rb=refby.get(c["entity"],[])
         s+="\n## Referenced by\n\n"+((", ".join(rb)+".\n") if rb else "No other collection refers to this one.\n")
         if c["entity"] in("site","user"): s+="\nIn addition, every collection carries siteId, and every transaction collection carries createdById and updatedById.\n"

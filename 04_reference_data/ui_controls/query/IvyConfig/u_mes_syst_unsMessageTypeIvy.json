@@ -1,0 +1,119 @@
+{
+    "_id" : "mes_syst_unsMessageTypeIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_unsMessageType",
+    "stableName" : "mes_syst_unsMessageTypeStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_unsMessageTypeIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "unsNamespace",
+            "typ" : "string"
+        },
+        {
+            "din" : "messageClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "senderType",
+            "typ" : "string"
+        },
+        {
+            "din" : "ingestedByMes",
+            "typ" : "bool"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "description",
+            "typ" : "string"
+        },
+        {
+            "din" : "unsNamespace",
+            "typ" : "string"
+        },
+        {
+            "din" : "messageTypeCode",
+            "typ" : "string"
+        },
+        {
+            "din" : "payloadSchemaName",
+            "typ" : "string"
+        },
+        {
+            "din" : "payloadSchemaVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "messageClass",
+            "typ" : "string"
+        },
+        {
+            "din" : "hierarchyLevel",
+            "typ" : "string"
+        },
+        {
+            "din" : "senderType",
+            "typ" : "string"
+        },
+        {
+            "din" : "targetCollectionName",
+            "typ" : "string"
+        },
+        {
+            "din" : "twinPropertyPath",
+            "typ" : "string"
+        },
+        {
+            "din" : "ingestedByMes",
+            "typ" : "bool"
+        },
+        {
+            "din" : "routedToDataLake",
+            "typ" : "bool"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

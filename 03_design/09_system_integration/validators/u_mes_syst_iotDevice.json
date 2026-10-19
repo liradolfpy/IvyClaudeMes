@@ -35,6 +35,8 @@
         "connectionStatus",
         "certificateExpiresAt",
         "installedAt",
+        "edgeGatewayIotDeviceId",
+        "edgeGatewayIotDeviceName",
         "status",
         "schemaVersion"
       ],
@@ -202,6 +204,20 @@
         "installedAt": {
           "bsonType": "date",
           "description": "Date and time when the record was installed. Datetime field: local plant time (IST) stored with the +0000 suffix"
+        },
+        "edgeGatewayIotDeviceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_iotDevice._id: edge gateway IoT device"
+        },
+        "edgeGatewayIotDeviceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of edgeGatewayIotDeviceId, copied from u_mes_syst_iotDevice.name"
         },
         "status": {
           "bsonType": "string",

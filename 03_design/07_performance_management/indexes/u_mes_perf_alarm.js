@@ -7,3 +7,4 @@ db.getCollection("u_mes_perf_alarm").createIndex({ iotDeviceId: 1 }, { name: "ix
 db.getCollection("u_mes_perf_alarm").createIndex({ productionOrderId: 1 }, { name: "ix_productionOrderId" });
 db.getCollection("u_mes_perf_alarm").createIndex({ downtimeEventId: 1 }, { name: "ix_downtimeEventId" });
 db.getCollection("u_mes_perf_alarm").createIndex({ siteId: 1, raisedAt: -1 }, { name: "ix_siteId_raisedAt" });
+db.getCollection("u_mes_perf_alarm").createIndex({ siteId: 1, sourceMessageUuid: 1 }, { name: "ux_siteId_sourceMessageUuid", unique: true, partialFilterExpression: { sourceMessageUuid: { $type: "string" } } });

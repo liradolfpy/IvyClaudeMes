@@ -103,13 +103,13 @@
                 },
                 {
                     "typ" : "dropDown",
-                    "label" : "Meter Iot Device",
+                    "label" : "Meter IoT Device",
                     "default" : "all",
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Select Meter Iot Device",
-                    "errorMessage" : "Please Select Meter Iot Device",
+                    "placeHolder" : "Select Meter IoT Device",
+                    "errorMessage" : "Please Select Meter IoT Device",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
@@ -175,7 +175,7 @@
             ]
         }
     },
-    "ver" : "20261019-0000",
+    "ver" : "20261019-1223",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -195,6 +195,6 @@
     "view" : [
 
     ],
-    "rel" : "20261019-0000",
+    "rel" : "20261019-1223",
     "projid" : ""
 }

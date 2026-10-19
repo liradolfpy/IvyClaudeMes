@@ -383,14 +383,15 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 61 | checksSetupVerified | Boolean | - |  |
 | 62 | checksEnvironmentOk | Boolean | - |  |
 | 63 | interlockEventCount | Int32 | - |  |
-| 64 | status | String | - |  |
-| 65 | schemaVersion | Int32 | - |  |
-| 66 | createdAt | Date | Datetime |  |
-| 67 | createdById | String | - | u_mes_mast_user._id |
-| 68 | createdBy | String | - |  |
-| 69 | updatedAt | Date | Datetime |  |
-| 70 | updatedById | String | - | u_mes_mast_user._id |
-| 71 | updatedBy | String | - |  |
+| 64 | sourceMessageUuid | String | - |  |
+| 65 | status | String | - |  |
+| 66 | schemaVersion | Int32 | - |  |
+| 67 | createdAt | Date | Datetime |  |
+| 68 | createdById | String | - | u_mes_mast_user._id |
+| 69 | createdBy | String | - |  |
+| 70 | updatedAt | Date | Datetime |  |
+| 71 | updatedById | String | - | u_mes_mast_user._id |
+| 72 | updatedBy | String | - |  |
 
 ## u_mes_plan_operationExecutionDefectCode
 

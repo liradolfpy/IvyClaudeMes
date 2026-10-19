@@ -583,7 +583,7 @@ Left out: _id (excluded key (identifier, site, app or schema)); app (excluded ke
 
 ## u_mes_plan_operationExecution - Operation Executions (Transaction)
 
-File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_plan_operationExecution.json | _id: mes_plan_operationExecutionStable | rel: CL20261018-23:51 | samples: 20 | columns: 51 | total width: 9200px
+File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_plan_operationExecution.json | _id: mes_plan_operationExecutionStable | rel: CL20261019-12:24 | samples: 20 | columns: 52 | total width: 9480px
 
 | # | data_index | title | type | longest sample | width | align |
 |---|---|---|---|---|---|---|
@@ -633,11 +633,12 @@ File: 04_reference_data/ui_controls/table/PageConfigs/u_mes_plan_operationExecut
 | 44 | checksSetupVerified | Checks Setup Verified | Boolean | 3 | 190px | center |
 | 45 | checksEnvironmentOk | Checks Environment Ok | Boolean | 3 | 190px | center |
 | 46 | interlockEventCount | Interlock Event Count | Int32 | 1 | 190px | right |
-| 47 | status | Status | String | 9 | 90px | left |
-| 48 | createdBy | Created By | String | 14 | 120px | left |
-| 49 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
-| 50 | updatedBy | Updated By | String | 14 | 120px | left |
-| 51 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
+| 47 | sourceMessageUuid | Source Message Uuid | String | 36 | 280px | left |
+| 48 | status | Status | String | 9 | 90px | left |
+| 49 | createdBy | Created By | String | 14 | 120px | left |
+| 50 | createdAt | Created At | Date/Datetime | 19 | 160px | center |
+| 51 | updatedBy | Updated By | String | 14 | 120px | left |
+| 52 | updatedAt | Updated At | Date/Datetime | 19 | 160px | center |
 
 Left out: _id (excluded key (identifier, site, app or schema)); app (excluded key (identifier, site, app or schema)); siteId (excluded key (identifier, site, app or schema)); siteName (excluded key (identifier, site, app or schema)); productionOrderId (reference key, shown through productionOrderName); wipUnitId (reference key, shown through wipUnitName); lotId (reference key, shown through lotName); itemId (reference key, shown through itemName); routingId (reference key, shown through routingName); operationId (reference key, shown through operationName); workCenterId (reference key, shown through workCenterName); equipmentId (reference key, shown through equipmentName); recipeId (reference key, shown through recipeName); shiftId (reference key, shown through shiftName); operatorUserId (reference key, shown through operatorUserName); productVariantId (reference key, shown through productVariantName); operatorSessionId (reference key, shown through operatorSessionName); schemaVersion (excluded key (identifier, site, app or schema)); createdById (excluded key (identifier, site, app or schema)); updatedById (excluded key (identifier, site, app or schema))
 

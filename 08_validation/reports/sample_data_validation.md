@@ -1,6 +1,6 @@
 # Sample data validation
 
-Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 369 | Documents: 5390
+Run: 12 October 2026 | Tool: 05_generator/gen_samples.py | Collections: 372 | Documents: 5420
 
 | # | Check | Scope | Result | Findings |
 |---|---|---|---|---|
@@ -49,11 +49,14 @@ These points were noticed while filling the documents and are reported only. On 
 | 15 | u_mes_bmr_batchRelease, u_mes_qual_retentionSample | Assembly orders produce serialised units without a lot; release and retention of those units refer to the order or the serial number | lotId is null for assembly orders |
 | 16 | u_mes_bmr_batchManufacturingRecord | No exported batch record is among the ten sample controlled documents | exportControlledDocumentId is null; the checksum, page count and export time of the four exported records are filled |
 | 17 | u_mes_mmr_masterManufacturingRecord | Packaging specifications in the samples all carry the LH assembly as item | RH and body records reference the nearest specification or none |
+| 18 | u_mes_syst_iotHubIdentity | The six IoT Edge gateway devices are not among the ten sample IoT devices | iotDeviceId is null for the three gateway identities and for the vision station, whose controller is not registered |
+| 19 | UNS_01 keys | Only documents that came from the UNS carry sourceMessageUuid: machine states, readings, alarms, tightening and leak test results, energy readings and curves of the caliper universe, and operation executions captured by PLC signal | Documents of the pharma universe and documents entered in the MES have sourceMessageUuid null |
 
 ## How realistic the documents are
 
 - Read through and corrected by hand: production orders, WIP units, operation executions, torque and leak results, lots, goods receipt lines, stock movements, inspection results, nonconformances, gauges, equipment, users, items, BOM components, routing steps, downtime events, serial numbers.
 - Written collection by collection for MES_ExternalRequirement_01: the 44 new collections and the 212 added keys (05_generator/ext_req01_samples.py).
 - Written collection by collection for GMP_Pharma_01: the 23 new collections and the 33 added keys (05_generator/gmp01_samples.py).
+- Written collection by collection for UNS_01: the 3 new collections and the 10 added keys (05_generator/uns01_samples.py).
 - Built by the same rules but not read line by line: the remaining collections. Their keys, types, references, allowed values and dates are checked by the table above; individual text or number combinations in them can still read oddly.
 - Each collection has exactly ten documents, so stories are short: for example, ten leak tests are spread over four units.

@@ -191,6 +191,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "90px"
@@ -331,7 +337,7 @@
     "module" : "perf",
     "page" : "mes_perf_torqueResultStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -382,6 +388,7 @@
             "measurementCurveId" : "1319000000000002",
             "measurementCurveName" : "CRV-20260915-01847",
             "envelopeResult" : "OK",
+            "sourceMessageUuid" : "a9176ed0-67b8-5732-b239-9ac144dfdc57",
             "status" : "Recorded",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-15T06:02:21.000+0000"),

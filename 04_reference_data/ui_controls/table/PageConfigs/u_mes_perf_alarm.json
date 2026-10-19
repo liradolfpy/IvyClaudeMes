@@ -201,6 +201,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "110px"
@@ -341,7 +347,7 @@
     "module" : "perf",
     "page" : "mes_perf_alarmStable",
     "projid" : "",
-    "rel" : "CL20261018-22:43",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -395,6 +401,7 @@
             "closureReasonCodeId" : null,
             "closureReasonCodeName" : null,
             "escalationLevel" : NumberInt(1),
+            "sourceMessageUuid" : "61b14a31-3bbd-5279-86da-99e43a0df462",
             "status" : "Raised",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-17T06:51:40.000+0000"),

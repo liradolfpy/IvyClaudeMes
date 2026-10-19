@@ -14,7 +14,7 @@
 | 10 | u_mes_qual_checkSheetItem | Child | master | 17 | 12 | 2 | 1 |
 | 11 | u_mes_qual_checkSheetResult | Entity | transaction | 37 | 26 | 3 | 8 |
 | 12 | u_mes_qual_checkSheetResultAnswer | Child | transaction | 19 | 16 | 1 | 1 |
-| 13 | u_mes_qual_inspectionResult | Entity | transaction | 66 | 33 | 6 | 8 |
+| 13 | u_mes_qual_inspectionResult | Entity | transaction | 67 | 33 | 6 | 9 |
 | 14 | u_mes_qual_spcChart | Entity | master | 30 | 21 | 3 | 7 |
 | 15 | u_mes_qual_spcChartControlLimit | Child | master | 17 | 14 | 1 | 1 |
 | 16 | u_mes_qual_spcChartRule | Value list | master | 10 | 10 | 2 | 1 |
@@ -74,7 +74,7 @@
 | 70 | u_mes_qual_characteristicPosition | Child | master | 17 | 10 | 1 | 3 |
 | 71 | u_mes_qual_curveEnvelope | Entity | master | 32 | 24 | 3 | 7 |
 | 72 | u_mes_qual_curveEnvelopeWindow | Child | master | 16 | 12 | 4 | 1 |
-| 73 | u_mes_qual_measurementCurve | Entity | transaction | 39 | 26 | 3 | 8 |
+| 73 | u_mes_qual_measurementCurve | Entity | transaction | 40 | 26 | 3 | 9 |
 | 74 | u_mes_qual_measurementCurvePoint | Entity | transaction | 18 | 18 | 1 | 3 |
 | 75 | u_mes_qual_defectRecord | Entity | transaction | 62 | 30 | 3 | 8 |
 | 76 | u_mes_qual_auditSchedule | Entity | master | 30 | 18 | 4 | 7 |

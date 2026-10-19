@@ -8,7 +8,7 @@ Scope: every text key of every collection was reviewed against data_modeling_sta
 |---|---|
 | New master collections | 41 |
 | Keys converted from text to a master reference | 67 |
-| Keys kept as fixed enumerations (values in u_mes_syst_enumerationValue) | 677 |
+| Keys kept as fixed enumerations (values in u_mes_syst_enumerationValue) | 689 |
 
 ## New master collections
 

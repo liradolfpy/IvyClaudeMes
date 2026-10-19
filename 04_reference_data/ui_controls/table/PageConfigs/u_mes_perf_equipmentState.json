@@ -83,7 +83,7 @@
                     "align" : "left",
                     "data_index" : "source",
                     "title" : "Source",
-                    "width" : "110px"
+                    "width" : "90px"
                 },
                 {
                     "align" : "left",
@@ -96,6 +96,12 @@
                     "data_index" : "downtimeEventName",
                     "title" : "Downtime Event",
                     "width" : "140px"
+                },
+                {
+                    "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
                 },
                 {
                     "align" : "left",
@@ -239,7 +245,7 @@
     "module" : "perf",
     "page" : "mes_perf_equipmentStateStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -265,10 +271,11 @@
             "shiftId" : "A",
             "shiftName" : "Shift A",
             "productionDate" : ISODate("2026-09-17T00:00:00.000+0000"),
-            "source" : "MES Terminal",
+            "source" : "PLC",
             "plcStateCode" : "3",
             "downtimeEventId" : null,
             "downtimeEventName" : null,
+            "sourceMessageUuid" : "1895d8b6-49bf-59b4-b090-e5a45b986932",
             "status" : "Open",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-17T00:00:00.000+0000"),

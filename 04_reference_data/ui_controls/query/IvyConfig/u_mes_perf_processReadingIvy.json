@@ -129,6 +129,10 @@
             "typ" : "Date"
         },
         {
+            "din" : "sourceMessageUuid",
+            "typ" : "string"
+        },
+        {
             "din" : "schemaVersion",
             "typ" : "int"
         }

@@ -2313,6 +2313,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "resp" : "CL"
   },
   {
+      "_id" : "u_mes_syst_iotHubIdentity__id_name",
+      "coln" : "u_mes_syst_iotHubIdentity",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-12:23",
+      "resp" : "CL"
+  },
+  {
       "_id" : "u_mes_syst_modelPrediction__id_recordNo",
       "coln" : "u_mes_syst_modelPrediction",
       "query" : {
@@ -2429,6 +2446,23 @@ db.getCollection("u_int_dynamicDropdown").insertMany([
       "dt" : ISODate("2026-10-18T00:00:00.000+0000"),
       "projid" : "mes_syst",
       "rel" : "CL20261018-23:44",
+      "resp" : "CL"
+  },
+  {
+      "_id" : "u_mes_syst_unsMessageType__id_name",
+      "coln" : "u_mes_syst_unsMessageType",
+      "query" : {
+
+      },
+      "key" : "_id",
+      "val" : "name",
+      "act" : true,
+      "data" : {
+
+      },
+      "dt" : ISODate("2026-10-19T00:00:00.000+0000"),
+      "projid" : "mes_syst",
+      "rel" : "CL20261019-12:23",
       "resp" : "CL"
   },
   {

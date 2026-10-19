@@ -63,6 +63,7 @@
         "modelVersion",
         "modelClass",
         "modelConfidence",
+        "sourceMessageUuid",
         "status",
         "schemaVersion",
         "createdAt",
@@ -433,6 +434,13 @@
             "null"
           ],
           "description": "Confidence of the model classification (0 to 1)"
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "status": {
           "bsonType": "string",

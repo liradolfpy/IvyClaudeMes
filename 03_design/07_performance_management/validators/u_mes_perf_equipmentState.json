@@ -28,6 +28,7 @@
         "plcStateCode",
         "downtimeEventId",
         "downtimeEventName",
+        "sourceMessageUuid",
         "status",
         "schemaVersion",
         "createdAt",
@@ -173,6 +174,13 @@
             "null"
           ],
           "description": "Display value of downtimeEventId, copied from u_mes_perf_downtimeEvent.recordNo"
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "status": {
           "bsonType": "string",

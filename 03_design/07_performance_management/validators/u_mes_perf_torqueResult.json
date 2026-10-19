@@ -49,6 +49,7 @@
         "measurementCurveId",
         "measurementCurveName",
         "envelopeResult",
+        "sourceMessageUuid",
         "status",
         "schemaVersion",
         "createdAt",
@@ -285,6 +286,13 @@
             "NOK",
             null
           ]
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "status": {
           "bsonType": "string",

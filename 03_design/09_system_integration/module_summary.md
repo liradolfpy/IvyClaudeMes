@@ -5,7 +5,7 @@
 | 1 | u_mes_syst_erpMessage | Entity | transaction | 41 | 26 | 5 | 9 |
 | 2 | u_mes_syst_integrationConnector | Entity | master | 23 | 19 | 7 | 3 |
 | 3 | u_mes_syst_integrationConnectorFunction | Child | master | 14 | 13 | 3 | 1 |
-| 4 | u_mes_syst_iotDevice | Entity | master | 32 | 24 | 4 | 7 |
+| 4 | u_mes_syst_iotDevice | Entity | master | 34 | 24 | 4 | 7 |
 | 5 | u_mes_syst_operatorApp | Entity | master | 18 | 10 | 3 | 3 |
 | 6 | u_mes_syst_operatorAppWorkCenter | Relationship | master | 11 | 11 | 1 | 2 |
 | 7 | u_mes_syst_operatorAppOperation | Relationship | master | 11 | 11 | 1 | 2 |
@@ -46,3 +46,6 @@
 | 42 | u_mes_syst_auditTrailReview | Entity | transaction | 32 | 23 | 4 | 7 |
 | 43 | u_mes_syst_userAccessReview | Entity | transaction | 26 | 22 | 2 | 4 |
 | 44 | u_mes_syst_userAccessReviewLine | Child | transaction | 23 | 21 | 2 | 3 |
+| 45 | u_mes_syst_unsMessageType | Entity | master | 20 | 18 | 6 | 3 |
+| 46 | u_mes_syst_iotHubIdentity | Entity | master | 25 | 14 | 6 | 6 |
+| 47 | u_mes_syst_unsRejectedMessage | Entity | transaction | 33 | 21 | 3 | 8 |

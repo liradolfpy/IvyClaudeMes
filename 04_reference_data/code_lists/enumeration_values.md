@@ -2,7 +2,7 @@
 
 Keys whose values are fixed by the application logic stay coded text (data_modeling_standard.md section 11, rule B). Their allowed values are listed here, enforced by the validators, and stored as data in `u_mes_syst_enumerationValue` (one document per collection, key and value). Status values are in status_values.md.
 
-Keys: 677 | Values: 2514
+Keys: 689 | Values: 2555
 
 | Module | Collection | Key | Allowed values |
 |---|---|---|---|
@@ -567,7 +567,7 @@ Keys: 677 | Values: 2514
 | SystemAndIntegration | u_mes_syst_erpMessage | messageType | Production Order Download; Operation Confirmation; Goods Movement; Goods Receipt; Shipment Advice; Material Master; Quality Notification |
 | SystemAndIntegration | u_mes_syst_erpMessage | payloadFormat | JSON; XML; IDoc |
 | SystemAndIntegration | u_mes_syst_integrationConnector | app | Auto; Gamp; Common |
-| SystemAndIntegration | u_mes_syst_integrationConnector | connectorType | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway; LIMS; Weighing System; Serialisation Server; Track And Trace Portal; Document Management |
+| SystemAndIntegration | u_mes_syst_integrationConnector | connectorType | ERP; PLM; OPC UA Server; Tool Controller; Label Printer; Leak Tester; Email Gateway; LIMS; Weighing System; Serialisation Server; Track And Trace Portal; Document Management; Azure IoT Hub |
 | SystemAndIntegration | u_mes_syst_integrationConnector | protocol | HTTPS REST; OPC UA; Open Protocol; Modbus TCP; MQTT; ZPL Over TCP; SMTP; Serial Over TCP |
 | SystemAndIntegration | u_mes_syst_integrationConnector | environment | Production; Quality; Development |
 | SystemAndIntegration | u_mes_syst_integrationConnector | authMethod | OAuth2 Client Credentials; Certificate; Basic; None |
@@ -610,7 +610,7 @@ Keys: 677 | Values: 2514
 | SystemAndIntegration | u_mes_syst_numberRange | resetPolicy | Never; Daily; Monthly; Yearly |
 | SystemAndIntegration | u_mes_syst_numberRange | checkDigitMethod | None; Modulo 10; Modulo 43 |
 | SystemAndIntegration | u_mes_syst_systemConfiguration | app | Auto; Gamp; Common |
-| SystemAndIntegration | u_mes_syst_systemConfiguration | module | Master Data; ProductDefinition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
+| SystemAndIntegration | u_mes_syst_systemConfiguration | module | Master Data; Product Definition; Execution; Materials; Traceability; Quality; Performance; Maintenance; Integration; Safety |
 | SystemAndIntegration | u_mes_syst_systemConfiguration | valueType | Text; Number; Flag; JSON |
 | SystemAndIntegration | u_mes_syst_systemConfiguration | scope | Enterprise; Site |
 | SystemAndIntegration | u_mes_syst_documentType | app | Auto; Gamp; Common |
@@ -665,6 +665,18 @@ Keys: 677 | Values: 2514
 | SystemAndIntegration | u_mes_syst_userAccessReview | app | Auto; Gamp; Common |
 | SystemAndIntegration | u_mes_syst_userAccessReviewLine | app | Auto; Gamp; Common |
 | SystemAndIntegration | u_mes_syst_userAccessReviewLine | reviewAction | Retain; Remove Role; Change Role; Lock Account |
+| SystemAndIntegration | u_mes_syst_unsMessageType | app | Auto; Gamp; Common |
+| SystemAndIntegration | u_mes_syst_unsMessageType | unsNamespace | Edge; MES; KPI |
+| SystemAndIntegration | u_mes_syst_unsMessageType | messageClass | State; Event; Measurement |
+| SystemAndIntegration | u_mes_syst_unsMessageType | hierarchyLevel | Site; Area; Line; Work Center; Equipment |
+| SystemAndIntegration | u_mes_syst_unsMessageType | senderType | IoT Edge Gateway; MES Publisher |
+| SystemAndIntegration | u_mes_syst_iotHubIdentity | app | Auto; Gamp; Common |
+| SystemAndIntegration | u_mes_syst_iotHubIdentity | identityType | Equipment; IoT Edge Gateway; MES Publisher |
+| SystemAndIntegration | u_mes_syst_iotHubIdentity | authenticationMethod | X.509 CA Signed; X.509 Self Signed; Symmetric Key |
+| SystemAndIntegration | u_mes_syst_iotHubIdentity | provisioningStatus | Not Provisioned; Provisioned; Sync Failed; Disabled |
+| SystemAndIntegration | u_mes_syst_iotHubIdentity | connectionState | Connected; Disconnected; Never Connected |
+| SystemAndIntegration | u_mes_syst_unsRejectedMessage | app | Auto; Gamp; Common |
+| SystemAndIntegration | u_mes_syst_unsRejectedMessage | rejectionReason | Invalid Envelope; Unknown Schema; Unresolved Master Reference; Clock Skew; Validator Failure |
 | EnvironmentHealthAndSafety | u_mes_ehs_safetyIncident | app | Auto; Gamp; Common |
 | EnvironmentHealthAndSafety | u_mes_ehs_safetyIncidentWitnessUser | app | Auto; Gamp; Common |
 | EnvironmentHealthAndSafety | u_mes_ehs_safetyIncidentAction | app | Auto; Gamp; Common |

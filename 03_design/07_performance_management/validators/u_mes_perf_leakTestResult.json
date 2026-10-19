@@ -35,6 +35,7 @@
         "testedAt",
         "measurementCurveId",
         "measurementCurveName",
+        "sourceMessageUuid",
         "status",
         "schemaVersion",
         "createdAt",
@@ -197,6 +198,13 @@
             "null"
           ],
           "description": "Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo"
+        },
+        "sourceMessageUuid": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1)"
         },
         "status": {
           "bsonType": "string",

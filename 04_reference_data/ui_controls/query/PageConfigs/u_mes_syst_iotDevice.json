@@ -115,11 +115,36 @@
                         "SMTP" : "SMTP"
                     },
                     "src" : "data"
+                },
+                {
+                    "typ" : "dropDown",
+                    "label" : "Edge Gateway",
+                    "default" : "all",
+                    "includeAll" : true,
+                    "multiSelect" : false,
+                    "required" : true,
+                    "placeHolder" : "Select Edge Gateway",
+                    "errorMessage" : "Please Select Edge Gateway",
+                    "readOnly" : false,
+                    "visible" : true,
+                    "isSearchable" : true,
+                    "colSize" : NumberInt(12),
+                    "labelColSpan" : NumberInt(24),
+                    "data_index" : "edgeGatewayIotDeviceId",
+                    "p_data_index" : "edgeGatewayIotDeviceName",
+                    "api" : "/dd",
+                    "params" : {
+                        "dn" : "u_mes_syst_iotDevice__id_name"
+                    },
+                    "src" : "api",
+                    "source" : "dynamic",
+                    "sourceParams_dynamic" : "u_mes_syst_iotDevice__id_name",
+                    "sourceParams" : {}
                 }
             ]
         }
     },
-    "ver" : "20261019-0000",
+    "ver" : "20261019-1223",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -139,6 +164,6 @@
     "view" : [
 
     ],
-    "rel" : "20261019-0000",
+    "rel" : "20261019-1223",
     "projid" : ""
 }

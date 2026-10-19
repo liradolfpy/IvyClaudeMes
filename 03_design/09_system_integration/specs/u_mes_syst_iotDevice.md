@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | name |
-| Keys | 32 (24 required, 8 may be null) |
+| Keys | 34 (24 required, 10 may be null) |
 | Estimated volume per year | 300-1,500 |
 | Storage | standard |
 
@@ -53,8 +53,10 @@ Every key is present in every document. "Required" means the value may not be nu
 | 28 | connectionStatus | String | - | Yes | Connection status | `"Online"` | Online; Offline; Degraded |
 | 29 | certificateExpiresAt | Date | Date | Yes | Certificate expires at. Date field: calendar date only, stored as 00:00:00 of that day in local plant time (IST) with the +0000 suffix | `ISODate("2026-04-02T00:00:00.000+0000")` |  |
 | 30 | installedAt | Date | Datetime | Yes | Date and time when the record was installed. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2019-01-04T00:00:00.000+0000")` |  |
-| 31 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive; Retired |
-| 32 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 31 | edgeGatewayIotDeviceId | String | - | No (null allowed) | Reference to u_mes_syst_iotDevice._id: edge gateway IoT device | `null` | Reference: u_mes_syst_iotDevice._id |
+| 32 | edgeGatewayIotDeviceName | String | - | No (null allowed) | Display value of edgeGatewayIotDeviceId, copied from u_mes_syst_iotDevice.name | `null` |  |
+| 33 | status | String | - | Yes | Primary lifecycle state of the document | `"Active"` | Active; Inactive; Retired |
+| 34 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
 
 ## Status values
 
@@ -74,7 +76,7 @@ Active, Inactive, Retired. Initial state: Active. The values are maintained in u
 
 ## Referenced by
 
-u_mes_mast_equipmentIotDevice, u_mes_matl_label, u_mes_perf_processTag, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_syst_operatorAppDeviceBinding, u_mes_syst_businessEvent, u_mes_perf_energyReading.
+u_mes_mast_equipmentIotDevice, u_mes_matl_label, u_mes_perf_processTag, u_mes_perf_alarm, u_mes_perf_torqueResult, u_mes_perf_leakTestResult, u_mes_syst_iotDevice, u_mes_syst_operatorAppDeviceBinding, u_mes_syst_businessEvent, u_mes_perf_energyReading, u_mes_syst_iotHubIdentity.
 
 ## Files
 

@@ -234,6 +234,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "180px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "90px"
@@ -374,7 +380,7 @@
     "module" : "qual",
     "page" : "mes_qual_inspectionResultStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -439,6 +445,7 @@
             "modelVersion" : null,
             "modelClass" : null,
             "modelConfidence" : null,
+            "sourceMessageUuid" : null,
             "status" : "Recorded",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-17T06:52:20.000+0000"),

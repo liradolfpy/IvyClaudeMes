@@ -26,6 +26,10 @@
         {
             "din" : "protocol",
             "typ" : "string"
+        },
+        {
+            "din" : "edgeGatewayIotDeviceId",
+            "typ" : "string"
         }
     ],
     "post" : [
@@ -144,6 +148,14 @@
         {
             "din" : "installedAt",
             "typ" : "Date"
+        },
+        {
+            "din" : "edgeGatewayIotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "edgeGatewayIotDeviceName",
+            "typ" : "string"
         },
         {
             "din" : "status",

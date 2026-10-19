@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 38 (32 required, 6 may be null) |
+| Keys | 39 (32 required, 7 may be null) |
 | Estimated volume per year | ~760,000 |
 | Storage | standard |
 
@@ -59,14 +59,15 @@ Every key is present in every document. "Required" means the value may not be nu
 | 28 | testedAt | Date | Datetime | Yes | Date and time when the record was tested. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:33.000+0000")` |  |
 | 29 | measurementCurveId | String | - | No (null allowed) | Reference to u_mes_qual_measurementCurve._id | `"1319000000000007"` | Reference: u_mes_qual_measurementCurve._id |
 | 30 | measurementCurveName | String | - | No (null allowed) | Display value of measurementCurveId, copied from u_mes_qual_measurementCurve.recordNo | `"CRV-20260918-01882"` |  |
-| 31 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
-| 32 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 33 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:03.000+0000")` |  |
-| 34 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 35 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
-| 36 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:33.000+0000")` |  |
-| 37 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
-| 38 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 31 | sourceMessageUuid | String | - | No (null allowed) | UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1) | `"a3354e57-ef7d-5d57-ae79-712cbc4cff69"` |  |
+| 32 | status | String | - | Yes | Primary lifecycle state of the document | `"Recorded"` | Recorded; Voided |
+| 33 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 34 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:03.000+0000")` |  |
+| 35 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 36 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"MES System"` |  |
+| 37 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-18T15:11:33.000+0000")` |  |
+| 38 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000010"` | Reference: u_mes_mast_user._id |
+| 39 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"MES System"` |  |
 
 ## Status values
 
@@ -85,6 +86,7 @@ Recorded, Voided. Initial state: Recorded. The values are maintained in u_mes_sy
 | 7 | `{ testerIotDeviceId: 1 }` | No | Look-up of documents by tester IoT device |
 | 8 | `{ siteId: 1, masterLeakVerifiedAt: -1 }` | No | Time-ordered lists and reports by master leak verified at |
 | 9 | `{ wipUnitId: 1, testedAt: -1 }` | No | Test history of one unit |
+| 10 | `{ siteId: 1, sourceMessageUuid: 1 }` | Yes (partial) | A UNS message is stored once; only documents with a message id are indexed (partial index) |
 
 ## Referenced by
 

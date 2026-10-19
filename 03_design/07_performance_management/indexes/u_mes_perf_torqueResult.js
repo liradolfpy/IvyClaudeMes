@@ -8,3 +8,4 @@ db.getCollection("u_mes_perf_torqueResult").createIndex({ toolId: 1 }, { name: "
 db.getCollection("u_mes_perf_torqueResult").createIndex({ recipeId: 1 }, { name: "ix_recipeId" });
 db.getCollection("u_mes_perf_torqueResult").createIndex({ siteId: 1, tightenedAt: -1 }, { name: "ix_siteId_tightenedAt" });
 db.getCollection("u_mes_perf_torqueResult").createIndex({ wipUnitId: 1, tightenedAt: -1 }, { name: "ix_wipUnitId_tightenedAt" });
+db.getCollection("u_mes_perf_torqueResult").createIndex({ siteId: 1, sourceMessageUuid: 1 }, { name: "ux_siteId_sourceMessageUuid", unique: true, partialFilterExpression: { sourceMessageUuid: { $type: "string" } } });

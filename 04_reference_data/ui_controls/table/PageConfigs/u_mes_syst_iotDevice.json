@@ -141,6 +141,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "edgeGatewayIotDeviceName",
+                    "title" : "Edge Gateway IoT Device",
+                    "width" : "210px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "90px"
@@ -253,7 +259,7 @@
     "module" : "syst",
     "page" : "mes_syst_iotDeviceStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -290,6 +296,8 @@
             "connectionStatus" : "Online",
             "certificateExpiresAt" : ISODate("2026-04-02T00:00:00.000+0000"),
             "installedAt" : ISODate("2019-01-04T00:00:00.000+0000"),
+            "edgeGatewayIotDeviceId" : null,
+            "edgeGatewayIotDeviceName" : null,
             "status" : "Active",
             "schemaVersion" : NumberInt(1)
         }

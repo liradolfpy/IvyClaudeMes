@@ -429,14 +429,15 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 56 | modelVersion | String | - |  |
 | 57 | modelClass | String | - |  |
 | 58 | modelConfidence | Decimal128 | - |  |
-| 59 | status | String | - |  |
-| 60 | schemaVersion | Int32 | - |  |
-| 61 | createdAt | Date | Datetime |  |
-| 62 | createdById | String | - | u_mes_mast_user._id |
-| 63 | createdBy | String | - |  |
-| 64 | updatedAt | Date | Datetime |  |
-| 65 | updatedById | String | - | u_mes_mast_user._id |
-| 66 | updatedBy | String | - |  |
+| 59 | sourceMessageUuid | String | - |  |
+| 60 | status | String | - |  |
+| 61 | schemaVersion | Int32 | - |  |
+| 62 | createdAt | Date | Datetime |  |
+| 63 | createdById | String | - | u_mes_mast_user._id |
+| 64 | createdBy | String | - |  |
+| 65 | updatedAt | Date | Datetime |  |
+| 66 | updatedById | String | - | u_mes_mast_user._id |
+| 67 | updatedBy | String | - |  |
 
 ## u_mes_qual_spcChart
 
@@ -2277,14 +2278,15 @@ Kind: entity | Data class: transaction | Parent: - | _id pattern: 16-digit numer
 | 29 | rawControlledDocumentName | String | - |  |
 | 30 | inspectionResultId | String | - | u_mes_qual_inspectionResult._id |
 | 31 | inspectionResultName | String | - |  |
-| 32 | status | String | - |  |
-| 33 | schemaVersion | Int32 | - |  |
-| 34 | createdAt | Date | Datetime |  |
-| 35 | createdById | String | - | u_mes_mast_user._id |
-| 36 | createdBy | String | - |  |
-| 37 | updatedAt | Date | Datetime |  |
-| 38 | updatedById | String | - | u_mes_mast_user._id |
-| 39 | updatedBy | String | - |  |
+| 32 | sourceMessageUuid | String | - |  |
+| 33 | status | String | - |  |
+| 34 | schemaVersion | Int32 | - |  |
+| 35 | createdAt | Date | Datetime |  |
+| 36 | createdById | String | - | u_mes_mast_user._id |
+| 37 | createdBy | String | - |  |
+| 38 | updatedAt | Date | Datetime |  |
+| 39 | updatedById | String | - | u_mes_mast_user._id |
+| 40 | updatedBy | String | - |  |
 
 ## u_mes_qual_measurementCurvePoint
 

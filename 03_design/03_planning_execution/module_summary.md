@@ -11,7 +11,7 @@
 | 7 | u_mes_plan_productionScheduleSlot | Child | transaction | 24 | 22 | 1 | 3 |
 | 8 | u_mes_plan_dispatchList | Entity | transaction | 23 | 20 | 3 | 5 |
 | 9 | u_mes_plan_dispatchListEntry | Child | transaction | 29 | 25 | 3 | 4 |
-| 10 | u_mes_plan_operationExecution | Entity | transaction | 71 | 52 | 5 | 10 |
+| 10 | u_mes_plan_operationExecution | Entity | transaction | 72 | 52 | 5 | 11 |
 | 11 | u_mes_plan_operationExecutionDefectCode | Relationship | transaction | 17 | 17 | 1 | 2 |
 | 12 | u_mes_plan_operationExecutionTool | Relationship | transaction | 17 | 17 | 1 | 2 |
 | 13 | u_mes_plan_stepCompletion | Entity | transaction | 44 | 29 | 4 | 8 |

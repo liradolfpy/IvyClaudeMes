@@ -56,8 +56,14 @@ LABELS = {
     "createdInSourceAt": "Created Date Range",
     "overrideRequiresSignature": "Override Needs Signature",
     "requiresSignatureForEdit": "Edit Needs Signature",
+    # UNS_01 (D083)
+    "parentIotHubIdentityId": "Parent Gateway",
+    "iotHubIdentityId": "IoT Hub Identity",
+    "unsMessageTypeId": "Message Type",
+    "unsNamespace": "Namespace",
+    "edgeGatewayIotDeviceId": "Edge Gateway",
 }
-ACRONYMS = {"Wip": "WIP", "Erp": "ERP", "Plc": "PLC"}
+ACRONYMS = {"Wip": "WIP", "Erp": "ERP", "Plc": "PLC", "Iot": "IoT", "Uns": "UNS", "Mes": "MES"}
 
 
 # ---------------------------------------------------------------------------
@@ -465,7 +471,11 @@ SCREENS = {
     "u_mes_syst_erpMessage": [R("createdInSourceAt", -7, 0), DS("productionOrderId", ("u_mes_plan_productionOrder", "recordNo")), D("status"), DD("integrationConnectorId", ("u_mes_syst_integrationConnector", "name")), D("direction"), D("messageType")],
     "u_mes_syst_integrationConnector": [D("status"), D("protocol"), D("environment"), D("authMethod")],
     "u_mes_syst_integrationConnectorFunction": [DD("integrationConnectorId", ("u_mes_syst_integrationConnector", "name")), D("direction"), D("messageType")],
-    "u_mes_syst_iotDevice": [D("status"), DD("deviceTypeId", ("u_mes_syst_deviceType", "name")), DD("manufacturerId", ("u_mes_mast_manufacturer", "name")), D("protocol")],
+    "u_mes_syst_iotDevice": [D("status"), DD("deviceTypeId", ("u_mes_syst_deviceType", "name")), DD("manufacturerId", ("u_mes_mast_manufacturer", "name")), D("protocol"), DD("edgeGatewayIotDeviceId", ("u_mes_syst_iotDevice", "name"))],
+    # UNS_01 (D083): Unified Namespace on Azure IoT Hub
+    "u_mes_syst_unsMessageType": [D("status"), D("unsNamespace"), D("messageClass"), D("senderType"), D("ingestedByMes")],
+    "u_mes_syst_iotHubIdentity": [MD("equipmentId", "Equipment"), D("status"), D("identityType"), D("provisioningStatus"), D("connectionState"), DD("parentIotHubIdentityId", ("u_mes_syst_iotHubIdentity", "name"))],
+    "u_mes_syst_unsRejectedMessage": [R("receivedAt", -7, 0), MD("equipmentId", "Equipment"), D("status"), DD("iotHubIdentityId", ("u_mes_syst_iotHubIdentity", "name")), DD("unsMessageTypeId", ("u_mes_syst_unsMessageType", "name")), D("rejectionReason")],
     "u_mes_syst_operatorApp": [D("status"), D("appType")],
     "u_mes_syst_operatorAppWorkCenter": [DD("operatorAppId", ("u_mes_syst_operatorApp", "name")), MD("workCenterId", "WorkCenter")],
     "u_mes_syst_operatorAppOperation": [DD("operatorAppId", ("u_mes_syst_operatorApp", "name")), MD("operationId", "Operation")],

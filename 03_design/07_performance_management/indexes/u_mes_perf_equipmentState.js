@@ -8,3 +8,4 @@ db.getCollection("u_mes_perf_equipmentState").createIndex({ shiftId: 1 }, { name
 db.getCollection("u_mes_perf_equipmentState").createIndex({ downtimeEventId: 1 }, { name: "ix_downtimeEventId" });
 db.getCollection("u_mes_perf_equipmentState").createIndex({ siteId: 1, startedAt: -1 }, { name: "ix_siteId_startedAt" });
 db.getCollection("u_mes_perf_equipmentState").createIndex({ equipmentId: 1, startedAt: -1 }, { name: "ix_equipmentId_startedAt" });
+db.getCollection("u_mes_perf_equipmentState").createIndex({ siteId: 1, sourceMessageUuid: 1 }, { name: "ux_siteId_sourceMessageUuid", unique: true, partialFilterExpression: { sourceMessageUuid: { $type: "string" } } });

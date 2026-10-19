@@ -1,0 +1,143 @@
+{
+    "_id" : "mes_syst_iotHubIdentityIvy",
+    "code" : "syst",
+    "moduleName" : "SystemAndIntegration",
+    "collection" : "u_mes_syst_iotHubIdentity",
+    "stableName" : "mes_syst_iotHubIdentityStable",
+    "typ" : "IvyConfig",
+    "label" : "EnterpriseIvy",
+    "dn" : "mes_syst_iotHubIdentityIvy",
+    "proj" : [
+
+    ],
+    "get" : [
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "identityType",
+            "typ" : "string"
+        },
+        {
+            "din" : "provisioningStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "connectionState",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentIotHubIdentityId",
+            "typ" : "string"
+        }
+    ],
+    "post" : [
+        {
+            "din" : "recordNo",
+            "typ" : "string"
+        },
+        {
+            "din" : "app",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteId",
+            "typ" : "string"
+        },
+        {
+            "din" : "siteName",
+            "typ" : "string"
+        },
+        {
+            "din" : "name",
+            "typ" : "string"
+        },
+        {
+            "din" : "identityType",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotHubName",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentId",
+            "typ" : "string"
+        },
+        {
+            "din" : "equipmentName",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotDeviceId",
+            "typ" : "string"
+        },
+        {
+            "din" : "iotDeviceName",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentIotHubIdentityId",
+            "typ" : "string"
+        },
+        {
+            "din" : "parentIotHubIdentityName",
+            "typ" : "string"
+        },
+        {
+            "din" : "authenticationMethod",
+            "typ" : "string"
+        },
+        {
+            "din" : "certificateThumbprint",
+            "typ" : "string"
+        },
+        {
+            "din" : "certificateExpiresAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "provisioningStatus",
+            "typ" : "string"
+        },
+        {
+            "din" : "lastRegistrySyncAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "twinTagsVersion",
+            "typ" : "int"
+        },
+        {
+            "din" : "lastSyncErrorText",
+            "typ" : "string"
+        },
+        {
+            "din" : "connectionState",
+            "typ" : "string"
+        },
+        {
+            "din" : "connectionStateAt",
+            "typ" : "Date"
+        },
+        {
+            "din" : "status",
+            "typ" : "string"
+        },
+        {
+            "din" : "schemaVersion",
+            "typ" : "int"
+        }
+    ],
+    "staticPost" : {
+        "act" : true
+    },
+    "patch" : [
+
+    ]
+}

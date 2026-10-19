@@ -10733,6 +10733,11 @@
      "ref": null
     },
     {
+     "key": "sourceMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -20398,6 +20403,11 @@
      "ref": null
     },
     {
+     "key": "sourceMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -28240,6 +28250,11 @@
      "ref": null
     },
     {
+     "key": "sourceMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -29593,6 +29608,11 @@
      "dateKind": "Date"
     },
     {
+     "key": "sourceMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "schemaVersion",
      "type": "Int32",
      "ref": null
@@ -29891,6 +29911,11 @@
      "ref": null
     },
     {
+     "key": "sourceMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -30174,6 +30199,11 @@
      "ref": null
     },
     {
+     "key": "sourceMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -30384,6 +30414,11 @@
     },
     {
      "key": "measurementCurveName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sourceMessageUuid",
      "type": "String",
      "ref": null
     },
@@ -32979,6 +33014,16 @@
      "dateKind": "Datetime"
     },
     {
+     "key": "edgeGatewayIotDeviceId",
+     "type": "String",
+     "ref": "iotDevice"
+    },
+    {
+     "key": "edgeGatewayIotDeviceName",
+     "type": "String",
+     "ref": null
+    },
+    {
      "key": "status",
      "type": "String",
      "ref": null
@@ -35342,6 +35387,11 @@
     },
     {
      "key": "signalQuality",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sourceMessageUuid",
      "type": "String",
      "ref": null
     },
@@ -42709,6 +42759,11 @@
     },
     {
      "key": "inspectionResultName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "sourceMessageUuid",
      "type": "String",
      "ref": null
     },
@@ -51350,6 +51405,465 @@
    "idPattern": "16-digit numeric string",
    "recordNoMeaning": "BMR-<order number>, e.g. BMR-PO-1000412",
    "purpose": "Header of the executed batch record of one production order: the master record version frozen at opening, links to line clearance, yield reconciliation, review and release, and the exported true copy of the compiled record with its checksum."
+  },
+  {
+   "collection": "u_mes_syst_unsMessageType",
+   "module": "syst",
+   "moduleName": "SystemAndIntegration",
+   "entity": "unsMessageType",
+   "sourceConcept": "uns01:unsMessageType",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "app",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "description",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "unsNamespace",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "messageTypeCode",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "payloadSchemaName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "payloadSchemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "messageClass",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "hierarchyLevel",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "senderType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "targetCollectionName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "twinPropertyPath",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "ingestedByMes",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "routedToDataLake",
+     "type": "Boolean",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "<namespace>.<message type>, e.g. edge.result.tightening",
+   "purpose": "Catalogue of the message types carried by the Unified Namespace on Azure IoT Hub: namespace, message type, payload schema and version, message class, the MES collection the ingestion service writes and the device twin property that holds the current state."
+  },
+  {
+   "collection": "u_mes_syst_iotHubIdentity",
+   "module": "syst",
+   "moduleName": "SystemAndIntegration",
+   "entity": "iotHubIdentity",
+   "sourceConcept": "uns01:iotHubIdentity",
+   "kind": "entity",
+   "dataClass": "master",
+   "parent": null,
+   "displayField": "name",
+   "statusValues": [
+    "Active",
+    "Inactive"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "app",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "name",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "identityType",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "iotHubName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "iotDeviceId",
+     "type": "String",
+     "ref": "iotDevice"
+    },
+    {
+     "key": "iotDeviceName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "parentIotHubIdentityId",
+     "type": "String",
+     "ref": "iotHubIdentity"
+    },
+    {
+     "key": "parentIotHubIdentityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "authenticationMethod",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "certificateThumbprint",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "certificateExpiresAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Date"
+    },
+    {
+     "key": "provisioningStatus",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "lastRegistrySyncAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "twinTagsVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "lastSyncErrorText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "connectionState",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "connectionStateAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "IoT Hub device identity name, e.g. PN1-TRQ-01-N1",
+   "purpose": "One Azure IoT Hub device identity: an equipment identity, an IoT Edge gateway or the MES publisher, with its parent gateway, authentication, certificate, provisioning state, last registry sync and last connection state."
+  },
+  {
+   "collection": "u_mes_syst_unsRejectedMessage",
+   "module": "syst",
+   "moduleName": "SystemAndIntegration",
+   "entity": "unsRejectedMessage",
+   "sourceConcept": "uns01:unsRejectedMessage",
+   "kind": "entity",
+   "dataClass": "transaction",
+   "parent": null,
+   "displayField": "recordNo",
+   "statusValues": [
+    "Open",
+    "Resent",
+    "Discarded"
+   ],
+   "fields": [
+    {
+     "key": "_id",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "recordNo",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "app",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "siteId",
+     "type": "String",
+     "ref": "site"
+    },
+    {
+     "key": "siteName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "messageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "iotHubIdentityId",
+     "type": "String",
+     "ref": "iotHubIdentity"
+    },
+    {
+     "key": "iotHubIdentityName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "unsMessageTypeId",
+     "type": "String",
+     "ref": "unsMessageType"
+    },
+    {
+     "key": "unsMessageTypeName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "equipmentId",
+     "type": "String",
+     "ref": "equipment"
+    },
+    {
+     "key": "equipmentName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "isa95Path",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "payloadSchemaName",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "messageTimestamp",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "receivedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "rejectionReason",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "rejectionDetailText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "payloadText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "deadLetterBlobPath",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resolvedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "resolvedBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resolvedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "resolutionText",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "resentMessageUuid",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "status",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "schemaVersion",
+     "type": "Int32",
+     "ref": null
+    },
+    {
+     "key": "createdAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "createdById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "createdBy",
+     "type": "String",
+     "ref": null
+    },
+    {
+     "key": "updatedAt",
+     "type": "Date",
+     "ref": null,
+     "dateKind": "Datetime"
+    },
+    {
+     "key": "updatedById",
+     "type": "String",
+     "ref": "user"
+    },
+    {
+     "key": "updatedBy",
+     "type": "String",
+     "ref": null
+    }
+   ],
+   "idPattern": "16-digit numeric string",
+   "recordNoMeaning": "URM-<yyyymmdd>-<nnnnn>, e.g. URM-20260915-00001",
+   "purpose": "One UNS message that the MES ingestion service could not store, with the reason, the payload as received, the copy in the dead-letter container and how it was resolved (sent again after correction, or discarded)."
   }
  ]
 }

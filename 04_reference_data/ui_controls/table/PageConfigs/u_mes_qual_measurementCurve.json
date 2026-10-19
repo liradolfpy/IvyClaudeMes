@@ -125,6 +125,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "90px"
@@ -265,7 +271,7 @@
     "module" : "qual",
     "page" : "mes_qual_measurementCurveStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -303,6 +309,7 @@
             "rawControlledDocumentName" : null,
             "inspectionResultId" : "1150000000000006",
             "inspectionResultName" : "IR-2026-000177",
+            "sourceMessageUuid" : "15f4dd94-bb82-5947-b2bd-97f5ed222773",
             "status" : "Recorded",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-15T06:01:39.000+0000"),

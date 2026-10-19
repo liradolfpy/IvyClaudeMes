@@ -1,0 +1,152 @@
+{
+  "collMod": "u_mes_syst_unsMessageType",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_unsMessageType",
+      "required": [
+        "_id",
+        "recordNo",
+        "app",
+        "siteId",
+        "siteName",
+        "name",
+        "description",
+        "unsNamespace",
+        "messageTypeCode",
+        "payloadSchemaName",
+        "payloadSchemaVersion",
+        "messageClass",
+        "hierarchyLevel",
+        "senderType",
+        "targetCollectionName",
+        "twinPropertyPath",
+        "ingestedByMes",
+        "routedToDataLake",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Display name of the message type"
+        },
+        "description": {
+          "bsonType": "string",
+          "description": "What the message carries and when it is sent"
+        },
+        "unsNamespace": {
+          "bsonType": "string",
+          "description": "UNS namespace of the message; sent in lower case as the application property ns",
+          "enum": [
+            "Edge",
+            "MES",
+            "KPI"
+          ]
+        },
+        "messageTypeCode": {
+          "bsonType": "string",
+          "description": "Message type within the namespace, sent as the application property msgType"
+        },
+        "payloadSchemaName": {
+          "bsonType": "string",
+          "description": "Payload schema name carried in the envelope field schema"
+        },
+        "payloadSchemaVersion": {
+          "bsonType": "int",
+          "description": "Major version of the payload schema"
+        },
+        "messageClass": {
+          "bsonType": "string",
+          "description": "State, event or measurement",
+          "enum": [
+            "State",
+            "Event",
+            "Measurement"
+          ]
+        },
+        "hierarchyLevel": {
+          "bsonType": "string",
+          "description": "ISA-95 level of the node the message describes",
+          "enum": [
+            "Site",
+            "Area",
+            "Line",
+            "Work Center",
+            "Equipment"
+          ]
+        },
+        "senderType": {
+          "bsonType": "string",
+          "description": "Kind of IoT Hub identity that sends the message",
+          "enum": [
+            "IoT Edge Gateway",
+            "MES Publisher"
+          ]
+        },
+        "targetCollectionName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "MES collection the ingestion service writes; null when the MES does not store the message"
+        },
+        "twinPropertyPath": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Device twin property that holds the current state; null for events"
+        },
+        "ingestedByMes": {
+          "bsonType": "bool",
+          "description": "True when the MES ingestion service stores the message"
+        },
+        "routedToDataLake": {
+          "bsonType": "bool",
+          "description": "True when IoT Hub routing writes the message to the client data lake"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}

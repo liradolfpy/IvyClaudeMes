@@ -66,6 +66,8 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | GMP_Pharma_01_impact_analysis.md (pharmaceutical GMP requirements GMP-01 to GMP-55) | 01_research |
 | BMR_MMR_module_designation.md (collections designated to bmr and mmr, common collections for decision) | 01_research |
 | collection_inventory.md, collection_keys.md | 02_architecture |
+| unified_namespace_design.md (UNS topic tree, payloads and MES mapping for PN1, D081) | 02_architecture/data_flows |
+| uns_concepts_and_project_coverage.md (UNS concepts and where each is addressed in the project) | 02_architecture/data_flows |
 | <module folder>_field_list.md (10 files) | 02_architecture/field_lists |
 | status_values.md | 04_reference_data/code_lists |
 | catalogue.py, keys.py, flatten_model.py, gen_docs.py, gen_specs.py | 05_generator |
@@ -73,6 +75,7 @@ This guide is the authority for where a file belongs. Paths in all other documen
 | master_refs.py (master collections and key conversions under DATA-003) | 05_generator |
 | ext_req01.py (44 collections and 212 keys of MES_ExternalRequirement_01), ext_req01_samples.py (their sample rules) | 05_generator |
 | gmp01.py (23 collections and 33 keys of GMP_Pharma_01, merged through ext_req01.py), gmp01_samples.py (their sample rules) | 05_generator |
+| uns01.py (3 collections and 10 keys of UNS_01, the Unified Namespace on Azure IoT Hub, merged through ext_req01.py), uns01_samples.py (their sample rules) | 05_generator |
 | spec_rules.py (rules shared by the specification and sample generators) | 05_generator |
 | gen_samples.py, sample_rules.py, sample_universe.py (sample documents) | 05_generator |
 | gen_stable.py, gen_menu.py, gen_query.py (UI configurations: Stable table pages, menu, query page configurations with IvyConfigs and the dynamic dropdown registry; `gen_query.py --digest / --propose` for token-saving module work), query_screens.py (query screen decisions) | 05_generator |

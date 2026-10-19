@@ -92,6 +92,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "createdBy",
                     "title" : "Created By",
                     "width" : "150px"
@@ -226,7 +232,7 @@
     "module" : "perf",
     "page" : "mes_perf_processReadingStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -256,6 +262,7 @@
             "shiftId" : "A",
             "shiftName" : "Shift A",
             "productionDate" : ISODate("2026-09-17T00:00:00.000+0000"),
+            "sourceMessageUuid" : "4a20a3f8-dbee-56c0-92e4-62142d4bd92a",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-17T06:51:40.000+0000"),
             "createdById" : "1029000000000010",

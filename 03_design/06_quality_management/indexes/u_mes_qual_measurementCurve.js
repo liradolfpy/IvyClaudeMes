@@ -7,3 +7,4 @@ db.getCollection("u_mes_qual_measurementCurve").createIndex({ wipUnitId: 1 }, { 
 db.getCollection("u_mes_qual_measurementCurve").createIndex({ serialNumberId: 1 }, { name: "ix_serialNumberId" });
 db.getCollection("u_mes_qual_measurementCurve").createIndex({ operationExecutionId: 1 }, { name: "ix_operationExecutionId" });
 db.getCollection("u_mes_qual_measurementCurve").createIndex({ siteId: 1, capturedAt: -1 }, { name: "ix_siteId_capturedAt" });
+db.getCollection("u_mes_qual_measurementCurve").createIndex({ siteId: 1, sourceMessageUuid: 1 }, { name: "ux_siteId_sourceMessageUuid", unique: true, partialFilterExpression: { sourceMessageUuid: { $type: "string" } } });

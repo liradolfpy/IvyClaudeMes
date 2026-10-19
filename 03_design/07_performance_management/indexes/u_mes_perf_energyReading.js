@@ -7,3 +7,4 @@ db.getCollection("u_mes_perf_energyReading").createIndex({ shiftId: 1 }, { name:
 db.getCollection("u_mes_perf_energyReading").createIndex({ energyTypeId: 1 }, { name: "ix_energyTypeId" });
 db.getCollection("u_mes_perf_energyReading").createIndex({ siteId: 1, intervalStartAt: -1 }, { name: "ix_siteId_intervalStartAt" });
 db.getCollection("u_mes_perf_energyReading").createIndex({ meterIotDeviceId: 1, intervalStartAt: -1 }, { name: "ix_meterIotDeviceId_intervalStartAt" });
+db.getCollection("u_mes_perf_energyReading").createIndex({ sourceMessageUuid: 1 }, { name: "ix_sourceMessageUuid" });

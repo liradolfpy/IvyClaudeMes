@@ -75,7 +75,8 @@
             "Weighing System",
             "Serialisation Server",
             "Track And Trace Portal",
-            "Document Management"
+            "Document Management",
+            "Azure IoT Hub"
           ]
         },
         "targetSystem": {

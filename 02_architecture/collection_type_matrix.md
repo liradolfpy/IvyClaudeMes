@@ -1,13 +1,13 @@
 # Collection type matrix
 
-Model version 2.9 | 12 October 2026 | 369 collections (200 entity, 85 child, 76 relationship, 8 value-list), 8614 keys
+Model version 3.0 | 19 October 2026 | 372 collections (203 entity, 85 child, 76 relationship, 8 value-list), 8703 keys
 
 Type of each collection and the label used for it in the UI menu. A child, relationship or value-list collection has the type of the entity it belongs to; its label starts with the parent's name, because it is opened from the parent's screen.
 
 | Type | Meaning | Collections |
 |---|---|---|
-| Master | Reference data that changes rarely and is maintained by the plant | 187 |
-| Transaction | Business records created by daily operations | 161 |
+| Master | Reference data that changes rarely and is maintained by the plant | 189 |
+| Transaction | Business records created by daily operations | 162 |
 | Reports | Pre-aggregated or assembled records built from transactions for reporting | 12 |
 | Telemetry | Machine-generated, time-ordered signals and states | 5 |
 | Audit Trail | Append-only records of who did or changed what | 4 |
@@ -24,7 +24,7 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | qual | QualityManagement | 29 | 55 | 0 | 1 | 0 | 85 |
 | perf | PerformanceManagement | 6 | 5 | 6 | 4 | 0 | 21 |
 | maint | ToolingAndMaintenance | 9 | 11 | 1 | 0 | 0 | 21 |
-| syst | SystemAndIntegration | 27 | 13 | 0 | 0 | 4 | 44 |
+| syst | SystemAndIntegration | 29 | 14 | 0 | 0 | 4 | 47 |
 | ehs | EnvironmentHealthAndSafety | 3 | 3 | 0 | 0 | 0 | 6 |
 | bmr | BatchManufacturingRecord | 0 | 5 | 0 | 0 | 0 | 5 |
 | mmr | MasterManufacturingRecord | 2 | 0 | 0 | 0 | 0 | 2 |
@@ -389,6 +389,9 @@ Type of each collection and the label used for it in the UI menu. A child, relat
 | syst | SystemAndIntegration | u_mes_syst_auditTrailReview | Transaction | Audit Trail Reviews |
 | syst | SystemAndIntegration | u_mes_syst_userAccessReview | Transaction | User Access Reviews |
 | syst | SystemAndIntegration | u_mes_syst_userAccessReviewLine | Transaction | User Access Review Lines |
+| syst | SystemAndIntegration | u_mes_syst_unsMessageType | Master | UNS Message Types |
+| syst | SystemAndIntegration | u_mes_syst_iotHubIdentity | Master | IoT Hub Identities |
+| syst | SystemAndIntegration | u_mes_syst_unsRejectedMessage | Transaction | UNS Rejected Messages |
 | ehs | EnvironmentHealthAndSafety | u_mes_ehs_safetyIncident | Transaction | Safety Incidents |
 | ehs | EnvironmentHealthAndSafety | u_mes_ehs_safetyIncidentWitnessUser | Transaction | Safety Incident Witnesses |
 | ehs | EnvironmentHealthAndSafety | u_mes_ehs_safetyIncidentAction | Transaction | Safety Incident Actions |

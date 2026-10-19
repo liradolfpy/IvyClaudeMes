@@ -153,6 +153,10 @@
             "typ" : "string"
         },
         {
+            "din" : "sourceMessageUuid",
+            "typ" : "string"
+        },
+        {
             "din" : "schemaVersion",
             "typ" : "int"
         }

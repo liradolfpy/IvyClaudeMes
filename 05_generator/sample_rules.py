@@ -420,3 +420,7 @@ _EXT01.apply(globals())
 # ---- requirement set GMP_Pharma_01 (D047-D053): sample rules for the new collections and keys
 import gmp01_samples as _GMP01
 _GMP01.apply(globals())
+
+# ---- requirement set UNS_01 (D083): sample rules for the new collections and keys
+import uns01_samples as _UNS01
+_UNS01.apply(globals())

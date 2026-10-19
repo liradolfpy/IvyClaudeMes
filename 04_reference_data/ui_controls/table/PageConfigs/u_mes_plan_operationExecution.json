@@ -301,6 +301,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "status",
                     "title" : "Status",
                     "width" : "90px"
@@ -441,7 +447,7 @@
     "module" : "plan",
     "page" : "mes_plan_operationExecutionStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -511,6 +517,7 @@
             "checksSetupVerified" : true,
             "checksEnvironmentOk" : true,
             "interlockEventCount" : NumberInt(0),
+            "sourceMessageUuid" : "be76f38e-fbf7-5f4e-ac9f-fefd2ab7642c",
             "status" : "Completed",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-17T06:51:40.000+0000"),

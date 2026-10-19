@@ -132,13 +132,13 @@
                 },
                 {
                     "typ" : "dropDown",
-                    "label" : "Controller Iot Device",
+                    "label" : "Controller IoT Device",
                     "default" : "all",
                     "includeAll" : true,
                     "multiSelect" : false,
                     "required" : true,
-                    "placeHolder" : "Select Controller Iot Device",
-                    "errorMessage" : "Please Select Controller Iot Device",
+                    "placeHolder" : "Select Controller IoT Device",
+                    "errorMessage" : "Please Select Controller IoT Device",
                     "readOnly" : false,
                     "visible" : true,
                     "isSearchable" : true,
@@ -182,7 +182,7 @@
             ]
         }
     },
-    "ver" : "20261019-0000",
+    "ver" : "20261019-1223",
     "unq" : false,
     "subTyp" : "PhantomQuery",
     "act" : false,
@@ -202,6 +202,6 @@
     "view" : [
 
     ],
-    "rel" : "20261019-0000",
+    "rel" : "20261019-1223",
     "projid" : ""
 }

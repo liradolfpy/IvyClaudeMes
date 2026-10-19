@@ -1168,6 +1168,13 @@ ADD += _GMP.ADD
 for _k, _v in _GMP.ENUM_ADD.items():
     ENUM_ADD[_k] = ENUM_ADD.get(_k, []) + [x for x in _v if x not in ENUM_ADD.get(_k, [])]
 
+# ---- requirement set UNS_01 (D083): Unified Namespace on Azure IoT Hub, appended after GMP_Pharma_01, numbered 1370-1372
+import uns01 as _UNS
+NEW += _UNS.NEW
+ADD += _UNS.ADD
+for _k, _v in _UNS.ENUM_ADD.items():
+    ENUM_ADD[_k] = ENUM_ADD.get(_k, []) + [x for x in _v if x not in ENUM_ADD.get(_k, [])]
+
 MOD_NAMES={'mast': 'MasterDataManagement', 'prod': 'ProductDefinition', 'plan': 'PlanningAndExecution', 'matl': 'MaterialManagement', 'trac': 'Traceability', 'qual': 'QualityManagement', 'perf': 'PerformanceManagement', 'maint': 'ToolingAndMaintenance', 'syst': 'SystemAndIntegration', 'ehs': 'EnvironmentHealthAndSafety', 'bmr': 'BatchManufacturingRecord', 'mmr': 'MasterManufacturingRecord'}
 BYENT={c["entity"]:c for c in NEW}
 ROOTS={c["entity"] for c in NEW if c["kind"]=="entity"}

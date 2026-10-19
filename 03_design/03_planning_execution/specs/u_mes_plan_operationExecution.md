@@ -9,7 +9,7 @@
 | Parent collection | none |
 | _id pattern | 16-digit numeric string, unique across the database |
 | Display value used by references | recordNo |
-| Keys | 71 (52 required, 19 may be null) |
+| Keys | 72 (52 required, 20 may be null) |
 | Estimated volume per year | ~4.3 million |
 | Storage | standard, partitioned by month |
 
@@ -93,14 +93,15 @@ Every key is present in every document. "Required" means the value may not be nu
 | 61 | checksSetupVerified | Boolean | - | Yes | Set-up verification passed for the order | `true` |  |
 | 62 | checksEnvironmentOk | Boolean | - | Yes | Environmental conditions of the station were within limits | `true` |  |
 | 63 | interlockEventCount | Int32 | - | Yes | Number of interlock events raised during the operation | `NumberInt(0)` |  |
-| 64 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Started; Completed; Aborted |
-| 65 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
-| 66 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
-| 67 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 68 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
-| 69 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
-| 70 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
-| 71 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 64 | sourceMessageUuid | String | - | No (null allowed) | UNS message id (envelope msgId) the document was created from; null for documents entered or calculated in the MES. Unique per site when present (design 8.3, M1) | `"be76f38e-fbf7-5f4e-ac9f-fefd2ab7642c"` |  |
+| 65 | status | String | - | Yes | Primary lifecycle state of the document | `"Completed"` | Started; Completed; Aborted |
+| 66 | schemaVersion | Int32 | - | Yes | Version of this collection's document structure, starting at 1 | `NumberInt(1)` |  |
+| 67 | createdAt | Date | Datetime | Yes | Date and time the document was created. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:51:40.000+0000")` |  |
+| 68 | createdById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that created the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 69 | createdBy | String | - | Yes | Display name of the creator, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
+| 70 | updatedAt | Date | Datetime | Yes | Date and time of the most recent update. Datetime field: local plant time (IST) stored with the +0000 suffix | `ISODate("2026-09-17T06:53:15.000+0000")` |  |
+| 71 | updatedById | String | - | Yes | Reference to u_mes_mast_user._id: user or process that last updated the document | `"1029000000000001"` | Reference: u_mes_mast_user._id |
+| 72 | updatedBy | String | - | Yes | Display name of the last updater, copied from u_mes_mast_user.fullName | `"Sunil Jadhav"` |  |
 
 ## Status values
 
@@ -120,6 +121,7 @@ Started, Completed, Aborted. Initial state: Started. The values are maintained i
 | 8 | `{ siteId: 1, startedAt: -1 }` | No | Time-ordered lists and reports by started at |
 | 9 | `{ wipUnitId: 1, stepNo: 1, attemptNo: 1 }` | No | History of one unit through the routing |
 | 10 | `{ workCenterId: 1, startedAt: -1 }` | No | Activity of one work center over time |
+| 11 | `{ siteId: 1, sourceMessageUuid: 1 }` | Yes (partial) | A UNS message is stored once; only documents with a message id are indexed (partial index) |
 
 ## Referenced by
 

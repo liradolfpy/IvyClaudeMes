@@ -32,6 +32,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-04-02T00:00:00.000+0000"),
     installedAt: ISODate("2019-01-04T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -66,6 +68,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Offline",
     certificateExpiresAt: ISODate("2026-05-09T00:00:00.000+0000"),
     installedAt: ISODate("2022-06-06T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -100,6 +104,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-06-16T00:00:00.000+0000"),
     installedAt: ISODate("2019-11-08T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -134,6 +140,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-07-23T00:00:00.000+0000"),
     installedAt: ISODate("2022-04-10T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -168,6 +176,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-08-03T00:00:00.000+0000"),
     installedAt: ISODate("2019-09-12T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -202,6 +212,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-04-10T00:00:00.000+0000"),
     installedAt: ISODate("2022-02-14T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -236,6 +248,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-05-17T00:00:00.000+0000"),
     installedAt: ISODate("2019-07-16T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -270,6 +284,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-06-24T00:00:00.000+0000"),
     installedAt: ISODate("2022-12-18T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -304,6 +320,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-07-04T00:00:00.000+0000"),
     installedAt: ISODate("2019-05-20T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -338,6 +356,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-08-11T00:00:00.000+0000"),
     installedAt: ISODate("2022-10-22T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -372,6 +392,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-04-02T00:00:00.000+0000"),
     installedAt: ISODate("2019-01-04T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -406,6 +428,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Offline",
     certificateExpiresAt: ISODate("2026-05-09T00:00:00.000+0000"),
     installedAt: ISODate("2022-06-06T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -440,6 +464,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-06-16T00:00:00.000+0000"),
     installedAt: ISODate("2019-11-08T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -474,6 +500,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-07-23T00:00:00.000+0000"),
     installedAt: ISODate("2022-04-10T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -508,6 +536,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-08-03T00:00:00.000+0000"),
     installedAt: ISODate("2019-09-12T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -542,6 +572,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-04-10T00:00:00.000+0000"),
     installedAt: ISODate("2022-02-14T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -576,6 +608,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-05-17T00:00:00.000+0000"),
     installedAt: ISODate("2019-07-16T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -610,6 +644,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-06-24T00:00:00.000+0000"),
     installedAt: ISODate("2022-12-18T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -644,6 +680,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-07-04T00:00:00.000+0000"),
     installedAt: ISODate("2019-05-20T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   },
@@ -678,6 +716,8 @@ db.getCollection("u_mes_syst_iotDevice").insertMany([
     connectionStatus: "Online",
     certificateExpiresAt: ISODate("2026-08-11T00:00:00.000+0000"),
     installedAt: ISODate("2022-10-22T00:00:00.000+0000"),
+    edgeGatewayIotDeviceId: null,
+    edgeGatewayIotDeviceName: null,
     status: "Active",
     schemaVersion: NumberInt(1)
   }

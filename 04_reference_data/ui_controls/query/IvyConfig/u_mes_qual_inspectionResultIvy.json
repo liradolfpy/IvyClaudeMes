@@ -277,6 +277,10 @@
             "typ" : "decimal"
         },
         {
+            "din" : "sourceMessageUuid",
+            "typ" : "string"
+        },
+        {
             "din" : "status",
             "typ" : "string"
         },

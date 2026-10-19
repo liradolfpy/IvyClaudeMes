@@ -10272,6 +10272,106 @@
     }
 }
 { 
+    "_id" : "2090_900", 
+    "enable" : true, 
+    "seq" : NumberInt(9), 
+    "level" : NumberInt(1), 
+    "label" : "Unified Namespace", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "parentid" : "2090", 
+    "icon" : "fa/FaBoxes", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : true, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "colSize" : 8.0, 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
+    "_id" : "2090_900_100", 
+    "enable" : true, 
+    "seq" : NumberInt(1), 
+    "level" : NumberInt(2), 
+    "label" : "UNS Message Types", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "link" : "/dp?op=qy&dictName=mes_syst_unsMessageTypeQuery&moduleName=SystemAndIntegration&dn=mes_syst_unsMessageTypeIvy", 
+    "parentid" : "2090_900", 
+    "icon" : "bi/BiInfoCircle", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : false, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
+    "_id" : "2090_900_101", 
+    "enable" : true, 
+    "seq" : NumberInt(2), 
+    "level" : NumberInt(2), 
+    "label" : "IoT Hub Identities", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "link" : "/dp?op=qy&dictName=mes_syst_iotHubIdentityQuery&moduleName=SystemAndIntegration&dn=mes_syst_iotHubIdentityIvy", 
+    "parentid" : "2090_900", 
+    "icon" : "bi/BiInfoCircle", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : false, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
+    "_id" : "2090_900_102", 
+    "enable" : true, 
+    "seq" : NumberInt(3), 
+    "level" : NumberInt(2), 
+    "label" : "UNS Rejected Messages", 
+    "cat" : "SideBar", 
+    "visible" : true, 
+    "link" : "/dp?op=qy&dictName=mes_syst_unsRejectedMessageQuery&moduleName=SystemAndIntegration&dn=mes_syst_unsRejectedMessageIvy", 
+    "parentid" : "2090_900", 
+    "icon" : "bi/BiInfoCircle", 
+    "typ" : "individual", 
+    "act" : true, 
+    "Hod" : true, 
+    "Line" : false, 
+    "SiteAdmin" : true, 
+    "SuperAdmin" : true, 
+    "User" : true, 
+    "LiraAdmin" : true, 
+    "dest" : "reactV04", 
+    "style" : {
+        "marginTop" : "1rem", 
+        "marginLeft" : "20"
+    }
+}
+{ 
     "_id" : "2100", 
     "enable" : true, 
     "seq" : NumberInt(10), 

@@ -121,6 +121,12 @@
                 },
                 {
                     "align" : "left",
+                    "data_index" : "sourceMessageUuid",
+                    "title" : "Source Message Uuid",
+                    "width" : "280px"
+                },
+                {
+                    "align" : "left",
                     "data_index" : "createdBy",
                     "title" : "Created By",
                     "width" : "110px"
@@ -255,7 +261,7 @@
     "module" : "perf",
     "page" : "mes_perf_energyReadingStable",
     "projid" : "",
-    "rel" : "CL20261018-23:51",
+    "rel" : "CL20261019-12:24",
     "resp" : "CL",
     "subTyp" : "",
     "typ" : "PageConfigStable",
@@ -290,6 +296,7 @@
             "unitsProduced" : NumberInt(38),
             "specificConsumption" : 0.0546,
             "signalQuality" : "Good",
+            "sourceMessageUuid" : "0e51bae1-8211-5038-b86a-36f6ee3a4cf0",
             "schemaVersion" : NumberInt(1),
             "createdAt" : ISODate("2026-09-15T06:00:00.000+0000"),
             "createdById" : "1029000000000010",

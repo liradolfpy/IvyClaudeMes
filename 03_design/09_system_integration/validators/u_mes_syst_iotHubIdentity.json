@@ -1,0 +1,204 @@
+{
+  "collMod": "u_mes_syst_iotHubIdentity",
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "title": "u_mes_syst_iotHubIdentity",
+      "required": [
+        "_id",
+        "recordNo",
+        "app",
+        "siteId",
+        "siteName",
+        "name",
+        "identityType",
+        "iotHubName",
+        "equipmentId",
+        "equipmentName",
+        "iotDeviceId",
+        "iotDeviceName",
+        "parentIotHubIdentityId",
+        "parentIotHubIdentityName",
+        "authenticationMethod",
+        "certificateThumbprint",
+        "certificateExpiresAt",
+        "provisioningStatus",
+        "lastRegistrySyncAt",
+        "twinTagsVersion",
+        "lastSyncErrorText",
+        "connectionState",
+        "connectionStateAt",
+        "status",
+        "schemaVersion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "_id": {
+          "bsonType": "string",
+          "description": "Unique identifier of the document. Pattern: 16-digit numeric string, unique across the database"
+        },
+        "recordNo": {
+          "bsonType": "string",
+          "description": "Business identifier of the document, readable by people and unique within the site"
+        },
+        "app": {
+          "bsonType": "string",
+          "description": "Application context of the document: Auto = automotive caliper MES, Gamp = pharmaceutical GMP, Common = reference data shared by both",
+          "enum": [
+            "Auto",
+            "Gamp",
+            "Common"
+          ]
+        },
+        "siteId": {
+          "bsonType": "string",
+          "description": "Reference to u_mes_mast_site._id: the site the document belongs to"
+        },
+        "siteName": {
+          "bsonType": "string",
+          "description": "Display value of the site, copied from u_mes_mast_site.name"
+        },
+        "name": {
+          "bsonType": "string",
+          "description": "Display name of the identity"
+        },
+        "identityType": {
+          "bsonType": "string",
+          "description": "Equipment, IoT Edge gateway or MES publisher",
+          "enum": [
+            "Equipment",
+            "IoT Edge Gateway",
+            "MES Publisher"
+          ]
+        },
+        "iotHubName": {
+          "bsonType": "string",
+          "description": "Azure IoT Hub the identity is registered in"
+        },
+        "equipmentId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_mast_equipment._id"
+        },
+        "equipmentName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of equipmentId, copied from u_mes_mast_equipment.name"
+        },
+        "iotDeviceId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_iotDevice._id"
+        },
+        "iotDeviceName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of iotDeviceId, copied from u_mes_syst_iotDevice.name"
+        },
+        "parentIotHubIdentityId": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Reference to u_mes_syst_iotHubIdentity._id: parent IoT hub IDentity"
+        },
+        "parentIotHubIdentityName": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Display value of parentIotHubIdentityId, copied from u_mes_syst_iotHubIdentity.name"
+        },
+        "authenticationMethod": {
+          "bsonType": "string",
+          "description": "How the identity authenticates to IoT Hub",
+          "enum": [
+            "X.509 CA Signed",
+            "X.509 Self Signed",
+            "Symmetric Key"
+          ]
+        },
+        "certificateThumbprint": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "SHA-1 thumbprint of the client certificate; null for symmetric key authentication"
+        },
+        "certificateExpiresAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Expiry of the client certificate; null for symmetric key authentication"
+        },
+        "provisioningStatus": {
+          "bsonType": "string",
+          "description": "State of the identity in IoT Hub",
+          "enum": [
+            "Not Provisioned",
+            "Provisioned",
+            "Sync Failed",
+            "Disabled"
+          ]
+        },
+        "lastRegistrySyncAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Last time the registry sync service wrote the identity and its twin tags; null before the first sync"
+        },
+        "twinTagsVersion": {
+          "bsonType": "int",
+          "description": "Version of the twin tags last written; increases with each master data change that touches the identity"
+        },
+        "lastSyncErrorText": {
+          "bsonType": [
+            "string",
+            "null"
+          ],
+          "description": "Error of the last failed sync; null when the last sync succeeded"
+        },
+        "connectionState": {
+          "bsonType": "string",
+          "description": "Last connection state reported by IoT Hub",
+          "enum": [
+            "Connected",
+            "Disconnected",
+            "Never Connected"
+          ]
+        },
+        "connectionStateAt": {
+          "bsonType": [
+            "date",
+            "null"
+          ],
+          "description": "Time of the last device connection state event; null when the identity never connected"
+        },
+        "status": {
+          "bsonType": "string",
+          "description": "Primary lifecycle state of the document",
+          "enum": [
+            "Active",
+            "Inactive"
+          ]
+        },
+        "schemaVersion": {
+          "bsonType": "int",
+          "description": "Version of this collection's document structure, starting at 1"
+        }
+      }
+    }
+  },
+  "validationLevel": "strict",
+  "validationAction": "error"
+}
